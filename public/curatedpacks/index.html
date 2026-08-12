@@ -110,7 +110,7 @@ footer .brand img{height:17px}
 /* how */
 .how{background:var(--band);padding:76px 0 84px}
 .how .layout{display:grid;grid-template-columns:0.9fr 1fr;gap:56px;align-items:center}
-.how h2{font-weight:800;font-size:clamp(26px,3.4vw,36px);letter-spacing:-0.02em;margin-bottom:18px}
+.how h2{font-weight:800;font-size:clamp(24px,2.9vw,33px);letter-spacing:-0.02em;margin-bottom:18px}
 .how .guidep{color:var(--body);font-size:15px;max-width:44ch;margin-bottom:14px}
 .how .steps{background:var(--white);border:1px solid var(--border);border-radius:16px;overflow:hidden}
 .how .step{display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start;padding:18px 24px;border-top:1px solid var(--border)}
@@ -140,6 +140,9 @@ footer .links a:hover{color:var(--ink)}
   .standcard{margin-top:26px}
   .strip img{height:96px}
   .strip,.strip.three{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:700px){
+  .why h2,.how h2{font-size:clamp(15px,6vw - 3px,26px)}
 }
 .lightbox{position:fixed;inset:0;background:rgba(17,17,20,.92);display:none;align-items:center;justify-content:center;z-index:100;cursor:zoom-out;padding:32px}
 .lightbox.open{display:flex}
@@ -350,7 +353,7 @@ footer .links a:hover{color:var(--ink)}
   <div class="wrap">
     <div class="layout">
       <div class="side">
-        <h2>How it works</h2>
+        <h2>The hard part is already done.</h2>
         <p class="guidep">Ace Hotel, Soho House, and the cafés your guests post from have used print as brand identity for years. It used to take an editorial team and a distributor relationship to pull off.</p>
         <p class="guidep">Neesh is the wholesale marketplace for independent print. We work with publishers directly, read hundreds of titles a year, and pack the ones your guests will actually pick up.</p>
         <p class="guidep">No account to open, no minimums, no rep to chase. You know your space. We know the shelf.</p>
