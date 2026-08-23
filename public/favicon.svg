@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="12" fill="#111114"/>
-  <text x="32" y="44" text-anchor="middle" font-family="Manrope, sans-serif" font-size="36" font-weight="800" fill="#F0EDF8">N</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" shape-rendering="crispEdges">
+  <rect width="16" height="16" fill="#000000"/>
+  <rect x="1.0000" y="2.0000" width="3.0000" height="12.0000" fill="#FFFFFF"/>
+  <rect x="10.0000" y="2.0000" width="5.0000" height="5.0000" fill="#FFFFFF"/>
+  <rect x="1.0000" y="7.0000" width="9.0000" height="2.0000" fill="#FFFFFF"/>
+  <rect x="7.0000" y="9.0000" width="3.0000" height="5.0000" fill="#FFFFFF"/>
 </svg>

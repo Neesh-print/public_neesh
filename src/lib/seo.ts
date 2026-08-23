@@ -84,8 +84,8 @@ export function organizationLd() {
     '@type': 'Organization',
     name: 'Neesh',
     url: siteUrl(),
-    logo: `${siteUrl()}/neesh-logo.svg`,
-    sameAs: ['https://instagram.com/neesh.art'],
+    logo: `${siteUrl()}/neesh-logo.png`,
+    sameAs: ['https://www.instagram.com/neeshprint/', 'https://instagram.com/neesh.art'],
   };
 }
 

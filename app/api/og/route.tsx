@@ -17,18 +17,18 @@ export async function GET(req: NextRequest) {
           display: 'flex',
           flexDirection: 'column',
           justifyContent: 'space-between',
-          background: '#F0EDF8',
+          background: '#f1f0f9',
           padding: 72,
           fontFamily: 'sans-serif',
         }}
       >
         <div style={{ display: 'flex', flexDirection: 'column' }}>
-          <div style={{ width: 96, height: 10, background: '#7C3AED', marginBottom: 48 }} />
+          <div style={{ width: 96, height: 10, background: '#7d3abf', marginBottom: 48 }} />
           <div
             style={{
               fontSize: 76,
               fontWeight: 800,
-              color: '#111114',
+              color: '#000',
               lineHeight: 1.1,
               maxWidth: 1000,
             }}
@@ -36,7 +36,7 @@ export async function GET(req: NextRequest) {
             {title}
           </div>
           {sub ? (
-            <div style={{ fontSize: 34, color: '#5b5b66', marginTop: 28 }}>{sub}</div>
+            <div style={{ fontSize: 34, color: '#71747f', marginTop: 28 }}>{sub}</div>
           ) : null}
         </div>
         <div
@@ -47,8 +47,8 @@ export async function GET(req: NextRequest) {
             fontSize: 30,
           }}
         >
-          <div style={{ fontWeight: 800, color: '#111114' }}>Neesh</div>
-          <div style={{ color: '#8a8a94' }}>Independent print, indexed</div>
+          <div style={{ fontWeight: 800, color: '#000' }}>Neesh</div>
+          <div style={{ color: '#71747f' }}>Independent print, indexed</div>
         </div>
       </div>
     ),

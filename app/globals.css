@@ -1,10 +1,13 @@
+/* Tokens mirror the neesh.art homepage (src/index.css in the main app):
+   foreground black, accent hsl(270 53% 49%), secondary cream, border 85%.
+   Body type is Inter, display type is Manrope, matching the main app. */
 :root {
-  --ink: #111114;
-  --body: #5b5b66;
-  --muted: #8a8a94;
-  --purple: #7c3aed;
-  --band: #f0edf8;
-  --line: #e6e6eb;
+  --ink: #000;
+  --body: hsl(230 6% 47%);
+  --muted: hsl(230 6% 47%);
+  --accent: hsl(270 53% 49%);
+  --band: hsl(245 33% 95%);
+  --line: hsl(0 0% 85%);
   --white: #fff;
 }
 
@@ -18,19 +21,21 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Manrope', system-ui, -apple-system, sans-serif;
-  color: var(--body);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--ink);
   background: var(--white);
-  line-height: 1.6;
-  font-size: 1rem;
+  line-height: 1.55;
+  font-size: 0.9375rem;
 }
 
 h1,
 h2,
 h3 {
+  font-family: 'Manrope', system-ui, sans-serif;
   color: var(--ink);
   line-height: 1.2;
   font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 h1 {
@@ -49,7 +54,7 @@ h3 {
 }
 
 a {
-  color: var(--purple);
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -59,67 +64,145 @@ a:hover {
 
 p {
   margin: 0 0 1rem;
+  color: var(--body);
 }
 
 .container {
-  max-width: 68rem;
+  max-width: 72rem;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 1.5rem;
 }
 
 .muted {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
-/* Header and footer */
+/* Header: fixed, wordmark left, marketing nav right (as on neesh.art) */
 .site-header {
-  border-bottom: 1px solid var(--line);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
   background: var(--white);
+  border-bottom: 1px solid var(--line);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  height: 4rem;
 }
 
-.wordmark {
-  font-weight: 800;
-  font-size: 1.3rem;
-  color: var(--ink);
+.brand {
+  display: flex;
+  align-items: center;
 }
 
-.wordmark:hover {
-  text-decoration: none;
+.brand img {
+  height: 2.25rem;
+  width: auto;
+  display: block;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .site-nav a {
-  color: var(--body);
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.site-nav a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-nav a.active,
+.site-nav a.accent {
+  color: var(--accent);
 }
 
 main.container {
-  padding-top: 2.5rem;
+  padding-top: 6.5rem;
   padding-bottom: 4rem;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
+@media (min-width: 48rem) {
+  .header-inner {
+    height: 5rem;
+  }
+
+  .brand img {
+    height: 3rem;
+  }
+
+  main.container {
+    padding-top: 7.5rem;
+  }
+}
+
+@media (max-width: 64rem) {
+  .site-nav {
+    gap: 1.25rem;
+  }
+
+  .site-nav a:not(.active) {
+    display: none;
+  }
+}
+
+/* Footer mirrors the homepage footer: logo left, quiet links right */
 .site-footer {
+  background: var(--white);
   border-top: 1px solid var(--line);
-  background: var(--band);
-  padding: 2rem 0;
+  padding: 3rem 0 2.5rem;
 }
 
-.footer-inner p {
-  margin: 0 0 0.4rem;
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.site-footer .brand img {
+  height: 2rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+}
+
+.footer-links a:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.footer-note {
+  color: var(--muted);
+  font-size: 0.75rem;
+  margin: 2rem 0 0;
 }
 
 /* Breadcrumbs */
 .breadcrumbs {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--muted);
   margin-bottom: 1.5rem;
 }
@@ -140,7 +223,7 @@ main.container {
 
 .title-card {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   background: var(--white);
 }
@@ -151,6 +234,7 @@ main.container {
 
 .title-card-body h3 {
   margin: 0 0 0.2rem;
+  font-size: 1rem;
 }
 
 .title-card-body h3 a {
@@ -158,7 +242,7 @@ main.container {
 }
 
 .title-card-meta {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--muted);
   margin: 0;
 }
@@ -181,6 +265,7 @@ main.container {
 }
 
 .cover-fallback .fallback-name {
+  font-family: 'Manrope', system-ui, sans-serif;
   font-weight: 800;
   font-size: 1.3rem;
   color: var(--ink);
@@ -188,14 +273,14 @@ main.container {
 }
 
 .cover-fallback .fallback-meta {
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
   color: var(--body);
 }
 
 .cover-fallback .fallback-bar {
   width: 2.5rem;
   height: 0.4rem;
-  background: var(--purple);
+  background: var(--accent);
   margin-bottom: 0.75rem;
 }
 
@@ -219,12 +304,13 @@ main.container {
 
 .publisher-line {
   color: var(--body);
-  font-weight: 600;
+  font-weight: 500;
   margin-bottom: 1.25rem;
 }
 
 .stub {
-  font-size: 1.1rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
   color: var(--ink);
 }
 
@@ -232,28 +318,30 @@ main.container {
 .spec-table {
   display: grid;
   grid-template-columns: max-content 1fr;
-  gap: 0.35rem 1.5rem;
+  gap: 0.4rem 1.5rem;
   margin: 1.5rem 0;
   border-top: 1px solid var(--line);
   padding-top: 1.25rem;
 }
 
 .spec-table dt {
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ink);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .spec-table dd {
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
+  color: var(--body);
 }
 
 .evergreen-note {
   background: var(--band);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 0.9rem 1.1rem;
-  font-size: 0.92rem;
+  font-size: 0.875rem;
+  color: var(--ink);
 }
 
 /* Tags */
@@ -271,13 +359,13 @@ main.container {
   display: inline-block;
   border-radius: 999px;
   padding: 0.2rem 0.8rem;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.8125rem;
+  font-weight: 500;
 }
 
 .tag-pill {
   background: var(--band);
-  color: var(--purple);
+  color: var(--accent);
 }
 
 .tag-plain {
@@ -295,9 +383,11 @@ main.container {
 
 .tag-group h3 {
   margin-top: 0;
-  font-size: 0.85rem;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.1em;
+  font-weight: 600;
   color: var(--muted);
 }
 
@@ -309,11 +399,12 @@ main.container {
 
 .tag-group li {
   margin-bottom: 0.35rem;
+  font-size: 0.9375rem;
 }
 
 .tag-group .count {
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: 0.8125rem;
 }
 
 /* CTAs and forms */
@@ -328,31 +419,33 @@ main.container {
   display: inline-block;
   background: var(--ink);
   color: var(--white);
-  font-weight: 700;
-  padding: 0.55rem 1.2rem;
-  border-radius: 6px;
+  font-weight: 600;
+  padding: 0.65rem 1.4rem;
+  border-radius: 8px;
   border: 0;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   cursor: pointer;
   font-family: inherit;
+  transition: opacity 0.15s;
 }
 
 .button:hover {
-  background: var(--purple);
+  opacity: 0.85;
   text-decoration: none;
 }
 
 details.cta-form {
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 12px;
   margin: 1rem 0;
 }
 
 details.cta-form summary {
   cursor: pointer;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--ink);
   padding: 0.8rem 1.1rem;
+  font-size: 0.9375rem;
   list-style: none;
 }
 
@@ -362,9 +455,9 @@ details.cta-form summary::-webkit-details-marker {
 
 details.cta-form summary::before {
   content: '+';
-  color: var(--purple);
+  color: var(--accent);
   margin-right: 0.5rem;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 details[open].cta-form summary::before {
@@ -380,8 +473,8 @@ details.cta-form form {
 
 .field label {
   display: block;
-  font-size: 0.85rem;
-  font-weight: 700;
+  font-size: 0.8125rem;
+  font-weight: 600;
   color: var(--ink);
   margin-bottom: 0.25rem;
 }
@@ -390,27 +483,36 @@ details.cta-form form {
 .field select,
 .field textarea {
   width: 100%;
-  padding: 0.5rem 0.7rem;
+  padding: 0.55rem 0.75rem;
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 8px;
   font-family: inherit;
-  font-size: 0.95rem;
+  font-size: 0.9375rem;
   color: var(--ink);
   background: var(--white);
 }
 
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+  border-color: transparent;
+}
+
 .privacy-note {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--muted);
   margin: 0;
 }
 
 .submitted-notice {
   background: var(--band);
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 0.9rem 1.1rem;
   color: var(--ink);
-  font-weight: 600;
+  font-weight: 500;
+  font-size: 0.9375rem;
   margin: 1rem 0;
 }
 
@@ -419,13 +521,14 @@ details.cta-form form {
   display: flex;
   gap: 1rem;
   margin: 2rem 0 0;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 0.9375rem;
 }
 
 /* Niche intro */
 .niche-intro {
   max-width: 44rem;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .niche-intro p {
