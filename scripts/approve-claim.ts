@@ -37,7 +37,7 @@ async function sendApprovalEmail(
       from: process.env.NOTIFY_FROM ?? 'Neesh <hi@neesh.art>',
       to,
       reply_to: process.env.NOTIFY_REPLY_TO ?? 'hi@neesh.art',
-      subject: `${titleName} is now yours on Neesh`,
+      subject: `${titleName} is yours`,
       text: body.replace(/\*\*/g, ''),
     }),
   });
