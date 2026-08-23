@@ -1,7 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { serviceClient } from '@/lib/supabase';
+import { anonClient, serviceClient } from '@/lib/supabase';
 import { clientIp, ipHash, isBot, payloadSchemas, signalSchema } from '@/lib/signals';
-import { notify } from '@/lib/notify';
+import { emailHtml, notify, sendEmail } from '@/lib/notify';
+import { canonical } from '@/lib/seo';
+import { TAG_THRESHOLD } from '@/lib/queries';
 
 export const dynamic = 'force-dynamic';
 
@@ -90,6 +92,58 @@ export async function POST(req: NextRequest) {
         `${label} for ${title?.name ?? 'unknown title'} (/titles/${title?.slug ?? '?'})\n\n` +
           JSON.stringify(payload.data, null, 2)
       );
+
+      // Email 3.3 to the requester (handoff 5.4): stock requests are never
+      // forwarded to the publisher, and the email must not claim otherwise.
+      if (parsed.data.signal_type === 'stock_request' && title) {
+        const request = payload.data as { business_name: string; email: string };
+        // Primary niche and its live-title count, through the anon client so
+        // the count respects the visibility predicate.
+        let nichePara = '';
+        try {
+          const { data: tagged } = await anonClient()
+            .from('directory_titles')
+            .select('directory_title_tags(tag:directory_tags(id, slug, name))')
+            .eq('id', parsed.data.title_id)
+            .maybeSingle();
+          const tag = (
+            tagged as unknown as {
+              directory_title_tags?: { tag: { id: string; slug: string; name: string } }[];
+            } | null
+          )?.directory_title_tags?.[0]?.tag;
+          if (tag) {
+            const { count } = await anonClient()
+              .from('directory_title_tags')
+              .select('title_id', { count: 'exact', head: true })
+              .eq('tag_id', tag.id);
+            const others = Math.max(0, (count ?? 0) - 1);
+            if (others >= 2) {
+              const niche = tag.name.toLowerCase();
+              const browseUrl =
+                (count ?? 0) >= TAG_THRESHOLD
+                  ? canonical(`/magazines/${tag.slug}`)
+                  : canonical('/directory');
+              nichePara =
+                `\n\nIn the meantime, ${others} other ${niche} titles are ready to ` +
+                `order now.\n\n**Browse ${niche} magazines:** ${browseUrl}`;
+            }
+          }
+        } catch {
+          // the niche paragraph is optional; the email sends without it
+        }
+        const bodyStart =
+          `Hi,\n\n` +
+          `Thanks for asking about **${title.name}** for ${request.business_name}. ` +
+          `We're checking availability and terms and we'll come back to you.\n\n` +
+          `Usually takes a couple of days. If it's urgent, reply and say so.`;
+        const body = bodyStart + nichePara;
+        await sendEmail({
+          to: request.email,
+          subject: `Your stock request for ${title.name}`,
+          text: body.replace(/\*\*/g, ''),
+          html: emailHtml(body),
+        });
+      }
     }
   } catch (err) {
     console.error('signal ingest failed', err);

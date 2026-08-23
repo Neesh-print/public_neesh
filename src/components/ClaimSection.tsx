@@ -34,6 +34,7 @@ export function ClaimSection({
       <summary>Is this your magazine? Claim this profile</summary>
       <form action="/api/claim" method="post">
         <input type="hidden" name="publisher_id" value={publisherId} />
+        <input type="hidden" name="title_id" value={titleId} />
         <div className="field">
           <label htmlFor="cl-name">Your name</label>
           <input id="cl-name" name="name" maxLength={200} />
