@@ -23,9 +23,18 @@ export async function GET() {
     getTagsWithCounts(),
   ]);
 
-  // Static marketing routes join the DB-driven directory entries here as
-  // the marketing pages ship (handoff section 11).
-  const urls: string[] = [entry('/directory'), entry('/packs')];
+  // Static marketing routes alongside the DB-driven directory entries
+  // (handoff section 11).
+  const urls: string[] = [
+    entry('/'),
+    entry('/directory'),
+    entry('/publishers'),
+    entry('/spaces'),
+    entry('/packs'),
+    entry('/journal'),
+    entry('/about'),
+    entry('/faq'),
+  ];
   for (const tag of tags) {
     if (tag.live_count >= TAG_THRESHOLD) urls.push(entry(`/magazines/${tag.slug}`));
   }

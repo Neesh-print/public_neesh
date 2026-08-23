@@ -23,6 +23,8 @@ export function CoverCard({
       <div className="fallback-meta">
         {title.publisher.name}
         {primaryTag ? ` · ${primaryTag.name}` : ''}
+        <br />
+        Cover coming soon
       </div>
     </div>
   );

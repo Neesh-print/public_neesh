@@ -3,7 +3,12 @@
 export function StockRequestForm({ titleId, titleName }: { titleId: string; titleName: string }) {
   return (
     <details className="cta-form">
-      <summary>Stock this title</summary>
+      <summary>
+        Stock this title{' '}
+        <span className="cta-subline">
+          For shops and spaces. Tell us where you are and we&apos;ll set it up.
+        </span>
+      </summary>
       <form action="/api/signal" method="post">
         <input type="hidden" name="title_id" value={titleId} />
         <input type="hidden" name="signal_type" value="stock_request" />

@@ -1,7 +1,12 @@
 export function WantNearForm({ titleId }: { titleId: string }) {
   return (
     <details className="cta-form">
-      <summary>Want this near you</summary>
+      <summary>
+        Want this near you{' '}
+        <span className="cta-subline">
+          Not a shop? Tell us where you are and we&apos;ll try to get it stocked nearby.
+        </span>
+      </summary>
       <form action="/api/signal" method="post">
         <input type="hidden" name="title_id" value={titleId} />
         <input type="hidden" name="signal_type" value="want_near" />

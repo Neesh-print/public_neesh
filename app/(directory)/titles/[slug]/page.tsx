@@ -90,15 +90,22 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const coverPrice = price(title);
 
   const specRows: [string, string][] = [];
-  if (title.frequency) specRows.push(['Frequency', FREQUENCY_LABELS[title.frequency]]);
+  if (title.frequency) {
+    specRows.push([
+      'Frequency',
+      title.frequency === 'evergreen'
+        ? 'Evergreen, no fixed schedule'
+        : `Published ${FREQUENCY_LABELS[title.frequency].toLowerCase()}`,
+    ]);
+  }
   if (place) specRows.push(['From', place]);
   if (coverPrice) specRows.push(['Cover price', coverPrice]);
   if (title.trim_size) specRows.push(['Trim size', title.trim_size]);
   if (title.page_count) specRows.push(['Pages', String(title.page_count)]);
-  specRows.push(['Status', title.status === 'dormant' ? 'Dormant' : 'Active']);
+  specRows.push(['Status', title.status === 'dormant' ? 'On hiatus' : 'Currently publishing']);
 
   const breadcrumbs = [
-    { name: 'Directory', path: '/directory' },
+    { name: 'Index', path: '/directory' },
     ...(primaryTag && primaryTagLive
       ? [{ name: primaryTag.name, path: `/magazines/${primaryTag.slug}` }]
       : []),
@@ -112,7 +119,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
       <ViewBeacon titleId={title.id} />
 
       <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/directory">Directory</Link>
+        <Link href="/directory">Index</Link>
         {primaryTag && primaryTagLive && (
           <>
             {' / '}
@@ -137,7 +144,14 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
 
           <SubmittedNotice />
 
-          {title.description && <p className="stub">{title.description}</p>}
+          {title.description ? (
+            <p className="stub">{title.description}</p>
+          ) : (
+            <p className="muted">
+              We haven&apos;t written this one up yet. If it&apos;s yours, claim the page
+              and tell us what it&apos;s about.
+            </p>
+          )}
 
           {/* Machine-liftable facts in semantic HTML (spec 7.5) */}
           <dl className="spec-table">
@@ -174,13 +188,16 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
             </ul>
           )}
 
-          <div className="cta-row">
-            {title.publisher.website && (
-              <a className="button" href={`/out/${title.slug}`} rel="nofollow">
-                Visit publisher
-              </a>
-            )}
-          </div>
+          {title.publisher.website && (
+            <div className="cta-row">
+              <span>
+                <a className="button" href={`/out/${title.slug}`} rel="nofollow">
+                  Visit publisher
+                </a>
+                <span className="cta-subline">Buy direct from {title.publisher.name}.</span>
+              </span>
+            </div>
+          )}
 
           <StockRequestForm titleId={title.id} titleName={title.name} />
           <WantNearForm titleId={title.id} />

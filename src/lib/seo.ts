@@ -32,6 +32,12 @@ export const FREQUENCY_LABELS: Record<string, string> = {
   evergreen: 'Evergreen',
 };
 
+// Prose form of a niche name for headings and sentences: "Food & Drink"
+// reads as "food and drink".
+export function nicheProse(name: string): string {
+  return name.toLowerCase().replace(/ & /g, ' and ');
+}
+
 export function placeLabel(city: string | null, country: string | null): string | null {
   const c = countryName(country);
   if (city && c) return `${city}, ${c}`;
@@ -121,6 +127,20 @@ export function itemListLd(tagName: string, tagSlug: string, titles: TitleWithPu
       position: i + 1,
       name: t.name,
       url: canonical(`/titles/${t.slug}`),
+    })),
+  };
+}
+
+// FAQPage markup for /faq and the FAQ blocks on /publishers and /spaces.
+// These are the AEO surfaces (handoff 11).
+export function faqPageLd(items: { question: string; answer: string }[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
     })),
   };
 }

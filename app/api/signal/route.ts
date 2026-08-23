@@ -144,6 +144,26 @@ export async function POST(req: NextRequest) {
           html: emailHtml(body),
         });
       }
+
+      // Email 3.4 to the consumer. The want_near payload carries a postcode
+      // rather than a city (spec 8), so the postcode stands in for {city}.
+      if (parsed.data.signal_type === 'want_near' && title) {
+        const request = payload.data as { postcode: string; email: string };
+        const body =
+          `Hi,\n\n` +
+          `Thanks for telling us you want **${title.name}** in ${request.postcode}. ` +
+          `We keep track of these, and when enough people ask for a title in one ` +
+          `place, we go find a shop or café to stock it.\n\n` +
+          `We'll email you if that happens. That's the only reason we'll email you.\n\n` +
+          `In the meantime you can buy it direct from the publisher.\n\n` +
+          `**Buy ${title.name} direct:** ${canonical(`/out/${title.slug}`)}`;
+        await sendEmail({
+          to: request.email,
+          subject: `Noted, ${title.name} in ${request.postcode}`,
+          text: body.replace(/\*\*/g, ''),
+          html: emailHtml(body),
+        });
+      }
     }
   } catch (err) {
     console.error('signal ingest failed', err);

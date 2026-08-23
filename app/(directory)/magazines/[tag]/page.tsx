@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import { getTagsWithCounts, TAG_THRESHOLD } from '@/lib/queries';
-import { canonical } from '@/lib/seo';
+import { getTagBySlug, getTagsWithCounts, TAG_THRESHOLD } from '@/lib/queries';
+import { canonical, nicheProse } from '@/lib/seo';
 import { NichePage } from '@/components/NichePage';
 
 export const revalidate = 86400;
@@ -17,7 +17,8 @@ export async function generateMetadata({
   params: Promise<{ tag: string }>;
 }): Promise<Metadata> {
   const { tag } = await params;
-  const name = tag.replace(/-/g, ' ');
+  const record = await getTagBySlug(tag);
+  const name = record ? nicheProse(record.name) : tag.replace(/-/g, ' ');
   return {
     title: `Independent ${name} magazines | Neesh Directory`,
     description: `Independent ${name} magazines, verified and indexed by Neesh. Who publishes them, how often, and where from.`,
