@@ -46,6 +46,24 @@ export async function getAllVisibleTitleSlugs(): Promise<
   return (data ?? []).map((r) => ({ slug: r.slug, updated_at: r.updated_at }));
 }
 
+// Everything the catalog grid on the directory home needs, in one query.
+export async function getCatalogTitles(limit = 400): Promise<TitleFull[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient()
+    .from('directory_titles')
+    .select(`${TITLE_SELECT}, directory_title_tags(tag:directory_tags(*))`)
+    .eq('removed', false)
+    .in('status', ['active', 'dormant'])
+    .order('name')
+    .limit(limit);
+  return ((data as unknown as (TitleWithPublisher & {
+    directory_title_tags: { tag: Tag }[];
+  })[]) ?? []).map((row) => ({
+    ...row,
+    tags: (row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean),
+  }));
+}
+
 export async function getTitleBySlug(slug: string): Promise<TitleFull | null> {
   if (!hasSupabaseEnv) return null;
   const { data } = await anonClient()

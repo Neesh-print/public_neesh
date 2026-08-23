@@ -56,7 +56,7 @@ export async function NichePage({ tagSlug, page }: { tagSlug: string; page: numb
       {intro && <div className="niche-intro" dangerouslySetInnerHTML={{ __html: intro }} />}
       <ul className="title-grid">
         {titles.map((title) => (
-          <TitleCard key={title.id} title={title} />
+          <TitleCard key={title.id} title={title} chip={tag.name} />
         ))}
       </ul>
       {lastPage > 1 && (
