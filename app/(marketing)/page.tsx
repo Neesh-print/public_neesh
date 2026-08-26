@@ -182,7 +182,7 @@ export default async function HomePage() {
               <h2 className="d2">A shelf, chosen for you. Shipped in one box.</h2>
               <p className="lede">
                 Five packs, each built around a kind of room: the waiting room, the cafe, the shop
-                floor. $200 flat, shipping included, four to six titles no one else in your
+                floor. $200 flat, shipping included, eight to ten titles no one else in your
                 neighborhood carries.
               </p>
               <p className="lede">

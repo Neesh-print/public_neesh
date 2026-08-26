@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/about' },
 };
 
-const FILM_URL = 'https://www.youtube.com/watch?v=393cjk5hc5Q';
+const TALK_URL = 'https://youtu.be/P-zg0TUcq0g';
 
 export default function AboutPage() {
   return (
@@ -81,7 +81,7 @@ export default function AboutPage() {
               </p>
               <p>
                 I gave the longer version of this argument at Case Sensitive.{' '}
-                <a href={FILM_URL} className="text-link" rel="noopener noreferrer" target="_blank">
+                <a href={TALK_URL} className="text-link" rel="noopener noreferrer" target="_blank">
                   Watch the talk
                 </a>
                 .

@@ -13,6 +13,9 @@ export interface Pack {
   withStand: string;
   // Directory niches used to pick representative covers for the detail page.
   niches: string[];
+  // Confirmed pack contents (directory slugs) — pinned first in the
+  // "What's in the box" grid; niche-matched titles fill the rest.
+  knownSlugs: string[];
 }
 
 export const PACKS: Pack[] = [
@@ -28,6 +31,7 @@ export const PACKS: Pack[] = [
     order: 'https://buy.stripe.com/8x2eVd50Q0Q34Fa7RNabK00',
     withStand: 'https://buy.stripe.com/8x26oH3WM9mzb3y5JFabK01',
     niches: ['Nature & Environment', 'Lifestyle', 'Ideas & Science'],
+    knownSlugs: ['mother-tongue', 'pleasant-place', 'mushroom-people'],
   },
   {
     slug: 'studio',
@@ -41,6 +45,7 @@ export const PACKS: Pack[] = [
     order: 'https://buy.stripe.com/4gMcN58d27er5JegojabK02',
     withStand: 'https://buy.stripe.com/7sYdR978Y0Q31sYgojabK03',
     niches: ['Design & Architecture', 'Art', 'Photography'],
+    knownSlugs: [],
   },
   {
     slug: 'listening-room',
@@ -54,6 +59,7 @@ export const PACKS: Pack[] = [
     order: 'https://buy.stripe.com/5kQ6oHbpefKX0oUdc7abK04',
     withStand: 'https://buy.stripe.com/3cIbJ18d2fKX7RmegbabK05',
     niches: ['Music'],
+    knownSlugs: ['off-licence', 'get-familiar'],
   },
   {
     slug: 'locker-room',
@@ -67,6 +73,7 @@ export const PACKS: Pack[] = [
     order: 'https://buy.stripe.com/6oUaEX78YbuH6Nic83abK06',
     withStand: 'https://buy.stripe.com/7sY3cveBqbuH2x2fkfabK07',
     niches: ['Sport & Outdoors'],
+    knownSlugs: ['mountain-gazette', 'the-surfers-journal', 'pitch'],
   },
   {
     slug: 'table-service',
@@ -80,6 +87,7 @@ export const PACKS: Pack[] = [
     order: 'https://buy.stripe.com/14A28r3WMbuH6Ni0plabK08',
     withStand: 'https://buy.stripe.com/dRmfZh78Y56j2x22xtabK09',
     niches: ['Food & Drink', 'Travel'],
+    knownSlugs: ['plates', 'cake-zine'],
   },
 ];
 

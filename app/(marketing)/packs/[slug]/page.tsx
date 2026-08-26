@@ -32,12 +32,18 @@ export default async function PackDetailPage({ params }: { params: Promise<{ slu
   const pack = getPack(slug);
   if (!pack) notFound();
 
-  // Representative titles from the index, matched on the pack's niches, with
-  // a fallback to any covered titles. The disclaimer line below covers the
+  // Confirmed pack contents lead the grid; titles from the pack's niches
+  // fill the remaining slots. The disclaimer line below covers the
   // hand-picked nature of the final box.
   const catalog = (await getCatalogTitles()).filter((t) => t.cover_image_path);
-  const matched = catalog.filter((t) => t.tags.some((tag) => pack.niches.includes(tag.name)));
-  const box = (matched.length >= 4 ? matched : catalog).slice(0, 8);
+  const known = pack.knownSlugs
+    .map((slug) => catalog.find((t) => t.slug === slug))
+    .filter((t): t is (typeof catalog)[number] => Boolean(t));
+  const knownIds = new Set(known.map((t) => t.id));
+  const matched = catalog.filter(
+    (t) => !knownIds.has(t.id) && t.tags.some((tag) => pack.niches.includes(tag.name))
+  );
+  const box = [...known, ...matched].slice(0, 8);
   const others = PACKS.filter((p) => p.slug !== pack.slug);
 
   return (
