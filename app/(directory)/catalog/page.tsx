@@ -21,6 +21,16 @@ export const metadata: Metadata = {
 export default async function DirectoryHome() {
   const titles = await getCatalogTitles();
 
+  // Featured = the three Neesh titles that joined the platform most
+  // recently. They lead the grid; everyone else stays alphabetical.
+  const featuredSlugs = new Set(
+    titles
+      .filter((t) => t.available_on_neesh && t.neesh_listed_at)
+      .sort((a, b) => (b.neesh_listed_at ?? '').localeCompare(a.neesh_listed_at ?? ''))
+      .slice(0, 3)
+      .map((t) => t.slug)
+  );
+
   // Only the public fields cross into the client grid.
   const items: CatalogItem[] = titles.map((title) => ({
     id: title.id,
@@ -30,7 +40,9 @@ export default async function DirectoryHome() {
     publisher: title.publisher.name,
     niches: title.tags.filter((tag) => tag.category === 'subject').map((tag) => tag.name),
     onNeesh: title.available_on_neesh,
+    featured: featuredSlugs.has(title.slug),
   }));
+  items.sort((a, b) => Number(b.featured) - Number(a.featured));
 
   return (
     <>

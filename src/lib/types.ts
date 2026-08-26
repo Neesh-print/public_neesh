@@ -43,6 +43,7 @@ export interface Title {
   // Set when the title is listed and orderable on the Neesh platform now.
   available_on_neesh: boolean;
   neesh_magazine_id: string | null;
+  neesh_listed_at: string | null;
   created_at: string;
   updated_at: string;
 }

@@ -13,6 +13,8 @@ export interface CatalogItem {
   publisher: string;
   niches: string[];
   onNeesh: boolean;
+  // The three most recently Neesh-listed titles carry the Featured badge.
+  featured: boolean;
 }
 
 // The live /explore treatment: pill filter bar (All plus every niche in the
@@ -80,9 +82,7 @@ export function CatalogGrid({ items }: { items: CatalogItem[] }) {
                       </div>
                     </div>
                   )}
-                  {index < 3 && active === 'All' && (
-                    <span className="featured-badge">★ Featured</span>
-                  )}
+                  {item.featured && <span className="featured-badge">★ Featured</span>}
                 </div>
                 <div className="title-card-body">
                   <h3>{item.name}</h3>
