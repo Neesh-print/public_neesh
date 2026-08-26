@@ -12,6 +12,11 @@ const nextConfig = {
       { source: '/explore', destination: '/index', statusCode: 301 },
       { source: '/explore/:path*', destination: '/index', statusCode: 301 },
       { source: '/directory', destination: '/index', statusCode: 301 },
+      // The catalog's file-system route lives at /catalog (Next normalizes a
+      // request for /index to /, so a segment literally named "index" is
+      // unreachable); the rewrite below serves it at /index, and a direct
+      // /catalog hit bounces to the canonical URL.
+      { source: '/catalog', destination: '/index', statusCode: 301 },
     ];
 
     // Domain cutover passthroughs: once this site serves neesh.art and the
@@ -44,7 +49,13 @@ const nextConfig = {
     // Next's public-folder serving does not resolve index.html for a bare
     // path, so map it explicitly.
     return {
-      beforeFiles: [{ source: '/newsletter', destination: '/newsletter/index.html' }],
+      beforeFiles: [
+        { source: '/newsletter', destination: '/newsletter/index.html' },
+        // Serve the catalog at /index. The page itself lives at /catalog
+        // because Next normalizes an incoming /index to / before routing,
+        // which made a route segment named "index" resolve to the homepage.
+        { source: '/index', destination: '/catalog' },
+      ],
     };
   },
 };
