@@ -2,15 +2,16 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { getAllVisiblePublisherSlugs, getPublisherBySlug } from '@/lib/queries';
-import { canonical, placeLabel } from '@/lib/seo';
+import { canonical } from '@/lib/seo';
+import { coverPublicUrl } from '@/lib/supabase';
 import { JsonLd } from '@/components/JsonLd';
-import { TitleCard } from '@/components/TitleCard';
+import { TitleGridCard } from '@/components/TitleGridCard';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
 
 // Thin by design: this page exists mainly so the Periodical schema's
-// publisher entity has a canonical URL (spec 5).
+// publisher entity has a canonical URL.
 export async function generateStaticParams() {
   const slugs = await getAllVisiblePublisherSlugs();
   return slugs.map(({ slug }) => ({ slug }));
@@ -42,7 +43,6 @@ export default async function PublisherPage({
   const result = await getPublisherBySlug(slug);
   if (!result) notFound();
   const { publisher, titles } = result;
-  const place = placeLabel(publisher.city, publisher.country);
 
   return (
     <>
@@ -55,30 +55,39 @@ export default async function PublisherPage({
           ...(publisher.website ? { sameAs: [publisher.website] } : {}),
         }}
       />
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/index">Directory</Link> / {publisher.name}
+      <nav className="crumbs" aria-label="Breadcrumb">
+        <Link href="/index">Index</Link>
+        <span>/</span>
+        <span className="here">{publisher.name}</span>
       </nav>
-      <h1>{publisher.name}</h1>
-      <p className="publisher-line">
-        Independent publisher{place ? ` in ${place}` : ''}
-        {publisher.website && (
-          <>
-            {' · '}
-            <a href={publisher.website} rel="noopener">
-              Website
-            </a>
-          </>
-        )}
-      </p>
-      {publisher.claimed && (
-        <p className="muted">This profile is maintained with the publisher.</p>
-      )}
-      <h2>Titles</h2>
-      <ul className="title-grid">
-        {titles.map((title) => (
-          <TitleCard key={title.id} title={{ ...title, publisher }} />
-        ))}
-      </ul>
+      <section>
+        <div className="wrap listing-page">
+          <h1 style={{ marginBottom: 12 }}>{publisher.name}</h1>
+          <p className="pub-sub">Everything of theirs in the index.</p>
+          {publisher.claimed && (
+            <p className="claimed-note">This publisher keeps their own pages up to date on Neesh.</p>
+          )}
+          <h2 className="titles-label">Titles</h2>
+          <div className="card-grid">
+            {titles.map((title, index) => (
+              <TitleGridCard
+                key={title.id}
+                eager={index < 4}
+                item={{
+                  id: title.id,
+                  name: title.name,
+                  slug: title.slug,
+                  cover: coverPublicUrl(title.cover_image_path),
+                  publisher: publisher.name,
+                  niche: null,
+                  onNeesh: title.available_on_neesh,
+                  featured: false,
+                }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

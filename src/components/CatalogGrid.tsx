@@ -1,7 +1,7 @@
 'use client';
 
-import Link from 'next/link';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
+import { TitleGridCard } from './TitleGridCard';
 
 // Slim, public-only shape. The server page maps DB rows down to this before
 // it crosses into the client, so nothing private ever reaches the HTML.
@@ -17,16 +17,26 @@ export interface CatalogItem {
   featured: boolean;
 }
 
-// The live /explore treatment: pill filter bar (All plus every niche in the
-// data, active pill inverted) over a 2/3/4-column cover grid. Filtering is
-// instant and client-side; the cards link to the directory profiles.
+// v2 index: centered niche pills (All + Neesh Titles pinned), a count row
+// with Clear filters, and the card grid. The directory header's search box
+// filters this grid live via the neesh:index-q event; ?q= deep links work
+// on load.
 const NEESH_TITLES = 'Neesh Titles';
 
 export function CatalogGrid({ items }: { items: CatalogItem[] }) {
   const [active, setActive] = useState('All');
+  const [query, setQuery] = useState('');
 
-  // "Neesh Titles" is a synthetic filter, pinned right after All: every
-  // title a space can order on Neesh today.
+  useEffect(() => {
+    const initial = new URLSearchParams(window.location.search).get('q');
+    if (initial) setQuery(initial);
+    function onSearch(event: Event) {
+      setQuery((event as CustomEvent<string>).detail ?? '');
+    }
+    window.addEventListener('neesh:index-q', onSearch);
+    return () => window.removeEventListener('neesh:index-q', onSearch);
+  }, []);
+
   const filters = useMemo(() => {
     const names = new Set<string>();
     for (const item of items) for (const niche of item.niches) names.add(niche);
@@ -34,20 +44,28 @@ export function CatalogGrid({ items }: { items: CatalogItem[] }) {
     return ['All', ...pinned, ...[...names].sort()];
   }, [items]);
 
-  const visible =
-    active === 'All'
-      ? items
-      : active === NEESH_TITLES
-        ? items.filter((item) => item.onNeesh)
-        : items.filter((item) => item.niches.includes(active));
+  const needle = query.trim().toLowerCase();
+  const visible = items.filter((item) => {
+    if (active === NEESH_TITLES && !item.onNeesh) return false;
+    if (active !== 'All' && active !== NEESH_TITLES && !item.niches.includes(active)) return false;
+    if (
+      needle &&
+      !`${item.name} ${item.publisher} ${item.niches.join(' ')}`.toLowerCase().includes(needle)
+    )
+      return false;
+    return true;
+  });
+
+  const count = `${visible.length} ${visible.length === 1 ? 'title' : 'titles'}`;
+  const filtered = active !== 'All' || needle.length > 0;
 
   return (
     <>
-      <div className="filter-bar" role="group" aria-label="Filter by niche">
+      <div className="pill-bar" role="group" aria-label="Filter by niche">
         {filters.map((filter) => (
           <button
             key={filter}
-            className={`filter-pill${active === filter ? ' on' : ''}`}
+            className={`pill${active === filter ? ' on' : ''}`}
             onClick={() => setActive(filter)}
             aria-pressed={active === filter}
           >
@@ -56,53 +74,49 @@ export function CatalogGrid({ items }: { items: CatalogItem[] }) {
         ))}
       </div>
 
+      <div className="count-row">
+        <span className="count">{count}</span>
+        {filtered && (
+          <button
+            type="button"
+            className="linkish"
+            onClick={() => {
+              setActive('All');
+              setQuery('');
+              window.dispatchEvent(new CustomEvent('neesh:index-q', { detail: '' }));
+            }}
+          >
+            Clear filters
+          </button>
+        )}
+      </div>
+
       {visible.length > 0 ? (
-        <ul className="title-grid">
+        <div className="card-grid">
           {visible.map((item, index) => (
-            <li className="title-card" key={item.id}>
-              <Link href={`/titles/${item.slug}`} className="title-card-link">
-                <div className="title-card-cover">
-                  {item.cover ? (
-                    <img
-                      className="cover"
-                      src={item.cover}
-                      alt={`${item.name} cover`}
-                      loading={index < 4 ? 'eager' : 'lazy'}
-                    />
-                  ) : (
-                    <div className="cover-fallback">
-                      <div>
-                        <div className="fallback-bar" />
-                        <div className="fallback-name">{item.name}</div>
-                      </div>
-                      <div className="fallback-meta">
-                        {item.publisher}
-                        <br />
-                        Cover coming soon
-                      </div>
-                    </div>
-                  )}
-                  {item.featured && <span className="featured-badge">★ Featured</span>}
-                </div>
-                <div className="title-card-body">
-                  <h3>{item.name}</h3>
-                  <p className="title-card-meta">{item.publisher}</p>
-                  {item.niches[0] && (
-                    <span className="title-card-chip">{item.niches[0]}</span>
-                  )}
-                  {item.onNeesh && (
-                    <span className="title-card-chip on-neesh">Order now</span>
-                  )}
-                </div>
-              </Link>
-            </li>
+            <TitleGridCard
+              key={item.id}
+              eager={index < 4}
+              item={{
+                id: item.id,
+                name: item.name,
+                slug: item.slug,
+                cover: item.cover,
+                publisher: item.publisher,
+                niche: item.niches[0] ?? null,
+                onNeesh: item.onNeesh,
+                featured: item.featured,
+              }}
+            />
           ))}
-        </ul>
+        </div>
       ) : (
-        <p className="muted catalog-empty">
-          {items.length === 0
-            ? 'Niche pages are on their way as the index fills out.'
-            : 'Nothing under this niche yet.'}
+        <p className="index-empty">
+          Nothing matches that yet. Try another category, or{' '}
+          <a href="mailto:hi@neesh.art" className="text-link">
+            tell us what we&rsquo;re missing
+          </a>
+          .
         </p>
       )}
     </>

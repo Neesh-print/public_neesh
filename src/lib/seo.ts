@@ -129,7 +129,7 @@ export function itemListLd(tagName: string, tagSlug: string, titles: TitleWithPu
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: `Independent ${tagName.toLowerCase()} magazines`,
-    url: canonical(`/magazines/${tagSlug}`),
+    url: canonical(`/index/${tagSlug}`),
     itemListElement: titles.slice(0, 50).map((t, i) => ({
       '@type': 'ListItem',
       position: i + 1,

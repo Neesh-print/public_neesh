@@ -27,41 +27,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* v2 type system: Archivo (variable width) display, Manrope body,
+            IBM Plex Mono eyebrows/nav/metadata. */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
-        {/* Sitewide Organization block, the entity anchor. Renders on
-            marketing pages and directory pages alike (handoff 11). */}
+        {/* Sitewide Organization block, the entity anchor. */}
         <JsonLd data={organizationLd()} />
       </head>
-      <body>
-        {children}
-        <footer className="site-footer">
-          <div className="container footer-row">
-            <a href="/" className="brand">
-              <img src="/neesh-logo.png" alt="Neesh" />
-            </a>
-            <div className="footer-links">
-              <a href="https://neesh.art/legal/terms">Terms</a>
-              <a href="https://neesh.art/legal/privacy">Privacy</a>
-              <a href="https://www.instagram.com/neeshprint/" rel="noopener noreferrer">
-                Instagram
-              </a>
-              <a href="mailto:hi@neesh.art">Contact</a>
-            </div>
-          </div>
-          <div className="container">
-            <p className="footer-note">
-              <a href="/add-title">Add a title</a>
-              {' · '}
-              <a href="mailto:hi@neesh.art?subject=Remove%20from%20Index">
-                Remove from Index
-              </a>
-            </p>
-          </div>
-        </footer>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

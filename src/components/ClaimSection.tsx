@@ -1,27 +1,22 @@
 'use client';
 
 import { appUrl } from '@/lib/seo';
+import { ArrowIcon } from './Logo';
 
-// The publisher zone on a title profile: a claim CTA in the accent
-// treatment, and a deliberately small removal link underneath. Claiming
-// fires a claim_click signal (spec 8) then hands off to the full publisher
+// The publisher zone on an unclaimed title profile (v2): a band card with
+// the accent claim CTA and a deliberately small removal link underneath.
+// Claiming fires a claim_click signal then hands off to the full publisher
 // signup flow; every claim still passes manual review. Removal asks for an
 // email and triggers an "are you sure" email before anything comes down.
 export function ClaimSection({
   titleId,
   titleName,
   titleSlug,
-  claimed,
 }: {
   titleId: string;
   titleName: string;
   titleSlug: string;
-  claimed: boolean;
 }) {
-  if (claimed) {
-    return <p className="claimed-badge">Verified by the publisher</p>;
-  }
-
   const href = appUrl(
     `/apply/publisher?title=${encodeURIComponent(titleName)}&claim=${titleSlug}`
   );
@@ -36,38 +31,29 @@ export function ClaimSection({
   }
 
   return (
-    <>
-      <p className="unclaimed-banner">
-        This page was built by Neesh. If this is your magazine, claim it and take the
-        keys.
-      </p>
-      <div className="cta-row">
-        <span>
-          <a className="button accent" href={href} onClick={onClick}>
-            Claim this profile
-          </a>
-          <span className="cta-subline">
-            Publishers only. We review every claim by hand.
-          </span>
-        </span>
-      </div>
-      <details className="remove-request">
+    <div className="publisher-zone">
+      <span className="blurb">
+        This page has not been claimed. If you publish it, take it over and set your own terms.
+      </span>
+      <a className="btn accent" href={href} onClick={onClick}>
+        Claim this profile
+        <ArrowIcon size={16} />
+      </a>
+      <details className="remove-details">
         <summary>Remove this profile</summary>
-        <form action="/api/remove-request" method="post">
+        <form className="remove-form" action="/api/remove-request" method="post">
           <input type="hidden" name="title_id" value={titleId} />
           <input
             name="email"
             type="email"
             required
             maxLength={320}
-            placeholder="Your email"
-            aria-label="Your email"
+            placeholder="Your email at the magazine"
+            aria-label="Your email at the magazine"
           />
-          <button className="linklike" type="submit">
-            Request removal
-          </button>
+          <button type="submit">Request removal</button>
         </form>
       </details>
-    </>
+    </div>
   );
 }

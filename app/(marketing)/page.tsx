@@ -1,197 +1,234 @@
-import type { Metadata } from 'next';
 import Link from 'next/link';
-import { canonical } from '@/lib/seo';
+import { ArrowIcon } from '@/components/Logo';
+import { NewsletterForm } from '@/components/NewsletterForm';
+import { getFeaturedTitles } from '@/lib/queries';
 
 export const revalidate = 86400;
 
-export const metadata: Metadata = {
-  title: 'Neesh | The Marketplace for Independent Magazines',
-  description:
-    'Where indie mags meet the shops, cafés, hotels, and waiting rooms that stock them. Browse 300+ indie titles. Flat 10 percent fee.',
-  alternates: { canonical: canonical('/') },
-  openGraph: {
-    title: 'Neesh | The Marketplace for Independent Magazines',
-    url: canonical('/'),
-  },
-};
+const FILM_URL = 'https://www.youtube.com/watch?v=393cjk5hc5Q';
 
-// The layout is the original neesh.art homepage design (hero grid, dual
-// value prop over the faded magazine wall, mission block with the video,
-// tilted-image closing CTA). Only the copy changed.
-export default function HomePage() {
+// Homepage, v2 design. Hero → title marquee → two-door fork → the Status Quo
+// manifesto → Mission with the film → packs band → newsletter strip →
+// closing photo CTA.
+export default async function HomePage() {
+  // The marquee runs real index titles (most recently updated first) rather
+  // than the prototype's sample names.
+  const marqueeTitles = (await getFeaturedTitles(14)).map((t) => t.name);
+
+  const marqueeSeq = (
+    <div className="marquee-seq">
+      <span className="tag">In the index</span>
+      {marqueeTitles.map((name) => (
+        <span key={name}>{name}</span>
+      ))}
+    </div>
+  );
+
   return (
     <>
-      {/* Hero */}
-      <section className="mk-section">
-        <div className="container mk-hero-grid">
-          <div>
-            <h1>Publish. We&apos;ll handle the shelves.</h1>
-            <p className="lede">
-              Neesh connects independent magazines with the shops, cafés, hotels, and
-              waiting rooms that want them. Retailers order in a few clicks. You keep your
-              terms and see every sale in real time so you can retire your spreadsheets.
+      <section className="home-hero">
+        <img src="/assets/flatlay-red-wide.jpg" alt="Independent magazines laid out on a red backdrop" />
+        <div className="scrim" />
+        <div className="home-hero-content">
+          <span className="eyebrow">300+ independent titles from 30+ countries</span>
+          <h1 className="d1">Publish. We&rsquo;ll handle the shelves.</h1>
+          <div className="home-hero-row">
+            <p>
+              Neesh connects independent magazines with the shops, caf&eacute;s, hotels, and waiting
+              rooms that want them. Retailers order in a few clicks. You keep your terms and see
+              every sale in real time so you can retire your spreadsheets.
             </p>
-            <div className="cta-row">
-              <Link className="button" href="/auth">
+            <div className="home-hero-ctas">
+              <Link href="/auth" className="btn white hero">
                 Claim your title
               </Link>
-              <Link className="button ghost" href="/index">
+              <Link href="/index" className="btn ghost-white hero">
                 Browse the index
               </Link>
             </div>
           </div>
-          <div className="mk-image">
-            <img
-              src="/assets/hero-magazine-flatlay.jpg"
-              alt="A colorful flatlay of independent magazines"
-              fetchPriority="high"
-            />
-          </div>
         </div>
       </section>
 
-      {/* Dual value prop over the faded magazine wall */}
-      <section className="mk-section mk-dual">
-        <div className="mk-dual-bg" aria-hidden="true">
-          <img src="/assets/section-bg-magazines.jpg" alt="" loading="lazy" />
+      {marqueeTitles.length > 0 && (
+        <div className="marquee" aria-hidden="true">
+          <div className="marquee-track">
+            {marqueeSeq}
+            {marqueeSeq}
+          </div>
         </div>
-        <div className="container">
-          <div className="mk-dual-col">
+      )}
+
+      <section className="doors">
+        <Link href="/publishers" className="door publisher">
+          <img src="/assets/bench-tempura.jpg" alt="A publisher reading on a bench" />
+          <div className="scrim" />
+          <div className="door-content">
             <span className="eyebrow">For publishers</span>
-            <h2>Set your terms. We bring the shelves.</h2>
-            <p>
-              You price it. You decide whether to fulfill it yourself or let us handle
-              it.* Every order shows you who bought it, where they are, and when they
-              reorder.
-            </p>
-            <p>
-              We sell on your behalf, remind buyers to reorder, and make it easy to get
-              paid. 100+ retailers in 30+ countries are already browsing. You only pay a
-              flat 10%.
-            </p>
-            <p className="footnote">
-              *Neesh Fulfillment is currently in beta, accepting a small number of
-              fulfillment orders.
-            </p>
-            <Link className="button" href="/auth">
+            <span className="door-title">Set your terms. We bring the shelves.</span>
+            <span className="door-body">
+              You price it. You decide whether to fulfill it yourself or let us handle it (
+              <em>currently in beta</em>). Every order shows you who bought it, where they are, and
+              when they reorder.
+            </span>
+            <span className="door-body">
+              We sell on your behalf, remind buyers to reorder, and make it easy to get paid. 100+
+              retailers in 30+ countries are already browsing. You only pay a flat 10%.
+            </span>
+            <span className="door-cta">
               Claim your title
-            </Link>
+              <ArrowIcon />
+            </span>
           </div>
-          <div className="mk-dual-col">
+        </Link>
+        <Link href="/spaces" className="door spaces">
+          <img src="/assets/table-sport.jpg" alt="Magazines laid out on a table in a room" />
+          <div className="scrim" />
+          <div className="door-content">
             <span className="eyebrow">For spaces</span>
-            <h2>Curate the room. We&apos;ll stock it.</h2>
-            <p>
-              Magazines get your room photographed and shared. They keep people sitting
-              longer once they&apos;re in. And they give regulars something new to come
-              back to.
-            </p>
-            <p>
-              Pick a pack built for your kind of room, or build your own from the index.
-              Signup takes under a minute and nothing is locked in.
-            </p>
-            <Link className="button" href="/packs">
+            <span className="door-title">
+              <span className="hl">Curate the room. We&rsquo;ll stock it.</span>
+            </span>
+            <span className="door-body">
+              Magazines get your room photographed and shared. They keep people sitting longer once
+              they&rsquo;re in. And they give regulars something new to come back to.
+            </span>
+            <span className="door-body">
+              Pick a pack built for your kind of room, or build your own from the index. Sign up in
+              under a minute to buy the best independent magazines at wholesale, with nothing
+              locked in.
+            </span>
+            <span className="door-cta">
               See the packs
-            </Link>
+              <ArrowIcon />
+            </span>
           </div>
-        </div>
+        </Link>
       </section>
 
-      {/* Manifesto on the band */}
-      <section className="mk-section band">
-        <div className="container mk-manifesto">
+      <section className="manifesto">
+        <div className="wrap">
+          <span className="eyebrow on-black">The Status Quo</span>
           <h2>Bad and worse</h2>
-          <p>Independent publishers get two options.</p>
-          <p>
-            Door one is a distributor. They take 60 points, pay in 90 days, send sales
-            reports that are out of date when they arrive, and destroy what doesn&apos;t
-            sell. You find out where your magazine went months after it went there.
-          </p>
-          <p>
-            Door two is doing it yourself. Dozens of store relationships in a spreadsheet.
-            Invoices you chase for six months. Reorders that only happen when you remember
-            to ask.
-          </p>
-          <p>
-            Most publishers pick door two and call it independence. It&apos;s really unpaid
+          <p className="kicker">Independent publishers get two options.</p>
+          <div className="manifesto-cols">
+            <div className="manifesto-col">
+              <span className="manifesto-num">01</span>
+              <p>
+                Door one is a distributor. They take 60 points, pay in 90 days, send sales reports
+                that are out of date when they arrive, and destroy what doesn&rsquo;t sell. You
+                find out where your magazine went months after it went there.
+              </p>
+            </div>
+            <div className="manifesto-col">
+              <span className="manifesto-num">02</span>
+              <p>
+                Door two is doing it yourself. Dozens of store relationships in a spreadsheet.
+                Invoices you chase for six months. Reorders that only happen when you remember to
+                ask.
+              </p>
+            </div>
+          </div>
+          <p className="manifesto-close">
+            Most publishers pick door two and call it independence. It&rsquo;s really unpaid
             logistics work, eating the time you have to make the next issue.
           </p>
         </div>
       </section>
 
-      {/* Mission block: index text left, the video right */}
-      <section className="mk-section">
-        <div className="container mk-mission">
-          <div>
-            <h2>Every independent magazine, in one place</h2>
-            <p>
-              300+ independent titles from 30+ countries. Food, music, fashion, sport,
-              architecture, art, travel, and about thirty other niches.
-            </p>
-            <p>Publishers, your title is probably already here. Claim it and take the keys.</p>
-            <Link className="button ghost" href="/index">
-              Browse the index
-            </Link>
+      <section className="feature-band">
+        <div className="wrap">
+          <div className="feature-cols">
+            <div className="feature-copy">
+              <span className="eyebrow muted">Mission</span>
+              <h2 className="d2">Every independent magazine, in one place</h2>
+              <p className="lede" style={{ color: 'var(--muted-2)' }}>
+                300+ independent titles from 30+ countries. Food, music, fashion, sport,
+                architecture, art, travel, and about thirty other niches.
+              </p>
+              <p className="lede" style={{ color: 'var(--muted-2)' }}>
+                Publishers, your title is probably already here. Claim it and retire your
+                spreadsheet.
+              </p>
+              <Link href="/index" className="btn ghost">
+                Browse the index
+              </Link>
+            </div>
+            <a href={FILM_URL} className="film-link" rel="noopener noreferrer" target="_blank">
+              <img src="/assets/city-reader-wall.jpg" alt="Still from the Neesh film" />
+              <span className="film-play">
+                <span>
+                  <svg width="20" height="22" viewBox="0 0 20 22" fill="#FFFFFF" aria-hidden="true">
+                    <path d="M0 0 L20 11 L0 22 Z" />
+                  </svg>
+                </span>
+              </span>
+              <span className="film-tag">The film</span>
+            </a>
           </div>
-          <div className="mk-video">
-            <iframe
-              src="https://www.youtube-nocookie.com/embed/393cjk5hc5Q?autoplay=0&rel=0"
-              title="Neesh - The Marketplace for Independent Magazines"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
+        </div>
+      </section>
+
+      <section className="feature-band tint" id="packs">
+        <div className="wrap">
+          <div className="feature-cols">
+            <img
+              className="feature-img"
+              src="/assets/pack-waiting-room.jpg"
+              alt="The Waiting Room pack, stacked"
             />
+            <div className="feature-copy">
+              <span className="eyebrow dim">Curated packs</span>
+              <h2 className="d2">A shelf, chosen for you. Shipped in one box.</h2>
+              <p className="lede">
+                Five packs, each built around a kind of room: the waiting room, the cafe, the shop
+                floor. $200 flat, shipping included, four to six titles no one else in your
+                neighborhood carries.
+              </p>
+              <p className="lede">
+                You don&rsquo;t have time to become a magazine buyer. We already are. Order a pack
+                and your space starts saying something before anyone sits down.
+              </p>
+              <Link href="/packs" className="btn solid">
+                See the packs
+                <ArrowIcon />
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Packs strip as the card grid */}
-      <section className="mk-section band">
-        <div className="container">
-          <div className="mk-cards cols-3">
-            <Link className="mk-card" href="/packs#the-waiting-room">
-              <strong>The Waiting Room</strong>
-              <span>For rooms where people sit longer than they planned.</span>
-            </Link>
-            <Link className="mk-card" href="/packs#the-studio">
-              <strong>The Studio</strong>
-              <span>For creative spaces that need something worth stealing an idea from.</span>
-            </Link>
-            <Link className="mk-card" href="/packs#the-listening-room">
-              <strong>The Listening Room</strong>
-              <span>For bars, record shops, and anywhere with a good soundsystem.</span>
-            </Link>
-            <Link className="mk-card" href="/packs#the-locker-room">
-              <strong>The Locker Room</strong>
-              <span>For gyms, climbing walls, and saunas.</span>
-            </Link>
-            <Link className="mk-card" href="/packs#table-service">
-              <strong>Table Service</strong>
-              <span>For restaurants and cafés with a bar people linger at.</span>
-            </Link>
+      <section className="newsletter-strip">
+        <div className="wrap">
+          <div className="newsletter-strip-inner">
+            <div className="newsletter-strip-copy">
+              <span className="eyebrow">Indexed, monthly</span>
+              <h2>What landed on the shelf this month</h2>
+              <p>New titles in the index, physical media news and stuff we&rsquo;re reading. 1x a month.</p>
+            </div>
+            <NewsletterForm />
           </div>
         </div>
       </section>
 
-      {/* Closing CTA with the tilted images */}
-      <section className="mk-cta-final">
-        <img className="mk-cta-img left" src="/assets/cta-couch.jpg" alt="" loading="lazy" />
-        <img className="mk-cta-img right" src="/assets/cta-flowers.jpg" alt="" loading="lazy" />
-        <div className="mk-cta-center">
-          <h2>Print didn&apos;t die. The shelf did.</h2>
+      <section className="closing">
+        <img src="/assets/couch-pair.jpg" alt="Two people reading magazines on a couch" />
+        <div className="closing-content">
+          <h2>Print didn&rsquo;t die. The shelf did.</h2>
           <p>
-            Magazines live or die on shelves, and the shelves disappeared with the
-            newsstands. We&apos;re rebuilding them in the spaces where people actually
-            spend time.
+            Magazines live or die on shelves, and the shelves disappeared with the newsstands.
+            We&rsquo;re rebuilding them in the spaces where people actually spend time.
           </p>
           <p>
-            An index of every title worth knowing about, and the rails to move them into
-            the world. Fifty years from now, someone should still be able to make a
-            magazine and make a living.
+            An index of every title worth knowing about, and the rails to move them into the world.
+            Fifty years from now, someone should still be able to make a magazine and make a
+            living.
           </p>
-          <div className="cta-row">
-            <Link className="button" href="/auth">
+          <div className="closing-ctas">
+            <Link href="/auth" className="btn white hero">
               Claim your title
             </Link>
-            <Link className="button ghost" href="/packs">
+            <Link href="/packs" className="btn ghost-white hero">
               See the packs
             </Link>
           </div>

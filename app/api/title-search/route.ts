@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { anonClient, hasSupabaseEnv } from '@/lib/supabase';
+import { anonClient, coverPublicUrl, hasSupabaseEnv } from '@/lib/supabase';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,10 +11,11 @@ export interface TitleSearchResult {
   publisher: string;
   claimed: boolean;
   niche: string | null;
+  cover: string | null;
 }
 
 const SELECT =
-  'name, slug, frequency, country, publisher:directory_publishers!inner(name, claimed), directory_title_tags(tag:directory_tags(name))';
+  'name, slug, frequency, country, cover_image_path, publisher:directory_publishers!inner(name, claimed), directory_title_tags(tag:directory_tags(name))';
 
 function escapeLike(value: string): string {
   return value.replace(/[%_]/g, '\\$&');
@@ -58,6 +59,7 @@ export async function GET(req: NextRequest) {
       publisher: publisher?.name ?? '',
       claimed: Boolean(publisher?.claimed),
       niche: tags?.[0]?.tag?.name ?? null,
+      cover: coverPublicUrl(row.cover_image_path as string | null),
     });
   }
 

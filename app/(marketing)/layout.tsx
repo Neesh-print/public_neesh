@@ -1,10 +1,12 @@
-import { MarketingHeader } from '@/components/SiteNav';
+import { MarketingHeader } from '@/components/SiteChrome';
+import { Footer } from '@/components/Footer';
 
 export default function MarketingLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <MarketingHeader />
-      <main className="marketing-main">{children}</main>
+      <main>{children}</main>
+      <Footer />
     </>
   );
 }

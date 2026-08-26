@@ -1,33 +1,36 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { appUrl, canonical } from '@/lib/seo';
+import { appUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Sign up or log in | Neesh',
-  description: 'Sign up as a publisher or a space, or log in to Neesh.',
-  alternates: { canonical: canonical('/auth') },
-  robots: { index: false },
+  title: 'Sign Up | Neesh',
+  description: 'Two doors, one index. Publishers claim their titles; spaces buy at wholesale.',
+  alternates: { canonical: '/auth' },
 };
 
-// One destination for Sign Up and Log In (handoff section 7). The fork:
-// publisher path searches the index first so claiming beats duplicating;
-// the space path routes to the existing signup flow.
-export default function AuthPage() {
+export default function AuthForkPage() {
   return (
-    <div className="auth-page container">
-      <h1>Sign up or log in</h1>
-      <div className="auth-fork">
-        <Link className="button" href="/auth/publisher">
-          I publish a magazine
-        </Link>
-        <Link className="button" href="/auth/space">
-          I have a space
-        </Link>
+    <section>
+      <div className="utility-page">
+        <h1>Sign up for Neesh</h1>
+        <p className="sub">Two doors, one index. Tell us which side of the shelf you are on.</p>
+        <div className="door-cards">
+          <Link href="/auth/publisher" className="door-card dark">
+            <span className="title">I publish a magazine</span>
+            <span className="sub">Find your title and claim it.</span>
+          </Link>
+          <Link href="/auth/space" className="door-card">
+            <span className="title">I have a space</span>
+            <span className="sub">Buy at wholesale for your room.</span>
+          </Link>
+        </div>
+        <p className="small">
+          Already have an account?{' '}
+          <a href={appUrl('/login')} className="text-link">
+            Log in
+          </a>
+        </p>
       </div>
-      <p className="muted">
-        <em>Already have an account?</em>{' '}
-        <a href={appUrl('/login')}>Log in</a>
-      </p>
-    </div>
+    </section>
   );
 }

@@ -133,7 +133,7 @@ export async function POST(req: NextRequest) {
               const niche = tag.name.toLowerCase();
               const browseUrl =
                 (count ?? 0) >= TAG_THRESHOLD
-                  ? canonical(`/magazines/${tag.slug}`)
+                  ? canonical(`/index/${tag.slug}`)
                   : canonical('/index');
               nichePara =
                 `\n\nIn the meantime, ${others} other ${niche} titles are ready to ` +

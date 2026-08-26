@@ -1,98 +1,111 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { canonical, siteUrl } from '@/lib/seo';
-import { JsonLd } from '@/components/JsonLd';
 
-export const revalidate = 86400;
-
-// Standalone page nested in nav under Journal. Not a Journal article, no
-// Article markup: AboutPage keeps its type and never carries a stale
-// publication date (handoff 11).
 export const metadata: Metadata = {
-  title: 'About Neesh | Infrastructure for independent print',
+  title: 'About | Neesh',
   description:
-    'Neesh is building the infrastructure independent print never had. An index of 300+ magazines and a wholesale marketplace connecting them with shops and spaces worldwide.',
-  alternates: { canonical: canonical('/about') },
+    'Magazines live or die on shelves, and the shelves disappeared. Neesh is an index of every title worth knowing about, and the rails to move them into the world.',
+  alternates: { canonical: '/about' },
 };
+
+const FILM_URL = 'https://www.youtube.com/watch?v=393cjk5hc5Q';
 
 export default function AboutPage() {
   return (
     <>
-      <JsonLd
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'AboutPage',
-          name: 'About Neesh',
-          url: canonical('/about'),
-          about: { '@type': 'Organization', name: 'Neesh', url: siteUrl() },
-        }}
-      />
-      <article className="prose-page container">
-        <h1>Magazines live or die on shelves, and the shelves disappeared.</h1>
-        <p>
-          The newsstands closed. The wholesalers cut their ranges. Half the world&apos;s
-          best magazine shops shut in the last five years. Meanwhile independent
-          publishing got better than it&apos;s been in decades, and almost none of it can
-          be found anywhere physical.
-        </p>
-        <p>
-          Print has no shortage of believers. What it&apos;s been missing is
-          infrastructure.
-        </p>
-
-        <h2>What we&apos;re building</h2>
-        <p>
-          An index of every independent magazine worth knowing about, public and free, so
-          publishers can be found and buyers can find them.
-        </p>
-        <p>
-          And a wholesale marketplace underneath it, so that finding turns into stocking.
-          Publishers set their terms and see their sales. Shops and spaces order in a few
-          clicks without opening a distributor account.
-        </p>
-        <p>
-          The shelf has moved. We&apos;re putting magazines in cafés, hotels, spas,
-          studios, gyms, and waiting rooms, because that&apos;s where people actually
-          spend their time now.
-        </p>
-
-        <h2>Why us</h2>
-        <p>
-          Neesh is run out of Portland, Oregon by me, Gem Nwannem. I&apos;ve spent a
-          decade in supply chain and logistics and have been making, buying, hoarding, and
-          evangelizing print since college. I&apos;m also a vinyl DJ and radio host, so
-          this analog thing runs deep.
-        </p>
-        <p>
-          Independent print doesn&apos;t have a demand problem. It has a distribution
-          problem, and distribution is a solved discipline in every industry except this
-          one. I built Neesh because I&apos;ve built the solutions for other industries
-          and want to do the same here. I love print and I want it to exist for decades to
-          come.
-        </p>
-
-        <h2>What we believe</h2>
-        <p>Publishers should keep their margin and their relationships.</p>
-        <p>Sales data should arrive while it&apos;s still useful.</p>
-        <p>Unsold copies should be sold, not pulped.</p>
-        <p>
-          A magazine should be findable in the room where it makes sense, not only in the
-          four shops that still carry print.
-        </p>
-        <p>
-          And fifty years from now, someone should still be able to make a magazine and
-          make a living doing it.
-        </p>
-
-        <div className="cta-row">
-          <Link className="button" href="/auth">
-            Claim your title
-          </Link>
-          <Link className="button ghost" href="/packs">
-            See the packs
-          </Link>
+      <section className="page-hero short">
+        <img
+          src="/assets/city-reader-wall.jpg"
+          alt="A wall of independent magazines"
+          style={{ objectPosition: '50% 46%' }}
+        />
+        <div
+          className="scrim"
+          style={{
+            background:
+              'linear-gradient(180deg, rgba(0,0,0,0.56) 0%, rgba(0,0,0,0.52) 34%, rgba(0,0,0,0.66) 100%)',
+          }}
+        />
+        <div className="page-hero-content">
+          <span className="eyebrow">About</span>
+          <h1 style={{ fontSize: 'clamp(32px,5vw,76px)', maxWidth: '22ch', marginBottom: 0 }}>
+            Magazines live or die on shelves, and the shelves disappeared.
+          </h1>
         </div>
-      </article>
+      </section>
+
+      <section>
+        <div className="wrap about-cols">
+          <div className="about-col">
+            <h2>What we&rsquo;re building</h2>
+            <p>
+              300+ independent titles from 30+ countries. Food, music, fashion, sport,
+              architecture, art, travel, and about thirty other niches.
+            </p>
+            <p>
+              An index of every title worth knowing about, and the rails to move them into the
+              world. Fifty years from now, someone should still be able to make a magazine and
+              make a living.
+            </p>
+          </div>
+          <div className="about-col">
+            <h2>Why us</h2>
+            <p>
+              We&rsquo;re the rails, not the owner. You keep your terms, your pricing, and your
+              direct line to the people stocking you.
+            </p>
+            <p>
+              Half our buyers aren&rsquo;t bookshops. They&rsquo;re caf&eacute;s, climbing gyms,
+              hotels, studios, spas, and one very well-read ketamine clinic. Publishers tell us
+              the best placements are the ones they&rsquo;d never have thought to ask for.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="founder-band tint-section">
+        <div className="wrap">
+          <div className="founder-cols">
+            <img src="/assets/gem-portrait.jpg" alt="Gem holding a stack of independent magazines" />
+            <div className="founder-copy">
+              <h2>Who&rsquo;s behind this</h2>
+              <p>
+                YO! I&rsquo;m Gem, a marketer, vinyl DJ and ex-vintage store owner. I spent most of
+                a decade moving physical goods across borders for logistics and supply chain
+                companies, and most of my evenings reading independent magazines. I started Neesh
+                because the magazines I loved were nearly impossible to find outside a handful of
+                shops, and the people making them were spending more time on spreadsheets and
+                shipping labels than on the next issue. Distribution decides what gets made, what
+                gets moved, and what gets remembered. Independent print deserves infrastructure
+                built for it, not hand-me-downs from the newsstand era.
+              </p>
+              <p>
+                I gave the longer version of this argument at Case Sensitive.{' '}
+                <a href={FILM_URL} className="text-link" rel="noopener noreferrer" target="_blank">
+                  Watch the talk
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+          <div className="work-with">
+            <h3>Work with Neesh</h3>
+            <p>
+              If you publish a magazine,{' '}
+              <Link href="/auth/publisher" className="text-link">
+                claim your title
+              </Link>{' '}
+              and set your terms. If you run a space and want help choosing, write to{' '}
+              <a href="mailto:hi@neesh.art" className="text-link">
+                hi@neesh.art
+              </a>{' '}
+              and tell me about the room. If you&rsquo;d like to work on Neesh itself, whether
+              that&rsquo;s writing, design, or handling the warehouse, send a note to the same
+              address and tell me what you&rsquo;re good at.
+            </p>
+          </div>
+        </div>
+      </section>
     </>
   );
 }

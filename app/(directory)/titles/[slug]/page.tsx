@@ -10,7 +10,6 @@ import {
 import {
   breadcrumbLd,
   canonical,
-  countryName,
   FREQUENCY_LABELS,
   ogImageForTitle,
   periodicalLd,
@@ -18,6 +17,7 @@ import {
   titleMetaDescription,
   titleMetaTitle,
 } from '@/lib/seo';
+import { ArrowIcon } from '@/components/Logo';
 import { CoverCard } from '@/components/CoverCard';
 import { ClaimSection } from '@/components/ClaimSection';
 import { JsonLd } from '@/components/JsonLd';
@@ -88,6 +88,12 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const place = placeLabel(title.city, title.country);
   const coverPrice = price(title);
 
+  // Profile states: listed on Neesh (orderable), claimed (verified), or
+  // unclaimed (claim + removal zone). Neesh-listed titles belong to
+  // publishers with accounts: no claim, no removal link.
+  const listed = title.available_on_neesh;
+  const claimed = title.publisher.claimed;
+
   // "Published {x}" needs an adverbial form: "Published quarterly" works,
   // "Published annual" does not.
   const FREQUENCY_ADVERBS: Record<string, string> = {
@@ -103,24 +109,33 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
       title.frequency === 'evergreen'
         ? 'Evergreen, no fixed schedule'
         : `Published ${
-            FREQUENCY_ADVERBS[title.frequency] ??
-            FREQUENCY_LABELS[title.frequency].toLowerCase()
+            FREQUENCY_ADVERBS[title.frequency] ?? FREQUENCY_LABELS[title.frequency].toLowerCase()
           }`,
     ]);
   }
   if (place) specRows.push(['From', place]);
   if (coverPrice) specRows.push(['Cover price', coverPrice]);
-  if (title.trim_size) specRows.push(['Trim size', title.trim_size]);
+  if (title.trim_size) specRows.push(['Trim', title.trim_size]);
   if (title.page_count) specRows.push(['Pages', String(title.page_count)]);
-  specRows.push(['Status', title.status === 'dormant' ? 'On hiatus' : 'Currently publishing']);
+  specRows.push([
+    'Status',
+    listed
+      ? 'Listed on Neesh'
+      : title.status === 'dormant'
+        ? 'On hiatus'
+        : 'Currently publishing',
+  ]);
 
   const breadcrumbs = [
     { name: 'Index', path: '/index' },
     ...(primaryTag && primaryTagLive
-      ? [{ name: primaryTag.name, path: `/magazines/${primaryTag.slug}` }]
+      ? [{ name: primaryTag.name, path: `/index/${primaryTag.slug}` }]
       : []),
     { name: title.name, path: `/titles/${title.slug}` },
   ];
+
+  const subjectTags = title.tags.filter((tag) => tag.category === 'subject');
+  const identityTags = title.tags.filter((tag) => tag.category !== 'subject');
 
   return (
     <>
@@ -128,113 +143,117 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
       <JsonLd data={breadcrumbLd(breadcrumbs)} />
       <ViewBeacon titleId={title.id} />
 
-      <nav className="breadcrumbs" aria-label="Breadcrumb">
+      <nav className="crumbs" aria-label="Breadcrumb">
         <Link href="/index">Index</Link>
         {primaryTag && primaryTagLive && (
           <>
-            {' / '}
-            <Link href={`/magazines/${primaryTag.slug}`}>{primaryTag.name}</Link>
+            <span>/</span>
+            <Link href={`/index/${primaryTag.slug}`}>{primaryTag.name}</Link>
           </>
         )}
-        {' / '}
-        {title.name}
+        <span>/</span>
+        <span className="here">{title.name}</span>
       </nav>
 
-      <div className="profile-layout">
-        <aside>
-          <CoverCard title={title} primaryTag={primaryTag} />
-        </aside>
-        <article>
-          <h1>{title.name}</h1>
-          <p className="publisher-line">
-            Published by{' '}
-            <Link href={`/publishers/${title.publisher.slug}`}>{title.publisher.name}</Link>
-            {place ? ` in ${place}` : ''}
-          </p>
-
-          <SubmittedNotice />
-
-          {title.description ? (
-            <p className="stub">{title.description}</p>
-          ) : (
-            <p className="muted">
-              We haven&apos;t written this one up yet. If it&apos;s yours, claim the page
-              and tell us what it&apos;s about.
-            </p>
-          )}
-
-          {/* Machine-liftable facts in semantic HTML (spec 7.5) */}
-          <dl className="spec-table">
-            {specRows.map(([label, value]) => (
-              <div key={label} style={{ display: 'contents' }}>
-                <dt>{label}</dt>
-                <dd>{value}</dd>
-              </div>
-            ))}
-          </dl>
-
-          {title.frequency === 'evergreen' && (
-            <p className="evergreen-note">
-              {title.name} is published as an evergreen title, meaning issues stay in
-              print rather than expiring when the next one arrives.
-            </p>
-          )}
-
-          {title.tags.length > 0 && (
-            <ul className="tag-list">
-              {title.tags.map((tag) =>
+      <section>
+        <div className="wrap title-page">
+          <div className="title-cover-col">
+            <CoverCard title={title} />
+            <div className="title-tags">
+              {subjectTags.map((tag) =>
                 publishing.has(tag.slug) ? (
-                  <li key={tag.id}>
-                    <Link className="tag-pill" href={`/magazines/${tag.slug}`}>
-                      {tag.name}
-                    </Link>
-                  </li>
+                  <Link key={tag.id} href={`/index/${tag.slug}`}>
+                    {tag.name}
+                  </Link>
                 ) : (
-                  <li key={tag.id}>
-                    <span className="tag-plain">{tag.name}</span>
-                  </li>
+                  <span key={tag.id} className="identity">
+                    {tag.name}
+                  </span>
                 )
               )}
-            </ul>
-          )}
+              {identityTags.map((tag) => (
+                <span key={tag.id} className="identity">
+                  {tag.name}
+                </span>
+              ))}
+            </div>
+          </div>
 
-          {(title.available_on_neesh || title.publisher.website) && (
-            <div className="cta-row">
-              {title.available_on_neesh && (
-                <span>
-                  <Link className="button" href={`/order/${title.slug}`}>
-                    Order on Neesh
-                  </Link>
-                  <span className="cta-subline">
-                    Wholesale, for shops and spaces. Ready to ship now.
-                  </span>
+          <div className="title-main">
+            <div className="title-head">
+              {claimed && (
+                <span className="verified-pill">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
+                  Verified by the publisher
                 </span>
               )}
-              {title.publisher.website && (
-                <a
-                  className={`button${title.available_on_neesh ? ' ghost' : ''}`}
-                  href={`/out/${title.slug}`}
-                  rel="nofollow"
-                >
-                  See where it&apos;s stocked
-                </a>
-              )}
+              <h1>{title.name}</h1>
+              <p className="publisher-line">
+                Published by {title.publisher.name}
+                {place ? ` in ${place}` : ''} &middot;{' '}
+                <Link href={`/publishers/${title.publisher.slug}`} className="text-link">
+                  See all their titles
+                </Link>
+              </p>
             </div>
-          )}
 
-          <WantTitleForm titleId={title.id} />
-          {/* Titles already listed on Neesh belong to publishers with
-              accounts: no claim, no removal link. */}
-          {!title.available_on_neesh && (
-            <ClaimSection
-              titleId={title.id}
-              titleName={title.name}
-              titleSlug={title.slug}
-              claimed={title.publisher.claimed}
-            />
-          )}
-        </article>
-      </div>
+            <SubmittedNotice />
+
+            {title.description ? (
+              <p className="title-desc">{title.description}</p>
+            ) : (
+              <p className="title-desc placeholder">
+                Nobody has written this one up yet. If you publish it, claim the page and describe
+                it in your own words.
+              </p>
+            )}
+
+            {/* Machine-liftable facts in semantic HTML */}
+            <dl className="spec-rows">
+              {specRows.map(([label, value]) => (
+                <div className="spec-row" key={label}>
+                  <dt>{label}</dt>
+                  <dd>{value}</dd>
+                </div>
+              ))}
+            </dl>
+
+            {listed ? (
+              <div className="cta-stack">
+                <div className="cta-row">
+                  <Link href={`/order/${title.slug}`} className="btn solid">
+                    Order on Neesh
+                    <ArrowIcon />
+                  </Link>
+                  {title.publisher.website && (
+                    <a className="btn ghost" href={`/out/${title.slug}`} rel="nofollow">
+                      See where it&rsquo;s stocked
+                    </a>
+                  )}
+                </div>
+                <span className="cta-note">Wholesale, by the copy, no minimums.</span>
+              </div>
+            ) : (
+              title.publisher.website && (
+                <div className="cta-row">
+                  <a className="btn solid" href={`/out/${title.slug}`} rel="nofollow">
+                    See where it&rsquo;s stocked
+                    <ArrowIcon />
+                  </a>
+                </div>
+              )
+            )}
+
+            <WantTitleForm titleId={title.id} />
+
+            {!listed && !claimed && (
+              <ClaimSection titleId={title.id} titleName={title.name} titleSlug={title.slug} />
+            )}
+          </div>
+        </div>
+      </section>
     </>
   );
 }

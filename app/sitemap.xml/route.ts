@@ -36,7 +36,7 @@ export async function GET() {
     entry('/faq'),
   ];
   for (const tag of tags) {
-    if (tagPublishes(tag)) urls.push(entry(`/magazines/${tag.slug}`));
+    if (tagPublishes(tag)) urls.push(entry(`/index/${tag.slug}`));
   }
   for (const t of titles) urls.push(entry(`/titles/${t.slug}`, t.updated_at));
   for (const p of publishers) urls.push(entry(`/publishers/${p.slug}`, p.updated_at));

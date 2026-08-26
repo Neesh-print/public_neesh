@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 
 export default function AddTitlePage() {
   return (
-    <div className="auth-page">
-      <h1>Add a title</h1>
-      <p className="lede">Do you publish it?</p>
-      <SubmittedNotice />
-      <AddTitleFork />
-    </div>
+    <section>
+      <div className="utility-page roomy">
+        <SubmittedNotice />
+        <AddTitleFork />
+      </div>
+    </section>
   );
 }

@@ -8,29 +8,29 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const tags = await getTagsWithCounts();
-  return tags.filter(tagPublishes).map((t) => ({ tag: t.slug }));
+  return tags.filter(tagPublishes).map((t) => ({ niche: t.slug }));
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ tag: string }>;
+  params: Promise<{ niche: string }>;
 }): Promise<Metadata> {
-  const { tag } = await params;
-  const record = await getTagBySlug(tag);
-  const name = record ? nicheProse(record.name) : tag.replace(/-/g, ' ');
+  const { niche } = await params;
+  const record = await getTagBySlug(niche);
+  const name = record ? nicheProse(record.name) : niche.replace(/-/g, ' ');
   return {
     title: `Independent ${name} magazines | Neesh Directory`,
     description: `Independent ${name} magazines, verified and indexed by Neesh. Who publishes them, how often, and where from.`,
-    alternates: { canonical: canonical(`/magazines/${tag}`) },
+    alternates: { canonical: canonical(`/index/${niche}`) },
     openGraph: {
       title: `Independent ${name} magazines | Neesh Directory`,
-      url: canonical(`/magazines/${tag}`),
+      url: canonical(`/index/${niche}`),
     },
   };
 }
 
-export default async function TagPage({ params }: { params: Promise<{ tag: string }> }) {
-  const { tag } = await params;
-  return <NichePage tagSlug={tag} page={1} />;
+export default async function TagPage({ params }: { params: Promise<{ niche: string }> }) {
+  const { niche } = await params;
+  return <NichePage tagSlug={niche} page={1} />;
 }

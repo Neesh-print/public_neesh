@@ -4,37 +4,37 @@
 // types so the demand data stays split by audience.
 export function WantTitleForm({ titleId }: { titleId: string }) {
   return (
-    <details className="cta-form">
+    <details className="want-details">
       <summary>
-        Want this title?{' '}
-        <span className="cta-subline">
-          Tell us where you are and we&apos;ll follow up.
-        </span>
+        <span className="q">Want this title?</span>
+        <span className="hint">Tell us where you are and we will let you know when it is near you.</span>
       </summary>
-      <form action="/api/signal" method="post">
+      <form className="want-form" action="/api/signal" method="post">
         <input type="hidden" name="title_id" value={titleId} />
         <input type="hidden" name="signal_type" value="title_interest" />
-        <div className="field">
-          <label htmlFor="wt-email">Email</label>
-          <input id="wt-email" name="email" type="email" required maxLength={320} />
-        </div>
-        <div className="field">
-          <label htmlFor="wt-postcode">Postcode</label>
-          <input id="wt-postcode" name="postcode" required minLength={2} maxLength={16} />
-        </div>
-        <div className="field">
-          <label htmlFor="wt-role">I&apos;m a</label>
-          <select id="wt-role" name="role" required defaultValue="">
+        <label className="field">
+          <span>Email</span>
+          <input name="email" type="email" required maxLength={320} placeholder="you@example.com" />
+        </label>
+        <label className="field">
+          <span>Postcode</span>
+          <input name="postcode" required minLength={2} maxLength={16} placeholder="e.g. 97214" />
+        </label>
+        <label className="field">
+          <span>I am a</span>
+          <select name="role" required defaultValue="">
             <option value="" disabled>
               Choose one
             </option>
             <option value="space">Space (shop, café, hotel)</option>
             <option value="reader">Reader</option>
           </select>
+        </label>
+        <div className="inline-actions">
+          <button className="btn solid" type="submit" style={{ padding: '14px 24px', fontSize: 15 }}>
+            Let me know
+          </button>
         </div>
-        <button className="button" type="submit">
-          Send
-        </button>
       </form>
     </details>
   );

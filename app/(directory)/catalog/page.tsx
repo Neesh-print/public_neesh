@@ -21,8 +21,8 @@ export const metadata: Metadata = {
 export default async function DirectoryHome() {
   const titles = await getCatalogTitles();
 
-  // Featured = the three Neesh titles that joined the platform most
-  // recently. Gate: the publisher must actually have a magazine listed
+  // Featured = the three Neesh titles whose publishers joined the platform
+  // most recently. Gate: the publisher must actually have a magazine listed
   // (neesh_magazine_id), not just an approved account. They lead the grid;
   // everyone else stays alphabetical.
   const featuredSlugs = new Set(
@@ -48,17 +48,29 @@ export default async function DirectoryHome() {
 
   return (
     <>
-      <div className="catalog-header">
-        <h1>The index of independent print</h1>
-        <p>
-          300+ independent magazines from 30+ countries. Publishers,{' '}
-          <Link href="/auth/publisher">claim</Link> your title.
-        </p>
-        <p className="muted">
-          Missing something? <Link href="/add-title">Add a title</Link>
-        </p>
-      </div>
-      <CatalogGrid items={items} />
+      <section>
+        <div className="index-head">
+          <h1>The index of independent print</h1>
+          <p className="sub">
+            300+ independent magazines from 30+ countries. Publishers,{' '}
+            <Link href="/auth/publisher" className="text-link">
+              claim your title
+            </Link>
+            .
+          </p>
+          <p className="small">
+            Missing something?{' '}
+            <Link href="/add-title" className="text-link">
+              Add a title
+            </Link>
+          </p>
+        </div>
+      </section>
+      <section>
+        <div className="wrap index-body">
+          <CatalogGrid items={items} />
+        </div>
+      </section>
     </>
   );
 }
