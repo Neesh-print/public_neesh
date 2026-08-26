@@ -22,10 +22,12 @@ export default async function DirectoryHome() {
   const titles = await getCatalogTitles();
 
   // Featured = the three Neesh titles that joined the platform most
-  // recently. They lead the grid; everyone else stays alphabetical.
+  // recently. Gate: the publisher must actually have a magazine listed
+  // (neesh_magazine_id), not just an approved account. They lead the grid;
+  // everyone else stays alphabetical.
   const featuredSlugs = new Set(
     titles
-      .filter((t) => t.available_on_neesh && t.neesh_listed_at)
+      .filter((t) => t.available_on_neesh && t.neesh_magazine_id && t.neesh_listed_at)
       .sort((a, b) => (b.neesh_listed_at ?? '').localeCompare(a.neesh_listed_at ?? ''))
       .slice(0, 3)
       .map((t) => t.slug)
