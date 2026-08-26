@@ -18,17 +18,26 @@ export interface CatalogItem {
 // The live /explore treatment: pill filter bar (All plus every niche in the
 // data, active pill inverted) over a 2/3/4-column cover grid. Filtering is
 // instant and client-side; the cards link to the directory profiles.
+const NEESH_TITLES = 'Neesh Titles';
+
 export function CatalogGrid({ items }: { items: CatalogItem[] }) {
   const [active, setActive] = useState('All');
 
+  // "Neesh Titles" is a synthetic filter, pinned right after All: every
+  // title a space can order on Neesh today.
   const filters = useMemo(() => {
     const names = new Set<string>();
     for (const item of items) for (const niche of item.niches) names.add(niche);
-    return ['All', ...[...names].sort()];
+    const pinned = items.some((item) => item.onNeesh) ? [NEESH_TITLES] : [];
+    return ['All', ...pinned, ...[...names].sort()];
   }, [items]);
 
   const visible =
-    active === 'All' ? items : items.filter((item) => item.niches.includes(active));
+    active === 'All'
+      ? items
+      : active === NEESH_TITLES
+        ? items.filter((item) => item.onNeesh)
+        : items.filter((item) => item.niches.includes(active));
 
   return (
     <>

@@ -8,7 +8,6 @@ import {
   tagPublishes,
 } from '@/lib/queries';
 import {
-  appUrl,
   breadcrumbLd,
   canonical,
   countryName,
@@ -89,13 +88,24 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const place = placeLabel(title.city, title.country);
   const coverPrice = price(title);
 
+  // "Published {x}" needs an adverbial form: "Published quarterly" works,
+  // "Published annual" does not.
+  const FREQUENCY_ADVERBS: Record<string, string> = {
+    annual: 'annually',
+    biannual: 'twice a year',
+    irregular: 'irregularly',
+  };
+
   const specRows: [string, string][] = [];
   if (title.frequency) {
     specRows.push([
       'Frequency',
       title.frequency === 'evergreen'
         ? 'Evergreen, no fixed schedule'
-        : `Published ${FREQUENCY_LABELS[title.frequency].toLowerCase()}`,
+        : `Published ${
+            FREQUENCY_ADVERBS[title.frequency] ??
+            FREQUENCY_LABELS[title.frequency].toLowerCase()
+          }`,
     ]);
   }
   if (place) specRows.push(['From', place]);
@@ -190,15 +200,14 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
 
           {(title.available_on_neesh || title.publisher.website) && (
             <div className="cta-row">
-              {title.available_on_neesh && title.neesh_magazine_id && (
+              {title.available_on_neesh && (
                 <span>
-                  <a
-                    className="button"
-                    href={appUrl(`/retailer/catalogue/${title.neesh_magazine_id}`)}
-                  >
+                  <Link className="button" href={`/order/${title.slug}`}>
                     Order on Neesh
-                  </a>
-                  <span className="cta-subline">Ready to ship to your space now.</span>
+                  </Link>
+                  <span className="cta-subline">
+                    Wholesale, for shops and spaces. Ready to ship now.
+                  </span>
                 </span>
               )}
               {title.publisher.website && (
@@ -214,12 +223,16 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
           )}
 
           <WantTitleForm titleId={title.id} />
-          <ClaimSection
-            titleId={title.id}
-            titleName={title.name}
-            titleSlug={title.slug}
-            claimed={title.publisher.claimed}
-          />
+          {/* Titles already listed on Neesh belong to publishers with
+              accounts: no claim, no removal link. */}
+          {!title.available_on_neesh && (
+            <ClaimSection
+              titleId={title.id}
+              titleName={title.name}
+              titleSlug={title.slug}
+              claimed={title.publisher.claimed}
+            />
+          )}
         </article>
       </div>
     </>

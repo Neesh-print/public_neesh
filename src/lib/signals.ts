@@ -7,6 +7,7 @@ export const SIGNAL_TYPES = [
   'want_near',
   'outbound_click',
   'claim_click',
+  'reader_order',
 ] as const;
 
 export type SignalType = (typeof SIGNAL_TYPES)[number];
@@ -17,6 +18,8 @@ export const payloadSchemas: Record<SignalType, z.ZodTypeAny> = {
   view: beaconPayload,
   outbound_click: beaconPayload,
   claim_click: beaconPayload,
+  // A reader clicked through Order on Neesh: demand we can't sell to yet.
+  reader_order: beaconPayload,
   // The merged "Want this title?" form sends email + postcode + role for
   // both audiences; the older per-audience fields stay accepted so any
   // in-flight submissions from cached pages still land.
