@@ -12,7 +12,7 @@ Next.js (App Router) on Vercel plus Supabase. Carries two things.
 ## Routes
 
 ```
-/directory                     directory home: intro, tag groups, recent titles
+/index                     directory home: intro, tag groups, recent titles
 /magazines/[tag]               niche index (publishes only at 5+ live titles)
 /magazines/[tag]/page/[n]      niche pagination, self-canonical
 /titles/[slug]                 title profile

@@ -105,7 +105,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   specRows.push(['Status', title.status === 'dormant' ? 'On hiatus' : 'Currently publishing']);
 
   const breadcrumbs = [
-    { name: 'Index', path: '/directory' },
+    { name: 'Index', path: '/index' },
     ...(primaryTag && primaryTagLive
       ? [{ name: primaryTag.name, path: `/magazines/${primaryTag.slug}` }]
       : []),
@@ -119,7 +119,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
       <ViewBeacon titleId={title.id} />
 
       <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/directory">Index</Link>
+        <Link href="/index">Index</Link>
         {primaryTag && primaryTagLive && (
           <>
             {' / '}

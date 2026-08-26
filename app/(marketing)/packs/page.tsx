@@ -181,7 +181,7 @@ export default function PacksPage() {
             If you&apos;d rather choose your own, browse by niche and build a shelf
             that&apos;s only yours.
           </p>
-          <Link className="button ghost" href="/directory">
+          <Link className="button ghost" href="/index">
             Browse the index
           </Link>
         </div>
@@ -207,7 +207,7 @@ export default function PacksPage() {
             <a className="button" href="#the-waiting-room">
               Order a pack
             </a>
-            <Link className="button ghost" href="/directory">
+            <Link className="button ghost" href="/index">
               Browse the index
             </Link>
           </div>

@@ -5,9 +5,9 @@ import { useState } from 'react';
 
 // The four top-level items plus auth (handoff section 4). Packs nests under
 // For Spaces; About and FAQ nest under Journal. The nav label is "Index"
-// even though the path is /directory (handoff 5.1).
+// even though the path is /index (handoff 5.1).
 export const NAV = [
-  { label: 'Index', href: '/directory' },
+  { label: 'Index', href: '/index' },
   { label: 'For Publishers', href: '/publishers' },
   { label: 'For Spaces', href: '/spaces', children: [{ label: 'Packs', href: '/packs' }] },
   {

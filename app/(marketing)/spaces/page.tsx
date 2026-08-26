@@ -183,7 +183,7 @@ export default function ForSpacesPage() {
             <Link className="button" href="/packs">
               See the packs
             </Link>
-            <Link className="button ghost" href="/directory">
+            <Link className="button ghost" href="/index">
               Browse the index
             </Link>
           </div>

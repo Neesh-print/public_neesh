@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { canonical } from '@/lib/seo';
+import { appUrl, canonical } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Set up your space | Neesh',
@@ -16,7 +16,7 @@ export default function AuthSpacePage() {
         Tell us about the room and we&apos;ll show you what fits. Takes under a minute and
         nothing is locked in.
       </p>
-      <a className="button" href="https://neesh.art/apply/retailer">
+      <a className="button" href={appUrl('/apply/retailer')}>
         Get started
       </a>
     </div>

@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
   const finish = () => {
     if (isForm) {
       const referer = req.headers.get('referer');
-      const url = referer ? new URL(referer) : new URL('/directory', req.url);
+      const url = referer ? new URL(referer) : new URL('/index', req.url);
       url.searchParams.set('submitted', 'claim');
       return NextResponse.redirect(url, 303);
     }

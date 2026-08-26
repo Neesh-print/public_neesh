@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { countryName, FREQUENCY_LABELS } from '@/lib/seo';
+import { appUrl, countryName, FREQUENCY_LABELS } from '@/lib/seo';
 
 interface TitleSearchResult {
   name: string;
@@ -55,7 +55,7 @@ export default function AuthPublisherPage() {
     setQuery('');
   }
 
-  const addUrl = `https://neesh.art/apply/publisher?title=${encodeURIComponent(searched)}`;
+  const addUrl = appUrl(`/apply/publisher?title=${encodeURIComponent(searched)}`);
 
   function MatchCard({ result }: { result: TitleSearchResult }) {
     const meta = [

@@ -40,12 +40,12 @@ export async function NichePage({ tagSlug, page }: { tagSlug: string; page: numb
       <JsonLd data={itemListLd(tag.name, tag.slug, titles)} />
       <JsonLd
         data={breadcrumbLd([
-          { name: 'Index', path: '/directory' },
+          { name: 'Index', path: '/index' },
           { name: tag.name, path: `/magazines/${tag.slug}` },
         ])}
       />
       <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/directory">Index</Link> / {tag.name}
+        <Link href="/index">Index</Link> / {tag.name}
       </nav>
       <h1>Independent magazines about {prose}</h1>
       <p className="niche-count">

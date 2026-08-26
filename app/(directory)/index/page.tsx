@@ -11,10 +11,10 @@ export const metadata: Metadata = {
   title: 'The index of independent print | Neesh',
   description:
     '300+ independent magazines from 30+ countries. Browse by niche, find what belongs on your shelf, and get it.',
-  alternates: { canonical: canonical('/directory') },
+  alternates: { canonical: canonical('/index') },
   openGraph: {
     title: 'The index of independent print | Neesh',
-    url: canonical('/directory'),
+    url: canonical('/index'),
   },
 };
 

@@ -27,7 +27,7 @@ export async function GET() {
   // (handoff section 11).
   const urls: string[] = [
     entry('/'),
-    entry('/directory'),
+    entry('/index'),
     entry('/publishers'),
     entry('/spaces'),
     entry('/packs'),

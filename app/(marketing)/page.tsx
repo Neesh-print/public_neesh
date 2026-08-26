@@ -34,7 +34,7 @@ export default function HomePage() {
               <Link className="button" href="/auth">
                 Claim your title
               </Link>
-              <Link className="button ghost" href="/directory">
+              <Link className="button ghost" href="/index">
                 Browse the index
               </Link>
             </div>
@@ -126,7 +126,7 @@ export default function HomePage() {
               architecture, art, travel, and about thirty other niches.
             </p>
             <p>Publishers, your title is probably already here. Claim it and take the keys.</p>
-            <Link className="button ghost" href="/directory">
+            <Link className="button ghost" href="/index">
               Browse the index
             </Link>
           </div>

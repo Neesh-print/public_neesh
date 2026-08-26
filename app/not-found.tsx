@@ -10,7 +10,7 @@ export default function NotFound() {
         Both happen.
       </p>
       <div className="cta-row">
-        <Link className="button" href="/directory">
+        <Link className="button" href="/index">
           Browse the index
         </Link>
         <Link className="button ghost" href="/">

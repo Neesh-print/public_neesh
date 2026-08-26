@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { canonical } from '@/lib/seo';
+import { appUrl, canonical } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Sign up or log in | Neesh',
@@ -26,7 +26,7 @@ export default function AuthPage() {
       </div>
       <p className="muted">
         <em>Already have an account?</em>{' '}
-        <a href="https://neesh.art/login">Log in</a>
+        <a href={appUrl('/login')}>Log in</a>
       </p>
     </div>
   );

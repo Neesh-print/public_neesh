@@ -56,7 +56,7 @@ export default async function PublisherPage({
         }}
       />
       <nav className="breadcrumbs" aria-label="Breadcrumb">
-        <Link href="/directory">Directory</Link> / {publisher.name}
+        <Link href="/index">Directory</Link> / {publisher.name}
       </nav>
       <h1>{publisher.name}</h1>
       <p className="publisher-line">

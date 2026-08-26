@@ -9,6 +9,14 @@ export function canonical(path: string): string {
   return `${siteUrl()}${path}`;
 }
 
+// Where the product app lives (login, applications, dashboards). Defaults to
+// neesh.art while the app still serves that domain; at cutover it becomes
+// the app subdomain via NEXT_PUBLIC_APP_URL.
+export function appUrl(path = ''): string {
+  const base = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://neesh.art').replace(/\/$/, '');
+  return `${base}${path}`;
+}
+
 const regionNames = new Intl.DisplayNames(['en'], { type: 'region' });
 
 export function countryName(code: string | null): string | null {

@@ -13,7 +13,7 @@ function noContent() {
 
 function redirectBack(req: NextRequest, param: string) {
   const referer = req.headers.get('referer');
-  const url = referer ? new URL(referer) : new URL('/directory', req.url);
+  const url = referer ? new URL(referer) : new URL('/index', req.url);
   url.searchParams.set('submitted', param);
   return NextResponse.redirect(url, 303);
 }
@@ -122,7 +122,7 @@ export async function POST(req: NextRequest) {
               const browseUrl =
                 (count ?? 0) >= TAG_THRESHOLD
                   ? canonical(`/magazines/${tag.slug}`)
-                  : canonical('/directory');
+                  : canonical('/index');
               nichePara =
                 `\n\nIn the meantime, ${others} other ${niche} titles are ready to ` +
                 `order now.\n\n**Browse ${niche} magazines:** ${browseUrl}`;

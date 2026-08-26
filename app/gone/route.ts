@@ -9,7 +9,7 @@ export async function GET() {
 <body style="font-family:Inter,system-ui,sans-serif;color:#000;padding:4rem 1.5rem;max-width:36rem;margin:0 auto">
 <h1 style="font-size:1.5rem">This page has been removed</h1>
 <p style="color:#71747f">The profile that lived here is no longer part of the Neesh directory.</p>
-<p><a href="/directory" style="color:#7d3abf">Browse the directory</a></p>
+<p><a href="/index" style="color:#7d3abf">Browse the directory</a></p>
 </body>
 </html>`;
   return new Response(html, {
