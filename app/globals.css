@@ -2201,3 +2201,13 @@ details.cta-form form {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Add a title: the non-publisher mini form */
+.suggest-form {
+  max-width: 26rem;
+  margin: 1.5rem 0;
+}
+
+.suggest-form .field {
+  margin-bottom: 1rem;
+}

@@ -40,6 +40,9 @@ export default async function DirectoryHome() {
           300+ independent magazines from 30+ countries. Publishers,{' '}
           <Link href="/auth/publisher">claim</Link> your title.
         </p>
+        <p className="muted">
+          Missing something? <Link href="/add-title">Add a title</Link>
+        </p>
       </div>
       <CatalogGrid items={items} />
     </>

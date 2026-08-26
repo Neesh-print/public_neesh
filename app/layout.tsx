@@ -53,6 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <div className="container">
             <p className="footer-note">
+              <a href="/add-title">Add a title</a>
+              {' · '}
               <a href="mailto:hi@neesh.art?subject=Remove%20from%20Index">
                 Remove from Index
               </a>
