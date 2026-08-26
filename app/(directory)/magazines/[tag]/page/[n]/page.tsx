@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { getTagBySlug, getTagsWithCounts, PAGE_SIZE, TAG_THRESHOLD } from '@/lib/queries';
+import { getTagBySlug, getTagsWithCounts, PAGE_SIZE, tagPublishes } from '@/lib/queries';
 import { canonical, nicheProse } from '@/lib/seo';
 import { NichePage } from '@/components/NichePage';
 
@@ -11,7 +11,7 @@ export async function generateStaticParams() {
   const tags = await getTagsWithCounts();
   const params: { tag: string; n: string }[] = [];
   for (const tag of tags) {
-    if (tag.live_count < TAG_THRESHOLD) continue;
+    if (!tagPublishes(tag)) continue;
     const pages = Math.ceil(tag.live_count / PAGE_SIZE);
     for (let n = 2; n <= pages; n++) params.push({ tag: tag.slug, n: String(n) });
   }

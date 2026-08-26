@@ -8,8 +8,12 @@ import type {
   TitleWithPublisher,
 } from './types';
 
-// A niche page publishes only when the tag has at least this many live titles.
-export const TAG_THRESHOLD = 5;
+// A niche page publishes only when the tag has at least this many live
+// titles. The launch data handoff moved this from the spec's 5 to 8: a
+// six-title niche page is a thin programmatic page, the shape answer
+// engines ignore. Identity tags never publish regardless of count; only
+// category = 'subject' tags generate pages (see tagPublishes).
+export const TAG_THRESHOLD = 8;
 // Niche page size; also the ItemList JSON-LD cap.
 export const PAGE_SIZE = 50;
 
@@ -25,6 +29,13 @@ function visibleTitles(client = anonClient()) {
     .select(TITLE_SELECT)
     .eq('removed', false)
     .in('status', ['active', 'dormant']);
+}
+
+// Only subject tags at or over the threshold generate niche pages, enter
+// the sitemap, or render as links. Identity tags store and can render as
+// plain text on a profile, but get no page.
+export function tagPublishes(tag: { category: string | null; live_count: number }): boolean {
+  return tag.category === 'subject' && tag.live_count >= TAG_THRESHOLD;
 }
 
 export async function getFeaturedTitles(limit = 8): Promise<TitleWithPublisher[]> {
@@ -60,7 +71,7 @@ export async function getCatalogTitles(limit = 400): Promise<TitleFull[]> {
     directory_title_tags: { tag: Tag }[];
   })[]) ?? []).map((row) => ({
     ...row,
-    tags: (row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean),
+    tags: sortSubjectFirst((row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean)),
   }));
 }
 
@@ -79,8 +90,15 @@ export async function getTitleBySlug(slug: string): Promise<TitleFull | null> {
   };
   return {
     ...row,
-    tags: (row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean),
+    tags: sortSubjectFirst((row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean)),
   };
+}
+
+// Subject tags ahead of identity tags, so tags[0] is always the primary niche.
+function sortSubjectFirst(tags: Tag[]): Tag[] {
+  return [...tags].sort((a, b) =>
+    (a.category === 'subject' ? 0 : 1) - (b.category === 'subject' ? 0 : 1)
+  );
 }
 
 export async function getPublisherBySlug(

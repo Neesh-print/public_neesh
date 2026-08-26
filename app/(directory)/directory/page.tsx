@@ -28,7 +28,7 @@ export default async function DirectoryHome() {
     slug: title.slug,
     cover: coverPublicUrl(title.cover_image_path),
     publisher: title.publisher.name,
-    niches: title.tags.map((tag) => tag.name),
+    niches: title.tags.filter((tag) => tag.category === 'subject').map((tag) => tag.name),
   }));
 
   return (

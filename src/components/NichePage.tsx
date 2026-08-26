@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
 import { anonClient, hasSupabaseEnv } from '@/lib/supabase';
-import { getTagBySlug, getTitlesForTag, PAGE_SIZE, TAG_THRESHOLD } from '@/lib/queries';
+import { getTagBySlug, getTitlesForTag, PAGE_SIZE, tagPublishes } from '@/lib/queries';
 import { breadcrumbLd, itemListLd, nicheProse } from '@/lib/seo';
 import { JsonLd } from './JsonLd';
 import { TitleCard } from './TitleCard';
@@ -23,7 +23,7 @@ async function countryCount(tagId: string): Promise<number> {
 // A tag below the 5-title threshold generates no index page at all (spec 1.4).
 export async function NichePage({ tagSlug, page }: { tagSlug: string; page: number }) {
   const tag = await getTagBySlug(tagSlug);
-  if (!tag || tag.live_count < TAG_THRESHOLD) notFound();
+  if (!tag || !tagPublishes(tag)) notFound();
 
   const [{ titles, total }, countries] = await Promise.all([
     getTitlesForTag(tag.id, page),

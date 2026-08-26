@@ -5,7 +5,7 @@ import {
   getAllVisibleTitleSlugs,
   getTagsWithCounts,
   getTitleBySlug,
-  TAG_THRESHOLD,
+  tagPublishes,
 } from '@/lib/queries';
 import {
   breadcrumbLd,
@@ -83,9 +83,9 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const [title, allTags] = await Promise.all([getTitleBySlug(slug), getTagsWithCounts()]);
   if (!title) notFound();
 
-  const tagCounts = new Map(allTags.map((t) => [t.slug, t.live_count]));
+  const publishing = new Set(allTags.filter(tagPublishes).map((t) => t.slug));
   const primaryTag = title.tags[0];
-  const primaryTagLive = primaryTag && (tagCounts.get(primaryTag.slug) ?? 0) >= TAG_THRESHOLD;
+  const primaryTagLive = primaryTag && publishing.has(primaryTag.slug);
   const place = placeLabel(title.city, title.country);
   const coverPrice = price(title);
 
@@ -173,7 +173,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
           {title.tags.length > 0 && (
             <ul className="tag-list">
               {title.tags.map((tag) =>
-                (tagCounts.get(tag.slug) ?? 0) >= TAG_THRESHOLD ? (
+                publishing.has(tag.slug) ? (
                   <li key={tag.id}>
                     <Link className="tag-pill" href={`/magazines/${tag.slug}`}>
                       {tag.name}

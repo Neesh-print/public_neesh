@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { getTagBySlug, getTagsWithCounts, TAG_THRESHOLD } from '@/lib/queries';
+import { getTagBySlug, getTagsWithCounts, tagPublishes } from '@/lib/queries';
 import { canonical, nicheProse } from '@/lib/seo';
 import { NichePage } from '@/components/NichePage';
 
@@ -8,7 +8,7 @@ export const dynamicParams = true;
 
 export async function generateStaticParams() {
   const tags = await getTagsWithCounts();
-  return tags.filter((t) => t.live_count >= TAG_THRESHOLD).map((t) => ({ tag: t.slug }));
+  return tags.filter(tagPublishes).map((t) => ({ tag: t.slug }));
 }
 
 export async function generateMetadata({

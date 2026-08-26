@@ -2,7 +2,7 @@ import {
   getAllVisiblePublisherSlugs,
   getAllVisibleTitleSlugs,
   getTagsWithCounts,
-  TAG_THRESHOLD,
+  tagPublishes,
 } from '@/lib/queries';
 import { canonical } from '@/lib/seo';
 
@@ -36,7 +36,7 @@ export async function GET() {
     entry('/faq'),
   ];
   for (const tag of tags) {
-    if (tag.live_count >= TAG_THRESHOLD) urls.push(entry(`/magazines/${tag.slug}`));
+    if (tagPublishes(tag)) urls.push(entry(`/magazines/${tag.slug}`));
   }
   for (const t of titles) urls.push(entry(`/titles/${t.slug}`, t.updated_at));
   for (const p of publishers) urls.push(entry(`/publishers/${p.slug}`, p.updated_at));
