@@ -190,21 +190,18 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
 
           {title.publisher.website && (
             <div className="cta-row">
-              <span>
-                <a className="button" href={`/out/${title.slug}`} rel="nofollow">
-                  Visit publisher
-                </a>
-                <span className="cta-subline">Buy direct from {title.publisher.name}.</span>
-              </span>
+              <a className="button" href={`/out/${title.slug}`} rel="nofollow">
+                See where it&apos;s stocked
+              </a>
             </div>
           )}
 
-          <StockRequestForm titleId={title.id} titleName={title.name} />
+          <StockRequestForm titleId={title.id} />
           <WantNearForm titleId={title.id} />
           <ClaimSection
-            publisherId={title.publisher.id}
-            publisherName={title.publisher.name}
             titleId={title.id}
+            titleName={title.name}
+            titleSlug={title.slug}
             claimed={title.publisher.claimed}
           />
         </article>

@@ -1,6 +1,5 @@
 'use client';
 
-import Link from 'next/link';
 import { useState } from 'react';
 import { appUrl, countryName, FREQUENCY_LABELS } from '@/lib/seo';
 
@@ -83,9 +82,14 @@ export default function AuthPublisherPage() {
             </a>
           </div>
         ) : (
-          <Link className="button" href={`/titles/${result.slug}?claim=1`}>
+          <a
+            className="button"
+            href={appUrl(
+              `/apply/publisher?title=${encodeURIComponent(result.name)}&claim=${result.slug}`
+            )}
+          >
             Yes, claim it
-          </Link>
+          </a>
         )}
       </div>
     );

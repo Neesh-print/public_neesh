@@ -36,12 +36,8 @@ export default async function DirectoryHome() {
       <div className="catalog-header">
         <h1>The index of independent print</h1>
         <p>
-          300+ independent magazines from 30+ countries. Browse by niche, find what
-          belongs on your shelf, and get it.
-        </p>
-        <p>
-          Publishers, your title is probably already here.{' '}
-          <Link href="/auth">Claim it</Link>
+          300+ independent magazines from 30+ countries. Publishers,{' '}
+          <Link href="/auth/publisher">claim</Link> your title.
         </p>
       </div>
       <CatalogGrid items={items} />

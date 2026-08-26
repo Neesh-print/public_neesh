@@ -1,6 +1,6 @@
 // Progressively-enhanced CTA: a plain form posting to /api/signal, no JS
 // required (spec 5, 8). The route answers with a 303 back to this page.
-export function StockRequestForm({ titleId, titleName }: { titleId: string; titleName: string }) {
+export function StockRequestForm({ titleId }: { titleId: string }) {
   return (
     <details className="cta-form">
       <summary>
@@ -46,10 +46,6 @@ export function StockRequestForm({ titleId, titleName }: { titleId: string; titl
         <button className="button" type="submit">
           Send stock request
         </button>
-        <p className="privacy-note">
-          We store what you enter here so we can follow up about stocking {titleName}.
-          Nothing is forwarded to the publisher.
-        </p>
       </form>
     </details>
   );
