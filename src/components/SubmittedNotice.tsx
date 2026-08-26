@@ -6,7 +6,9 @@ import { useEffect, useState } from 'react';
 const MESSAGES: Record<string, string> = {
   stock_request: "Got it. We'll be in touch.",
   want_near: "Got it. We'll be in touch.",
+  title_interest: "Got it. We'll be in touch.",
   claim: "Got it. We'll be in touch.",
+  remove_request: 'Got it. Check your email to confirm.',
 };
 
 // The profile page stays static (ISR), so the post-submit "thanks" state is

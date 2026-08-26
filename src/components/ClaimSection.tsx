@@ -2,9 +2,11 @@
 
 import { appUrl } from '@/lib/seo';
 
-// Claim CTA on the title profile. Clicking fires a claim_click signal so
-// claim intent stays measurable (spec 8), then hands off to the full
-// publisher signup flow; every claim still passes manual review there.
+// The publisher zone on a title profile: a claim CTA in the accent
+// treatment, and a deliberately small removal link underneath. Claiming
+// fires a claim_click signal (spec 8) then hands off to the full publisher
+// signup flow; every claim still passes manual review. Removal asks for an
+// email and triggers an "are you sure" email before anything comes down.
 export function ClaimSection({
   titleId,
   titleName,
@@ -41,7 +43,7 @@ export function ClaimSection({
       </p>
       <div className="cta-row">
         <span>
-          <a className="button" href={href} onClick={onClick}>
+          <a className="button accent" href={href} onClick={onClick}>
             Claim this profile
           </a>
           <span className="cta-subline">
@@ -49,6 +51,23 @@ export function ClaimSection({
           </span>
         </span>
       </div>
+      <details className="remove-request">
+        <summary>Remove this profile</summary>
+        <form action="/api/remove-request" method="post">
+          <input type="hidden" name="title_id" value={titleId} />
+          <input
+            name="email"
+            type="email"
+            required
+            maxLength={320}
+            placeholder="Your email"
+            aria-label="Your email"
+          />
+          <button className="linklike" type="submit">
+            Request removal
+          </button>
+        </form>
+      </details>
     </>
   );
 }

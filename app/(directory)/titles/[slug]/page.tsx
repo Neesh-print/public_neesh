@@ -8,6 +8,7 @@ import {
   tagPublishes,
 } from '@/lib/queries';
 import {
+  appUrl,
   breadcrumbLd,
   canonical,
   countryName,
@@ -21,10 +22,9 @@ import {
 import { CoverCard } from '@/components/CoverCard';
 import { ClaimSection } from '@/components/ClaimSection';
 import { JsonLd } from '@/components/JsonLd';
-import { StockRequestForm } from '@/components/StockRequestForm';
 import { SubmittedNotice } from '@/components/SubmittedNotice';
 import { ViewBeacon } from '@/components/ViewBeacon';
-import { WantNearForm } from '@/components/WantNearForm';
+import { WantTitleForm } from '@/components/WantTitleForm';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -188,16 +188,32 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
             </ul>
           )}
 
-          {title.publisher.website && (
+          {(title.available_on_neesh || title.publisher.website) && (
             <div className="cta-row">
-              <a className="button" href={`/out/${title.slug}`} rel="nofollow">
-                See where it&apos;s stocked
-              </a>
+              {title.available_on_neesh && title.neesh_magazine_id && (
+                <span>
+                  <a
+                    className="button"
+                    href={appUrl(`/retailer/catalogue/${title.neesh_magazine_id}`)}
+                  >
+                    Order on Neesh
+                  </a>
+                  <span className="cta-subline">Ready to ship to your space now.</span>
+                </span>
+              )}
+              {title.publisher.website && (
+                <a
+                  className={`button${title.available_on_neesh ? ' ghost' : ''}`}
+                  href={`/out/${title.slug}`}
+                  rel="nofollow"
+                >
+                  See where it&apos;s stocked
+                </a>
+              )}
             </div>
           )}
 
-          <StockRequestForm titleId={title.id} />
-          <WantNearForm titleId={title.id} />
+          <WantTitleForm titleId={title.id} />
           <ClaimSection
             titleId={title.id}
             titleName={title.name}

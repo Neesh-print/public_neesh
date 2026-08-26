@@ -59,30 +59,44 @@ const PACKS = [
   },
 ];
 
+// Original RetailersPage layout (hero grid with the shop-interior image,
+// alternating band sections, numbered steps, card grid, closing CTA on the
+// band); new copy.
 export default function ForSpacesPage() {
   return (
     <>
       <JsonLd data={faqPageLd(FAQ)} />
 
-      <section className="m-hero">
-        <div className="container">
-          <h1>Your space has a feed problem.</h1>
-          <p className="lede">
-            Every café looks like every café now. Same plants, same playlist, same
-            renovation the algorithm suggested to everyone at once.
-          </p>
-          <p className="lede">
-            A shelf of independent magazines is the quickest way to make a room feel like
-            someone chose it.
-          </p>
-          <Link className="button" href="/packs">
-            See the packs
-          </Link>
+      {/* Hero */}
+      <section className="mk-section">
+        <div className="container mk-hero-grid">
+          <div>
+            <h1>Your space has a feed problem.</h1>
+            <p className="lede">
+              Every café looks like every café now. Same plants, same playlist, same
+              renovation the algorithm suggested to everyone at once.
+            </p>
+            <p className="lede">
+              A shelf of independent magazines is the quickest way to make a room feel
+              like someone chose it.
+            </p>
+            <Link className="button" href="/packs">
+              See the packs
+            </Link>
+          </div>
+          <div className="mk-image">
+            <img
+              src="/assets/retailers-hero.jpg"
+              alt="Independent magazine shop interior with curated displays"
+              fetchPriority="high"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="band">
-        <div className="container manifesto">
+      {/* Manifesto on the band */}
+      <section className="mk-section band">
+        <div className="container mk-manifesto">
           <h2>Nobody makes this easy</h2>
           <p>
             Try buying magazines for a business. Distributors want a full account, a
@@ -94,62 +108,66 @@ export default function ForSpacesPage() {
         </div>
       </section>
 
-      <section className="steps-section">
+      {/* How it works: numbered circles */}
+      <section className="mk-section">
         <div className="container">
-          <h2>How it works</h2>
-          <div className="steps">
-            <div className="step">
+          <h2 className="mk-heading">How it works</h2>
+          <div className="mk-steps cols-3">
+            <div className="mk-step">
               <div className="n">1</div>
-              <div>
-                <strong>Pick your pack.</strong>
-                <p>A suite of packs, each curated for a specific kind of room. Or build your own from the index.</p>
-              </div>
+              <h3>Pick your pack</h3>
+              <p>
+                A suite of packs, each curated for a specific kind of room. Or build your
+                own from the index.
+              </p>
             </div>
-            <div className="step">
+            <div className="mk-step">
               <div className="n">2</div>
-              <div>
-                <strong>One order.</strong>
-                <p>
-                  Pay however you want. Signup takes under a minute and nothing is locked
-                  in. Your pack arrives ready to display.
-                </p>
-              </div>
+              <h3>One order</h3>
+              <p>
+                Pay however you want. Signup takes under a minute and nothing is locked
+                in. Your pack arrives ready to display.
+              </p>
             </div>
-            <div className="step">
+            <div className="mk-step">
               <div className="n">3</div>
-              <div>
-                <strong>Refresh when you want.</strong>
-                <p>
-                  Seasonal, quarterly, or whenever. Your shelf stays current and you
-                  don&apos;t think about it.
-                </p>
-              </div>
+              <h3>Refresh when you want</h3>
+              <p>
+                Seasonal, quarterly, or whenever. Your shelf stays current and you
+                don&apos;t think about it.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="band">
+      {/* The packs as the card grid on the band */}
+      <section className="mk-section band">
         <div className="container">
-          <h2>The packs</h2>
-          <ul className="packs-strip">
+          <h2 className="mk-heading">The packs</h2>
+          <div className="mk-cards cols-3">
             {PACKS.map((pack) => (
-              <li key={pack.name}>
-                <Link href={`/packs#${pack.name.toLowerCase().replace(/ /g, '-')}`}>
-                  <strong>{pack.name}</strong>
-                  <span>{pack.line}</span>
-                </Link>
-              </li>
+              <Link
+                className="mk-card"
+                key={pack.name}
+                href={`/packs#${pack.name.toLowerCase().replace(/ /g, '-')}`}
+              >
+                <strong>{pack.name}</strong>
+                <span>{pack.line}</span>
+              </Link>
             ))}
-          </ul>
-          <Link className="button ghost" href="/packs">
-            See all packs
-          </Link>
+          </div>
+          <p style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <Link className="button ghost" href="/packs">
+              See all packs
+            </Link>
+          </p>
         </div>
       </section>
 
-      <section className="audience-block">
-        <div className="container">
+      {/* What print does to a room */}
+      <section className="mk-section">
+        <div className="container mk-manifesto">
           <h2>What print does to a room</h2>
           <p>
             One of our publishers left a single copy at her hairdresser&apos;s. Months
@@ -163,7 +181,8 @@ export default function ForSpacesPage() {
         </div>
       </section>
 
-      <section className="faq-section band">
+      {/* FAQ */}
+      <section className="mk-section band faq-section">
         <div className="container">
           <dl className="faq-list">
             {FAQ.map((item) => (
@@ -176,7 +195,8 @@ export default function ForSpacesPage() {
         </div>
       </section>
 
-      <section className="closing-band">
+      {/* Closing CTA */}
+      <section className="mk-closing">
         <div className="container">
           <h2>Make the room say something</h2>
           <div className="cta-row">

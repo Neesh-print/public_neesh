@@ -40,6 +40,9 @@ export interface Title {
   status: TitleStatus;
   last_issue_date: string | null;
   verified_at: string | null;
+  // Set when the title is listed and orderable on the Neesh platform now.
+  available_on_neesh: boolean;
+  neesh_magazine_id: string | null;
   created_at: string;
   updated_at: string;
 }

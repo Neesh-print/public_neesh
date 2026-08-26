@@ -29,6 +29,7 @@ export default async function DirectoryHome() {
     cover: coverPublicUrl(title.cover_image_path),
     publisher: title.publisher.name,
     niches: title.tags.filter((tag) => tag.category === 'subject').map((tag) => tag.name),
+    onNeesh: title.available_on_neesh,
   }));
 
   return (

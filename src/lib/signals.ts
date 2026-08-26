@@ -17,12 +17,17 @@ export const payloadSchemas: Record<SignalType, z.ZodTypeAny> = {
   view: beaconPayload,
   outbound_click: beaconPayload,
   claim_click: beaconPayload,
+  // The merged "Want this title?" form sends email + postcode + role for
+  // both audiences; the older per-audience fields stay accepted so any
+  // in-flight submissions from cached pages still land.
   stock_request: z
     .object({
-      business_name: z.string().min(1).max(200),
       email: z.string().email().max(320),
-      venue_type: z.string().min(1).max(100),
-      city: z.string().min(1).max(100),
+      postcode: z.string().min(2).max(16).optional(),
+      role: z.enum(['space', 'reader']).optional(),
+      business_name: z.string().min(1).max(200).optional(),
+      venue_type: z.string().min(1).max(100).optional(),
+      city: z.string().min(1).max(100).optional(),
       note: z.string().max(2000).optional(),
     })
     .strict(),
@@ -30,6 +35,7 @@ export const payloadSchemas: Record<SignalType, z.ZodTypeAny> = {
     .object({
       postcode: z.string().min(2).max(16),
       email: z.string().email().max(320),
+      role: z.enum(['space', 'reader']).optional(),
     })
     .strict(),
 };

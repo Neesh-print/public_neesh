@@ -12,6 +12,7 @@ export interface CatalogItem {
   cover: string | null;
   publisher: string;
   niches: string[];
+  onNeesh: boolean;
 }
 
 // The live /explore treatment: pill filter bar (All plus every niche in the
@@ -79,6 +80,9 @@ export function CatalogGrid({ items }: { items: CatalogItem[] }) {
                   <p className="title-card-meta">{item.publisher}</p>
                   {item.niches[0] && (
                     <span className="title-card-chip">{item.niches[0]}</span>
+                  )}
+                  {item.onNeesh && (
+                    <span className="title-card-chip on-neesh">Order now</span>
                   )}
                 </div>
               </Link>

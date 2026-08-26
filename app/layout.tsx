@@ -53,8 +53,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </div>
           <div className="container">
             <p className="footer-note">
-              Run a magazine listed here? Claim your profile from its page, or ask us to
-              remove it. Removal happens the same day.
+              <a href="mailto:hi@neesh.art?subject=Remove%20from%20Index">
+                Remove from Index
+              </a>
             </p>
           </div>
         </footer>

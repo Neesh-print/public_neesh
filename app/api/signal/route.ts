@@ -54,6 +54,18 @@ export async function POST(req: NextRequest) {
   }
   const done = () => (isForm ? redirectBack(req, signalTypeForRedirect) : noContent());
 
+  // The merged "Want this title?" form submits a virtual title_interest
+  // type; the chosen role decides which stored signal it becomes, so the
+  // demand data stays split by audience.
+  if (
+    raw &&
+    typeof raw === 'object' &&
+    (raw as { signal_type?: unknown }).signal_type === 'title_interest'
+  ) {
+    const r = raw as { signal_type: string; payload?: Record<string, unknown> };
+    r.signal_type = r.payload?.role === 'space' ? 'stock_request' : 'want_near';
+  }
+
   const ua = req.headers.get('user-agent');
   if (isBot(ua)) return done();
 
@@ -96,7 +108,7 @@ export async function POST(req: NextRequest) {
       // Email 3.3 to the requester (handoff 5.4): stock requests are never
       // forwarded to the publisher, and the email must not claim otherwise.
       if (parsed.data.signal_type === 'stock_request' && title) {
-        const request = payload.data as { business_name: string; email: string };
+        const request = payload.data as { business_name?: string; email: string };
         // Primary niche and its live-title count, through the anon client so
         // the count respects the visibility predicate.
         let nichePara = '';
@@ -133,7 +145,8 @@ export async function POST(req: NextRequest) {
         }
         const bodyStart =
           `Hi,\n\n` +
-          `Thanks for asking about **${title.name}** for ${request.business_name}. ` +
+          `Thanks for asking about **${title.name}**` +
+          `${request.business_name ? ` for ${request.business_name}` : ''}. ` +
           `We're checking availability and terms and we'll come back to you.\n\n` +
           `Usually takes a couple of days. If it's urgent, reply and say so.`;
         const body = bodyStart + nichePara;

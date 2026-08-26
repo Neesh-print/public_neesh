@@ -42,27 +42,40 @@ const FAQ = [
   },
 ];
 
+// Original PublishersPage layout (hero grid with image, band sections,
+// numbered steps, card grid, centered closing CTA); new copy.
 export default function ForPublishersPage() {
   return (
     <>
       <JsonLd data={faqPageLd(FAQ)} />
 
-      <section className="m-hero">
-        <div className="container">
-          <h1>You made a magazine. Not a logistics company.</h1>
-          <p className="lede">
-            Neesh gives independent publishers wholesale distribution without the
-            distributor. Claim your page, set your own terms, and get your money as soon
-            as it hits.
-          </p>
-          <Link className="button" href="/auth">
-            Claim your title
-          </Link>
+      {/* Hero */}
+      <section className="mk-section">
+        <div className="container mk-hero-grid">
+          <div>
+            <h1>You made a magazine. Not a logistics company.</h1>
+            <p className="lede">
+              Neesh gives independent publishers wholesale distribution without the
+              distributor. Claim your page, set your own terms, and get your money as soon
+              as it hits.
+            </p>
+            <Link className="button" href="/auth">
+              Claim your title
+            </Link>
+          </div>
+          <div className="mk-image">
+            <img
+              src="/assets/publishers-hero.png"
+              alt="Publisher workspace with stacks of independent magazines"
+              fetchPriority="high"
+            />
+          </div>
         </div>
       </section>
 
-      <section className="band">
-        <div className="container manifesto">
+      {/* Manifesto on the band */}
+      <section className="mk-section band">
+        <div className="container mk-manifesto">
           <h2>What distribution costs you</h2>
           <p>
             A distributor takes 60 points. You wait 90 days for the money. The sales
@@ -84,72 +97,74 @@ export default function ForPublishersPage() {
         </div>
       </section>
 
-      <section className="steps-section">
+      {/* How it works: numbered circles */}
+      <section className="mk-section">
         <div className="container">
-          <h2>How it works</h2>
-          <div className="steps">
-            <div className="step">
+          <h2 className="mk-heading">How it works</h2>
+          <div className="mk-steps cols-3">
+            <div className="mk-step">
               <div className="n">1</div>
-              <div>
-                <strong>Claim your page.</strong>
-                <p>Your title is probably already in our index. Claim it and share your link.</p>
-              </div>
+              <h3>Claim your page</h3>
+              <p>Your title is probably already in our index. Claim it and share your link.</p>
             </div>
-            <div className="step">
+            <div className="mk-step">
               <div className="n">2</div>
-              <div>
-                <strong>Set your terms.</strong>
-                <p>Your wholesale price, your minimums, your rules. Fulfill it yourself or hand it to us.</p>
-              </div>
+              <h3>Set your terms</h3>
+              <p>
+                Your wholesale price, your minimums, your rules. Fulfill it yourself or
+                hand it to us.
+              </p>
             </div>
-            <div className="step">
+            <div className="mk-step">
               <div className="n">3</div>
-              <div>
-                <strong>We bring the shelves.</strong>
-                <p>
-                  Retailers and spaces order through the platform. You see every order,
-                  every location, and every reorder as it happens.
-                </p>
-              </div>
+              <h3>We bring the shelves</h3>
+              <p>
+                Retailers and spaces order through the platform. You see every order,
+                every location, and every reorder as it happens.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="benefit-grid-section band">
-        <div className="container benefit-grid">
-          <div>
-            <h2>Real numbers, finally</h2>
-            <p>
-              Live sales data by title and location. You&apos;ll know what sold in
-              Portland this month, what&apos;s reordering in Berlin, and what your next
-              print run should actually be.
-            </p>
-          </div>
-          <div>
-            <h2>Rooms you&apos;d never have pitched</h2>
-            <p>
-              Half our buyers aren&apos;t bookshops. They&apos;re cafés, climbing gyms,
-              hotels, studios, spas, and one very well-read ketamine clinic. Publishers
-              tell us the best placements are the ones they&apos;d never have thought to
-              ask for.
-            </p>
-          </div>
-          <div>
-            <h2>Your relationships stay yours</h2>
-            <p>
-              We&apos;re the rails, not the owner. You keep your terms, your pricing, and
-              your direct line to the people stocking you.
-            </p>
-          </div>
-          <div>
-            <h2>One fee</h2>
-            <p>10 percent of wholesale. Free to list, free to sell, no annual contract.</p>
+      {/* Benefits card grid on the band */}
+      <section className="mk-section band">
+        <div className="container">
+          <div className="mk-cards">
+            <div className="mk-card">
+              <h3>Real numbers, finally</h3>
+              <p>
+                Live sales data by title and location. You&apos;ll know what sold in
+                Portland this month, what&apos;s reordering in Berlin, and what your next
+                print run should actually be.
+              </p>
+            </div>
+            <div className="mk-card">
+              <h3>Rooms you&apos;d never have pitched</h3>
+              <p>
+                Half our buyers aren&apos;t bookshops. They&apos;re cafés, climbing gyms,
+                hotels, studios, spas, and one very well-read ketamine clinic. Publishers
+                tell us the best placements are the ones they&apos;d never have thought to
+                ask for.
+              </p>
+            </div>
+            <div className="mk-card">
+              <h3>Your relationships stay yours</h3>
+              <p>
+                We&apos;re the rails, not the owner. You keep your terms, your pricing, and
+                your direct line to the people stocking you.
+              </p>
+            </div>
+            <div className="mk-card">
+              <h3>One fee</h3>
+              <p>10 percent of wholesale. Free to list, free to sell, no annual contract.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="faq-section">
+      {/* FAQ */}
+      <section className="mk-section faq-section">
         <div className="container">
           <dl className="faq-list">
             {FAQ.map((item) => (
@@ -162,7 +177,8 @@ export default function ForPublishersPage() {
         </div>
       </section>
 
-      <section className="closing-band band">
+      {/* Closing CTA */}
+      <section className="mk-closing band">
         <div className="container">
           <h2>Get back to publishing</h2>
           <Link className="button" href="/auth">
