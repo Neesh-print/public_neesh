@@ -2582,14 +2582,40 @@ button {
   background: var(--band);
 }
 
-/* The pack switcher */
+/* The pack switcher. One column on mobile in DOM order (copy, panel,
+   stand); two columns on desktop with the stand placed back in the left
+   rail under the price and the switcher spanning both rows on the right. */
 .packs-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  grid-template-columns: 1fr;
   gap: clamp(32px, 4vw, 64px);
   align-items: start;
   padding-top: var(--section-pad);
   padding-bottom: var(--section-pad);
+}
+
+@media (min-width: 900px) {
+  .packs-section {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 28px;
+  }
+
+  .packs-section .packs-rail {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .packs-section .pack-panel-col {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+
+  .packs-section > .stand-card {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    max-width: 480px;
+  }
 }
 
 .packs-rail {
@@ -2645,13 +2671,6 @@ button {
   margin-top: -8px;
 }
 
-.packs-right {
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
-  min-width: 0;
-}
-
 .stand-card {
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -2667,26 +2686,6 @@ button {
   object-fit: cover;
   display: block;
   background: var(--band);
-}
-
-/* Below the switcher the card is wide: photo beside the copy. */
-@media (min-width: 900px) {
-  .packs-right .stand-card {
-    flex-direction: row;
-    align-items: stretch;
-  }
-
-  .packs-right .stand-card img {
-    width: 42%;
-    aspect-ratio: auto;
-    min-height: 100%;
-  }
-
-  .packs-right .stand-card-body {
-    flex: 1;
-    justify-content: center;
-    padding: clamp(22px, 2.4vw, 34px);
-  }
 }
 
 .stand-card-body {

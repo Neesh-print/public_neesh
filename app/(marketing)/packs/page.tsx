@@ -105,21 +105,21 @@ export default async function PacksPage() {
             </div>
             <span className="price-note">Shipping included.</span>
           </div>
-          <div className="packs-right">
-            <PackSwitcher packs={PACKS} />
-            <div className="stand-card">
-              <img
-                src="/assets/magazine-stand.jpg"
-                alt="The Neesh magazine stand on a counter, four titles face out"
-              />
-              <div className="stand-card-body">
-                <span className="origin">Handmade in Portland, Oregon</span>
-                <span className="offer">Add the stand, +$100</span>
-                <span className="desc">
-                  A small-batch wooden stand sized for the pack, three to four titles face out on a
-                  counter or reception desk.
-                </span>
-              </div>
+          <PackSwitcher packs={PACKS} />
+          {/* Placed by grid: left rail under the price on desktop, below the
+              pack panel in the mobile stack. */}
+          <div className="stand-card">
+            <img
+              src="/assets/magazine-stand.jpg"
+              alt="The Neesh magazine stand on a counter, four titles face out"
+            />
+            <div className="stand-card-body">
+              <span className="origin">Handmade in Portland, Oregon</span>
+              <span className="offer">Add the stand, +$100</span>
+              <span className="desc">
+                A small-batch wooden stand sized for the pack, three to four titles face out on a
+                counter or reception desk.
+              </span>
             </div>
           </div>
         </div>
