@@ -190,6 +190,8 @@ export default function SpacesPage() {
               alt="A reader with a copy of YOLO Journal"
               style={{
                 width: '100%',
+                maxWidth: 460,
+                justifySelf: 'center',
                 aspectRatio: '4 / 5',
                 objectFit: 'cover',
                 objectPosition: '50% 40%',

@@ -47,11 +47,11 @@ export function PackSwitcher({ packs }: { packs: Pack[] }) {
                 With stand, $300
               </a>
             </div>
+            <Link href={`/packs/${pack.slug}`} className="mono-link" style={{ marginTop: 6 }}>
+              See what&rsquo;s in it
+              <ArrowIcon size={13} />
+            </Link>
           </div>
-          <Link href={`/packs/${pack.slug}`} className="mono-link" style={{ marginTop: 2 }}>
-            See what&rsquo;s in it
-            <ArrowIcon size={13} />
-          </Link>
         </div>
       </div>
       <div className="pack-arrows">

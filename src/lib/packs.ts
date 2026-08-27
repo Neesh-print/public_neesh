@@ -104,7 +104,7 @@ export const PACKS: Pack[] = [
       'Sport print has gotten very good and almost nobody stocks it. This pack is for the room where people are already in their bodies and want to read about it. Titles run toward movement, endurance, outdoors, and the culture around all three.',
     count: '9 titles',
     retail: '$232.00',
-    image: '/assets/pack-table-service.jpg',
+    image: '/assets/pack-locker-room.jpg',
     order: 'https://buy.stripe.com/6oUaEX78YbuH6Nic83abK06',
     withStand: 'https://buy.stripe.com/7sY3cveBqbuH2x2fkfabK07',
     contents: [
