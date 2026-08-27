@@ -32,18 +32,20 @@ export default async function PackDetailPage({ params }: { params: Promise<{ slu
   const pack = getPack(slug);
   if (!pack) notFound();
 
-  // Confirmed pack contents lead the grid; titles from the pack's niches
-  // fill the remaining slots. The disclaimer line below covers the
-  // hand-picked nature of the final box.
-  const catalog = (await getCatalogTitles()).filter((t) => t.cover_image_path);
-  const known = pack.knownSlugs
-    .map((slug) => catalog.find((t) => t.slug === slug))
-    .filter((t): t is (typeof catalog)[number] => Boolean(t));
-  const knownIds = new Set(known.map((t) => t.id));
-  const matched = catalog.filter(
-    (t) => !knownIds.has(t.id) && t.tags.some((tag) => pack.niches.includes(tag.name))
-  );
-  const box = [...known, ...matched].slice(0, 8);
+  // The actual box contents, in stack order. Titles that live in the
+  // directory link to their profile with their directory cover; the rest
+  // render their static cover unlinked.
+  const catalog = await getCatalogTitles();
+  const box = pack.contents.map((entry) => {
+    const t = entry.slug ? catalog.find((c) => c.slug === entry.slug) : undefined;
+    return {
+      key: entry.slug ?? entry.title,
+      title: t?.name ?? entry.title,
+      slug: t ? t.slug : null,
+      cover: t?.cover_image_path ? coverPublicUrl(t.cover_image_path) : (entry.image ?? null),
+      publisher: t?.publisher.name ?? null,
+    };
+  });
   const others = PACKS.filter((p) => p.slug !== pack.slug);
 
   return (
@@ -92,13 +94,20 @@ export default async function PackDetailPage({ params }: { params: Promise<{ slu
               What&rsquo;s in the box
             </h2>
             <div className="mini-cover-grid">
-              {box.map((t) => (
-                <Link key={t.id} href={`/titles/${t.slug}`}>
-                  <img src={coverPublicUrl(t.cover_image_path) as string} alt={`${t.name} cover`} loading="lazy" />
-                  <span className="name">{t.name}</span>
-                  <span className="pub">{t.publisher.name}</span>
-                </Link>
-              ))}
+              {box.map((t) =>
+                t.slug ? (
+                  <Link key={t.key} href={`/titles/${t.slug}`}>
+                    {t.cover && <img src={t.cover} alt={`${t.title} cover`} loading="lazy" />}
+                    <span className="name">{t.title}</span>
+                    {t.publisher && <span className="pub">{t.publisher}</span>}
+                  </Link>
+                ) : (
+                  <div key={t.key} className="tile">
+                    {t.cover && <img src={t.cover} alt={`${t.title} cover`} loading="lazy" />}
+                    <span className="name">{t.title}</span>
+                  </div>
+                )
+              )}
             </div>
           </div>
         </section>

@@ -2986,7 +2986,8 @@ button {
   gap: clamp(16px, 2vw, 28px);
 }
 
-.mini-cover-grid a {
+.mini-cover-grid a,
+.mini-cover-grid .tile {
   display: flex;
   flex-direction: column;
   gap: 9px;

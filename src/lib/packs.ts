@@ -1,6 +1,16 @@
 // The five curated packs (v2 design copy). Order CTAs keep the live Stripe
 // payment links from the current site; the prototype routed them to retailer
 // signup instead — flagged as an open design decision.
+
+// One title in a pack's box. Titles in the directory carry a slug and render
+// as linked cards with their directory cover; the rest ship a static cover
+// under /assets/covers.
+export interface PackTitle {
+  title: string;
+  slug?: string;
+  image?: string;
+}
+
 export interface Pack {
   slug: string;
   name: string;
@@ -11,11 +21,8 @@ export interface Pack {
   image: string;
   order: string;
   withStand: string;
-  // Directory niches used to pick representative covers for the detail page.
-  niches: string[];
-  // Confirmed pack contents (directory slugs) — pinned first in the
-  // "What's in the box" grid; niche-matched titles fill the rest.
-  knownSlugs: string[];
+  // The actual box contents, in stack order (per the pack cover manifest).
+  contents: PackTitle[];
 }
 
 export const PACKS: Pack[] = [
@@ -30,8 +37,17 @@ export const PACKS: Pack[] = [
     image: '/assets/pack-waiting-room.jpg',
     order: 'https://buy.stripe.com/8x2eVd50Q0Q34Fa7RNabK00',
     withStand: 'https://buy.stripe.com/8x26oH3WM9mzb3y5JFabK01',
-    niches: ['Nature & Environment', 'Lifestyle', 'Ideas & Science'],
-    knownSlugs: ['mother-tongue', 'pleasant-place', 'mushroom-people'],
+    contents: [
+      { title: 'Different Leaf', slug: 'different-leaf' },
+      { title: 'Blumenhaus', image: '/assets/covers/waitingroom_02_blumenhaus.jpg' },
+      { title: 'Mother Tongue', slug: 'mother-tongue' },
+      { title: 'Mushroom People', slug: 'mushroom-people' },
+      { title: 'Catnip', slug: 'catnip' },
+      { title: 'Elastic', slug: 'elastic' },
+      { title: 'Undergrowth', image: '/assets/covers/waitingroom_07_undergrowth.jpg' },
+      { title: 'Elementum', image: '/assets/covers/waitingroom_08_elementum.jpg' },
+      { title: 'Pleasant Place', slug: 'pleasant-place' },
+    ],
   },
   {
     slug: 'studio',
@@ -44,8 +60,17 @@ export const PACKS: Pack[] = [
     image: '/assets/pack-studio.jpg',
     order: 'https://buy.stripe.com/4gMcN58d27er5JegojabK02',
     withStand: 'https://buy.stripe.com/7sYdR978Y0Q31sYgojabK03',
-    niches: ['Design & Architecture', 'Art', 'Photography'],
-    knownSlugs: [],
+    contents: [
+      { title: 'Luncheon', slug: 'luncheon' },
+      { title: 'Backstage Talks', image: '/assets/covers/studio_02_backstage-talks.jpg' },
+      { title: 'Aedo Magazine', slug: 'aedo-magazine' },
+      { title: 'The Plant', image: '/assets/covers/studio_04_the-plant.jpg' },
+      { title: 'Desired Landscapes', slug: 'desired-landscapes' },
+      { title: 'Deem Journal', slug: 'deem-journal' },
+      { title: 'MYTH', image: '/assets/covers/studio_07_myth.jpg' },
+      { title: 'MacGuffin', slug: 'macguffin' },
+      { title: 'Dirty Furniture', image: '/assets/covers/studio_09_dirty-furniture.jpg' },
+    ],
   },
   {
     slug: 'listening-room',
@@ -58,8 +83,18 @@ export const PACKS: Pack[] = [
     image: '/assets/pack-listening-room.jpg',
     order: 'https://buy.stripe.com/5kQ6oHbpefKX0oUdc7abK04',
     withStand: 'https://buy.stripe.com/3cIbJ18d2fKX7RmegbabK05',
-    niches: ['Music'],
-    knownSlugs: ['off-licence', 'get-familiar'],
+    contents: [
+      { title: 'Living Proof', image: '/assets/covers/listeningroom_01_living-proof.jpg' },
+      { title: 'No Way Back', image: '/assets/covers/listeningroom_02_no-way-back.jpg' },
+      { title: 'Heartbeat', slug: 'heartbeat' },
+      { title: 'No One Magazine', slug: 'no-one-magazine' },
+      { title: 'Portland Rave Flyers', slug: 'portland-rave-flyers' },
+      { title: 'Wax Poetics', image: '/assets/covers/listeningroom_06_wax-poetics.jpg' },
+      { title: 'Brick', slug: 'brick' },
+      { title: 'Off Licence', slug: 'off-licence' },
+      { title: 'zweikommasieben', slug: 'zweikommasieben' },
+      { title: 'Get Familiar', slug: 'get-familiar' },
+    ],
   },
   {
     slug: 'locker-room',
@@ -72,8 +107,17 @@ export const PACKS: Pack[] = [
     image: '/assets/pack-table-service.jpg',
     order: 'https://buy.stripe.com/6oUaEX78YbuH6Nic83abK06',
     withStand: 'https://buy.stripe.com/7sY3cveBqbuH2x2fkfabK07',
-    niches: ['Sport & Outdoors'],
-    knownSlugs: ['mountain-gazette', 'the-surfers-journal', 'pitch'],
+    contents: [
+      { title: 'Useless Fighters', image: '/assets/covers/lockerroom_01_useless-fighters.jpg' },
+      { title: 'Mountain Gazette', slug: 'mountain-gazette' },
+      { title: "The Surfer's Journal", slug: 'the-surfers-journal' },
+      { title: 'Huck', image: '/assets/covers/lockerroom_04_huck.jpg' },
+      { title: 'Pitch', slug: 'pitch' },
+      { title: 'Victory Journal', slug: 'victory-journal' },
+      { title: 'Racquet', slug: 'racquet-mag' },
+      { title: 'Good Sport', slug: 'good-sport' },
+      { title: 'Oh So', image: '/assets/covers/lockerroom_09_oh-so.jpg' },
+    ],
   },
   {
     slug: 'table-service',
@@ -86,8 +130,18 @@ export const PACKS: Pack[] = [
     image: '/assets/pack-table-service-alt.jpg',
     order: 'https://buy.stripe.com/14A28r3WMbuH6Ni0plabK08',
     withStand: 'https://buy.stripe.com/dRmfZh78Y56j2x22xtabK09',
-    niches: ['Food & Drink', 'Travel'],
-    knownSlugs: ['plates', 'cake-zine'],
+    contents: [
+      { title: 'Yolo Journal', slug: 'yolo-journal' },
+      { title: 'Anchoa', slug: 'anchoa' },
+      { title: 'Fulgurances', image: '/assets/covers/tableservice_03_fulgurances.jpg' },
+      { title: 'Cherry Bombe', slug: 'cherry-bombe' },
+      { title: 'Plates', slug: 'plates' },
+      { title: 'Cake Zine', slug: 'cake-zine' },
+      { title: 'FARE', slug: 'fare' },
+      { title: 'Eaten', slug: 'eaten' },
+      { title: 'Kitchen Table', slug: 'kitchen-table' },
+      { title: 'Noble Rot', slug: 'noble-rot' },
+    ],
   },
 ];
 
