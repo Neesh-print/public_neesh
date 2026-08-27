@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'The index of independent print | Neesh',
     url: canonical('/index'),
+    images: [{ url: '/og.jpg', width: 1200, height: 630 }],
   },
 };
 

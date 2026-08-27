@@ -11,6 +11,21 @@ export const metadata: Metadata = {
   },
   description:
     'Where indie mags meet the shops, cafés, hotels, and waiting rooms that stock them. Browse 300+ indie titles. Flat 10 percent fee.',
+  openGraph: {
+    type: 'website',
+    siteName: 'Neesh',
+    images: [
+      {
+        url: '/og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Neesh — the marketplace for independent magazines',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32' },

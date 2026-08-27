@@ -26,6 +26,7 @@ export async function generateMetadata({
     openGraph: {
       title: `Independent ${name} magazines | Neesh Directory`,
       url: canonical(`/index/${niche}`),
+      images: [{ url: '/og.jpg', width: 1200, height: 630 }],
     },
   };
 }
