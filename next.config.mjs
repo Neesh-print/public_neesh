@@ -40,8 +40,25 @@ const nextConfig = {
         '/apply',
         '/apply/:path*',
         '/auth/callback',
+        // Password reset and verification links in already-sent emails.
+        '/forgot-password',
+        '/reset-password',
+        '/verify-email',
+        // Application status screens and the role-redirect helper.
+        '/home',
+        '/pending',
+        '/rejected',
+        // Stripe payout onboarding links in nudge emails.
+        '/onboarding/:path*',
+        // Shared public profile links (neesh.art/p/..., /r/...).
+        '/p/:path*',
+        '/r/:path*',
+        // Dashboards, bare and nested.
+        '/publisher',
         '/publisher/:path*',
+        '/retailer',
         '/retailer/:path*',
+        '/admin',
         '/admin/:path*',
       ]) {
         redirects.push({
