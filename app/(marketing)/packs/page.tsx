@@ -94,7 +94,7 @@ export default async function PacksPage() {
       <PackShelf packs={PACKS} />
 
       <section className="tint-section">
-        <div className="wrap pack-how" style={{ paddingTop: 0, paddingBottom: 0 }}>
+        <div className="wrap pack-how">
           <div className="pack-how-copy">
             <h2>How it works</h2>
             <p>
