@@ -2597,24 +2597,49 @@ button {
 @media (min-width: 900px) {
   .packs-section {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 28px;
+    row-gap: clamp(28px, 3vw, 44px);
   }
 
+  /* Intro copy runs across the top row; the stand and the switcher share
+     the second row. */
   .packs-section .packs-rail {
-    grid-column: 1;
+    grid-column: 1 / -1;
     grid-row: 1;
+    max-width: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 18px 56px;
+  }
+
+  .packs-section .packs-rail .blurb {
+    max-width: 44ch;
+  }
+
+  .packs-section .packs-rail .price-block {
+    margin-left: auto;
+    align-items: flex-end;
+    text-align: right;
   }
 
   .packs-section .pack-panel-col {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 2;
   }
 
   .packs-section > .stand-card {
     grid-column: 1;
     grid-row: 2;
-    align-self: start;
-    max-width: 480px;
+    align-self: stretch;
+    margin-top: 0;
+  }
+
+  /* The image absorbs the height difference so the card bottoms out level
+     with the switcher panel. */
+  .packs-section > .stand-card img {
+    flex: 1;
+    aspect-ratio: auto;
+    min-height: 0;
   }
 }
 
@@ -2642,6 +2667,13 @@ button {
   color: var(--muted);
   margin: 0;
   text-wrap: pretty;
+}
+
+.price-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
 }
 
 .price-line {

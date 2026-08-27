@@ -99,11 +99,13 @@ export default async function PacksPage() {
               You don&rsquo;t have time to become a magazine buyer. We already are. Each pack ships
               with these exact titles or titles like them, hand-picked around the theme.
             </p>
-            <div className="price-line">
-              <span className="price">$200</span>
-              <span className="per">per pack</span>
+            <div className="price-block">
+              <div className="price-line">
+                <span className="price">$200</span>
+                <span className="per">per pack</span>
+              </div>
+              <span className="price-note">Shipping included.</span>
             </div>
-            <span className="price-note">Shipping included.</span>
           </div>
           <PackSwitcher packs={PACKS} />
           {/* Placed by grid: left rail under the price on desktop, below the
