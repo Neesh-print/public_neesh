@@ -35,6 +35,11 @@ export function PackSwitcher({ packs }: { packs: Pack[] }) {
             <h3>{pack.name}</h3>
             <span className="pack-rooms">{pack.rooms}</span>
             <p className="blurb">{pack.blurb}</p>
+            <div className="pack-detail-price">
+              <span className="price">$200</span>
+              <span className="per">per pack</span>
+              <span className="ship">&middot; shipping included</span>
+            </div>
             <span className="pack-count">
               {pack.count} &middot; Retails at <strong>{pack.retail}</strong>
             </span>

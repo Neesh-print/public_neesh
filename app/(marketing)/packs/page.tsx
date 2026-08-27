@@ -93,24 +93,15 @@ export default async function PacksPage() {
 
       <section id="the-packs">
         <div className="wrap packs-section">
-          <div className="packs-rail">
+          <div className="packs-head">
             <h2>The packs</h2>
             <p className="blurb">
               You don&rsquo;t have time to become a magazine buyer. We already are. Each pack ships
               with these exact titles or titles like them, hand-picked around the theme.
             </p>
-            <div className="price-block">
-              <div className="price-line">
-                <span className="price">$200</span>
-                <span className="per">per pack</span>
-              </div>
-              <span className="price-note">Shipping included.</span>
-            </div>
           </div>
           <PackSwitcher packs={PACKS} />
-          {/* Placed by grid: left rail under the price on desktop, below the
-              pack panel in the mobile stack. */}
-          <div className="stand-card">
+          <div className="stand-card strip">
             <img
               src="/assets/magazine-stand.jpg"
               alt="The Neesh magazine stand on a counter, four titles face out"
