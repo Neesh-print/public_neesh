@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowIcon } from '@/components/Logo';
-import { PackSwitcher } from '@/components/PackSwitcher';
+import { PackShelf } from '@/components/PackShelf';
 import { PACKS } from '@/lib/packs';
 import { coverPublicUrl } from '@/lib/supabase';
 import { getCatalogTitles } from '@/lib/queries';
@@ -91,32 +91,7 @@ export default async function PacksPage() {
         </div>
       </section>
 
-      <section id="the-packs">
-        <div className="wrap packs-section">
-          <div className="packs-head">
-            <h2>The packs</h2>
-            <p className="blurb">
-              You don&rsquo;t have time to become a magazine buyer. We already are. Each pack ships
-              with these exact titles or titles like them, hand-picked around the theme.
-            </p>
-          </div>
-          <PackSwitcher packs={PACKS} />
-          <div className="stand-card strip">
-            <img
-              src="/assets/magazine-stand.jpg"
-              alt="The Neesh magazine stand on a counter, four titles face out"
-            />
-            <div className="stand-card-body">
-              <span className="origin">Handmade in Portland, Oregon</span>
-              <span className="offer">Add the stand, +$100</span>
-              <span className="desc">
-                A small-batch wooden stand sized for the pack, three to four titles face out on a
-                counter or reception desk.
-              </span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PackShelf packs={PACKS} />
 
       <section className="tint-section">
         <div className="wrap pack-how" style={{ paddingTop: 0, paddingBottom: 0 }}>

@@ -15,6 +15,9 @@ export interface Pack {
   slug: string;
   name: string;
   rooms: string;
+  // Two-room label for the shelf tiles (the tile only fits ~two room types).
+  short: string;
+  price: number;
   blurb: string;
   count: string;
   retail: string;
@@ -30,6 +33,8 @@ export const PACKS: Pack[] = [
     slug: 'waiting-room',
     name: 'The Waiting Room',
     rooms: 'Spas · Therapy Offices · Clinics · Salons',
+    short: 'Spas · Clinics',
+    price: 200,
     blurb:
       'Plants, mushrooms, slow attention, and the body. Print that lowers the heart rate of the room it sits in.',
     count: '9 titles',
@@ -53,6 +58,8 @@ export const PACKS: Pack[] = [
     slug: 'studio',
     name: 'The Studio',
     rooms: 'Design Studios · Agencies · Workshops',
+    short: 'Studios · Agencies',
+    price: 200,
     blurb:
       'Nobody in a studio needs another screen. They need the thing on the table that starts an argument about a typeface. This pack is the one your team will quietly take home. Titles run toward design, architecture, photography, and craft.',
     count: '9 titles',
@@ -76,6 +83,8 @@ export const PACKS: Pack[] = [
     slug: 'listening-room',
     name: 'The Listening Room',
     rooms: 'Record Shops · Bars · Listening Bars',
+    short: 'Record Shops · Bars',
+    price: 200,
     blurb:
       "Music print goes deep, and most of it never makes it past four shops on two continents. This pack is the good stuff: scene documentation, label histories, and the kind of writing that sends you to a record you'd never have found. Titles run toward music, club culture, and sound.",
     count: '10 titles',
@@ -100,6 +109,8 @@ export const PACKS: Pack[] = [
     slug: 'locker-room',
     name: 'The Locker Room',
     rooms: 'Gyms · Climbing Walls · Saunas · Run Clubs',
+    short: 'Gyms · Run Clubs',
+    price: 200,
     blurb:
       'Sport print has gotten very good and almost nobody stocks it. This pack is for the room where people are already in their bodies and want to read about it. Titles run toward movement, endurance, outdoors, and the culture around all three.',
     count: '9 titles',
@@ -123,6 +134,8 @@ export const PACKS: Pack[] = [
     slug: 'table-service',
     name: 'Table Service',
     rooms: 'Restaurants · Cafés · Wine Bars',
+    short: 'Cafés · Wine Bars',
+    price: 200,
     blurb:
       'Solo diners, early arrivals, and anyone waiting on a table. Food print is beautiful, it photographs well, and it keeps people at the counter one more drink. Titles run toward food, drink, agriculture, and hospitality.',
     count: '10 titles',
