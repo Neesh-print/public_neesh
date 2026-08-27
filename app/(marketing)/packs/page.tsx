@@ -104,6 +104,9 @@ export default async function PacksPage() {
               <span className="per">per pack</span>
             </div>
             <span className="price-note">Shipping included.</span>
+          </div>
+          <div className="packs-right">
+            <PackSwitcher packs={PACKS} />
             <div className="stand-card">
               <img
                 src="/assets/magazine-stand.jpg"
@@ -119,7 +122,6 @@ export default async function PacksPage() {
               </div>
             </div>
           </div>
-          <PackSwitcher packs={PACKS} />
         </div>
       </section>
 

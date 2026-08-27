@@ -6,7 +6,7 @@ export function WantTitleForm({ titleId }: { titleId: string }) {
   return (
     <details className="want-details">
       <summary>
-        <span className="q">Want this title?</span>
+        <span className="q">Buy it wholesale.</span>
         <span className="hint">Tell us where you are and we will let you know when it is near you.</span>
       </summary>
       <form className="want-form" action="/api/signal" method="post">

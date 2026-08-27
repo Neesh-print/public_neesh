@@ -750,7 +750,7 @@ button {
 
 .home-hero-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(22px, 3vw, 56px);
   align-items: end;
 }
@@ -895,13 +895,18 @@ button {
   color: var(--ink);
 }
 
-.door.spaces .door-title .hl {
+.door .door-title .hl {
   display: inline;
   color: var(--ink);
   background: rgba(255, 255, 255, 0);
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
   transition: background 260ms var(--ease-nudge), color 260ms var(--ease-nudge);
+}
+
+.door.publisher:hover .door-title .hl {
+  background: var(--accent);
+  color: #fff;
 }
 
 .door.spaces:hover .door-title .hl {
@@ -985,7 +990,7 @@ button {
 
 .manifesto-cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.24);
 }
@@ -1061,7 +1066,7 @@ button {
 
 .feature-cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
   gap: clamp(32px, 4.4vw, 72px);
   align-items: center;
 }
@@ -1385,7 +1390,7 @@ button {
 
 .page-hero-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(22px, 3vw, 56px);
   align-items: end;
 }
@@ -1429,7 +1434,7 @@ button {
 /* How it works: numbered columns divided by borders */
 .how-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
   gap: 0;
   border-top: 1px solid var(--ink);
 }
@@ -1517,12 +1522,12 @@ button {
 
 .benefits-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: 0 clamp(28px, 3vw, 56px);
 }
 
 .benefits-grid.roomy {
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
 }
 
 .benefit {
@@ -1567,7 +1572,7 @@ button {
 
 .faq-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(12px, 2.6vw, 48px);
   padding: clamp(22px, 2.4vw, 34px) 0;
   border-top: 1px solid var(--border);
@@ -1941,7 +1946,7 @@ button {
 
 .title-page {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(32px, 4.4vw, 72px);
   align-items: start;
   padding-top: clamp(24px, 3vw, 44px);
@@ -2511,7 +2516,7 @@ button {
 
 .packs-hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
   gap: clamp(32px, 4.4vw, 72px);
   align-items: center;
   padding-top: clamp(44px, 5.4vw, 84px);
@@ -2580,7 +2585,7 @@ button {
 /* The pack switcher */
 .packs-section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(32px, 4vw, 64px);
   align-items: start;
   padding-top: var(--section-pad);
@@ -2640,6 +2645,13 @@ button {
   margin-top: -8px;
 }
 
+.packs-right {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-width: 0;
+}
+
 .stand-card {
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -2655,6 +2667,26 @@ button {
   object-fit: cover;
   display: block;
   background: var(--band);
+}
+
+/* Below the switcher the card is wide: photo beside the copy. */
+@media (min-width: 900px) {
+  .packs-right .stand-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .packs-right .stand-card img {
+    width: 42%;
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+
+  .packs-right .stand-card-body {
+    flex: 1;
+    justify-content: center;
+    padding: clamp(22px, 2.4vw, 34px);
+  }
 }
 
 .stand-card-body {
@@ -2846,7 +2878,7 @@ button {
 /* How-it-works band on packs page (numbered list, not columns) */
 .pack-how {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   gap: clamp(32px, 4.4vw, 72px);
   align-items: start;
   padding-top: var(--section-pad);
@@ -2927,7 +2959,7 @@ button {
 /* Pack detail page */
 .pack-detail-hero {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: clamp(28px, 3.6vw, 64px);
   align-items: start;
   padding-top: clamp(24px, 3vw, 44px);
@@ -3126,7 +3158,7 @@ button {
 
 .journal-cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr));
   gap: clamp(32px, 4.4vw, 72px);
   align-items: start;
   padding-bottom: clamp(48px, 6vw, 88px);
@@ -3241,7 +3273,7 @@ button {
 /* About page */
 .about-cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: 0 clamp(32px, 4vw, 64px);
   padding-top: var(--section-pad);
   padding-bottom: var(--section-pad);
@@ -3281,7 +3313,7 @@ button {
 
 .founder-cols {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr));
   gap: clamp(32px, 4.4vw, 72px);
   align-items: center;
 }
@@ -3324,7 +3356,7 @@ button {
 
 .work-with {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
   gap: clamp(12px, 2.6vw, 48px);
   margin-top: clamp(36px, 4.4vw, 72px);
   padding-top: clamp(24px, 2.8vw, 40px);
@@ -3558,6 +3590,17 @@ button {
 
   .door {
     min-height: 440px;
+  }
+
+  /* No hover on touch: the door-title highlights are always on. */
+  .door.publisher .door-title .hl {
+    background: var(--accent);
+    color: #fff;
+  }
+
+  .door.spaces .door-title .hl {
+    background: var(--ink);
+    color: #fff;
   }
 
   .legal-toc {

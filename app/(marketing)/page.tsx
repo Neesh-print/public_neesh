@@ -65,7 +65,9 @@ export default async function HomePage() {
           <div className="scrim" />
           <div className="door-content">
             <span className="eyebrow">For publishers</span>
-            <span className="door-title">Set your terms. We bring the shelves.</span>
+            <span className="door-title">
+              <span className="hl">Set your terms. We bring the shelves.</span>
+            </span>
             <span className="door-body">
               You price it. You decide whether to fulfill it yourself or let us handle it (
               <em>currently in beta</em>). Every order shows you who bought it, where they are, and
