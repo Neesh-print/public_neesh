@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
 import { organizationLd, siteUrl } from '@/lib/seo';
 import { JsonLd } from '@/components/JsonLd';
 import './globals.css';
@@ -51,7 +52,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Sitewide Organization block, the entity anchor. */}
         <JsonLd data={organizationLd()} />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
