@@ -2851,6 +2851,20 @@ button {
   color: var(--ink);
 }
 
+.shelf-identity h3 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.shelf-identity h3 a:hover {
+  color: var(--accent);
+}
+
+.shelf-identity h3 a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .shelf-identity .all-rooms {
   display: block;
   margin-top: 14px;

@@ -138,7 +138,9 @@ export function PackShelf({ packs }: { packs: Pack[] }) {
         <div className="shelf-detail">
           <div className="shelf-identity">
             <span className="now">Now showing</span>
-            <h3>{pack.name}</h3>
+            <h3>
+              <Link href={`/packs/${pack.slug}`}>{pack.name}</Link>
+            </h3>
             <span className="all-rooms">{pack.rooms}</span>
           </div>
 
