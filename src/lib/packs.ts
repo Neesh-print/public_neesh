@@ -28,10 +28,6 @@ export interface Pack {
   contents: PackTitle[];
 }
 
-// Placeholder until the Upper Left payment links are created in Stripe;
-// swap the real order and with-stand links in here.
-export const STRIPE_LINK_UPPER_LEFT = '#';
-
 export const PACKS: Pack[] = [
   {
     slug: 'waiting-room',
@@ -171,8 +167,8 @@ export const PACKS: Pack[] = [
     count: '9 titles',
     retail: '$225.00',
     image: '/assets/pack-upper-left.jpg',
-    order: STRIPE_LINK_UPPER_LEFT,
-    withStand: STRIPE_LINK_UPPER_LEFT,
+    order: 'https://buy.stripe.com/bJefZh3WM9mz8Vq6NJabK0a',
+    withStand: 'https://buy.stripe.com/eVqfZheBq2Yb7RmfkfabK0b',
     contents: [
       { title: 'Kitchen Table', slug: 'kitchen-table' },
       { title: 'Buckman Journal', slug: 'buckman-journal' },
