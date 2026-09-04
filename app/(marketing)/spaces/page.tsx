@@ -139,9 +139,9 @@ export default function SpacesPage() {
               <span className="eyebrow dim">Curated packs</span>
               <h2 className="d2">A shelf, chosen for you. Shipped in one box.</h2>
               <p className="lede">
-                Five packs, each built around a kind of room: the waiting room, the cafe, the shop
-                floor. $200 flat, shipping included, eight to ten titles no one else in your
-                neighborhood carries.
+                Six packs, five built around a kind of room and one built around home: the waiting
+                room, the cafe, the Pacific Northwest. $200 flat, shipping included, eight to ten
+                titles no one else in your neighborhood carries.
               </p>
               <p className="lede">
                 You don&rsquo;t have time to become a magazine buyer. We already are. Order a pack

@@ -28,6 +28,10 @@ export interface Pack {
   contents: PackTitle[];
 }
 
+// Placeholder until the Upper Left payment links are created in Stripe;
+// swap the real order and with-stand links in here.
+export const STRIPE_LINK_UPPER_LEFT = '#';
+
 export const PACKS: Pack[] = [
   {
     slug: 'waiting-room',
@@ -154,6 +158,31 @@ export const PACKS: Pack[] = [
       { title: 'Eaten', slug: 'eaten' },
       { title: 'Kitchen Table', slug: 'kitchen-table' },
       { title: 'Noble Rot', slug: 'noble-rot' },
+    ],
+  },
+  {
+    slug: 'upper-left',
+    name: 'The Upper Left',
+    rooms: 'Shops · Cafés · Hotels · Homesick Northwesterners',
+    short: 'Shops · Cafés',
+    price: 200,
+    blurb:
+      'Rave flyers, public courts, secondhand clothes, and food from the source. Neesh ships from Seattle and grew up on Portland relationships. This pack is an homage to our roots.',
+    count: '9 titles',
+    retail: '$225.00',
+    image: '/assets/pack-upper-left.jpg',
+    order: STRIPE_LINK_UPPER_LEFT,
+    withStand: STRIPE_LINK_UPPER_LEFT,
+    contents: [
+      { title: 'Kitchen Table', slug: 'kitchen-table' },
+      { title: 'Buckman Journal', slug: 'buckman-journal' },
+      { title: 'Provecho', slug: 'provecho' },
+      { title: 'Portland Rave Flyers', slug: 'portland-rave-flyers' },
+      { title: 'Portland Tennis Courterly', slug: 'portland-tennis-courterly' },
+      { title: 'Heartbeat', slug: 'heartbeat' },
+      { title: 'Mildew', slug: 'mildew' },
+      { title: 'Trails', slug: 'trails' },
+      { title: 'Ori Magazine', slug: 'ori-magazine' },
     ],
   },
 ];

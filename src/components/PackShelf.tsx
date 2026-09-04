@@ -50,7 +50,7 @@ export function PackShelf({ packs }: { packs: Pack[] }) {
     <section id="the-packs" className="shelf-section">
       <div className="wrap">
         <div className="shelf-eyebrow">
-          <span className="lead">The packs · Five rooms</span>
+          <span className="lead">The packs · Six rooms</span>
           <span className="meta">
             $200 each &middot; Shipping included<span className="opt"> &middot; Stand optional</span>
           </span>
