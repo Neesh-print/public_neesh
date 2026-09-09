@@ -228,7 +228,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                     <ArrowIcon />
                   </Link>
                   {title.publisher.website && (
-                    <a className="btn ghost" href={`/out/${title.slug}`} rel="nofollow">
+                    <a className="btn ghost" href={`/out/${title.slug}`} target="_blank" rel="nofollow noopener">
                       See where it&rsquo;s stocked
                     </a>
                   )}
@@ -238,7 +238,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
             ) : (
               title.publisher.website && (
                 <div className="cta-row">
-                  <a className="btn solid" href={`/out/${title.slug}`} rel="nofollow">
+                  <a className="btn solid" href={`/out/${title.slug}`} target="_blank" rel="nofollow noopener">
                     See where it&rsquo;s stocked
                     <ArrowIcon />
                   </a>

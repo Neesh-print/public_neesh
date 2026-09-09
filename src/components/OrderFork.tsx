@@ -46,7 +46,7 @@ export function OrderFork({
         </p>
         <div className="cta-row" style={{ marginTop: 8 }}>
           {hasWebsite && (
-            <a className="btn solid" href={`/out/${titleSlug}`} rel="nofollow">
+            <a className="btn solid" href={`/out/${titleSlug}`} target="_blank" rel="nofollow noopener">
               See where it&rsquo;s stocked
               <ArrowIcon />
             </a>
