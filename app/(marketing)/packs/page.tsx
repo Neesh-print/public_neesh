@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { ArrowIcon } from '@/components/Logo';
+import { PackPurchaseBeacon } from '@/components/PackPurchaseBeacon';
 import { PackShelf } from '@/components/PackShelf';
 import { PACKS } from '@/lib/packs';
 import { coverPublicUrl } from '@/lib/supabase';
@@ -37,6 +38,7 @@ export default async function PacksPage() {
 
   return (
     <>
+      <PackPurchaseBeacon />
       <section>
         <div className="wrap packs-hero">
           <div className="packs-hero-copy">
