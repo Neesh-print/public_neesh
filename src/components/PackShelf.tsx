@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import type { Pack } from '@/lib/packs';
+import { trackPackCtaClick } from '@/lib/neesh-analytics';
 
 // The shelf treatment (design handoff "Packs Shelf 1b"): all five packs on
 // one row sorted by room, the selected pack lifting off the shelf, a detail
@@ -176,7 +177,7 @@ export function PackShelf({ packs }: { packs: Pack[] }) {
               </span>
               <span className="toggle-price">+$100</span>
             </button>
-            <a href={orderHref} className="shelf-cta">
+            <a href={orderHref} className="shelf-cta" onClick={trackPackCtaClick}>
               Order this pack <span aria-hidden="true">&rarr;</span>
             </a>
             <Link href={`/packs/${pack.slug}`} className="shelf-see">
@@ -207,7 +208,7 @@ export function PackShelf({ packs }: { packs: Pack[] }) {
             <span className="label">Total</span>
             <span className="amount">${total}</span>
           </span>
-          <a href={orderHref} className="shelf-cta">
+          <a href={orderHref} className="shelf-cta" onClick={trackPackCtaClick}>
             Order this pack <span aria-hidden="true">&rarr;</span>
           </a>
         </div>

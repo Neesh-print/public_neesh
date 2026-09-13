@@ -14,7 +14,7 @@ export function Footer() {
         <div className="footer-links">
           <Link href="/terms">Terms</Link>
           <Link href="/privacy">Privacy</Link>
-          <a href="https://www.instagram.com/neeshprint/" rel="noopener noreferrer">
+          <a href="https://www.instagram.com/neeshprint/" target="_blank" rel="noopener noreferrer">
             Instagram
           </a>
           <Link href="/newsletter">Newsletter</Link>
