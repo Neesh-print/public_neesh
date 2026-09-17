@@ -1,0 +1,52 @@
+<!-- @dsCard group="Components" name="Feedback and state" subtitle="Segmented progress, empty state, wallet display, skeleton, marquee" width="1200" -->
+<div class="ds-page">
+  <div class="ds-section">
+    <span class="ds-h">Segmented progress (ProgressBar)</span>
+    <div class="ds-grid c2" style="max-width:800px">
+      <div><div class="progress-seg"><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div></div><p class="progress-label">7/10</p></div>
+      <div><div class="progress-seg green"><div class="seg on"></div><div class="seg on"></div><div class="seg on"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div><div class="seg"></div></div><p class="progress-label">3/10</p></div>
+    </div>
+    <p class="ds-note" style="margin-top:12px">Ten 8px segments with 2px gaps, accent or chart green, border grey when empty. Optional right-aligned caption.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Empty state (EmptyState)</span>
+    <div class="ds-frame">
+      <div class="empty-state">
+        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.3 7L12 12l8.7-5M12 22V12"/></svg></div>
+        <h3>No orders yet</h3>
+        <p>When a retailer orders one of your titles it shows up here, with who bought it and where they are.</p>
+        <button class="app-btn primary">Share your profile</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Wallet display (WalletDisplay)</span>
+    <div class="ds-row" style="gap:48px">
+      <div class="wallet"><span class="label">Available balance</span><span class="amount">$1,284.50</span><button class="action">Withdraw <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+      <div class="wallet"><span class="label">Pending payout</span><span class="amount">$412.00</span><button class="action">View <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Skeleton loading</span>
+    <div class="ds-grid c4" style="max-width:900px">
+      <div><div class="skeleton" style="aspect-ratio:3/4;border-radius:8px;margin-bottom:12px"></div><div class="skeleton" style="height:14px;width:70%;margin-bottom:8px"></div><div class="skeleton" style="height:12px;width:45%"></div></div>
+      <div><div class="skeleton" style="aspect-ratio:3/4;border-radius:8px;margin-bottom:12px"></div><div class="skeleton" style="height:14px;width:60%;margin-bottom:8px"></div><div class="skeleton" style="height:12px;width:50%"></div></div>
+      <div class="card-neesh" style="grid-column:span 2"><div class="skeleton" style="height:20px;width:40%;margin-bottom:16px"></div><div class="skeleton" style="height:12px;width:100%;margin-bottom:8px"></div><div class="skeleton" style="height:12px;width:90%;margin-bottom:8px"></div><div class="skeleton" style="height:12px;width:60%"></div></div>
+    </div>
+    <p class="ds-note" style="margin-top:12px">Band blocks pulsing to 50% opacity, 1.5s. Shapes mirror the content they replace.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Title marquee</span>
+    <div class="marquee ds-frame" style="border-color:var(--ink)">
+      <div class="marquee-track">
+        <div class="marquee-seq"><span class="tag">In the index</span><span>Aedo</span><span>Kitchen Table</span><span>Heartbeat</span><span>Geezer</span><span>Different Leaf</span><span>Wax Poetics</span><span>Living Proof</span></div>
+        <div class="marquee-seq"><span class="tag">In the index</span><span>Aedo</span><span>Kitchen Table</span><span>Heartbeat</span><span>Geezer</span><span>Different Leaf</span><span>Wax Poetics</span><span>Living Proof</span></div>
+      </div>
+    </div>
+    <p class="ds-note" style="margin-top:12px">Black band under the hero. Archivo 600 19px wdth 108 titles, mono tag, 54s linear drift, sequence duplicated for a seamless loop.</p>
+  </div>
+</div>

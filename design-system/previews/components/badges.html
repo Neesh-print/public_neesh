@@ -1,0 +1,79 @@
+<!-- @dsCard group="Components" name="Chips and badges" subtitle="Index chips, filter pills, featured pill, order status badges, stock indicators, price display" width="1200" -->
+<div class="ds-page">
+  <div class="ds-section">
+    <span class="ds-h">Index chips (.chip)</span>
+    <div class="ds-row" style="gap:6px">
+      <span class="chip">Food</span><span class="chip">Music</span><span class="chip">Architecture</span><span class="chip">Sport</span><span class="chip order">Order now</span>
+    </div>
+    <p class="ds-note" style="margin-top:12px">11px / 600, 4px 9px, pill. Niche chips are bordered and muted; the Order now chip sits on band in accent with no border.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Filter pills (.pill)</span>
+    <div class="pill-bar">
+      <button class="pill on">All</button><button class="pill">Food</button><button class="pill">Fashion</button><button class="pill">Music</button><button class="pill">Art</button><button class="pill">Travel</button><button class="pill">Sport</button><button class="pill">Design</button>
+    </div>
+    <p class="ds-note" style="margin-top:12px">13px / 600, 8px 15px, pill. Hover darkens the border to ink; the active pill inverts.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Cover overlays</span>
+    <div class="ds-row" style="gap:24px">
+      <div style="position:relative;width:150px;aspect-ratio:3/4;background:var(--band);border-radius:4px"><span class="featured-pill">Featured</span></div>
+      <div style="position:relative;width:150px;aspect-ratio:3/4;background:var(--band);border-radius:8px"><span class="ui-badge new" style="position:absolute;top:8px;left:8px">New</span><span class="stock sm critical" style="position:absolute;top:32px;left:8px"><span class="dot"></span>Only 3 left</span></div>
+    </div>
+    <p class="ds-note" style="margin-top:12px">Site: Featured pill, accent, mono 10px uppercase, top-left at 10px. App: New badge (success pair) then the stock indicator stacked beneath it, top-left at 8px.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Order status (StatusBadge)</span>
+    <div class="ds-row" style="gap:8px">
+      <span class="status-badge pending">Pending</span>
+      <span class="status-badge pending">New order</span>
+      <span class="status-badge success">Received</span>
+      <span class="status-badge success">Delivered</span>
+      <span class="status-badge success">Paid</span>
+      <span class="status-badge success">Payment received</span>
+      <span class="status-badge neutral">Shipped</span>
+      <span class="status-badge neutral">Payment pending</span>
+      <span class="status-badge neutral">Payment sent</span>
+      <span class="status-badge error">Unfulfilled</span>
+      <span class="status-badge error">Cancelled</span>
+    </div>
+    <p class="ds-note" style="margin-top:12px">12px / 500 uppercase, 0.05em tracking, 4px radius. Four pairs: pending (amber), success (green), neutral (grey), error (red). Every order state maps to one of them.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Generic badges (shadcn Badge)</span>
+    <div class="ds-row" style="gap:8px">
+      <span class="ui-badge default">Default</span>
+      <span class="ui-badge secondary">Secondary</span>
+      <span class="ui-badge destructive">Destructive</span>
+      <span class="ui-badge outline">Outline</span>
+      <span class="ui-badge new">New</span>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Stock indicator (StockIndicator)</span>
+    <div class="ds-row" style="gap:12px">
+      <span class="stock critical"><span class="dot"></span>Only 3 left</span>
+      <span class="stock low"><span class="dot"></span>12 in stock</span>
+      <span class="stock out"><span class="dot"></span>Out of stock</span>
+      <span class="stock sm critical"><span class="dot"></span>Only 3 left</span>
+      <span class="stock sm low"><span class="dot"></span>12 in stock</span>
+      <span class="stock sm out"><span class="dot"></span>Out of stock</span>
+    </div>
+    <p class="ds-note" style="margin-top:12px">Renders only for low (15 or fewer), critical (5 or fewer) and out. Normal stock shows nothing.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Price display (PriceDisplay)</span>
+    <div class="ds-row top" style="gap:48px">
+      <div class="price sm"><span class="wsp">$9.60<span class="label">WSP</span></span><span class="msrp">/ $16.00<span class="label">MSRP</span></span></div>
+      <div class="price"><span class="wsp">$9.60<span class="label">WSP</span></span><span class="msrp">/ $16.00<span class="label">MSRP</span></span><span class="margin">$4.48<span class="label">MY MARGIN</span></span></div>
+      <div class="price lg stacked"><span class="wsp">$9.60<span class="label">WSP</span></span><span class="msrp">$16.00<span class="label">MSRP</span></span><span class="margin">$4.48<span class="label">MY MARGIN</span></span><span class="total">Total: $96.00</span></div>
+    </div>
+    <p class="ds-note" style="margin-top:12px">Wholesale in accent, MSRP muted, margin in success text. Inline joins with a slash; stacked lists vertically. Large uses Archivo for the wholesale and total figures.</p>
+  </div>
+</div>

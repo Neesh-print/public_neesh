@@ -1,0 +1,54 @@
+<!-- @dsCard group="Foundations" name="Typography" subtitle="Archivo display (variable width), Manrope body, IBM Plex Mono eyebrows" width="1200" -->
+<div class="ds-page">
+  <div class="ds-section">
+    <span class="ds-h">Families</span>
+    <div class="ds-grid c3">
+      <div>
+        <div style="font-family:var(--font-display);font-variation-settings:'wdth' 116;font-weight:800;font-size:44px;line-height:1;letter-spacing:-.03em">Archivo</div>
+        <p class="ds-note" style="margin-top:8px">Display. Variable width axis; headings run wide (wdth 106 to 122) with tight tracking. Weights 500 to 800.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--font-body);font-weight:600;font-size:44px;line-height:1;letter-spacing:-.01em">Manrope</div>
+        <p class="ds-note" style="margin-top:8px">Body. 16px / 1.55 on the site, 14px / 1.5 in the app. Weights 400 to 700. Buttons and field labels use 600.</p>
+      </div>
+      <div>
+        <div style="font-family:var(--font-mono);font-weight:500;font-size:44px;line-height:1">IBM Plex Mono</div>
+        <p class="ds-note" style="margin-top:8px">Eyebrows, nav, metadata, chips on covers. 10 to 12px, uppercase, 0.08 to 0.16em tracking. Weights 400 and 500.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Site scale</span>
+    <div class="ds-spec"><div class="meta"><b>.d1</b>Archivo 800, wdth 112<br>clamp(40px, 6.4vw, 104px)<br>lh 0.9, ls -0.038em</div><div class="d1">Publish. We&rsquo;ll handle the shelves.</div></div>
+    <div class="ds-spec"><div class="meta"><b>.d2</b>Archivo 700, wdth 118<br>clamp(32px, 4.4vw, 64px)<br>lh 0.98, ls -0.034em</div><div class="d2">Every independent magazine, in one place</div></div>
+    <div class="ds-spec"><div class="meta"><b>.d3</b>Archivo 700, wdth 116<br>clamp(22px, 2.4vw, 34px)<br>lh 1.04, ls -0.026em</div><div class="d3">A shelf, chosen for you. Shipped in one box.</div></div>
+    <div class="ds-spec"><div class="meta"><b>.eyebrow</b>Plex Mono 500, 12px<br>uppercase, ls 0.14em<br>accent / muted / dim / on-black</div><div><span class="eyebrow">300+ independent titles from 30+ countries</span><span class="eyebrow muted" style="margin-top:8px">Mission</span><span class="eyebrow dim" style="margin-top:8px">Curated packs</span></div></div>
+    <div class="ds-spec"><div class="meta"><b>.lede</b>Manrope 400, 18px<br>lh 1.55, muted<br>max 46ch</div><p class="lede">Neesh connects independent magazines with the shops, caf&eacute;s, hotels, and waiting rooms that want them.</p></div>
+    <div class="ds-spec"><div class="meta"><b>body</b>Manrope 400, 16px<br>lh 1.55, ink</div><p style="max-width:60ch">Retailers order in a few clicks. You keep your terms and see every sale in real time so you can retire your spreadsheets.</p></div>
+    <div class="ds-spec"><div class="meta"><b>.mono-nav</b>Plex Mono 400, 12px<br>uppercase, ls 0.08em</div><div class="mono-nav"><a href="#" class="active">Index</a><a href="#">For Publishers</a><a href="#">For Spaces</a><a href="#">Journal</a><a href="#" class="auth">Sign Up / Log In</a></div></div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">App scale (tailwind fontSize)</span>
+    <div class="ds-spec"><div class="meta"><b>display-lg</b>40px / 1.1 / 700</div><div class="app-display-lg">Dashboard</div></div>
+    <div class="ds-spec"><div class="meta"><b>display-md</b>32px / 1.2 / 700</div><div class="app-display-md">My Titles</div></div>
+    <div class="ds-spec"><div class="meta"><b>display-sm</b>24px / 1.25 / 600</div><div class="app-display-sm">Order #NE-10482</div></div>
+    <div class="ds-spec"><div class="meta"><b>heading</b>20px / 1.4 / 600</div><div class="app-heading">Shipping details</div></div>
+    <div class="ds-spec"><div class="meta"><b>body-lg</b>16px / 1.5 / 400</div><div class="app-body-lg">Orders ship direct from the publisher within five business days.</div></div>
+    <div class="ds-spec"><div class="meta"><b>body</b>14px / 1.5 / 400</div><div class="app-body">Orders ship direct from the publisher within five business days.</div></div>
+    <div class="ds-spec"><div class="meta"><b>caption</b>12px / 1.4 / 400</div><div class="app-caption" style="color:var(--muted-2)">Updated 3 minutes ago</div></div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Archivo width axis</span>
+    <div class="ds-row" style="gap:32px">
+      <div style="font-family:var(--font-display);font-weight:700;font-size:32px;font-variation-settings:'wdth' 100;letter-spacing:-.02em">wdth 100</div>
+      <div style="font-family:var(--font-display);font-weight:700;font-size:32px;font-variation-settings:'wdth' 108;letter-spacing:-.02em">wdth 108</div>
+      <div style="font-family:var(--font-display);font-weight:700;font-size:32px;font-variation-settings:'wdth' 114;letter-spacing:-.02em">wdth 114</div>
+      <div style="font-family:var(--font-display);font-weight:700;font-size:32px;font-variation-settings:'wdth' 118;letter-spacing:-.02em">wdth 118</div>
+      <div style="font-family:var(--font-display);font-weight:800;font-size:32px;font-variation-settings:'wdth' 122;letter-spacing:-.03em">wdth 122</div>
+    </div>
+    <p class="ds-note" style="margin-top:12px">The app pins every heading at wdth 114. The site widens as headings get bigger: marquee 108, card names 112, section heads 116 to 118, manifesto 122.</p>
+  </div>
+</div>

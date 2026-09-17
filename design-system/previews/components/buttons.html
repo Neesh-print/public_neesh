@@ -1,0 +1,56 @@
+<!-- @dsCard group="Components" name="Buttons" subtitle="Site solid / accent / ghost / white / ghost-white; app primary / purple / secondary / destructive / link" width="1200" -->
+<div class="ds-page">
+  <div class="ds-section">
+    <span class="ds-h">Site buttons (.btn)</span>
+    <div class="ds-row">
+      <a class="btn solid" href="#">See the packs <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="btn accent" href="#">Claim your title</a>
+      <a class="btn ghost" href="#">Browse the index</a>
+      <button class="btn solid" disabled>Submitting</button>
+    </div>
+    <p class="ds-note" style="margin-top:12px">16px / 600 Manrope, 16px 28px padding, 8px radius, no shadow. Solid goes accent on hover; accent goes ink; ghost turns its border and text accent.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">On black</span>
+    <div class="ds-black">
+      <div class="ds-row">
+        <a class="btn white hero" href="#">Claim your title</a>
+        <a class="btn ghost-white hero" href="#">Browse the index</a>
+        <a class="btn accent hero" href="#">See the packs</a>
+      </div>
+    </div>
+    <p class="ds-note" style="margin-top:12px">.hero adds 17px 30px padding for hero and closing CTAs. White goes accent on hover; ghost-white fills white.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">App buttons (ButtonPrimary, ButtonSecondary)</span>
+    <div class="ds-row">
+      <button class="app-btn primary">Save changes</button>
+      <button class="app-btn purple">Place order</button>
+      <button class="app-btn secondary">Cancel</button>
+      <button class="app-btn secondary destructive">Delete title</button>
+      <button class="app-btn link">View all orders <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+    </div>
+    <div class="ds-row" style="margin-top:16px">
+      <button class="app-btn primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg> Add title</button>
+      <button class="app-btn primary" disabled><span class="spinner"></span> Saving</button>
+      <button class="app-btn secondary" disabled>Disabled</button>
+      <button class="app-btn secondary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7M16 6l-4-4-4 4M12 2v13"/></svg> Export CSV</button>
+    </div>
+    <div style="margin-top:16px;max-width:360px"><button class="app-btn primary full">Continue to checkout</button></div>
+    <p class="ds-note" style="margin-top:12px">14px / 600 Archivo, 10px 16px padding, 8px radius. Black is the default; purple is the variant. Loading swaps the icon for a spinner and disables at 50% opacity. fullWidth stretches to the container.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Icon buttons and utility</span>
+    <div class="ds-row">
+      <button class="icon-btn" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <button class="icon-btn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg><span class="count">3</span></button>
+      <button class="icon-btn" aria-label="Notifications"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9M13.7 21a2 2 0 0 1-3.4 0"/></svg><span class="count">12</span></button>
+      <button class="menu-button show"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg> Menu</button>
+      <button class="menu-button round show" aria-label="Open menu"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+    </div>
+    <p class="ds-note" style="margin-top:12px">App icon buttons: 8px padding, band fill on hover, accent count bubble. Site menu button: pill, 1px ink border, inverts on hover; shown under 900px.</p>
+  </div>
+</div>

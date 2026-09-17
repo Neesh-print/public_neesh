@@ -1,0 +1,28 @@
+<!-- @dsCard group="Components" name="Data table" subtitle="Sortable header, zebra rows, selection, status column, right-aligned figures" width="1200" -->
+<div class="ds-page">
+  <div class="ds-section">
+    <span class="ds-h">Orders table (DataTable)</span>
+    <div class="ds-frame">
+      <table class="app-table">
+        <thead><tr>
+          <th style="width:48px"><input type="checkbox" class="check" aria-label="Select all rows"></th>
+          <th><button class="sort">Order <span style="display:inline-flex;flex-direction:column"><svg class="on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom:-4px"><path d="M18 15l-6-6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></button></th>
+          <th>Retailer</th>
+          <th>Title</th>
+          <th><button class="sort">Date <span style="display:inline-flex;flex-direction:column"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-bottom:-4px"><path d="M18 15l-6-6-6 6"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></span></button></th>
+          <th>Status</th>
+          <th class="right">Qty</th>
+          <th class="right">Total</th>
+        </tr></thead>
+        <tbody>
+          <tr class="clickable"><td><input type="checkbox" class="check"></td><td style="font-family:var(--font-mono);font-size:13px">NE-10482</td><td>Cafe Reveille</td><td>Kitchen Table #8</td><td>Sep 14, 2026</td><td><span class="status-badge pending">New order</span></td><td class="right">12</td><td class="right" style="font-weight:600">$144.00</td></tr>
+          <tr class="clickable selected"><td><input type="checkbox" class="check" checked></td><td style="font-family:var(--font-mono);font-size:13px">NE-10479</td><td>The Standard, East Village</td><td>Aedo #1</td><td>Sep 12, 2026</td><td><span class="status-badge neutral">Shipped</span></td><td class="right">6</td><td class="right" style="font-weight:600">$57.60</td></tr>
+          <tr class="clickable"><td><input type="checkbox" class="check"></td><td style="font-family:var(--font-mono);font-size:13px">NE-10471</td><td>Ace Hotel Portland</td><td>Heartbeat #1</td><td>Sep 9, 2026</td><td><span class="status-badge success">Delivered</span></td><td class="right">20</td><td class="right" style="font-weight:600">$144.00</td></tr>
+          <tr class="clickable"><td><input type="checkbox" class="check"></td><td style="font-family:var(--font-mono);font-size:13px">NE-10466</td><td>Idlewild Books</td><td>Geezer #1</td><td>Sep 6, 2026</td><td><span class="status-badge success">Paid</span></td><td class="right">8</td><td class="right" style="font-weight:600">$76.80</td></tr>
+          <tr class="clickable"><td><input type="checkbox" class="check"></td><td style="font-family:var(--font-mono);font-size:13px">NE-10451</td><td>Casa Bosques</td><td>Different Leaf, Summer</td><td>Sep 1, 2026</td><td><span class="status-badge error">Cancelled</span></td><td class="right">4</td><td class="right" style="font-weight:600">$36.00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="ds-note" style="margin-top:12px">Archivo 600 headers with paired sort chevrons, 12px 16px cells at 14px, band zebra on even rows, faint accent tint for selected rows, min width 600px with horizontal scroll below that.</p>
+  </div>
+</div>

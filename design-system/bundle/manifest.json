@@ -1,0 +1,177 @@
+{
+  "generatedAt": "2026-09-17T07:23:08.512Z",
+  "cards": [
+    {
+      "path": "components/badges/index.html",
+      "group": "Components",
+      "name": "Chips and badges",
+      "subtitle": "Index chips, filter pills, featured pill, order status badges, stock indicators, price display",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "components/buttons/index.html",
+      "group": "Components",
+      "name": "Buttons",
+      "subtitle": "Site solid / accent / ghost / white / ghost-white; app primary / purple / secondary / destructive / link",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "components/cards/index.html",
+      "group": "Components",
+      "name": "Cards",
+      "subtitle": "Index title card, cover fallback, app magazine card, info card, shadcn card",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "components/feedback/index.html",
+      "group": "Components",
+      "name": "Feedback and state",
+      "subtitle": "Segmented progress, empty state, wallet display, skeleton, marquee",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "components/footer/index.html",
+      "group": "Components",
+      "name": "Footer and minimal header",
+      "subtitle": "Black footer band with mono links; minimal chrome for newsletter screens",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "components/forms/index.html",
+      "group": "Components",
+      "name": "Forms",
+      "subtitle": "Site .field, app FormInput, select, textarea, search, newsletter capture, states",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "components/modal/index.html",
+      "group": "Components",
+      "name": "Modal",
+      "subtitle": "Header, scrolling body, footer actions; sm / md / lg widths on a 50% ink backdrop",
+      "viewport": {
+        "width": 1200,
+        "height": 720
+      }
+    },
+    {
+      "path": "components/navigation/index.html",
+      "group": "Components",
+      "name": "Navigation",
+      "subtitle": "Marketing header, directory header, mobile drawer, app header, tabs, sidebar",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "components/table/index.html",
+      "group": "Components",
+      "name": "Data table",
+      "subtitle": "Sortable header, zebra rows, selection, status column, right-aligned figures",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "foundations/colors/index.html",
+      "group": "Foundations",
+      "name": "Colors",
+      "subtitle": "Ink, paper, accent, band, text ramp, status pairs",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "foundations/logo/index.html",
+      "group": "Foundations",
+      "name": "Logo",
+      "subtitle": "Wordmark, sizes by chrome, on black, favicon mark",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "foundations/spacing/index.html",
+      "group": "Foundations",
+      "name": "Spacing and layout",
+      "subtitle": "Gutter, section padding, radii, elevation, the one breakpoint",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "foundations/typography/index.html",
+      "group": "Foundations",
+      "name": "Typography",
+      "subtitle": "Archivo display (variable width), Manrope body, IBM Plex Mono eyebrows",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "sections/closing/index.html",
+      "group": "Sections",
+      "name": "Closing CTA",
+      "subtitle": "Centered photo closer on ink with wdth-120 headline and paired hero CTAs",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "sections/doors/index.html",
+      "group": "Sections",
+      "name": "Two-door fork",
+      "subtitle": "Publisher and spaces doors, hover grows the door and highlights the title",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "sections/faq/index.html",
+      "group": "Sections",
+      "name": "FAQ rows",
+      "subtitle": "Group label, two-column ruled rows with Archivo question and muted answer",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "sections/feature-bands/index.html",
+      "group": "Sections",
+      "name": "Feature bands and newsletter strip",
+      "subtitle": "Paper and tint feature bands with copy beside media; the ruled newsletter strip",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "sections/hero/index.html",
+      "group": "Sections",
+      "name": "Hero",
+      "subtitle": "Photo hero on ink with scrim, eyebrow, d1 headline, lede and paired CTAs",
+      "viewport": {
+        "width": 1200
+      }
+    },
+    {
+      "path": "sections/manifesto/index.html",
+      "group": "Sections",
+      "name": "Manifesto",
+      "subtitle": "Black band: eyebrow, oversized wdth-122 headline, kicker, numbered columns, closing line",
+      "viewport": {
+        "width": 1200
+      }
+    }
+  ]
+}

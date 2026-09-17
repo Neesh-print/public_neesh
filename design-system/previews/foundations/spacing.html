@@ -1,0 +1,54 @@
+<!-- @dsCard group="Foundations" name="Spacing and layout" subtitle="Gutter, section padding, radii, elevation, the one breakpoint" width="1200" -->
+<div class="ds-page">
+  <div class="ds-section">
+    <span class="ds-h">Layout tokens</span>
+    <div class="ds-col" style="gap:12px">
+      <div class="ds-space"><span class="lbl">--wrap-max 1600px</span><div class="bar" style="width:100%;max-width:640px"></div></div>
+      <div class="ds-space"><span class="lbl">--gutter clamp(18px, 3.4vw, 56px)</span><div class="bar" style="width:56px"></div></div>
+      <div class="ds-space"><span class="lbl">--section-pad clamp(56px, 7vw, 110px)</span><div class="bar" style="width:110px"></div></div>
+      <div class="ds-space"><span class="lbl">--breakpoint 900px</span><div class="bar" style="width:360px;background:var(--ink)"></div></div>
+    </div>
+    <p class="ds-note" style="margin-top:16px">One breakpoint. Above 900px the mono nav shows; below it the nav collapses into the round Menu button and the full-screen black drawer. Grids use auto-fit minmax so they reflow without extra queries.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Spacing steps in use</span>
+    <div class="ds-col" style="gap:10px">
+      <div class="ds-space"><span class="lbl">4px  chip gap, cover meta</span><div class="bar" style="width:4px"></div></div>
+      <div class="ds-space"><span class="lbl">8px  button gap, chip row, badge padding</span><div class="bar" style="width:8px"></div></div>
+      <div class="ds-space"><span class="lbl">10px card gap, button icon gap</span><div class="bar" style="width:10px"></div></div>
+      <div class="ds-space"><span class="lbl">14px CTA gap, door content gap</span><div class="bar" style="width:14px"></div></div>
+      <div class="ds-space"><span class="lbl">16px field padding, table cells, card padding (mobile)</span><div class="bar" style="width:16px"></div></div>
+      <div class="ds-space"><span class="lbl">24px card padding, modal padding, app tab gap</span><div class="bar" style="width:24px"></div></div>
+      <div class="ds-space"><span class="lbl">28px button horizontal padding, header gap</span><div class="bar" style="width:28px"></div></div>
+      <div class="ds-space"><span class="lbl">44px marquee gap, feature grid gap (min)</span><div class="bar" style="width:44px"></div></div>
+      <div class="ds-space"><span class="lbl">72px feature grid gap (max)</span><div class="bar" style="width:72px"></div></div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Radii</span>
+    <div class="ds-row" style="gap:24px">
+      <div class="ds-col" style="gap:8px;align-items:center"><div style="width:96px;height:72px;background:var(--band);border:1px solid var(--border);border-radius:4px"></div><span class="ds-cap">4px index covers, badges</span></div>
+      <div class="ds-col" style="gap:8px;align-items:center"><div style="width:96px;height:72px;background:var(--band);border:1px solid var(--border);border-radius:8px"></div><span class="ds-cap">8px buttons, fields, cards</span></div>
+      <div class="ds-col" style="gap:8px;align-items:center"><div style="width:96px;height:72px;background:var(--band);border:1px solid var(--border);border-radius:12px"></div><span class="ds-cap">12px modals</span></div>
+      <div class="ds-col" style="gap:8px;align-items:center"><div style="width:96px;height:40px;background:var(--band);border:1px solid var(--border);border-radius:999px"></div><span class="ds-cap">999px pills, chips, search</span></div>
+      <div class="ds-col" style="gap:8px;align-items:center"><div style="width:72px;height:72px;background:var(--band);border:1px solid var(--border);border-radius:50%"></div><span class="ds-cap">50% bookmark, close</span></div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Elevation</span>
+    <div class="ds-row" style="gap:24px;align-items:flex-start">
+      <div class="ds-col" style="gap:8px"><div style="width:180px;height:90px;background:#fff;border:1px solid var(--border);border-radius:8px"></div><span class="ds-cap">Site: none. Hairlines only.</span></div>
+      <div class="ds-col" style="gap:8px"><div style="width:180px;height:90px;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow-neesh)"></div><span class="ds-cap">App shadow-neesh (cover at rest)</span></div>
+      <div class="ds-col" style="gap:8px"><div style="width:180px;height:90px;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow-neesh-md)"></div><span class="ds-cap">App shadow-neesh-md (hover)</span></div>
+      <div class="ds-col" style="gap:8px"><div style="width:180px;height:90px;background:#fff;border:1px solid var(--border);border-radius:8px;box-shadow:var(--shadow-neesh-lg)"></div><span class="ds-cap">App shadow-neesh-lg (modal)</span></div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Motion</span>
+    <p class="ds-note">Colour transitions are 160ms ease. Layout nudges (drawer links, door widths, cover zoom) use --ease-nudge cubic-bezier(0.22, 1, 0.36, 1) at 220 to 460ms. The marquee drifts at 54s linear. Everything respects prefers-reduced-motion.</p>
+  </div>
+</div>

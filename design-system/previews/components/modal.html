@@ -1,0 +1,21 @@
+<!-- @dsCard group="Components" name="Modal" subtitle="Header, scrolling body, footer actions; sm / md / lg widths on a 50% ink backdrop" width="1200" height="720" -->
+<div class="ds-page flush">
+  <div class="modal-backdrop" style="min-height:720px;gap:24px;flex-wrap:wrap;align-items:flex-start">
+    <div class="modal">
+      <div class="modal-head"><h2>Confirm shipment</h2><button class="icon-btn" aria-label="Close modal" style="padding:4px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--muted-2)"><path d="M18 6L6 18M6 6l12 12"/></svg></button></div>
+      <div class="modal-body">
+        <p style="margin-bottom:16px">Mark order <span style="font-family:var(--font-mono);font-size:13px">NE-10482</span> as shipped? Cafe Reveille will get a tracking email.</p>
+        <label class="app-label">Tracking number</label>
+        <input class="input-neesh" placeholder="1Z 999 AA1 01 2345 6784">
+        <p class="app-help">Optional. Add it later from the order page.</p>
+      </div>
+      <div class="modal-foot"><button class="app-btn secondary">Cancel</button><button class="app-btn primary">Mark shipped</button></div>
+    </div>
+    <div class="modal sm">
+      <div class="modal-head"><h2>Delete title?</h2></div>
+      <div class="modal-body"><p>Kitchen Table #8 will be removed from the catalog. Open orders are not affected.</p></div>
+      <div class="modal-foot"><button class="app-btn secondary">Keep it</button><button class="app-btn secondary destructive">Delete</button></div>
+    </div>
+  </div>
+  <p class="ds-note" style="padding:24px 32px 32px">12px radius, large soft shadow, 24px padding in each region. Header is Archivo 600 20px with the close button on the right (hidden when preventClose is set). Body scrolls past 60vh. Widths: sm 384, md 448, lg 512.</p>
+</div>

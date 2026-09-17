@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Neesh design tokens.
+   Source: public_neesh/app/globals.css (site v2, Ink/Paper/Accent) and
+   neesh-print-hub/src/index.css + tailwind.config.ts (app semantic set).
+   The two codebases share one palette; the app's HSL triplets resolve to
+   the hex values below. See tokens.json for the Tailwind/shadcn form.
+   ========================================================================== */
+
+:root {
+  /* Core palette */
+  --ink: #000000;
+  --paper: #ffffff;
+  --accent: #7d3bbf;
+  --accent-light: #a87bd6;   /* on black only */
+  --band: #efeef6;           /* cream: app "secondary" / "muted" / "input" */
+  --band-hover: #e4e2f0;
+  --border: #d9d9d9;
+  --border-hover: #b79adb;
+  --border-light: rgba(217, 217, 217, 0.5);
+
+  /* Text ramp */
+  --prose: #2a2c33;
+  --muted: #5c5f6b;
+  --muted-2: #71747f;        /* app "muted-foreground" */
+  --faint: #9b9da6;
+  --faintest: #b9bac3;
+  --upload-border: #c9cad2;
+
+  /* On black */
+  --on-black: rgba(255, 255, 255, 0.86);
+  --on-black-soft: rgba(255, 255, 255, 0.72);
+  --hairline-on-black: rgba(255, 255, 255, 0.2);
+
+  /* App semantic (from the hub's shadcn token set) */
+  --foreground: var(--ink);
+  --background: var(--paper);
+  --primary: var(--ink);
+  --primary-foreground: #ffffff;
+  --secondary: var(--band);
+  --muted-foreground: var(--muted-2);
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --ring: var(--accent);
+
+  /* Status (badge background / text pairs) */
+  --status-pending: #fef3c7;
+  --status-pending-text: #854d0e;
+  --status-success: #d1fae5;
+  --status-success-text: #047857;
+  --status-error: #fee2e2;
+  --status-error-text: #dc2626;
+  --status-neutral: #e5e7eb;
+  --status-neutral-text: #71747f;
+  --status-warning: #f59e0b;
+  --status-warning-text: #92400e;
+  --form-error: #b3261e;
+
+  /* Charts */
+  --chart-green: #10b981;
+  --chart-purple: var(--accent);
+
+  /* Type */
+  --font-display: Archivo, system-ui, sans-serif;
+  --font-body: Manrope, system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  /* Radii: 8px is the system radius; 4px for index covers; pills are 999px */
+  --radius: 8px;
+  --radius-sm: 4px;
+  --radius-lg: 12px;
+  --radius-pill: 999px;
+
+  /* Layout */
+  --gutter: clamp(18px, 3.4vw, 56px);
+  --section-pad: clamp(56px, 7vw, 110px);
+  --wrap-max: 1600px;
+  --breakpoint: 900px;
+
+  /* Motion */
+  --ease-nudge: cubic-bezier(0.22, 1, 0.36, 1);
+  --t-color: 160ms ease;
+
+  /* Elevation. The marketing site uses none; the app has three soft levels. */
+  --shadow-neesh: 0 1px 3px 0 rgb(0 0 0 / 0.05);
+  --shadow-neesh-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+  --shadow-neesh-lg: 0 10px 15px -3px rgb(0 0 0 / 0.05), 0 4px 6px -4px rgb(0 0 0 / 0.05);
+}
+
+/* App dark mode (the hub only; the marketing site is light-only). */
+.dark {
+  --background: #121212;
+  --foreground: #fafafa;
+  --band: #1d1d20;
+  --band-hover: #26262b;
+  --secondary: #242427;
+  --primary: #fafafa;
+  --primary-foreground: #000000;
+  --accent: #9257cc;
+  --muted-foreground: #9c9fab;
+  --border: #303036;
+  --border-light: rgba(48, 48, 54, 0.5);
+  --destructive: #cc3030;
+  --status-pending: #5c4a0a;
+  --status-pending-text: #fbe38a;
+  --status-success: #0f3d2a;
+  --status-success-text: #4ee3a8;
+  --status-error: #521414;
+  --status-error-text: #f29c9c;
+  --status-neutral: #3a3e47;
+  --status-neutral-text: #adb1bd;
+  --chart-green: #14cf8f;
+  --chart-purple: #a066d6;
+  --ring: #9257cc;
+}

@@ -1,0 +1,56 @@
+<!-- @dsCard group="Components" name="Forms" subtitle="Site .field, app FormInput, select, textarea, search, newsletter capture, states" width="1200" -->
+<div class="ds-page">
+  <div class="ds-section">
+    <span class="ds-h">Site fields (.field)</span>
+    <div class="ds-grid c2" style="max-width:860px">
+      <label class="field"><span>Your name <span class="req">*</span></span><input type="text" placeholder="Jamie Okafor"></label>
+      <label class="field"><span>Email <span class="req">*</span></span><input type="email" placeholder="you@yourspace.com"><span class="hint">We only use this to confirm your claim.</span></label>
+      <label class="field"><span>Kind of space</span><select><option>Caf&eacute;</option><option>Hotel</option><option>Shop</option><option>Waiting room</option></select></label>
+      <label class="field"><span>Website</span><input type="url" value="https://neesh.art" style="border-color:var(--accent)"><span class="hint">Focused state: 1px accent border, no ring.</span></label>
+      <label class="field" style="grid-column:1/-1"><span>Anything else?</span><textarea rows="3" placeholder="Tell us about the room."></textarea></label>
+    </div>
+    <div class="ds-col" style="gap:6px;margin-top:16px">
+      <span class="form-note">Got it. First issue lands at the end of the month.</span>
+      <span class="form-error">That didn&rsquo;t go through. Check the address and try again.</span>
+    </div>
+    <p class="ds-note" style="margin-top:12px">14px / 600 label, 15px input at 14px 16px padding, 8px radius, border #D9D9D9. Required marker is accent. Hints are 13px muted-2. Notes are accent, errors #B3261E.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">App fields (FormInput, .input-neesh)</span>
+    <div class="ds-grid c2" style="max-width:860px">
+      <div><label class="app-label">Title name <span class="req">*</span></label><input class="input-neesh" placeholder="e.g. Kitchen Table"></div>
+      <div><label class="app-label">Wholesale price</label><input class="input-neesh" value="$8.00"><p class="app-help">Retailers see this plus a 20% markup.</p></div>
+      <div><label class="app-label">Issue number</label><input class="input-neesh error" value="abc"><p class="app-help error">Enter a whole number.</p></div>
+      <div><label class="app-label">Publisher</label><input class="input-neesh" value="Aedo" disabled><p class="app-help">Set from your profile.</p></div>
+    </div>
+    <p class="ds-note" style="margin-top:12px">Same input geometry as the site. Labels are Archivo 500 14px. Errors use a 2px destructive ring with 1px offset and 12px destructive help text.</p>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Search and choice</span>
+    <div class="ds-row top" style="gap:32px">
+      <div class="dir-search" style="width:440px">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#71747F" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4.5-4.5"/></svg>
+        <input type="search" placeholder="Search 300+ independent magazines" aria-label="Search the index">
+      </div>
+      <div class="ds-col" style="gap:10px;font-size:14px">
+        <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" class="check" checked> Fulfilled by Neesh</label>
+        <label style="display:flex;align-items:center;gap:8px"><input type="checkbox" class="check"> Ships internationally</label>
+        <label style="display:flex;align-items:center;gap:8px"><input type="radio" name="r" class="check" checked> Publisher ships</label>
+        <label style="display:flex;align-items:center;gap:8px"><input type="radio" name="r" class="check"> Neesh ships (beta)</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="ds-section">
+    <span class="ds-h">Newsletter capture</span>
+    <form class="newsletter-form" onsubmit="return false">
+      <div class="newsletter-form-row">
+        <input type="email" placeholder="you@yourspace.com" aria-label="Email address">
+        <button type="submit">Subscribe</button>
+      </div>
+      <span class="form-note">Got it. First issue lands at the end of the month.</span>
+    </form>
+  </div>
+</div>
