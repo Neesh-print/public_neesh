@@ -18,8 +18,29 @@ export function PackPurchaseBeacon() {
     const url = new URL(window.location.href);
     const params = url.searchParams;
     const flag = params.get('success') ?? params.get('purchased');
-    const paid = params.has('session_id') || flag === '1' || flag === 'true';
-    if (!paid) return;
+    // Only count a real Stripe return. A Checkout session id always starts
+    // with cs_; the bare success/purchased flag is trusted only when the
+    // browser actually arrived from Stripe. Without this, anyone opening a
+    // copied ?purchased=1 link (or a crawler that indexed one) logged a
+    // $200 purchase in GA4, which happened on Sept 12 and 13.
+    const sessionId = params.get('session_id') ?? '';
+    const fromStripe = /(^|\.)stripe\.com$/.test(
+      document.referrer ? new URL(document.referrer).hostname : ''
+    );
+    const paid =
+      sessionId.startsWith('cs_') || ((flag === '1' || flag === 'true') && fromStripe);
+    if (!paid) {
+      if (params.has('session_id') || flag) {
+        for (const key of RETURN_PARAMS) params.delete(key);
+        const query = params.toString();
+        window.history.replaceState(
+          window.history.state,
+          '',
+          `${url.pathname}${query ? `?${query}` : ''}${url.hash}`
+        );
+      }
+      return;
+    }
 
     const value = Number(params.get('value'));
     trackPackPurchase(Number.isFinite(value) && value > 0 ? value : PACK_PRICE);
