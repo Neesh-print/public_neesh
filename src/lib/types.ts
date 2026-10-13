@@ -39,6 +39,9 @@ export interface TitleStockist {
   city_slug: string | null;
   source_url: string;
   collected_at: string;
+  // 'title': the shop is known to carry this title. 'publisher': it comes
+  // from a publisher-wide list, so it carries something from the publisher.
+  list_scope: 'title' | 'publisher';
 }
 
 export interface Title {

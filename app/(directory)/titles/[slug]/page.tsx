@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
+  countPublisherTitles,
   getAllVisibleTitleSlugs,
   getTagsWithCounts,
   getTitleBySlug,
@@ -83,7 +84,10 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const [title, allTags] = await Promise.all([getTitleBySlug(slug), getTagsWithCounts()]);
   if (!title) notFound();
-  const stockists = await getTitleStockists(title.id);
+  const [stockists, publisherTitleCount] = await Promise.all([
+    getTitleStockists(title.id),
+    countPublisherTitles(title.publisher_id),
+  ]);
 
   const publishing = new Set(allTags.filter(tagPublishes).map((t) => t.slug));
   const primaryTag = title.tags[0];
@@ -254,7 +258,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
         </div>
       </section>
 
-      <StockistsSection title={title} stockists={stockists} />
+      <StockistsSection title={title} stockists={stockists} publisherTitleCount={publisherTitleCount} />
     </>
   );
 }

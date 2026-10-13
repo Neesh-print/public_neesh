@@ -107,7 +107,7 @@ export async function getTitleStockists(titleId: string): Promise<TitleStockist[
   for (let from = 0; ; from += pageSize) {
     const { data, error } = await client
       .from('v_title_stockists')
-      .select('store_slug, store_name, city, borough, country, city_slug, source_url, collected_at')
+      .select('store_slug, store_name, city, borough, country, city_slug, source_url, collected_at, list_scope')
       .eq('title_id', titleId)
       .order('store_slug')
       .range(from, from + pageSize - 1);
@@ -115,7 +115,27 @@ export async function getTitleStockists(titleId: string): Promise<TitleStockist[
     rows.push(...(data as TitleStockist[]));
     if (data.length < pageSize) break;
   }
-  return rows;
+  // A shop can appear twice (publisher-wide and title-specific links);
+  // keep one row, preferring the title-specific one.
+  const byStore = new Map<string, TitleStockist>();
+  for (const r of rows) {
+    const seen = byStore.get(r.store_slug);
+    if (!seen || (seen.list_scope === 'publisher' && r.list_scope === 'title')) byStore.set(r.store_slug, r);
+  }
+  return [...byStore.values()];
+}
+
+// How many visible titles a publisher has in the Index. A publisher-wide
+// stockist list only needs a caveat when it is shared by more than one.
+export async function countPublisherTitles(publisherId: string): Promise<number> {
+  if (!hasSupabaseEnv) return 0;
+  const { count } = await anonClient()
+    .from('directory_titles')
+    .select('id', { count: 'exact', head: true })
+    .eq('publisher_id', publisherId)
+    .eq('removed', false)
+    .in('status', ['active', 'dormant']);
+  return count ?? 0;
 }
 
 // Subject tags ahead of identity tags, so tags[0] is always the primary niche.
