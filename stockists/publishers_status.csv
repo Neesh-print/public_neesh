@@ -1,0 +1,297 @@
+publisher_id,publisher,status,stockist_page_url,list_note,stores_listed
+25ba0ebf-a8a0-41a5-91be-dbd85ca24f67,032c,no_list,https://www.032c.com/pages/stockists,stockists page exists but content empty/JS-rendered; search found no list,0
+7e81c90a-1b1f-4be8-9ad7-f116d374c9e3,1 Granary,no_list,,"no stockist page on site; search found only dated press mention (Dazed) of London stockists, no official list",0
+8e8402d8-19ed-440d-bc91-832bf489e0dd,12F,found,https://12f.eu/,stockists listed on homepage under Issue #00 (sold out),27
+ede8338f-a1fd-4c7f-9916-997f8cfba6e1,20 Seconds,found,https://www.20secondsmag.com/stockists,distribution contacts excluded,45
+6eb797f4-40ba-4b24-8bf8-e50dbd03531f,212,no_list,,pilot: no stockist page; sells only through own shop,0
+43753a1a-80bb-4c4c-84b1-1ef81905631e,A Passion Thing,found,https://apassionthingmagazine.com/stockists/,"Asia: only 'selected stores in Manila, Tokyo, Hong Kong' unnamed; Monocle shop countries/cities per page",8
+368834d1-104d-49da-bd5e-0e87a94387f8,A Rabbit's Foot,found,https://a-rabbitsfoot.com/stockists/,"Cities for UK taken from page's city-grouped layout; Europe/RoW stores not labelled by city on page, so some cities inferred or blank. Excludes national chains (Waterstones, WHSmith, Barnes & Noble, Indigo etc.) and hotels",205
+254f1963-2f89-4b72-81de-a4b2c68c2a19,A Shade Colder,found,https://www.ashadecolder.com/stockists,"list includes museums, galleries and some libraries; libraries (national/academy/Kiasma/PUBLICS/Schloss Solitude/CAC Reading Room/Biblioteek) omitted; online stockists omitted",21
+3811eeed-d3ed-4316-8c9f-90b58a77f669,Above the Fold,found,https://abovethefoldpress.com/pages/stockists,page lists states only; cities inferred from store names; Antenne Books (distributor) excluded,10
+00379c35-e79e-4907-bb46-2b0100d2cad8,Accattone,found,https://accattone.be/stockists/,bookshops only; public/university libraries and distributors omitted; also has map,48
+019065d4-0cc9-49a6-b2d6-fd2d36c7249d,Acne Paper,no_list,,only Acne Studios store finder; no stockist list,0
+0c6dfe3b-c0a8-4c31-9e4b-f156882e6ffa,Advanture,found,https://advanturemagazine.com/stockists/,"stores without a city omitted (national chains, Picnic Sagres, Multi Arts, Sunny Site Coffee, World Magazine Co, etc.)",34
+baa2048d-8be8-41e7-b37f-28c1b997d742,Aedo Magazine,unreachable,,domain is a parked placeholder; search found no list,0
+683b3b23-d2ed-43ea-863d-f9ee978e4dd0,Aesthetica,no_list,,online shop only; shop FAQ redirect had no list,0
+860df59a-9436-4c78-b69f-3b3600477c22,Afterall,no_list,,distribution via University of Chicago Press; no store list,0
+747dd169-ff60-4922-9ad6-e02581eb9221,Al Hayya,unreachable,,domain does not resolve; search found no list,0
+4f609260-d73c-4891-9a50-103e343f3132,ALL–IN Magazine,no_list,https://augustbarron.com/pages/stockists,"Stockists page loads but its embedded JSON list is empty (resellers are for the fashion brand, not the magazine)",0
+e0e13942-127d-445a-bc3b-2760a434f0f2,Alula,no_list,,no stockist page; read.alulamag.com is editorial site,0
+86151758-4623-45a6-9160-6cc8bd8b140f,American Chordata,no_list,,no stockist page found,0
+ec09cc2e-1fbe-4d6e-a8cb-e52357b02a8d,Anchoa,found,https://www.anchoamagazine.com/distribuidores-stockists,"every listing marked 'agotado' on page; News & Coffee (Spanish cities, no address) and Import News (online) omitted",52
+5f3e16e7-97da-4d76-a475-e16e9b907668,Anima Magazine,no_list,,only links to newsstand.co.uk online shop,0
+bdd8f7ed-47c8-4f43-8361-faaa7faef27e,Anorak,found,https://anorakmagazine.com/pages/stockists,,39
+949572bd-9ee2-4a69-be00-b9be3b5322a4,AnOther,no_list,,only online purchase link; search found no list,0
+270e41ce-2068-4587-8f5a-99a8d46b7393,Anyway,no_list,,only own webshop; search found no list,0
+0b4a64ea-9593-416c-8662-04068394b185,Apartamento,no_list,,own shop and wholesale email only; search found no list,0
+76e76757-0fcd-4a5b-b699-ed5d3e4df187,ARK Journal,no_list,,own shop only; search found no list,0
+5fe4fc27-8f94-4171-9dee-5e4bcbd380a3,Art Bar,no_list,,"names chains only (Barnes & Noble, Indigo, Waterstones) and an unnamed network of independents; no list",0
+25eec9a7-1bee-402f-8553-fd650f75f556,Athleta,found,https://athletamag.com/en/stockists/,"list refers to issue No. 11; curated selection, cities not given (only some filled in); online retailers skipped",40
+1e80a988-df2f-4e98-991e-0fdaee224617,Atmos,no_list,,sells via own webshop; search found no list,0
+30af54de-ba5a-4100-9678-e2b0cd88f847,Behind the Blinds,found,https://www.behindtheblinds.be/-stockists-,duplicate Indigo 8705 Yonge Street entry (North York/Richmond Hill) listed once,199
+12339e54-9d6e-45f6-9d0c-835451154a6c,Beneficial Shock!,found,https://beneficialshock.com/,"only one 'Featured Stockist' on homepage, no full list",1
+01c3ffb5-d3a8-4282-b9e3-ed7cdec8c5b3,BL8D,unreachable,,site returned 403; search found nothing,0
+ca127708-6e44-499f-b54e-847fd0dc3e83,BOMB,no_list,,sells via own store only,0
+b1379549-ecac-4f54-be5f-4ee0a7b4c29b,BOOT Mag,found,https://www.bootmag.world/info,cities not stated on page; city blank except Amsterdam; Public Knowledge Books also distributor,17
+a94243bd-8a2d-48a5-be7c-427d273bf6aa,Boston Review,unreachable,,site returned 403 to fetch; search found no stockist list,0
+3d0dbcdd-682d-49e9-9607-fbc71b797163,Boy.Brother.Friend,no_list,,sells via own webshop; search found only online retailers,0
+4836c534-a820-4eab-9b3c-0e40045ed5ba,Boys! Boys! Boys!,no_list,,given domain dead; boysboysboys.org has no stockist list; search found online retailers only,0
+5d7cbe9e-fc8f-4c78-9ce6-a898defada16,Brick,found,https://brickmag.com/stockists/,"list includes Canada, US and some international; mostly Indigo/Chapters chain stores",141
+3a0a53d8-d8ef-4e0c-9fc0-ccaf26e627b1,Broccoli Mag,found,https://broccolimag.com/pages/stockists,"From the JSON feed behind the stockists page (wholesale retailer sheet, mostly Faire accounts). Last orders dated 2025-2026, 101 rows undated; online-only entries excluded; 16 entries have no city.",769
+558ddbdd-735b-4de5-97f2-c45a32f5905b,Buckman Journal,no_list,,sells only via own shop,0
+b4f151f8-0330-422b-af81-adbc686e24ce,Buffalo Zine,no_list,,sells via own webshop; search found only third-party retailers,0
+28bcd5f5-ef17-4954-a66b-254dd7634338,BUTT,no_list,,no stockist list on site or in search,0
+29519bbe-9e80-4ebf-aa40-e33677a15505,Cabana,no_list,,"only own Cabana Store in Milan (https://cabanamagazine.com/pages/cabana-store-location); trade program, no stockist list",0
+09756a57-35ed-4755-9128-c7a098ea4c9a,Cake Zine,found,https://cakezine.com/pages/stockists,"Square Books (Oxford, MS) city inferred; Singapore Basheer city inferred",189
+03f7c5b1-418f-4789-8c6e-3ab6e7a3a89c,Callaloo,no_list,,journal published by Johns Hopkins University Press; subscriptions/library access only,0
+3316730c-9916-42a9-a39c-b607ec789efb,Cherry Bombe,found,https://cherrybombe.com/pages/retailers,41 retailers; no addresses; Bold Fork Books city assumed Washington DC,42
+c1e5f1cd-b68c-42c9-b653-af0036c34de7,Chickpea Magazine,no_list,,stockists page lists no shops; only invites recommendations and retailer enquiries,0
+56c612aa-d05b-4551-9908-4e0d0507ef0c,Chimurenga,no_list,,sells only via own webshop,0
+34d22fe6-c98c-4293-8356-727067a574b6,Clast Magazine,no_list,,no stockists page; search found nothing,0
+efb99ae7-b77d-4d4e-a941-738a44ca2aad,Combo,no_list,,links to distributor KD Presse only,0
+4a070aa1-3fd5-4660-a450-3edc1593400d,Cornucopia,found,https://www.cornucopia.net/stockists,"also lists Remzi and D&R as main Turkish outlets (chains, no branches); includes some museum shops",23
+d64b5c1b-52db-4309-9d44-d98b544bad0c,CR Fashion Book,unreachable,,site blocked to fetch; search found no stockist list,0
+9af6c87d-2af7-4ad1-9eb1-caf42315c0e6,Crack Magazine,no_list,,sells via own webshop; no stockist page found,0
+735b4d29-35ae-4e12-9304-7eb3e50ca1bc,CURA.,no_list,,online shop only; no stockist page found,0
+98b478f0-a447-430e-9436-28daaca227f2,DAMN°,no_list,,homepage content not extractable (JS); no stockist page found,0
+e84373ea-6b16-48cb-8afa-6790eed53c87,Debris,found,https://www.debrismag.com/stockist-1,page region headings partly mismatched; countries inferred from addresses; online-only Fiend excluded,26
+a1856837-7cd9-49b6-aba8-123a0810fc43,Deem Journal,no_list,,sells only via own webshop,0
+5e25a021-23d1-4dbf-b24d-444bf5de6704,Delayed Gratification,found,https://www.slow-journalism.com/stockists,independent shops plus WHSmith branches (UK); a few entries lack exact city,245
+03fb5401-fb3f-45ab-be4d-0a79d5d7af5e,Design Anthology,no_list,https://design-anthology.com/stockists,"distributor contacts by region only, no stores",0
+45ccdb99-5692-4ba8-a804-c09f468fcbb9,Desired Landscapes,no_list,,real domain desired-landscapes.com; sells via own webshop; own bookshop Desired Pocket in Athens by appointment; given domain desiredlandscapes.com is dead,0
+cd737c1c-dcf6-410d-9091-df58b3ebcf5a,DG Quarterly,found,https://www.slow-journalism.com/stockists,Delayed Gratification (dgquarterly.com redirects to slow-journalism.com); includes WHSmith UK branches,249
+a710e2c2-f01d-432f-baa5-09719f4fb657,Dhoop,found,https://dhoopmag.com/#stockist,"'View All Stockist' links to the homepage #stockist section, which contains the full 12-store list (homepage preview shows only 4); no separate page exists",12
+7533aea4-ecdc-4374-a93f-599f52e92ac6,Different Leaf,found,https://differentleaf.com/articles/stockists,"Barnes & Noble nationwide chain also listed (no city, omitted)",24
+ccb71ddb-31e0-4791-bed1-cefe1a5f5a7f,Dirty Magazine,found,https://shop.dirtymagazine.com/Stockist,MagCulture listed as European distributor (omitted); Antenne Books has no location (omitted); some multi-location shops listed once,41
+8c49b2a5-4a55-496f-8a60-fa3da08d13e0,Disco Pogo,no_list,,sells via online shops and unnamed independent record shops; no named stockist list,0
+2803f812-d341-468b-aea4-efbe28fae3dd,Disegno,no_list,,sells via own webshop; digital via Exact Editions,0
+3a33f3d8-3f1f-4404-8502-e4c3bceda215,Dissent,unreachable,,site returned 403; search found no stockist list,0
+87dd7f6b-713a-44a9-954e-22314ea2fb5d,Dogma,found,https://dogmabrighton.co.uk/,homepage section; 2 shops (5 Brighton/Hove libraries omitted),2
+9bc2aeea-f477-482d-b5d2-2ed9910f79c8,Drift,found,https://www.driftmag.com/stockists,CBL Distribution (Birmingham) omitted as distributor; Recuerdos Shop and Cookbooks.hu have no city; multi-location shops listed once,80
+a2e790f2-759a-4b49-9782-343dcc86cb90,Duel Magazine,no_list,,site has a STOCKLIST nav link but page could not be fetched (404 on guessed paths); search found nothing,0
+9eb98a67-6a25-4916-a885-8c7ae7a5a3f4,Eaten,found,https://eatenmagazine.com/pages/stockists,,196
+37db0d3e-6b4c-4d3a-996a-04deeeae4c0d,Elastic,found,https://www.elasticmag.com/#stockists,,28
+8ff4ac26-f17f-4787-b9bc-aae7783941c9,Elska,found,https://elskamagazine.com/stockists,non-exhaustive list per site,68
+9a0affa9-af9a-4d0b-bfc3-40dc1ae12d6b,Emergence Magazine,no_list,,sells via own webshop (store.emergencemagazine.org),0
+7321fd71-70bc-4648-a291-c31f9df48cab,Emergent,no_list,,sells via own store; search found no official stockist list,0
+da8c46d6-31bb-4607-861d-64f2b0c07fb0,Epoch Review,found,https://epoch-review.com/pages/stockists,"chains (Barnes & Noble, Indigo, P&B, Schmitt & Hahn) expanded per listed city",258
+9899873a-ebb2-4db9-a063-e1d0a2fe42ed,Errant Journal,no_list,,homepage showed only title; no stockist page found; search found nothing official,0
+5737f2fe-549a-4285-9457-ad5a3ae0df0a,Esse arts + opinions,found,https://esse.ca/points-de-vente/,"a few entries (Indigo/Chapters, Maison de la Presse Internationale, Casa, Iconic, McNally Jackson) had no city and were omitted",77
+388bd7f7-69a9-4585-8613-a98946dc08a2,Esses,no_list,,Shopify store only; search found no stockist list,0
+50f8e70d-960d-4e74-ab14-a66b801ad512,Extra Extra,no_list,,"sells via own webshop; /visit page lists florists/bars, not stockists",0
+d8538508-9c21-4713-9f37-cf9f9c3280ad,Family Style,found,https://www.family.style/stockists,no date on list; some entries are cafes/museums,78
+9125b0dc-d1a6-45a3-9e7a-956913d1aa89,Famous for my Dinner Parties,found,https://www.famousformydinnerparties.com/stockists,grouped by country; many cities not stated on page (left blank); may include online-only shops,109
+c52431c9-76db-46fe-a406-f6f0d5d8efe7,Fantastic Man,no_list,,only online shop; /stockists 404; search found no list,0
+1b51491a-6631-4556-82a6-a2c6fe1f51da,FARE,found,https://faremag.com/pages/stockists,,66
+1785aba4-c65c-4bfd-a55e-7a0fd07b20fe,Fay,found,https://www.editions-folalier.com/stockists/,also distributor Ra & Olly for more (excluded),32
+549ecedc-b2ee-4350-9ef4-78df31a25cb2,Feels Zine,found,https://feelszine.com/pages/stockists,Canada-heavy; Tokyo/Melbourne entries may be online,19
+69a182b2-8f4f-4466-989e-1be4ad2a5fed,Field Mag,no_list,,sells via own webshop; search found no stockists,0
+99566377-c5a7-4ed7-a07f-197c53e6381f,Finger Food,no_list,,site pages 404 (/stockists); search found only FORMA product page (sold out),0
+21faf6ee-8c24-432b-92f9-5886c354cad9,Flaneur,found,https://www.flaneur-magazine.com/stockists,some entries link only to social media,98
+fa149b54-f395-474b-a3e8-cc46f8b48fbf,Foam Magazine,no_list,https://www.foam.org/magazine/stockists,Stockists page exists but Vercel security checkpoint returns 429 to curl and WebFetch; Wayback unreachable,0
+6521d52a-2591-4e8e-a929-b9ed6b924ae7,Footnote,no_list,,no stockist page; sold via own webshop; magCulture noted by search only,0
+36a31e87-f2f6-4380-80e0-d8d505c560cd,Fotograf,no_list,,site redirects to fotograf.zone; no stockist list; own e-shop only,0
+edebab9e-a536-4830-9818-d0bea0b1ecdd,Frankie,no_list,https://www.frankie.com.au/find,"map widget (Storemapper), could not extract",0
+8ead1a89-1552-4c63-a775-52042d74c07e,FUKT,found,https://www.fuktmagazine.com/stockists,,150
+55d65c37-ea29-45cc-a5a4-c846941d938f,GAZE,found,https://gaze-magazine.com/points-de-vente,,196
+7e3574b5-da94-444c-ac8f-153b03a3f405,Geezer,no_list,,"subscription only (print, via own site); no stockist list",0
+a78856df-687e-487f-8d6f-a049a9f385be,Get Familiar,no_list,,sells via own webshop; no stockist list,0
+9732f921-c0a2-4a83-8e1a-412f577b77ba,Good Sport,no_list,,sells via own webshop; no stockist list,0
+3b469c87-d21c-4957-8e1c-b81fca47cce8,Gossamer,found,https://gossamer.co/pages/stockists,also at shop.gossamer.co/pages/stockists,177
+fb6f237b-0a69-4ab2-974d-b764694f441e,GRASS Magazine,found,https://www.grassmagazine.co.uk/stockists/,,10
+5a1c7220-34a7-409d-a368-0b7a34af587b,Guzzle,no_list,,sells only via own webshop/Substack,0
+d47cad16-c7f6-4209-a041-1876b6d464b6,HAMAM,no_list,,sells direct online only,0
+4c15f229-6a6c-46cd-9296-bde6c8067e0e,Harper's Magazine,no_list,https://harpers.org/find-a-newsstand,newsstand locator at harpers.org/find-a-newsstand needs a location search; site returned HTTP 402 to fetch; could not extract,0
+6bcca9e4-ca8e-4b26-858a-0932d55ed1dd,HEAT,no_list,,sells via publisher shop and subscription only,0
+a54f9f71-855f-41ff-b90d-b02931e354b3,Heavy Traffic,no_list,,sells only via own webshop,0
+e9d76bba-8922-4059-bdb9-9a2b2005da32,HERO,no_list,,no stockist page; buy link external,0
+c0e85357-2d77-4988-a549-cdb248d04d52,Hideous,no_list,,sold via label shop/Bandcamp only,0
+efa70033-8f27-4d4a-a529-eb31e90b17e9,Holiday,no_list,,online shop only; contact for stockists,0
+34ca7975-edb4-4b84-bd79-8a49427840be,Hometown Journal,no_list,,sells via own webshop only,0
+33e61a19-4530-4a75-9a18-607fbf74a477,Hotshoe,no_list,,no stockist page; online shop only,0
+8dc0f2fc-4b36-4ae0-b860-e877548d93d8,Hunger,found,https://hungermag.com/stockists-2,,84
+28bb6fc7-bb69-4df8-81ab-b1d3e4ffc4c6,i-D,no_list,,only shop.i-d.co online shop,0
+330c3609-f701-4d4d-a2fb-4caa33165034,Icarus Complex,found,https://icaruscomplexmagazine.com/stockists/,cities not listed; possibly first page only; some may be online,23
+2c9e8338-1f06-4b9d-a4b6-a45810e211f8,Jacobin,no_list,,own webshop only,0
+102338d2-a680-4a29-a50e-b32cfa30e3cc,JRNY Travel Magazine,no_list,,issuu page has no site; search found no stockists; subscription/Readly,0
+2e48f8b5-1707-4cd1-85b7-904ca76f7752,Justsmile,no_list,,no stockist page on site,0
+d3c243e1-138c-46cf-bef5-b1caec129313,Kapsel,unreachable,,site returned 503; search found nothing,0
+5ba12914-0364-44ba-8ebb-445f5ab701ca,Kinfolk,no_list,,no stockist page; webshop only,0
+f659e7e8-2674-4ede-9941-3724ca01354b,Kitchen Table,found,https://www.kitchentablemagazine.com/findus,"3 entries without store names omitted (Swansea MA, Livingston MT, Miami FL)",62
+cb27f944-bfc7-4c35-ac5b-ae1e56b23cc8,L'apéro Journal,no_list,,awwmagazine.com is a general site; no stockists,0
+e262688b-637b-4fe1-8b60-ef12836e7375,La Nueva Carne,no_list,,sells via own webshop; homepage shows no stockist list; search found none,0
+12acf810-3eda-4ca1-b703-f219bbcc2930,Left Cultures,no_list,,homepage links only to online shop; search found no official list,0
+9dbb5344-3d8b-4285-bd95-c424c5487d7a,Like the Wind,found,https://www.likethewindmagazine.com/stockists,LtW Retailers page; undated; some LA newsstands without city; Japan/Spain/Malaysia distributor entries skipped,87
+22fa783e-51be-4250-bf05-9022ea669928,Linguaphile,found,https://kuinabooks.com/stockists,site redirects to Kuina Books; stockist page there does not name Linguaphile explicitly,6
+1b99368e-8d7b-4857-b40b-3af060416cd2,Linseed,found,https://www.linseedjournal.com/contact,Contact & Stockists page; some entries without city,65
+9e29afce-fd99-452f-b714-b6b4e5478a4e,Listen Journal,no_list,,homepage shows only online store; search found none,0
+2adab3ea-4f10-451e-b2fd-16c29c2164cd,Lodestars Anthology,found,https://lodestarsanthology.co.uk/stockists-uk-and-international,undated (c) 2025; online-only shops excluded,92
+ed21a5c2-3c5b-4bdf-aa3d-cd1ec8838ab5,Lodown,no_list,,magazine ended 2016; homepage links only to shop; search found no list,0
+e9c34527-54ae-4d42-95c2-a1f58bf44313,London Review of Books,no_list,,no stockist list on site or via search; subscription/online bookshop only,0
+e9d3ca27-af8c-46d1-8fb0-b6b1acdeede4,Luncheon,found,https://www.luncheonmagazine.com/pages/stockists,"worldwide list; online-only shops and distributors (IPS Diffusion, BPV, PVG, PVN, Les Editions du Kiosque) excluded; some German entries are press wholesale/kiosk chains (Valora, Schmitt); US Barnes & Noble has no city so omitted",361
+97e1ffb0-6125-47e1-88c7-c87754cb192e,LURU,no_list,,sells via own webshop; no stockist page,0
+09146cae-fb10-4a7d-8390-6f72e68135f3,L’Étiquette,unreachable,,letiquette.com could not be fetched; search found no stockist list,0
+0d6b420d-87ea-45f6-b8b0-a94bda0562fe,MacGuffin,found,https://www.macguffinmagazine.com/macguffin-selected-stockists,"some entries lack a city (Art Book In China, Dorbeetle Studio, one Local de Prensa); Spanish numbered entries are retailer accounts",168
+025ad2c9-d28b-49f2-adad-85d49798d6ca,Magazine B,no_list,,stockists link exists but page shows no list (possibly JS-rendered),0
+55548c8b-dce9-4ade-96a0-6d229e9d07d1,Majin Magazine,no_list,,no stockist page found; search found only a magCulture product page,0
+0bfe7e6f-63b4-4e02-83c0-9ae7b780f507,MANY OF THEM,unreachable,,site returned 403/503,0
+f605e566-81c5-4205-8911-66b023b4bac4,Meantime,found,https://meantime.sg/stockists,Frab's Magazines (Italy) excluded as online-only; countries inferred from city,13
+4e5ad94a-814b-4951-bb44-fa419348135f,Memwa,unreachable,,site returned 503; search found nothing,0
+53235046-6154-414d-9cb6-8ce42ea49f66,MERDE,no_list,https://www.merdemagazine.com/stockists,stockists page exists but worldwide stockists widget returned no results,0
+0ca510d8-4bbc-46b0-af34-12afe90a5ab5,Mince,found,https://www.mincemag.com/stockists,Inc Productions (online only) excluded; Australian suburbs mapped to Melbourne/Sydney,29
+e635f4dc-816e-4b63-84d5-343e6380822e,Monocle,found,https://monocle.com/monocle-shops-and-cafes/,own Monocle shops only (no third-party stockist list),7
+61a6c0d3-f520-408b-8f84-84d2ede865a0,Mother Tongue,found,https://mothertonguemagazine.com/stockists,,79
+9666c9aa-5886-48eb-b633-f34729dae03f,Mountain Gazette,no_list,,sells only via own webshop,0
+20cc5978-498d-4829-b27e-edd151098aa0,Mousse,no_list,,no stockist page found on site (/stockists 404) or via search,0
+be254a4c-0fa2-4065-8f6c-ab45d76432ca,Mundial,no_list,,sells via own webshop; no stockist page found,0
+377c98cd-cdd4-4729-842f-9fdbdaf1999e,Muse Magazine,found,https://musemagazine.it/stockists/,Italian regional newsstand list and hotels omitted (regions only); some cities not stated,85
+e4fa75bb-95c5-46b2-8c68-a33c9de2a564,n+1,no_list,,homepage fetch returned empty; /stockists not found; search found nothing,0
+2e42365d-7a46-4433-a793-0b232178465a,Neue Narrative,no_list,,no longer sold at newsstands; sold via own shop/subscription,0
+ef533961-53de-4040-bd86-bccb83090f32,Never Too Small,found,https://nevertoosmall.com/nts-mag-stockists,5 entries with no street address omitted,82
+a2947713-b323-4c2f-accf-479c46d8d4a9,New Mountain Magazine,no_list,,no stockist page on site; sold online via retailers,0
+ec74fc69-d182-4282-b1df-dd6dd9708d66,New Philosopher,no_list,,wholesale page only; no store list found,0
+0bab59fd-1260-4dbd-ac27-114e058e839d,New York Review of Architecture,no_list,,,0
+98bf5879-e18a-464b-ab60-102d697d594a,New York Review of Finance,no_list,,no stockist list found via site or search,0
+0a1b78df-3dff-4c77-84fe-de475bf231e6,Noble Rot,found,https://noblerot.co.uk/shop/stockists,215 listed on page; online-only entries excluded; a few later rows may be missing,209
+d41b27b0-e4be-49af-ba94-8c6fade59723,Nomad Magazine,found,https://www.the-nomad-magazine.com/stockists/,no addresses; some unnamed kiosk/SMGC locations omitted,192
+2f0ad950-5e49-423a-8743-211e152f678c,Nomas,found,https://www.nomasmagazine.com/where-to-find/,unnamed outlets and generic city kiosks omitted,93
+add7c143-0e7f-46e5-9a0d-f5aefaa2ce6a,Normal Magazine,no_list,,sells via own webshop,0
+4236dd56-3e03-4090-83b3-c9924328386e,Nuda,no_list,,no stockist list on site or in search,0
+16ba19e6-f54a-425a-978c-e80ad7dbcdb0,Occulto,no_list,,no stockist list on site or in search,0
+2980e760-e72e-460f-8dcc-641fcc55c4b9,Off Licence,no_list,,no stockist list on site or in search,0
+bf473bc6-3431-48c1-91db-8664553be66f,OFFAL,no_list,,sells via own webshop; search found no stockist list,0
+92fe723e-e4e5-4b0a-ac8e-a728a33bc55c,On The Rag,found,https://ontherag.vip/,Antenne Books listed without city (UK/Europe section); city unknown,8
+dbb08f94-706d-41ed-b95f-29a3eafdd11b,Open Spaces,found,https://openspacesmag.com/pages/stockist,NYC boroughs inferred from neighbourhoods,23
+fbfc72bb-65c8-4b3d-a7b8-ec13d0dca875,OPEN Tennis Magazine,no_list,,sells only via own webshop,0
+380eed1c-9069-472b-b81e-291d6692b4ba,Openhouse,found,https://openhouse-magazine.com/stockist/,online-only entries skipped; some Canadian/US entries only gave province/state so city blank,188
+b50bab82-80df-4ffd-b07e-bc9479e49106,ORA Magazine,no_list,,sells only via own webshop,0
+4e3ba157-1f95-4b7c-bf62-4bbceace5ab9,Orbital Studies,no_list,,sells only via own webshop,0
+0eae9b0c-5cd4-4783-bc67-a1beca5ecac8,Ori Magazine,no_list,,sells only via own webshop,0
+faf4e8c7-259b-4a7e-9239-accc15de16c9,OVER Journal,no_list,,Find page had no stockists; shop sold out,0
+1f2efcd1-e37c-4eab-bb2f-e06b129d854a,Overseas Magazine,no_list,,sells only via own webshop,0
+0ac31acf-6da6-4a5d-a47d-1d29884718e4,Paperboy,no_list,,"homepage/about only point to online options (Antenne Books, MagCulture); search found no list",0
+92181bf3-b16a-4613-8533-1911da8b2871,Perfect,no_list,,only sold-out online shop; search found none,0
+f0bc0389-58e8-411b-8092-f4b40a421681,perhaps,no_list,,sells via own webshop; search found none,0
+a2c6d7ec-4657-4468-899a-597579c9906e,Period Zine,no_list,,own webshop only; search found none,0
+40f06a38-0682-43e3-91fb-837ced03317b,Petit Mort,no_list,,own webshop only; search found none,0
+5c30f2a8-5784-4348-ad4f-4ea49ec67cad,photoED Magazine,found,https://www.photoed.ca/newsstands,"Canada-heavy list; chain branches and city of Disko Coffee approximated; distributors (Boutique Mags, Newsstand UK) excluded",101
+775c0157-8cbe-453a-9178-bc6a5b45484a,Picnic,no_list,,own shop only; search found none,0
+b6ec4bc3-08cd-4f12-9506-3434adc44632,PIN–UP,no_list,,own Shopify shop only; search found none,0
+6b34152f-bcbd-4e1c-8956-66cce2aabf9e,Piscine,found,https://piscinemag.com/,homepage lists 3 stockists; Stack Magazines (London) omitted as subscription service; cities inferred,2
+8c97834e-8cb0-4bc8-96ee-06c8947f0551,Pit,no_list,,own shop only; search found none,0
+260a1e6f-69a4-4c8b-aff7-e1f5a6dbc702,Pitch Stories Of Modern Sport,found,https://www.pitch-mag.co.uk/stockists,Omitted online-only stockists and a 'Magazine Street Event' entry; SGEL has no city,32
+f83b92b0-87a1-40f1-be56-2339bc7d1021,Plates,found,https://platesmagazine.com/stockist/,Omitted Wormhole (Singapore) and Bundusan Books (online/pop-up),39
+3430ae33-d701-4d36-a086-44771625c390,Pleasant Place,no_list,,sells only via own webshop,0
+1505024c-3c21-435d-be15-86e857f608da,Popeye,no_list,,no stockist list found; own online store only,0
+bb3590ec-7703-4b92-999d-994fe8244282,Portland Tennis Courterly,no_list,,sells only via own webshop,0
+6c1c8de5-6be7-411c-9545-35baa218d59e,Positive News,no_list,,no stockist page found; search found only WHSmith mention (2018),0
+7e8a5478-1d2a-4daa-97f2-d5264879c8f0,Pressing Matters,no_list,,buy-mag page is webshop only; wholesale page not checked,0
+c5317d3b-1c82-4f49-8de0-5227c7f89de7,Proper,no_list,,webshop only; no stockist list found,0
+102e6306-2288-4aed-8a50-a476483f3c41,Provecho,found,https://www.readprovecho.com/stockists,US only,16
+5bb75219-6b85-4ab8-8e44-f441144a3a4c,Purple,no_list,,online shop only,0
+82d9621d-1f70-4838-b83f-1df527bc5afc,PUSS PUSS,no_list,,homepage fetch returned empty; search found no stockist list,0
+6e8a716d-e026-476c-9d27-edc13c09cf92,Quilo Journal,no_list,,api.cargo.site endpoint given; quilojournal.com domain not resolvable; search found only online retailer (Tenderbooks),0
+ffe9ae70-14ad-47b4-a00d-b408bb34a807,Racquet Mag,found,https://racquetmag.com/stockists,,60
+52a29c8d-e969-46f0-9084-61fd2f5988bd,Record Magazine,found,https://record-magazine.com/stockists/,"city-level list only, no addresses; online-only Frab's excluded",243
+fbc4c35c-8c29-4d91-ad77-04fd570c77f2,Red Pepper,found,https://www.redpepper.org.uk/about/shops-that-stock-red-pepper-magazine/,"city/area only, no addresses",15
+de4fdfa1-bfd9-4c31-b93e-d2d4b6b447ef,Revel,no_list,,"sold via independent booksellers, online and publisher shop; no list",0
+4ec451dd-872c-4892-be79-dc206d306dbc,Revue Faire,no_list,,"revue-faire.eu redirects to e-m-p-i-r-e.eu; distributors only (Les presses du reel, Twelvebooks, Idea Books)",0
+1dd708ba-0485-42a3-8769-1c5f738dd9c1,Roads & Kingdoms,found,https://roadsandkingdoms.com/stockist/,"Excludes distributors (Ra & Olly, Small Changes) and Barnes & Noble generic mention; La Brinca city truncated on page; Photo Plus UK has no city",43
+dcac5420-878c-415b-8efe-ba244ab1cc20,Rouleur,no_list,https://www.rouleur.cc/,Site blocked (429/403) to curl and WebFetch; search found no current public stockist list (wholesale enquiries by email only),0
+ff4644e1-cd07-46d7-a831-d56b80f100e1,Safar,no_list,,sells via own webshop; /pages/stockists 404,0
+fcc62bee-4ffd-43a1-a82b-c11625c07149,Sali e Tabacchi Journal,no_list,,sells via own Big Cartel webshop; search found only online retailers,0
+38eaa8b4-8cf2-44c7-bf6d-9a4021cfc8e4,Samewave Radio,no_list,,homepage showed only title; search found nothing,0
+0e5fc754-167b-4213-af56-440769be7a76,SAND Journal,no_list,,no stockist list on site or in search,0
+789b66ff-f33c-47cb-9121-e31cf92f5293,Scary Boots,found,https://www.scaryboots.com/,stockists listed on homepage,6
+559e295d-710f-4e6d-a115-007120c600df,Science Notes,no_list,,online kiosk only; part of homepage unread,0
+ba749f17-c89e-4e21-b8a3-b1eb7ae7491a,Season Zine,no_list,,sells via own webshop,0
+08954fca-b6d1-4c96-9f59-17fd38200ddc,See All This,found,https://seeallthis.com/verkooppunten,Dutch and worldwide lists; Netherlands list per page; worldwide cities only,73
+92ecf5f4-308b-4e4a-b8ae-c36cf27dddf9,Seen,found,https://blackstarprojects.org/seen/stockists,country inferred from city; institutional collections excluded,26
+297bb230-25fa-40d8-a5a2-3c5ce7db4fe9,Self Service,found,https://selfservicemagazine.com/the-stockists,country assumed France; 36 entries,36
+cb09a68c-c590-42bc-98de-69b2e1954fd0,Selvedge,found,https://www.selvedge.org/collections/stockist,76 stockists over 2 pages; online-only shops excluded; some cities inferred/blank where only region given,70
+e06ace0a-7ea4-423b-bda7-4c860a885215,Senet,found,https://senetmagazine.com/pages/stockists,also sold in select Waterstones/TG Jones branches (no addresses),41
+ff4ab2e2-bf99-4f8f-bfcd-e03a669b7c04,Serviette,found,https://serviettemag.com/pages/stockists,,212
+e70b2894-fcae-4685-a8bb-4465af7b86e0,Shō Poetry Journal,unreachable,,domain shows Cloudflare Registrar placeholder; search found no stockist list,0
+ef30a157-b46d-4855-be62-2cd40bc9088c,SICK,found,https://sickmagazine.org/stockists,"sickmagazine.org reachable with browser UA; list as of 9/2/26. Excluded online-only shops (Fiend, Magazine Isn't Dead), distributor Central Books, and reading-only libraries. Some stores listed together under one city; city assigned per heading. Bold Magazines/Iconic Magazines placement taken from list grouping.",58
+597496cc-083d-4ff9-8ef0-0816aba558a1,Sidetracked,unreachable,,"retry failed: sidetracked.com (all paths incl. /stockists, /shop, /sitemap.xml) returns 403 Cloudflare 'Just a moment' challenge with browser UA; Wayback has a 2025-06-14 snapshot of /stockists/ but archive.org page content is not reachable from this environment (connection reset / 403)",0
+7bc24866-8b40-43eb-866e-214d8ca6e1c9,Simulacrum,unreachable,,simulacrummagazine.nl DNS dead; simulacrum.nl 503; search found no list,0
+a1453217-6685-4de5-8cd4-cad790dc114a,Sindroms,found,https://www.sindroms.com/stockists-1,"""Selected stockists""; names grouped by country, cities mostly not shown",121
+830fe3e1-8e19-4ec7-bc1c-8e966f6f8462,Skin Deep,no_list,,"site reachable, no stockist page found; search found no list",0
+94589053-0b71-41ff-ad4b-f377ab7897f2,Slanted,found,https://www.slanted.de/publisher/distribution/,distributors/wholesalers excluded,158
+c93ad4e2-b895-4759-8360-76fd115ebfc3,SLEEK,found,https://www.sleek-mag.com/stockists/,GB/Taiwan/Switzerland entries mostly lack city on page; online-only shops excluded,146
+20fb6d63-6b39-4e18-ac4d-8cd523820423,Sloft,no_list,https://shop.sloft-magazine.com/pages/store-locator,Stockist.co widget (tag u13738) is disabled and returns zero locations,0
+36ac2483-f751-434f-a519-b38a78512cd1,Slop,no_list,,sells only via own webshop,0
+8909d557-fd4f-4418-bab3-79644ca5a4d7,SOLO,unreachable,,solo-mag.com DNS not found; search found no stockist list,0
+c8dc3cdd-17a4-426a-93c1-b0d28891f5f4,Solomiya,unreachable,,site returned 403; search found only distributor (Readellion) and unnamed bookshops,0
+b0c99965-76e8-4455-b880-b117e87a5aaa,Sound On Sound,no_list,,no stockist list; subscriptions/shop only,0
+eebd5bb3-d005-4984-ab34-c03b8d05930a,Spike Art Magazine,no_list,,sells via own webshop only,0
+bb1edeac-0aa6-415d-aa3d-a1576bf4c341,Spiral Journal,no_list,,sells via own shop only,0
+9857af71-6d89-4788-b77a-bbe566fa2137,SSAW,no_list,,sells via own webshop only,0
+55bd39e9-a083-4d43-809b-6d1452524ebc,Standart,no_list,,pilot: no stockist page on site,0
+aab2fd96-35c0-45cf-897e-c9ff7ace1895,Stash Media (Stash Annual),no_list,,sells via own store only,0
+30649570-3dbe-46b7-9da0-4101045eeee1,Suspira,found,https://www.sabatmagazine.com/buy,Sabat Magazine site; list includes one online-only entry (Occult Whispers) excluded; some addresses incomplete,40
+1335ba12-5227-4e8f-b9c1-9309b6628406,sweet-thang,no_list,,homepage shows only title; search found only own Big Cartel store,0
+4a942867-21a4-4e83-a9da-a23bdd81d78d,Synonym,found,https://synonym-mag.com/stockists/,,49
+3d2c48b9-511d-4d6e-a132-6f473c237398,TANK,unreachable,,site returned 503 on homepage and /stockists; search found no list,0
+d0429721-d0c1-4510-ad1a-1deefc12d23f,TAUKO,found,https://www.taukomagazine.com/stockists,"retailers grouped by country; mostly no city/address given, includes fabric shops that may be online-only; cities only where stated",146
+730a7af4-35d8-4f36-a739-45bd15b94d31,Tell Me How You Really Feel,no_list,,only Instagram URL given; search found nothing,0
+86b1971d-a4b9-42da-bd67-4c93ac605243,Tempura,no_list,,sells via own Shopify webshop; search found no list,0
+2388ad30-a5d1-433c-88df-52cffad0d7b2,The AI Art Magazine,no_list,,sells via own shop; Soda Books online reseller only,0
+f25e5a64-c095-4ac0-b1dc-e60bbe63d396,The Baffler,no_list,https://thebaffler.com/bookstores-newsstands,"map widget, could not extract; mentions Barnes & Noble and Books-a-Million chains only",0
+6de5c808-35e7-44ee-aa02-04a0b0517427,The Believer,unreachable,,site returned 403; search found no stockist list,0
+a5d16603-6cae-4425-8dba-9a0e960187e1,The Detail,no_list,,sells via own webshop; search found no list,0
+dd878bc8-bfb1-4a4e-9866-4ed403342300,The Drift,found,https://www.thedriftmag.com/stockists,Barnes & Noble and Books-A-Million (nationwide chains) omitted; PDF version dated March 2026,114
+048c9bb8-15b1-486b-b6de-4b9097d8746a,The Erotic Review,found,https://www.ermagazine.com/about#stockists,Barnes & Noble (58 US locations) omitted,83
+3d9a3ab7-1d55-47c4-9aa5-2dbe6ddccc1f,The European Review of Books,no_list,,online shop only; no stockist page found,0
+8bde374d-589c-4b6d-b69a-9a676c3a66b7,The Fence,found,https://www.the-fence.com/about#stockists,"online retailers (MyMagShop, Pics & Ink, Unique Magazines) omitted",24
+ebb71506-332e-48e7-8efc-01758d98a60d,The Gentlewoman,no_list,,no stockist page found on site (/stockists 404); search found no official list,0
+aa9e9671-b984-40f5-b8a0-847bc68b0fb9,The Georgia Review,no_list,,sells via own webshop; no stockist list,0
+f839c6a5-7144-46e9-afee-a33f7ca1d0ae,The Golfer's Journal,no_list,,sells via own webshop; no stockist list,0
+b9aa7d38-6e61-4237-99f2-2231d347629d,The Grub Street Journal,no_list,,sells via own webshop; no stockist list,0
+8184db27-b892-4998-8a9b-a866034a01b1,The London Magazine,found,https://thelondonmagazine.org/stockists/,,11
+6ff53e9d-5c41-4011-a5cc-807e3ce400cd,The Metrograph,no_list,,retailers directed to distributor D.A.P.; no store list,0
+6d4f36e8-6286-483b-813f-46c24e47c0f9,The Modernist,no_list,,only own gallery shop (Manchester) and a Faire wholesale link; no stockist list,0
+257a0594-1636-4f8f-9f24-e66e4b1f8a92,The New Era,no_list,,sells via own webshop only,0
+ee5caa5f-ac62-4b0d-84a5-1cc03cb85af7,The Paris Review,no_list,https://www.theparisreview.org/about/bookstores,Page exists but Cloudflare returns 403 to curl and WebFetch (browser and Googlebot UAs); Wayback unreachable via proxy,0
+060d3d10-bbbb-4373-91af-7820d9aa42dc,The Passenger,no_list,,no stockist list on site or in search; sold via Iperborea / Europa Editions,0
+5161d416-9ec2-44ab-98a8-59f05a4df7e1,The Pocket Magazine,no_list,,no stockist list; own shop only,0
+2053a4a1-473c-40ae-91ea-d3d6d08624de,The Pop Manifesto,no_list,,own shop only,0
+d390abe3-191d-4f39-ab9c-fe5ff32222e2,The Sewanee Review,no_list,,subscriptions only,0
+9038c315-dbe3-4e5e-adaa-799e4ec904a9,The Skirt Chronicles,found,https://theskirtchronicles.com/stockists,some entries have no city/address,157
+28da7246-6ed2-489f-be82-614cca050ce2,The Slow Press,unreachable,,site returned 503; search found no stockist list,0
+be919542-192d-43d4-917b-f89d8ff51080,The Surfer’s Journal,no_list,,no stockist page found; search found nothing,0
+ac2473b9-1ced-4452-ba6b-8f49407a70e1,The Whitney Review,unreachable,,domain does not resolve; search found no list,0
+bd9da94b-f763-4ebf-8383-e153138f52aa,The Wire,found,https://www.thewire.co.uk/about/stockists,"also lists chains (TG Jones/WH Smith, newsagents, Barnes & Noble) without cities, and mail-order shops, omitted",44
+42f29530-42a4-4a47-87d5-e3e38379e33e,The Yale Review,found,https://yalereview.org/stockists,currently only McNally Jackson NYC; more planned,5
+3040fa2d-3b77-4a20-b6d0-5018ba7f07b9,Tidal,no_list,,sells via own shop only,0
+f136d8b8-32c9-4772-87ad-d14ebf533158,To Have & To Hold,found,https://www.paperbagarchive.com/stockists,some entries lack city on page,61
+df7f7812-f38c-42b3-9e2b-9727706aa979,Toiletpaper,no_list,,own web shops only,0
+e76e3fb6-3fa8-4293-92ba-1194c7efddf2,Tonic,no_list,,sells only via own webshop,0
+66f77525-0076-4350-8e6b-cb5c66819608,TOO MUCH,no_list,https://www.toomuchmagazine.com/distribution,"distributors only (New Distribution House, Antenne Books, Perimeter, Post Poetics, Sakumotto)",0
+0249fc8b-9650-44eb-99ff-1fdcf1c0d4ab,Tools,no_list,,buy link to publisher Les Presses du réel only,0
+80ab0dab-2322-467c-b47b-d345d2738de6,Toothsome,found,https://toothsome.xyz/pages/stockists,Stack (online) omitted,28
+113cf9d1-cb2d-4c7e-947d-89e4dc2afe10,Trails,no_list,https://trailsmag.net/pages/dealer-locator,dealer-locator page has no readable store list (likely JS widget); bulk inquiries by email,0
+e77d19f2-f61a-43ec-8b20-7bdf71e660bd,Travel Almanac,no_list,,sells only via own webshop,0
+a4f3e3c5-8697-4bb3-9465-7540e1b5b3c3,Troublemakers,no_list,,sells via own webshop; search found no stockist list,0
+b0d9e800-19a2-4f66-9d1f-c863bfdf8ac6,Twin,found,https://www.twinfactory.co.uk/?p=50924,"list on older snapshot, may be dated; some entries lack city",19
+91e409d4-61e1-423a-8d8e-14392baf40e1,Umber,no_list,,sells only via own webshop,0
+6ce1b3c4-d9e1-4e8f-b46a-3bf6c19723f4,Unreal,no_list,,own Big Cartel shop; MagCulture (London) mentioned as retailer but no list,0
+77bd15cd-fec5-418c-9973-0f0383c0a54b,Untapped,no_list,,sells only via own webshop,0
+76ec094e-458d-4f4f-b065-a94088ce2b76,UPPERCASE,found,https://uppercasemagazine.com/pages/simple-store-finder,"excluded online-only/books-only: Textil Portal, Brooklyn Haberdashery; distributors excluded; Red Hen Books (OR) has no city",182
+afde8302-aff6-43a0-a6fa-5b3e8322dbd3,Ursula,no_list,,sold via Hauser & Wirth site; online retailers only found,0
+c9fff620-6b8b-4258-80be-50742e4f48a4,VAULT,no_list,,"no stockist page found; homepage fetch ok, site shop is subscriptions",0
+9226893f-26ec-4563-9118-e3f28f634e77,Victory Journal,found,https://victoryjournal.com/stockists,Most entries city only; Allscript (SG/AE) and Salon Urody city not listed,121
+427951eb-5a87-4a7b-b906-4504fddd0495,Violet Papers,found,https://www.violetpapers.com/stockists,Some entries may be Instagram-only; countries inferred from cities,11
+8ef7b364-2a6d-499d-bcaa-d7a384ea77f5,Viscose Journal,found,https://viscosejournal.com/Shop,Online distributors excluded; Manchester shops grouped by page's wording,84
+8b558ed4-be13-4ace-a92b-2612a6f8cd67,Vittles,no_list,,No stockist page on Substack site; search found only retailers selling online,0
+345874f3-7f4e-4e40-8447-fdb7cca308ca,Wardrobe Theory Project,no_list,,sells only via own webshop,0
+53e78c93-c082-4d15-ac9d-4ac61c5f0f8e,Weird Walk,no_list,,sells only via own webshop,0
+3105b2d3-0a44-4246-8195-30b54aee0a3e,WHATEVR Fanzine,found,https://whatevrfanzine.com/pages/stockists,186 stores in 16 countries,186
+c8239d2a-7bd6-4c8f-a860-213baf46dc8b,Worms,no_list,,worms-magazine.com does not resolve; wormsmagazine.com reachable with no stockist list; search found no list,0
+edbe0394-4fa0-4135-9f67-8b3c21390381,Wyrd Science,found,https://wyrd.science/pages/stockists,"Page also lists 7 stockists without city (Beyond Cataclysm, Newsstand, Peregrine Coast Press, Pics & Ink, Exalted Funeral, Flaming Hand, Noble Knight) omitted; some may be online-only",11
+29d54d5a-1ca2-4870-b5d0-4d321a16d944,YNST Magazine,no_list,,sells only via subscription,0
+3d93de09-9869-43b4-82e1-97939d0d59c2,Yolo Journal,found,https://www.yolojournal.com/stockists/,includes hotels; airport lounges (Amex Centurion) and Barnes & Noble generic entry without city omitted/empty city,96
+fa10ff2b-1a91-4ed6-a39f-980b4b645d1f,Yonderland Magazine,no_list,,sells only via own Big Cartel webshop,0
+e4fc7685-b098-4215-bb17-3c48afedb043,YUZU,found,https://www.yuzumagazine.com/,homepage 'Where you can find us' lists cities only; store names given only for Istanbul and Bodrum,39
+87210ed0-3a6a-4ea7-b85e-a441d5cdd322,zweikommasieben,no_list,,no stockist list found; distributor Motto Books,0
+ea10dbf4-53e8-4fb5-b4fd-dc3a77b7152b,À Part,no_list,,no stockist page on site (/stockists 404); search found nothing,0
