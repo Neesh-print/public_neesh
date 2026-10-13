@@ -7,21 +7,19 @@ Based on the published stockist lists of the magazines on the Neesh Index, colle
 | | Publishers |
 |---|---:|
 | On the Index with a website | 296 |
-| Stockist list found | 104 |
-| ...used in the ranking | 102 |
-| No list published (site reachable) | 173 |
+| Stockist list found | 105 |
+| ...used in the ranking | 104 |
+| No list published (site reachable) | 172 |
 | Unreachable (site down, blocked or domain dead) | 19 |
 
-Usable lists cover 102 of 296 publishers (34%). They give 8,758 publisher-store pairs, 5,329 unique stores and 1,408 cities. 544 pairs name a store without a city. They are kept in `stockists_raw.csv` and `stores.csv` but left out of the city ranking.
+Usable lists cover 104 of 296 publishers (35%). They give 8,913 publisher-store pairs, 5,427 unique stores and 1,414 cities. 544 pairs name a store without a city. They are kept in `stockists_raw.csv` and `stores.csv` but left out of the city ranking.
 
 Left out of the counts:
 
-- **DG Quarterly**: duplicate of Delayed Gratification (dgquarterly.com redirects to slow-journalism.com).
-- **Linguaphile**: site redirects to Kuina Books; stockist page does not name Linguaphile.
+- **DG Quarterly**: duplicate of Delayed Gratification (dgquarterly.com redirects to slow-journalism.com); removed from the directory on 2026-10-13.
 
 A list exists, but it could not be read:
 
-- **The Paris Review**: bookstore list behind Cloudflare (403).
 - **Foam Magazine**: stockist page behind a Vercel checkpoint (429).
 - **Harper's Magazine**: newsstand locator needs a location search (HTTP 402 to fetch).
 - **Sidetracked**: /stockists exists (Wayback snapshot 2025-06-14) but the site returns a Cloudflare 403 (counted as unreachable).
@@ -54,44 +52,45 @@ For each top-30 city, "top title" is the Index title that lists the most stores 
 
 | Rank | City | Unique stores | Index titles | Top title | Top title's stores | Only via top title | Rank without them |
 |---:|---|---:|---:|---|---:|---:|---:|
-| 1 | London, GB | 313 | 85 | Luncheon | 62 | 25 | 1 |
-| 2 | New York, US | 238 | 74 | SLEEK | 33 | 17 | 2 |
-| 3 | Paris, FR | 184 | 59 | GAZE | 53 | 34 | 3 |
-| 4 | Los Angeles, US | 97 | 61 | Broccoli Mag | 26 | 19 | 5 |
-| 5 | Portland, US | 92 | 56 | Broccoli Mag | 35 | 29 | 8 |
-| 6 | Melbourne, AU | 75 | 30 | Record Magazine | 19 | 15 | 10 |
-| 7 | Milan, IT | 72 | 49 | WHATEVR Fanzine | 20 | 12 | 10 |
-| 8 | Berlin, DE | 70 | 54 | Record Magazine | 10 | 1 | 8 |
-| 9 | Toronto, CA | 63 | 54 | Brick | 15 | 4 | 10 |
-| 10 | San Francisco, US | 61 | 53 | Broccoli Mag | 17 | 9 | 11 |
-| 11 | Barcelona, ES | 57 | 41 | Openhouse | 19 | 12 | 13 |
-| 12 | Montreal, CA | 48 | 29 | Esse arts + opinions | 17 | 15 | 19 |
-| 13 | Seattle, US | 47 | 26 | Broccoli Mag | 16 | 9 | 17 |
+| 1 | London, GB | 320 | 87 | Luncheon | 62 | 25 | 1 |
+| 2 | New York, US | 260 | 75 | SLEEK | 33 | 17 | 2 |
+| 3 | Paris, FR | 186 | 60 | GAZE | 53 | 34 | 3 |
+| 4 | Los Angeles, US | 102 | 62 | Broccoli Mag | 26 | 19 | 5 |
+| 5 | Portland, US | 95 | 57 | Broccoli Mag | 35 | 29 | 8 |
+| 6 | Melbourne, AU | 80 | 31 | Record Magazine | 19 | 15 | 8 |
+| 7 | Berlin, DE | 73 | 56 | Record Magazine | 10 | 1 | 8 |
+| 8 | Milan, IT | 73 | 50 | WHATEVR Fanzine | 20 | 12 | 10 |
+| 9 | Toronto, CA | 65 | 55 | Brick | 15 | 4 | 10 |
+| 10 | San Francisco, US | 62 | 54 | Broccoli Mag | 17 | 9 | 11 |
+| 11 | Barcelona, ES | 57 | 42 | Openhouse | 19 | 12 | 13 |
+| 12 | Montreal, CA | 49 | 30 | Esse arts + opinions | 17 | 15 | 20 |
+| 13 | Seattle, US | 48 | 27 | Broccoli Mag | 16 | 9 | 16 |
 | 14 | Tokyo, JP | 42 | 29 | Record Magazine | 7 | 6 | 17 |
-| 15 | Amsterdam, NL | 40 | 66 | Nomad Magazine | 9 | 5 | 17 |
-| 16 | Philadelphia, US | 40 | 43 | Seen | 7 | 5 | 17 |
-| 17 | Madrid, ES | 39 | 26 | MacGuffin | 10 | 7 | 20 |
-| 18 | Brussels, BE | 35 | 20 | Behind the Blinds | 10 | 7 | 22 |
-| 19 | Chicago, US | 34 | 26 | Broccoli Mag | 13 | 11 | 32 |
-| 20 | Copenhagen, DK | 33 | 18 | The Skirt Chronicles | 7 | 5 | 22 |
-| 21 | Sydney, AU | 32 | 19 | Lodestars Anthology | 8 | 7 | 27 |
-| 22 | Athens, GR | 29 | 18 | Nomas | 17 | 13 | 42 |
-| 23 | Lisbon, PT | 28 | 42 | Luncheon | 10 | 8 | 32 |
+| 15 | Amsterdam, NL | 40 | 68 | Nomad Magazine | 9 | 5 | 18 |
+| 16 | Philadelphia, US | 40 | 44 | Seen | 7 | 5 | 18 |
+| 17 | Madrid, ES | 39 | 27 | MacGuffin | 10 | 7 | 21 |
+| 18 | Sydney, AU | 36 | 20 | Lodestars Anthology | 8 | 7 | 21 |
+| 19 | Chicago, US | 35 | 27 | Broccoli Mag | 13 | 11 | 30 |
+| 20 | Brussels, BE | 35 | 20 | Behind the Blinds | 10 | 7 | 23 |
+| 21 | Copenhagen, DK | 33 | 18 | The Skirt Chronicles | 7 | 5 | 23 |
+| 22 | Lisbon, PT | 29 | 43 | Luncheon | 10 | 8 | 32 |
+| 23 | Athens, GR | 29 | 18 | Nomas | 17 | 13 | 42 |
 | 24 | Antwerp, BE | 28 | 33 | Nomad Magazine | 6 | 5 | 32 |
-| 25 | Vienna, AT | 27 | 30 | 12F | 4 | 4 | 32 |
+| 25 | Vienna, AT | 27 | 31 | 12F | 4 | 4 | 32 |
 | 26 | Rome, IT | 27 | 17 | WHATEVR Fanzine | 9 | 8 | 32 |
 | 27 | Vancouver, CA | 26 | 21 | Openhouse | 4 | 3 | 32 |
-| 28 | Austin, US | 25 | 24 | Broccoli Mag | 13 | 12 | 50 |
-| 29 | Istanbul, TR | 25 | 6 | Cornucopia | 14 | 14 | 67 |
-| 30 | Buenos Aires, AR | 25 | 2 | Anchoa | 24 | 24 | 490 |
+| 28 | Austin, US | 25 | 24 | Broccoli Mag | 13 | 12 | 51 |
+| 29 | Istanbul, TR | 25 | 6 | Cornucopia | 14 | 14 | 68 |
+| 30 | Buenos Aires, AR | 25 | 2 | Anchoa | 24 | 24 | 495 |
 
 Flagged (the top title supplies 40% or more of the city's stores, or the city drops 10 or more places without it):
 
-- **Chicago** (#19): Broccoli Mag lists 13 of 34 stores (38%). Without the stores only it lists, the city would rank #32.
-- **Athens** (#22): Nomas lists 17 of 29 stores (59%). Without the stores only it lists, the city would rank #42.
-- **Austin** (#28): Broccoli Mag lists 13 of 25 stores (52%). Without the stores only it lists, the city would rank #50.
-- **Istanbul** (#29): Cornucopia lists 14 of 25 stores (56%). Without the stores only it lists, the city would rank #67.
-- **Buenos Aires** (#30): Anchoa lists 24 of 25 stores (96%). Without the stores only it lists, the city would rank #490.
+- **Chicago** (#19): Broccoli Mag lists 13 of 35 stores (37%). Without the stores only it lists, the city would rank #30.
+- **Lisbon** (#22): Luncheon lists 10 of 29 stores (34%). Without the stores only it lists, the city would rank #32.
+- **Athens** (#23): Nomas lists 17 of 29 stores (59%). Without the stores only it lists, the city would rank #42.
+- **Austin** (#28): Broccoli Mag lists 13 of 25 stores (52%). Without the stores only it lists, the city would rank #51.
+- **Istanbul** (#29): Cornucopia lists 14 of 25 stores (56%). Without the stores only it lists, the city would rank #68.
+- **Buenos Aires** (#30): Anchoa lists 24 of 25 stores (96%). Without the stores only it lists, the city would rank #495.
 
 - **Broccoli Mag** is the top title in 6 of the top 30 cities (Los Angeles, Portland, San Francisco, Seattle, Chicago, Austin). These rankings lean on one list.
 - **Record Magazine** is the top title in 3 of the top 30 cities (Melbourne, Berlin, Tokyo). These rankings lean on one list.
@@ -112,5 +111,7 @@ Flagged (the top title supplies 40% or more of the city's stores, or the city dr
 - **Partial or dated lists.** Noble Rot's page lists 215 stores, of which 209 were captured. Twin's list comes from an older page. On Anchoa's page every listing is marked "agotado" (sold out). Dhoop's full list (12 stores) is on its homepage. Above the Fold lists states only, so its cities were inferred from the store names. On A Rabbit's Foot, some non-UK cities were inferred.
 - **Broccoli.** The list behind the stockists page is a wholesale retailer sheet with 769 physical stores, which makes it the largest single list. Its last orders date from 2025 to 2026. It adds weight to US cities, Portland in particular.
 - **Portland, US.** Lists rarely give a state, so Portland combines Portland, Oregon with a few Portland, Maine shops.
+- **Linguaphile.** The magazine's site now redirects to its publisher, Kuina Books, and its directory website was updated to match. The 6 stores come from Kuina Books' stockist page, which covers the publisher's whole list rather than Linguaphile alone.
+- **The Paris Review.** The site blocks automated fetches, so Neesh supplied the page text (149 stores). The page also says the magazine is sold at Barnes & Noble, at Chapters and in select Aesop stores; only the Aesop branches it names are counted.
 - **Monocle.** Its list covers only its own shops and cafés.
 

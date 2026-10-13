@@ -1,1409 +1,1415 @@
-rank,city,country,unique_stores,index_titles,top_title,top_title_stores,top_title_share,stores_only_from_top_title,unique_stores_excl_top_title
-1,London,GB,313,85,Luncheon,62,0.2,25,288
-2,New York,US,238,74,SLEEK,33,0.14,17,221
-3,Paris,FR,184,59,GAZE,53,0.29,34,150
-4,Los Angeles,US,97,61,Broccoli Mag,26,0.27,19,78
-5,Portland,US,92,56,Broccoli Mag,35,0.38,29,63
-6,Melbourne,AU,75,30,Record Magazine,19,0.25,15,60
-7,Milan,IT,72,49,WHATEVR Fanzine,20,0.28,12,60
-8,Berlin,DE,70,54,Record Magazine,10,0.14,1,69
-9,Toronto,CA,63,54,Brick,15,0.24,4,59
-10,San Francisco,US,61,53,Broccoli Mag,17,0.28,9,52
-11,Barcelona,ES,57,41,Openhouse,19,0.33,12,45
-12,Montreal,CA,48,29,Esse arts + opinions,17,0.35,15,33
-13,Seattle,US,47,26,Broccoli Mag,16,0.34,9,38
-14,Tokyo,JP,42,29,Record Magazine,7,0.17,6,36
-15,Amsterdam,NL,40,66,Nomad Magazine,9,0.23,5,35
-16,Philadelphia,US,40,43,Seen,7,0.17,5,35
-17,Madrid,ES,39,26,MacGuffin,10,0.26,7,32
-18,Brussels,BE,35,20,Behind the Blinds,10,0.29,7,28
-19,Chicago,US,34,26,Broccoli Mag,13,0.38,11,23
-20,Copenhagen,DK,33,18,The Skirt Chronicles,7,0.21,5,28
-21,Sydney,AU,32,19,Lodestars Anthology,8,0.25,7,25
-22,Athens,GR,29,18,Nomas,17,0.59,13,16
-23,Lisbon,PT,28,42,Luncheon,10,0.36,8,20
-24,Antwerp,BE,28,33,Nomad Magazine,6,0.21,5,23
-25,Vienna,AT,27,30,12F,4,0.15,4,23
-26,Rome,IT,27,17,WHATEVR Fanzine,9,0.33,8,19
-27,Vancouver,CA,26,21,Openhouse,4,0.15,3,23
-28,Austin,US,25,24,Broccoli Mag,13,0.52,12,13
-29,Istanbul,TR,25,6,Cornucopia,14,0.56,14,11
-30,Buenos Aires,AR,25,2,Anchoa,24,0.96,24,1
-31,Taipei,TW,24,27,Behind the Blinds,10,0.42,7,17
-32,Seoul,KR,24,21,Record Magazine,6,0.25,4,20
-33,Atlanta,US,19,16,Noble Rot,3,0.16,3,16
-34,Manchester,GB,18,45,Noble Rot,6,0.33,3,15
-35,Munich,DE,18,20,Nomad Magazine,5,0.28,4,14
-36,Rotterdam,NL,18,19,Behind the Blinds,4,0.22,2,16
-37,Minneapolis,US,18,15,Broccoli Mag,6,0.33,5,13
-38,Calgary,CA,18,9,photoED Magazine,7,0.39,4,14
-39,Zurich,CH,17,32,Openhouse,3,0.18,2,15
-40,Glasgow,GB,17,25,A Rabbit's Foot,5,0.29,1,16
-41,Marseille,FR,17,15,12F,3,0.18,2,15
-42,Perth,AU,17,12,Record Magazine,6,0.35,6,11
-43,Bangkok,TH,15,17,WHATEVR Fanzine,5,0.33,5,10
-44,Porto,PT,15,14,Luncheon,6,0.4,6,9
-45,San Diego,US,15,9,Broccoli Mag,7,0.47,7,8
-46,Ottawa,CA,15,8,photoED Magazine,5,0.33,2,13
-47,Hamburg,DE,14,28,FUKT,6,0.43,3,11
-48,Washington DC,US,14,27,Broccoli Mag,4,0.29,3,11
-49,Edinburgh,GB,14,16,Delayed Gratification,3,0.21,1,13
-50,Boston,US,14,11,The Drift,3,0.21,2,12
-51,Mexico City,MX,13,21,Mince,3,0.23,2,11
-52,Brighton,GB,13,17,Broccoli Mag,2,0.15,1,12
-53,Hong Kong,HK,13,16,SLEEK,4,0.31,4,9
-54,Turin,IT,13,13,WHATEVR Fanzine,4,0.31,2,11
-55,Denver,US,13,8,Broccoli Mag,9,0.69,7,6
-56,Houston,US,13,8,Broccoli Mag,5,0.38,5,8
-57,Lyon,FR,13,6,GAZE,6,0.46,6,7
-58,Richmond,US,13,5,Broccoli Mag,5,0.38,5,8
-59,Bristol,GB,12,33,UPPERCASE,4,0.33,1,11
-60,Dallas,US,12,12,Broccoli Mag,3,0.25,2,10
-61,Venice,IT,12,12,WHATEVR Fanzine,4,0.33,3,9
-62,Victoria,CA,12,12,Serviette,5,0.42,0,12
-63,Pittsburgh,US,12,11,Broccoli Mag,4,0.33,4,8
-64,Ghent,BE,12,10,Behind the Blinds,4,0.33,3,9
-65,Miami,US,12,10,Dirty Magazine,5,0.42,4,8
-66,Winnipeg,CA,12,9,Brick,3,0.25,3,9
-67,Warsaw,PL,12,8,Hunger,4,0.33,4,8
-68,Singapore,SG,11,35,Meantime,3,0.27,2,9
-69,Florence,IT,11,20,WHATEVR Fanzine,5,0.45,2,9
-70,Frankfurt,DE,11,8,Epoch Review,4,0.36,3,8
-71,Nashville,US,11,8,Broccoli Mag,5,0.45,4,7
-72,Edmonton,CA,11,5,photoED Magazine,6,0.55,5,6
-73,Kuala Lumpur,MY,11,4,Delayed Gratification,4,0.36,4,7
-74,Tallinn,EE,11,4,A Shade Colder,7,0.64,7,4
-75,Stockholm,SE,10,42,A Rabbit's Foot,3,0.3,1,9
-76,Shanghai,CN,10,13,Brick,2,0.2,1,9
-77,Oakland,US,10,12,Broccoli Mag,4,0.4,2,8
-78,Utrecht,NL,10,11,Nomad Magazine,2,0.2,2,8
-79,Dubai,AE,10,10,Hunger,4,0.4,1,9
-80,New Orleans,US,10,8,Broccoli Mag,5,0.5,5,5
-81,The Hague,NL,10,7,Behind the Blinds,3,0.3,0,10
-82,Leeds,GB,9,34,A Rabbit's Foot,4,0.44,1,8
-83,Valencia,ES,9,6,MacGuffin,4,0.44,3,6
-84,Tucson,US,9,5,Broccoli Mag,4,0.44,4,5
-85,Cologne,DE,8,19,FUKT,3,0.38,1,7
-86,Dusseldorf,DE,8,9,Luncheon,2,0.25,2,6
-87,Prague,CZ,8,8,FUKT,2,0.25,1,7
-88,Santa Barbara,US,8,8,Openhouse,2,0.25,1,7
-89,Stuttgart,DE,8,8,FUKT,3,0.38,2,6
-90,Durham,US,8,7,Broccoli Mag,2,0.25,1,7
-91,Quebec City,CA,8,6,Esse arts + opinions,5,0.62,5,3
-92,Ixelles,BE,8,4,Nomad Magazine,5,0.62,4,4
-93,Nantes,FR,8,4,GAZE,4,0.5,4,4
-94,Newcastle upon Tyne,GB,7,28,Delayed Gratification,2,0.29,1,6
-95,Sheffield,GB,7,20,Anorak,3,0.43,2,5
-96,Helsinki,FI,7,9,Drift,2,0.29,1,6
-97,Nottingham,GB,7,9,A Rabbit's Foot,2,0.29,0,7
-98,Sacramento,US,7,9,Epoch Review,2,0.29,1,6
-99,Bologna,IT,7,8,Slanted,2,0.29,2,5
-100,Eindhoven,NL,7,8,FUKT,2,0.29,2,5
-101,Indianapolis,US,7,8,Broccoli Mag,3,0.43,2,5
-102,Milwaukee,US,7,7,Broccoli Mag,1,0.14,1,6
-103,Phoenix,US,7,7,Broccoli Mag,2,0.29,2,5
-104,Toulouse,FR,7,7,GAZE,5,0.71,3,4
-105,Budapest,HU,7,5,FARE,2,0.29,2,5
-106,Cleveland,US,7,5,Broccoli Mag,3,0.43,3,4
-107,Long Beach,US,7,5,Broccoli Mag,4,0.57,3,4
-108,Brisbane,AU,7,4,Lodestars Anthology,2,0.29,2,5
-109,Louisville,US,7,4,Broccoli Mag,4,0.57,3,4
-110,Sao Paulo,BR,7,4,WHATEVR Fanzine,4,0.57,3,4
-111,Baltimore,US,6,12,Eaten,2,0.33,1,5
-112,Asheville,US,6,9,Broccoli Mag,4,0.67,2,4
-113,Buffalo,US,6,8,Broccoli Mag,2,0.33,2,4
-114,Detroit,US,6,8,Cake Zine,3,0.5,2,4
-115,Palm Springs,US,6,7,Broccoli Mag,3,0.5,3,3
-116,Pasadena,US,6,7,Epoch Review,3,0.5,2,4
-117,Vilnius,LT,6,7,Luncheon,1,0.17,1,5
-118,Adelaide,AU,6,6,Record Magazine,2,0.33,2,4
-119,Columbus,US,6,6,Broccoli Mag,2,0.33,2,4
-120,Haarlem,NL,6,5,Nomad Magazine,2,0.33,2,4
-121,Honolulu,US,6,5,Broccoli Mag,2,0.33,2,4
-122,Nanaimo,CA,6,5,Brick,2,0.33,1,5
-123,Oxford,GB,6,5,Delayed Gratification,2,0.33,2,4
-124,Rochester,US,6,5,Broccoli Mag,3,0.5,3,3
-125,Saskatoon,CA,6,5,Brick,2,0.33,1,5
-126,Hudson,US,6,4,Broccoli Mag,3,0.5,3,3
-127,Karlsruhe,DE,6,4,Slanted,3,0.5,3,3
-128,Newport,US,6,3,Broccoli Mag,4,0.67,4,2
-129,Rennes,FR,6,3,GAZE,4,0.67,4,2
-130,Salem,US,6,3,Broccoli Mag,5,0.83,4,2
-131,Dublin,IE,5,13,20 Seconds,1,0.2,0,5
-132,Halifax,CA,5,13,photoED Magazine,2,0.4,1,4
-133,Bordeaux,FR,5,7,GAZE,5,1.0,4,1
-134,Madison,US,5,7,Broccoli Mag,4,0.8,3,2
-135,Arnhem,NL,5,6,Nomad Magazine,2,0.4,1,4
-136,Gothenburg,SE,5,6,Cake Zine,1,0.2,0,5
-137,Groningen,NL,5,6,See All This,2,0.4,2,3
-138,Malibu,US,5,6,Eaten,2,0.4,1,4
-139,Savannah,US,5,6,Drift,1,0.2,0,5
-140,Arles,FR,5,5,Flaneur,3,0.6,0,5
-141,Bern,CH,5,5,Broccoli Mag,1,0.2,1,4
-142,Cambridge,US,5,5,Broccoli Mag,1,0.2,1,4
-143,Mumbai,IN,5,5,Dhoop,1,0.2,1,4
-144,Nuremberg,DE,5,5,Behind the Blinds,1,0.2,1,4
-145,Osaka,JP,5,5,Victory Journal,2,0.4,2,3
-146,St Louis,US,5,5,Broccoli Mag,2,0.4,2,3
-147,Berkeley,US,5,4,Serviette,2,0.4,2,3
-148,Grand Rapids,US,5,4,Broccoli Mag,2,0.4,2,3
-149,Kingston,US,5,4,Broccoli Mag,4,0.8,3,2
-150,London,CA,5,4,Behind the Blinds,2,0.4,1,4
-151,Montpellier,FR,5,4,GAZE,2,0.4,2,3
-152,Oslo,NO,5,4,FUKT,2,0.4,2,3
-153,Point Reyes Station,US,5,4,Broccoli Mag,3,0.6,2,3
-154,Lille,FR,5,3,GAZE,4,0.8,3,2
-155,Mississauga,CA,5,3,Brick,3,0.6,2,3
-156,Saint Paul,US,5,3,Broccoli Mag,3,0.6,3,2
-157,Portsmouth,US,5,2,Broccoli Mag,4,0.8,4,1
-158,Perugia,IT,4,16,Behind the Blinds,2,0.5,1,3
-159,Bucharest,RO,4,13,Luncheon,2,0.5,0,4
-160,Whitstable,GB,4,11,Advanture,1,0.25,0,4
-161,Sofia,BG,4,9,Broccoli Mag,1,0.25,0,4
-162,Leipzig,DE,4,8,Slanted,2,0.5,1,3
-163,Bellingham,US,4,6,Broccoli Mag,3,0.75,2,2
-164,Manila,PH,4,6,Broccoli Mag,1,0.25,1,3
-165,Ashland,US,4,5,Broccoli Mag,3,0.75,2,2
-166,Charleston,US,4,5,Broccoli Mag,1,0.25,1,3
-167,Hay-on-Wye,GB,4,5,Elska,1,0.25,1,3
-168,Liverpool,GB,4,5,Delayed Gratification,2,0.5,1,3
-169,Marfa,US,4,5,Broccoli Mag,3,0.75,2,2
-170,Margate,GB,4,5,Broccoli Mag,1,0.25,1,3
-171,Annecy,FR,4,4,GAZE,2,0.5,2,2
-172,Beaverton,US,4,4,Broccoli Mag,1,0.25,1,3
-173,Beijing,CN,4,4,Flaneur,1,0.25,1,3
-174,Boise,US,4,4,Broccoli Mag,2,0.5,1,3
-175,Cincinnati,US,4,4,Cake Zine,1,0.25,1,3
-176,Fremantle,AU,4,4,Broccoli Mag,1,0.25,1,3
-177,Konstanz,DE,4,4,Behind the Blinds,1,0.25,1,3
-178,Lausanne,CH,4,4,Accattone,1,0.25,1,3
-179,Middelburg,NL,4,4,Behind the Blinds,1,0.25,1,3
-180,Orlando,US,4,4,Drift,1,0.25,1,3
-181,Salt Lake City,US,4,4,Broccoli Mag,3,0.75,2,2
-182,Spokane,US,4,4,Broccoli Mag,2,0.5,2,2
-183,Strasbourg,FR,4,4,GAZE,2,0.5,1,3
-184,Würzburg,DE,4,4,Behind the Blinds,1,0.25,1,3
-185,Avignon,FR,4,3,GAZE,2,0.5,2,2
-186,Bruges,BE,4,3,Hunger,2,0.5,2,2
-187,Canterbury,GB,4,3,Delayed Gratification,2,0.5,2,2
-188,Grenoble,FR,4,3,GAZE,3,0.75,2,2
-189,Iowa City,US,4,3,Broccoli Mag,2,0.5,2,2
-190,Nijmegen,NL,4,3,Nomad Magazine,2,0.5,2,2
-191,Olympia,US,4,3,Broccoli Mag,3,0.75,2,2
-192,San Antonio,US,4,3,Eaten,2,0.5,2,2
-193,Sarasota,US,4,3,Broccoli Mag,2,0.5,2,2
-194,Tel Aviv,IL,4,3,Slanted,2,0.5,2,2
-195,George Town,MY,4,1,Plates,4,1.0,4,0
-196,Petaling Jaya,MY,4,1,Plates,4,1.0,4,0
-197,Bath,GB,3,49,Noble Rot,2,0.67,1,2
-198,Forli,IT,3,17,Broccoli Mag,2,0.67,0,3
-199,Hangzhou,CN,3,14,GAZE,2,0.67,1,2
-200,Auckland,NZ,3,12,Broccoli Mag,1,0.33,0,3
-201,Boulder,US,3,7,Cake Zine,1,0.33,0,3
-202,Evanston,US,3,6,Brick,1,0.33,0,3
-203,Maastricht,NL,3,6,Nomad Magazine,3,1.0,1,2
-204,Norwich,GB,3,6,Delayed Gratification,1,0.33,1,2
-205,Ipswich,GB,3,5,A Rabbit's Foot,1,0.33,0,3
-206,Las Vegas,US,3,5,Brick,1,0.33,0,3
-207,Santa Monica,US,3,5,A Rabbit's Foot,1,0.33,0,3
-208,St. Petersburg,US,3,5,Broccoli Mag,1,0.33,1,2
-209,Troy,US,3,5,Broccoli Mag,1,0.33,0,3
-210,Ventura,US,3,5,Broccoli Mag,1,0.33,1,2
-211,Beverly Hills,US,3,4,Epoch Review,2,0.67,1,2
-212,Brookline,US,3,4,Eaten,2,0.67,1,2
-213,Burlington,US,3,4,Epoch Review,1,0.33,0,3
-214,Cardiff,GB,3,4,A Rabbit's Foot,1,0.33,0,3
-215,Christchurch,NZ,3,4,Debris,1,0.33,1,2
-216,Encinitas,US,3,4,Broccoli Mag,1,0.33,1,2
-217,Eugene,US,3,4,Broccoli Mag,1,0.33,1,2
-218,Fort Worth,US,3,4,Cake Zine,1,0.33,0,3
-219,Knoxville,US,3,4,Broccoli Mag,1,0.33,1,2
-220,Lancaster,US,3,4,Anorak,1,0.33,0,3
-221,Liège,BE,3,4,Accattone,1,0.33,1,2
-222,Malmö,SE,3,4,A Rabbit's Foot,1,0.33,0,3
-223,Moscow,RU,3,4,Luncheon,2,0.67,0,3
-224,Oklahoma City,US,3,4,Epoch Review,1,0.33,0,3
-225,Regina,CA,3,4,Brick,1,0.33,1,2
-226,Santa Fe,US,3,4,Synonym,2,0.67,1,2
-227,St. John's,CA,3,4,Brick,1,0.33,0,3
-228,Totnes,GB,3,4,Broccoli Mag,1,0.33,0,3
-229,Wilmington,US,3,4,Broccoli Mag,1,0.33,1,2
-230,Anchorage,US,3,3,Broccoli Mag,1,0.33,1,2
-231,Beacon,US,3,3,Broccoli Mag,2,0.67,1,2
-232,Bergen,NO,3,3,FUKT,2,0.67,1,2
-233,Biarritz,FR,3,3,Broccoli Mag,1,0.33,1,2
-234,Bilbao,ES,3,3,MacGuffin,1,0.33,1,2
-235,Bremen,DE,3,3,Behind the Blinds,1,0.33,1,2
-236,Burbank,US,3,3,Broccoli Mag,1,0.33,1,2
-237,Bury St Edmunds,GB,3,3,A Rabbit's Foot,1,0.33,1,2
-238,Byron Bay,AU,3,3,Never Too Small,1,0.33,1,2
-239,Charlotte,US,3,3,Cherry Bombe,1,0.33,1,2
-240,Hamilton,CA,3,3,Brick,1,0.33,1,2
-241,Heidelberg,DE,3,3,Behind the Blinds,1,0.33,1,2
-242,Kiel,DE,3,3,Behind the Blinds,1,0.33,1,2
-243,Leeuwarden,NL,3,3,Nomad Magazine,2,0.67,2,1
-244,Leuven,BE,3,3,Esse arts + opinions,1,0.33,1,2
-245,Mannheim,DE,3,3,Behind the Blinds,1,0.33,1,2
-246,Markham,CA,3,3,Behind the Blinds,1,0.33,1,2
-247,Mill Valley,US,3,3,Eaten,1,0.33,1,2
-248,Missoula,US,3,3,Broccoli Mag,1,0.33,1,2
-249,Newmarket,CA,3,3,Behind the Blinds,1,0.33,1,2
-250,Nice,FR,3,3,Drift,1,0.33,1,2
-251,Ojai,US,3,3,Broccoli Mag,1,0.33,1,2
-252,Omaha,US,3,3,Broccoli Mag,2,0.67,1,2
-253,Reno,US,3,3,Eaten,1,0.33,1,2
-254,Sag Harbor,US,3,3,A Rabbit's Foot,1,0.33,1,2
-255,Saint Petersburg,RU,3,3,SLEEK,2,0.67,1,2
-256,Santa Rosa,US,3,3,Broccoli Mag,1,0.33,1,2
-257,Saratoga Springs,US,3,3,Broccoli Mag,1,0.33,1,2
-258,Somerville,US,3,3,Broccoli Mag,3,1.0,2,1
-259,St Leonards-on-Sea,GB,3,3,Broccoli Mag,1,0.33,1,2
-260,Tacoma,US,3,3,Broccoli Mag,2,0.67,2,1
-261,Tilburg,NL,3,3,Nomad Magazine,2,0.67,2,1
-262,Bend,US,3,2,Broccoli Mag,2,0.67,2,1
-263,Cascais,PT,3,2,Luncheon,2,0.67,2,1
-264,Chico,US,3,2,Broccoli Mag,2,0.67,2,1
-265,Des Moines,US,3,2,Broccoli Mag,3,1.0,2,1
-266,Girona,ES,3,2,Openhouse,2,0.67,2,1
-267,Knokke,BE,3,2,Nomad Magazine,2,0.67,2,1
-268,Lafayette,US,3,2,Broccoli Mag,2,0.67,2,1
-269,Milford,US,3,2,Broccoli Mag,2,0.67,2,1
-270,Nantucket,US,3,2,Broccoli Mag,3,1.0,2,1
-271,Nevada City,US,3,2,Broccoli Mag,2,0.67,2,1
-272,Provincetown,US,3,2,Broccoli Mag,2,0.67,2,1
-273,San Luis Obispo,US,3,2,Broccoli Mag,2,0.67,2,1
-274,Santa Cruz,US,3,2,Broccoli Mag,2,0.67,2,1
-275,Topanga,US,3,2,Broccoli Mag,2,0.67,2,1
-276,Truckee,US,3,2,Broccoli Mag,2,0.67,2,1
-277,Vancouver,US,3,2,Broccoli Mag,2,0.67,2,1
-278,Westbrook,US,3,2,Broccoli Mag,2,0.67,2,1
-279,Yucca Valley,US,3,2,Broccoli Mag,2,0.67,2,1
-280,Chania,GR,3,1,Nomas,3,1.0,3,0
-281,Córdoba,AR,3,1,Anchoa,3,1.0,3,0
-282,Den Bosch,NL,3,1,Nomad Magazine,3,1.0,3,0
-283,Gainesville,US,3,1,Broccoli Mag,3,1.0,3,0
-284,Georgetown,US,3,1,Broccoli Mag,3,1.0,3,0
-285,Lima,PE,3,1,Anchoa,3,1.0,3,0
-286,Rosario,AR,3,1,Anchoa,3,1.0,3,0
-287,Tartu,EE,3,1,A Shade Colder,3,1.0,3,0
-288,Thessaloniki,GR,3,1,Nomas,3,1.0,3,0
-289,Stockport,GB,2,32,Wyrd Science,2,1.0,1,1
-290,Twentynine Palms,US,2,12,Broccoli Mag,2,1.0,1,1
-291,Cambridge,CA,2,8,Drift,1,0.5,0,2
-292,Bratislava,SK,2,7,Elska,1,0.5,1,1
-293,Hasselt,BE,2,7,Behind the Blinds,1,0.5,0,2
-294,Zhoushan,CN,2,7,FUKT,1,0.5,0,2
-295,Bogota,CO,2,5,Flaneur,1,0.5,0,2
-296,Kyiv,UA,2,5,Flaneur,1,0.5,1,1
-297,Larkspur,US,2,5,Broccoli Mag,1,0.5,0,2
-298,Wassaic,US,2,5,Cake Zine,1,0.5,0,2
-299,Cape Town,ZA,2,4,MacGuffin,2,1.0,0,2
-300,Fort Lauderdale,US,2,4,Epoch Review,1,0.5,0,2
-301,Kamloops,CA,2,4,Brick,1,0.5,0,2
-302,Littleton,US,2,4,Epoch Review,1,0.5,0,2
-303,Merano,IT,2,4,A Passion Thing,1,0.5,1,1
-304,Prince George,CA,2,4,Brick,1,0.5,0,2
-305,Salt Spring Island,CA,2,4,Brick,1,0.5,0,2
-306,Wellington,NZ,2,4,Openhouse,2,1.0,1,1
-307,Whitehorse,CA,2,4,Brick,1,0.5,0,2
-308,Windsor,CA,2,4,Brick,1,0.5,0,2
-309,Albuquerque,US,2,3,Broccoli Mag,1,0.5,1,1
-310,Alkmaar,NL,2,3,Behind the Blinds,1,0.5,1,1
-311,Birmingham,GB,2,3,Delayed Gratification,1,0.5,1,1
-312,Bloomington,US,2,3,Epoch Review,1,0.5,0,2
-313,Blue Hill,US,2,3,Brick,1,0.5,0,2
-314,Burford,GB,2,3,20 Seconds,1,0.5,0,2
-315,Burnaby,CA,2,3,Brick,1,0.5,0,2
-316,Colorado Springs,US,2,3,Broccoli Mag,1,0.5,1,1
-317,Dundee,GB,2,3,Anorak,1,0.5,0,2
-318,East Kilbride,GB,2,3,Delayed Gratification,1,0.5,0,2
-319,Encino,US,2,3,Hunger,1,0.5,0,2
-320,Fresno,US,2,3,Broccoli Mag,1,0.5,1,1
-321,Glendale,US,2,3,Epoch Review,1,0.5,0,2
-322,Kyoto,JP,2,3,Cake Zine,1,0.5,1,1
-323,Lethbridge,CA,2,3,Brick,2,1.0,1,1
-324,Llandudno,GB,2,3,Selvedge,1,0.5,0,2
-325,Manhattan Beach,US,2,3,Epoch Review,2,1.0,0,2
-326,Meppel,NL,2,3,Hunger,1,0.5,0,2
-327,Naples,IT,2,3,20 Seconds,1,0.5,0,2
-328,Oshawa,CA,2,3,Behind the Blinds,1,0.5,0,2
-329,Pointe-Claire,CA,2,3,Behind the Blinds,1,0.5,1,1
-330,Sudbury,CA,2,3,Brick,1,0.5,0,2
-331,Wassenaar,NL,2,3,Behind the Blinds,1,0.5,0,2
-332,Waterloo,CA,2,3,photoED Magazine,1,0.5,1,1
-333,Whitley Bay,GB,2,3,Noble Rot,2,1.0,1,1
-334,Woodland Hills,US,2,3,Hunger,1,0.5,0,2
-335,Aachen,DE,2,2,Behind the Blinds,1,0.5,1,1
-336,Abergavenny,GB,2,2,Delayed Gratification,1,0.5,1,1
-337,Alexandria,US,2,2,Epoch Review,1,0.5,1,1
-338,Amersfoort,NL,2,2,Nomad Magazine,1,0.5,1,1
-339,Andover,US,2,2,Broccoli Mag,1,0.5,1,1
-340,Annapolis,US,2,2,Broccoli Mag,1,0.5,1,1
-341,Armadale,AU,2,2,Noble Rot,1,0.5,1,1
-342,Aspen,US,2,2,Broccoli Mag,1,0.5,1,1
-343,Baden-Baden,DE,2,2,Epoch Review,1,0.5,1,1
-344,Bath,US,2,2,Broccoli Mag,1,0.5,1,1
-345,Bergamo,IT,2,2,Epoch Review,1,0.5,1,1
-346,Bergen,NL,2,2,Nomad Magazine,1,0.5,1,1
-347,Brno,CZ,2,2,Gossamer,1,0.5,1,1
-348,Brockville,CA,2,2,Serviette,1,0.5,1,1
-349,Burlington,CA,2,2,Brick,1,0.5,1,1
-350,Cambridge,GB,2,2,Delayed Gratification,1,0.5,1,1
-351,Camden,US,2,2,Eaten,1,0.5,1,1
-352,Canberra,AU,2,2,Never Too Small,1,0.5,1,1
-353,Capitola,US,2,2,Broccoli Mag,1,0.5,1,1
-354,Carmarthen,GB,2,2,Delayed Gratification,1,0.5,1,1
-355,Chandler,US,2,2,Broccoli Mag,1,0.5,1,1
-356,Cheltenham,GB,2,2,Delayed Gratification,1,0.5,1,1
-357,Chula Vista,US,2,2,Broccoli Mag,1,0.5,1,1
-358,Cirencester,GB,2,2,Delayed Gratification,1,0.5,1,1
-359,Colchester,GB,2,2,Delayed Gratification,1,0.5,1,1
-360,Concord,US,2,2,The Drift,2,1.0,1,1
-361,Corfu,GR,2,2,Openhouse,1,0.5,1,1
-362,Corvallis,US,2,2,Kitchen Table,1,0.5,1,1
-363,Culver City,US,2,2,Cake Zine,1,0.5,1,1
-364,Curitiba,BR,2,2,Flaneur,1,0.5,1,1
-365,De Pere,US,2,2,Broccoli Mag,1,0.5,1,1
-366,Doylestown,US,2,2,The Drift,1,0.5,1,1
-367,Duluth,US,2,2,Broccoli Mag,1,0.5,1,1
-368,Dunfermline,GB,2,2,Broccoli Mag,1,0.5,1,1
-369,Eastbourne,GB,2,2,A Rabbit's Foot,1,0.5,1,1
-370,Edison,US,2,2,Eaten,1,0.5,1,1
-371,Erfurt,DE,2,2,Behind the Blinds,1,0.5,1,1
-372,Essen,DE,2,2,Epoch Review,1,0.5,1,1
-373,Fayetteville,US,2,2,Broccoli Mag,1,0.5,1,1
-374,Fort Collins,US,2,2,Broccoli Mag,1,0.5,1,1
-375,Freiburg,DE,2,2,Behind the Blinds,1,0.5,1,1
-376,Frenchtown,US,2,2,Broccoli Mag,1,0.5,1,1
-377,Friday Harbor,US,2,2,Like the Wind,1,0.5,1,1
-378,Fukuoka,JP,2,2,Flaneur,1,0.5,1,1
-379,Gateshead,GB,2,2,Senet,1,0.5,1,1
-380,Genoa,IT,2,2,Slanted,1,0.5,1,1
-381,Godalming,GB,2,2,Delayed Gratification,1,0.5,1,1
-382,Greenfield,US,2,2,SICK,1,0.5,1,1
-383,Hamilton,US,2,2,Broccoli Mag,2,1.0,1,1
-384,Hanover,DE,2,2,Epoch Review,1,0.5,1,1
-385,Hingham,US,2,2,Mother Tongue,1,0.5,1,1
-386,Hobart,AU,2,2,Lodestars Anthology,1,0.5,1,1
-387,Homer,US,2,2,Eaten,1,0.5,1,1
-388,Hove,GB,2,2,Delayed Gratification,1,0.5,1,1
-389,Hsinchu,TW,2,2,Behind the Blinds,1,0.5,1,1
-390,Irvine,US,2,2,Broccoli Mag,1,0.5,1,1
-391,Ithaca,US,2,2,Broccoli Mag,1,0.5,1,1
-392,Jersey City,US,2,2,Broccoli Mag,1,0.5,1,1
-393,Johns Island,US,2,2,Broccoli Mag,1,0.5,1,1
-394,Joshua Tree,US,2,2,Broccoli Mag,2,1.0,1,1
-395,Kaohsiung,TW,2,2,Behind the Blinds,1,0.5,1,1
-396,Kassel,DE,2,2,Epoch Review,1,0.5,1,1
-397,Kitchener,CA,2,2,Anorak,1,0.5,1,1
-398,Las Cruces,US,2,2,Gossamer,1,0.5,1,1
-399,Leamington Spa,GB,2,2,Delayed Gratification,1,0.5,1,1
-400,Leiden,NL,2,2,Behind the Blinds,1,0.5,1,1
-401,Lexington,US,2,2,Gossamer,1,0.5,1,1
-402,Lincoln,US,2,2,Broccoli Mag,1,0.5,1,1
-403,Lindau,DE,2,2,Luncheon,1,0.5,1,1
-404,Lymington,GB,2,2,Delayed Gratification,1,0.5,1,1
-405,Manzanita,US,2,2,Kitchen Table,1,0.5,1,1
-406,Memphis,US,2,2,Broccoli Mag,1,0.5,1,1
-407,Miami Beach,US,2,2,Anchoa,1,0.5,1,1
-408,Middlesbrough,GB,2,2,Delayed Gratification,1,0.5,1,1
-409,Mons,BE,2,2,Hunger,1,0.5,1,1
-410,Montclair,US,2,2,Eaten,1,0.5,1,1
-411,Montreuil,FR,2,2,GAZE,1,0.5,1,1
-412,Morpeth,GB,2,2,Delayed Gratification,1,0.5,1,1
-413,Naples,US,2,2,Broccoli Mag,1,0.5,1,1
-414,New Haven,US,2,2,Broccoli Mag,1,0.5,1,1
-415,New Hope,US,2,2,Broccoli Mag,1,0.5,1,1
-416,Newburgh,US,2,2,Cake Zine,1,0.5,1,1
-417,Nicosia,CY,2,2,Nomas,1,0.5,1,1
-418,North Adams,US,2,2,Different Leaf,1,0.5,1,1
-419,Nyack,US,2,2,Broccoli Mag,1,0.5,1,1
-420,Oak Park,US,2,2,Cherry Bombe,1,0.5,1,1
-421,Oceanside,US,2,2,Broccoli Mag,1,0.5,1,1
-422,Paddington,AU,2,2,Noble Rot,1,0.5,1,1
-423,Petaluma,US,2,2,Broccoli Mag,1,0.5,1,1
-424,Pickering,CA,2,2,photoED Magazine,2,1.0,1,1
-425,Portofino,IT,2,2,WHATEVR Fanzine,1,0.5,1,1
-426,Regensburg,DE,2,2,Luncheon,1,0.5,1,1
-427,Richmond Hill,CA,2,2,Brick,1,0.5,1,1
-428,Riga,LV,2,2,A Shade Colder,1,0.5,1,1
-429,Rockville,US,2,2,Serviette,1,0.5,1,1
-430,Saltaire,GB,2,2,Lodestars Anthology,2,1.0,1,1
-431,Shelton,US,2,2,Cake Zine,1,0.5,1,1
-432,Skipton,GB,2,2,Broccoli Mag,1,0.5,1,1
-433,South Pasadena,US,2,2,Broccoli Mag,1,0.5,1,1
-434,St. George,US,2,2,Broccoli Mag,1,0.5,1,1
-435,Stone Ridge,US,2,2,Broccoli Mag,1,0.5,1,1
-436,Stroud,GB,2,2,Delayed Gratification,1,0.5,1,1
-437,Surrey,CA,2,2,Brick,1,0.5,1,1
-438,Tainan,TW,2,2,Behind the Blinds,1,0.5,1,1
-439,Telluride,US,2,2,Broccoli Mag,1,0.5,1,1
-440,Tempe,US,2,2,Broccoli Mag,1,0.5,1,1
-441,Tetbury,GB,2,2,Noble Rot,1,0.5,1,1
-442,Tivoli,US,2,2,UPPERCASE,1,0.5,1,1
-443,Traverse City,US,2,2,Broccoli Mag,1,0.5,1,1
-444,Trois-Rivières,CA,2,2,Esse arts + opinions,1,0.5,1,1
-445,Tustin,US,2,2,Eaten,1,0.5,1,1
-446,Uccle,BE,2,2,GAZE,1,0.5,1,1
-447,Verona,IT,2,2,Luncheon,1,0.5,1,1
-448,Voorschoten,NL,2,2,Behind the Blinds,1,0.5,1,1
-449,Walnut Creek,US,2,2,Broccoli Mag,1,0.5,1,1
-450,Whistler,CA,2,2,Openhouse,1,0.5,1,1
-451,Worthing,GB,2,2,Anorak,1,0.5,1,1
-452,Zhenjiang,CN,2,2,Viscose Journal,2,1.0,1,1
-453,A Coruña,ES,2,1,MacGuffin,2,1.0,2,0
-454,Angers,FR,2,1,GAZE,2,1.0,2,0
-455,Arlington,US,2,1,Broccoli Mag,2,1.0,2,0
-456,Bastia,FR,2,1,GAZE,2,1.0,2,0
-457,Bengaluru,IN,2,1,Dhoop,2,1.0,2,0
-458,Braunschweig,DE,2,1,Luncheon,2,1.0,2,0
-459,Breda,NL,2,1,Nomad Magazine,2,1.0,2,0
-460,Cairo,EG,2,1,Slanted,2,1.0,2,0
-461,Cayucos,US,2,1,Broccoli Mag,2,1.0,2,0
-462,Coimbra,PT,2,1,Luncheon,2,1.0,2,0
-463,Cold Spring,US,2,1,Broccoli Mag,2,1.0,2,0
-464,Costa Mesa,US,2,1,Broccoli Mag,2,1.0,2,0
-465,Deauville,FR,2,1,GAZE,2,1.0,2,0
-466,Easton,US,2,1,Broccoli Mag,2,1.0,2,0
-467,Etterbeek,BE,2,1,Hunger,2,1.0,2,0
-468,Everett,US,2,1,Broccoli Mag,2,1.0,2,0
-469,Felton,US,2,1,Broccoli Mag,2,1.0,2,0
-470,Key West,US,2,1,Broccoli Mag,2,1.0,2,0
-471,Krakow,PL,2,1,Hunger,2,1.0,2,0
-472,Machynlleth,GB,2,1,Broccoli Mag,2,1.0,2,0
-473,Makawao,US,2,1,Broccoli Mag,2,1.0,2,0
-474,Mar del Plata,AR,2,1,Anchoa,2,1.0,2,0
-475,Mendocino,US,2,1,Broccoli Mag,2,1.0,2,0
-476,Nîmes,FR,2,1,GAZE,2,1.0,2,0
-477,Ocean City,US,2,1,Broccoli Mag,2,1.0,2,0
-478,Olhao,PT,2,1,Luncheon,2,1.0,2,0
-479,Philedelphia,US,2,1,Broccoli Mag,2,1.0,2,0
-480,Port Townsend,US,2,1,Broccoli Mag,2,1.0,2,0
-481,Providence,US,2,1,Elska,2,1.0,2,0
-482,Reykjavik,IS,2,1,Elska,2,1.0,2,0
-483,Ridgewood,US,2,1,Broccoli Mag,2,1.0,2,0
-484,Salida,US,2,1,Broccoli Mag,2,1.0,2,0
-485,Sanibel,US,2,1,Broccoli Mag,2,1.0,2,0
-486,Santa Cruz de Tenerife,ES,2,1,MacGuffin,2,1.0,2,0
-487,Santa Rosa Beach,US,2,1,Broccoli Mag,2,1.0,2,0
-488,Trondheim,NO,2,1,FUKT,2,1.0,2,0
-489,Viborg,DK,2,1,Luncheon,2,1.0,2,0
-490,Waterville,US,2,1,SICK,2,1.0,2,0
-491,Rushden,GB,1,18,A Rabbit's Foot,1,1.0,0,1
-492,Davis,US,1,12,Brick,1,1.0,0,1
-493,Swansea,US,1,12,Brick,1,1.0,0,1
-494,Lake Forest Park,US,1,7,Broccoli Mag,1,1.0,0,1
-495,Beirut,LB,1,4,Flaneur,1,1.0,0,1
-496,Kingston,CA,1,4,Brick,1,1.0,0,1
-497,North Vancouver,CA,1,4,Brick,1,1.0,0,1
-498,Oxted,GB,1,4,Like the Wind,1,1.0,0,1
-499,Terrace,CA,1,4,Brick,1,1.0,0,1
-500,Arezzo,IT,1,3,Nomad Magazine,1,1.0,0,1
-501,Bakersfield,US,1,3,Epoch Review,1,1.0,0,1
-502,Bolzano,IT,1,3,Epoch Review,1,1.0,0,1
-503,Carlton,US,1,3,Cake Zine,1,1.0,0,1
-504,Dawson Creek,CA,1,3,photoED Magazine,1,1.0,0,1
-505,Greenwood,CA,1,3,Brick,1,1.0,0,1
-506,Guelph,CA,1,3,Behind the Blinds,1,1.0,0,1
-507,Hadley,US,1,3,Epoch Review,1,1.0,0,1
-508,Hebden Bridge,GB,1,3,Advanture,1,1.0,0,1
-509,Ho Chi Minh City,VN,1,3,Hunger,1,1.0,0,1
-510,Holland,US,1,3,Drift,1,1.0,0,1
-511,Laval,CA,1,3,Behind the Blinds,1,1.0,0,1
-512,Menlo Park,US,1,3,Brick,1,1.0,0,1
-513,Mercer Island,US,1,3,Kitchen Table,1,1.0,0,1
-514,North Bay,CA,1,3,Eaten,1,1.0,0,1
-515,Noventa Padovana,IT,1,3,Behind the Blinds,1,1.0,0,1
-516,Orillia,CA,1,3,Brick,1,1.0,0,1
-517,Picton,CA,1,3,Brick,1,1.0,0,1
-518,Plovdiv,BG,1,3,Eaten,1,1.0,0,1
-519,Pound Ridge,US,1,3,Delayed Gratification,1,1.0,0,1
-520,Prato,IT,1,3,Behind the Blinds,1,1.0,0,1
-521,Sapporo,JP,1,3,FUKT,1,1.0,0,1
-522,South Burlington,US,1,3,Epoch Review,1,1.0,0,1
-523,Springfield,US,1,3,Epoch Review,1,1.0,0,1
-524,Ajax,CA,1,2,Brick,1,1.0,0,1
-525,Aliso Viejo,US,1,2,Epoch Review,1,1.0,0,1
-526,Altoona,US,1,2,Gossamer,1,1.0,0,1
-527,Ancaster,CA,1,2,Brick,1,1.0,0,1
-528,Belfast,US,1,2,Selvedge,1,1.0,0,1
-529,Blaine,US,1,2,Broccoli Mag,1,1.0,0,1
-530,Bloemendaal,NL,1,2,Behind the Blinds,1,1.0,0,1
-531,Buchanan,US,1,2,Brick,1,1.0,0,1
-532,Calabasas,US,1,2,Epoch Review,1,1.0,0,1
-533,Chengdu,CN,1,2,MacGuffin,1,1.0,0,1
-534,Chiang Mai,TH,1,2,Broccoli Mag,1,1.0,0,1
-535,Clayton,US,1,2,Broccoli Mag,1,1.0,0,1
-536,Coleraine,GB,1,2,Drift,1,1.0,0,1
-537,Coquitlam,CA,1,2,Brick,1,1.0,0,1
-538,Corner Brook,CA,1,2,photoED Magazine,1,1.0,0,1
-539,Cranbrook,CA,1,2,Serviette,1,1.0,0,1
-540,Dartmouth,CA,1,2,Brick,1,1.0,0,1
-541,Dieppe,CA,1,2,Brick,1,1.0,0,1
-542,Eastsound,US,1,2,Cake Zine,1,1.0,0,1
-543,Elkins,US,1,2,Broccoli Mag,1,1.0,0,1
-544,Falmouth,GB,1,2,Delayed Gratification,1,1.0,0,1
-545,Galiano Island,CA,1,2,Serviette,1,1.0,0,1
-546,Gilroy,US,1,2,Epoch Review,1,1.0,0,1
-547,Grande Prairie,CA,1,2,photoED Magazine,1,1.0,0,1
-548,Green Bay,US,1,2,Epoch Review,1,1.0,0,1
-549,Guangzhou,CN,1,2,Hunger,1,1.0,0,1
-550,Hastings,GB,1,2,The Erotic Review,1,1.0,0,1
-551,Humlebæk,DK,1,2,Sindroms,1,1.0,0,1
-552,Hyannis,US,1,2,Gossamer,1,1.0,0,1
-553,Hydra,GR,1,2,Serviette,1,1.0,0,1
-554,Jesolo,IT,1,2,Nomad Magazine,1,1.0,0,1
-555,Kahului,US,1,2,Epoch Review,1,1.0,0,1
-556,Langley,CA,1,2,Brick,1,1.0,0,1
-557,Lynchburg,US,1,2,Gossamer,1,1.0,0,1
-558,Marietta,US,1,2,Broccoli Mag,1,1.0,0,1
-559,Milton,CA,1,2,Behind the Blinds,1,1.0,0,1
-560,Nairobi,KE,1,2,Noble Rot,1,1.0,0,1
-561,Nepean,CA,1,2,Brick,1,1.0,0,1
-562,Newburyport,US,1,2,Brick,1,1.0,0,1
-563,Newport Beach,US,1,2,Epoch Review,1,1.0,0,1
-564,Oak Brook,US,1,2,Epoch Review,1,1.0,0,1
-565,Oegstgeest,NL,1,2,Behind the Blinds,1,1.0,0,1
-566,Orford,GB,1,2,MacGuffin,1,1.0,0,1
-567,Oxford,US,1,2,Brick,1,1.0,0,1
-568,Pasig,PH,1,2,Cake Zine,1,1.0,0,1
-569,Peterborough,CA,1,2,Brick,1,1.0,0,1
-570,Port Medway,CA,1,2,Serviette,1,1.0,0,1
-571,Provo,US,1,2,A Rabbit's Foot,1,1.0,0,1
-572,Rockland,US,1,2,Broccoli Mag,1,1.0,0,1
-573,Roseville,US,1,2,Epoch Review,1,1.0,0,1
-574,Ruthin,GB,1,2,Selvedge,1,1.0,0,1
-575,Saint John,CA,1,2,Brick,1,1.0,0,1
-576,San Jose,US,1,2,Epoch Review,1,1.0,0,1
-577,Shiga,JP,1,2,FARE,1,1.0,0,1
-578,Sidney,CA,1,2,photoED Magazine,1,1.0,0,1
-579,Skokie,US,1,2,Epoch Review,1,1.0,0,1
-580,St. Albert,CA,1,2,Brick,1,1.0,0,1
-581,St. Helena,US,1,2,Cherry Bombe,1,1.0,0,1
-582,Swalwell,GB,1,2,Noble Rot,1,1.0,0,1
-583,Taichung,TW,1,2,Behind the Blinds,1,1.0,0,1
-584,Thousand Oaks,US,1,2,Epoch Review,1,1.0,0,1
-585,Thunder Bay,CA,1,2,Brick,1,1.0,0,1
-586,Tulsa,US,1,2,Epoch Review,1,1.0,0,1
-587,West Kirby,GB,1,2,Never Too Small,1,1.0,0,1
-588,Winchester,GB,1,2,Luncheon,1,1.0,0,1
-589,Woodmere,US,1,2,Epoch Review,1,1.0,0,1
-590,Aarhus,DK,1,1,Senet,1,1.0,1,0
-591,Aberdeen,GB,1,1,Delayed Gratification,1,1.0,1,0
-592,Aberystwyth,GB,1,1,Delayed Gratification,1,1.0,1,0
-593,Abington,US,1,1,Broccoli Mag,1,1.0,1,0
-594,Accord,US,1,1,Yolo Journal,1,1.0,1,0
-595,Agoura Hills,US,1,1,Eaten,1,1.0,1,0
-596,Ahmedabad,IN,1,1,Dhoop,1,1.0,1,0
-597,Aix-en-Provence,FR,1,1,GAZE,1,1.0,1,0
-598,Aix-les-Bains,FR,1,1,GAZE,1,1.0,1,0
-599,Ajaccio,FR,1,1,GAZE,1,1.0,1,0
-600,Akureyri,IS,1,1,Elska,1,1.0,1,0
-601,Alameda,US,1,1,Broccoli Mag,1,1.0,1,0
-602,Aldgate,AU,1,1,Lodestars Anthology,1,1.0,1,0
-603,Alfriston,GB,1,1,UPPERCASE,1,1.0,1,0
-604,Aljezur,PT,1,1,Luncheon,1,1.0,1,0
-605,Allinge,DK,1,1,Luncheon,1,1.0,1,0
-606,Alpharetta,US,1,1,Broccoli Mag,1,1.0,1,0
-607,Altrincham,GB,1,1,Delayed Gratification,1,1.0,1,0
-608,Amagansett,US,1,1,Yolo Journal,1,1.0,1,0
-609,Amberley,NZ,1,1,Noble Rot,1,1.0,1,0
-610,Amenia,US,1,1,Broccoli Mag,1,1.0,1,0
-611,Amherst,US,1,1,Broccoli Mag,1,1.0,1,0
-612,Amiens,FR,1,1,GAZE,1,1.0,1,0
-613,Amityville,US,1,1,Broccoli Mag,1,1.0,1,0
-614,Andes,US,1,1,Broccoli Mag,1,1.0,1,0
-615,Andover,GB,1,1,Delayed Gratification,1,1.0,1,0
-616,Andratx,ES,1,1,MacGuffin,1,1.0,1,0
-617,Angoulême,FR,1,1,GAZE,1,1.0,1,0
-618,Ankeny,US,1,1,Drift,1,1.0,1,0
-619,Ann Arbor,US,1,1,Serviette,1,1.0,1,0
-620,Arbroath,GB,1,1,Delayed Gratification,1,1.0,1,0
-621,Arcata,US,1,1,The Drift,1,1.0,1,0
-622,Arzachena,IT,1,1,Yolo Journal,1,1.0,1,0
-623,Arès,FR,1,1,GAZE,1,1.0,1,0
-624,Ashby-de-la-Zouch,GB,1,1,Delayed Gratification,1,1.0,1,0
-625,Asnæs,DK,1,1,Luncheon,1,1.0,1,0
-626,Augsburg,DE,1,1,Openhouse,1,1.0,1,0
-627,Augusta,US,1,1,Gossamer,1,1.0,1,0
-628,Avalon,US,1,1,Broccoli Mag,1,1.0,1,0
-629,Ayr,CA,1,1,photoED Magazine,1,1.0,1,0
-630,Bagnolet,FR,1,1,GAZE,1,1.0,1,0
-631,Bainbridge Island,US,1,1,Broccoli Mag,1,1.0,1,0
-632,Bali,ID,1,1,Cake Zine,1,1.0,1,0
-633,Banbury,GB,1,1,Delayed Gratification,1,1.0,1,0
-634,Bangsar,MY,1,1,Esse arts + opinions,1,1.0,1,0
-635,Barda del Medio,AR,1,1,Anchoa,1,1.0,1,0
-636,Barendrecht,NL,1,1,Nomad Magazine,1,1.0,1,0
-637,Barnstaple,GB,1,1,Delayed Gratification,1,1.0,1,0
-638,Barrie,CA,1,1,photoED Magazine,1,1.0,1,0
-639,Basel,DE,1,1,Luncheon,1,1.0,1,0
-640,Baton Rouge,US,1,1,Epoch Review,1,1.0,1,0
-641,Bearsville,US,1,1,Broccoli Mag,1,1.0,1,0
-642,Beauvais,FR,1,1,GAZE,1,1.0,1,0
-643,Bedford,US,1,1,Broccoli Mag,1,1.0,1,0
-644,Beeston,GB,1,1,Delayed Gratification,1,1.0,1,0
-645,Belfast,GB,1,1,Record Magazine,1,1.0,1,0
-646,Belgrade,RS,1,1,Noble Rot,1,1.0,1,0
-647,Belleville,CA,1,1,photoED Magazine,1,1.0,1,0
-648,Bentonville,US,1,1,Cake Zine,1,1.0,1,0
-649,Berkhamsted,GB,1,1,Delayed Gratification,1,1.0,1,0
-650,Berrima,AU,1,1,Lodestars Anthology,1,1.0,1,0
-651,Berry,AU,1,1,Record Magazine,1,1.0,1,0
-652,Bethesda,US,1,1,Serviette,1,1.0,1,0
-653,Bexhill-on-Sea,GB,1,1,Delayed Gratification,1,1.0,1,0
-654,Bideford,GB,1,1,FARE,1,1.0,1,0
-655,Bielefeld,DE,1,1,Luncheon,1,1.0,1,0
-656,Billings,US,1,1,Selvedge,1,1.0,1,0
-657,Bingen,US,1,1,Broccoli Mag,1,1.0,1,0
-658,Birmingham,US,1,1,Mother Tongue,1,1.0,1,0
-659,Bisbee,US,1,1,Broccoli Mag,1,1.0,1,0
-660,Blackwood,US,1,1,Broccoli Mag,1,1.0,1,0
-661,Blagnac,FR,1,1,GAZE,1,1.0,1,0
-662,Blaricum,NL,1,1,Nomad Magazine,1,1.0,1,0
-663,Boca Raton,US,1,1,Epoch Review,1,1.0,1,0
-664,Bochum,DE,1,1,Luncheon,1,1.0,1,0
-665,Bodrum,TR,1,1,YUZU,1,1.0,1,0
-666,Bonn,DE,1,1,Luncheon,1,1.0,1,0
-667,Bourbonnais,US,1,1,Gossamer,1,1.0,1,0
-668,Bourg-la-Reine,FR,1,1,GAZE,1,1.0,1,0
-669,Boxtel,NL,1,1,Nomad Magazine,1,1.0,1,0
-670,Braintree,US,1,1,Gossamer,1,1.0,1,0
-671,Brampton,CA,1,1,photoED Magazine,1,1.0,1,0
-672,Brattleboro,US,1,1,Broccoli Mag,1,1.0,1,0
-673,Brentwood,US,1,1,Luncheon,1,1.0,1,0
-674,Brescia,IT,1,1,WHATEVR Fanzine,1,1.0,1,0
-675,Briançon,FR,1,1,GAZE,1,1.0,1,0
-676,Bridgehampton,US,1,1,Broccoli Mag,1,1.0,1,0
-677,Bridlington,GB,1,1,Delayed Gratification,1,1.0,1,0
-678,Bridport,GB,1,1,Delayed Gratification,1,1.0,1,0
-679,Brighton,US,1,1,Eaten,1,1.0,1,0
-680,Brossard,CA,1,1,Behind the Blinds,1,1.0,1,0
-681,Brunswick,US,1,1,Broccoli Mag,1,1.0,1,0
-682,Buchloe,DE,1,1,Luncheon,1,1.0,1,0
-683,Bude,GB,1,1,Eaten,1,1.0,1,0
-684,Buena Park,US,1,1,Luncheon,1,1.0,1,0
-685,Burdett,US,1,1,Noble Rot,1,1.0,1,0
-686,Burlingame,US,1,1,Like the Wind,1,1.0,1,0
-687,Burnsville,US,1,1,Epoch Review,1,1.0,1,0
-688,Busan,KR,1,1,See All This,1,1.0,1,0
-689,Bush Hill Park,GB,1,1,Broccoli Mag,1,1.0,1,0
-690,Bègles,FR,1,1,GAZE,1,1.0,1,0
-691,Cairo,US,1,1,Family Style,1,1.0,1,0
-692,Caldas Da Rainha,PT,1,1,Luncheon,1,1.0,1,0
-693,California,US,1,1,Broccoli Mag,1,1.0,1,0
-694,Callicoon,US,1,1,Yolo Journal,1,1.0,1,0
-695,Calvi,FR,1,1,GAZE,1,1.0,1,0
-696,Caminha,PT,1,1,Luncheon,1,1.0,1,0
-697,Campbell,US,1,1,Broccoli Mag,1,1.0,1,0
-698,Campbellton,CA,1,1,photoED Magazine,1,1.0,1,0
-699,Canandaigua,US,1,1,Eaten,1,1.0,1,0
-700,Canmore,CA,1,1,Broccoli Mag,1,1.0,1,0
-701,Cannes,FR,1,1,Muse Magazine,1,1.0,1,0
-702,Cannon Beach,US,1,1,Broccoli Mag,1,1.0,1,0
-703,Carle Place,US,1,1,Epoch Review,1,1.0,1,0
-704,Carlsbad,US,1,1,Cake Zine,1,1.0,1,0
-705,Carmel Valley,US,1,1,Broccoli Mag,1,1.0,1,0
-706,Carpi,IT,1,1,WHATEVR Fanzine,1,1.0,1,0
-707,Cary,US,1,1,Broccoli Mag,1,1.0,1,0
-708,Casole d'Elsa,IT,1,1,Yolo Journal,1,1.0,1,0
-709,Catskill,US,1,1,Never Too Small,1,1.0,1,0
-710,Cavalaire-sur-Mer,FR,1,1,GAZE,1,1.0,1,0
-711,Cave City,US,1,1,Broccoli Mag,1,1.0,1,0
-712,Cedar Rapids,US,1,1,UPPERCASE,1,1.0,1,0
-713,Center Valley,US,1,1,Epoch Review,1,1.0,1,0
-714,Centerport,US,1,1,Eaten,1,1.0,1,0
-715,Cervia,IT,1,1,WHATEVR Fanzine,1,1.0,1,0
-716,Cesena,IT,1,1,WHATEVR Fanzine,1,1.0,1,0
-717,Cesson-Sévigné,FR,1,1,GAZE,1,1.0,1,0
-718,Chapel Hill,US,1,1,Kitchen Table,1,1.0,1,0
-719,Charleroi,BE,1,1,Hunger,1,1.0,1,0
-720,Charlottesville,US,1,1,Broccoli Mag,1,1.0,1,0
-721,Charlottetown,CA,1,1,photoED Magazine,1,1.0,1,0
-722,Chartres,FR,1,1,GAZE,1,1.0,1,0
-723,Chatham,US,1,1,Yolo Journal,1,1.0,1,0
-724,Chattanooga,US,1,1,Cherry Bombe,1,1.0,1,0
-725,Chelmsford,GB,1,1,Delayed Gratification,1,1.0,1,0
-726,Chennai,IN,1,1,Dhoop,1,1.0,1,0
-727,Chesham,GB,1,1,Delayed Gratification,1,1.0,1,0
-728,Cheshire,US,1,1,Broccoli Mag,1,1.0,1,0
-729,Chester,GB,1,1,Delayed Gratification,1,1.0,1,0
-730,Chevy Chase,US,1,1,Serviette,1,1.0,1,0
-731,Chichester,GB,1,1,Delayed Gratification,1,1.0,1,0
-732,Chippenham,GB,1,1,Delayed Gratification,1,1.0,1,0
-733,Christchurch,GB,1,1,Delayed Gratification,1,1.0,1,0
-734,Cleveland Heights,US,1,1,Broccoli Mag,1,1.0,1,0
-735,Cobham,GB,1,1,Anorak,1,1.0,1,0
-736,Collingswood,US,1,1,Yolo Journal,1,1.0,1,0
-737,Collingwood,CA,1,1,Eaten,1,1.0,1,0
-738,Columbia,US,1,1,Broccoli Mag,1,1.0,1,0
-739,Comox,CA,1,1,Broccoli Mag,1,1.0,1,0
-740,Connecticut,US,1,1,Dirty Magazine,1,1.0,1,0
-741,Conshohocken,US,1,1,Like the Wind,1,1.0,1,0
-742,Cornwall,GB,1,1,Lodestars Anthology,1,1.0,1,0
-743,Corpus Christi,US,1,1,Broccoli Mag,1,1.0,1,0
-744,Cortland,US,1,1,Cake Zine,1,1.0,1,0
-745,Cowbridge,GB,1,1,Delayed Gratification,1,1.0,1,0
-746,Cranberry Township,US,1,1,Gossamer,1,1.0,1,0
-747,Croydon Hills,AU,1,1,Noble Rot,1,1.0,1,0
-748,Cumberland,US,1,1,Cherry Bombe,1,1.0,1,0
-749,Currumbin,AU,1,1,Broccoli Mag,1,1.0,1,0
-750,Cygnet,AU,1,1,Lodestars Anthology,1,1.0,1,0
-751,Daegu,KR,1,1,MacGuffin,1,1.0,1,0
-752,Dagenham,GB,1,1,Brick,1,1.0,1,0
-753,Dalfsen,NL,1,1,Openhouse,1,1.0,1,0
-754,Damascus,US,1,1,Broccoli Mag,1,1.0,1,0
-755,Danvers,US,1,1,Broccoli Mag,1,1.0,1,0
-756,Danville,US,1,1,Broccoli Mag,1,1.0,1,0
-757,Davenport,US,1,1,Broccoli Mag,1,1.0,1,0
-758,Daylesford,AU,1,1,Record Magazine,1,1.0,1,0
-759,Dayton,US,1,1,Cake Zine,1,1.0,1,0
-760,De Haan,BE,1,1,Hunger,1,1.0,1,0
-761,Deadwood,US,1,1,Broccoli Mag,1,1.0,1,0
-762,Deal,GB,1,1,Delayed Gratification,1,1.0,1,0
-763,Dearborn,US,1,1,The Drift,1,1.0,1,0
-764,Decorah,US,1,1,Eaten,1,1.0,1,0
-765,Delhi,IN,1,1,Dhoop,1,1.0,1,0
-766,Des Peres,US,1,1,Epoch Review,1,1.0,1,0
-767,Devizes,GB,1,1,Delayed Gratification,1,1.0,1,0
-768,Digne-les-Bains,FR,1,1,GAZE,1,1.0,1,0
-769,Dijon,FR,1,1,Openhouse,1,1.0,1,0
-770,Dinard,FR,1,1,GAZE,1,1.0,1,0
-771,Dionne-les-Bains,FR,1,1,GAZE,1,1.0,1,0
-772,Dobbs Ferry,US,1,1,Mother Tongue,1,1.0,1,0
-773,Doorn,NL,1,1,Nomad Magazine,1,1.0,1,0
-774,Dorchester,GB,1,1,Delayed Gratification,1,1.0,1,0
-775,Dortmund,DE,1,1,Luncheon,1,1.0,1,0
-776,Dresden,DE,1,1,Epoch Review,1,1.0,1,0
-777,Dubbo,AU,1,1,Lodestars Anthology,1,1.0,1,0
-778,Dublin,US,1,1,Epoch Review,1,1.0,1,0
-779,Dumfries,GB,1,1,Delayed Gratification,1,1.0,1,0
-780,Dundee,US,1,1,Broccoli Mag,1,1.0,1,0
-781,Dunedin,NZ,1,1,Mother Tongue,1,1.0,1,0
-782,Dunkeld,GB,1,1,Noble Rot,1,1.0,1,0
-783,Dunsborough,AU,1,1,Lodestars Anthology,1,1.0,1,0
-784,East Lansing,US,1,1,Selvedge,1,1.0,1,0
-785,Eau Claire,US,1,1,Cake Zine,1,1.0,1,0
-786,Edgecomb,US,1,1,Yolo Journal,1,1.0,1,0
-787,Edgware,GB,1,1,Delayed Gratification,1,1.0,1,0
-788,Edina,US,1,1,Serviette,1,1.0,1,0
-789,Edmonds,US,1,1,Kitchen Table,1,1.0,1,0
-790,Eindhoven,BE,1,1,Esse arts + opinions,1,1.0,1,0
-791,El Cajon,US,1,1,Broccoli Mag,1,1.0,1,0
-792,Ellsworth,US,1,1,Broccoli Mag,1,1.0,1,0
-793,Emerald,AU,1,1,Broccoli Mag,1,1.0,1,0
-794,Emeryville,US,1,1,Epoch Review,1,1.0,1,0
-795,Enfield,GB,1,1,Delayed Gratification,1,1.0,1,0
-796,Enterprise,US,1,1,Kitchen Table,1,1.0,1,0
-797,Epping,GB,1,1,Delayed Gratification,1,1.0,1,0
-798,Epsom,GB,1,1,Delayed Gratification,1,1.0,1,0
-799,Eragny,FR,1,1,GAZE,1,1.0,1,0
-800,Erlangen,DE,1,1,Epoch Review,1,1.0,1,0
-801,Esch-sur-Alzette,LU,1,1,12F,1,1.0,1,0
-802,Essex,US,1,1,Broccoli Mag,1,1.0,1,0
-803,Estoril,PT,1,1,Luncheon,1,1.0,1,0
-804,Eureka,US,1,1,UPPERCASE,1,1.0,1,0
-805,Evian-les-Bains,FR,1,1,GAZE,1,1.0,1,0
-806,Evora,PT,1,1,Luncheon,1,1.0,1,0
-807,Exeter,GB,1,1,Delayed Gratification,1,1.0,1,0
-808,Exmouth,GB,1,1,Delayed Gratification,1,1.0,1,0
-809,Exton,US,1,1,Broccoli Mag,1,1.0,1,0
-810,Fair Oaks,US,1,1,Broccoli Mag,1,1.0,1,0
-811,Fairfax Station,US,1,1,UPPERCASE,1,1.0,1,0
-812,Fairfield,US,1,1,Broccoli Mag,1,1.0,1,0
-813,Falls Church,US,1,1,Epoch Review,1,1.0,1,0
-814,Fargo,US,1,1,Epoch Review,1,1.0,1,0
-815,Farnham,GB,1,1,Delayed Gratification,1,1.0,1,0
-816,Ferndale,US,1,1,Broccoli Mag,1,1.0,1,0
-817,Ferrara,IT,1,1,A Rabbit's Foot,1,1.0,1,0
-818,Fiesole,IT,1,1,Yolo Journal,1,1.0,1,0
-819,Figueira da Foz,PT,1,1,Luncheon,1,1.0,1,0
-820,Fire Island,US,1,1,Elska,1,1.0,1,0
-821,Fish Creek,US,1,1,Broccoli Mag,1,1.0,1,0
-822,Fleming Island,US,1,1,Broccoli Mag,1,1.0,1,0
-823,Flinders,AU,1,1,Broccoli Mag,1,1.0,1,0
-824,Foothills,CA,1,1,Broccoli Mag,1,1.0,1,0
-825,Forest Hill,GB,1,1,Delayed Gratification,1,1.0,1,0
-826,Forio,IT,1,1,Yolo Journal,1,1.0,1,0
-827,Fort Gratiot,US,1,1,Gossamer,1,1.0,1,0
-828,Fort Wayne,US,1,1,Gossamer,1,1.0,1,0
-829,Fredericton,CA,1,1,photoED Magazine,1,1.0,1,0
-830,Frederiksberg,DK,1,1,The Skirt Chronicles,1,1.0,1,0
-831,Fredrikstad,NO,1,1,Noble Rot,1,1.0,1,0
-832,Freehold,US,1,1,Epoch Review,1,1.0,1,0
-833,Frejus,FR,1,1,Muse Magazine,1,1.0,1,0
-834,Frisco,US,1,1,Broccoli Mag,1,1.0,1,0
-835,Frodsham,GB,1,1,Delayed Gratification,1,1.0,1,0
-836,Frome,GB,1,1,Delayed Gratification,1,1.0,1,0
-837,Fullerton,US,1,1,Broccoli Mag,1,1.0,1,0
-838,Furiani,FR,1,1,GAZE,1,1.0,1,0
-839,Galesburg,US,1,1,The Drift,1,1.0,1,0
-840,Galway,IE,1,1,Eaten,1,1.0,1,0
-841,Gdansk,PL,1,1,Hunger,1,1.0,1,0
-842,Gearhart,US,1,1,Eaten,1,1.0,1,0
-843,Gerichshain,DE,1,1,Luncheon,1,1.0,1,0
-844,Getxo,ES,1,1,Openhouse,1,1.0,1,0
-845,Gibsons,CA,1,1,Mother Tongue,1,1.0,1,0
-846,Gillingham,GB,1,1,Delayed Gratification,1,1.0,1,0
-847,Glen Burnie,US,1,1,Senet,1,1.0,1,0
-848,Glen Rock,US,1,1,Broccoli Mag,1,1.0,1,0
-849,Gloucester,CA,1,1,Brick,1,1.0,1,0
-850,Godoy Cruz,AR,1,1,Anchoa,1,1.0,1,0
-851,Gold Coast,AU,1,1,Openhouse,1,1.0,1,0
-852,Goodyear,US,1,1,Epoch Review,1,1.0,1,0
-853,Greenport,US,1,1,Broccoli Mag,1,1.0,1,0
-854,Greenville,US,1,1,Yolo Journal,1,1.0,1,0
-855,Gualala,US,1,1,Broccoli Mag,1,1.0,1,0
-856,Guatemala City,GT,1,1,Anchoa,1,1.0,1,0
-857,Guildford,GB,1,1,Delayed Gratification,1,1.0,1,0
-858,Haapsalu,EE,1,1,A Shade Colder,1,1.0,1,0
-859,Haddonfield,US,1,1,Broccoli Mag,1,1.0,1,0
-860,Hagen,DE,1,1,Epoch Review,1,1.0,1,0
-861,Hailsham,GB,1,1,Advanture,1,1.0,1,0
-862,Hamlin,US,1,1,Broccoli Mag,1,1.0,1,0
-863,Hammel,DK,1,1,Luncheon,1,1.0,1,0
-864,Harbor Springs,US,1,1,Broccoli Mag,1,1.0,1,0
-865,Harlingen,US,1,1,Broccoli Mag,1,1.0,1,0
-866,Harpenden,GB,1,1,Delayed Gratification,1,1.0,1,0
-867,Harrogate,GB,1,1,Delayed Gratification,1,1.0,1,0
-868,Harrow,GB,1,1,Delayed Gratification,1,1.0,1,0
-869,Haslemere,GB,1,1,Delayed Gratification,1,1.0,1,0
-870,"Hastings Old Town, East Sussex",GB,1,1,Broccoli Mag,1,1.0,1,0
-871,Havertown,US,1,1,Broccoli Mag,1,1.0,1,0
-872,Hawkesbury,CA,1,1,Serviette,1,1.0,1,0
-873,Haworth,GB,1,1,Selvedge,1,1.0,1,0
-874,Haywards Heath,GB,1,1,Delayed Gratification,1,1.0,1,0
-875,Healdsburg,US,1,1,Cherry Bombe,1,1.0,1,0
-876,Heemstede,NL,1,1,See All This,1,1.0,1,0
-877,Helensburgh,GB,1,1,Delayed Gratification,1,1.0,1,0
-878,Hellerup,DK,1,1,The Skirt Chronicles,1,1.0,1,0
-879,Henderson,US,1,1,Serviette,1,1.0,1,0
-880,Henley-on-Thames,GB,1,1,Delayed Gratification,1,1.0,1,0
-881,Henningsvaer,NO,1,1,Delayed Gratification,1,1.0,1,0
-882,Hereford,GB,1,1,Delayed Gratification,1,1.0,1,0
-883,Herefordshire,GB,1,1,The Erotic Review,1,1.0,1,0
-884,Herning,DK,1,1,Luncheon,1,1.0,1,0
-885,Hilliard,US,1,1,Broccoli Mag,1,1.0,1,0
-886,Hillsboro,US,1,1,Serviette,1,1.0,1,0
-887,Hilversum,NL,1,1,Nomad Magazine,1,1.0,1,0
-888,Hirtshals,DK,1,1,Luncheon,1,1.0,1,0
-889,Hitchin,GB,1,1,Delayed Gratification,1,1.0,1,0
-890,Hobro,DK,1,1,Luncheon,1,1.0,1,0
-891,Holbæk,DK,1,1,Luncheon,1,1.0,1,0
-892,Holmdel,US,1,1,Broccoli Mag,1,1.0,1,0
-893,Holstebro,DK,1,1,Luncheon,1,1.0,1,0
-894,Holyoke,US,1,1,Gossamer,1,1.0,1,0
-895,Homestead,US,1,1,Epoch Review,1,1.0,1,0
-896,Honiton,GB,1,1,Delayed Gratification,1,1.0,1,0
-897,Hood River,US,1,1,UPPERCASE,1,1.0,1,0
-898,Hopkins,US,1,1,Broccoli Mag,1,1.0,1,0
-899,Horsham,GB,1,1,Delayed Gratification,1,1.0,1,0
-900,Huesca,ES,1,1,MacGuffin,1,1.0,1,0
-901,Hull,GB,1,1,Delayed Gratification,1,1.0,1,0
-902,Hundested,DK,1,1,Luncheon,1,1.0,1,0
-903,Hungerford,GB,1,1,Delayed Gratification,1,1.0,1,0
-904,Huntington,US,1,1,Broccoli Mag,1,1.0,1,0
-905,Huntington Station,US,1,1,The Drift,1,1.0,1,0
-906,Hygiene,US,1,1,Broccoli Mag,1,1.0,1,0
-907,Ibiza,ES,1,1,Openhouse,1,1.0,1,0
-908,Idyllwild,US,1,1,Broccoli Mag,1,1.0,1,0
-909,Ifold,GB,1,1,Slanted,1,1.0,1,0
-910,Ilkley,GB,1,1,Delayed Gratification,1,1.0,1,0
-911,Inverness,US,1,1,Broccoli Mag,1,1.0,1,0
-912,Inverness,GB,1,1,Delayed Gratification,1,1.0,1,0
-913,Islamabad,PK,1,1,The Skirt Chronicles,1,1.0,1,0
-914,Isle of Skye,GB,1,1,Lodestars Anthology,1,1.0,1,0
-915,Issaquah,US,1,1,Serviette,1,1.0,1,0
-916,Ivry-sur-Seine,FR,1,1,GAZE,1,1.0,1,0
-917,Jaipur,IN,1,1,Dhoop,1,1.0,1,0
-918,Jakarta,ID,1,1,Never Too Small,1,1.0,1,0
-919,Jefferson City,US,1,1,Mother Tongue,1,1.0,1,0
-920,Jerome,US,1,1,Noble Rot,1,1.0,1,0
-921,Jindalee,AU,1,1,Senet,1,1.0,1,0
-922,Johannesburg,ZA,1,1,MacGuffin,1,1.0,1,0
-923,Johnson City,US,1,1,Serviette,1,1.0,1,0
-924,Joliette,CA,1,1,Esse arts + opinions,1,1.0,1,0
-925,Kailua,US,1,1,Broccoli Mag,1,1.0,1,0
-926,Kailua-Kona,US,1,1,Yolo Journal,1,1.0,1,0
-927,Kallithea,GR,1,1,Nomas,1,1.0,1,0
-928,Kallstadt,DE,1,1,Noble Rot,1,1.0,1,0
-929,Kanata,CA,1,1,Epoch Review,1,1.0,1,0
-930,Kanazawa,JP,1,1,Openhouse,1,1.0,1,0
-931,Kansas City,US,1,1,Epoch Review,1,1.0,1,0
-932,Kapaa,US,1,1,Broccoli Mag,1,1.0,1,0
-933,Katy,US,1,1,Broccoli Mag,1,1.0,1,0
-934,Kehl,DE,1,1,Luncheon,1,1.0,1,0
-935,Kelowna,CA,1,1,UPPERCASE,1,1.0,1,0
-936,Kelso,GB,1,1,FARE,1,1.0,1,0
-937,Kenora,CA,1,1,UPPERCASE,1,1.0,1,0
-938,Kifissia,GR,1,1,Nomas,1,1.0,1,0
-939,Kilauea,US,1,1,Broccoli Mag,1,1.0,1,0
-940,King of Prussia,US,1,1,Muse Magazine,1,1.0,1,0
-941,King's Lynn,GB,1,1,Delayed Gratification,1,1.0,1,0
-942,Kittery,US,1,1,Cake Zine,1,1.0,1,0
-943,Kobe,JP,1,1,MacGuffin,1,1.0,1,0
-944,Koblenz,DE,1,1,Epoch Review,1,1.0,1,0
-945,Kochi,IN,1,1,Dhoop,1,1.0,1,0
-946,Kolding,DK,1,1,Luncheon,1,1.0,1,0
-947,Kopavogur,IS,1,1,Elska,1,1.0,1,0
-948,Kota Kinabalu,MY,1,1,Plates,1,1.0,1,0
-949,Kuching,MY,1,1,Plates,1,1.0,1,0
-950,Kula,US,1,1,Broccoli Mag,1,1.0,1,0
-951,Kurashiki,JP,1,1,Openhouse,1,1.0,1,0
-952,L'Île-d'Yeu,FR,1,1,GAZE,1,1.0,1,0
-953,La Crosse,US,1,1,Broccoli Mag,1,1.0,1,0
-954,La Grange,US,1,1,Broccoli Mag,1,1.0,1,0
-955,La Roche-Bernard,FR,1,1,GAZE,1,1.0,1,0
-956,La Rochelle,FR,1,1,GAZE,1,1.0,1,0
-957,Ladispoli,IT,1,1,Yolo Journal,1,1.0,1,0
-958,Laguna Beach,US,1,1,Broccoli Mag,1,1.0,1,0
-959,Lake Oswego,US,1,1,Broccoli Mag,1,1.0,1,0
-960,Landers,US,1,1,Broccoli Mag,1,1.0,1,0
-961,Landvetter,SE,1,1,Luncheon,1,1.0,1,0
-962,Langley,US,1,1,Broccoli Mag,1,1.0,1,0
-963,Langley Township,CA,1,1,Broccoli Mag,1,1.0,1,0
-964,Laredo,US,1,1,Luncheon,1,1.0,1,0
-965,Las Palmas de Gran Canaria,ES,1,1,MacGuffin,1,1.0,1,0
-966,Lawrence,US,1,1,Broccoli Mag,1,1.0,1,0
-967,Lawrence Township,US,1,1,Broccoli Mag,1,1.0,1,0
-968,Lawrenceburg,US,1,1,Broccoli Mag,1,1.0,1,0
-969,Le Cap Ferret,FR,1,1,GAZE,1,1.0,1,0
-970,Le Palais,FR,1,1,GAZE,1,1.0,1,0
-971,Le Raincy,FR,1,1,GAZE,1,1.0,1,0
-972,Le Touquet,FR,1,1,GAZE,1,1.0,1,0
-973,Leavenworth,US,1,1,Eaten,1,1.0,1,0
-974,Leawood,US,1,1,Serviette,1,1.0,1,0
-975,Leesburg,US,1,1,Eaten,1,1.0,1,0
-976,Leicester,GB,1,1,Lodestars Anthology,1,1.0,1,0
-977,Leiderdorp,NL,1,1,Nomad Magazine,1,1.0,1,0
-978,Leinfelden-Echterdingen,DE,1,1,Broccoli Mag,1,1.0,1,0
-979,Lenox,US,1,1,Broccoli Mag,1,1.0,1,0
-980,Leominster,US,1,1,Gossamer,1,1.0,1,0
-981,Les Herbiers,FR,1,1,GAZE,1,1.0,1,0
-982,Lewes,GB,1,1,Delayed Gratification,1,1.0,1,0
-983,Lezennes,FR,1,1,GAZE,1,1.0,1,0
-984,Libertyville,US,1,1,Drift,1,1.0,1,0
-985,Lier,BE,1,1,Openhouse,1,1.0,1,0
-986,Lieusaint,FR,1,1,GAZE,1,1.0,1,0
-987,Limassol,CY,1,1,Nomas,1,1.0,1,0
-988,Limelette,BE,1,1,Behind the Blinds,1,1.0,1,0
-989,Lisse,NL,1,1,See All This,1,1.0,1,0
-990,Little Rock,US,1,1,UPPERCASE,1,1.0,1,0
-991,Littleheath,GB,1,1,Noble Rot,1,1.0,1,0
-992,Liverpool,US,1,1,Gossamer,1,1.0,1,0
-993,Livingston,US,1,1,Broccoli Mag,1,1.0,1,0
-994,Lodz,PL,1,1,Hunger,1,1.0,1,0
-995,Loix,FR,1,1,GAZE,1,1.0,1,0
-996,Lone Tree,US,1,1,Serviette,1,1.0,1,0
-997,Long Beach Township,US,1,1,Broccoli Mag,1,1.0,1,0
-998,Lorient,FR,1,1,GAZE,1,1.0,1,0
-999,Lorne,AU,1,1,Record Magazine,1,1.0,1,0
-1000,Los Osos,US,1,1,Broccoli Mag,1,1.0,1,0
-1001,Lousa,PT,1,1,Luncheon,1,1.0,1,0
-1002,Loveland,US,1,1,Broccoli Mag,1,1.0,1,0
-1003,Lowell,US,1,1,Broccoli Mag,1,1.0,1,0
-1004,Lubeck,DE,1,1,FUKT,1,1.0,1,0
-1005,Lucerne,CH,1,1,Openhouse,1,1.0,1,0
-1006,Lugano,CH,1,1,Flaneur,1,1.0,1,0
-1007,Lund,SE,1,1,Luncheon,1,1.0,1,0
-1008,Lunenburg,CA,1,1,Feels Zine,1,1.0,1,0
-1009,Luxembourg,LU,1,1,Slanted,1,1.0,1,0
-1010,Luzern,CH,1,1,Broccoli Mag,1,1.0,1,0
-1011,Lynn,US,1,1,Broccoli Mag,1,1.0,1,0
-1012,Löderup,SE,1,1,Openhouse,1,1.0,1,0
-1013,MTL - ciele athletics flagship,CA,1,1,Like the Wind,1,1.0,1,0
-1014,Machester,GB,1,1,Broccoli Mag,1,1.0,1,0
-1015,Maidenhead,GB,1,1,Delayed Gratification,1,1.0,1,0
-1016,Malaga,ES,1,1,MacGuffin,1,1.0,1,0
-1017,Maleny,AU,1,1,Lodestars Anthology,1,1.0,1,0
-1018,Mallorca,ES,1,1,MacGuffin,1,1.0,1,0
-1019,Manchester,US,1,1,Broccoli Mag,1,1.0,1,0
-1020,Mancos,US,1,1,Broccoli Mag,1,1.0,1,0
-1021,Manhasset,US,1,1,Epoch Review,1,1.0,1,0
-1022,Manitou Springs,US,1,1,Broccoli Mag,1,1.0,1,0
-1023,Maple Plain,US,1,1,Broccoli Mag,1,1.0,1,0
-1024,Maplewood,US,1,1,Broccoli Mag,1,1.0,1,0
-1025,Marblehead,US,1,1,Broccoli Mag,1,1.0,1,0
-1026,Margaretville,US,1,1,Broccoli Mag,1,1.0,1,0
-1027,Marignane,FR,1,1,GAZE,1,1.0,1,0
-1028,Marion,US,1,1,Cherry Bombe,1,1.0,1,0
-1029,Marlborough,GB,1,1,Delayed Gratification,1,1.0,1,0
-1030,Marlow,GB,1,1,Delayed Gratification,1,1.0,1,0
-1031,Maroochydore,AU,1,1,Noble Rot,1,1.0,1,0
-1032,Marrickville,AU,1,1,Broccoli Mag,1,1.0,1,0
-1033,Marshall,US,1,1,Broccoli Mag,1,1.0,1,0
-1034,Martinez,US,1,1,Cake Zine,1,1.0,1,0
-1035,Marysville,US,1,1,Broccoli Mag,1,1.0,1,0
-1036,Massy,FR,1,1,GAZE,1,1.0,1,0
-1037,Matera,IT,1,1,Synonym,1,1.0,1,0
-1038,Mazomanie,US,1,1,Broccoli Mag,1,1.0,1,0
-1039,Mckinney,US,1,1,Broccoli Mag,1,1.0,1,0
-1040,Mechelen,BE,1,1,Hunger,1,1.0,1,0
-1041,Media,US,1,1,Cake Zine,1,1.0,1,0
-1042,Medicine Hat,CA,1,1,Brick,1,1.0,1,0
-1043,Mellionnec,FR,1,1,GAZE,1,1.0,1,0
-1044,Mendrisio,CH,1,1,Accattone,1,1.0,1,0
-1045,Menerbes,FR,1,1,Eaten,1,1.0,1,0
-1046,Metairie,US,1,1,Serviette,1,1.0,1,0
-1047,Miama,US,1,1,Broccoli Mag,1,1.0,1,0
-1048,Midland,US,1,1,Broccoli Mag,1,1.0,1,0
-1049,Milbury,US,1,1,Broccoli Mag,1,1.0,1,0
-1050,Millbury,US,1,1,Gossamer,1,1.0,1,0
-1051,Millerton,US,1,1,The Drift,1,1.0,1,0
-1052,Milton Keynes,GB,1,1,Delayed Gratification,1,1.0,1,0
-1053,Milwaukie,US,1,1,Cake Zine,1,1.0,1,0
-1054,Minehead,GB,1,1,Delayed Gratification,1,1.0,1,0
-1055,Minocqua,US,1,1,The Drift,1,1.0,1,0
-1056,Mishawaka,US,1,1,Gossamer,1,1.0,1,0
-1057,Mitcham,AU,1,1,Noble Rot,1,1.0,1,0
-1058,Moline,US,1,1,SICK,1,1.0,1,0
-1059,Molyullah,AU,1,1,Yolo Journal,1,1.0,1,0
-1060,Monroeville,US,1,1,Gossamer,1,1.0,1,0
-1061,Montecito,US,1,1,Racquet Mag,1,1.0,1,0
-1062,Monterey,US,1,1,Broccoli Mag,1,1.0,1,0
-1063,Monterrey,MX,1,1,Cake Zine,1,1.0,1,0
-1064,Montrouge,FR,1,1,GAZE,1,1.0,1,0
-1065,Morioka,JP,1,1,The Skirt Chronicles,1,1.0,1,0
-1066,Mougins,FR,1,1,GAZE,1,1.0,1,0
-1067,Mount Maunganui,NZ,1,1,Lodestars Anthology,1,1.0,1,0
-1068,Mount Pleasant,US,1,1,Yolo Journal,1,1.0,1,0
-1069,Mount Rainier,US,1,1,Broccoli Mag,1,1.0,1,0
-1070,Mount Vernon,US,1,1,Broccoli Mag,1,1.0,1,0
-1071,Mountain View,US,1,1,Broccoli Mag,1,1.0,1,0
-1072,Mullumbimby,AU,1,1,Record Magazine,1,1.0,1,0
-1073,Mykonos,GR,1,1,Nomas,1,1.0,1,0
-1074,Münster,DE,1,1,Slanted,1,1.0,1,0
-1075,Nailsworth,GB,1,1,UPPERCASE,1,1.0,1,0
-1076,Napa,US,1,1,Yolo Journal,1,1.0,1,0
-1077,Narva,EE,1,1,A Shade Colder,1,1.0,1,0
-1078,Nelson Bay,AU,1,1,Lodestars Anthology,1,1.0,1,0
-1079,Neuilly,FR,1,1,Self Service,1,1.0,1,0
-1080,Neuquén,AR,1,1,Anchoa,1,1.0,1,0
-1081,New Bedford,US,1,1,SLEEK,1,1.0,1,0
-1082,New Buffalo,US,1,1,Broccoli Mag,1,1.0,1,0
-1083,New Canaan,US,1,1,Serviette,1,1.0,1,0
-1084,New Hartford,US,1,1,Gossamer,1,1.0,1,0
-1085,New Hyde Park,US,1,1,The Drift,1,1.0,1,0
-1086,New Smyrna Beach,US,1,1,Broccoli Mag,1,1.0,1,0
-1087,Newark,US,1,1,Gossamer,1,1.0,1,0
-1088,Newberg,US,1,1,Noble Rot,1,1.0,1,0
-1089,Newbury,GB,1,1,Delayed Gratification,1,1.0,1,0
-1090,Newcastle upon Tyne,AU,1,1,Record Magazine,1,1.0,1,0
-1091,Newington,US,1,1,Gossamer,1,1.0,1,0
-1092,Newrybar,AU,1,1,Broccoli Mag,1,1.0,1,0
-1093,Newton,US,1,1,Serviette,1,1.0,1,0
-1094,Newton Abbot,GB,1,1,Delayed Gratification,1,1.0,1,0
-1095,Nexø,DK,1,1,Luncheon,1,1.0,1,0
-1096,Nisswa,US,1,1,Broccoli Mag,1,1.0,1,0
-1097,Nobleboro,US,1,1,Broccoli Mag,1,1.0,1,0
-1098,Norfolk,US,1,1,Eaten,1,1.0,1,0
-1099,Norman,US,1,1,Gossamer,1,1.0,1,0
-1100,North Attleborough,US,1,1,Broccoli Mag,1,1.0,1,0
-1101,North Chesterfield,US,1,1,Epoch Review,1,1.0,1,0
-1102,North Dartmouth,US,1,1,SLEEK,1,1.0,1,0
-1103,North Haven,US,1,1,Epoch Review,1,1.0,1,0
-1104,North Mankato,US,1,1,Broccoli Mag,1,1.0,1,0
-1105,North Shields,GB,1,1,Eaten,1,1.0,1,0
-1106,North Truro,US,1,1,Eaten,1,1.0,1,0
-1107,North Turramurra,AU,1,1,Broccoli Mag,1,1.0,1,0
-1108,Northampton,US,1,1,Broccoli Mag,1,1.0,1,0
-1109,Northamptonshire,GB,1,1,The Erotic Review,1,1.0,1,0
-1110,Northville,US,1,1,Serviette,1,1.0,1,0
-1111,Nykøbing,DK,1,1,Luncheon,1,1.0,1,0
-1112,Oakmont,US,1,1,Broccoli Mag,1,1.0,1,0
-1113,Oakville,CA,1,1,Brick,1,1.0,1,0
-1114,Ocala,US,1,1,Gossamer,1,1.0,1,0
-1115,Occidental,US,1,1,Broccoli Mag,1,1.0,1,0
-1116,Odense,DK,1,1,Luncheon,1,1.0,1,0
-1117,Oeiras,PT,1,1,Luncheon,1,1.0,1,0
-1118,Offenburg,DE,1,1,Epoch Review,1,1.0,1,0
-1119,Ogden,US,1,1,Broccoli Mag,1,1.0,1,0
-1120,Okoboji,US,1,1,Broccoli Mag,1,1.0,1,0
-1121,Orange,US,1,1,Gossamer,1,1.0,1,0
-1122,Orange,AU,1,1,Lodestars Anthology,1,1.0,1,0
-1123,Orange Park,US,1,1,UPPERCASE,1,1.0,1,0
-1124,Orleans,US,1,1,UPPERCASE,1,1.0,1,0
-1125,Osborne Park,AU,1,1,Broccoli Mag,1,1.0,1,0
-1126,Ottowa,CA,1,1,Broccoli Mag,1,1.0,1,0
-1127,Paisley,GB,1,1,Delayed Gratification,1,1.0,1,0
-1128,Paju,KR,1,1,Luncheon,1,1.0,1,0
-1129,Palermo,IT,1,1,FUKT,1,1.0,1,0
-1130,Palm Beach,AU,1,1,Noble Rot,1,1.0,1,0
-1131,Pamplona,ES,1,1,Openhouse,1,1.0,1,0
-1132,Pangbourne,GB,1,1,Delayed Gratification,1,1.0,1,0
-1133,Parramatta,AU,1,1,Debris,1,1.0,1,0
-1134,Paso Robles,US,1,1,Broccoli Mag,1,1.0,1,0
-1135,Patmos,GR,1,1,Nomas,1,1.0,1,0
-1136,Peabody,US,1,1,Serviette,1,1.0,1,0
-1137,Peckville,US,1,1,Broccoli Mag,1,1.0,1,0
-1138,Penang,MY,1,1,Noble Rot,1,1.0,1,0
-1139,Pennington,US,1,1,Broccoli Mag,1,1.0,1,0
-1140,Pensacola,US,1,1,Broccoli Mag,1,1.0,1,0
-1141,Penzance,GB,1,1,Delayed Gratification,1,1.0,1,0
-1142,Peoria,US,1,1,Gossamer,1,1.0,1,0
-1143,Perth,CA,1,1,Anorak,1,1.0,1,0
-1144,Perth,GB,1,1,Delayed Gratification,1,1.0,1,0
-1145,Peru,US,1,1,Broccoli Mag,1,1.0,1,0
-1146,Pescara,IT,1,1,Accattone,1,1.0,1,0
-1147,Peterborough,US,1,1,The Drift,1,1.0,1,0
-1148,Petersfield,GB,1,1,Delayed Gratification,1,1.0,1,0
-1149,Pforzheim,DE,1,1,Luncheon,1,1.0,1,0
-1150,Phoenicia,US,1,1,Broccoli Mag,1,1.0,1,0
-1151,Pittsfield,US,1,1,Gossamer,1,1.0,1,0
-1152,Plainfield,US,1,1,Serviette,1,1.0,1,0
-1153,Plymouth,US,1,1,Cherry Bombe,1,1.0,1,0
-1154,Plymouth,GB,1,1,Delayed Gratification,1,1.0,1,0
-1155,Plymouth Meeting,US,1,1,Epoch Review,1,1.0,1,0
-1156,Point Lonsdale,AU,1,1,Lodestars Anthology,1,1.0,1,0
-1157,Point Reyes,US,1,1,Eaten,1,1.0,1,0
-1158,Pontevedra,ES,1,1,MacGuffin,1,1.0,1,0
-1159,Portage,US,1,1,Gossamer,1,1.0,1,0
-1160,Porto Ercole,IT,1,1,Yolo Journal,1,1.0,1,0
-1161,Porto Salvo,PT,1,1,Luncheon,1,1.0,1,0
-1162,Portrush,GB,1,1,Lodestars Anthology,1,1.0,1,0
-1163,Positano,IT,1,1,Yolo Journal,1,1.0,1,0
-1164,Pottsville,US,1,1,Drift,1,1.0,1,0
-1165,Poughkeepsie,US,1,1,Gossamer,1,1.0,1,0
-1166,Prairie Village,US,1,1,Mother Tongue,1,1.0,1,0
-1167,Prescott,US,1,1,The Drift,1,1.0,1,0
-1168,Preston,GB,1,1,Delayed Gratification,1,1.0,1,0
-1169,Pulborough,GB,1,1,Noble Rot,1,1.0,1,0
-1170,Pune,IN,1,1,Dhoop,1,1.0,1,0
-1171,Punta del Este,UY,1,1,Anchoa,1,1.0,1,0
-1172,Queenstown,NZ,1,1,Broccoli Mag,1,1.0,1,0
-1173,Quilcene,US,1,1,Broccoli Mag,1,1.0,1,0
-1174,Quincy,US,1,1,Broccoli Mag,1,1.0,1,0
-1175,Raleigh,US,1,1,Broccoli Mag,1,1.0,1,0
-1176,Randers,DK,1,1,Luncheon,1,1.0,1,0
-1177,Randolph,US,1,1,UPPERCASE,1,1.0,1,0
-1178,Rapid City,US,1,1,Broccoli Mag,1,1.0,1,0
-1179,Rastatt,DE,1,1,Luncheon,1,1.0,1,0
-1180,Ravello,IT,1,1,Yolo Journal,1,1.0,1,0
-1181,Reading,GB,1,1,Delayed Gratification,1,1.0,1,0
-1182,Redding,US,1,1,Gossamer,1,1.0,1,0
-1183,Rethymno,GR,1,1,Nomas,1,1.0,1,0
-1184,Rhinebeck,US,1,1,The Drift,1,1.0,1,0
-1185,Rhode-Saint-Genese,BE,1,1,Hunger,1,1.0,1,0
-1186,Ribe,DK,1,1,Luncheon,1,1.0,1,0
-1187,Riccione,IT,1,1,WHATEVR Fanzine,1,1.0,1,0
-1188,Richmond,GB,1,1,Delayed Gratification,1,1.0,1,0
-1189,Rico,US,1,1,Broccoli Mag,1,1.0,1,0
-1190,Ridgefield,US,1,1,Like the Wind,1,1.0,1,0
-1191,Ridgway,US,1,1,Broccoli Mag,1,1.0,1,0
-1192,Rimouski,CA,1,1,Esse arts + opinions,1,1.0,1,0
-1193,Ringkøbing,DK,1,1,Openhouse,1,1.0,1,0
-1194,Rio de Janeiro,BR,1,1,WHATEVR Fanzine,1,1.0,1,0
-1195,Riverside,US,1,1,Broccoli Mag,1,1.0,1,0
-1196,Riverton,US,1,1,Roads & Kingdoms,1,1.0,1,0
-1197,Rochester Hills,US,1,1,Serviette,1,1.0,1,0
-1198,Rockaway Beach,US,1,1,Broccoli Mag,1,1.0,1,0
-1199,Rockaway Park,US,1,1,Broccoli Mag,1,1.0,1,0
-1200,Rockford,US,1,1,Gossamer,1,1.0,1,0
-1201,Rockport,US,1,1,Eaten,1,1.0,1,0
-1202,Rocky View,CA,1,1,Brick,1,1.0,1,0
-1203,Roermond,NL,1,1,Nomad Magazine,1,1.0,1,0
-1204,Rogers,US,1,1,Gossamer,1,1.0,1,0
-1205,Roissy-en-France,FR,1,1,GAZE,1,1.0,1,0
-1206,Romsey,GB,1,1,Delayed Gratification,1,1.0,1,0
-1207,Roslindale,US,1,1,Broccoli Mag,1,1.0,1,0
-1208,Rosport,LU,1,1,Noble Rot,1,1.0,1,0
-1209,Roswell,US,1,1,Eaten,1,1.0,1,0
-1210,Royal Oak,US,1,1,Broccoli Mag,1,1.0,1,0
-1211,Rudkøbing,DK,1,1,Luncheon,1,1.0,1,0
-1212,Rugby,GB,1,1,UPPERCASE,1,1.0,1,0
-1213,Rye,AU,1,1,Noble Rot,1,1.0,1,0
-1214,Rye,GB,1,1,Openhouse,1,1.0,1,0
-1215,Rødovre,DK,1,1,SLEEK,1,1.0,1,0
-1216,Rønne,DK,1,1,Luncheon,1,1.0,1,0
-1217,Safety Harbor,US,1,1,Broccoli Mag,1,1.0,1,0
-1218,Saffron Walden,GB,1,1,Delayed Gratification,1,1.0,1,0
-1219,Sagres,PT,1,1,Luncheon,1,1.0,1,0
-1220,Saint-Denis,FR,1,1,Slanted,1,1.0,1,0
-1221,Saint-Gilles,BE,1,1,Nomad Magazine,1,1.0,1,0
-1222,Saint-Étienne,FR,1,1,GAZE,1,1.0,1,0
-1223,Salisbury,GB,1,1,Delayed Gratification,1,1.0,1,0
-1224,San Anselmo,US,1,1,Yolo Journal,1,1.0,1,0
-1225,San Carlos de Bariloche,AR,1,1,Anchoa,1,1.0,1,0
-1226,San Fransisco,US,1,1,Broccoli Mag,1,1.0,1,0
-1227,San Jose del Cabo,MX,1,1,Drift,1,1.0,1,0
-1228,San Juan,PR,1,1,Anchoa,1,1.0,1,0
-1229,San Juan Capistrano,US,1,1,Broccoli Mag,1,1.0,1,0
-1230,San Mateo,US,1,1,Epoch Review,1,1.0,1,0
-1231,San Sebastián,ES,1,1,Openhouse,1,1.0,1,0
-1232,Sandy,US,1,1,Epoch Review,1,1.0,1,0
-1233,Santa Ynez,US,1,1,Broccoli Mag,1,1.0,1,0
-1234,Saugerties,US,1,1,Gossamer,1,1.0,1,0
-1235,Sausalito,US,1,1,Slanted,1,1.0,1,0
-1236,Scheveningen,NL,1,1,Luncheon,1,1.0,1,0
-1237,Schilde,BE,1,1,Hunger,1,1.0,1,0
-1238,Scottsdale,US,1,1,Broccoli Mag,1,1.0,1,0
-1239,Seaford,GB,1,1,Delayed Gratification,1,1.0,1,0
-1240,Selangor,MY,1,1,WHATEVR Fanzine,1,1.0,1,0
-1241,Sempach,CH,1,1,Slanted,1,1.0,1,0
-1242,Sequim,US,1,1,Broccoli Mag,1,1.0,1,0
-1243,Sevenoaks,GB,1,1,Delayed Gratification,1,1.0,1,0
-1244,Severna Park,US,1,1,UPPERCASE,1,1.0,1,0
-1245,Shelby Township,US,1,1,Epoch Review,1,1.0,1,0
-1246,Shenzhen,CN,1,1,Flaneur,1,1.0,1,0
-1247,Sherborne,GB,1,1,A Rabbit's Foot,1,1.0,1,0
-1248,Sherman Oaks,US,1,1,Luncheon,1,1.0,1,0
-1249,Shizuoka,JP,1,1,Victory Journal,1,1.0,1,0
-1250,Shoham,IL,1,1,Slanted,1,1.0,1,0
-1251,Shoreham-by-Sea,GB,1,1,Noble Rot,1,1.0,1,0
-1252,Shreveport,US,1,1,Eaten,1,1.0,1,0
-1253,Shrewsbury,GB,1,1,Delayed Gratification,1,1.0,1,0
-1254,Siebnen,CH,1,1,Broccoli Mag,1,1.0,1,0
-1255,Silverdale,US,1,1,Epoch Review,1,1.0,1,0
-1256,Singen,DE,1,1,Luncheon,1,1.0,1,0
-1257,Sliedrecht,NL,1,1,Nomad Magazine,1,1.0,1,0
-1258,Sliema,MT,1,1,Record Magazine,1,1.0,1,0
-1259,Solihull,GB,1,1,Delayed Gratification,1,1.0,1,0
-1260,Sonoma,US,1,1,Broccoli Mag,1,1.0,1,0
-1261,South Fremantle,AU,1,1,Broccoli Mag,1,1.0,1,0
-1262,South Kingstown,US,1,1,Broccoli Mag,1,1.0,1,0
-1263,Southampton,GB,1,1,Delayed Gratification,1,1.0,1,0
-1264,Southend-on-Sea,GB,1,1,Delayed Gratification,1,1.0,1,0
-1265,Southern Pines,US,1,1,Broccoli Mag,1,1.0,1,0
-1266,Southlake,US,1,1,Epoch Review,1,1.0,1,0
-1267,Southport,GB,1,1,Delayed Gratification,1,1.0,1,0
-1268,Spanish Fort,US,1,1,Serviette,1,1.0,1,0
-1269,Spring,US,1,1,Epoch Review,1,1.0,1,0
-1270,Sprucedale,CA,1,1,UPPERCASE,1,1.0,1,0
-1271,Squamish,CA,1,1,Broccoli Mag,1,1.0,1,0
-1272,St Albans,GB,1,1,Delayed Gratification,1,1.0,1,0
-1273,St Andrews,GB,1,1,Delayed Gratification,1,1.0,1,0
-1274,St Ives,GB,1,1,Delayed Gratification,1,1.0,1,0
-1275,St. Augustine,US,1,1,Eaten,1,1.0,1,0
-1276,St. Catharines,CA,1,1,Brick,1,1.0,1,0
-1277,St. Pete Beach,US,1,1,Broccoli Mag,1,1.0,1,0
-1278,Starnberg,DE,1,1,Luncheon,1,1.0,1,0
-1279,Stinson Beach,US,1,1,Yolo Journal,1,1.0,1,0
-1280,Stoke-on-Trent,GB,1,1,Delayed Gratification,1,1.0,1,0
-1281,Stone Harbor,US,1,1,Broccoli Mag,1,1.0,1,0
-1282,Stoney Creek,CA,1,1,Brick,1,1.0,1,0
-1283,Stourbridge,GB,1,1,Delayed Gratification,1,1.0,1,0
-1284,Stranraer,GB,1,1,Delayed Gratification,1,1.0,1,0
-1285,Stratford,CA,1,1,Feels Zine,1,1.0,1,0
-1286,Stratford-upon-Avon,GB,1,1,Delayed Gratification,1,1.0,1,0
-1287,Stuart,US,1,1,Broccoli Mag,1,1.0,1,0
-1288,Sundance,US,1,1,Broccoli Mag,1,1.0,1,0
-1289,Superior,US,1,1,Broccoli Mag,1,1.0,1,0
-1290,Surrey,GB,1,1,Delayed Gratification,1,1.0,1,0
-1291,Swansea,GB,1,1,UPPERCASE,1,1.0,1,0
-1292,Swarthmore,US,1,1,Broccoli Mag,1,1.0,1,0
-1293,Sylva,US,1,1,The Drift,1,1.0,1,0
-1294,Syracuse,US,1,1,Broccoli Mag,1,1.0,1,0
-1295,Syracuse,IT,1,1,WHATEVR Fanzine,1,1.0,1,0
-1296,Sète,FR,1,1,Slanted,1,1.0,1,0
-1297,Sèvres,FR,1,1,Flaneur,1,1.0,1,0
-1298,Sønderborg,DK,1,1,Luncheon,1,1.0,1,0
-1299,Takoma Park,US,1,1,Broccoli Mag,1,1.0,1,0
-1300,Tampere,FI,1,1,Openhouse,1,1.0,1,0
-1301,Taree,AU,1,1,Lodestars Anthology,1,1.0,1,0
-1302,Tarrytown,US,1,1,Broccoli Mag,1,1.0,1,0
-1303,Taunton,GB,1,1,Delayed Gratification,1,1.0,1,0
-1304,Tavira,PT,1,1,Luncheon,1,1.0,1,0
-1305,Tavistock,GB,1,1,Delayed Gratification,1,1.0,1,0
-1306,Tbilisi,GE,1,1,Nomad Magazine,1,1.0,1,0
-1307,Tecumseh,CA,1,1,Brick,1,1.0,1,0
-1308,Teddington,GB,1,1,Delayed Gratification,1,1.0,1,0
-1309,Teignmouth,GB,1,1,Delayed Gratification,1,1.0,1,0
-1310,Tenterden,GB,1,1,Linseed,1,1.0,1,0
-1311,Terrigal,AU,1,1,Noble Rot,1,1.0,1,0
-1312,Thirroul,AU,1,1,Record Magazine,1,1.0,1,0
-1313,Thonon-les-Bains,FR,1,1,GAZE,1,1.0,1,0
-1314,Tianjin,CN,1,1,FUKT,1,1.0,1,0
-1315,Tiburon,US,1,1,Selvedge,1,1.0,1,0
-1316,Tigard,US,1,1,Epoch Review,1,1.0,1,0
-1317,Tinos,GR,1,1,Nomas,1,1.0,1,0
-1318,Tisvildeleje,DK,1,1,Luncheon,1,1.0,1,0
-1319,Tiverton,US,1,1,Broccoli Mag,1,1.0,1,0
-1320,Tomball,US,1,1,Drift,1,1.0,1,0
-1321,Topsail Beach,US,1,1,Broccoli Mag,1,1.0,1,0
-1322,Torrance,US,1,1,Epoch Review,1,1.0,1,0
-1323,Tranbjerg,DK,1,1,Luncheon,1,1.0,1,0
-1324,Traunstein,DE,1,1,Nomad Magazine,1,1.0,1,0
-1325,Trowbridge,GB,1,1,Delayed Gratification,1,1.0,1,0
-1326,Truro,GB,1,1,Selvedge,1,1.0,1,0
-1327,Tualatin,US,1,1,Plates,1,1.0,1,0
-1328,Tularosa,US,1,1,Eaten,1,1.0,1,0
-1329,Tunbridge Wells,GB,1,1,Delayed Gratification,1,1.0,1,0
-1330,Turners Falls,US,1,1,SICK,1,1.0,1,0
-1331,Tübingen,DE,1,1,Selvedge,1,1.0,1,0
-1332,Ulm,DE,1,1,Luncheon,1,1.0,1,0
-1333,Uppsala,SE,1,1,Selvedge,1,1.0,1,0
-1334,Upstate New York,US,1,1,Dirty Magazine,1,1.0,1,0
-1335,Urmston,GB,1,1,Noble Rot,1,1.0,1,0
-1336,Valencia,US,1,1,Luncheon,1,1.0,1,0
-1337,Valladolid,ES,1,1,FARE,1,1.0,1,0
-1338,Valparaiso,US,1,1,Serviette,1,1.0,1,0
-1339,Vannes,FR,1,1,GAZE,1,1.0,1,0
-1340,Vashon,US,1,1,Broccoli Mag,1,1.0,1,0
-1341,Vejle,DK,1,1,Luncheon,1,1.0,1,0
-1342,Vernon Hills,US,1,1,Gossamer,1,1.0,1,0
-1343,Vestal,US,1,1,Gossamer,1,1.0,1,0
-1344,Vic,ES,1,1,Openhouse,1,1.0,1,0
-1345,Vila Nova de Famalicão,PT,1,1,Luncheon,1,1.0,1,0
-1346,Vila Nova de Gaia,PT,1,1,Esse arts + opinions,1,1.0,1,0
-1347,Viljandi,EE,1,1,A Shade Colder,1,1.0,1,0
-1348,Villingen,DE,1,1,Luncheon,1,1.0,1,0
-1349,Vinalhaven,US,1,1,Broccoli Mag,1,1.0,1,0
-1350,Vincennes,FR,1,1,GAZE,1,1.0,1,0
-1351,Vineyard Haven,US,1,1,Broccoli Mag,1,1.0,1,0
-1352,Virginia Beach,US,1,1,Gossamer,1,1.0,1,0
-1353,Viroqua,US,1,1,Broccoli Mag,1,1.0,1,0
-1354,Vitry-sur-Seine,FR,1,1,GAZE,1,1.0,1,0
-1355,Viveiro,ES,1,1,MacGuffin,1,1.0,1,0
-1356,Växjö,SE,1,1,Luncheon,1,1.0,1,0
-1357,Wachtebeke,BE,1,1,SLEEK,1,1.0,1,0
-1358,Wakefield,GB,1,1,UPPERCASE,1,1.0,1,0
-1359,Walla Walla,US,1,1,Kitchen Table,1,1.0,1,0
-1360,Warminster,GB,1,1,Delayed Gratification,1,1.0,1,0
-1361,Warrington,GB,1,1,Delayed Gratification,1,1.0,1,0
-1362,Warwick,GB,1,1,Delayed Gratification,1,1.0,1,0
-1363,Warwick,US,1,1,Gossamer,1,1.0,1,0
-1364,Waterford,US,1,1,Broccoli Mag,1,1.0,1,0
-1365,Wauwatosa,US,1,1,Epoch Review,1,1.0,1,0
-1366,Waynesville,US,1,1,The Drift,1,1.0,1,0
-1367,Wayzata,US,1,1,Broccoli Mag,1,1.0,1,0
-1368,Webster,US,1,1,Epoch Review,1,1.0,1,0
-1369,Weil am Rhein,DE,1,1,Nomad Magazine,1,1.0,1,0
-1370,Weinheim,DE,1,1,Luncheon,1,1.0,1,0
-1371,Wellesley,US,1,1,Serviette,1,1.0,1,0
-1372,Wells,GB,1,1,Delayed Gratification,1,1.0,1,0
-1373,West Bretton,GB,1,1,Selvedge,1,1.0,1,0
-1374,West Hartford,US,1,1,Serviette,1,1.0,1,0
-1375,Westerly,US,1,1,Cake Zine,1,1.0,1,0
-1376,Westlake,US,1,1,Epoch Review,1,1.0,1,0
-1377,Westminster,US,1,1,Broccoli Mag,1,1.0,1,0
-1378,Weston-super-Mare,GB,1,1,Delayed Gratification,1,1.0,1,0
-1379,Wexford,US,1,1,Broccoli Mag,1,1.0,1,0
-1380,Whanganui,NZ,1,1,Broccoli Mag,1,1.0,1,0
-1381,Wheat Ridge,US,1,1,Like the Wind,1,1.0,1,0
-1382,Wichita,US,1,1,Broccoli Mag,1,1.0,1,0
-1383,Wilkes Barre,US,1,1,Epoch Review,1,1.0,1,0
-1384,Wimberley,US,1,1,Broccoli Mag,1,1.0,1,0
-1385,Winchester,US,1,1,Broccoli Mag,1,1.0,1,0
-1386,Winston-Salem,US,1,1,Broccoli Mag,1,1.0,1,0
-1387,Winterthur,CH,1,1,12F,1,1.0,1,0
-1388,Witney,GB,1,1,Delayed Gratification,1,1.0,1,0
-1389,Woking,GB,1,1,Delayed Gratification,1,1.0,1,0
-1390,Wokingham,GB,1,1,Delayed Gratification,1,1.0,1,0
-1391,Woluwe-Saint-Pierre,BE,1,1,Hunger,1,1.0,1,0
-1392,Woodbridge,GB,1,1,Delayed Gratification,1,1.0,1,0
-1393,Woodbridge,CA,1,1,photoED Magazine,1,1.0,1,0
-1394,Woodinville,US,1,1,Epoch Review,1,1.0,1,0
-1395,Woodside,US,1,1,Broccoli Mag,1,1.0,1,0
-1396,Workington,GB,1,1,Delayed Gratification,1,1.0,1,0
-1397,Wrexham,GB,1,1,Delayed Gratification,1,1.0,1,0
-1398,Xiamen,CN,1,1,The Skirt Chronicles,1,1.0,1,0
-1399,Yarmouth,US,1,1,Broccoli Mag,1,1.0,1,0
-1400,Yarram,AU,1,1,Never Too Small,1,1.0,1,0
-1401,Yogyakarta,ID,1,1,Plates,1,1.0,1,0
-1402,York,US,1,1,Broccoli Mag,1,1.0,1,0
-1403,York,GB,1,1,Delayed Gratification,1,1.0,1,0
-1404,Zaragoza,ES,1,1,MacGuffin,1,1.0,1,0
-1405,Zhejiang,CN,1,1,Hunger,1,1.0,1,0
-1406,Zumbrota,US,1,1,Broccoli Mag,1,1.0,1,0
-1407,Zwolle,NL,1,1,See All This,1,1.0,1,0
-1408,Łódź,PL,1,1,Slanted,1,1.0,1,0
+rank,city,country,unique_stores,index_titles,top_title,top_title_stores,top_title_share,stores_only_from_top_title,unique_stores_excl_top_title,stores_with_2plus_titles,stores_with_3plus_titles
+1,London,GB,320,87,Luncheon,62,0.19,25,295,106,61
+2,New York,US,260,75,SLEEK,33,0.13,17,243,71,38
+3,Paris,FR,186,60,GAZE,53,0.28,34,152,52,32
+4,Los Angeles,US,102,62,Broccoli Mag,26,0.25,19,83,25,15
+5,Portland,US,95,57,Broccoli Mag,35,0.37,29,66,23,6
+6,Melbourne,AU,80,31,Record Magazine,19,0.24,15,65,11,6
+7,Berlin,DE,73,56,Record Magazine,10,0.14,1,72,21,11
+8,Milan,IT,73,50,WHATEVR Fanzine,20,0.27,12,61,17,13
+9,Toronto,CA,65,55,Brick,15,0.23,4,61,21,12
+10,San Francisco,US,62,54,Broccoli Mag,17,0.27,9,53,20,11
+11,Barcelona,ES,57,42,Openhouse,19,0.33,12,45,13,6
+12,Montreal,CA,49,30,Esse arts + opinions,17,0.35,15,34,9,3
+13,Seattle,US,48,27,Broccoli Mag,16,0.33,9,39,19,11
+14,Tokyo,JP,42,29,Record Magazine,7,0.17,6,36,11,5
+15,Amsterdam,NL,40,68,Nomad Magazine,9,0.23,5,35,9,5
+16,Philadelphia,US,40,44,Seen,7,0.17,5,35,9,4
+17,Madrid,ES,39,27,MacGuffin,10,0.26,7,32,8,6
+18,Sydney,AU,36,20,Lodestars Anthology,8,0.22,7,29,3,2
+19,Chicago,US,35,27,Broccoli Mag,13,0.37,11,24,6,2
+20,Brussels,BE,35,20,Behind the Blinds,10,0.29,7,28,7,3
+21,Copenhagen,DK,33,18,The Skirt Chronicles,7,0.21,5,28,5,1
+22,Lisbon,PT,29,43,Luncheon,10,0.34,8,21,4,3
+23,Athens,GR,29,18,Nomas,17,0.59,13,16,4,1
+24,Antwerp,BE,28,33,Nomad Magazine,6,0.21,5,23,8,7
+25,Vienna,AT,27,31,12F,4,0.15,4,23,7,3
+26,Rome,IT,27,17,WHATEVR Fanzine,9,0.33,8,19,3,0
+27,Vancouver,CA,26,21,Openhouse,4,0.15,3,23,7,0
+28,Austin,US,25,24,Broccoli Mag,13,0.52,12,13,3,2
+29,Istanbul,TR,25,6,Cornucopia,14,0.56,14,11,1,0
+30,Buenos Aires,AR,25,2,Anchoa,24,0.96,24,1,0,0
+31,Taipei,TW,24,27,Behind the Blinds,10,0.42,7,17,10,6
+32,Seoul,KR,24,21,Record Magazine,6,0.25,4,20,6,4
+33,Atlanta,US,19,16,Noble Rot,3,0.16,3,16,4,0
+34,Manchester,GB,18,46,Noble Rot,6,0.33,3,15,7,5
+35,Zurich,CH,18,33,Openhouse,3,0.17,2,16,4,4
+36,Munich,DE,18,20,Nomad Magazine,5,0.28,4,14,3,1
+37,Rotterdam,NL,18,19,Behind the Blinds,4,0.22,2,16,6,3
+38,Minneapolis,US,18,16,Broccoli Mag,6,0.33,5,13,3,1
+39,Perth,AU,18,13,Record Magazine,6,0.33,6,12,2,1
+40,Calgary,CA,18,9,photoED Magazine,7,0.39,4,14,4,1
+41,Glasgow,GB,17,26,A Rabbit's Foot,5,0.29,1,16,7,4
+42,Marseille,FR,17,15,12F,3,0.18,2,15,4,1
+43,Porto,PT,16,15,Luncheon,6,0.38,6,10,3,1
+44,San Diego,US,16,10,Broccoli Mag,7,0.44,7,9,0,0
+45,Washington DC,US,15,28,Broccoli Mag,4,0.27,3,12,5,3
+46,Bangkok,TH,15,17,WHATEVR Fanzine,5,0.33,5,10,4,3
+47,Edinburgh,GB,15,17,Delayed Gratification,3,0.2,1,14,4,3
+48,Boston,US,15,12,The Drift,3,0.2,2,13,1,0
+49,Ottawa,CA,15,8,photoED Magazine,5,0.33,2,13,5,3
+50,Hamburg,DE,14,29,FUKT,6,0.43,3,11,3,2
+51,Denver,US,14,9,Broccoli Mag,9,0.64,7,7,3,1
+52,Mexico City,MX,13,22,Mince,3,0.23,2,11,5,3
+53,Brighton,GB,13,17,Broccoli Mag,2,0.15,1,12,2,1
+54,Hong Kong,HK,13,16,SLEEK,4,0.31,4,9,2,1
+55,Turin,IT,13,13,WHATEVR Fanzine,4,0.31,2,11,4,3
+56,Houston,US,13,9,Broccoli Mag,5,0.38,5,8,1,0
+57,Lyon,FR,13,6,GAZE,6,0.46,6,7,0,0
+58,Richmond,US,13,5,Broccoli Mag,5,0.38,5,8,0,0
+59,Bristol,GB,12,33,UPPERCASE,4,0.33,1,11,5,4
+60,Dallas,US,12,12,Broccoli Mag,3,0.25,2,10,2,2
+61,Venice,IT,12,12,WHATEVR Fanzine,4,0.33,3,9,2,2
+62,Victoria,CA,12,12,Serviette,5,0.42,0,12,5,3
+63,Pittsburgh,US,12,11,Broccoli Mag,4,0.33,4,8,1,1
+64,Ghent,BE,12,10,Behind the Blinds,4,0.33,3,9,2,2
+65,Miami,US,12,10,Dirty Magazine,5,0.42,4,8,1,1
+66,Winnipeg,CA,12,9,Brick,3,0.25,3,9,1,1
+67,Warsaw,PL,12,8,Hunger,4,0.33,4,8,1,0
+68,Kuala Lumpur,MY,12,5,Delayed Gratification,4,0.33,4,8,0,0
+69,Singapore,SG,11,35,Meantime,3,0.27,2,9,3,3
+70,Florence,IT,11,20,WHATEVR Fanzine,5,0.45,2,9,5,3
+71,Nashville,US,11,9,Broccoli Mag,5,0.45,4,7,2,1
+72,Frankfurt,DE,11,8,Epoch Review,4,0.36,3,8,2,0
+73,Edmonton,CA,11,5,photoED Magazine,6,0.55,5,6,1,0
+74,Tallinn,EE,11,4,A Shade Colder,7,0.64,7,4,0,0
+75,Stockholm,SE,10,43,A Rabbit's Foot,3,0.3,1,9,5,3
+76,Shanghai,CN,10,13,Brick,2,0.2,1,9,1,1
+77,Oakland,US,10,12,Broccoli Mag,4,0.4,2,8,3,2
+78,Utrecht,NL,10,11,Nomad Magazine,2,0.2,2,8,1,1
+79,Dubai,AE,10,10,Hunger,4,0.4,1,9,3,1
+80,New Orleans,US,10,9,Broccoli Mag,5,0.5,5,5,3,0
+81,The Hague,NL,10,7,Behind the Blinds,3,0.3,0,10,4,0
+82,Leeds,GB,9,34,A Rabbit's Foot,4,0.44,1,8,3,2
+83,Valencia,ES,9,6,MacGuffin,4,0.44,3,6,2,0
+84,Brisbane,AU,9,5,Lodestars Anthology,2,0.22,2,7,0,0
+85,Tucson,US,9,5,Broccoli Mag,4,0.44,4,5,0,0
+86,Cologne,DE,8,19,FUKT,3,0.38,1,7,4,2
+87,Dusseldorf,DE,8,9,Luncheon,2,0.25,2,6,1,1
+88,Prague,CZ,8,8,FUKT,2,0.25,1,7,1,1
+89,Santa Barbara,US,8,8,Openhouse,2,0.25,1,7,1,0
+90,Stuttgart,DE,8,8,FUKT,3,0.38,2,6,1,1
+91,Durham,US,8,7,Broccoli Mag,2,0.25,1,7,2,0
+92,Cambridge,US,8,6,The Paris Review,3,0.38,3,5,0,0
+93,Quebec City,CA,8,6,Esse arts + opinions,5,0.62,5,3,1,1
+94,Ixelles,BE,8,4,Nomad Magazine,5,0.62,4,4,1,1
+95,Nantes,FR,8,4,GAZE,4,0.5,4,4,0,0
+96,Newcastle upon Tyne,GB,7,28,Delayed Gratification,2,0.29,1,6,2,1
+97,Sheffield,GB,7,20,Anorak,3,0.43,2,5,1,1
+98,Baltimore,US,7,13,Eaten,2,0.29,1,6,1,1
+99,Helsinki,FI,7,9,Drift,2,0.29,1,6,2,1
+100,Nottingham,GB,7,9,A Rabbit's Foot,2,0.29,0,7,3,3
+101,Sacramento,US,7,9,Epoch Review,2,0.29,1,6,3,0
+102,Bologna,IT,7,8,Slanted,2,0.29,2,5,1,1
+103,Eindhoven,NL,7,8,FUKT,2,0.29,2,5,2,1
+104,Indianapolis,US,7,8,Broccoli Mag,3,0.43,2,5,1,1
+105,Adelaide,AU,7,7,Record Magazine,2,0.29,2,5,1,0
+106,Columbus,US,7,7,Broccoli Mag,2,0.29,2,5,1,1
+107,Milwaukee,US,7,7,Broccoli Mag,1,0.14,1,6,0,0
+108,Phoenix,US,7,7,Broccoli Mag,2,0.29,2,5,1,0
+109,Toulouse,FR,7,7,GAZE,5,0.71,3,4,3,1
+110,Budapest,HU,7,5,FARE,2,0.29,2,5,0,0
+111,Cleveland,US,7,5,Broccoli Mag,3,0.43,3,4,1,1
+112,Long Beach,US,7,5,Broccoli Mag,4,0.57,3,4,1,0
+113,Louisville,US,7,4,Broccoli Mag,4,0.57,3,4,1,0
+114,Sao Paulo,BR,7,4,WHATEVR Fanzine,4,0.57,3,4,1,0
+115,Dublin,IE,6,14,20 Seconds,1,0.17,0,6,2,1
+116,Asheville,US,6,10,Broccoli Mag,4,0.67,2,4,2,1
+117,Detroit,US,6,9,Cake Zine,3,0.5,2,4,1,1
+118,Buffalo,US,6,8,Broccoli Mag,2,0.33,2,4,2,1
+119,Palm Springs,US,6,7,Broccoli Mag,3,0.5,3,3,1,1
+120,Pasadena,US,6,7,Epoch Review,3,0.5,2,4,1,1
+121,Vilnius,LT,6,7,Luncheon,1,0.17,1,5,1,0
+122,Haarlem,NL,6,5,Nomad Magazine,2,0.33,2,4,1,0
+123,Honolulu,US,6,5,Broccoli Mag,2,0.33,2,4,1,0
+124,Nanaimo,CA,6,5,Brick,2,0.33,1,5,1,0
+125,Oxford,GB,6,5,Delayed Gratification,2,0.33,2,4,0,0
+126,Rochester,US,6,5,Broccoli Mag,3,0.5,3,3,1,0
+127,Saskatoon,CA,6,5,Brick,2,0.33,1,5,1,1
+128,Hudson,US,6,4,Broccoli Mag,3,0.5,3,3,0,0
+129,Karlsruhe,DE,6,4,Slanted,3,0.5,3,3,0,0
+130,Newport,US,6,3,Broccoli Mag,4,0.67,4,2,0,0
+131,Rennes,FR,6,3,GAZE,4,0.67,4,2,0,0
+132,Salem,US,6,3,Broccoli Mag,5,0.83,4,2,1,0
+133,Halifax,CA,5,13,photoED Magazine,2,0.4,1,4,1,1
+134,Bordeaux,FR,5,7,GAZE,5,1.0,4,1,1,1
+135,Madison,US,5,7,Broccoli Mag,4,0.8,3,2,2,2
+136,Savannah,US,5,7,Drift,1,0.2,0,5,1,1
+137,Arnhem,NL,5,6,Nomad Magazine,2,0.4,1,4,1,1
+138,Charleston,US,5,6,Broccoli Mag,1,0.2,1,4,1,0
+139,Gothenburg,SE,5,6,Cake Zine,1,0.2,0,5,1,0
+140,Groningen,NL,5,6,See All This,2,0.4,2,3,1,1
+141,Malibu,US,5,6,Eaten,2,0.4,1,4,1,1
+142,Arles,FR,5,5,Flaneur,3,0.6,0,5,3,1
+143,Bern,CH,5,5,Broccoli Mag,1,0.2,1,4,0,0
+144,Mumbai,IN,5,5,Dhoop,1,0.2,1,4,0,0
+145,Nuremberg,DE,5,5,Behind the Blinds,1,0.2,1,4,0,0
+146,Osaka,JP,5,5,Victory Journal,2,0.4,2,3,1,0
+147,St Louis,US,5,5,Broccoli Mag,2,0.4,2,3,1,0
+148,Berkeley,US,5,4,Serviette,2,0.4,2,3,0,0
+149,Grand Rapids,US,5,4,Broccoli Mag,2,0.4,2,3,0,0
+150,Kingston,US,5,4,Broccoli Mag,4,0.8,3,2,1,1
+151,London,CA,5,4,Behind the Blinds,2,0.4,1,4,1,0
+152,Montpellier,FR,5,4,GAZE,2,0.4,2,3,0,0
+153,Oslo,NO,5,4,FUKT,2,0.4,2,3,0,0
+154,Point Reyes Station,US,5,4,Broccoli Mag,3,0.6,2,3,1,0
+155,Lille,FR,5,3,GAZE,4,0.8,3,2,1,0
+156,Mississauga,CA,5,3,Brick,3,0.6,2,3,1,0
+157,Saint Paul,US,5,3,Broccoli Mag,3,0.6,3,2,0,0
+158,Portsmouth,US,5,2,Broccoli Mag,4,0.8,4,1,0,0
+159,Bath,GB,4,50,Noble Rot,2,0.5,1,3,1,1
+160,Perugia,IT,4,16,Behind the Blinds,2,0.5,1,3,1,1
+161,Auckland,NZ,4,13,Broccoli Mag,1,0.25,0,4,1,1
+162,Bucharest,RO,4,13,Luncheon,2,0.5,0,4,2,2
+163,Whitstable,GB,4,11,Advanture,1,0.25,0,4,1,1
+164,Sofia,BG,4,9,Broccoli Mag,1,0.25,0,4,2,2
+165,Leipzig,DE,4,8,Slanted,2,0.5,1,3,2,1
+166,Bellingham,US,4,6,Broccoli Mag,3,0.75,2,2,2,1
+167,Manila,PH,4,6,Broccoli Mag,1,0.25,1,3,1,1
+168,Santa Monica,US,4,6,A Rabbit's Foot,1,0.25,0,4,1,1
+169,Ashland,US,4,5,Broccoli Mag,3,0.75,2,2,1,1
+170,Hay-on-Wye,GB,4,5,Elska,1,0.25,1,3,1,0
+171,Liverpool,GB,4,5,Delayed Gratification,2,0.5,1,3,2,1
+172,Marfa,US,4,5,Broccoli Mag,3,0.75,2,2,1,1
+173,Margate,GB,4,5,Broccoli Mag,1,0.25,1,3,1,0
+174,Annecy,FR,4,4,GAZE,2,0.5,2,2,1,0
+175,Beaverton,US,4,4,Broccoli Mag,1,0.25,1,3,0,0
+176,Beijing,CN,4,4,Flaneur,1,0.25,1,3,0,0
+177,Boise,US,4,4,Broccoli Mag,2,0.5,1,3,1,0
+178,Cincinnati,US,4,4,Cake Zine,1,0.25,1,3,0,0
+179,Fremantle,AU,4,4,Broccoli Mag,1,0.25,1,3,0,0
+180,Konstanz,DE,4,4,Behind the Blinds,1,0.25,1,3,0,0
+181,Lausanne,CH,4,4,Accattone,1,0.25,1,3,0,0
+182,Middelburg,NL,4,4,Behind the Blinds,1,0.25,1,3,0,0
+183,Missoula,US,4,4,Broccoli Mag,1,0.25,1,3,0,0
+184,Ojai,US,4,4,The Paris Review,2,0.5,1,3,1,0
+185,Orlando,US,4,4,Drift,1,0.25,1,3,0,0
+186,Salt Lake City,US,4,4,Broccoli Mag,3,0.75,2,2,2,0
+187,Saratoga Springs,US,4,4,Broccoli Mag,1,0.25,1,3,0,0
+188,Spokane,US,4,4,Broccoli Mag,2,0.5,2,2,1,0
+189,Strasbourg,FR,4,4,GAZE,2,0.5,1,3,1,0
+190,Würzburg,DE,4,4,Behind the Blinds,1,0.25,1,3,0,0
+191,Avignon,FR,4,3,GAZE,2,0.5,2,2,0,0
+192,Bruges,BE,4,3,Hunger,2,0.5,2,2,0,0
+193,Canterbury,GB,4,3,Delayed Gratification,2,0.5,2,2,0,0
+194,Grenoble,FR,4,3,GAZE,3,0.75,2,2,1,0
+195,Iowa City,US,4,3,Broccoli Mag,2,0.5,2,2,1,0
+196,Nijmegen,NL,4,3,Nomad Magazine,2,0.5,2,2,0,0
+197,Olympia,US,4,3,Broccoli Mag,3,0.75,2,2,1,0
+198,San Antonio,US,4,3,Eaten,2,0.5,2,2,0,0
+199,Sarasota,US,4,3,Broccoli Mag,2,0.5,2,2,0,0
+200,Tel Aviv,IL,4,3,Slanted,2,0.5,2,2,0,0
+201,George Town,MY,4,1,Plates,4,1.0,4,0,0,0
+202,Petaling Jaya,MY,4,1,Plates,4,1.0,4,0,0,0
+203,Forli,IT,3,17,Broccoli Mag,2,0.67,0,3,3,3
+204,Hangzhou,CN,3,14,GAZE,2,0.67,1,2,2,2
+205,Boulder,US,3,7,Cake Zine,1,0.33,0,3,1,1
+206,Evanston,US,3,6,Brick,1,0.33,0,3,1,1
+207,Maastricht,NL,3,6,Nomad Magazine,3,1.0,1,2,2,2
+208,Norwich,GB,3,6,Delayed Gratification,1,0.33,1,2,1,1
+209,Troy,US,3,6,Broccoli Mag,1,0.33,0,3,1,1
+210,Ipswich,GB,3,5,A Rabbit's Foot,1,0.33,0,3,1,1
+211,Las Vegas,US,3,5,Brick,1,0.33,0,3,1,1
+212,St. Petersburg,US,3,5,Broccoli Mag,1,0.33,1,2,1,1
+213,Ventura,US,3,5,Broccoli Mag,1,0.33,1,2,1,1
+214,Beverly Hills,US,3,4,Epoch Review,2,0.67,1,2,2,0
+215,Brookline,US,3,4,Eaten,2,0.67,1,2,1,1
+216,Burlington,US,3,4,Epoch Review,1,0.33,0,3,1,0
+217,Cardiff,GB,3,4,A Rabbit's Foot,1,0.33,0,3,1,0
+218,Christchurch,NZ,3,4,Debris,1,0.33,1,2,1,0
+219,Encinitas,US,3,4,Broccoli Mag,1,0.33,1,2,1,0
+220,Eugene,US,3,4,Broccoli Mag,1,0.33,1,2,1,0
+221,Fort Worth,US,3,4,Cake Zine,1,0.33,0,3,1,0
+222,Knoxville,US,3,4,Broccoli Mag,1,0.33,1,2,1,0
+223,Lancaster,US,3,4,Anorak,1,0.33,0,3,1,0
+224,Liège,BE,3,4,Accattone,1,0.33,1,2,1,0
+225,Malmö,SE,3,4,A Rabbit's Foot,1,0.33,0,3,1,0
+226,Moscow,RU,3,4,Luncheon,2,0.67,0,3,2,0
+227,Oklahoma City,US,3,4,Epoch Review,1,0.33,0,3,1,0
+228,Regina,CA,3,4,Brick,1,0.33,1,2,1,0
+229,Santa Fe,US,3,4,Synonym,2,0.67,1,2,2,0
+230,St. John's,CA,3,4,Brick,1,0.33,0,3,1,0
+231,Totnes,GB,3,4,Broccoli Mag,1,0.33,0,3,1,0
+232,Wilmington,US,3,4,Broccoli Mag,1,0.33,1,2,1,0
+233,Anchorage,US,3,3,Broccoli Mag,1,0.33,1,2,0,0
+234,Beacon,US,3,3,Broccoli Mag,2,0.67,1,2,1,0
+235,Bergen,NO,3,3,FUKT,2,0.67,1,2,1,0
+236,Biarritz,FR,3,3,Broccoli Mag,1,0.33,1,2,0,0
+237,Bilbao,ES,3,3,MacGuffin,1,0.33,1,2,0,0
+238,Bremen,DE,3,3,Behind the Blinds,1,0.33,1,2,0,0
+239,Burbank,US,3,3,Broccoli Mag,1,0.33,1,2,0,0
+240,Bury St Edmunds,GB,3,3,A Rabbit's Foot,1,0.33,1,2,0,0
+241,Byron Bay,AU,3,3,Never Too Small,1,0.33,1,2,0,0
+242,Canberra,AU,3,3,Never Too Small,1,0.33,1,2,0,0
+243,Charlotte,US,3,3,Cherry Bombe,1,0.33,1,2,0,0
+244,Fort Collins,US,3,3,Broccoli Mag,1,0.33,1,2,0,0
+245,Hamilton,CA,3,3,Brick,1,0.33,1,2,0,0
+246,Heidelberg,DE,3,3,Behind the Blinds,1,0.33,1,2,0,0
+247,Kiel,DE,3,3,Behind the Blinds,1,0.33,1,2,0,0
+248,Leeuwarden,NL,3,3,Nomad Magazine,2,0.67,2,1,1,0
+249,Leiden,NL,3,3,Behind the Blinds,1,0.33,1,2,0,0
+250,Leuven,BE,3,3,Esse arts + opinions,1,0.33,1,2,0,0
+251,Mannheim,DE,3,3,Behind the Blinds,1,0.33,1,2,0,0
+252,Markham,CA,3,3,Behind the Blinds,1,0.33,1,2,0,0
+253,Mill Valley,US,3,3,Eaten,1,0.33,1,2,0,0
+254,Newmarket,CA,3,3,Behind the Blinds,1,0.33,1,2,0,0
+255,Nice,FR,3,3,Drift,1,0.33,1,2,0,0
+256,Omaha,US,3,3,Broccoli Mag,2,0.67,1,2,1,0
+257,Provincetown,US,3,3,Broccoli Mag,2,0.67,2,1,1,0
+258,Reno,US,3,3,Eaten,1,0.33,1,2,0,0
+259,Sag Harbor,US,3,3,A Rabbit's Foot,1,0.33,1,2,0,0
+260,Saint Petersburg,RU,3,3,SLEEK,2,0.67,1,2,1,0
+261,Santa Rosa,US,3,3,Broccoli Mag,1,0.33,1,2,0,0
+262,Somerville,US,3,3,Broccoli Mag,3,1.0,2,1,1,1
+263,St Leonards-on-Sea,GB,3,3,Broccoli Mag,1,0.33,1,2,0,0
+264,Tacoma,US,3,3,Broccoli Mag,2,0.67,2,1,1,0
+265,Tilburg,NL,3,3,Nomad Magazine,2,0.67,2,1,1,0
+266,Bend,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+267,Cascais,PT,3,2,Luncheon,2,0.67,2,1,0,0
+268,Chico,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+269,Des Moines,US,3,2,Broccoli Mag,3,1.0,2,1,1,0
+270,Girona,ES,3,2,Openhouse,2,0.67,2,1,0,0
+271,Knokke,BE,3,2,Nomad Magazine,2,0.67,2,1,0,0
+272,Lafayette,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+273,Milford,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+274,Nantucket,US,3,2,Broccoli Mag,3,1.0,2,1,1,0
+275,Nevada City,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+276,San Luis Obispo,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+277,Santa Cruz,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+278,Topanga,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+279,Truckee,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+280,Vancouver,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+281,Westbrook,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+282,Yucca Valley,US,3,2,Broccoli Mag,2,0.67,2,1,0,0
+283,Chania,GR,3,1,Nomas,3,1.0,3,0,0,0
+284,Córdoba,AR,3,1,Anchoa,3,1.0,3,0,0,0
+285,Den Bosch,NL,3,1,Nomad Magazine,3,1.0,3,0,0,0
+286,Gainesville,US,3,1,Broccoli Mag,3,1.0,3,0,0,0
+287,Georgetown,US,3,1,Broccoli Mag,3,1.0,3,0,0,0
+288,Lima,PE,3,1,Anchoa,3,1.0,3,0,0,0
+289,Rosario,AR,3,1,Anchoa,3,1.0,3,0,0,0
+290,Tartu,EE,3,1,A Shade Colder,3,1.0,3,0,0,0
+291,Thessaloniki,GR,3,1,Nomas,3,1.0,3,0,0,0
+292,Stockport,GB,2,32,Wyrd Science,2,1.0,1,1,1,1
+293,Twentynine Palms,US,2,12,Broccoli Mag,2,1.0,1,1,1,1
+294,Cambridge,CA,2,8,Drift,1,0.5,0,2,1,1
+295,Bratislava,SK,2,7,Elska,1,0.5,1,1,1,1
+296,Hasselt,BE,2,7,Behind the Blinds,1,0.5,0,2,1,1
+297,Zhoushan,CN,2,7,FUKT,1,0.5,0,2,1,1
+298,Bogota,CO,2,5,Flaneur,1,0.5,0,2,1,1
+299,Kyiv,UA,2,5,Flaneur,1,0.5,1,1,1,1
+300,Larkspur,US,2,5,Broccoli Mag,1,0.5,0,2,1,1
+301,Wassaic,US,2,5,Cake Zine,1,0.5,0,2,1,1
+302,Cape Town,ZA,2,4,MacGuffin,2,1.0,0,2,2,1
+303,Fort Lauderdale,US,2,4,Epoch Review,1,0.5,0,2,2,0
+304,Kamloops,CA,2,4,Brick,1,0.5,0,2,2,0
+305,Littleton,US,2,4,Epoch Review,1,0.5,0,2,2,0
+306,Merano,IT,2,4,A Passion Thing,1,0.5,1,1,1,1
+307,Prince George,CA,2,4,Brick,1,0.5,0,2,1,1
+308,Salt Spring Island,CA,2,4,Brick,1,0.5,0,2,1,1
+309,Wellington,NZ,2,4,Openhouse,2,1.0,1,1,1,1
+310,Whitehorse,CA,2,4,Brick,1,0.5,0,2,1,1
+311,Windsor,CA,2,4,Brick,1,0.5,0,2,2,0
+312,Albuquerque,US,2,3,Broccoli Mag,1,0.5,1,1,1,0
+313,Alkmaar,NL,2,3,Behind the Blinds,1,0.5,1,1,1,0
+314,Birmingham,GB,2,3,Delayed Gratification,1,0.5,1,1,1,0
+315,Bloomington,US,2,3,Epoch Review,1,0.5,0,2,1,0
+316,Blue Hill,US,2,3,Brick,1,0.5,0,2,1,0
+317,Burford,GB,2,3,20 Seconds,1,0.5,0,2,1,0
+318,Burnaby,CA,2,3,Brick,1,0.5,0,2,1,0
+319,Colorado Springs,US,2,3,Broccoli Mag,1,0.5,1,1,1,0
+320,Concord,US,2,3,The Drift,2,1.0,1,1,1,1
+321,Dartmouth,CA,2,3,Brick,1,0.5,0,2,1,0
+322,Dundee,GB,2,3,Anorak,1,0.5,0,2,1,0
+323,East Kilbride,GB,2,3,Delayed Gratification,1,0.5,0,2,1,0
+324,Encino,US,2,3,Hunger,1,0.5,0,2,1,0
+325,Fresno,US,2,3,Broccoli Mag,1,0.5,1,1,1,0
+326,Glendale,US,2,3,Epoch Review,1,0.5,0,2,1,0
+327,Jersey City,US,2,3,Broccoli Mag,1,0.5,1,1,1,0
+328,Kyoto,JP,2,3,Cake Zine,1,0.5,1,1,1,0
+329,Lethbridge,CA,2,3,Brick,2,1.0,1,1,1,1
+330,Llandudno,GB,2,3,Selvedge,1,0.5,0,2,1,0
+331,Manhattan Beach,US,2,3,Epoch Review,2,1.0,0,2,2,0
+332,Meppel,NL,2,3,Hunger,1,0.5,0,2,1,0
+333,Naples,IT,2,3,20 Seconds,1,0.5,0,2,1,0
+334,Oshawa,CA,2,3,Behind the Blinds,1,0.5,0,2,1,0
+335,Pointe-Claire,CA,2,3,Behind the Blinds,1,0.5,1,1,1,0
+336,Sudbury,CA,2,3,Brick,1,0.5,0,2,1,0
+337,Tustin,US,2,3,Eaten,1,0.5,0,2,1,0
+338,Wassenaar,NL,2,3,Behind the Blinds,1,0.5,0,2,1,0
+339,Waterloo,CA,2,3,photoED Magazine,1,0.5,1,1,1,0
+340,Whitley Bay,GB,2,3,Noble Rot,2,1.0,1,1,1,1
+341,Woodland Hills,US,2,3,Hunger,1,0.5,0,2,1,0
+342,Aachen,DE,2,2,Behind the Blinds,1,0.5,1,1,0,0
+343,Aarhus,DK,2,2,Senet,1,0.5,1,1,0,0
+344,Abergavenny,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+345,Alexandria,US,2,2,Epoch Review,1,0.5,1,1,0,0
+346,Amersfoort,NL,2,2,Nomad Magazine,1,0.5,1,1,0,0
+347,Andover,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+348,Ann Arbor,US,2,2,Serviette,1,0.5,1,1,0,0
+349,Annapolis,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+350,Armadale,AU,2,2,Noble Rot,1,0.5,1,1,0,0
+351,Aspen,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+352,Baden-Baden,DE,2,2,Epoch Review,1,0.5,1,1,0,0
+353,Bath,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+354,Bergamo,IT,2,2,Epoch Review,1,0.5,1,1,0,0
+355,Bergen,NL,2,2,Nomad Magazine,1,0.5,1,1,0,0
+356,Birmingham,US,2,2,Mother Tongue,1,0.5,1,1,0,0
+357,Brno,CZ,2,2,Gossamer,1,0.5,1,1,0,0
+358,Brockville,CA,2,2,Serviette,1,0.5,1,1,0,0
+359,Burlington,CA,2,2,Brick,1,0.5,1,1,0,0
+360,Cambridge,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+361,Camden,US,2,2,Eaten,1,0.5,1,1,0,0
+362,Capitola,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+363,Carmarthen,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+364,Chandler,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+365,Cheltenham,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+366,Chula Vista,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+367,Cirencester,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+368,Colchester,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+369,Corfu,GR,2,2,Openhouse,1,0.5,1,1,0,0
+370,Corvallis,US,2,2,Kitchen Table,1,0.5,1,1,0,0
+371,Culver City,US,2,2,Cake Zine,1,0.5,1,1,0,0
+372,Curitiba,BR,2,2,Flaneur,1,0.5,1,1,0,0
+373,De Pere,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+374,Doylestown,US,2,2,The Drift,1,0.5,1,1,0,0
+375,Duluth,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+376,Dunfermline,GB,2,2,Broccoli Mag,1,0.5,1,1,0,0
+377,Eastbourne,GB,2,2,A Rabbit's Foot,1,0.5,1,1,0,0
+378,Edison,US,2,2,Eaten,1,0.5,1,1,0,0
+379,Erfurt,DE,2,2,Behind the Blinds,1,0.5,1,1,0,0
+380,Essen,DE,2,2,Epoch Review,1,0.5,1,1,0,0
+381,Fayetteville,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+382,Freiburg,DE,2,2,Behind the Blinds,1,0.5,1,1,0,0
+383,Frenchtown,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+384,Friday Harbor,US,2,2,Like the Wind,1,0.5,1,1,0,0
+385,Fukuoka,JP,2,2,Flaneur,1,0.5,1,1,0,0
+386,Gateshead,GB,2,2,Senet,1,0.5,1,1,0,0
+387,Genoa,IT,2,2,Slanted,1,0.5,1,1,0,0
+388,Godalming,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+389,Greenfield,US,2,2,SICK,1,0.5,1,1,0,0
+390,Hamilton,US,2,2,Broccoli Mag,2,1.0,1,1,1,0
+391,Hanover,DE,2,2,Epoch Review,1,0.5,1,1,0,0
+392,Hingham,US,2,2,Mother Tongue,1,0.5,1,1,0,0
+393,Hobart,AU,2,2,Lodestars Anthology,1,0.5,1,1,0,0
+394,Homer,US,2,2,Eaten,1,0.5,1,1,0,0
+395,Hove,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+396,Hsinchu,TW,2,2,Behind the Blinds,1,0.5,1,1,0,0
+397,Irvine,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+398,Ithaca,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+399,Johannesburg,ZA,2,2,MacGuffin,1,0.5,1,1,0,0
+400,Johns Island,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+401,Joshua Tree,US,2,2,Broccoli Mag,2,1.0,1,1,1,0
+402,Kaohsiung,TW,2,2,Behind the Blinds,1,0.5,1,1,0,0
+403,Kassel,DE,2,2,Epoch Review,1,0.5,1,1,0,0
+404,Kitchener,CA,2,2,Anorak,1,0.5,1,1,0,0
+405,Las Cruces,US,2,2,Gossamer,1,0.5,1,1,0,0
+406,Leamington Spa,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+407,Lexington,US,2,2,Gossamer,1,0.5,1,1,0,0
+408,Lincoln,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+409,Lindau,DE,2,2,Luncheon,1,0.5,1,1,0,0
+410,Lymington,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+411,Manzanita,US,2,2,Kitchen Table,1,0.5,1,1,0,0
+412,Memphis,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+413,Miami Beach,US,2,2,Anchoa,1,0.5,1,1,0,0
+414,Middlesbrough,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+415,Mons,BE,2,2,Hunger,1,0.5,1,1,0,0
+416,Montclair,US,2,2,Eaten,1,0.5,1,1,0,0
+417,Montreuil,FR,2,2,GAZE,1,0.5,1,1,0,0
+418,Morpeth,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+419,Naples,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+420,New Haven,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+421,New Hope,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+422,Newburgh,US,2,2,Cake Zine,1,0.5,1,1,0,0
+423,Nicosia,CY,2,2,Nomas,1,0.5,1,1,0,0
+424,North Adams,US,2,2,Different Leaf,1,0.5,1,1,0,0
+425,Nyack,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+426,Oak Park,US,2,2,Cherry Bombe,1,0.5,1,1,0,0
+427,Oceanside,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+428,Paddington,AU,2,2,Noble Rot,1,0.5,1,1,0,0
+429,Petaluma,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+430,Pickering,CA,2,2,photoED Magazine,2,1.0,1,1,1,0
+431,Portofino,IT,2,2,WHATEVR Fanzine,1,0.5,1,1,0,0
+432,Regensburg,DE,2,2,Luncheon,1,0.5,1,1,0,0
+433,Richmond Hill,CA,2,2,Brick,1,0.5,1,1,0,0
+434,Riga,LV,2,2,A Shade Colder,1,0.5,1,1,0,0
+435,Rockville,US,2,2,Serviette,1,0.5,1,1,0,0
+436,Saltaire,GB,2,2,Lodestars Anthology,2,1.0,1,1,1,0
+437,Shelton,US,2,2,Cake Zine,1,0.5,1,1,0,0
+438,Skipton,GB,2,2,Broccoli Mag,1,0.5,1,1,0,0
+439,South Pasadena,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+440,St. George,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+441,Stone Ridge,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+442,Stroud,GB,2,2,Delayed Gratification,1,0.5,1,1,0,0
+443,Surrey,CA,2,2,Brick,1,0.5,1,1,0,0
+444,Tainan,TW,2,2,Behind the Blinds,1,0.5,1,1,0,0
+445,Telluride,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+446,Tempe,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+447,Tetbury,GB,2,2,Noble Rot,1,0.5,1,1,0,0
+448,Tivoli,US,2,2,UPPERCASE,1,0.5,1,1,0,0
+449,Traverse City,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+450,Trois-Rivières,CA,2,2,Esse arts + opinions,1,0.5,1,1,0,0
+451,Uccle,BE,2,2,GAZE,1,0.5,1,1,0,0
+452,Verona,IT,2,2,Luncheon,1,0.5,1,1,0,0
+453,Voorschoten,NL,2,2,Behind the Blinds,1,0.5,1,1,0,0
+454,Walnut Creek,US,2,2,Broccoli Mag,1,0.5,1,1,0,0
+455,Whistler,CA,2,2,Openhouse,1,0.5,1,1,0,0
+456,Worthing,GB,2,2,Anorak,1,0.5,1,1,0,0
+457,Zhenjiang,CN,2,2,Viscose Journal,2,1.0,1,1,1,0
+458,A Coruña,ES,2,1,MacGuffin,2,1.0,2,0,0,0
+459,Angers,FR,2,1,GAZE,2,1.0,2,0,0,0
+460,Arlington,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+461,Bastia,FR,2,1,GAZE,2,1.0,2,0,0,0
+462,Bengaluru,IN,2,1,Dhoop,2,1.0,2,0,0,0
+463,Braunschweig,DE,2,1,Luncheon,2,1.0,2,0,0,0
+464,Breda,NL,2,1,Nomad Magazine,2,1.0,2,0,0,0
+465,Cairo,EG,2,1,Slanted,2,1.0,2,0,0,0
+466,Cayucos,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+467,Coimbra,PT,2,1,Luncheon,2,1.0,2,0,0,0
+468,Cold Spring,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+469,Costa Mesa,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+470,Deauville,FR,2,1,GAZE,2,1.0,2,0,0,0
+471,Easton,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+472,Etterbeek,BE,2,1,Hunger,2,1.0,2,0,0,0
+473,Everett,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+474,Felton,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+475,Key West,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+476,Krakow,PL,2,1,Hunger,2,1.0,2,0,0,0
+477,Machynlleth,GB,2,1,Broccoli Mag,2,1.0,2,0,0,0
+478,Makawao,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+479,Mar del Plata,AR,2,1,Anchoa,2,1.0,2,0,0,0
+480,Mendocino,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+481,Nîmes,FR,2,1,GAZE,2,1.0,2,0,0,0
+482,Ocean City,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+483,Olhao,PT,2,1,Luncheon,2,1.0,2,0,0,0
+484,Philedelphia,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+485,Port Townsend,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+486,Providence,US,2,1,Elska,2,1.0,2,0,0,0
+487,Reykjavik,IS,2,1,Elska,2,1.0,2,0,0,0
+488,Ridgewood,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+489,Salida,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+490,Sanibel,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+491,Santa Cruz de Tenerife,ES,2,1,MacGuffin,2,1.0,2,0,0,0
+492,Santa Rosa Beach,US,2,1,Broccoli Mag,2,1.0,2,0,0,0
+493,Trondheim,NO,2,1,FUKT,2,1.0,2,0,0,0
+494,Viborg,DK,2,1,Luncheon,2,1.0,2,0,0,0
+495,Waterville,US,2,1,SICK,2,1.0,2,0,0,0
+496,Rushden,GB,1,18,A Rabbit's Foot,1,1.0,0,1,1,1
+497,Davis,US,1,12,Brick,1,1.0,0,1,1,1
+498,Swansea,US,1,12,Brick,1,1.0,0,1,1,1
+499,Lake Forest Park,US,1,7,Broccoli Mag,1,1.0,0,1,1,1
+500,Beirut,LB,1,4,Flaneur,1,1.0,0,1,1,1
+501,Kingston,CA,1,4,Brick,1,1.0,0,1,1,1
+502,North Vancouver,CA,1,4,Brick,1,1.0,0,1,1,1
+503,Oxted,GB,1,4,Like the Wind,1,1.0,0,1,1,1
+504,Terrace,CA,1,4,Brick,1,1.0,0,1,1,1
+505,Arezzo,IT,1,3,Nomad Magazine,1,1.0,0,1,1,1
+506,Bakersfield,US,1,3,Epoch Review,1,1.0,0,1,1,1
+507,Bolzano,IT,1,3,Epoch Review,1,1.0,0,1,1,1
+508,Carlton,US,1,3,Cake Zine,1,1.0,0,1,1,1
+509,Dawson Creek,CA,1,3,photoED Magazine,1,1.0,0,1,1,1
+510,Greenwood,CA,1,3,Brick,1,1.0,0,1,1,1
+511,Guelph,CA,1,3,Behind the Blinds,1,1.0,0,1,1,1
+512,Hadley,US,1,3,Epoch Review,1,1.0,0,1,1,1
+513,Hebden Bridge,GB,1,3,Advanture,1,1.0,0,1,1,1
+514,Ho Chi Minh City,VN,1,3,Hunger,1,1.0,0,1,1,1
+515,Holland,US,1,3,Drift,1,1.0,0,1,1,1
+516,Laval,CA,1,3,Behind the Blinds,1,1.0,0,1,1,1
+517,Menlo Park,US,1,3,Brick,1,1.0,0,1,1,1
+518,Mercer Island,US,1,3,Kitchen Table,1,1.0,0,1,1,1
+519,North Bay,CA,1,3,Eaten,1,1.0,0,1,1,1
+520,Noventa Padovana,IT,1,3,Behind the Blinds,1,1.0,0,1,1,1
+521,Orillia,CA,1,3,Brick,1,1.0,0,1,1,1
+522,Picton,CA,1,3,Brick,1,1.0,0,1,1,1
+523,Plovdiv,BG,1,3,Eaten,1,1.0,0,1,1,1
+524,Pound Ridge,US,1,3,Delayed Gratification,1,1.0,0,1,1,1
+525,Prato,IT,1,3,Behind the Blinds,1,1.0,0,1,1,1
+526,Sapporo,JP,1,3,FUKT,1,1.0,0,1,1,1
+527,South Burlington,US,1,3,Epoch Review,1,1.0,0,1,1,1
+528,Springfield,US,1,3,Epoch Review,1,1.0,0,1,1,1
+529,Ajax,CA,1,2,Brick,1,1.0,0,1,1,0
+530,Aliso Viejo,US,1,2,Epoch Review,1,1.0,0,1,1,0
+531,Altoona,US,1,2,Gossamer,1,1.0,0,1,1,0
+532,Ancaster,CA,1,2,Brick,1,1.0,0,1,1,0
+533,Belfast,US,1,2,Selvedge,1,1.0,0,1,1,0
+534,Blaine,US,1,2,Broccoli Mag,1,1.0,0,1,1,0
+535,Bloemendaal,NL,1,2,Behind the Blinds,1,1.0,0,1,1,0
+536,Buchanan,US,1,2,Brick,1,1.0,0,1,1,0
+537,Calabasas,US,1,2,Epoch Review,1,1.0,0,1,1,0
+538,Catskill,US,1,2,Never Too Small,1,1.0,0,1,1,0
+539,Chengdu,CN,1,2,MacGuffin,1,1.0,0,1,1,0
+540,Chiang Mai,TH,1,2,Broccoli Mag,1,1.0,0,1,1,0
+541,Clayton,US,1,2,Broccoli Mag,1,1.0,0,1,1,0
+542,Coleraine,GB,1,2,Drift,1,1.0,0,1,1,0
+543,Coquitlam,CA,1,2,Brick,1,1.0,0,1,1,0
+544,Corner Brook,CA,1,2,photoED Magazine,1,1.0,0,1,1,0
+545,Cranbrook,CA,1,2,Serviette,1,1.0,0,1,1,0
+546,Dieppe,CA,1,2,Brick,1,1.0,0,1,1,0
+547,Eastsound,US,1,2,Cake Zine,1,1.0,0,1,1,0
+548,Elkins,US,1,2,Broccoli Mag,1,1.0,0,1,1,0
+549,Falmouth,GB,1,2,Delayed Gratification,1,1.0,0,1,1,0
+550,Galiano Island,CA,1,2,Serviette,1,1.0,0,1,1,0
+551,Gilroy,US,1,2,Epoch Review,1,1.0,0,1,1,0
+552,Grande Prairie,CA,1,2,photoED Magazine,1,1.0,0,1,1,0
+553,Green Bay,US,1,2,Epoch Review,1,1.0,0,1,1,0
+554,Guangzhou,CN,1,2,Hunger,1,1.0,0,1,1,0
+555,Hastings,GB,1,2,The Erotic Review,1,1.0,0,1,1,0
+556,Humlebæk,DK,1,2,Sindroms,1,1.0,0,1,1,0
+557,Hyannis,US,1,2,Gossamer,1,1.0,0,1,1,0
+558,Hydra,GR,1,2,Serviette,1,1.0,0,1,1,0
+559,Jesolo,IT,1,2,Nomad Magazine,1,1.0,0,1,1,0
+560,Kahului,US,1,2,Epoch Review,1,1.0,0,1,1,0
+561,Langley,CA,1,2,Brick,1,1.0,0,1,1,0
+562,Lynchburg,US,1,2,Gossamer,1,1.0,0,1,1,0
+563,Marietta,US,1,2,Broccoli Mag,1,1.0,0,1,1,0
+564,Milton,CA,1,2,Behind the Blinds,1,1.0,0,1,1,0
+565,Münster,DE,1,2,Linguaphile,1,1.0,0,1,1,0
+566,Nairobi,KE,1,2,Noble Rot,1,1.0,0,1,1,0
+567,Nepean,CA,1,2,Brick,1,1.0,0,1,1,0
+568,Newburyport,US,1,2,Brick,1,1.0,0,1,1,0
+569,Newport Beach,US,1,2,Epoch Review,1,1.0,0,1,1,0
+570,Oak Brook,US,1,2,Epoch Review,1,1.0,0,1,1,0
+571,Oegstgeest,NL,1,2,Behind the Blinds,1,1.0,0,1,1,0
+572,Orford,GB,1,2,MacGuffin,1,1.0,0,1,1,0
+573,Oxford,US,1,2,Brick,1,1.0,0,1,1,0
+574,Pasig,PH,1,2,Cake Zine,1,1.0,0,1,1,0
+575,Peterborough,CA,1,2,Brick,1,1.0,0,1,1,0
+576,Port Medway,CA,1,2,Serviette,1,1.0,0,1,1,0
+577,Prescott,US,1,2,The Drift,1,1.0,0,1,1,0
+578,Provo,US,1,2,A Rabbit's Foot,1,1.0,0,1,1,0
+579,Rockland,US,1,2,Broccoli Mag,1,1.0,0,1,1,0
+580,Roseville,US,1,2,Epoch Review,1,1.0,0,1,1,0
+581,Ruthin,GB,1,2,Selvedge,1,1.0,0,1,1,0
+582,Saint John,CA,1,2,Brick,1,1.0,0,1,1,0
+583,San Jose,US,1,2,Epoch Review,1,1.0,0,1,1,0
+584,Shiga,JP,1,2,FARE,1,1.0,0,1,1,0
+585,Sidney,CA,1,2,photoED Magazine,1,1.0,0,1,1,0
+586,Skokie,US,1,2,Epoch Review,1,1.0,0,1,1,0
+587,St. Albert,CA,1,2,Brick,1,1.0,0,1,1,0
+588,St. Helena,US,1,2,Cherry Bombe,1,1.0,0,1,1,0
+589,Swalwell,GB,1,2,Noble Rot,1,1.0,0,1,1,0
+590,Taichung,TW,1,2,Behind the Blinds,1,1.0,0,1,1,0
+591,Thousand Oaks,US,1,2,Epoch Review,1,1.0,0,1,1,0
+592,Thunder Bay,CA,1,2,Brick,1,1.0,0,1,1,0
+593,Tulsa,US,1,2,Epoch Review,1,1.0,0,1,1,0
+594,West Kirby,GB,1,2,Never Too Small,1,1.0,0,1,1,0
+595,Winchester,GB,1,2,Luncheon,1,1.0,0,1,1,0
+596,Woodmere,US,1,2,Epoch Review,1,1.0,0,1,1,0
+597,Aberdeen,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+598,Aberystwyth,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+599,Abington,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+600,Accord,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+601,Agoura Hills,US,1,1,Eaten,1,1.0,1,0,0,0
+602,Ahmedabad,IN,1,1,Dhoop,1,1.0,1,0,0,0
+603,Aix-en-Provence,FR,1,1,GAZE,1,1.0,1,0,0,0
+604,Aix-les-Bains,FR,1,1,GAZE,1,1.0,1,0,0,0
+605,Ajaccio,FR,1,1,GAZE,1,1.0,1,0,0,0
+606,Akureyri,IS,1,1,Elska,1,1.0,1,0,0,0
+607,Alameda,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+608,Aldgate,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+609,Alfriston,GB,1,1,UPPERCASE,1,1.0,1,0,0,0
+610,Aljezur,PT,1,1,Luncheon,1,1.0,1,0,0,0
+611,Allinge,DK,1,1,Luncheon,1,1.0,1,0,0,0
+612,Alpharetta,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+613,Altrincham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+614,Amagansett,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+615,Amberley,NZ,1,1,Noble Rot,1,1.0,1,0,0,0
+616,Amenia,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+617,Amherst,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+618,Amiens,FR,1,1,GAZE,1,1.0,1,0,0,0
+619,Amityville,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+620,Andes,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+621,Andover,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+622,Andratx,ES,1,1,MacGuffin,1,1.0,1,0,0,0
+623,Angoulême,FR,1,1,GAZE,1,1.0,1,0,0,0
+624,Ankeny,US,1,1,Drift,1,1.0,1,0,0,0
+625,Arbroath,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+626,Arcata,US,1,1,The Drift,1,1.0,1,0,0,0
+627,Arzachena,IT,1,1,Yolo Journal,1,1.0,1,0,0,0
+628,Arès,FR,1,1,GAZE,1,1.0,1,0,0,0
+629,Ashby-de-la-Zouch,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+630,Asnæs,DK,1,1,Luncheon,1,1.0,1,0,0,0
+631,Augsburg,DE,1,1,Openhouse,1,1.0,1,0,0,0
+632,Augusta,US,1,1,Gossamer,1,1.0,1,0,0,0
+633,Avalon,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+634,Ayr,CA,1,1,photoED Magazine,1,1.0,1,0,0,0
+635,Bagnolet,FR,1,1,GAZE,1,1.0,1,0,0,0
+636,Bainbridge Island,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+637,Bali,ID,1,1,Cake Zine,1,1.0,1,0,0,0
+638,Banbury,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+639,Bangsar,MY,1,1,Esse arts + opinions,1,1.0,1,0,0,0
+640,Barda del Medio,AR,1,1,Anchoa,1,1.0,1,0,0,0
+641,Barendrecht,NL,1,1,Nomad Magazine,1,1.0,1,0,0,0
+642,Barnstaple,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+643,Barrie,CA,1,1,photoED Magazine,1,1.0,1,0,0,0
+644,Basel,DE,1,1,Luncheon,1,1.0,1,0,0,0
+645,Baton Rouge,US,1,1,Epoch Review,1,1.0,1,0,0,0
+646,Bayport,US,1,1,The Paris Review,1,1.0,1,0,0,0
+647,Bearsville,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+648,Beauvais,FR,1,1,GAZE,1,1.0,1,0,0,0
+649,Bedford,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+650,Beeston,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+651,Belfast,GB,1,1,Record Magazine,1,1.0,1,0,0,0
+652,Belgrade,RS,1,1,Noble Rot,1,1.0,1,0,0,0
+653,Belleville,CA,1,1,photoED Magazine,1,1.0,1,0,0,0
+654,Bentonville,US,1,1,Cake Zine,1,1.0,1,0,0,0
+655,Berkhamsted,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+656,Berrima,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+657,Berry,AU,1,1,Record Magazine,1,1.0,1,0,0,0
+658,Bethesda,US,1,1,Serviette,1,1.0,1,0,0,0
+659,Bexhill-on-Sea,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+660,Bideford,GB,1,1,FARE,1,1.0,1,0,0,0
+661,Bielefeld,DE,1,1,Luncheon,1,1.0,1,0,0,0
+662,Billings,US,1,1,Selvedge,1,1.0,1,0,0,0
+663,Bingen,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+664,Bisbee,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+665,Blackwood,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+666,Blagnac,FR,1,1,GAZE,1,1.0,1,0,0,0
+667,Blaricum,NL,1,1,Nomad Magazine,1,1.0,1,0,0,0
+668,Boca Raton,US,1,1,Epoch Review,1,1.0,1,0,0,0
+669,Bochum,DE,1,1,Luncheon,1,1.0,1,0,0,0
+670,Bodrum,TR,1,1,YUZU,1,1.0,1,0,0,0
+671,Bonn,DE,1,1,Luncheon,1,1.0,1,0,0,0
+672,Bourbonnais,US,1,1,Gossamer,1,1.0,1,0,0,0
+673,Bourg-la-Reine,FR,1,1,GAZE,1,1.0,1,0,0,0
+674,Boxtel,NL,1,1,Nomad Magazine,1,1.0,1,0,0,0
+675,Braintree,US,1,1,Gossamer,1,1.0,1,0,0,0
+676,Brampton,CA,1,1,photoED Magazine,1,1.0,1,0,0,0
+677,Brattleboro,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+678,Brentwood,US,1,1,Luncheon,1,1.0,1,0,0,0
+679,Brescia,IT,1,1,WHATEVR Fanzine,1,1.0,1,0,0,0
+680,Briançon,FR,1,1,GAZE,1,1.0,1,0,0,0
+681,Bridgehampton,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+682,Bridlington,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+683,Bridport,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+684,Brighton,US,1,1,Eaten,1,1.0,1,0,0,0
+685,Brossard,CA,1,1,Behind the Blinds,1,1.0,1,0,0,0
+686,Brunswick,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+687,Buchloe,DE,1,1,Luncheon,1,1.0,1,0,0,0
+688,Bude,GB,1,1,Eaten,1,1.0,1,0,0,0
+689,Buena Park,US,1,1,Luncheon,1,1.0,1,0,0,0
+690,Burdett,US,1,1,Noble Rot,1,1.0,1,0,0,0
+691,Burlingame,US,1,1,Like the Wind,1,1.0,1,0,0,0
+692,Burnsville,US,1,1,Epoch Review,1,1.0,1,0,0,0
+693,Busan,KR,1,1,See All This,1,1.0,1,0,0,0
+694,Bush Hill Park,GB,1,1,Broccoli Mag,1,1.0,1,0,0,0
+695,Bègles,FR,1,1,GAZE,1,1.0,1,0,0,0
+696,Cairo,US,1,1,Family Style,1,1.0,1,0,0,0
+697,Caldas Da Rainha,PT,1,1,Luncheon,1,1.0,1,0,0,0
+698,California,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+699,Callicoon,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+700,Calvi,FR,1,1,GAZE,1,1.0,1,0,0,0
+701,Caminha,PT,1,1,Luncheon,1,1.0,1,0,0,0
+702,Campbell,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+703,Campbellton,CA,1,1,photoED Magazine,1,1.0,1,0,0,0
+704,Canandaigua,US,1,1,Eaten,1,1.0,1,0,0,0
+705,Canmore,CA,1,1,Broccoli Mag,1,1.0,1,0,0,0
+706,Cannes,FR,1,1,Muse Magazine,1,1.0,1,0,0,0
+707,Cannon Beach,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+708,Carle Place,US,1,1,Epoch Review,1,1.0,1,0,0,0
+709,Carlsbad,US,1,1,Cake Zine,1,1.0,1,0,0,0
+710,Carmel Valley,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+711,Carpi,IT,1,1,WHATEVR Fanzine,1,1.0,1,0,0,0
+712,Cary,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+713,Casole d'Elsa,IT,1,1,Yolo Journal,1,1.0,1,0,0,0
+714,Cavalaire-sur-Mer,FR,1,1,GAZE,1,1.0,1,0,0,0
+715,Cave City,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+716,Cedar Rapids,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+717,Center Valley,US,1,1,Epoch Review,1,1.0,1,0,0,0
+718,Centerport,US,1,1,Eaten,1,1.0,1,0,0,0
+719,Cervia,IT,1,1,WHATEVR Fanzine,1,1.0,1,0,0,0
+720,Cesena,IT,1,1,WHATEVR Fanzine,1,1.0,1,0,0,0
+721,Cesson-Sévigné,FR,1,1,GAZE,1,1.0,1,0,0,0
+722,Chapel Hill,US,1,1,Kitchen Table,1,1.0,1,0,0,0
+723,Charleroi,BE,1,1,Hunger,1,1.0,1,0,0,0
+724,Charlottesville,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+725,Charlottetown,CA,1,1,photoED Magazine,1,1.0,1,0,0,0
+726,Chartres,FR,1,1,GAZE,1,1.0,1,0,0,0
+727,Chatham,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+728,Chattanooga,US,1,1,Cherry Bombe,1,1.0,1,0,0,0
+729,Chelmsford,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+730,Chennai,IN,1,1,Dhoop,1,1.0,1,0,0,0
+731,Chesham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+732,Cheshire,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+733,Chester,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+734,Chevy Chase,US,1,1,Serviette,1,1.0,1,0,0,0
+735,Chichester,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+736,Chippenham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+737,Christchurch,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+738,Cleveland Heights,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+739,Cobham,GB,1,1,Anorak,1,1.0,1,0,0,0
+740,Collingswood,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+741,Collingwood,CA,1,1,Eaten,1,1.0,1,0,0,0
+742,Columbia,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+743,Comox,CA,1,1,Broccoli Mag,1,1.0,1,0,0,0
+744,Connecticut,US,1,1,Dirty Magazine,1,1.0,1,0,0,0
+745,Conshohocken,US,1,1,Like the Wind,1,1.0,1,0,0,0
+746,Cornwall,GB,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+747,Cornwallville,US,1,1,The Paris Review,1,1.0,1,0,0,0
+748,Corpus Christi,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+749,Cortland,US,1,1,Cake Zine,1,1.0,1,0,0,0
+750,Cowbridge,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+751,Cranberry Township,US,1,1,Gossamer,1,1.0,1,0,0,0
+752,Croydon Hills,AU,1,1,Noble Rot,1,1.0,1,0,0,0
+753,Cumberland,US,1,1,Cherry Bombe,1,1.0,1,0,0,0
+754,Currumbin,AU,1,1,Broccoli Mag,1,1.0,1,0,0,0
+755,Cygnet,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+756,Daegu,KR,1,1,MacGuffin,1,1.0,1,0,0,0
+757,Dagenham,GB,1,1,Brick,1,1.0,1,0,0,0
+758,Dalfsen,NL,1,1,Openhouse,1,1.0,1,0,0,0
+759,Damascus,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+760,Danvers,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+761,Danville,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+762,Davenport,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+763,Daylesford,AU,1,1,Record Magazine,1,1.0,1,0,0,0
+764,Dayton,US,1,1,Cake Zine,1,1.0,1,0,0,0
+765,De Haan,BE,1,1,Hunger,1,1.0,1,0,0,0
+766,Deadwood,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+767,Deal,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+768,Dearborn,US,1,1,The Drift,1,1.0,1,0,0,0
+769,Decorah,US,1,1,Eaten,1,1.0,1,0,0,0
+770,Delhi,IN,1,1,Dhoop,1,1.0,1,0,0,0
+771,Des Peres,US,1,1,Epoch Review,1,1.0,1,0,0,0
+772,Devizes,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+773,Digne-les-Bains,FR,1,1,GAZE,1,1.0,1,0,0,0
+774,Dijon,FR,1,1,Openhouse,1,1.0,1,0,0,0
+775,Dinard,FR,1,1,GAZE,1,1.0,1,0,0,0
+776,Dionne-les-Bains,FR,1,1,GAZE,1,1.0,1,0,0,0
+777,Dobbs Ferry,US,1,1,Mother Tongue,1,1.0,1,0,0,0
+778,Doorn,NL,1,1,Nomad Magazine,1,1.0,1,0,0,0
+779,Dorchester,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+780,Dortmund,DE,1,1,Luncheon,1,1.0,1,0,0,0
+781,Dresden,DE,1,1,Epoch Review,1,1.0,1,0,0,0
+782,Dubbo,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+783,Dublin,US,1,1,Epoch Review,1,1.0,1,0,0,0
+784,Dumfries,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+785,Dundee,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+786,Dunedin,NZ,1,1,Mother Tongue,1,1.0,1,0,0,0
+787,Dunkeld,GB,1,1,Noble Rot,1,1.0,1,0,0,0
+788,Dunsborough,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+789,East Hampton,US,1,1,The Paris Review,1,1.0,1,0,0,0
+790,East Lansing,US,1,1,Selvedge,1,1.0,1,0,0,0
+791,Eau Claire,US,1,1,Cake Zine,1,1.0,1,0,0,0
+792,Edgecomb,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+793,Edgware,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+794,Edina,US,1,1,Serviette,1,1.0,1,0,0,0
+795,Edmonds,US,1,1,Kitchen Table,1,1.0,1,0,0,0
+796,Eindhoven,BE,1,1,Esse arts + opinions,1,1.0,1,0,0,0
+797,El Cajon,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+798,Ellsworth,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+799,Emerald,AU,1,1,Broccoli Mag,1,1.0,1,0,0,0
+800,Emeryville,US,1,1,Epoch Review,1,1.0,1,0,0,0
+801,Enfield,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+802,Enterprise,US,1,1,Kitchen Table,1,1.0,1,0,0,0
+803,Epping,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+804,Epsom,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+805,Eragny,FR,1,1,GAZE,1,1.0,1,0,0,0
+806,Erlangen,DE,1,1,Epoch Review,1,1.0,1,0,0,0
+807,Esch-sur-Alzette,LU,1,1,12F,1,1.0,1,0,0,0
+808,Essex,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+809,Estoril,PT,1,1,Luncheon,1,1.0,1,0,0,0
+810,Eureka,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+811,Evian-les-Bains,FR,1,1,GAZE,1,1.0,1,0,0,0
+812,Evora,PT,1,1,Luncheon,1,1.0,1,0,0,0
+813,Exeter,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+814,Exmouth,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+815,Exton,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+816,Fair Oaks,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+817,Fairfax Station,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+818,Fairfield,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+819,Falls Church,US,1,1,Epoch Review,1,1.0,1,0,0,0
+820,Fargo,US,1,1,Epoch Review,1,1.0,1,0,0,0
+821,Farnham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+822,Ferndale,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+823,Ferrara,IT,1,1,A Rabbit's Foot,1,1.0,1,0,0,0
+824,Fiesole,IT,1,1,Yolo Journal,1,1.0,1,0,0,0
+825,Figueira da Foz,PT,1,1,Luncheon,1,1.0,1,0,0,0
+826,Fire Island,US,1,1,Elska,1,1.0,1,0,0,0
+827,Fish Creek,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+828,Fleming Island,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+829,Flinders,AU,1,1,Broccoli Mag,1,1.0,1,0,0,0
+830,Foothills,CA,1,1,Broccoli Mag,1,1.0,1,0,0,0
+831,Forest Hill,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+832,Forio,IT,1,1,Yolo Journal,1,1.0,1,0,0,0
+833,Fort Gratiot,US,1,1,Gossamer,1,1.0,1,0,0,0
+834,Fort Wayne,US,1,1,Gossamer,1,1.0,1,0,0,0
+835,Fredericton,CA,1,1,photoED Magazine,1,1.0,1,0,0,0
+836,Frederiksberg,DK,1,1,The Skirt Chronicles,1,1.0,1,0,0,0
+837,Fredrikstad,NO,1,1,Noble Rot,1,1.0,1,0,0,0
+838,Freehold,US,1,1,Epoch Review,1,1.0,1,0,0,0
+839,Frejus,FR,1,1,Muse Magazine,1,1.0,1,0,0,0
+840,Frisco,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+841,Frodsham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+842,Frome,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+843,Fullerton,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+844,Furiani,FR,1,1,GAZE,1,1.0,1,0,0,0
+845,Galesburg,US,1,1,The Drift,1,1.0,1,0,0,0
+846,Galway,IE,1,1,Eaten,1,1.0,1,0,0,0
+847,Gdansk,PL,1,1,Hunger,1,1.0,1,0,0,0
+848,Gearhart,US,1,1,Eaten,1,1.0,1,0,0,0
+849,Gerichshain,DE,1,1,Luncheon,1,1.0,1,0,0,0
+850,Getxo,ES,1,1,Openhouse,1,1.0,1,0,0,0
+851,Gibsons,CA,1,1,Mother Tongue,1,1.0,1,0,0,0
+852,Gillingham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+853,Glen Burnie,US,1,1,Senet,1,1.0,1,0,0,0
+854,Glen Rock,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+855,Gloucester,CA,1,1,Brick,1,1.0,1,0,0,0
+856,Godoy Cruz,AR,1,1,Anchoa,1,1.0,1,0,0,0
+857,Gold Coast,AU,1,1,Openhouse,1,1.0,1,0,0,0
+858,Goodyear,US,1,1,Epoch Review,1,1.0,1,0,0,0
+859,Greenport,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+860,Greenville,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+861,Gualala,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+862,Guatemala City,GT,1,1,Anchoa,1,1.0,1,0,0,0
+863,Guildford,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+864,Haapsalu,EE,1,1,A Shade Colder,1,1.0,1,0,0,0
+865,Haddonfield,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+866,Hagen,DE,1,1,Epoch Review,1,1.0,1,0,0,0
+867,Hailsham,GB,1,1,Advanture,1,1.0,1,0,0,0
+868,Hamlin,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+869,Hammel,DK,1,1,Luncheon,1,1.0,1,0,0,0
+870,Harbor Springs,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+871,Harlingen,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+872,Harpenden,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+873,Harrogate,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+874,Harrow,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+875,Haslemere,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+876,"Hastings Old Town, East Sussex",GB,1,1,Broccoli Mag,1,1.0,1,0,0,0
+877,Havertown,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+878,Hawkesbury,CA,1,1,Serviette,1,1.0,1,0,0,0
+879,Haworth,GB,1,1,Selvedge,1,1.0,1,0,0,0
+880,Haywards Heath,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+881,Healdsburg,US,1,1,Cherry Bombe,1,1.0,1,0,0,0
+882,Heemstede,NL,1,1,See All This,1,1.0,1,0,0,0
+883,Helensburgh,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+884,Hellerup,DK,1,1,The Skirt Chronicles,1,1.0,1,0,0,0
+885,Henderson,US,1,1,Serviette,1,1.0,1,0,0,0
+886,Henley-on-Thames,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+887,Henningsvaer,NO,1,1,Delayed Gratification,1,1.0,1,0,0,0
+888,Hereford,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+889,Herefordshire,GB,1,1,The Erotic Review,1,1.0,1,0,0,0
+890,Herning,DK,1,1,Luncheon,1,1.0,1,0,0,0
+891,Hilliard,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+892,Hillsboro,US,1,1,Serviette,1,1.0,1,0,0,0
+893,Hilversum,NL,1,1,Nomad Magazine,1,1.0,1,0,0,0
+894,Hirtshals,DK,1,1,Luncheon,1,1.0,1,0,0,0
+895,Hitchin,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+896,Hobro,DK,1,1,Luncheon,1,1.0,1,0,0,0
+897,Holbæk,DK,1,1,Luncheon,1,1.0,1,0,0,0
+898,Holmdel,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+899,Holstebro,DK,1,1,Luncheon,1,1.0,1,0,0,0
+900,Holyoke,US,1,1,Gossamer,1,1.0,1,0,0,0
+901,Homestead,US,1,1,Epoch Review,1,1.0,1,0,0,0
+902,Honiton,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+903,Hood River,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+904,Hopkins,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+905,Horsham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+906,Huesca,ES,1,1,MacGuffin,1,1.0,1,0,0,0
+907,Hull,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+908,Hundested,DK,1,1,Luncheon,1,1.0,1,0,0,0
+909,Hungerford,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+910,Huntington,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+911,Huntington Station,US,1,1,The Drift,1,1.0,1,0,0,0
+912,Hygiene,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+913,Ibiza,ES,1,1,Openhouse,1,1.0,1,0,0,0
+914,Idyllwild,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+915,Ifold,GB,1,1,Slanted,1,1.0,1,0,0,0
+916,Ilkley,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+917,Inverness,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+918,Inverness,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+919,Islamabad,PK,1,1,The Skirt Chronicles,1,1.0,1,0,0,0
+920,Isle of Skye,GB,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+921,Issaquah,US,1,1,Serviette,1,1.0,1,0,0,0
+922,Ivry-sur-Seine,FR,1,1,GAZE,1,1.0,1,0,0,0
+923,Jaipur,IN,1,1,Dhoop,1,1.0,1,0,0,0
+924,Jakarta,ID,1,1,Never Too Small,1,1.0,1,0,0,0
+925,Jefferson City,US,1,1,Mother Tongue,1,1.0,1,0,0,0
+926,Jerome,US,1,1,Noble Rot,1,1.0,1,0,0,0
+927,Jindalee,AU,1,1,Senet,1,1.0,1,0,0,0
+928,Johnson City,US,1,1,Serviette,1,1.0,1,0,0,0
+929,Joliette,CA,1,1,Esse arts + opinions,1,1.0,1,0,0,0
+930,Kailua,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+931,Kailua-Kona,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+932,Kallithea,GR,1,1,Nomas,1,1.0,1,0,0,0
+933,Kallstadt,DE,1,1,Noble Rot,1,1.0,1,0,0,0
+934,Kanata,CA,1,1,Epoch Review,1,1.0,1,0,0,0
+935,Kanazawa,JP,1,1,Openhouse,1,1.0,1,0,0,0
+936,Kansas City,US,1,1,Epoch Review,1,1.0,1,0,0,0
+937,Kapaa,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+938,Katy,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+939,Kehl,DE,1,1,Luncheon,1,1.0,1,0,0,0
+940,Kelowna,CA,1,1,UPPERCASE,1,1.0,1,0,0,0
+941,Kelso,GB,1,1,FARE,1,1.0,1,0,0,0
+942,Kenora,CA,1,1,UPPERCASE,1,1.0,1,0,0,0
+943,Kifissia,GR,1,1,Nomas,1,1.0,1,0,0,0
+944,Kilauea,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+945,King of Prussia,US,1,1,Muse Magazine,1,1.0,1,0,0,0
+946,King's Lynn,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+947,Kittery,US,1,1,Cake Zine,1,1.0,1,0,0,0
+948,Kobe,JP,1,1,MacGuffin,1,1.0,1,0,0,0
+949,Koblenz,DE,1,1,Epoch Review,1,1.0,1,0,0,0
+950,Kochi,IN,1,1,Dhoop,1,1.0,1,0,0,0
+951,Kolding,DK,1,1,Luncheon,1,1.0,1,0,0,0
+952,Kopavogur,IS,1,1,Elska,1,1.0,1,0,0,0
+953,Kota Kinabalu,MY,1,1,Plates,1,1.0,1,0,0,0
+954,Kuching,MY,1,1,Plates,1,1.0,1,0,0,0
+955,Kula,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+956,Kurashiki,JP,1,1,Openhouse,1,1.0,1,0,0,0
+957,L'Île-d'Yeu,FR,1,1,GAZE,1,1.0,1,0,0,0
+958,La Crosse,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+959,La Grange,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+960,La Roche-Bernard,FR,1,1,GAZE,1,1.0,1,0,0,0
+961,La Rochelle,FR,1,1,GAZE,1,1.0,1,0,0,0
+962,Ladispoli,IT,1,1,Yolo Journal,1,1.0,1,0,0,0
+963,Laguna Beach,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+964,Lake Oswego,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+965,Landers,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+966,Landvetter,SE,1,1,Luncheon,1,1.0,1,0,0,0
+967,Langley,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+968,Langley Township,CA,1,1,Broccoli Mag,1,1.0,1,0,0,0
+969,Laredo,US,1,1,Luncheon,1,1.0,1,0,0,0
+970,Las Palmas de Gran Canaria,ES,1,1,MacGuffin,1,1.0,1,0,0,0
+971,Lawrence,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+972,Lawrence Township,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+973,Lawrenceburg,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+974,Le Cap Ferret,FR,1,1,GAZE,1,1.0,1,0,0,0
+975,Le Palais,FR,1,1,GAZE,1,1.0,1,0,0,0
+976,Le Raincy,FR,1,1,GAZE,1,1.0,1,0,0,0
+977,Le Touquet,FR,1,1,GAZE,1,1.0,1,0,0,0
+978,Leavenworth,US,1,1,Eaten,1,1.0,1,0,0,0
+979,Leawood,US,1,1,Serviette,1,1.0,1,0,0,0
+980,Leesburg,US,1,1,Eaten,1,1.0,1,0,0,0
+981,Leicester,GB,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+982,Leiderdorp,NL,1,1,Nomad Magazine,1,1.0,1,0,0,0
+983,Leinfelden-Echterdingen,DE,1,1,Broccoli Mag,1,1.0,1,0,0,0
+984,Lenox,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+985,Leominster,US,1,1,Gossamer,1,1.0,1,0,0,0
+986,Les Herbiers,FR,1,1,GAZE,1,1.0,1,0,0,0
+987,Lewes,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+988,Lezennes,FR,1,1,GAZE,1,1.0,1,0,0,0
+989,Libertyville,US,1,1,Drift,1,1.0,1,0,0,0
+990,Lier,BE,1,1,Openhouse,1,1.0,1,0,0,0
+991,Lieusaint,FR,1,1,GAZE,1,1.0,1,0,0,0
+992,Limassol,CY,1,1,Nomas,1,1.0,1,0,0,0
+993,Limelette,BE,1,1,Behind the Blinds,1,1.0,1,0,0,0
+994,Lisse,NL,1,1,See All This,1,1.0,1,0,0,0
+995,Little Rock,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+996,Littleheath,GB,1,1,Noble Rot,1,1.0,1,0,0,0
+997,Liverpool,US,1,1,Gossamer,1,1.0,1,0,0,0
+998,Livingston,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+999,Lodz,PL,1,1,Hunger,1,1.0,1,0,0,0
+1000,Loix,FR,1,1,GAZE,1,1.0,1,0,0,0
+1001,Lone Tree,US,1,1,Serviette,1,1.0,1,0,0,0
+1002,Long Beach Township,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1003,Lorient,FR,1,1,GAZE,1,1.0,1,0,0,0
+1004,Lorne,AU,1,1,Record Magazine,1,1.0,1,0,0,0
+1005,Los Osos,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1006,Lousa,PT,1,1,Luncheon,1,1.0,1,0,0,0
+1007,Loveland,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1008,Lowell,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1009,Lubeck,DE,1,1,FUKT,1,1.0,1,0,0,0
+1010,Lucerne,CH,1,1,Openhouse,1,1.0,1,0,0,0
+1011,Lugano,CH,1,1,Flaneur,1,1.0,1,0,0,0
+1012,Lund,SE,1,1,Luncheon,1,1.0,1,0,0,0
+1013,Lunenburg,CA,1,1,Feels Zine,1,1.0,1,0,0,0
+1014,Luxembourg,LU,1,1,Slanted,1,1.0,1,0,0,0
+1015,Luzern,CH,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1016,Lynn,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1017,Löderup,SE,1,1,Openhouse,1,1.0,1,0,0,0
+1018,MTL - ciele athletics flagship,CA,1,1,Like the Wind,1,1.0,1,0,0,0
+1019,Machester,GB,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1020,Maidenhead,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1021,Malaga,ES,1,1,MacGuffin,1,1.0,1,0,0,0
+1022,Maleny,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+1023,Mallorca,ES,1,1,MacGuffin,1,1.0,1,0,0,0
+1024,Manchester,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1025,Mancos,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1026,Manhasset,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1027,Manitou Springs,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1028,Maple Plain,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1029,Maplewood,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1030,Marblehead,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1031,Margaretville,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1032,Marignane,FR,1,1,GAZE,1,1.0,1,0,0,0
+1033,Marion,US,1,1,Cherry Bombe,1,1.0,1,0,0,0
+1034,Marlborough,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1035,Marlow,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1036,Maroochydore,AU,1,1,Noble Rot,1,1.0,1,0,0,0
+1037,Marrickville,AU,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1038,Marshall,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1039,Martinez,US,1,1,Cake Zine,1,1.0,1,0,0,0
+1040,Marysville,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1041,Massy,FR,1,1,GAZE,1,1.0,1,0,0,0
+1042,Matera,IT,1,1,Synonym,1,1.0,1,0,0,0
+1043,Mazomanie,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1044,Mckinney,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1045,Mechelen,BE,1,1,Hunger,1,1.0,1,0,0,0
+1046,Media,US,1,1,Cake Zine,1,1.0,1,0,0,0
+1047,Medicine Hat,CA,1,1,Brick,1,1.0,1,0,0,0
+1048,Mellionnec,FR,1,1,GAZE,1,1.0,1,0,0,0
+1049,Mendrisio,CH,1,1,Accattone,1,1.0,1,0,0,0
+1050,Menerbes,FR,1,1,Eaten,1,1.0,1,0,0,0
+1051,Metairie,US,1,1,Serviette,1,1.0,1,0,0,0
+1052,Miama,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1053,Midland,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1054,Milbury,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1055,Millbury,US,1,1,Gossamer,1,1.0,1,0,0,0
+1056,Millerton,US,1,1,The Drift,1,1.0,1,0,0,0
+1057,Milton Keynes,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1058,Milwaukie,US,1,1,Cake Zine,1,1.0,1,0,0,0
+1059,Minehead,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1060,Minocqua,US,1,1,The Drift,1,1.0,1,0,0,0
+1061,Mishawaka,US,1,1,Gossamer,1,1.0,1,0,0,0
+1062,Mitcham,AU,1,1,Noble Rot,1,1.0,1,0,0,0
+1063,Moline,US,1,1,SICK,1,1.0,1,0,0,0
+1064,Molyullah,AU,1,1,Yolo Journal,1,1.0,1,0,0,0
+1065,Monroeville,US,1,1,Gossamer,1,1.0,1,0,0,0
+1066,Montecito,US,1,1,Racquet Mag,1,1.0,1,0,0,0
+1067,Monterey,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1068,Monterrey,MX,1,1,Cake Zine,1,1.0,1,0,0,0
+1069,Montrouge,FR,1,1,GAZE,1,1.0,1,0,0,0
+1070,Morioka,JP,1,1,The Skirt Chronicles,1,1.0,1,0,0,0
+1071,Mougins,FR,1,1,GAZE,1,1.0,1,0,0,0
+1072,Mount Maunganui,NZ,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+1073,Mount Pleasant,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+1074,Mount Rainier,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1075,Mount Vernon,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1076,Mountain View,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1077,Mullumbimby,AU,1,1,Record Magazine,1,1.0,1,0,0,0
+1078,Mykonos,GR,1,1,Nomas,1,1.0,1,0,0,0
+1079,Naha,JP,1,1,Linguaphile,1,1.0,1,0,0,0
+1080,Nailsworth,GB,1,1,UPPERCASE,1,1.0,1,0,0,0
+1081,Napa,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+1082,Narva,EE,1,1,A Shade Colder,1,1.0,1,0,0,0
+1083,Nelson Bay,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+1084,Neuilly,FR,1,1,Self Service,1,1.0,1,0,0,0
+1085,Neuquén,AR,1,1,Anchoa,1,1.0,1,0,0,0
+1086,New Bedford,US,1,1,SLEEK,1,1.0,1,0,0,0
+1087,New Buffalo,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1088,New Canaan,US,1,1,Serviette,1,1.0,1,0,0,0
+1089,New Hartford,US,1,1,Gossamer,1,1.0,1,0,0,0
+1090,New Hyde Park,US,1,1,The Drift,1,1.0,1,0,0,0
+1091,New Preston,US,1,1,The Paris Review,1,1.0,1,0,0,0
+1092,New Smyrna Beach,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1093,Newark,US,1,1,Gossamer,1,1.0,1,0,0,0
+1094,Newberg,US,1,1,Noble Rot,1,1.0,1,0,0,0
+1095,Newbury,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1096,Newcastle upon Tyne,AU,1,1,Record Magazine,1,1.0,1,0,0,0
+1097,Newington,US,1,1,Gossamer,1,1.0,1,0,0,0
+1098,Newrybar,AU,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1099,Newton,US,1,1,Serviette,1,1.0,1,0,0,0
+1100,Newton Abbot,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1101,Nexø,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1102,Nisswa,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1103,Nobleboro,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1104,Norfolk,US,1,1,Eaten,1,1.0,1,0,0,0
+1105,Norman,US,1,1,Gossamer,1,1.0,1,0,0,0
+1106,North Attleborough,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1107,North Chesterfield,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1108,North Dartmouth,US,1,1,SLEEK,1,1.0,1,0,0,0
+1109,North Haven,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1110,North Mankato,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1111,North Shields,GB,1,1,Eaten,1,1.0,1,0,0,0
+1112,North Truro,US,1,1,Eaten,1,1.0,1,0,0,0
+1113,North Turramurra,AU,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1114,Northampton,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1115,Northamptonshire,GB,1,1,The Erotic Review,1,1.0,1,0,0,0
+1116,Northville,US,1,1,Serviette,1,1.0,1,0,0,0
+1117,Nykøbing,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1118,Oakmont,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1119,Oakville,CA,1,1,Brick,1,1.0,1,0,0,0
+1120,Ocala,US,1,1,Gossamer,1,1.0,1,0,0,0
+1121,Occidental,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1122,Odense,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1123,Oeiras,PT,1,1,Luncheon,1,1.0,1,0,0,0
+1124,Offenburg,DE,1,1,Epoch Review,1,1.0,1,0,0,0
+1125,Ogden,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1126,Okoboji,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1127,Orange,US,1,1,Gossamer,1,1.0,1,0,0,0
+1128,Orange,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+1129,Orange Park,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+1130,Orleans,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+1131,Osborne Park,AU,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1132,Ottowa,CA,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1133,Paisley,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1134,Paju,KR,1,1,Luncheon,1,1.0,1,0,0,0
+1135,Palermo,IT,1,1,FUKT,1,1.0,1,0,0,0
+1136,Palm Beach,AU,1,1,Noble Rot,1,1.0,1,0,0,0
+1137,Pamplona,ES,1,1,Openhouse,1,1.0,1,0,0,0
+1138,Pangbourne,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1139,Parramatta,AU,1,1,Debris,1,1.0,1,0,0,0
+1140,Paso Robles,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1141,Patmos,GR,1,1,Nomas,1,1.0,1,0,0,0
+1142,Peabody,US,1,1,Serviette,1,1.0,1,0,0,0
+1143,Peckville,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1144,Penang,MY,1,1,Noble Rot,1,1.0,1,0,0,0
+1145,Pennington,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1146,Pensacola,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1147,Penzance,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1148,Peoria,US,1,1,Gossamer,1,1.0,1,0,0,0
+1149,Perth,CA,1,1,Anorak,1,1.0,1,0,0,0
+1150,Perth,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1151,Peru,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1152,Pescara,IT,1,1,Accattone,1,1.0,1,0,0,0
+1153,Peterborough,US,1,1,The Drift,1,1.0,1,0,0,0
+1154,Petersfield,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1155,Pforzheim,DE,1,1,Luncheon,1,1.0,1,0,0,0
+1156,Phoenicia,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1157,Pittsfield,US,1,1,Gossamer,1,1.0,1,0,0,0
+1158,Plainfield,US,1,1,Serviette,1,1.0,1,0,0,0
+1159,Plymouth,US,1,1,Cherry Bombe,1,1.0,1,0,0,0
+1160,Plymouth,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1161,Plymouth Meeting,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1162,Point Lonsdale,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+1163,Point Reyes,US,1,1,Eaten,1,1.0,1,0,0,0
+1164,Pontevedra,ES,1,1,MacGuffin,1,1.0,1,0,0,0
+1165,Portage,US,1,1,Gossamer,1,1.0,1,0,0,0
+1166,Porto Ercole,IT,1,1,Yolo Journal,1,1.0,1,0,0,0
+1167,Porto Salvo,PT,1,1,Luncheon,1,1.0,1,0,0,0
+1168,Portrush,GB,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+1169,Positano,IT,1,1,Yolo Journal,1,1.0,1,0,0,0
+1170,Pottsville,US,1,1,Drift,1,1.0,1,0,0,0
+1171,Poughkeepsie,US,1,1,Gossamer,1,1.0,1,0,0,0
+1172,Prairie Village,US,1,1,Mother Tongue,1,1.0,1,0,0,0
+1173,Preston,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1174,Pulborough,GB,1,1,Noble Rot,1,1.0,1,0,0,0
+1175,Pune,IN,1,1,Dhoop,1,1.0,1,0,0,0
+1176,Punta del Este,UY,1,1,Anchoa,1,1.0,1,0,0,0
+1177,Queenstown,NZ,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1178,Quilcene,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1179,Quincy,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1180,Raleigh,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1181,Randers,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1182,Randolph,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+1183,Rapid City,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1184,Rastatt,DE,1,1,Luncheon,1,1.0,1,0,0,0
+1185,Ravello,IT,1,1,Yolo Journal,1,1.0,1,0,0,0
+1186,Reading,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1187,Redding,US,1,1,Gossamer,1,1.0,1,0,0,0
+1188,Rethymno,GR,1,1,Nomas,1,1.0,1,0,0,0
+1189,Rhinebeck,US,1,1,The Drift,1,1.0,1,0,0,0
+1190,Rhode-Saint-Genese,BE,1,1,Hunger,1,1.0,1,0,0,0
+1191,Ribe,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1192,Riccione,IT,1,1,WHATEVR Fanzine,1,1.0,1,0,0,0
+1193,Richmond,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1194,Rico,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1195,Ridgefield,US,1,1,Like the Wind,1,1.0,1,0,0,0
+1196,Ridgway,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1197,Rimouski,CA,1,1,Esse arts + opinions,1,1.0,1,0,0,0
+1198,Ringkøbing,DK,1,1,Openhouse,1,1.0,1,0,0,0
+1199,Rio de Janeiro,BR,1,1,WHATEVR Fanzine,1,1.0,1,0,0,0
+1200,Riverside,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1201,Riverton,US,1,1,Roads & Kingdoms,1,1.0,1,0,0,0
+1202,Rochester Hills,US,1,1,Serviette,1,1.0,1,0,0,0
+1203,Rockaway Beach,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1204,Rockaway Park,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1205,Rockford,US,1,1,Gossamer,1,1.0,1,0,0,0
+1206,Rockport,US,1,1,Eaten,1,1.0,1,0,0,0
+1207,Rocky View,CA,1,1,Brick,1,1.0,1,0,0,0
+1208,Roermond,NL,1,1,Nomad Magazine,1,1.0,1,0,0,0
+1209,Rogers,US,1,1,Gossamer,1,1.0,1,0,0,0
+1210,Roissy-en-France,FR,1,1,GAZE,1,1.0,1,0,0,0
+1211,Romsey,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1212,Roslindale,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1213,Rosport,LU,1,1,Noble Rot,1,1.0,1,0,0,0
+1214,Roswell,US,1,1,Eaten,1,1.0,1,0,0,0
+1215,Royal Oak,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1216,Rudkøbing,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1217,Rugby,GB,1,1,UPPERCASE,1,1.0,1,0,0,0
+1218,Rye,AU,1,1,Noble Rot,1,1.0,1,0,0,0
+1219,Rye,GB,1,1,Openhouse,1,1.0,1,0,0,0
+1220,Rødovre,DK,1,1,SLEEK,1,1.0,1,0,0,0
+1221,Rønne,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1222,Safety Harbor,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1223,Saffron Walden,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1224,Sagres,PT,1,1,Luncheon,1,1.0,1,0,0,0
+1225,Saint-Denis,FR,1,1,Slanted,1,1.0,1,0,0,0
+1226,Saint-Gilles,BE,1,1,Nomad Magazine,1,1.0,1,0,0,0
+1227,Saint-Étienne,FR,1,1,GAZE,1,1.0,1,0,0,0
+1228,Salisbury,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1229,San Anselmo,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+1230,San Carlos de Bariloche,AR,1,1,Anchoa,1,1.0,1,0,0,0
+1231,San Fransisco,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1232,San Jose del Cabo,MX,1,1,Drift,1,1.0,1,0,0,0
+1233,San Juan,PR,1,1,Anchoa,1,1.0,1,0,0,0
+1234,San Juan Capistrano,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1235,San Mateo,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1236,San Sebastián,ES,1,1,Openhouse,1,1.0,1,0,0,0
+1237,Sandy,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1238,Santa Ynez,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1239,Saugerties,US,1,1,Gossamer,1,1.0,1,0,0,0
+1240,Sausalito,US,1,1,Slanted,1,1.0,1,0,0,0
+1241,Scheveningen,NL,1,1,Luncheon,1,1.0,1,0,0,0
+1242,Schilde,BE,1,1,Hunger,1,1.0,1,0,0,0
+1243,Scottsdale,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1244,Seaford,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1245,Selangor,MY,1,1,WHATEVR Fanzine,1,1.0,1,0,0,0
+1246,Sempach,CH,1,1,Slanted,1,1.0,1,0,0,0
+1247,Sequim,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1248,Sevenoaks,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1249,Severna Park,US,1,1,UPPERCASE,1,1.0,1,0,0,0
+1250,Shelby Township,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1251,Shenzhen,CN,1,1,Flaneur,1,1.0,1,0,0,0
+1252,Sherborne,GB,1,1,A Rabbit's Foot,1,1.0,1,0,0,0
+1253,Sherman Oaks,US,1,1,Luncheon,1,1.0,1,0,0,0
+1254,Shizuoka,JP,1,1,Victory Journal,1,1.0,1,0,0,0
+1255,Shoham,IL,1,1,Slanted,1,1.0,1,0,0,0
+1256,Shoreham-by-Sea,GB,1,1,Noble Rot,1,1.0,1,0,0,0
+1257,Shreveport,US,1,1,Eaten,1,1.0,1,0,0,0
+1258,Shrewsbury,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1259,Siebnen,CH,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1260,Silverdale,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1261,Singen,DE,1,1,Luncheon,1,1.0,1,0,0,0
+1262,Sliedrecht,NL,1,1,Nomad Magazine,1,1.0,1,0,0,0
+1263,Sliema,MT,1,1,Record Magazine,1,1.0,1,0,0,0
+1264,Solihull,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1265,Sonoma,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1266,South Fremantle,AU,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1267,South Kingstown,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1268,Southampton,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1269,Southend-on-Sea,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1270,Southern Pines,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1271,Southlake,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1272,Southport,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1273,Spanish Fort,US,1,1,Serviette,1,1.0,1,0,0,0
+1274,Spring,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1275,Sprucedale,CA,1,1,UPPERCASE,1,1.0,1,0,0,0
+1276,Squamish,CA,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1277,St Albans,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1278,St Andrews,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1279,St Ives,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1280,St. Augustine,US,1,1,Eaten,1,1.0,1,0,0,0
+1281,St. Catharines,CA,1,1,Brick,1,1.0,1,0,0,0
+1282,St. Pete Beach,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1283,Starnberg,DE,1,1,Luncheon,1,1.0,1,0,0,0
+1284,Stinson Beach,US,1,1,Yolo Journal,1,1.0,1,0,0,0
+1285,Stoke-on-Trent,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1286,Stone Harbor,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1287,Stoney Creek,CA,1,1,Brick,1,1.0,1,0,0,0
+1288,Stourbridge,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1289,Stranraer,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1290,Stratford,CA,1,1,Feels Zine,1,1.0,1,0,0,0
+1291,Stratford-upon-Avon,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1292,Stuart,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1293,Sundance,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1294,Superior,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1295,Surrey,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1296,Swansea,GB,1,1,UPPERCASE,1,1.0,1,0,0,0
+1297,Swarthmore,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1298,Sylva,US,1,1,The Drift,1,1.0,1,0,0,0
+1299,Syracuse,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1300,Syracuse,IT,1,1,WHATEVR Fanzine,1,1.0,1,0,0,0
+1301,Sète,FR,1,1,Slanted,1,1.0,1,0,0,0
+1302,Sèvres,FR,1,1,Flaneur,1,1.0,1,0,0,0
+1303,Sønderborg,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1304,Takoma Park,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1305,Tampere,FI,1,1,Openhouse,1,1.0,1,0,0,0
+1306,Taree,AU,1,1,Lodestars Anthology,1,1.0,1,0,0,0
+1307,Tarrytown,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1308,Taunton,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1309,Tavira,PT,1,1,Luncheon,1,1.0,1,0,0,0
+1310,Tavistock,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1311,Tbilisi,GE,1,1,Nomad Magazine,1,1.0,1,0,0,0
+1312,Tecumseh,CA,1,1,Brick,1,1.0,1,0,0,0
+1313,Teddington,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1314,Teignmouth,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1315,Tenterden,GB,1,1,Linseed,1,1.0,1,0,0,0
+1316,Terrigal,AU,1,1,Noble Rot,1,1.0,1,0,0,0
+1317,Thirroul,AU,1,1,Record Magazine,1,1.0,1,0,0,0
+1318,Thonon-les-Bains,FR,1,1,GAZE,1,1.0,1,0,0,0
+1319,Tianjin,CN,1,1,FUKT,1,1.0,1,0,0,0
+1320,Tiburon,US,1,1,Selvedge,1,1.0,1,0,0,0
+1321,Tigard,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1322,Tinos,GR,1,1,Nomas,1,1.0,1,0,0,0
+1323,Tisvildeleje,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1324,Tiverton,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1325,Tomball,US,1,1,Drift,1,1.0,1,0,0,0
+1326,Topsail Beach,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1327,Torrance,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1328,Tranbjerg,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1329,Traunstein,DE,1,1,Nomad Magazine,1,1.0,1,0,0,0
+1330,Trowbridge,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1331,Truro,GB,1,1,Selvedge,1,1.0,1,0,0,0
+1332,Tualatin,US,1,1,Plates,1,1.0,1,0,0,0
+1333,Tularosa,US,1,1,Eaten,1,1.0,1,0,0,0
+1334,Tunbridge Wells,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1335,Turners Falls,US,1,1,SICK,1,1.0,1,0,0,0
+1336,Tübingen,DE,1,1,Selvedge,1,1.0,1,0,0,0
+1337,Ulm,DE,1,1,Luncheon,1,1.0,1,0,0,0
+1338,Uppsala,SE,1,1,Selvedge,1,1.0,1,0,0,0
+1339,Upstate New York,US,1,1,Dirty Magazine,1,1.0,1,0,0,0
+1340,Urmston,GB,1,1,Noble Rot,1,1.0,1,0,0,0
+1341,Valencia,US,1,1,Luncheon,1,1.0,1,0,0,0
+1342,Valladolid,ES,1,1,FARE,1,1.0,1,0,0,0
+1343,Valparaiso,US,1,1,Serviette,1,1.0,1,0,0,0
+1344,Vannes,FR,1,1,GAZE,1,1.0,1,0,0,0
+1345,Vashon,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1346,Vejle,DK,1,1,Luncheon,1,1.0,1,0,0,0
+1347,Vernon Hills,US,1,1,Gossamer,1,1.0,1,0,0,0
+1348,Vestal,US,1,1,Gossamer,1,1.0,1,0,0,0
+1349,Vic,ES,1,1,Openhouse,1,1.0,1,0,0,0
+1350,Vila Nova de Famalicão,PT,1,1,Luncheon,1,1.0,1,0,0,0
+1351,Vila Nova de Gaia,PT,1,1,Esse arts + opinions,1,1.0,1,0,0,0
+1352,Viljandi,EE,1,1,A Shade Colder,1,1.0,1,0,0,0
+1353,Villingen,DE,1,1,Luncheon,1,1.0,1,0,0,0
+1354,Vinalhaven,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1355,Vincennes,FR,1,1,GAZE,1,1.0,1,0,0,0
+1356,Vineyard Haven,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1357,Virginia Beach,US,1,1,Gossamer,1,1.0,1,0,0,0
+1358,Viroqua,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1359,Vitry-sur-Seine,FR,1,1,GAZE,1,1.0,1,0,0,0
+1360,Viveiro,ES,1,1,MacGuffin,1,1.0,1,0,0,0
+1361,Växjö,SE,1,1,Luncheon,1,1.0,1,0,0,0
+1362,Wachtebeke,BE,1,1,SLEEK,1,1.0,1,0,0,0
+1363,Wakefield,GB,1,1,UPPERCASE,1,1.0,1,0,0,0
+1364,Walla Walla,US,1,1,Kitchen Table,1,1.0,1,0,0,0
+1365,Warminster,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1366,Warrington,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1367,Warwick,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1368,Warwick,US,1,1,Gossamer,1,1.0,1,0,0,0
+1369,Waterford,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1370,Wauwatosa,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1371,Waynesville,US,1,1,The Drift,1,1.0,1,0,0,0
+1372,Wayzata,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1373,Webster,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1374,Weil am Rhein,DE,1,1,Nomad Magazine,1,1.0,1,0,0,0
+1375,Weinheim,DE,1,1,Luncheon,1,1.0,1,0,0,0
+1376,Wellesley,US,1,1,Serviette,1,1.0,1,0,0,0
+1377,Wells,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1378,West Bretton,GB,1,1,Selvedge,1,1.0,1,0,0,0
+1379,West Hartford,US,1,1,Serviette,1,1.0,1,0,0,0
+1380,Westerly,US,1,1,Cake Zine,1,1.0,1,0,0,0
+1381,Westlake,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1382,Westminster,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1383,Weston-super-Mare,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1384,Wexford,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1385,Whanganui,NZ,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1386,Wheat Ridge,US,1,1,Like the Wind,1,1.0,1,0,0,0
+1387,Wichita,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1388,Wilkes Barre,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1389,Wimberley,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1390,Winchester,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1391,Winston-Salem,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1392,Winterthur,CH,1,1,12F,1,1.0,1,0,0,0
+1393,Witney,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1394,Woking,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1395,Wokingham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1396,Woluwe-Saint-Pierre,BE,1,1,Hunger,1,1.0,1,0,0,0
+1397,Woodbridge,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1398,Woodbridge,CA,1,1,photoED Magazine,1,1.0,1,0,0,0
+1399,Woodinville,US,1,1,Epoch Review,1,1.0,1,0,0,0
+1400,Woodside,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1401,Woodstock,US,1,1,The Paris Review,1,1.0,1,0,0,0
+1402,Workington,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1403,Wrexham,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1404,Xiamen,CN,1,1,The Skirt Chronicles,1,1.0,1,0,0,0
+1405,Yarmouth,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1406,Yarram,AU,1,1,Never Too Small,1,1.0,1,0,0,0
+1407,Yogyakarta,ID,1,1,Plates,1,1.0,1,0,0,0
+1408,York,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1409,York,GB,1,1,Delayed Gratification,1,1.0,1,0,0,0
+1410,Zaragoza,ES,1,1,MacGuffin,1,1.0,1,0,0,0
+1411,Zhejiang,CN,1,1,Hunger,1,1.0,1,0,0,0
+1412,Zumbrota,US,1,1,Broccoli Mag,1,1.0,1,0,0,0
+1413,Zwolle,NL,1,1,See All This,1,1.0,1,0,0,0
+1414,Łódź,PL,1,1,Slanted,1,1.0,1,0,0,0
