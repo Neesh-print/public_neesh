@@ -2158,6 +2158,138 @@ button {
   flex-wrap: wrap;
 }
 
+/* Where it's stocked (title page, #stockists) */
+.stockists {
+  border-top: 1px solid var(--ink);
+  padding-top: clamp(32px, 4vw, 56px);
+  padding-bottom: var(--section-pad);
+  /* clear the sticky directory header (107px desktop, 63px mobile) */
+  scroll-margin-top: 128px;
+}
+
+@media (max-width: 900px) {
+  .stockists {
+    scroll-margin-top: 80px;
+  }
+}
+
+.stockists .wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.stockists h2 {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 118;
+  font-weight: 800;
+  font-size: clamp(26px, 3vw, 40px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.stockists-count {
+  font-size: 17px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.stockists-order,
+.stockists-source {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: 0;
+}
+
+.stockist-filter {
+  width: 100%;
+  max-width: 360px;
+}
+
+.stockist-cities {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+  gap: 28px clamp(24px, 3vw, 48px);
+}
+
+.stockist-city h3 {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stockist-city h3 .count {
+  color: var(--muted-2);
+}
+
+.stockist-city ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stockist-city li {
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.stockist-city li .borough {
+  margin-left: 8px;
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
+.stockists-more {
+  width: 100%;
+}
+
+.stockists-more > summary {
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 24px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.stockists-empty {
+  font-size: 15px;
+  color: var(--muted-2);
+  margin: 0;
+}
+
+.stockist-suggest {
+  width: 100%;
+  max-width: 560px;
+  border-top: 1px solid var(--border);
+  padding-top: 14px;
+}
+
+.stockist-suggest > summary {
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+}
+
 /* Publisher zone (unclaimed band card) */
 .publisher-zone {
   width: 100%;

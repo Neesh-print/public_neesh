@@ -19,8 +19,26 @@ export interface Publisher {
   country: string | null;
   city: string | null;
   claimed: boolean;
+  // Where the publisher's own stockist list lives, and what we found there.
+  stockist_page_url: string | null;
+  stockist_status: StockistStatus | null;
+  stockist_checked_at: string | null;
   created_at: string;
   updated_at: string;
+}
+
+export type StockistStatus = 'found' | 'no_list' | 'unreachable';
+
+// One row of v_title_stockists: a shop that carries a title.
+export interface TitleStockist {
+  store_slug: string;
+  store_name: string;
+  city: string | null;
+  borough: string | null;
+  country: string;
+  city_slug: string | null;
+  source_url: string;
+  collected_at: string;
 }
 
 export interface Title {

@@ -29,12 +29,7 @@ export default async function OrderPage({ params }: { params: Promise<{ slug: st
   return (
     <section>
       <div className="utility-page roomy">
-        <OrderFork
-          titleId={title.id}
-          titleName={title.name}
-          titleSlug={title.slug}
-          hasWebsite={Boolean(title.publisher.website)}
-        />
+        <OrderFork titleId={title.id} titleName={title.name} titleSlug={title.slug} />
       </div>
     </section>
   );
