@@ -102,7 +102,7 @@ function TopItem({ item, rank }: { item: CityTopItem; rank: number }) {
           ))}
         </span>
         <span className="meta">
-          {shops} sell titles from {item.publisher_name}, which keeps one list for all of them
+          {shops} sell titles from {item.publisher_name}
         </span>
       </span>
     </li>
