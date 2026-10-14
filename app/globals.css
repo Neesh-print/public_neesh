@@ -1678,10 +1678,49 @@ button {
   text-wrap: pretty;
 }
 
-.index-head .small {
-  font-size: 15px;
-  color: var(--muted-2);
-  margin: 0;
+/* One row of mono links under the index subhead. */
+.index-head-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.index-head-links a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.index-head-links a:hover {
+  color: var(--ink);
+}
+
+.index-head-links a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.index-head-links span {
+  color: var(--faintest);
+}
+
+@media (max-width: 899px) {
+  .index-head-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .index-head-links span {
+    display: none;
+  }
 }
 
 .text-link {
