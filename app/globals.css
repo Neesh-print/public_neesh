@@ -392,14 +392,6 @@ button {
   color: var(--ink);
 }
 
-.mono-nav a.quiet {
-  color: var(--muted-2);
-}
-
-.mono-nav a.quiet:hover {
-  color: var(--accent);
-}
-
 .nav-item {
   position: relative;
   display: flex;
