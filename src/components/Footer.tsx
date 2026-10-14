@@ -12,6 +12,7 @@ export function Footer() {
           <Logo width={82} />
         </Link>
         <div className="footer-links">
+          <Link href="/cities">Cities</Link>
           <Link href="/terms">Terms</Link>
           <Link href="/privacy">Privacy</Link>
           <a href="https://www.instagram.com/neeshprint/" target="_blank" rel="noopener noreferrer">
