@@ -2524,6 +2524,174 @@ button {
   text-decoration-color: var(--accent);
 }
 
+/* City pages (/cities, /cities/[slug]) */
+.city-lead {
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.45;
+  max-width: 40ch;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.city-top {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: 14px clamp(24px, 3vw, 48px);
+}
+
+.city-top-item {
+  display: grid;
+  grid-template-columns: 28px 48px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.city-top-item .rank {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted-2);
+  text-align: right;
+}
+
+.city-top-cover {
+  display: block;
+  width: 48px;
+  aspect-ratio: 3 / 4;
+  border-radius: 3px;
+  overflow: hidden;
+  background: var(--band);
+}
+
+.city-top-cover img,
+.city-top-cover .fallback {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.city-top-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.city-top-text .name {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 114;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: -0.012em;
+  color: var(--ink);
+}
+
+.city-top-text .name a {
+  color: inherit;
+}
+
+.city-top-text .name a:hover {
+  color: var(--accent);
+}
+
+.city-top-text .meta {
+  font-size: 13px;
+  color: var(--muted-2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: center;
+}
+
+.city-store-group + .city-store-group {
+  margin-top: 28px;
+}
+
+.city-store-group h3 {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 18px 0 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+}
+
+.city-store-group h3 .count,
+.stockist-city h3 a + .count {
+  color: var(--muted-2);
+}
+
+.stockist-city h3 a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+}
+
+.stockist-city h3 a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.city-table {
+  width: 100%;
+  max-width: 760px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.city-table th {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  text-align: left;
+  padding: 0 12px 10px 0;
+  border-bottom: 1px solid var(--ink);
+}
+
+.city-table td {
+  padding: 11px 12px 11px 0;
+  border-bottom: 1px solid var(--border);
+  vertical-align: baseline;
+}
+
+.city-table .num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.city-table .rank {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted-2);
+  width: 3.5em;
+}
+
+.city-table td a {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.city-table td a:hover {
+  color: var(--accent);
+}
+
+.city-table .country {
+  margin-left: 8px;
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
 .store-claim .store-claim-details {
   border-top: none;
   padding-top: 0;
