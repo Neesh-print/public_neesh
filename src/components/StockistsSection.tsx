@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { monthYear, plural } from '@/lib/format';
+import { isCityHidden } from '@/lib/queries';
 import { countryName } from '@/lib/seo';
 import type { TitleFull, TitleStockist } from '@/lib/types';
 import { StockistFilter } from './StockistFilter';
@@ -33,7 +34,7 @@ function groupByCity(stockists: TitleStockist[]): { groups: CityGroup[]; unknown
       group = {
         key,
         label: country ? `${s.city}, ${country}` : s.city,
-        citySlug: s.city_slug,
+        citySlug: isCityHidden(s.city_slug) ? null : s.city_slug,
         shops: [],
       };
       byCity.set(key, group);
