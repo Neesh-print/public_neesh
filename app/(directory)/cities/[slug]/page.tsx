@@ -102,7 +102,7 @@ function TopItem({ item, rank }: { item: CityTopItem; rank: number }) {
           ))}
         </span>
         <span className="meta">
-          {shops} sell titles from {item.publisher_name}
+          {shops} sell titles from {item.publisher_name.replace(/\s+mag(azine)?$/i, '')}
         </span>
       </span>
     </li>
