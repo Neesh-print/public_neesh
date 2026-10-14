@@ -14,6 +14,7 @@ const FILTER_THRESHOLD = 50;
 interface CityGroup {
   key: string;
   label: string;
+  citySlug: string | null;
   shops: TitleStockist[];
 }
 
@@ -29,7 +30,12 @@ function groupByCity(stockists: TitleStockist[]): { groups: CityGroup[]; unknown
     let group = byCity.get(key);
     if (!group) {
       const country = countryName(s.country);
-      group = { key, label: country ? `${s.city}, ${country}` : s.city, shops: [] };
+      group = {
+        key,
+        label: country ? `${s.city}, ${country}` : s.city,
+        citySlug: s.city_slug,
+        shops: [],
+      };
       byCity.set(key, group);
     }
     group.shops.push(s);
@@ -46,7 +52,8 @@ function CityList({ group }: { group: CityGroup }) {
   return (
     <div className="stockist-city" data-city={group.label.toLowerCase()}>
       <h3>
-        {group.label} <span className="count">{group.shops.length}</span>
+        {group.citySlug ? <Link href={`/cities/${group.citySlug}`}>{group.label}</Link> : group.label}{' '}
+        <span className="count">{group.shops.length}</span>
       </h3>
       <ul>
         {group.shops.map((s) => (
@@ -163,7 +170,7 @@ export function StockistsSection({
                     <CityList key={g.key} group={g} />
                   ))}
                   {unknown.length > 0 && (
-                    <CityList group={{ key: 'unknown', label: 'City unknown', shops: unknown }} />
+                    <CityList group={{ key: 'unknown', label: 'City unknown', citySlug: null, shops: unknown }} />
                   )}
                 </div>
               </details>

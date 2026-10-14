@@ -61,6 +61,38 @@ export interface StoreTitle {
   collected_at: string;
 }
 
+// A row of directory_cities. store_count and title_count are refreshed by
+// refresh_directory_cities() after each stockist collection.
+export interface City {
+  slug: string;
+  name: string;
+  country: string;
+  store_count: number;
+  title_count: number;
+  updated_at: string;
+}
+
+export interface CityStore {
+  store_slug: string;
+  store_name: string;
+  borough: string | null;
+  title_count: number;
+}
+
+// "Most stocked here": a title, or a publisher whose one stockist list
+// covers several titles (counted once, with its titles listed).
+export interface CityTopItem {
+  kind: 'title' | 'publisher';
+  title_name: string | null;
+  title_slug: string | null;
+  cover: string | null;
+  available_on_neesh: boolean;
+  publisher_name: string;
+  publisher_slug: string;
+  titles: { name: string; slug: string }[] | null;
+  shops: number;
+}
+
 export interface StoreNeighbor {
   store_slug: string;
   store_name: string;

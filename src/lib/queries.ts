@@ -1,5 +1,8 @@
 import { anonClient, hasSupabaseEnv } from './supabase';
 import type {
+  City,
+  CityStore,
+  CityTopItem,
   Publisher,
   Store,
   StoreNeighbor,
@@ -209,6 +212,62 @@ export async function getAllListedStoreSlugs(): Promise<{ slug: string; collecte
     if (page.length < pageSize) break;
   }
   return rows;
+}
+
+// A city page is published (indexed, in the sitemap and on /cities) from
+// this many shops; thinner cities still render, noindexed.
+export const CITY_THRESHOLD = 3;
+
+const CITY_COLUMNS = 'slug, name, country, store_count, title_count, updated_at';
+
+export async function getCityBySlug(slug: string): Promise<City | null> {
+  if (!hasSupabaseEnv) return null;
+  const { data } = await anonClient()
+    .from('directory_cities')
+    .select(CITY_COLUMNS)
+    .eq('slug', slug)
+    .maybeSingle();
+  return (data as City | null) ?? null;
+}
+
+export async function getCityFor(name: string, country: string): Promise<City | null> {
+  if (!hasSupabaseEnv) return null;
+  const { data } = await anonClient()
+    .from('directory_cities')
+    .select(CITY_COLUMNS)
+    .eq('name', name)
+    .eq('country', country)
+    .maybeSingle();
+  return (data as City | null) ?? null;
+}
+
+// Published cities, most shops first: the live city ranking.
+export async function getPublishedCities(): Promise<City[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient()
+    .from('directory_cities')
+    .select(CITY_COLUMNS)
+    .gte('store_count', CITY_THRESHOLD)
+    .order('store_count', { ascending: false })
+    .order('title_count', { ascending: false })
+    .order('name')
+    .limit(2000);
+  return (data as City[]) ?? [];
+}
+
+export async function getCityStores(slug: string): Promise<CityStore[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient().rpc('directory_city_stores', { p_slug: slug }).limit(2000);
+  return (data as CityStore[]) ?? [];
+}
+
+export async function getCityTopItems(slug: string, limit = 10): Promise<CityTopItem[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient().rpc('directory_city_top_titles', {
+    p_slug: slug,
+    p_limit: limit,
+  });
+  return (data as CityTopItem[]) ?? [];
 }
 
 // Subject tags ahead of identity tags, so tags[0] is always the primary niche.

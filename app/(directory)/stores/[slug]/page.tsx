@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { getStoreBySlug, getStoreNeighbors, getStoreTitles } from '@/lib/queries';
+import { getCityFor, getStoreBySlug, getStoreNeighbors, getStoreTitles } from '@/lib/queries';
 import { listJoin, monthYear, plural } from '@/lib/format';
 import { canonical, countryName } from '@/lib/seo';
 import { coverPublicUrl } from '@/lib/supabase';
@@ -79,7 +79,11 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const store = await getStoreBySlug(slug);
   if (!store) notFound();
-  const [titles, neighbors] = await Promise.all([getStoreTitles(slug), getStoreNeighbors(slug)]);
+  const [titles, neighbors, city] = await Promise.all([
+    getStoreTitles(slug),
+    getStoreNeighbors(slug),
+    store.city ? getCityFor(store.city, store.country) : Promise.resolve(null),
+  ]);
 
   const place = placeLine(store);
   const publishers = [...new Set(titles.map((t) => t.publisher_name))].sort((a, b) =>
@@ -119,7 +123,11 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
       <nav className="crumbs" aria-label="Breadcrumb">
         <Link href="/index">Index</Link>
         <span>/</span>
-        <span>{store.city ?? countryName(store.country) ?? 'Shops'}</span>
+        {city ? (
+          <Link href={`/cities/${city.slug}`}>{city.name}</Link>
+        ) : (
+          <span>{store.city ?? countryName(store.country) ?? 'Shops'}</span>
+        )}
         <span>/</span>
         <span className="here">{store.name}</span>
       </nav>
@@ -232,6 +240,13 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
                   </li>
                 ))}
               </ul>
+              {city && city.store_count > neighbors.length + 1 && (
+                <p className="stockists-source" style={{ marginTop: 16 }}>
+                  <Link href={`/cities/${city.slug}`} className="text-link">
+                    All {plural(city.store_count, 'shop', 'shops')} in {city.name}
+                  </Link>
+                </p>
+              )}
             </div>
           )}
 
