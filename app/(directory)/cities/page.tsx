@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { getPublishedCities } from '@/lib/queries';
 import { monthYear } from '@/lib/format';
-import { canonical, countryName } from '@/lib/seo';
+import { breadcrumbLd, canonical, countryName } from '@/lib/seo';
 import { JsonLd } from '@/components/JsonLd';
 
 // The city index (stockists spec, Phase 3): every published city ranked by
@@ -33,6 +33,7 @@ export default async function CitiesPage() {
           '@context': 'https://schema.org',
           '@type': 'ItemList',
           name: 'Where to buy independent magazines, city by city',
+          url: canonical('/cities'),
           numberOfItems: cities.length,
           itemListElement: cities.slice(0, 100).map((c, i) => ({
             '@type': 'ListItem',
@@ -41,6 +42,13 @@ export default async function CitiesPage() {
             name: c.name,
           })),
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbLd([
+          { name: 'Index', path: '/index' },
+          { name: 'Cities', path: '/cities' },
+        ])}
       />
 
       <nav className="crumbs" aria-label="Breadcrumb">

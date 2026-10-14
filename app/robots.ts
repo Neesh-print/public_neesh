@@ -11,6 +11,13 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'ClaudeBot', allow: '/' },
       { userAgent: 'PerplexityBot', allow: '/' },
       { userAgent: 'CCBot', allow: '/' },
+      { userAgent: 'OAI-SearchBot', allow: '/' },
+      { userAgent: 'ChatGPT-User', allow: '/' },
+      { userAgent: 'Claude-SearchBot', allow: '/' },
+      { userAgent: 'Claude-User', allow: '/' },
+      { userAgent: 'Perplexity-User', allow: '/' },
+      { userAgent: 'Google-Extended', allow: '/' },
+      { userAgent: 'Applebot-Extended', allow: '/' },
     ],
     sitemap: [
       `${siteUrl()}/sitemap.xml`,

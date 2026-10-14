@@ -19,6 +19,7 @@ const DRAWER_LINKS = [
 ];
 
 const DRAWER_UTILITY = [
+  { label: 'Cities', href: '/cities' },
   { label: 'About', href: '/about' },
   { label: 'FAQ', href: '/faq' },
   { label: 'Add a title', href: '/add-title' },

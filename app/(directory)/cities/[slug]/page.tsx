@@ -8,7 +8,7 @@ import {
   getCityTopItems,
 } from '@/lib/queries';
 import { monthYear, plural } from '@/lib/format';
-import { canonical, countryName } from '@/lib/seo';
+import { breadcrumbLd, canonical, countryName } from '@/lib/seo';
 import { coverPublicUrl } from '@/lib/supabase';
 import type { CityStore, CityTopItem } from '@/lib/types';
 import { JsonLd } from '@/components/JsonLd';
@@ -45,12 +45,14 @@ export async function generateMetadata({
   };
 }
 
-// Group by borough or neighbourhood when the lists give enough of them to be
-// useful (New York); otherwise one list, most titles first.
+// Group by borough or neighbourhood only when most shops have one. When most
+// shops are unplaced, a catch-all group would mislabel them (central shops
+// filed under "Elsewhere"), so show one list, most titles first, with the
+// borough as a tag where it is known.
 function groupStores(stores: CityStore[]): { label: string | null; stores: CityStore[] }[] {
   const withBorough = stores.filter((s) => s.borough);
   const boroughs = new Set(withBorough.map((s) => s.borough));
-  if (boroughs.size < 2 || withBorough.length < stores.length * 0.25) {
+  if (boroughs.size < 2 || withBorough.length < stores.length * 0.75) {
     return [{ label: null, stores }];
   }
   const groups = new Map<string, CityStore[]>();
@@ -59,7 +61,7 @@ function groupStores(stores: CityStore[]): { label: string | null; stores: CityS
     .sort((a, b) => b[1].length - a[1].length || a[0].localeCompare(b[0], 'en'))
     .map(([label, list]) => ({ label, stores: list }));
   const rest = stores.filter((s) => !s.borough);
-  return rest.length ? [...ordered, { label: 'Elsewhere in the city', stores: rest }] : ordered;
+  return rest.length ? [...ordered, { label: 'Other shops', stores: rest }] : ordered;
 }
 
 function TopItem({ item, rank }: { item: CityTopItem; rank: number }) {
@@ -125,6 +127,7 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
           '@context': 'https://schema.org',
           '@type': 'ItemList',
           name: `Where to buy independent magazines in ${city.name}`,
+          url: canonical(`/cities/${city.slug}`),
           numberOfItems: stores.length,
           itemListElement: stores.slice(0, 100).map((s, i) => ({
             '@type': 'ListItem',
@@ -133,6 +136,14 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
             name: s.store_name,
           })),
         }}
+      />
+
+      <JsonLd
+        data={breadcrumbLd([
+          { name: 'Index', path: '/index' },
+          { name: 'Cities', path: '/cities' },
+          { name: city.name, path: `/cities/${city.slug}` },
+        ])}
       />
 
       <nav className="crumbs" aria-label="Breadcrumb">

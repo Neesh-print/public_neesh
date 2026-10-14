@@ -60,6 +60,11 @@ export default async function DirectoryHome() {
             .
           </p>
           <p className="small">
+            <Link href="/cities" className="text-link">
+              Where to buy them, city by city
+            </Link>
+          </p>
+          <p className="small">
             Missing something?{' '}
             <Link href="/add-title" className="text-link">
               Add a title
