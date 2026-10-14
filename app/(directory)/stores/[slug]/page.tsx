@@ -144,6 +144,7 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
                 Verified by the shop
               </span>
             )}
+            {store.on_neesh && <span className="verified-pill">Stocks through Neesh</span>}
             <h1>{store.name}</h1>
             {place && <p className="publisher-line">{place}</p>}
           </div>

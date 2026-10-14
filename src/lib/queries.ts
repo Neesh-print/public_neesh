@@ -151,7 +151,7 @@ export async function countPublisherTitles(publisherId: string): Promise<number>
 }
 
 const STORE_COLUMNS =
-  'id, slug, name, city, borough, country, website, claimed, claimed_at, address, instagram, hours, description';
+  'id, slug, name, city, borough, country, website, claimed, claimed_at, address, instagram, hours, description, on_neesh';
 
 export async function getStoreBySlug(slug: string): Promise<Store | null> {
   if (!hasSupabaseEnv) return null;
@@ -305,6 +305,13 @@ export async function getStoreRanking(): Promise<RankedStore[]> {
     if (page.length < pageSize) break;
   }
   return rows.filter((s) => !isCityHidden(s.city_slug));
+}
+
+// Slugs of the spaces that stock through Neesh, for the tag in shop lists.
+export async function getOnNeeshStoreSlugs(): Promise<Set<string>> {
+  if (!hasSupabaseEnv) return new Set();
+  const { data } = await anonClient().from('directory_stores').select('slug').eq('on_neesh', true);
+  return new Set(((data as { slug: string }[]) ?? []).map((r) => r.slug));
 }
 
 // Every listed space, for the "plus N more" line under the ranking.

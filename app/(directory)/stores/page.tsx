@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { countListedStores, getStoreRanking, STORE_RANK_MIN } from '@/lib/queries';
+import { countListedStores, getOnNeeshStoreSlugs, getStoreRanking, STORE_RANK_MIN } from '@/lib/queries';
 import { breadcrumbLd, canonical, countryName } from '@/lib/seo';
 import { JsonLd } from '@/components/JsonLd';
 import { RankFilter } from '@/components/RankFilter';
@@ -21,7 +21,11 @@ export const metadata: Metadata = {
 };
 
 export default async function StoresPage() {
-  const [stores, total] = await Promise.all([getStoreRanking(), countListedStores()]);
+  const [stores, total, onNeesh] = await Promise.all([
+    getStoreRanking(),
+    countListedStores(),
+    getOnNeeshStoreSlugs(),
+  ]);
   const rest = Math.max(0, total - stores.length);
 
   return (
@@ -88,6 +92,7 @@ export default async function StoresPage() {
                       <span className="country">
                         {s.city_slug ? <Link href={`/cities/${s.city_slug}`}>{place}</Link> : place}
                       </span>
+                      {onNeesh.has(s.store_slug) && <span className="on-neesh-tag">On Neesh</span>}
                     </td>
                     <td className="num">{s.title_count.toLocaleString('en')}</td>
                   </tr>

@@ -45,6 +45,8 @@ export interface Store {
   instagram: string | null;
   hours: string | null;
   description: string | null;
+  // Has a retailer account on the Neesh marketplace.
+  on_neesh: boolean;
 }
 
 // One row of v_store_titles: an Index title a shop carries.
