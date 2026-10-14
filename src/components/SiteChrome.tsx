@@ -204,9 +204,6 @@ export function DirectoryHeader() {
                 {item.label}
               </Link>
             ))}
-            <Link href="/add-title" className="quiet">
-              Add a title
-            </Link>
           </nav>
         </div>
       </header>
