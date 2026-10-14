@@ -30,6 +30,9 @@ const nextConfig = {
       { source: '/titles/dg-quarterly', destination: '/titles/delayed-gratification', statusCode: 301 },
       { source: '/publishers/dg-quarterly', destination: '/publishers/delayed-gratification', statusCode: 301 },
       { source: '/out/dg-quarterly', destination: '/out/delayed-gratification', statusCode: 301 },
+      // Duplicate store entries merged into the main one (October 2026).
+      { source: '/stores/chess-club-us', destination: '/stores/chess-club-portland', statusCode: 301 },
+      { source: '/stores/smoke-signals-newsstand-us', destination: '/stores/smoke-signals-san-francisco', statusCode: 301 },
     ];
 
     // Domain cutover passthroughs: once this site serves neesh.art and the

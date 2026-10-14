@@ -2592,6 +2592,25 @@ button {
   text-decoration-color: var(--accent);
 }
 
+/* Spaces with a Neesh retailer account, tagged in shop lists. */
+.on-neesh-tag {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--band);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+.store-nearby li .on-neesh-tag {
+  margin-left: 0;
+}
+
 /* City pages (/cities, /cities/[slug]) */
 .city-lead {
   font-size: clamp(18px, 1.8vw, 24px);

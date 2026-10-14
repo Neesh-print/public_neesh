@@ -6,6 +6,7 @@ import {
   getCityBySlug,
   getCityStores,
   getCityTopItems,
+  getOnNeeshStoreSlugs,
 } from '@/lib/queries';
 import { monthYear, plural } from '@/lib/format';
 import { breadcrumbLd, canonical, countryName } from '@/lib/seo';
@@ -115,7 +116,11 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const city = await getCityBySlug(slug);
   if (!city) notFound();
-  const [stores, top] = await Promise.all([getCityStores(slug), getCityTopItems(slug)]);
+  const [stores, top, onNeesh] = await Promise.all([
+    getCityStores(slug),
+    getCityTopItems(slug),
+    getOnNeeshStoreSlugs(),
+  ]);
   const country = countryName(city.country);
   const groups = groupStores(stores);
   const updated = monthYear(city.updated_at);
@@ -193,6 +198,7 @@ export default async function CityPage({ params }: { params: Promise<{ slug: str
                       <Link href={`/stores/${s.store_slug}`}>{s.store_name}</Link>
                       {!g.label && s.borough && <span className="borough">{s.borough}</span>}
                       <span className="count">{plural(s.title_count, 'Index title', 'Index titles')}</span>
+                      {onNeesh.has(s.store_slug) && <span className="on-neesh-tag">On Neesh</span>}
                     </li>
                   ))}
                 </ul>
