@@ -53,9 +53,9 @@ export default async function DirectoryHome() {
         <div className="index-head">
           <h1>The index of independent print</h1>
           <nav className="index-head-links" aria-label="More from the index">
-            <Link href="/auth/publisher">Claim your title &rarr;</Link>
-            <span aria-hidden="true">/</span>
             <Link href="/cities">Browse by city &rarr;</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/stores">Browse by space &rarr;</Link>
             <span aria-hidden="true">/</span>
             <Link href="/add-title">Add a title &rarr;</Link>
           </nav>
