@@ -2346,6 +2346,52 @@ button {
   font-size: 15px;
 }
 
+/* Claim line under a title's details: mono, accent link, hairline above. */
+.claim-line {
+  width: 100%;
+  max-width: 560px;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.claim-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.claim-note,
+.claim-link {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.claim-note {
+  color: var(--muted);
+}
+
+.claim-link {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.claim-link:hover {
+  color: var(--ink);
+}
+
+.claim-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .remove-details summary {
   cursor: pointer;
   list-style: none;
@@ -2712,6 +2758,19 @@ button {
   margin-left: 8px;
   font-size: 13px;
   color: var(--muted-2);
+}
+
+.city-table .country a {
+  color: inherit;
+  font-weight: 400;
+}
+
+.city-table .country a:hover {
+  color: var(--accent);
+}
+
+#space-ranking {
+  margin-top: 20px;
 }
 
 .store-claim .store-claim-details {

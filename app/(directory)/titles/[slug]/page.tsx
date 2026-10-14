@@ -96,7 +96,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const coverPrice = price(title);
 
   // Profile states: listed on Neesh (orderable), claimed (verified), or
-  // unclaimed (claim + removal zone). Neesh-listed titles belong to
+  // unclaimed (claim line + removal link). Neesh-listed titles belong to
   // publishers with accounts: no claim, no removal link.
   const listed = title.available_on_neesh;
   const claimed = title.publisher.claimed;
@@ -227,6 +227,15 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               ))}
             </dl>
 
+            {/* Titles listed on Neesh belong to publishers with accounts, so
+                they read as claimed too. */}
+            <ClaimSection
+              titleId={title.id}
+              titleName={title.name}
+              titleSlug={title.slug}
+              claimed={claimed || listed}
+            />
+
             {listed ? (
               <div className="cta-stack">
                 <div className="cta-row">
@@ -250,10 +259,6 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
             )}
 
             <WantTitleForm titleId={title.id} />
-
-            {!listed && !claimed && (
-              <ClaimSection titleId={title.id} titleName={title.name} titleSlug={title.slug} />
-            )}
           </div>
         </div>
       </section>

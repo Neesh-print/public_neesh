@@ -1,22 +1,32 @@
 'use client';
 
 import { appUrl } from '@/lib/seo';
-import { ArrowIcon } from './Logo';
 
-// The publisher zone on an unclaimed title profile (v2): a band card with
-// the accent claim CTA and a deliberately small removal link underneath.
+// The claim line under a title's details: "Is this your magazine? Claim it"
+// on an unclaimed profile, "Claimed by publisher" once it has an owner.
 // Claiming fires a claim_click signal then hands off to the full publisher
-// signup flow; every claim still passes manual review. Removal asks for an
-// email and triggers an "are you sure" email before anything comes down.
+// signup flow, prefilled for this title; every claim still passes manual
+// review. Removal stays as a small link that asks for an email and triggers
+// an "are you sure" email before anything comes down.
 export function ClaimSection({
   titleId,
   titleName,
   titleSlug,
+  claimed,
 }: {
   titleId: string;
   titleName: string;
   titleSlug: string;
+  claimed: boolean;
 }) {
+  if (claimed) {
+    return (
+      <div className="claim-line">
+        <span className="claim-note">Claimed by publisher</span>
+      </div>
+    );
+  }
+
   const href = appUrl(
     `/apply/publisher?title=${encodeURIComponent(titleName)}&claim=${titleSlug}`
   );
@@ -31,14 +41,13 @@ export function ClaimSection({
   }
 
   return (
-    <div className="publisher-zone">
-      <span className="blurb">
-        This page has not been claimed. If you publish it, take it over and set your own terms.
-      </span>
-      <a className="btn accent" href={href} onClick={onClick}>
-        Claim this profile
-        <ArrowIcon size={16} />
-      </a>
+    <div className="claim-line">
+      <div className="claim-row">
+        <span className="claim-note">Is this your magazine?</span>
+        <a className="claim-link" href={href} onClick={onClick}>
+          Claim it &rarr;
+        </a>
+      </div>
       <details className="remove-details">
         <summary>Remove this profile</summary>
         <form className="remove-form" action="/api/remove-request" method="post">

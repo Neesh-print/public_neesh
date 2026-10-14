@@ -93,6 +93,16 @@ export interface CityTopItem {
   shops: number;
 }
 
+// One row of the spaces ranking (/stores).
+export interface RankedStore {
+  store_slug: string;
+  store_name: string;
+  city: string | null;
+  country: string;
+  city_slug: string | null;
+  title_count: number;
+}
+
 export interface StoreNeighbor {
   store_slug: string;
   store_name: string;

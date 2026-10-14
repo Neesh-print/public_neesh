@@ -3,6 +3,7 @@ import type {
   City,
   CityStore,
   CityTopItem,
+  RankedStore,
   Publisher,
   Store,
   StoreNeighbor,
@@ -283,6 +284,38 @@ export async function getCityTopItems(slug: string, limit = 10): Promise<CityTop
     p_limit: limit,
   });
   return (data as CityTopItem[]) ?? [];
+}
+
+// The spaces ranking: spaces carrying at least STORE_RANK_MIN Index titles,
+// most titles first, minus spaces in hidden cities.
+export const STORE_RANK_MIN = 3;
+
+export async function getStoreRanking(): Promise<RankedStore[]> {
+  if (!hasSupabaseEnv) return [];
+  const client = anonClient();
+  const pageSize = 1000;
+  const rows: RankedStore[] = [];
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await client
+      .rpc('directory_store_ranking', { p_min: STORE_RANK_MIN })
+      .range(from, from + pageSize - 1);
+    if (error) throw new Error(`directory_store_ranking failed: ${error.message}`);
+    const page = (data as RankedStore[]) ?? [];
+    rows.push(...page);
+    if (page.length < pageSize) break;
+  }
+  return rows.filter((s) => !isCityHidden(s.city_slug));
+}
+
+// Every listed space, for the "plus N more" line under the ranking.
+export async function countListedStores(): Promise<number> {
+  if (!hasSupabaseEnv) return 0;
+  const { count } = await anonClient().rpc(
+    'directory_store_ranking',
+    { p_min: 1 },
+    { count: 'exact', head: true }
+  );
+  return count ?? 0;
 }
 
 // Subject tags ahead of identity tags, so tags[0] is always the primary niche.
