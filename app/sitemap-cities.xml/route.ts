@@ -2,8 +2,8 @@ import { getPublishedCities } from '@/lib/queries';
 import { canonical } from '@/lib/seo';
 
 // City pages get their own sitemap (stockists spec), published cities only
-// (CITY_THRESHOLD shops or more), so search engines never see the hundreds
-// of one-shop cities.
+// (see isCityPublished), so search engines never see the hundreds of
+// one-shop cities.
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
