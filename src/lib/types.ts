@@ -29,6 +29,45 @@ export interface Publisher {
 
 export type StockistStatus = 'found' | 'no_list' | 'unreachable';
 
+// A shop from directory_stores. Only public columns: claimant emails live
+// on directory_store_claims, which the public site never reads.
+export interface Store {
+  id: string;
+  slug: string;
+  name: string;
+  city: string | null;
+  borough: string | null;
+  country: string;
+  website: string | null;
+  claimed: boolean;
+  claimed_at: string | null;
+  address: string | null;
+  instagram: string | null;
+  hours: string | null;
+  description: string | null;
+}
+
+// One row of v_store_titles: an Index title a shop carries.
+export interface StoreTitle {
+  title_id: string;
+  title_name: string;
+  title_slug: string;
+  cover: string | null;
+  available_on_neesh: boolean;
+  publisher_name: string;
+  publisher_slug: string;
+  list_scope: 'title' | 'publisher';
+  source_url: string;
+  collected_at: string;
+}
+
+export interface StoreNeighbor {
+  store_slug: string;
+  store_name: string;
+  borough: string | null;
+  shared: number;
+}
+
 // One row of v_title_stockists: a shop that carries a title.
 export interface TitleStockist {
   store_slug: string;

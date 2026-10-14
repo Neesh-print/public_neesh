@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { monthYear, plural } from '@/lib/format';
 import { countryName } from '@/lib/seo';
 import type { TitleFull, TitleStockist } from '@/lib/types';
 import { StockistFilter } from './StockistFilter';
@@ -41,17 +42,6 @@ function groupByCity(stockists: TitleStockist[]): { groups: CityGroup[]; unknown
   return { groups, unknown: unknown.sort(byName) };
 }
 
-function monthYear(date: string | null | undefined): string | null {
-  if (!date) return null;
-  const d = new Date(`${date.slice(0, 10)}T00:00:00Z`);
-  if (Number.isNaN(d.getTime())) return null;
-  return d.toLocaleDateString('en-GB', { month: 'long', year: 'numeric', timeZone: 'UTC' });
-}
-
-function plural(n: number, one: string, many: string): string {
-  return `${n.toLocaleString('en')} ${n === 1 ? one : many}`;
-}
-
 function CityList({ group }: { group: CityGroup }) {
   return (
     <div className="stockist-city" data-city={group.label.toLowerCase()}>
@@ -61,7 +51,7 @@ function CityList({ group }: { group: CityGroup }) {
       <ul>
         {group.shops.map((s) => (
           <li key={s.store_slug} data-shop={s.store_name.toLowerCase()}>
-            {s.store_name}
+            <Link href={`/stores/${s.store_slug}`}>{s.store_name}</Link>
             {s.borough && <span className="borough">{s.borough}</span>}
           </li>
         ))}

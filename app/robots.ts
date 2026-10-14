@@ -12,6 +12,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'PerplexityBot', allow: '/' },
       { userAgent: 'CCBot', allow: '/' },
     ],
-    sitemap: `${siteUrl()}/sitemap.xml`,
+    sitemap: [`${siteUrl()}/sitemap.xml`, `${siteUrl()}/sitemap-stores.xml`],
   };
 }

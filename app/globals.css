@@ -2439,6 +2439,101 @@ button {
   border-top: 1px solid var(--ink);
 }
 
+/* Store pages (/stores/[slug]) */
+.store-page {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(22px, 2.6vw, 36px);
+  padding-top: clamp(24px, 3vw, 44px);
+  padding-bottom: var(--section-pad);
+}
+
+.store-head {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.store-head h1 {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 120;
+  font-weight: 800;
+  font-size: clamp(30px, 4.4vw, 66px);
+  line-height: 0.96;
+  letter-spacing: -0.036em;
+  margin: 0;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+
+.store-shelf {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* A shop shelf can run to dozens of titles: two covers a row on phones. */
+@media (max-width: 900px) {
+  .store-shelf .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.store-shelf .titles-label,
+.store-nearby .titles-label {
+  margin-bottom: 0;
+}
+
+.store-nearby ul {
+  list-style: none;
+  margin: 18px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: 10px clamp(24px, 3vw, 48px);
+}
+
+.store-nearby li {
+  font-size: 15px;
+  line-height: 1.4;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 8px;
+  align-items: baseline;
+}
+
+.store-nearby li .borough,
+.store-nearby li .count {
+  font-size: 13px;
+  color: var(--muted-2);
+}
+
+.stockist-city li a,
+.store-nearby li a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--border);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 160ms ease, color 160ms ease;
+}
+
+.stockist-city li a:hover,
+.store-nearby li a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
+.store-claim .store-claim-details {
+  border-top: none;
+  padding-top: 0;
+}
+
+.store-claim-note {
+  font-size: 13px;
+  color: var(--muted);
+}
+
 .pagination {
   display: flex;
   align-items: center;

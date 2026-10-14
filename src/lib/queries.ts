@@ -1,6 +1,9 @@
 import { anonClient, hasSupabaseEnv } from './supabase';
 import type {
   Publisher,
+  Store,
+  StoreNeighbor,
+  StoreTitle,
   Tag,
   TagWithCount,
   Title,
@@ -136,6 +139,71 @@ export async function countPublisherTitles(publisherId: string): Promise<number>
     .eq('removed', false)
     .in('status', ['active', 'dormant']);
   return count ?? 0;
+}
+
+const STORE_COLUMNS =
+  'id, slug, name, city, borough, country, website, claimed, claimed_at, address, instagram, hours, description';
+
+export async function getStoreBySlug(slug: string): Promise<Store | null> {
+  if (!hasSupabaseEnv) return null;
+  const { data } = await anonClient()
+    .from('directory_stores')
+    .select(STORE_COLUMNS)
+    .eq('slug', slug)
+    .maybeSingle();
+  return (data as Store | null) ?? null;
+}
+
+// Every Index title on a shop's shelf, one row per title (a title can come
+// from both a publisher-wide and a title-specific link; keep the specific).
+export async function getStoreTitles(slug: string): Promise<StoreTitle[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient()
+    .from('v_store_titles')
+    .select(
+      'title_id, title_name, title_slug, cover, available_on_neesh, publisher_name, publisher_slug, list_scope, source_url, collected_at'
+    )
+    .eq('store_slug', slug)
+    .order('title_name')
+    .limit(1000);
+  const byTitle = new Map<string, StoreTitle>();
+  for (const row of (data as StoreTitle[]) ?? []) {
+    const seen = byTitle.get(row.title_id);
+    if (!seen || (seen.list_scope === 'publisher' && row.list_scope === 'title')) {
+      byTitle.set(row.title_id, row);
+    }
+  }
+  return [...byTitle.values()];
+}
+
+export async function getStoreNeighbors(slug: string, limit = 6): Promise<StoreNeighbor[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient().rpc('directory_store_neighbors', {
+    p_slug: slug,
+    p_limit: limit,
+  });
+  return (data as StoreNeighbor[]) ?? [];
+}
+
+// Slugs of stores with at least one current, visible Index title, for the
+// stores sitemap. directory_listed_stores applies the visibility predicate
+// in one pass; paging v_store_titles as anon times out. Throws on error so a
+// partial sitemap is never served.
+export async function getAllListedStoreSlugs(): Promise<{ slug: string; collected_at: string }[]> {
+  if (!hasSupabaseEnv) return [];
+  const client = anonClient();
+  const pageSize = 1000;
+  const rows: { slug: string; collected_at: string }[] = [];
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await client
+      .rpc('directory_listed_stores')
+      .range(from, from + pageSize - 1);
+    if (error) throw new Error(`directory_listed_stores failed: ${error.message}`);
+    const page = (data as { slug: string; last_collected: string }[]) ?? [];
+    rows.push(...page.map((r) => ({ slug: r.slug, collected_at: r.last_collected })));
+    if (page.length < pageSize) break;
+  }
+  return rows;
 }
 
 // Subject tags ahead of identity tags, so tags[0] is always the primary niche.
