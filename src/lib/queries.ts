@@ -25,7 +25,12 @@ export const PAGE_SIZE = 50;
 // explicitly in these queries and again by RLS on the anon key. The inner
 // join on directory_publishers means titles whose publisher fails the
 // publisher gate drop out via RLS even before the explicit filters.
-const TITLE_SELECT = '*, publisher:directory_publishers!inner(*)';
+// Public publisher columns only. contact_email, claimed_email, claim_method
+// and eligibility_note are not readable by anon (column grants), so never
+// select directory_publishers with *.
+const PUBLISHER_COLUMNS =
+  'id, name, slug, website, country, city, claimed, claimed_at, removed, eligible, stockist_page_url, stockist_status, stockist_checked_at, created_at, updated_at';
+const TITLE_SELECT = `*, publisher:directory_publishers!inner(${PUBLISHER_COLUMNS})`;
 
 function visibleTitles(client = anonClient()) {
   return client
@@ -220,7 +225,7 @@ export async function getPublisherBySlug(
   const client = anonClient();
   const { data: publisher } = await client
     .from('directory_publishers')
-    .select('*')
+    .select(PUBLISHER_COLUMNS)
     .eq('slug', slug)
     .maybeSingle();
   if (!publisher) return null;
