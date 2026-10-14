@@ -1669,15 +1669,6 @@ button {
   text-wrap: balance;
 }
 
-.index-head .sub {
-  font-size: clamp(16px, 1.4vw, 19px);
-  line-height: 1.5;
-  color: var(--muted);
-  margin: 0;
-  max-width: 80ch;
-  text-wrap: pretty;
-}
-
 /* One row of mono links under the index subhead. */
 .index-head-links {
   display: flex;

@@ -52,7 +52,6 @@ export default async function DirectoryHome() {
       <section>
         <div className="index-head">
           <h1>The index of independent print</h1>
-          <p className="sub">300+ independent magazines from 30+ countries.</p>
           <nav className="index-head-links" aria-label="More from the index">
             <Link href="/auth/publisher">Claim your title &rarr;</Link>
             <span aria-hidden="true">/</span>
