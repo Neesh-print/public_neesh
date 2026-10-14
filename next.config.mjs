@@ -26,6 +26,10 @@ const nextConfig = {
       { source: '/legal/privacy', destination: '/privacy', statusCode: 301 },
       { source: '/legal/publisher-agreement', destination: '/publisher-agreement', statusCode: 301 },
       { source: '/legal/retailer-agreement', destination: '/retailer-agreement', statusCode: 301 },
+      // Directory duplicates merged into their canonical entry.
+      { source: '/titles/dg-quarterly', destination: '/titles/delayed-gratification', statusCode: 301 },
+      { source: '/publishers/dg-quarterly', destination: '/publishers/delayed-gratification', statusCode: 301 },
+      { source: '/out/dg-quarterly', destination: '/out/delayed-gratification', statusCode: 301 },
     ];
 
     // Domain cutover passthroughs: once this site serves neesh.art and the

@@ -2,9 +2,11 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
+  countPublisherTitles,
   getAllVisibleTitleSlugs,
   getTagsWithCounts,
   getTitleBySlug,
+  getTitleStockists,
   tagPublishes,
 } from '@/lib/queries';
 import {
@@ -21,6 +23,7 @@ import { ArrowIcon } from '@/components/Logo';
 import { CoverCard } from '@/components/CoverCard';
 import { ClaimSection } from '@/components/ClaimSection';
 import { JsonLd } from '@/components/JsonLd';
+import { StockistsSection } from '@/components/StockistsSection';
 import { SubmittedNotice } from '@/components/SubmittedNotice';
 import { ViewBeacon } from '@/components/ViewBeacon';
 import { WantTitleForm } from '@/components/WantTitleForm';
@@ -81,6 +84,10 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const [title, allTags] = await Promise.all([getTitleBySlug(slug), getTagsWithCounts()]);
   if (!title) notFound();
+  const [stockists, publisherTitleCount] = await Promise.all([
+    getTitleStockists(title.id),
+    countPublisherTitles(title.publisher_id),
+  ]);
 
   const publishing = new Set(allTags.filter(tagPublishes).map((t) => t.slug));
   const primaryTag = title.tags[0];
@@ -227,23 +234,19 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                     Order on Neesh
                     <ArrowIcon />
                   </Link>
-                  {title.publisher.website && (
-                    <a className="btn ghost" href={`/out/${title.slug}`} target="_blank" rel="nofollow noopener">
-                      See where it&rsquo;s stocked
-                    </a>
-                  )}
+                  <a className="btn ghost" href="#stockists">
+                    See where it&rsquo;s stocked
+                  </a>
                 </div>
                 <span className="cta-note">Wholesale, by the copy, no minimums.</span>
               </div>
             ) : (
-              title.publisher.website && (
-                <div className="cta-row">
-                  <a className="btn solid" href={`/out/${title.slug}`} target="_blank" rel="nofollow noopener">
-                    See where it&rsquo;s stocked
-                    <ArrowIcon />
-                  </a>
-                </div>
-              )
+              <div className="cta-row">
+                <a className="btn solid" href="#stockists">
+                  See where it&rsquo;s stocked
+                  <ArrowIcon />
+                </a>
+              </div>
             )}
 
             <WantTitleForm titleId={title.id} />
@@ -254,6 +257,8 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
           </div>
         </div>
       </section>
+
+      <StockistsSection title={title} stockists={stockists} publisherTitleCount={publisherTitleCount} />
     </>
   );
 }

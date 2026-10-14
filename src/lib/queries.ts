@@ -5,6 +5,7 @@ import type {
   TagWithCount,
   Title,
   TitleFull,
+  TitleStockist,
   TitleWithPublisher,
 } from './types';
 
@@ -92,6 +93,49 @@ export async function getTitleBySlug(slug: string): Promise<TitleFull | null> {
     ...row,
     tags: sortSubjectFirst((row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean)),
   };
+}
+
+// Every shop on the title's publisher's current stockist list. Read through
+// v_title_stockists, a security_invoker view, so the stockists RLS (current
+// links to eligible, non-removed publishers) applies. Paged because the
+// largest list is close to PostgREST's default 1000-row cap.
+export async function getTitleStockists(titleId: string): Promise<TitleStockist[]> {
+  if (!hasSupabaseEnv) return [];
+  const client = anonClient();
+  const pageSize = 1000;
+  const rows: TitleStockist[] = [];
+  for (let from = 0; ; from += pageSize) {
+    const { data, error } = await client
+      .from('v_title_stockists')
+      .select('store_slug, store_name, city, borough, country, city_slug, source_url, collected_at, list_scope')
+      .eq('title_id', titleId)
+      .order('store_slug')
+      .range(from, from + pageSize - 1);
+    if (error || !data) break;
+    rows.push(...(data as TitleStockist[]));
+    if (data.length < pageSize) break;
+  }
+  // A shop can appear twice (publisher-wide and title-specific links);
+  // keep one row, preferring the title-specific one.
+  const byStore = new Map<string, TitleStockist>();
+  for (const r of rows) {
+    const seen = byStore.get(r.store_slug);
+    if (!seen || (seen.list_scope === 'publisher' && r.list_scope === 'title')) byStore.set(r.store_slug, r);
+  }
+  return [...byStore.values()];
+}
+
+// How many visible titles a publisher has in the Index. A publisher-wide
+// stockist list only needs a caveat when it is shared by more than one.
+export async function countPublisherTitles(publisherId: string): Promise<number> {
+  if (!hasSupabaseEnv) return 0;
+  const { count } = await anonClient()
+    .from('directory_titles')
+    .select('id', { count: 'exact', head: true })
+    .eq('publisher_id', publisherId)
+    .eq('removed', false)
+    .in('status', ['active', 'dormant']);
+  return count ?? 0;
 }
 
 // Subject tags ahead of identity tags, so tags[0] is always the primary niche.

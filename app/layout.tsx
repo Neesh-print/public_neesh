@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { organizationLd, siteUrl } from '@/lib/seo';
 import { JsonLd } from '@/components/JsonLd';
+import { FirstTouchBeacon } from '@/components/FirstTouchBeacon';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -75,6 +76,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         {/* End Google Tag Manager (noscript) */}
         {children}
+        <FirstTouchBeacon />
         <Analytics />
       </body>
     </html>

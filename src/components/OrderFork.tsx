@@ -13,12 +13,10 @@ export function OrderFork({
   titleId,
   titleName,
   titleSlug,
-  hasWebsite,
 }: {
   titleId: string;
   titleName: string;
   titleSlug: string;
-  hasWebsite: boolean;
 }) {
   const [reader, setReader] = useState(false);
 
@@ -45,12 +43,10 @@ export function OrderFork({
           direct sales.
         </p>
         <div className="cta-row" style={{ marginTop: 8 }}>
-          {hasWebsite && (
-            <a className="btn solid" href={`/out/${titleSlug}`} target="_blank" rel="nofollow noopener">
-              See where it&rsquo;s stocked
-              <ArrowIcon />
-            </a>
-          )}
+          <Link className="btn solid" href={`/titles/${titleSlug}#stockists`}>
+            See where it&rsquo;s stocked
+            <ArrowIcon />
+          </Link>
           <Link className="btn ghost" href={`/titles/${titleSlug}`}>
             Back to {titleName}
           </Link>
