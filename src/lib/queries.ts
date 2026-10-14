@@ -218,6 +218,14 @@ export async function getAllListedStoreSlugs(): Promise<{ slug: string; collecte
 // this many shops; thinner cities still render, noindexed.
 export const CITY_THRESHOLD = 3;
 
+// Cities kept off /cities and the sitemap whatever their shop count, by
+// editorial choice. Their pages still render, noindexed.
+const HIDDEN_CITY_SLUGS = ['tel-aviv', 'moscow', 'saint-petersburg'];
+
+export function isCityPublished(city: Pick<City, 'slug' | 'store_count'>): boolean {
+  return city.store_count >= CITY_THRESHOLD && !HIDDEN_CITY_SLUGS.includes(city.slug);
+}
+
 const CITY_COLUMNS = 'slug, name, country, store_count, title_count, updated_at';
 
 export async function getCityBySlug(slug: string): Promise<City | null> {
@@ -248,6 +256,7 @@ export async function getPublishedCities(): Promise<City[]> {
     .from('directory_cities')
     .select(CITY_COLUMNS)
     .gte('store_count', CITY_THRESHOLD)
+    .not('slug', 'in', `(${HIDDEN_CITY_SLUGS.join(',')})`)
     .order('store_count', { ascending: false })
     .order('title_count', { ascending: false })
     .order('name')
