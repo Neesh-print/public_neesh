@@ -52,24 +52,13 @@ export default async function DirectoryHome() {
       <section>
         <div className="index-head">
           <h1>The index of independent print</h1>
-          <p className="sub">
-            300+ independent magazines from 30+ countries. Publishers,{' '}
-            <Link href="/auth/publisher" className="text-link">
-              claim your title
-            </Link>
-            .
-          </p>
-          <p className="small">
-            <Link href="/cities" className="text-link">
-              Where to buy them, city by city
-            </Link>
-          </p>
-          <p className="small">
-            Missing something?{' '}
-            <Link href="/add-title" className="text-link">
-              Add a title
-            </Link>
-          </p>
+          <nav className="index-head-links" aria-label="More from the index">
+            <Link href="/auth/publisher">Claim your title &rarr;</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/cities">Browse by city &rarr;</Link>
+            <span aria-hidden="true">/</span>
+            <Link href="/add-title">Add a title &rarr;</Link>
+          </nav>
         </div>
       </section>
       <section>

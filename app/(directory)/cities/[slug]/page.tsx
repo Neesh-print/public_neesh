@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import {
-  CITY_THRESHOLD,
+  isCityPublished,
   getCityBySlug,
   getCityStores,
   getCityTopItems,
@@ -15,8 +15,8 @@ import { JsonLd } from '@/components/JsonLd';
 
 // City pages (stockists spec, Phase 3): where to buy independent magazines
 // in a city, from the publishers' own stockist lists. Rendered on first
-// request and cached. Cities under CITY_THRESHOLD shops render but stay out
-// of search and the city index.
+// request and cached. Unpublished cities (too few shops, or hidden) render
+// but stay out of search and the city index.
 export const revalidate = 86400;
 export const dynamicParams = true;
 
@@ -40,7 +40,7 @@ export async function generateMetadata({
     title: metaTitle,
     description,
     alternates: { canonical: canonical(`/cities/${city.slug}`) },
-    robots: city.store_count >= CITY_THRESHOLD ? undefined : { index: false },
+    robots: isCityPublished(city) ? undefined : { index: false },
     openGraph: { title: metaTitle, description, url: canonical(`/cities/${city.slug}`) },
   };
 }
@@ -104,7 +104,7 @@ function TopItem({ item, rank }: { item: CityTopItem; rank: number }) {
           ))}
         </span>
         <span className="meta">
-          {shops} sell titles from {item.publisher_name}
+          {shops} sell titles from {item.publisher_name.replace(/\s+mag(azine)?$/i, '')}
         </span>
       </span>
     </li>

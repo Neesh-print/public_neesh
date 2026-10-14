@@ -218,6 +218,18 @@ export async function getAllListedStoreSlugs(): Promise<{ slug: string; collecte
 // this many shops; thinner cities still render, noindexed.
 export const CITY_THRESHOLD = 3;
 
+// Cities with no city page at all, by editorial choice: their pages 404 and
+// nothing links to them. Their shops still appear on title and store pages.
+const HIDDEN_CITY_SLUGS = ['tel-aviv', 'moscow', 'saint-petersburg'];
+
+export function isCityHidden(slug: string | null): boolean {
+  return slug !== null && HIDDEN_CITY_SLUGS.includes(slug);
+}
+
+export function isCityPublished(city: Pick<City, 'slug' | 'store_count'>): boolean {
+  return city.store_count >= CITY_THRESHOLD && !HIDDEN_CITY_SLUGS.includes(city.slug);
+}
+
 const CITY_COLUMNS = 'slug, name, country, store_count, title_count, updated_at';
 
 export async function getCityBySlug(slug: string): Promise<City | null> {
@@ -227,7 +239,8 @@ export async function getCityBySlug(slug: string): Promise<City | null> {
     .select(CITY_COLUMNS)
     .eq('slug', slug)
     .maybeSingle();
-  return (data as City | null) ?? null;
+  const city = (data as City | null) ?? null;
+  return city && !isCityHidden(city.slug) ? city : null;
 }
 
 export async function getCityFor(name: string, country: string): Promise<City | null> {
@@ -238,7 +251,8 @@ export async function getCityFor(name: string, country: string): Promise<City | 
     .eq('name', name)
     .eq('country', country)
     .maybeSingle();
-  return (data as City | null) ?? null;
+  const city = (data as City | null) ?? null;
+  return city && !isCityHidden(city.slug) ? city : null;
 }
 
 // Published cities, most shops first: the live city ranking.
@@ -248,6 +262,7 @@ export async function getPublishedCities(): Promise<City[]> {
     .from('directory_cities')
     .select(CITY_COLUMNS)
     .gte('store_count', CITY_THRESHOLD)
+    .not('slug', 'in', `(${HIDDEN_CITY_SLUGS.join(',')})`)
     .order('store_count', { ascending: false })
     .order('title_count', { ascending: false })
     .order('name')
