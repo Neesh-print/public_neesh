@@ -12,6 +12,7 @@ const MESSAGES: Record<string, string> = {
   remove_request: 'Got it. Check your email to confirm.',
   suggestion: "Got it. If it fits the index, it'll be live within a couple of days, and we'll email you when it is.",
   stockist: 'Thanks. We check every shop before it goes on the list.',
+  store_claim: "Got it. A person checks every claim, and we'll email you when the page is yours.",
 };
 
 // The "Want this title?" form posts title_interest; stock_request and
