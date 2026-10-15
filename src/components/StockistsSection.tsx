@@ -107,8 +107,7 @@ export function StockistsSection({
 }) {
   const publisher = title.publisher;
   // A publisher-wide list shared by several Index titles tells us a shop
-  // sells something from the publisher, not that it has this title. Say so,
-  // so nobody makes a wasted trip.
+  // sells something from the publisher, so the count names the publisher.
   const shared =
     publisherTitleCount > 1 && stockists.some((s) => s.list_scope === 'publisher');
   const { groups, unknown } = groupByCity(stockists);
@@ -135,16 +134,10 @@ export function StockistsSection({
         {shopCount > 0 ? (
           <>
             {shared ? (
-              <>
-                <p className="stockists-count">
-                  {publisher.name} sells through {plural(shopCount, 'shop', 'shops')}
-                  {groups.length > 0 && <> across {plural(groups.length, 'city', 'cities')}</>}.
-                </p>
-                <p className="stockists-caveat">
-                  {publisher.name} publishes {publisherTitleCount} titles in the Index and keeps one
-                  stockist list for all of them, so check a shop has {title.name} before you go.
-                </p>
-              </>
+              <p className="stockists-count">
+                {publisher.name} sells through {plural(shopCount, 'shop', 'shops')}
+                {groups.length > 0 && <> across {plural(groups.length, 'city', 'cities')}</>}.
+              </p>
             ) : (
               <p className="stockists-count">
                 Stocked in {plural(shopCount, 'shop', 'shops')}

@@ -2219,15 +2219,6 @@ button {
   margin: 0;
 }
 
-.stockists-caveat {
-  font-size: 15px;
-  line-height: 1.5;
-  max-width: 60ch;
-  margin: 0;
-  padding: 12px 16px;
-  background: var(--band);
-  border-radius: 8px;
-}
 
 .stockists-order,
 .stockists-source {
