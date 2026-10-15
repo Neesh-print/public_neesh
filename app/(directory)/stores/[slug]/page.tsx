@@ -58,23 +58,6 @@ export async function generateMetadata({
   };
 }
 
-// Titles that only reach this shop through a publisher-wide list shared by
-// several titles: say so, so a reader checks before making the trip.
-function sharedListNote(titles: StoreTitle[]): string | null {
-  const byPublisher = new Map<string, string[]>();
-  for (const t of titles) {
-    if (t.list_scope !== 'publisher') continue;
-    byPublisher.set(t.publisher_name, [...(byPublisher.get(t.publisher_name) ?? []), t.title_name]);
-  }
-  const notes = [...byPublisher.entries()]
-    .filter(([, names]) => names.length > 1)
-    .map(
-      ([publisher, names]) =>
-        `${listJoin(names)} come from ${publisher}'s stockist list, which covers all its titles`
-    );
-  return notes.length ? `${notes.join('. ')}. Ask which ones are on the shelf before you go.` : null;
-}
-
 export default async function StorePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const store = await getStoreBySlug(slug);
@@ -92,7 +75,6 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
   const collected = monthYear(
     titles.reduce<string | null>((max, t) => (!max || t.collected_at > max ? t.collected_at : max), null)
   );
-  const sharedNote = sharedListNote(titles);
   const onNeesh = titles.filter((t) => t.available_on_neesh).length;
 
   return (
@@ -198,7 +180,6 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
                   {plural(titles.length, 'title', 'titles')} from the Neesh Index
                   {onNeesh > 0 && <>, {onNeesh} of them orderable wholesale on Neesh</>}.
                 </p>
-                {sharedNote && <p className="stockists-caveat">{sharedNote}</p>}
                 <div className="card-grid">
                   {titles.map((t, index) => (
                     <TitleGridCard
