@@ -21,10 +21,10 @@ export const metadata: Metadata = {
   twitter: { title: TITLE, description: DESCRIPTION },
 };
 
-// Homepage, v3 (fall 2026 awareness campaign). Hero → title marquee →
-// mission → three doors (readers, spaces, publishers) → the Index with the
-// film → packs band → closing photo CTA → Indexed newsletter masthead. The
-// distributor "Bad and worse" section moved to /publishers.
+// Homepage, v3 (fall 2026 awareness campaign). Hero → title marquee → three
+// doors (readers, spaces, publishers) → mission → the Index with the film →
+// packs band → closing photo CTA → Indexed newsletter row. The distributor
+// "Bad and worse" section moved to /publishers.
 export default async function HomePage() {
   // The marquee runs real index titles (most recently updated first), each
   // linked to its Index page so homepage visits pass into the long tail.
@@ -75,31 +75,6 @@ export default async function HomePage() {
           </div>
         </div>
       )}
-
-      <section className="manifesto home-mission">
-        <div className="wrap">
-          <span className="eyebrow on-black">Mission</span>
-          <h2>
-            <span>Print didn&rsquo;t die.</span> <span>The newsstand did.</span>
-          </h2>
-          <div className="mission-spread">
-            <div className="mission-col">
-              <span className="mission-label">01 &middot; What happened</span>
-              <p>
-                Magazines live or die on shelves, and the shelves disappeared with the newsstands.
-                We&rsquo;re rebuilding them in the places people actually spend time.
-              </p>
-            </div>
-            <div className="mission-col">
-              <span className="mission-label">02 &middot; What we believe</span>
-              <p className="mission-belief">
-                Good magazines deserve to be found and the people making them deserve to make a
-                living.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <section className="doors">
         <Link href="/index" className="door readers">
@@ -157,6 +132,30 @@ export default async function HomePage() {
             </span>
           </div>
         </Link>
+      </section>
+
+      <section className="home-mission">
+        <div className="wrap">
+          <div className="mission-dateline">
+            <span>Mission</span>
+            <span className="mission-dateline-right">Why Neesh exists</span>
+          </div>
+          <div className="mission-spread">
+            <h2>
+              <span>Print didn&rsquo;t die.</span> <span>The newsstand did.</span>
+            </h2>
+            <div className="mission-copy">
+              <p>
+                Magazines live or die on shelves, and the shelves disappeared with the newsstands.
+                We&rsquo;re rebuilding them in the places people actually spend time.
+              </p>
+              <p className="mission-belief">
+                Good magazines deserve to be found and the people making them deserve to make a
+                living.
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="feature-band">
@@ -223,7 +222,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="closing">
+      <section className="closing home-closing">
         <img src="/assets/couch-pair.jpg" alt="Two people reading magazines on a couch" />
         <div className="closing-content">
           <h2>Magazines belong where people are.</h2>
@@ -238,26 +237,21 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="indexed-masthead" aria-labelledby="indexed-title">
+      <section className="indexed-row-section" aria-labelledby="indexed-title">
         <div className="wrap">
-          <div className="indexed-meta">
-            <span className="eyebrow">The newsletter &middot; Monthly</span>
-            <span className="eyebrow muted">From Neesh</span>
-          </div>
-          {/* Set as SVG with a fixed text length so the wordmark always runs
-              exactly edge to edge of the column, whatever the viewport. */}
-          <h2 id="indexed-title" className="indexed-word" aria-label="Indexed">
-            <svg viewBox="0 0 1000 150" preserveAspectRatio="xMinYMin meet" aria-hidden="true">
-              <text x="0" y="146" textLength="1000" lengthAdjust="spacingAndGlyphs">
-                INDEXED
-              </text>
-            </svg>
-          </h2>
           <div className="indexed-row">
-            <p>
-              What we&rsquo;re reading, stocking and talking about. New titles in the Index,
-              physical media news and whatever else comes up. One email a month.
-            </p>
+            <div className="indexed-copy">
+              <div className="indexed-title-row">
+                <h2 id="indexed-title" className="indexed-word">
+                  Indexed
+                </h2>
+                <span className="eyebrow">The monthly newsletter</span>
+              </div>
+              <p>
+                New titles in the Index, physical media news and whatever else comes up. One email
+                a month.
+              </p>
+            </div>
             <NewsletterForm />
           </div>
         </div>
