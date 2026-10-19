@@ -76,60 +76,55 @@ export default async function HomePage() {
         </div>
       )}
 
-      <section className="doors">
-        <Link href="/index" className="door readers">
+      <section className="mission-doors">
+        <Link href="/index" className="m-door readers">
           <img src="/assets/reader-yolo.jpg" alt="A reader holding YOLO magazine on a couch" />
-          <div className="scrim" />
-          <div className="door-content">
+          <span className="scrim" />
+          <div className="m-door-content">
             <span className="eyebrow">For readers</span>
-            <span className="door-title">
-              <span className="hl">For people who judge books by their covers.</span>
-            </span>
-            <span className="door-body">
+            <h3 className="m-door-title">
+              For people who <span className="hl">judge books by their covers.</span>
+            </h3>
+            <p className="m-door-body">
               Find the magazine you&rsquo;d want to be seen holding. Browse by subject, country and
               vibe, then see where to pick it up in your city.
-            </span>
-            <span className="door-cta">
-              Browse the Index
-              <ArrowIcon />
-            </span>
+            </p>
+            <span className="m-door-cta">Browse the Index</span>
           </div>
         </Link>
-        <Link href="/packs" className="door spaces">
+        <Link href="/packs" className="m-door spaces">
           <img src="/assets/table-sport.jpg" alt="Magazines laid out on a table in a room" />
-          <div className="scrim" />
-          <div className="door-content">
+          <span className="scrim" />
+          <div className="m-door-content">
             <span className="eyebrow">For spaces</span>
-            <span className="door-title">
-              <span className="hl">Give people something to judge you by.</span>
-            </span>
-            <span className="door-body">
+            <h3 className="m-door-title">
+              Give people <span className="hl">something to judge you by.</span>
+            </h3>
+            <p className="m-door-body">
               Independent magazines that make a statement about your space. Pick a pack built for
               your kind of room, or build your own shelf from the Index at wholesale. Nothing locked
               in.
-            </span>
-            <span className="door-cta">
-              See the packs
-              <ArrowIcon />
-            </span>
+            </p>
+            <span className="m-door-cta">See the packs</span>
           </div>
         </Link>
-        <Link href="/publishers" className="door publisher">
-          <img src="/assets/bench-tempura.jpg" alt="A publisher reading on a bench" />
-          <div className="scrim" />
-          <div className="door-content">
+        <Link href="/publishers" className="m-door publishers">
+          <img
+            src="/assets/bench-tempura.jpg"
+            alt="A publisher reading on a bench"
+            style={{ objectPosition: '50% 34%' }}
+          />
+          <span className="scrim" />
+          <div className="m-door-content">
             <span className="eyebrow">For publishers</span>
-            <span className="door-title">
-              <span className="hl">Set your terms. We bring the shelves.</span>
-            </span>
-            <span className="door-body">
+            <h3 className="m-door-title">
+              Set your terms. <span className="hl">We bring the shelves.</span>
+            </h3>
+            <p className="m-door-body">
               We get your magazines onto more shelves. Keep your buyer relationships and see every
               order as it happens. Flat 10% fee. No exclusivity or ongoing commitments.
-            </span>
-            <span className="door-cta">
-              Claim your title
-              <ArrowIcon />
-            </span>
+            </p>
+            <span className="m-door-cta">Claim your title</span>
           </div>
         </Link>
       </section>

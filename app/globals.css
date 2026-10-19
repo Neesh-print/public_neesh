@@ -5394,42 +5394,136 @@ button {
    One loud moment (the hero); everything below steps down.
    -------------------------------------------------------------------------- */
 
-/* Door colours. Readers ink, spaces brick red, publishers purple. Brick red
-   sits as a pair with the purple and echoes the red flatlay in the hero. */
+/* Doors: three-up fork. One ink button for every door; each door's
+   colour shows only in its hover highlight (readers ink, spaces light
+   purple, publishers purple). */
 :root {
-  --brick: #ab1e28;
+  --radius: 8px;
 }
 
-.door.readers { --door: var(--ink); --door-label: var(--accent); }
-.door.spaces { --door: var(--brick); --door-label: var(--brick); }
-.door.publisher { --door: var(--accent); --door-label: var(--accent); }
-
-.door.readers .eyebrow,
-.door.spaces .eyebrow,
-.door.publisher .eyebrow {
-  color: var(--door-label);
+.mission-doors {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
 }
 
-.door.readers .door-cta,
-.door.spaces .door-cta,
-.door.publisher .door-cta {
-  background: var(--door);
+.m-door {
+  position: relative;
+  flex: 1 1 320px;
+  min-height: 460px;
+  overflow: hidden;
+  display: flex;
+  color: var(--ink);
+  transition: flex-grow 460ms var(--ease-nudge);
+}
+
+.m-door + .m-door {
+  border-left: 1px solid var(--ink);
+}
+
+.m-door:hover {
+  flex-grow: 1.5;
+  color: var(--ink);
+}
+
+.m-door > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 460ms var(--ease-nudge);
+}
+
+.m-door:hover > img {
+  transform: scale(1.04);
+}
+
+.m-door .scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.56) 0%,
+    rgba(255, 255, 255, 0.88) 30%,
+    rgba(255, 255, 255, 0.93) 100%
+  );
+}
+
+.m-door-content {
+  position: relative;
+  width: 100%;
+  padding: clamp(26px, 2.8vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.m-door .eyebrow {
+  color: var(--muted);
+}
+
+.m-door-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 116;
+  font-weight: 700;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 17ch;
+}
+
+.m-door-title .hl {
+  padding: 0 0.12em;
+  margin: 0 -0.12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background 260ms var(--ease-nudge), color 260ms var(--ease-nudge);
+}
+
+.m-door.readers:hover .hl {
+  background: var(--ink);
   color: #fff;
 }
 
-.door.readers:hover .door-title .hl,
-.door.spaces:hover .door-title .hl,
-.door.publisher:hover .door-title .hl {
-  background: var(--door);
+.m-door.spaces:hover .hl {
+  background: var(--accent-light);
+  color: var(--ink);
+}
+
+.m-door.publishers:hover .hl {
+  background: var(--accent);
   color: #fff;
+}
+
+.m-door-body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #4a4c57;
+  max-width: 42ch;
+  text-wrap: pretty;
+}
+
+.m-door-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto;
+  padding: 15px 26px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: var(--radius);
 }
 
 @media (max-width: 899px) {
-  .door.readers .door-title .hl,
-  .door.spaces .door-title .hl,
-  .door.publisher .door-title .hl {
-    background: var(--door);
-    color: #fff;
+  .m-door + .m-door {
+    border-left: 0;
+    border-top: 1px solid var(--ink);
   }
 }
 
