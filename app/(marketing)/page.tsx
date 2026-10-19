@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 };
 
 // Homepage, v3 (fall 2026 awareness campaign). Hero → title marquee →
-// manifesto → three doors (readers, spaces, publishers) → the Index with the
-// film → packs band → newsletter strip → closing photo CTA. The distributor
-// "Bad and worse" section moved to /publishers.
+// mission → three doors (readers, spaces, publishers) → the Index with the
+// film → packs band → closing photo CTA → Indexed newsletter masthead. The
+// distributor "Bad and worse" section moved to /publishers.
 export default async function HomePage() {
   // The marquee runs real index titles (most recently updated first), each
   // linked to its Index page so homepage visits pass into the long tail.
@@ -52,8 +52,8 @@ export default async function HomePage() {
           <h1 className="d1">Where independent magazines find their people.</h1>
           <div className="home-hero-row">
             <p>
-              Discover 300+ independent magazines about everything under the sun. Neesh helps you
-              find the good ones and gets them onto shelves worth browsing.
+              Independent magazines about everything under the sun. Neesh helps you find the good
+              ones and gets them onto shelves worth browsing.
             </p>
             <div className="home-hero-ctas">
               <Link href="/index" className="btn white hero">
@@ -79,14 +79,25 @@ export default async function HomePage() {
       <section className="manifesto home-mission">
         <div className="wrap">
           <span className="eyebrow on-black">Mission</span>
-          <h2>Print didn&rsquo;t die. The newsstand did.</h2>
-          <p className="kicker">
-            Magazines live or die on shelves, and the shelves disappeared with the newsstands.
-            We&rsquo;re rebuilding them in the places people actually spend time.
-          </p>
-          <p className="manifesto-close">
-            Good magazines deserve to be found and the people making them deserve to make a living.
-          </p>
+          <h2>
+            <span>Print didn&rsquo;t die.</span> <span>The newsstand did.</span>
+          </h2>
+          <div className="mission-spread">
+            <div className="mission-col">
+              <span className="mission-label">01 &middot; What happened</span>
+              <p>
+                Magazines live or die on shelves, and the shelves disappeared with the newsstands.
+                We&rsquo;re rebuilding them in the places people actually spend time.
+              </p>
+            </div>
+            <div className="mission-col">
+              <span className="mission-label">02 &middot; What we believe</span>
+              <p className="mission-belief">
+                Good magazines deserve to be found and the people making them deserve to make a
+                living.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -100,8 +111,8 @@ export default async function HomePage() {
               <span className="hl">For people who judge books by their covers.</span>
             </span>
             <span className="door-body">
-              Find the magazine you&rsquo;d want to be seen holding. Browse 300+ independent titles
-              by subject, country and vibe, then see where to pick them up in your city.
+              Find the magazine you&rsquo;d want to be seen holding. Browse by subject, country and
+              vibe, then see where to pick it up in your city.
             </span>
             <span className="door-cta">
               Browse the Index
@@ -155,8 +166,8 @@ export default async function HomePage() {
               <span className="eyebrow muted">The Index</span>
               <h2 className="d2">Every independent magazine, in one place</h2>
               <p className="lede" style={{ color: 'var(--muted-2)' }}>
-                Explore 300+ independent titles across art, food, music, design and everything in
-                between. Find out who&rsquo;s stocking them near you.
+                Art, food, music, design and everything in between, catalogued title by title. Find
+                out who&rsquo;s stocking them near you.
               </p>
               <div className="feature-actions">
                 <Link href="/index" className="btn ghost">
@@ -212,22 +223,6 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="newsletter-strip">
-        <div className="wrap">
-          <div className="newsletter-strip-inner">
-            <div className="newsletter-strip-copy">
-              <span className="eyebrow">Indexed, monthly</span>
-              <h2>What we&rsquo;re reading, stocking and talking about</h2>
-              <p>
-                New titles in the Index, physical media news and whatever else comes up. One email a
-                month.
-              </p>
-            </div>
-            <NewsletterForm />
-          </div>
-        </div>
-      </section>
-
       <section className="closing">
         <img src="/assets/couch-pair.jpg" alt="Two people reading magazines on a couch" />
         <div className="closing-content">
@@ -239,6 +234,31 @@ export default async function HomePage() {
             <Link href="/packs" className="btn ghost-white hero">
               See the packs
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="indexed-masthead" aria-labelledby="indexed-title">
+        <div className="wrap">
+          <div className="indexed-meta">
+            <span className="eyebrow">The newsletter &middot; Monthly</span>
+            <span className="eyebrow muted">From Neesh</span>
+          </div>
+          {/* Set as SVG with a fixed text length so the wordmark always runs
+              exactly edge to edge of the column, whatever the viewport. */}
+          <h2 id="indexed-title" className="indexed-word" aria-label="Indexed">
+            <svg viewBox="0 0 1000 150" preserveAspectRatio="xMinYMin meet" aria-hidden="true">
+              <text x="0" y="146" textLength="1000" lengthAdjust="spacingAndGlyphs">
+                INDEXED
+              </text>
+            </svg>
+          </h2>
+          <div className="indexed-row">
+            <p>
+              What we&rsquo;re reading, stocking and talking about. New titles in the Index,
+              physical media news and whatever else comes up. One email a month.
+            </p>
+            <NewsletterForm />
           </div>
         </div>
       </section>

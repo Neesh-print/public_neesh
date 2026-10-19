@@ -5388,3 +5388,200 @@ button {
     display: none;
   }
 }
+
+/* --------------------------------------------------------------------------
+   Homepage polish, Oct 19 2026
+   - Door colours, all from the existing palette: readers gray (--muted),
+     spaces light purple (--accent-light, with ink text since white fails
+     contrast on it), publishers purple (--accent).
+   - Mission: full-width two-line headline over a two-column spread.
+   - Indexed masthead: newsletter set as a full-bleed wordmark above the footer.
+   -------------------------------------------------------------------------- */
+
+:root {
+  --door-readers: var(--muted);
+  --door-spaces: var(--accent-light);
+  --door-publishers: var(--accent);
+}
+
+/* --door fills buttons, highlights and the top rule; --door-on is the text
+   on that fill; --door-label is the eyebrow on the light door wash. */
+.door.readers { --door: var(--door-readers); --door-on: #fff; --door-label: var(--muted); }
+.door.spaces { --door: var(--door-spaces); --door-on: var(--ink); --door-label: var(--accent); }
+.door.publisher { --door: var(--door-publishers); --door-on: #fff; --door-label: var(--accent); }
+
+.door.readers .eyebrow,
+.door.spaces .eyebrow,
+.door.publisher .eyebrow {
+  color: var(--door-label);
+}
+
+.door.readers .door-cta,
+.door.spaces .door-cta,
+.door.publisher .door-cta {
+  background: var(--door);
+  color: var(--door-on);
+}
+
+.door.readers:hover .door-title .hl,
+.door.spaces:hover .door-title .hl,
+.door.publisher:hover .door-title .hl {
+  background: var(--door);
+  color: var(--door-on);
+}
+
+/* A 4px rule in the door colour across the top edge of each door. */
+.door.readers::before,
+.door.spaces::before,
+.door.publisher::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--door);
+  z-index: 1;
+}
+
+@media (max-width: 899px) {
+  .door.readers .door-title .hl,
+  .door.spaces .door-title .hl,
+  .door.publisher .door-title .hl {
+    background: var(--door);
+    color: var(--door-on);
+  }
+}
+
+/* Mission */
+.home-mission h2 {
+  margin-bottom: clamp(40px, 5vw, 84px);
+}
+
+.home-mission h2 span {
+  display: block;
+}
+
+.home-mission h2 span + span {
+  color: var(--accent-light);
+}
+
+.mission-spread {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(360px, 100%), 1fr));
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.mission-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: clamp(26px, 3vw, 44px) clamp(26px, 3vw, 56px) 0 0;
+}
+
+.mission-col + .mission-col {
+  padding-left: clamp(26px, 3vw, 56px);
+  padding-right: 0;
+  border-left: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.mission-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.mission-col p {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 106;
+  font-weight: 500;
+  font-size: clamp(20px, 1.9vw, 28px);
+  line-height: 1.3;
+  color: var(--on-black-soft);
+  max-width: 34ch;
+  text-wrap: pretty;
+}
+
+.mission-col p.mission-belief {
+  font-variation-settings: 'wdth' 112;
+  font-weight: 600;
+  font-size: clamp(26px, 2.8vw, 42px);
+  line-height: 1.1;
+  letter-spacing: -0.024em;
+  color: #fff;
+  max-width: 22ch;
+}
+
+@media (max-width: 899px) {
+  .mission-col,
+  .mission-col + .mission-col {
+    padding: 26px 0 0;
+    border-left: 0;
+  }
+
+  .mission-col + .mission-col {
+    margin-top: 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+  }
+}
+
+/* Indexed masthead */
+.indexed-masthead {
+  background: var(--paper);
+  border-top: 1px solid var(--ink);
+  overflow: hidden;
+}
+
+.indexed-masthead .wrap {
+  padding-top: clamp(28px, 3vw, 48px);
+  padding-bottom: clamp(36px, 4vw, 64px);
+}
+
+.indexed-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: clamp(10px, 1.2vw, 18px);
+  border-bottom: 1px solid var(--ink);
+}
+
+.indexed-word {
+  margin: clamp(14px, 1.6vw, 26px) 0 clamp(16px, 1.8vw, 28px);
+  line-height: 0;
+}
+
+.indexed-word svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.indexed-word text {
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 125;
+  font-weight: 800;
+  font-size: 204px;
+  fill: var(--ink);
+}
+
+.indexed-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px clamp(24px, 4vw, 72px);
+  padding-top: clamp(16px, 1.8vw, 26px);
+  border-top: 1px solid var(--ink);
+}
+
+.indexed-row p {
+  flex: 1 1 320px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 52ch;
+  text-wrap: pretty;
+}
