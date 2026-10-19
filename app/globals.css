@@ -5391,40 +5391,43 @@ button {
 
 /* --------------------------------------------------------------------------
    Homepage polish, Oct 19 2026
-   - Door colours: each audience gets its own colour. Publishers keep the
-     brand purple; readers get vermilion, spaces get forest. All three pass
-     4.5:1 with white button text.
+   - Door colours, all from the existing palette: readers gray (--muted),
+     spaces light purple (--accent-light, with ink text since white fails
+     contrast on it), publishers purple (--accent).
    - Mission: full-width two-line headline over a two-column spread.
    - Indexed masthead: newsletter set as a full-bleed wordmark above the footer.
    -------------------------------------------------------------------------- */
 
 :root {
-  --door-readers: #c23a1c;
-  --door-spaces: #1f6b4a;
+  --door-readers: var(--muted);
+  --door-spaces: var(--accent-light);
   --door-publishers: var(--accent);
 }
 
-.door.readers { --door: var(--door-readers); }
-.door.spaces { --door: var(--door-spaces); }
-.door.publisher { --door: var(--door-publishers); }
+/* --door fills buttons, highlights and the top rule; --door-on is the text
+   on that fill; --door-label is the eyebrow on the light door wash. */
+.door.readers { --door: var(--door-readers); --door-on: #fff; --door-label: var(--muted); }
+.door.spaces { --door: var(--door-spaces); --door-on: var(--ink); --door-label: var(--accent); }
+.door.publisher { --door: var(--door-publishers); --door-on: #fff; --door-label: var(--accent); }
 
 .door.readers .eyebrow,
 .door.spaces .eyebrow,
 .door.publisher .eyebrow {
-  color: var(--door);
+  color: var(--door-label);
 }
 
 .door.readers .door-cta,
 .door.spaces .door-cta,
 .door.publisher .door-cta {
   background: var(--door);
+  color: var(--door-on);
 }
 
 .door.readers:hover .door-title .hl,
 .door.spaces:hover .door-title .hl,
 .door.publisher:hover .door-title .hl {
   background: var(--door);
-  color: #fff;
+  color: var(--door-on);
 }
 
 /* A 4px rule in the door colour across the top edge of each door. */
@@ -5444,7 +5447,7 @@ button {
   .door.spaces .door-title .hl,
   .door.publisher .door-title .hl {
     background: var(--door);
-    color: #fff;
+    color: var(--door-on);
   }
 }
 
