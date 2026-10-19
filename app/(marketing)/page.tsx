@@ -21,10 +21,10 @@ export const metadata: Metadata = {
   twitter: { title: TITLE, description: DESCRIPTION },
 };
 
-// Homepage, v3 (fall 2026 awareness campaign). Hero → title marquee →
-// mission → three doors (readers, spaces, publishers) → the Index with the
-// film → packs band → closing photo CTA → Indexed newsletter masthead. The
-// distributor "Bad and worse" section moved to /publishers.
+// Homepage, v3 (fall 2026 awareness campaign). Hero → title marquee → three
+// doors (readers, spaces, publishers) → mission → the Index with the film →
+// packs band → closing photo CTA → Indexed newsletter row. The distributor
+// "Bad and worse" section moved to /publishers.
 export default async function HomePage() {
   // The marquee runs real index titles (most recently updated first), each
   // linked to its Index page so homepage visits pass into the long tail.
@@ -76,22 +76,74 @@ export default async function HomePage() {
         </div>
       )}
 
-      <section className="manifesto home-mission">
+      <section className="mission-doors">
+        <Link href="/index" className="m-door readers">
+          <img src="/assets/reader-yolo.jpg" alt="A reader holding YOLO magazine on a couch" />
+          <span className="scrim" />
+          <div className="m-door-content">
+            <span className="eyebrow">For readers</span>
+            <h3 className="m-door-title">
+              For people who <span className="hl">judge books by their covers.</span>
+            </h3>
+            <p className="m-door-body">
+              Find the magazine you&rsquo;d want to be seen holding. Browse by subject, country and
+              vibe, then see where to pick it up in your city.
+            </p>
+            <span className="m-door-cta">Browse the Index</span>
+          </div>
+        </Link>
+        <Link href="/packs" className="m-door spaces">
+          <img src="/assets/table-sport.jpg" alt="Magazines laid out on a table in a room" />
+          <span className="scrim" />
+          <div className="m-door-content">
+            <span className="eyebrow">For spaces</span>
+            <h3 className="m-door-title">
+              Give people <span className="hl">something to judge you by.</span>
+            </h3>
+            <p className="m-door-body">
+              Independent magazines that make a statement about your space. Pick a pack built for
+              your kind of room, or build your own shelf from the Index at wholesale. Nothing locked
+              in.
+            </p>
+            <span className="m-door-cta">See the packs</span>
+          </div>
+        </Link>
+        <Link href="/publishers" className="m-door publishers">
+          <img
+            src="/assets/bench-tempura.jpg"
+            alt="A publisher reading on a bench"
+            style={{ objectPosition: '50% 34%' }}
+          />
+          <span className="scrim" />
+          <div className="m-door-content">
+            <span className="eyebrow">For publishers</span>
+            <h3 className="m-door-title">
+              Set your terms. <span className="hl">We bring the shelves.</span>
+            </h3>
+            <p className="m-door-body">
+              We get your magazines onto more shelves. Keep your buyer relationships and see every
+              order as it happens. Flat 10% fee. No exclusivity or ongoing commitments.
+            </p>
+            <span className="m-door-cta">Claim your title</span>
+          </div>
+        </Link>
+      </section>
+
+      <section className="home-mission">
         <div className="wrap">
-          <span className="eyebrow on-black">Mission</span>
-          <h2>
-            <span>Print didn&rsquo;t die.</span> <span>The newsstand did.</span>
-          </h2>
+          <div className="mission-dateline">
+            <span>Mission</span>
+            <span className="mission-dateline-right">Why Neesh exists</span>
+          </div>
           <div className="mission-spread">
-            <div className="mission-col">
-              <span className="mission-label">01 &middot; What happened</span>
+            <h2>
+              <span>Print didn&rsquo;t die.</span> <span>The newsstand did.</span>
+            </h2>
+            <div className="mission-copy">
               <p>
                 Magazines live or die on shelves, and the shelves disappeared with the newsstands.
                 We&rsquo;re rebuilding them in the places people actually spend time.
               </p>
-            </div>
-            <div className="mission-col">
-              <span className="mission-label">02 &middot; What we believe</span>
               <p className="mission-belief">
                 Good magazines deserve to be found and the people making them deserve to make a
                 living.
@@ -99,64 +151,6 @@ export default async function HomePage() {
             </div>
           </div>
         </div>
-      </section>
-
-      <section className="doors">
-        <Link href="/index" className="door readers">
-          <img src="/assets/reader-yolo.jpg" alt="A reader holding YOLO magazine on a couch" />
-          <div className="scrim" />
-          <div className="door-content">
-            <span className="eyebrow">For readers</span>
-            <span className="door-title">
-              <span className="hl">For people who judge books by their covers.</span>
-            </span>
-            <span className="door-body">
-              Find the magazine you&rsquo;d want to be seen holding. Browse by subject, country and
-              vibe, then see where to pick it up in your city.
-            </span>
-            <span className="door-cta">
-              Browse the Index
-              <ArrowIcon />
-            </span>
-          </div>
-        </Link>
-        <Link href="/packs" className="door spaces">
-          <img src="/assets/table-sport.jpg" alt="Magazines laid out on a table in a room" />
-          <div className="scrim" />
-          <div className="door-content">
-            <span className="eyebrow">For spaces</span>
-            <span className="door-title">
-              <span className="hl">Give people something to judge you by.</span>
-            </span>
-            <span className="door-body">
-              Independent magazines that make a statement about your space. Pick a pack built for
-              your kind of room, or build your own shelf from the Index at wholesale. Nothing locked
-              in.
-            </span>
-            <span className="door-cta">
-              See the packs
-              <ArrowIcon />
-            </span>
-          </div>
-        </Link>
-        <Link href="/publishers" className="door publisher">
-          <img src="/assets/bench-tempura.jpg" alt="A publisher reading on a bench" />
-          <div className="scrim" />
-          <div className="door-content">
-            <span className="eyebrow">For publishers</span>
-            <span className="door-title">
-              <span className="hl">Set your terms. We bring the shelves.</span>
-            </span>
-            <span className="door-body">
-              We get your magazines onto more shelves. Keep your buyer relationships and see every
-              order as it happens. Flat 10% fee. No exclusivity or ongoing commitments.
-            </span>
-            <span className="door-cta">
-              Claim your title
-              <ArrowIcon />
-            </span>
-          </div>
-        </Link>
       </section>
 
       <section className="feature-band">
@@ -223,7 +217,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="closing">
+      <section className="closing home-closing">
         <img src="/assets/couch-pair.jpg" alt="Two people reading magazines on a couch" />
         <div className="closing-content">
           <h2>Magazines belong where people are.</h2>
@@ -238,26 +232,21 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="indexed-masthead" aria-labelledby="indexed-title">
+      <section className="indexed-row-section" aria-labelledby="indexed-title">
         <div className="wrap">
-          <div className="indexed-meta">
-            <span className="eyebrow">The newsletter &middot; Monthly</span>
-            <span className="eyebrow muted">From Neesh</span>
-          </div>
-          {/* Set as SVG with a fixed text length so the wordmark always runs
-              exactly edge to edge of the column, whatever the viewport. */}
-          <h2 id="indexed-title" className="indexed-word" aria-label="Indexed">
-            <svg viewBox="0 0 1000 150" preserveAspectRatio="xMinYMin meet" aria-hidden="true">
-              <text x="0" y="146" textLength="1000" lengthAdjust="spacingAndGlyphs">
-                INDEXED
-              </text>
-            </svg>
-          </h2>
           <div className="indexed-row">
-            <p>
-              What we&rsquo;re reading, stocking and talking about. New titles in the Index,
-              physical media news and whatever else comes up. One email a month.
-            </p>
+            <div className="indexed-copy">
+              <div className="indexed-title-row">
+                <h2 id="indexed-title" className="indexed-word">
+                  Indexed
+                </h2>
+                <span className="eyebrow">The monthly newsletter</span>
+              </div>
+              <p>
+                New titles in the Index, physical media news and whatever else comes up. One email
+                a month.
+              </p>
+            </div>
             <NewsletterForm />
           </div>
         </div>
