@@ -81,6 +81,36 @@ export default function PublishersPage() {
         </div>
       </section>
 
+      <section className="manifesto">
+        <div className="wrap">
+          <span className="eyebrow on-black">The Status Quo</span>
+          <h2>Bad and worse</h2>
+          <p className="kicker">Independent publishers get two options.</p>
+          <div className="manifesto-cols">
+            <div className="manifesto-col">
+              <span className="manifesto-num">01</span>
+              <p>
+                Door one is a distributor. They take 60 points, pay in 90 days, send sales reports
+                that are out of date when they arrive, and destroy what doesn&rsquo;t sell. You
+                find out where your magazine went months after it went there.
+              </p>
+            </div>
+            <div className="manifesto-col">
+              <span className="manifesto-num">02</span>
+              <p>
+                Door two is doing it yourself. Dozens of store relationships in a spreadsheet.
+                Invoices you chase for six months. Reorders that only happen when you remember to
+                ask.
+              </p>
+            </div>
+          </div>
+          <p className="manifesto-close">
+            Most publishers pick door two and call it independence. It&rsquo;s really unpaid
+            logistics work, eating the time you have to make the next issue.
+          </p>
+        </div>
+      </section>
+
       <section className="plain-section">
         <div className="wrap">
           <h2 className="section-label">How it works</h2>
