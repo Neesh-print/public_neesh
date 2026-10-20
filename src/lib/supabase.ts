@@ -20,7 +20,12 @@ export function serviceClient(): SupabaseClient {
   return createClient(url, serviceKey, { auth: { persistSession: false } });
 }
 
+// Reader cover uploads sit in the private reader-uploads bucket until a
+// review approves them and moves them into covers, so they have no public
+// URL before then.
 export function coverPublicUrl(coverImagePath: string | null): string | null {
-  if (!coverImagePath || !url) return null;
+  if (!coverImagePath || !url || coverImagePath.startsWith('reader-uploads/')) return null;
+  // Issues seeded from the platform or a checked CSV can point at a full URL.
+  if (/^https?:\/\//.test(coverImagePath)) return coverImagePath;
   return `${url}/storage/v1/object/public/covers/${coverImagePath.replace(/^covers\//, '')}`;
 }
