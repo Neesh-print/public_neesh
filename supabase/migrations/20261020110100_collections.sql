@@ -595,7 +595,7 @@ grant execute on function get_directory_review_queue() to authenticated;
 
 -- Approve, reject or flag one record. Approval stamps verified_at (issues),
 -- resolves open reports and can record the source URL. Rejection hides the
--- record (RLS drops rejected rows) and resolves its reports.
+-- record (RLS hides rejected rows) and resolves its reports.
 create function review_directory_record(
   p_kind text, p_id uuid, p_status review_status,
   p_note text default null, p_source_url text default null
@@ -765,7 +765,7 @@ $function$;
 -- Row level security
 -- ---------------------------------------------------------------------------
 
--- Index tables: rejected and merged rows drop out of public reads.
+-- Index tables: rejected and merged rows leave public reads.
 alter policy directory_titles_public_read on directory_titles
   using (
     removed = false
@@ -888,3 +888,17 @@ create policy covers_admin_update on storage.objects
 -- Storage upserts read the existing object first.
 create policy covers_admin_read on storage.objects
   for select to authenticated using (bucket_id = 'covers' and coalesce(public.is_admin(), false));
+
+-- Trigger functions are never called directly; keep them off the API.
+revoke execute on function collection_items_log() from public, anon, authenticated;
+revoke execute on function collector_titles_log() from public, anon, authenticated;
+revoke execute on function availability_requests_log() from public, anon, authenticated;
+revoke execute on function content_reports_flag() from public, anon, authenticated;
+revoke execute on function reader_rejections_check() from public, anon, authenticated;
+revoke execute on function orders_report_issue_availability() from public, anon, authenticated;
+revoke execute on function directory_issue_availability_expiry() from public, anon, authenticated;
+revoke execute on function collectors_guard_can_add() from public, anon, authenticated;
+
+alter function collect_events_suppressed() set search_path = public;
+alter function collectors_guard_can_add() set search_path = public;
+alter function directory_issue_availability_expiry() set search_path = public;
