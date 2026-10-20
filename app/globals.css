@@ -1041,6 +1041,96 @@ button {
   font-weight: 800;
 }
 
+/* Homepage v3 additions (fall 2026 awareness campaign) */
+.home-hero-content h1 {
+  max-width: 18ch;
+}
+
+.home-hero-scanned {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(18px, 1.6vw, 24px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 0 clamp(10px, 1.2vw, 16px);
+  max-width: 40ch;
+}
+
+.marquee-seq a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.marquee-seq a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.manifesto.home-mission .manifesto-close {
+  margin-top: 0;
+}
+
+/* Readers door: same light wash as publishers, ink accents like spaces. */
+.door.readers > img {
+  object-position: 50% 40%;
+}
+
+.door.readers .scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.86) 0%,
+    rgba(255, 255, 255, 0.93) 44%,
+    rgba(255, 255, 255, 0.97) 100%
+  );
+}
+
+.door + .door {
+  border-left: 1px solid var(--ink);
+}
+
+.door.readers .eyebrow {
+  color: #4a4c57;
+}
+
+.door.readers .door-cta {
+  background: var(--ink);
+}
+
+.door.readers:hover .door-title .hl {
+  background: var(--ink);
+  color: #fff;
+}
+
+.feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 24px;
+}
+
+.feature-actions .text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+@media (max-width: 899px) {
+  .door.readers .door-title .hl {
+    background: var(--ink);
+    color: #fff;
+  }
+
+  .door + .door {
+    border-left: 0;
+    border-top: 1px solid var(--ink);
+  }
+}
+
 /* Two-column feature band (Mission, packs band) */
 .feature-band {
   background: var(--paper);
@@ -5299,6 +5389,293 @@ button {
   }
 }
 
+/* --------------------------------------------------------------------------
+   Homepage, calmer (Oct 19 2026)
+   One loud moment (the hero); everything below steps down.
+   -------------------------------------------------------------------------- */
+
+/* Doors: three-up fork. One ink button for every door; each door's
+   colour shows only in its hover highlight (readers ink, spaces light
+   purple, publishers purple). */
+:root {
+  --radius: 8px;
+}
+
+.mission-doors {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+}
+
+.m-door {
+  position: relative;
+  flex: 1 1 320px;
+  min-height: 460px;
+  overflow: hidden;
+  display: flex;
+  color: var(--ink);
+  transition: flex-grow 460ms var(--ease-nudge);
+}
+
+.m-door + .m-door {
+  border-left: 1px solid var(--ink);
+}
+
+.m-door:hover {
+  flex-grow: 1.5;
+  color: var(--ink);
+}
+
+.m-door > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 460ms var(--ease-nudge);
+}
+
+.m-door:hover > img {
+  transform: scale(1.04);
+}
+
+.m-door .scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.56) 0%,
+    rgba(255, 255, 255, 0.88) 30%,
+    rgba(255, 255, 255, 0.93) 100%
+  );
+}
+
+.m-door-content {
+  position: relative;
+  width: 100%;
+  padding: clamp(26px, 2.8vw, 44px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.m-door .eyebrow {
+  color: var(--muted);
+}
+
+.m-door-title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 116;
+  font-weight: 700;
+  font-size: clamp(26px, 2.6vw, 38px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  max-width: 17ch;
+}
+
+.m-door-title .hl {
+  padding: 0 0.12em;
+  margin: 0 -0.12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  transition: background 260ms var(--ease-nudge), color 260ms var(--ease-nudge);
+}
+
+.m-door.readers:hover .hl {
+  background: var(--ink);
+  color: #fff;
+}
+
+.m-door.spaces:hover .hl {
+  background: var(--accent-light);
+  color: var(--ink);
+}
+
+.m-door.publishers:hover .hl {
+  background: var(--accent);
+  color: #fff;
+}
+
+.m-door-body {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.55;
+  color: #4a4c57;
+  max-width: 42ch;
+  text-wrap: pretty;
+}
+
+.m-door-cta {
+  display: inline-flex;
+  align-items: center;
+  margin-top: auto;
+  padding: 15px 26px;
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: var(--radius);
+}
+
+@media (max-width: 899px) {
+  .m-door + .m-door {
+    border-left: 0;
+    border-top: 1px solid var(--ink);
+  }
+}
+
+/* Mission: secondary anchor, set like a magazine opening spread. Dateline
+   between two hairlines, headline left, standfirst right. */
+.home-mission {
+  background: var(--ink);
+  color: #fff;
+}
+
+.home-mission .wrap {
+  padding-top: clamp(56px, 5.6vw, 80px);
+  padding-bottom: clamp(56px, 6vw, 88px);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(28px, 2.8vw, 40px);
+}
+
+.mission-dateline {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.mission-dateline-right {
+  color: var(--accent-light);
+}
+
+.mission-spread {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(420px, 100%), 1fr));
+  gap: 28px clamp(40px, 4.4vw, 64px);
+  align-items: end;
+}
+
+.mission-spread h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 112;
+  font-weight: 700;
+  font-size: clamp(34px, 3.6vw, 52px);
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+}
+
+.mission-spread h2 span {
+  display: block;
+}
+
+.mission-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mission-copy p {
+  margin: 0;
+  font-size: clamp(16px, 1.25vw, 18px);
+  line-height: 1.6;
+  color: var(--on-black-soft);
+  max-width: 50ch;
+  text-wrap: pretty;
+}
+
+.mission-copy p.mission-belief {
+  color: #fff;
+}
+
+/* Closing: same module, headline one size down. */
+.home-closing .closing-content h2 {
+  font-variation-settings: 'wdth' 112;
+  font-weight: 700;
+  font-size: clamp(30px, 3.2vw, 46px);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  max-width: 20ch;
+}
+
+.home-closing .closing-ctas .btn.hero {
+  padding: 15px 26px;
+  font-size: 15px;
+}
+
+.home-closing .closing-ctas .btn.ghost-white.hero {
+  padding: 14px 25px;
+}
+
+/* Indexed: one quiet row above the footer. */
+.indexed-row-section .wrap {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.indexed-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px 48px;
+  padding: clamp(28px, 2.8vw, 40px) 0;
+}
+
+.indexed-copy {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.indexed-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 16px;
+}
+
+.indexed-word {
+  margin: 0;
+  font-family: var(--font-display);
+  font-variation-settings: 'wdth' 125;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.indexed-title-row .eyebrow {
+  font-size: 11px;
+}
+
+.indexed-copy p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+  max-width: 52ch;
+  text-wrap: pretty;
+}
+
+.indexed-row .newsletter-form {
+  flex: 0 1 420px;
+}
 
 /* --------------------------------------------------------------------------
    Your collection (design_handoff_your_collection). Paper, ink and 1px

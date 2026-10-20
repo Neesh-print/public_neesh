@@ -37,6 +37,34 @@ const nextConfig = {
       { source: '/stores/smoke-signals-newsstand-us', destination: '/stores/smoke-signals-san-francisco', statusCode: 301 },
     ];
 
+    // Fall 2026 awareness campaign QR codes: /go/<line>-<piece> lands on the
+    // homepage with UTMs. Temporary (307) so destinations can change after
+    // the codes are printed. Keep the slugs in sync with src/lib/campaign.ts.
+    const campaignLines = [
+      'picture-books',
+      'fewer-words',
+      'read-it-or-dont',
+      'coffee-table',
+      'tired-of-internet',
+      'kept-the-poster',
+      'screen-time',
+      'too-many-interests',
+    ];
+    for (const line of campaignLines) {
+      for (const piece of ['poster', 'sticker', 'flyer']) {
+        redirects.push({
+          source: `/go/${line}-${piece}`,
+          destination: `/?utm_source=print&utm_medium=${piece}&utm_campaign=awareness-nyc-fall26&utm_content=${line}`,
+          permanent: false,
+        });
+      }
+    }
+    redirects.push({
+      source: '/go/:path*',
+      destination: '/?utm_source=print&utm_campaign=awareness-nyc-fall26',
+      permanent: false,
+    });
+
     // Domain cutover passthroughs: once this site serves neesh.art and the
     // app moves to its own subdomain, set NEXT_PUBLIC_APP_URL (e.g.
     // https://app.neesh.art) and every app path, old magic link, bookmark,
