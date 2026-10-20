@@ -27,6 +27,11 @@ import { StockistsSection } from '@/components/StockistsSection';
 import { SubmittedNotice } from '@/components/SubmittedNotice';
 import { ViewBeacon } from '@/components/ViewBeacon';
 import { WantTitleForm } from '@/components/WantTitleForm';
+import { FollowButton } from '@/components/collect/FollowButton';
+import { IssueList } from '@/components/collect/IssueList';
+import { ReportButton } from '@/components/collect/ReportButton';
+import { getTitleIssues } from '@/lib/collect/server';
+import { coverPublicUrl } from '@/lib/supabase';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -49,6 +54,8 @@ export async function generateMetadata({
   return {
     title: metaTitle,
     description,
+    // Reader-added titles stay out of search until a person has checked them.
+    ...(title.review_status !== 'approved' ? { robots: { index: false, follow: true } } : {}),
     alternates: { canonical: canonical(`/titles/${title.slug}`) },
     openGraph: {
       title: metaTitle,
@@ -84,10 +91,12 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const [title, allTags] = await Promise.all([getTitleBySlug(slug), getTagsWithCounts()]);
   if (!title) notFound();
-  const [stockists, publisherTitleCount] = await Promise.all([
+  const [stockists, publisherTitleCount, issues] = await Promise.all([
     getTitleStockists(title.id),
     countPublisherTitles(title.publisher_id),
+    getTitleIssues(title.id),
   ]);
+  const readerAdded = title.created_from === 'reader_created' && title.review_status !== 'approved';
 
   const publishing = new Set(allTags.filter(tagPublishes).map((t) => t.slug));
   const primaryTag = title.tags[0];
@@ -196,6 +205,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                   Verified by the publisher
                 </span>
               )}
+              {readerAdded && <span className="reader-tag">Reader-added</span>}
               <h1>{title.name}</h1>
               <p className="publisher-line">
                 Published by {title.publisher.name}
@@ -258,10 +268,25 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               </div>
             )}
 
+            <div className="collect-title-row">
+              <FollowButton titleId={title.id} />
+              <span className="cta-note">Follow this magazine on Neesh and hear when the next issue is out.</span>
+              <ReportButton targetKind="title" targetId={title.id} label={title.name} />
+            </div>
+
             <WantTitleForm titleId={title.id} />
           </div>
         </div>
       </section>
+
+      <IssueList
+        titleId={title.id}
+        titleSlug={title.slug}
+        titleName={title.name}
+        issues={issues.map((issue) => ({ ...issue, cover: coverPublicUrl(issue.cover_image_path) }))}
+        coverage={title.catalogue_coverage ?? 'unknown'}
+        pilot={Boolean(title.collect_pilot)}
+      />
 
       <StockistsSection title={title} stockists={stockists} publisherTitleCount={publisherTitleCount} />
     </>

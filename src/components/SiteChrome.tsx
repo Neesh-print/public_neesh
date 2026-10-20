@@ -11,7 +11,8 @@ import { Logo, ArrowIcon } from './Logo';
 // 2px accent underline.
 
 const DRAWER_LINKS = [
-  { label: 'Index', href: '/index' },
+  { label: 'Explore', href: '/index' },
+  { label: 'Your collection', href: '/collect/shelf' },
   { label: 'For Publishers', href: '/publishers' },
   { label: 'For Spaces', href: '/spaces' },
   { label: 'Packs', href: '/packs' },
@@ -28,6 +29,7 @@ const DRAWER_UTILITY = [
 ];
 
 function isActive(pathname: string, href: string): boolean {
+  if (href === '/collect/shelf') return pathname === '/collect' || pathname.startsWith('/collect/');
   if (href === '/index') return pathname === '/index' || pathname.startsWith('/index/') || pathname === '/catalog' || pathname.startsWith('/catalog/');
   return pathname === href || pathname.startsWith(`${href}/`);
 }
@@ -78,7 +80,10 @@ function NavLinks({ pathname }: { pathname: string }) {
   return (
     <>
       <Link href="/index" className={isActive(pathname, '/index') ? 'active' : undefined}>
-        Index
+        Explore
+      </Link>
+      <Link href="/collect" className={isActive(pathname, '/collect/shelf') ? 'active' : undefined}>
+        Your collection
       </Link>
       <Link href="/publishers" className={isActive(pathname, '/publishers') ? 'active' : undefined}>
         For Publishers

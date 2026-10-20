@@ -22,8 +22,8 @@ export async function middleware(req: NextRequest) {
     const isTitle = kind === 'titles';
     const table = isTitle ? 'directory_titles' : 'directory_publishers';
     const select = isTitle
-      ? 'removed,status,publisher:directory_publishers(removed,eligible)'
-      : 'removed,eligible';
+      ? 'removed,status,review_status,merged_into,publisher:directory_publishers(removed,eligible)'
+      : 'removed,eligible,review_status,merged_into';
     const res = await fetch(
       `${url}/rest/v1/${table}?slug=eq.${encodeURIComponent(slug)}&select=${encodeURIComponent(select)}`,
       { headers: { apikey: key, Authorization: `Bearer ${key}` } }
@@ -33,19 +33,32 @@ export async function middleware(req: NextRequest) {
       removed?: boolean;
       status?: string;
       eligible?: boolean;
+      review_status?: string;
+      merged_into?: string | null;
       publisher?: { removed?: boolean; eligible?: boolean } | null;
     }> = await res.json();
     if (rows.length === 0) return NextResponse.next(); // unknown slug: let the page 404
 
     const row = rows[0];
+
+    // A merged duplicate points at the record it was merged into.
+    if (row.merged_into) {
+      const target = await fetch(
+        `${url}/rest/v1/${table}?id=eq.${encodeURIComponent(row.merged_into)}&select=slug`,
+        { headers: { apikey: key, Authorization: `Bearer ${key}` } }
+      );
+      const [merged] = target.ok ? ((await target.json()) as { slug: string }[]) : [];
+      if (merged?.slug) return NextResponse.redirect(new URL(`/${kind}/${merged.slug}`, req.url), 301);
+    }
     const gone = isTitle
       ? Boolean(
           row.removed ||
             row.status === 'ceased' ||
+            row.review_status === 'rejected' ||
             row.publisher?.removed ||
             row.publisher?.eligible === false
         )
-      : Boolean(row.removed || row.eligible === false);
+      : Boolean(row.removed || row.eligible === false || row.review_status === 'rejected');
     if (gone) return NextResponse.rewrite(new URL('/gone', req.url));
   } catch {
     // fail open: serving the page beats blocking on the check

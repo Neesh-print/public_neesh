@@ -148,6 +148,12 @@ export interface Title {
   available_on_neesh: boolean;
   neesh_magazine_id: string | null;
   neesh_listed_at: string | null;
+  // Your collection: how complete the issue list is, and review state for
+  // reader-added titles.
+  catalogue_coverage: 'complete' | 'partial' | 'unknown';
+  created_from: string;
+  review_status: 'approved' | 'pending' | 'flagged' | 'rejected';
+  collect_pilot: boolean;
   created_at: string;
   updated_at: string;
 }
