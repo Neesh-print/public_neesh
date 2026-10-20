@@ -109,3 +109,52 @@ export async function getTitleIssues(titleId: string): Promise<Issue[]> {
   if (error || !data) return [];
   return (data as Issue[]).sort(compareIssues);
 }
+
+// Live issue-level evidence for a title's shops: the strongest unexpired
+// record per shop (confirmed beats reported, then the newest). RLS only
+// returns unexpired rows, so an expired claim falls back to "carries".
+export interface ShopEvidence {
+  store_slug: string;
+  store_name: string;
+  city: string | null;
+  borough: string | null;
+  country: string;
+  level: 'confirmed' | 'reported';
+  observed_on: string;
+  issue_label: string;
+}
+
+export async function getTitleShopEvidence(titleId: string): Promise<ShopEvidence[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data, error } = await anonClient()
+    .from('directory_issue_availability')
+    .select(
+      'level, observed_on, store:directory_stores!inner(slug, name, city, borough, country), issue:directory_issues!inner(issue_label, title_id)'
+    )
+    .eq('issue.title_id', titleId)
+    .gte('expires_on', new Date().toISOString().slice(0, 10))
+    .order('observed_on', { ascending: false })
+    .limit(500);
+  if (error || !data) return [];
+  const best = new Map<string, ShopEvidence>();
+  for (const row of data as unknown as {
+    level: 'confirmed' | 'reported';
+    observed_on: string;
+    store: { slug: string; name: string; city: string | null; borough: string | null; country: string };
+    issue: { issue_label: string };
+  }[]) {
+    const seen = best.get(row.store.slug);
+    if (seen && (seen.level === 'confirmed' || row.level === 'reported')) continue;
+    best.set(row.store.slug, {
+      store_slug: row.store.slug,
+      store_name: row.store.name,
+      city: row.store.city,
+      borough: row.store.borough,
+      country: row.store.country,
+      level: row.level,
+      observed_on: row.observed_on,
+      issue_label: row.issue.issue_label,
+    });
+  }
+  return [...best.values()];
+}

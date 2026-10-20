@@ -52,9 +52,9 @@ function AuthInner() {
   if (failed) {
     return (
       <>
-        <h1>That link has expired</h1>
-        <p>Sign-in links work once. Ask for a new one and use the latest email.</p>
-        <Link href="/collect/settings" className="btn solid">
+        <h1 className="c-h2">That link has expired.</h1>
+        <p className="c-muted">Sign-in links work once. Ask for a new one and use the latest email.</p>
+        <Link href="/collect/settings" className="c-btn solid">
           Get a new link
         </Link>
       </>
@@ -62,17 +62,17 @@ function AuthInner() {
   }
   return (
     <>
-      <h1>Signing you in</h1>
-      <p>One moment while we fetch your collection.</p>
+      <h1 className="c-h2">Signing you in</h1>
+      <p className="c-muted">One moment while we fetch your collection.</p>
     </>
   );
 }
 
 export default function CollectAuthPage() {
   return (
-    <section className="collect-page">
-      <div className="wrap collect-narrow">
-        <Suspense fallback={<h1>Signing you in</h1>}>
+    <section className="c-page">
+      <div className="wrap c-narrow">
+        <Suspense fallback={<h1 className="c-h2">Signing you in</h1>}>
           <AuthInner />
         </Suspense>
       </div>

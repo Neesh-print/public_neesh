@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
 import { serviceClient } from '@/lib/supabase';
 import { emailHtml, sendEmail } from '@/lib/notify';
 import { canonical } from '@/lib/seo';
+import { coverPublicUrl } from '@/lib/supabase';
+import { newIssueEmail } from '@/emails/newIssue';
+import { issueDate } from '@/lib/collect/shared';
+import { makeToken } from '@/lib/collect/tokens';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -26,6 +30,8 @@ interface Followed {
   titleName: string;
   titleSlug: string;
   issueLabel: string;
+  dateLabel: string | null;
+  coverUrl: string | null;
 }
 
 async function emailFor(userId: string, cache: Map<string, string | null>): Promise<string | null> {
@@ -52,7 +58,9 @@ export async function GET(req: NextRequest) {
   // 1. New issues on pilot titles.
   const { data: fresh } = await supabase
     .from('directory_issues')
-    .select('id, issue_label, title:directory_titles!inner(id, name, slug, collect_pilot)')
+    .select(
+      'id, issue_label, published_on, published_year, cover_image_path, title:directory_titles!inner(id, name, slug, collect_pilot, cover_image_path)'
+    )
     .eq('review_status', 'approved')
     .eq('removed', false)
     .is('merged_into', null)
@@ -63,13 +71,18 @@ export async function GET(req: NextRequest) {
   const issues = ((fresh ?? []) as unknown as {
     id: string;
     issue_label: string;
-    title: { id: string; name: string; slug: string };
+    published_on: string | null;
+    published_year: number | null;
+    cover_image_path: string | null;
+    title: { id: string; name: string; slug: string; cover_image_path: string | null };
   }[]).map<Followed>((r) => ({
     issueId: r.id,
     titleId: r.title.id,
     titleName: r.title.name,
     titleSlug: r.title.slug,
     issueLabel: r.issue_label,
+    dateLabel: issueDate(r),
+    coverUrl: coverPublicUrl(r.cover_image_path) ?? coverPublicUrl(r.title.cover_image_path),
   }));
 
   if (issues.length > 0) {
@@ -88,15 +101,51 @@ export async function GET(req: NextRequest) {
       byReader.set(f.user_id, list);
     }
 
+    // Issue totals per title, for "You own 4 of its 5 issues."
+    const { data: allIssues } = await supabase
+      .from('directory_issues')
+      .select('id, title_id')
+      .in('title_id', titleIds)
+      .eq('removed', false)
+      .is('merged_into', null)
+      .neq('review_status', 'rejected');
+    const totals = new Map<string, number>();
+    const titleOf = new Map<string, string>();
+    for (const i of allIssues ?? []) {
+      totals.set(i.title_id, (totals.get(i.title_id) ?? 0) + 1);
+      titleOf.set(i.id, i.title_id);
+    }
+
     for (const [userId, list] of byReader) {
       const to = await emailFor(userId, emails);
       if (!to || list.length === 0) continue;
-      const lines = list.map(
-        (i) =>
-          `${i.titleName} just published ${i.issueLabel}. Save it to your collection, or see shops that carry ${i.titleName} on Neesh:\n${canonical(`/titles/${i.titleSlug}`)}`
+      const { data: owned } = await supabase
+        .from('collection_items')
+        .select('issue_id')
+        .eq('user_id', userId)
+        .eq('state', 'own')
+        .in('issue_id', [...titleOf.keys()]);
+      const ownedByTitle = new Map<string, number>();
+      for (const o of owned ?? []) {
+        const t = titleOf.get(o.issue_id);
+        if (t) ownedByTitle.set(t, (ownedByTitle.get(t) ?? 0) + 1);
+      }
+      const email = newIssueEmail(
+        list.map((i) => ({
+          titleName: i.titleName,
+          issueLabel: i.issueLabel,
+          dateLabel: i.dateLabel,
+          coverUrl: i.coverUrl,
+          owned: ownedByTitle.get(i.titleId) ?? 0,
+          total: totals.get(i.titleId) ?? 1,
+          shopsUrl: canonical(`/titles/${i.titleSlug}#stockists`),
+          unfollowUrl: `${canonical('/api/collect/unfollow')}?t=${encodeURIComponent(
+            makeToken('unfollow', `${userId}:${i.titleId}`, 365)
+          )}`,
+        })),
+        { logo: canonical('/neesh-logo.png'), settings: canonical('/collect/settings') }
       );
-      const text = `${lines.join('\n\n')}\n\n${SETTINGS_LINE}`;
-      await sendEmail({ to, subject: 'A magazine you follow has a new issue', text, html: emailHtml(text) });
+      await sendEmail({ to, subject: email.subject, text: email.text, html: email.html });
       await supabase.from('collection_events').insert(
         list.map((i) => ({
           user_id: userId,

@@ -25,18 +25,23 @@ const optionalUrl = z
   .refine((v) => /^https?:\/\//i.test(v), 'http(s) only')
   .optional();
 
+// The issue as the reader types it: "04" becomes "Issue 04" (number 4);
+// anything else ("Spring 2025", "Vol. 2 No. 1") stays as written.
 const issueFields = {
-  issue_label: z.string().trim().min(1).max(120),
-  issue_number: z.coerce.number().min(0).max(100000).optional(),
-  published_on: z
-    .string()
-    .regex(/^\d{4}-\d{2}(-\d{2})?$/)
-    .transform((v) => (v.length === 7 ? `${v}-01` : v))
-    .optional(),
+  issue: z.string().trim().min(1).max(120),
+  year: z.coerce.number().int().min(1800).max(2100).optional(),
   source_url: optionalUrl,
   mark: z.enum(['own', 'want']).optional(),
   confirm_new: z.literal('1').optional(),
 };
+
+function issueLabel(raw: string): { label: string; number: number | null } {
+  const plain = raw.replace(/^(issue|no\.?|#)\s*/i, '').trim();
+  if (/^\d+(\.\d+)?$/.test(plain)) {
+    return { label: `Issue ${plain.length === 1 ? `0${plain}` : plain}`, number: Number(plain) };
+  }
+  return { label: raw.trim(), number: null };
+}
 
 const issueSchema = z.object({ mode: z.literal('issue'), title_id: z.string().uuid(), ...issueFields });
 const titleSchema = z.object({
@@ -94,7 +99,8 @@ export async function POST(req: NextRequest) {
   if (!file && !input.source_url) return fail('cover_or_source');
   if (file && (file.size > MAX_UPLOAD_BYTES || !UPLOAD_TYPES.includes(file.type))) return fail('image');
 
-  const texts = [input.issue_label, input.mode === 'title' ? input.title_name : null, input.mode === 'title' ? input.publisher_name : null];
+  const { label: issue_label, number: issue_number } = issueLabel(input.issue);
+  const texts = [issue_label, input.mode === 'title' ? input.title_name : null, input.mode === 'title' ? input.publisher_name : null];
   if (hasBlockedText(...texts, input.source_url, input.mode === 'title' ? input.link : null)) return fail('blocked');
   if (hasLinkInText(...texts)) return fail('blocked');
 
@@ -135,7 +141,7 @@ export async function POST(req: NextRequest) {
     } else {
       const { data } = await supabase.rpc('directory_similar_issues', {
         p_title_id: input.title_id,
-        p_label: input.issue_label,
+        p_label: issue_label,
       });
       if (data && data.length) return NextResponse.json({ ok: false, error: 'duplicates', issues: data });
     }
@@ -223,9 +229,9 @@ export async function POST(req: NextRequest) {
     .from('directory_issues')
     .insert({
       title_id: titleId,
-      issue_label: input.issue_label,
-      issue_number: input.issue_number ?? null,
-      published_on: input.published_on ?? null,
+      issue_label,
+      issue_number,
+      published_year: input.year ?? null,
       source_url: input.source_url ?? null,
       cover_image_path: coverPath,
       ...pending,
@@ -247,5 +253,5 @@ export async function POST(req: NextRequest) {
   revalidatePath(`/titles/${titleSlug}`);
   if (input.mode === 'title') revalidatePath('/catalog');
 
-  return NextResponse.json({ ok: true, title_slug: titleSlug, issue_id: issue.id });
+  return NextResponse.json({ ok: true, title_slug: titleSlug, title_name: titleName, issue_id: issue.id });
 }

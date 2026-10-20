@@ -19,7 +19,6 @@ import {
   titleMetaDescription,
   titleMetaTitle,
 } from '@/lib/seo';
-import { ArrowIcon } from '@/components/Logo';
 import { CoverCard } from '@/components/CoverCard';
 import { ClaimSection } from '@/components/ClaimSection';
 import { JsonLd } from '@/components/JsonLd';
@@ -27,11 +26,10 @@ import { StockistsSection } from '@/components/StockistsSection';
 import { SubmittedNotice } from '@/components/SubmittedNotice';
 import { ViewBeacon } from '@/components/ViewBeacon';
 import { WantTitleForm } from '@/components/WantTitleForm';
-import { FollowButton } from '@/components/collect/FollowButton';
-import { IssueList } from '@/components/collect/IssueList';
-import { ReportButton } from '@/components/collect/ReportButton';
-import { getTitleIssues } from '@/lib/collect/server';
-import { coverPublicUrl } from '@/lib/supabase';
+import { FollowPill, ReaderAdded } from '@/components/collect/parts';
+import { OrderCta, TitleIssues } from '@/components/collect/TitleIssues';
+import { ReportLink } from '@/components/collect/ReportButton';
+import { getTitleIssues, getTitleShopEvidence } from '@/lib/collect/server';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -91,10 +89,11 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const [title, allTags] = await Promise.all([getTitleBySlug(slug), getTagsWithCounts()]);
   if (!title) notFound();
-  const [stockists, publisherTitleCount, issues] = await Promise.all([
+  const [stockists, publisherTitleCount, issues, evidence] = await Promise.all([
     getTitleStockists(title.id),
     countPublisherTitles(title.publisher_id),
     getTitleIssues(title.id),
+    getTitleShopEvidence(title.id),
   ]);
   const readerAdded = title.created_from === 'reader_created' && title.review_status !== 'approved';
 
@@ -205,7 +204,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                   Verified by the publisher
                 </span>
               )}
-              {readerAdded && <span className="reader-tag">Reader-added</span>}
+              {readerAdded && <ReaderAdded />}
               <h1>{title.name}</h1>
               <p className="publisher-line">
                 Published by {title.publisher.name}
@@ -214,6 +213,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                   See all their titles
                 </Link>
               </p>
+              <FollowPill titleId={title.id} surface="title_page" note />
             </div>
 
             <SubmittedNotice />
@@ -237,6 +237,18 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               ))}
             </dl>
 
+            <TitleIssues
+              titleId={title.id}
+              titleSlug={title.slug}
+              titleName={title.name}
+              issues={issues}
+              coverage={title.catalogue_coverage ?? 'unknown'}
+              pilot={Boolean(title.collect_pilot)}
+            />
+
+            {/* Only one solid black button on the page (see OrderCta). */}
+            <OrderCta titleId={title.id} titleSlug={title.slug} listed={listed} />
+
             {/* Titles listed on Neesh belong to publishers with accounts, so
                 they read as claimed too. */}
             <ClaimSection
@@ -246,49 +258,24 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               claimed={claimed || listed}
             />
 
-            {listed ? (
-              <div className="cta-stack">
-                <div className="cta-row">
-                  <Link href={`/order/${title.slug}`} className="btn solid">
-                    Order on Neesh
-                    <ArrowIcon />
-                  </Link>
-                  <a className="btn ghost" href="#stockists">
-                    See where it&rsquo;s stocked
-                  </a>
-                </div>
-                <span className="cta-note">Wholesale, by the copy, no minimums.</span>
-              </div>
-            ) : (
-              <div className="cta-row">
-                <a className="btn solid" href="#stockists">
-                  See where it&rsquo;s stocked
-                  <ArrowIcon />
-                </a>
-              </div>
-            )}
-
-            <div className="collect-title-row">
-              <FollowButton titleId={title.id} />
-              <span className="cta-note">Follow this magazine on Neesh and hear when the next issue is out.</span>
-              <ReportButton targetKind="title" targetId={title.id} label={title.name} />
-            </div>
-
             <WantTitleForm titleId={title.id} />
+
+            <ReportLink
+              targets={[
+                { kind: 'title', id: title.id, label: title.name },
+                ...issues.map((i) => ({ kind: 'issue' as const, id: i.id, label: `${title.name}, ${i.issue_label}` })),
+              ]}
+            />
           </div>
         </div>
       </section>
 
-      <IssueList
-        titleId={title.id}
-        titleSlug={title.slug}
-        titleName={title.name}
-        issues={issues.map((issue) => ({ ...issue, cover: coverPublicUrl(issue.cover_image_path) }))}
-        coverage={title.catalogue_coverage ?? 'unknown'}
-        pilot={Boolean(title.collect_pilot)}
+      <StockistsSection
+        title={title}
+        stockists={stockists}
+        evidence={evidence}
+        publisherTitleCount={publisherTitleCount}
       />
-
-      <StockistsSection title={title} stockists={stockists} publisherTitleCount={publisherTitleCount} />
     </>
   );
 }

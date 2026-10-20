@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { Logo, ArrowIcon } from './Logo';
+import { useCollectOptional } from './collect/CollectProvider';
 
 // v2 chrome (design handoff): marketing header (single 74px row, mono nav,
 // hover dropdowns), directory header (62px logo/search/auth row over a 44px
@@ -12,7 +13,7 @@ import { Logo, ArrowIcon } from './Logo';
 
 const DRAWER_LINKS = [
   { label: 'Explore', href: '/index' },
-  { label: 'Your collection', href: '/collect/shelf' },
+  { label: 'Your collection', href: '/collect' },
   { label: 'For Publishers', href: '/publishers' },
   { label: 'For Spaces', href: '/spaces' },
   { label: 'Packs', href: '/packs' },
@@ -28,8 +29,22 @@ const DRAWER_UTILITY = [
   { label: 'Contact', href: 'mailto:hi@neesh.art' },
 ];
 
+// Owned plus wanted issues, shown beside "Your collection" once anything is
+// saved. Pages without the collection provider show no count.
+function CollectCount() {
+  const collect = useCollectOptional();
+  if (!collect?.ready || collect.count === 0) return null;
+  return <span className="nav-count">{collect.count}</span>;
+}
+
+// Signed in readers land on their shelf; everyone else on the landing page.
+function useCollectHref(): string {
+  const collect = useCollectOptional();
+  return collect && (collect.count > 0 || collect.session) ? '/collect/shelf' : '/collect';
+}
+
 function isActive(pathname: string, href: string): boolean {
-  if (href === '/collect/shelf') return pathname === '/collect' || pathname.startsWith('/collect/');
+  if (href === '/collect') return pathname === '/collect' || pathname.startsWith('/collect/');
   if (href === '/index') return pathname === '/index' || pathname.startsWith('/index/') || pathname === '/catalog' || pathname.startsWith('/catalog/');
   return pathname === href || pathname.startsWith(`${href}/`);
 }
@@ -77,13 +92,15 @@ function Drawer({ close }: { close: () => void }) {
 }
 
 function NavLinks({ pathname }: { pathname: string }) {
+  const collectHref = useCollectHref();
   return (
     <>
       <Link href="/index" className={isActive(pathname, '/index') ? 'active' : undefined}>
         Explore
       </Link>
-      <Link href="/collect" className={isActive(pathname, '/collect/shelf') ? 'active' : undefined}>
+      <Link href={collectHref} className={isActive(pathname, '/collect') ? 'active' : undefined}>
         Your collection
+        <CollectCount />
       </Link>
       <Link href="/publishers" className={isActive(pathname, '/publishers') ? 'active' : undefined}>
         For Publishers
@@ -144,11 +161,22 @@ export function MarketingHeader() {
 // navigates to /index carrying the query.
 export function DirectoryHeader() {
   const pathname = usePathname();
+  const collect = useCollectOptional();
+  const collectHref = useCollectHref();
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState('');
 
   const onIndex = pathname === '/index' || pathname === '/catalog';
+  // The phone header has room for the short form only.
+  const [narrow, setNarrow] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 899px)');
+    const update = () => setNarrow(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
@@ -158,7 +186,9 @@ export function DirectoryHeader() {
 
   function handleSearch(value: string) {
     setQuery(value);
-    if (onIndex) {
+    if (pathname === '/collect') {
+      window.dispatchEvent(new CustomEvent('neesh:collect-search', { detail: value }));
+    } else if (onIndex) {
       window.dispatchEvent(new CustomEvent('neesh:index-q', { detail: value }));
     } else if (value.trim()) {
       router.push(`/index?q=${encodeURIComponent(value)}`);
@@ -182,13 +212,28 @@ export function DirectoryHeader() {
                 type="search"
                 value={query}
                 onChange={(event) => handleSearch(event.target.value)}
-                placeholder="Search 300+ independent magazines"
+                placeholder={narrow ? 'Search 300+ magazines' : 'Search 300+ independent magazines'}
                 aria-label="Search the index"
               />
             </div>
-            <Link href="/auth" className="dir-auth">
-              Sign Up / Log In
-            </Link>
+            {collect?.email ? (
+              <Link href="/collect/settings" className="dir-auth">
+                {collect.email}
+              </Link>
+            ) : (
+              <Link href="/auth" className="dir-auth">
+                Sign Up / Log In
+              </Link>
+            )}
+            {collect && (
+              <Link href={collectHref} className="collect-pill" aria-label={`Your collection${collect.count ? `, ${collect.count} issues` : ''}`}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" />
+                  <path d="M9 4v16M15 4v16" />
+                </svg>
+                {collect.ready && collect.count > 0 && <span>{collect.count}</span>}
+              </Link>
+            )}
             <button
               type="button"
               className="menu-button round"
@@ -204,10 +249,11 @@ export function DirectoryHeader() {
             {DRAWER_LINKS.map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href === '/collect' ? collectHref : item.href}
                 className={isActive(pathname, item.href) ? 'active' : undefined}
               >
                 {item.label}
+                {item.href === '/collect' && <CollectCount />}
               </Link>
             ))}
           </nav>

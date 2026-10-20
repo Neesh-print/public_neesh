@@ -13,17 +13,24 @@ import {
   writeMarks,
   type LocalMarks,
 } from '@/lib/collect/browser';
-import type { ClientEventType, CollectionState } from '@/lib/collect/shared';
-import { SavePrompt } from './SavePrompt';
+import { TOAST, type ClientEventType, type CollectionState } from '@/lib/collect/shared';
+import { SaveSheet } from './SaveSheet';
 
-// Reader state for every directory page: who is signed in, which issues
-// they own or want, which titles they follow. Signed out, marks live on the
-// device and each change logs an anonymous event; signed in, marks write to
-// the reader's own rows (RLS: owner only) and database triggers log events.
+// Reader state for every page that shows the site header: who is signed in,
+// which issues they own or want, which titles they follow, their home city.
+// Signed out, marks live on the device and each change logs an anonymous
+// event; signed in, marks write to the reader's own rows (RLS: owner only)
+// and database triggers log the events.
 
 export interface TitleFlags {
   following: boolean;
   completing: boolean;
+}
+
+export interface HomeCity {
+  id: string;
+  slug: string;
+  name: string;
 }
 
 interface EventInput {
@@ -33,6 +40,8 @@ interface EventInput {
   surface?: string;
 }
 
+export type SheetState = 'closed' | 'ask' | 'sent';
+
 interface CollectContextValue {
   ready: boolean;
   session: Session | null;
@@ -40,17 +49,22 @@ interface CollectContextValue {
   items: Record<string, CollectionState>;
   itemTitles: Record<string, string>;
   titles: Record<string, TitleFlags>;
-  setIssueState: (
-    issueId: string,
-    titleId: string,
-    state: CollectionState | null,
-    surface: string
-  ) => Promise<boolean>;
+  // Owned plus wanted issues, shown in the nav once anything is saved.
+  count: number;
+  homeCity: HomeCity | null;
+  setHomeCity: (city: HomeCity | null) => Promise<boolean>;
+  // Own / Want pills: tapping the selected kind clears it; the other kind
+  // replaces it. Optimistic, with a toast either way.
+  markIssue: (issueId: string, titleId: string, kind: CollectionState, surface: string) => Promise<void>;
+  setIssueState: (issueId: string, titleId: string, state: CollectionState | null, surface: string) => Promise<boolean>;
+  toggleFollow: (titleId: string, surface: string) => Promise<void>;
   setTitleFlags: (titleId: string, flags: Partial<TitleFlags>, surface: string) => Promise<boolean>;
   logEvent: (type: ClientEventType, input: EventInput) => void;
+  track: (event: string, props?: Record<string, unknown>) => void;
   authedFetch: (url: string, init?: RequestInit) => Promise<Response>;
-  openSavePrompt: () => void;
-  // Short confirmation line at the bottom of the screen.
+  sheet: SheetState;
+  openSheet: () => void;
+  setSheet: (state: SheetState) => void;
   notice: (message: string) => void;
   signOut: () => Promise<void>;
   refresh: () => Promise<void>;
@@ -64,7 +78,24 @@ export function useCollect(): CollectContextValue {
   return ctx;
 }
 
-const PROMPT_SEEN_KEY = 'neesh_collect_prompted';
+// For chrome that renders on pages with and without the provider.
+export function useCollectOptional(): CollectContextValue | null {
+  return useContext(CollectContext);
+}
+
+const SHEET_DISMISSED = 'neesh_collect_sheet_dismissed';
+const FIRST_MARK = 'neesh_collect_first_mark';
+const SHEET_DELAY_MS = 1100;
+const TOAST_MS = 2200;
+
+function sessionFlag(key: string, set = false): boolean {
+  try {
+    if (set) window.sessionStorage.setItem(key, '1');
+    return window.sessionStorage.getItem(key) === '1';
+  } catch {
+    return false;
+  }
+}
 
 export function CollectProvider({ children }: { children: React.ReactNode }) {
   const [ready, setReady] = useState(false);
@@ -72,9 +103,23 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<Record<string, CollectionState>>({});
   const [itemTitles, setItemTitles] = useState<Record<string, string>>({});
   const [titles, setTitles] = useState<Record<string, TitleFlags>>({});
-  const [promptOpen, setPromptOpen] = useState(false);
+  const [homeCity, setHomeCityState] = useState<HomeCity | null>(null);
+  const [sheet, setSheetState] = useState<SheetState>('closed');
   const [toast, setToast] = useState<{ message: string; key: number } | null>(null);
+  const [toastVisible, setToastVisible] = useState(false);
   const claimed = useRef<string | null>(null);
+  const itemsRef = useRef(items);
+  itemsRef.current = items;
+
+  const track = useCallback((event: string, props: Record<string, unknown> = {}) => {
+    try {
+      const w = window as unknown as { dataLayer?: unknown[] };
+      w.dataLayer = w.dataLayer ?? [];
+      w.dataLayer.push({ event, ...props });
+    } catch {
+      // analytics never breaks the page
+    }
+  }, []);
 
   const applyLocal = useCallback((marks: LocalMarks) => {
     const nextItems: Record<string, CollectionState> = {};
@@ -86,11 +131,12 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
     setItems(nextItems);
     setItemTitles(nextItemTitles);
     setTitles({ ...marks.titles });
+    setHomeCityState(null);
   }, []);
 
   // Load the signed-in reader's marks. On the first load of a session, any
-  // marks still on the device are claimed into the account first, so
-  // nothing marked before sign-in is lost.
+  // marks still on the device are claimed into the account first (the union
+  // of both; the account wins where they differ), then cleared locally.
   const loadRemote = useCallback(async (s: Session) => {
     const supabase = browserClient();
     if (!supabase) return;
@@ -113,9 +159,10 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
       }
       claimed.current = s.user.id;
     }
-    const [itemRes, titleRes] = await Promise.all([
+    const [itemRes, titleRes, collectorRes] = await Promise.all([
       supabase.from('collection_items').select('issue_id, state, issue:directory_issues(title_id)'),
       supabase.from('collector_titles').select('title_id, following, completing'),
+      supabase.from('collectors').select('city:directory_cities(id, slug, name)').eq('user_id', s.user.id).maybeSingle(),
     ]);
     const nextItems: Record<string, CollectionState> = {};
     const nextItemTitles: Record<string, string> = {};
@@ -134,6 +181,7 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
     setItems(nextItems);
     setItemTitles(nextItemTitles);
     setTitles(nextTitles);
+    setHomeCityState((collectorRes.data?.city as unknown as HomeCity | null) ?? null);
   }, []);
 
   useEffect(() => {
@@ -167,6 +215,18 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
     };
   }, [applyLocal, loadRemote]);
 
+  // One toast at a time; a new one replaces the current.
+  const toastKey = useRef(0);
+  const notice = useCallback((message: string) => {
+    const key = Date.now();
+    toastKey.current = key;
+    setToast({ message, key });
+    setToastVisible(true);
+    window.setTimeout(() => {
+      if (toastKey.current === key) setToastVisible(false);
+    }, TOAST_MS);
+  }, []);
+
   const logEvent = useCallback(
     (type: ClientEventType, input: EventInput) => {
       try {
@@ -189,20 +249,31 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
     [session]
   );
 
-  const maybePrompt = useCallback(() => {
-    if (session) return;
-    try {
-      if (window.localStorage.getItem(PROMPT_SEEN_KEY)) return;
-      window.localStorage.setItem(PROMPT_SEEN_KEY, '1');
-    } catch {
-      // storage blocked: still show it once this page view
-    }
-    setPromptOpen(true);
-  }, [session]);
+  const setSheet = useCallback(
+    (state: SheetState) => {
+      if (state === 'closed') sessionFlag(SHEET_DISMISSED, true);
+      if (state === 'ask') {
+        track('collect_save_prompt_shown');
+        setToastVisible(false);
+      }
+      setSheetState(state);
+    },
+    [track]
+  );
+
+  // The save sheet: once per visit, 1.1 seconds after the first mark, only
+  // while signed out, never again once dismissed.
+  const afterFirstMark = useCallback(() => {
+    if (session || sessionFlag(FIRST_MARK) || sessionFlag(SHEET_DISMISSED)) return;
+    sessionFlag(FIRST_MARK, true);
+    window.setTimeout(() => {
+      if (!sessionFlag(SHEET_DISMISSED)) setSheet('ask');
+    }, SHEET_DELAY_MS);
+  }, [session, setSheet]);
 
   const setIssueState = useCallback(
     async (issueId: string, titleId: string, state: CollectionState | null, surface: string) => {
-      const prev = items[issueId] ?? null;
+      const prev = itemsRef.current[issueId] ?? null;
       if (prev === state) return true;
       setItems((cur) => {
         const next = { ...cur };
@@ -237,10 +308,27 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
       writeMarks(marks);
       if (prev) logEvent(`${prev}_removed` as ClientEventType, { title_id: titleId, issue_id: issueId, surface });
       if (state) logEvent(`${state}_added` as ClientEventType, { title_id: titleId, issue_id: issueId, surface });
-      if (state) maybePrompt();
       return true;
     },
-    [items, session, logEvent, maybePrompt]
+    [session, logEvent]
+  );
+
+  const markIssue = useCallback(
+    async (issueId: string, titleId: string, kind: CollectionState, surface: string) => {
+      const current = itemsRef.current[issueId] ?? null;
+      const next = current === kind ? null : kind;
+      const ok = await setIssueState(issueId, titleId, next, surface);
+      if (!ok) {
+        notice(TOAST.failed);
+        return;
+      }
+      track('collect_mark', { kind, state: next ? 'on' : 'off', surface });
+      if (next === 'own') notice(TOAST.ownAdded);
+      else if (next === 'want') notice(TOAST.wantAdded);
+      else notice(kind === 'own' ? TOAST.ownRemoved : TOAST.wantRemoved);
+      if (next) afterFirstMark();
+    },
+    [setIssueState, notice, track, afterFirstMark]
   );
 
   const setTitleFlags = useCallback(
@@ -270,33 +358,57 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
       if (next.completing !== prev.completing) {
         logEvent(next.completing ? 'complete_on' : 'complete_off', { title_id: titleId, surface });
       }
-      if (next.following && !prev.following) maybePrompt();
       return true;
     },
-    [titles, session, logEvent, maybePrompt]
+    [titles, session, logEvent]
   );
 
-  const authedFetch = useCallback(
-    async (url: string, init: RequestInit = {}) => {
-      const supabase = browserClient();
-      const { data } = supabase ? await supabase.auth.getSession() : { data: { session: null } };
-      const headers = new Headers(init.headers);
-      if (data.session) headers.set('Authorization', `Bearer ${data.session.access_token}`);
-      return fetch(url, { ...init, headers });
+  const toggleFollow = useCallback(
+    async (titleId: string, surface: string) => {
+      const following = !(titles[titleId]?.following ?? false);
+      const ok = await setTitleFlags(titleId, { following }, surface);
+      if (!ok) {
+        notice(TOAST.failed);
+        return;
+      }
+      track('collect_follow', { state: following ? 'on' : 'off', surface });
+      notice(following ? TOAST.followed : TOAST.unfollowed);
+      if (following) afterFirstMark();
     },
-    []
+    [titles, setTitleFlags, notice, track, afterFirstMark]
   );
 
-  const notice = useCallback((message: string) => {
-    const key = Date.now();
-    setToast({ message, key });
-    window.setTimeout(() => setToast((cur) => (cur?.key === key ? null : cur)), 2800);
+  const setHomeCity = useCallback(
+    async (city: HomeCity | null) => {
+      const supabase = browserClient();
+      if (!session || !supabase) return false;
+      const prev = homeCity;
+      setHomeCityState(city);
+      const { error } = await supabase
+        .from('collectors')
+        .upsert({ user_id: session.user.id, home_city_id: city?.id ?? null }, { onConflict: 'user_id' });
+      if (error) {
+        setHomeCityState(prev);
+        return false;
+      }
+      return true;
+    },
+    [session, homeCity]
+  );
+
+  const authedFetch = useCallback(async (url: string, init: RequestInit = {}) => {
+    const supabase = browserClient();
+    const { data } = supabase ? await supabase.auth.getSession() : { data: { session: null } };
+    const headers = new Headers(init.headers);
+    if (data.session) headers.set('Authorization', `Bearer ${data.session.access_token}`);
+    return fetch(url, { ...init, headers });
   }, []);
 
   const signOut = useCallback(async () => {
     const supabase = browserClient();
     if (supabase) await supabase.auth.signOut();
     setSession(null);
+    claimed.current = null;
     applyLocal(readMarks());
   }, [applyLocal]);
 
@@ -304,6 +416,8 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
     if (session) await loadRemote(session);
     else applyLocal(readMarks());
   }, [session, loadRemote, applyLocal]);
+
+  const count = Object.keys(items).length;
 
   const value = useMemo<CollectContextValue>(
     () => ({
@@ -313,27 +427,36 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
       items,
       itemTitles,
       titles,
+      count,
+      homeCity,
+      setHomeCity,
+      markIssue,
       setIssueState,
+      toggleFollow,
       setTitleFlags,
       logEvent,
+      track,
       authedFetch,
-      openSavePrompt: () => setPromptOpen(true),
+      sheet,
+      openSheet: () => setSheet('ask'),
+      setSheet,
       notice,
       signOut,
       refresh,
     }),
-    [ready, session, items, itemTitles, titles, setIssueState, setTitleFlags, logEvent, authedFetch, notice, signOut, refresh]
+    [
+      ready, session, items, itemTitles, titles, count, homeCity, setHomeCity, markIssue, setIssueState,
+      toggleFollow, setTitleFlags, logEvent, track, authedFetch, sheet, setSheet, notice, signOut, refresh,
+    ]
   );
 
   return (
     <CollectContext.Provider value={value}>
       {children}
-      {promptOpen && !session && <SavePrompt onClose={() => setPromptOpen(false)} />}
-      {toast && (
-        <div className="collect-toast" role="status" key={toast.key}>
-          {toast.message}
-        </div>
-      )}
+      <SaveSheet />
+      <div className={`collect-toast${toastVisible ? ' show' : ''}`} aria-live="polite">
+        {toast && <span key={toast.key}>{toast.message}</span>}
+      </div>
     </CollectContext.Provider>
   );
 }

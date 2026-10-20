@@ -12,6 +12,7 @@
 --                                             listing (seed + order-based
 --                                             availability)
 --   directory_issues.followers_notified_at   new-issue email sent marker
+--   directory_issues.published_year          year only, for reader additions
 --   directory_issue_availability.alerts_sent_at  availability alert marker
 --   collectors.can_add                       cleared after three rejected
 --                                             additions, reset on review
@@ -63,6 +64,7 @@ create table directory_issues (
   issue_number numeric,               -- for sorting; null when unnumbered
   sort_order integer,                 -- manual override for irregular numbering
   published_on date,
+  published_year integer,             -- year as printed when the exact date is unknown
   cover_image_path text,
   barcode text,
   isbn text,
@@ -333,8 +335,8 @@ create trigger availability_requests_log
 -- ---------------------------------------------------------------------------
 -- claim_anonymous_activity: on sign-in, move the device's marks (kept in
 -- local storage before sign-in, passed in here) into the reader's tables and
--- stamp the reader onto that device's anonymous events. Own beats Want when
--- the reader already has a mark on the same issue.
+-- stamp the reader onto that device's anonymous events. The union of both;
+-- where the account already has a mark on an issue, the account wins.
 --   p_items:  [{"issue_id": uuid, "state": "own"|"want"}, ...]
 --   p_titles: [{"title_id": uuid, "following": bool, "completing": bool}, ...]
 -- ---------------------------------------------------------------------------
@@ -363,8 +365,7 @@ begin
   from jsonb_to_recordset(coalesce(p_items, '[]'::jsonb)) as x(issue_id uuid, state collection_state)
   join directory_issues i on i.id = x.issue_id
   where x.state is not null
-  on conflict (user_id, issue_id) do update set
-    state = case when collection_items.state = 'own' then 'own'::collection_state else excluded.state end;
+  on conflict (user_id, issue_id) do nothing;
 
   insert into collector_titles (user_id, title_id, following, completing)
   select v_user, x.title_id, coalesce(x.following, false), coalesce(x.completing, false)

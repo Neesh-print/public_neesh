@@ -84,17 +84,20 @@ that carry them (spec: "Your collection on Neesh", Oct 2026).
 ```
 /collect                       landing page (poster/sticker QR target), public
 /titles/[slug]#issues          issue list with Own / Want, Follow, coverage footer, Report
-/collect/shelf                 owned issues by title; Not in your collection / Missing
+/collect/shelf                 owned covers grouped by magazine (hairline grid)
+/collect/shelf/[slug]          one magazine: owned covers, then Not in your collection / Missing
 /collect/wants                 want list with shops by availability level, home city first
 /collect/following             followed titles and their latest issues
 /collect/add                   add a missing title or issue (reader-added, pending review)
 /collect/settings              home city, notifications, newsletter, delete account
 /collect/auth                  magic-link landing; claims marks made before sign-in
+/collect/delete                confirm step of account deletion (emailed, signed link)
 /api/collect/auth              POST: sends the sign-in link (Supabase admin generateLink + Resend)
 /api/collect/event             POST: collection_events writes (views, clicks, anonymous marks)
 /api/collect/availability      GET: shops per issue, labelled carries / reported / confirmed
 /api/collect/add               POST: reader additions with duplicate, word, image and rate checks
-/api/collect/account           DELETE: deletes the reader's account
+/api/collect/account           POST: emails a delete link; DELETE with its token deletes the account
+/api/collect/unfollow          GET: one-tap unfollow from the new-issue email (signed link)
 /api/collect/notify            GET (Vercel Cron, CRON_SECRET): new-issue emails and availability alerts
 ```
 
@@ -112,5 +115,11 @@ platform listings) and `npm run seed-issues -- issues.csv` (the NYC campaign
 titles; columns in the script header). Set `collect_pilot` on 10 to 15 titles
 for the notification pilot. Reviews happen at app.neesh.art/admin/index-review.
 
-Env: `CRON_SECRET` for the notify cron, plus the existing Supabase and
-Resend keys.
+Design: `design_handoff_your_collection` (Oct 2026). The `c-*` classes at
+the end of `app/globals.css` implement its component sheet; components live
+in `src/components/collect/` (`parts.tsx` holds the pills, issue row, shelf
+grid, shop row and loading/error states).
+
+Env: `CRON_SECRET` for the notify cron, optionally `COLLECT_LINK_SECRET` for
+signed email links (falls back to the service role key), plus the existing
+Supabase and Resend keys.

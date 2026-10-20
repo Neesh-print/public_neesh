@@ -8,24 +8,13 @@ interface TitleSearchResult {
   name: string;
   slug: string;
   publisher: string;
+  niche: string | null;
   cover: string | null;
 }
 
-// "Start your collection": search the Index, no sign-in needed. Results link
-// to title pages, where the issue toggles live.
-export function StartSearch({ autoFocus = false }: { autoFocus?: boolean }) {
-  const [q, setQ] = useState('');
+export function useTitleSearch(q: string): { results: TitleSearchResult[]; searched: boolean } {
   const [results, setResults] = useState<TitleSearchResult[]>([]);
   const [searched, setSearched] = useState(false);
-  const input = useRef<HTMLInputElement>(null);
-
-  useEffect(() => {
-    if (autoFocus) input.current?.focus();
-    const focus = () => input.current?.focus();
-    window.addEventListener('neesh:collect-search', focus);
-    return () => window.removeEventListener('neesh:collect-search', focus);
-  }, [autoFocus]);
-
   useEffect(() => {
     const term = q.trim();
     if (term.length < 2) {
@@ -42,48 +31,96 @@ export function StartSearch({ autoFocus = false }: { autoFocus?: boolean }) {
           setSearched(true);
         })
         .catch(() => {});
-    }, 200);
+    }, 180);
     return () => {
       controller.abort();
       window.clearTimeout(timer);
     };
   }, [q]);
+  return { results, searched };
+}
+
+// "Find a magazine you own": search the Neesh Index, no sign-in needed.
+// Results open title pages, where the Own and Want pills live. The header
+// search on /collect focuses and fills this field.
+export function StartSearch({
+  autoFocus = false,
+  onQuery,
+}: {
+  autoFocus?: boolean;
+  onQuery?: (q: string) => void;
+}) {
+  const [q, setQ] = useState('');
+  const { results, searched } = useTitleSearch(q);
+  const input = useRef<HTMLInputElement>(null);
+
+  function update(value: string) {
+    setQ(value);
+    onQuery?.(value);
+  }
+
+  useEffect(() => {
+    if (autoFocus) input.current?.focus();
+    const fromHeader = (event: Event) => {
+      const value = (event as CustomEvent<string>).detail;
+      if (typeof value === 'string') update(value);
+      input.current?.focus();
+    };
+    window.addEventListener('neesh:collect-search', fromHeader);
+    return () => window.removeEventListener('neesh:collect-search', fromHeader);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [autoFocus]);
+
+  const showResults = searched && q.trim().length >= 2;
 
   return (
-    <div className="collect-search" id="start">
-      <label className="field">
+    <div className="c-search" id="start">
+      <label className="c-field big">
         <span>Find a magazine you own</span>
         <input
           ref={input}
           type="search"
           value={q}
-          onChange={(event) => setQ(event.target.value)}
+          onChange={(event) => update(event.target.value)}
           placeholder="Search by title or publisher"
           autoComplete="off"
+          enterKeyHint="search"
         />
       </label>
-      {results.length > 0 && (
-        <ul className="collect-results">
+      {showResults && (
+        <div className="c-results">
+          <span className="c-mono muted">
+            {results.length === 0
+              ? 'No matches in the Index'
+              : `${results.length} ${results.length === 1 ? 'magazine' : 'magazines'} in the Index`}
+          </span>
           {results.map((r) => (
-            <li key={r.slug}>
-              <Link href={`/titles/${r.slug}#issues`}>
-                {r.cover ? <img src={r.cover} alt="" /> : <span className="collect-results-blank" />}
-                <span>
-                  <strong>{r.name}</strong>
-                  <em>{r.publisher}</em>
-                </span>
-              </Link>
-            </li>
+            <Link key={r.slug} href={`/titles/${r.slug}#issues`} className="c-result">
+              {r.cover ? (
+                <img src={r.cover} alt={`${r.name} cover`} className="c-result-cover" />
+              ) : (
+                <span className="c-result-cover c-cover-empty" />
+              )}
+              <span className="c-row-text">
+                <span className="c-result-name">{r.name}</span>
+                <span className="c-meta">{[r.publisher, r.niche].filter(Boolean).join(' · ')}</span>
+              </span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </Link>
           ))}
-        </ul>
-      )}
-      {searched && results.length === 0 && (
-        <p className="collect-results-none">
-          Not on Neesh yet.{' '}
-          <Link href={`/collect/add?name=${encodeURIComponent(q.trim())}`} className="text-link">
-            Add it
-          </Link>
-        </p>
+          <div className="c-rule" />
+          {results.length === 0 && (
+            <p className="c-muted c-results-none">
+              Not in the Index yet.{' '}
+              <Link href={`/collect/add?name=${encodeURIComponent(q.trim())}`} className="c-link">
+                Add it
+              </Link>{' '}
+              and it&rsquo;s on your shelf in under a minute.
+            </p>
+          )}
+        </div>
       )}
     </div>
   );

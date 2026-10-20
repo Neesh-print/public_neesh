@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { browserClient } from '@/lib/collect/browser';
 import { compareIssues, ISSUE_COLUMNS, type Issue } from '@/lib/collect/shared';
 
@@ -19,36 +19,56 @@ export interface TitleWithIssues extends TitleSummary {
   issues: Issue[];
 }
 
-export function useTitlesWithIssues(titleIds: string[]): { loading: boolean; titles: TitleWithIssues[] } {
-  const key = [...new Set(titleIds)].sort().join(',');
-  const [state, setState] = useState<{ loading: boolean; titles: TitleWithIssues[] }>({ loading: true, titles: [] });
+interface State {
+  loading: boolean;
+  error: boolean;
+  titles: TitleWithIssues[];
+}
+
+export function useTitlesWithIssues(
+  titleIds: string[],
+  bySlug?: string
+): State & { retry: () => void } {
+  const key = bySlug ? `slug:${bySlug}` : [...new Set(titleIds)].sort().join(',');
+  const [state, setState] = useState<State>({ loading: true, error: false, titles: [] });
+  const [attempt, setAttempt] = useState(0);
+  const retry = useCallback(() => setAttempt((n) => n + 1), []);
 
   useEffect(() => {
-    const ids = key ? key.split(',') : [];
     const supabase = browserClient();
-    if (!supabase || ids.length === 0) {
-      setState({ loading: false, titles: [] });
+    const ids = key && !key.startsWith('slug:') ? key.split(',') : [];
+    if (!supabase || (!key.startsWith('slug:') && ids.length === 0)) {
+      setState({ loading: false, error: false, titles: [] });
       return;
     }
     let active = true;
-    Promise.all([
-      supabase
+    setState((cur) => ({ ...cur, loading: true, error: false }));
+    (async () => {
+      const titleQuery = supabase
         .from('directory_titles')
-        .select('id, name, slug, cover_image_path, publisher:directory_publishers(name)')
-        .in('id', ids),
-      supabase.from('directory_issues').select(ISSUE_COLUMNS).in('title_id', ids).limit(5000),
-    ]).then(([titleRes, issueRes]) => {
-      if (!active) return;
+        .select('id, name, slug, cover_image_path, publisher:directory_publishers(name)');
+      const titleRes = key.startsWith('slug:')
+        ? await titleQuery.eq('slug', key.slice(5))
+        : await titleQuery.in('id', ids);
+      if (titleRes.error) throw titleRes.error;
+      const titleRows = (titleRes.data ?? []) as unknown as TitleSummary[];
+      const found = titleRows.map((t) => t.id);
+      const issueRes = found.length
+        ? await supabase.from('directory_issues').select(ISSUE_COLUMNS).in('title_id', found).limit(5000)
+        : { data: [], error: null };
+      if (issueRes.error) throw issueRes.error;
       const issues = (issueRes.data ?? []) as Issue[];
-      const titles = ((titleRes.data ?? []) as unknown as TitleSummary[])
+      const titles = titleRows
         .map((t) => ({ ...t, issues: issues.filter((i) => i.title_id === t.id).sort(compareIssues) }))
         .sort((a, b) => a.name.localeCompare(b.name, 'en', { sensitivity: 'base' }));
-      setState({ loading: false, titles });
+      if (active) setState({ loading: false, error: false, titles });
+    })().catch(() => {
+      if (active) setState({ loading: false, error: true, titles: [] });
     });
     return () => {
       active = false;
     };
-  }, [key]);
+  }, [key, attempt]);
 
-  return state;
+  return { ...state, retry };
 }

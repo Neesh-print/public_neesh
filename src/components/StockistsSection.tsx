@@ -3,26 +3,53 @@ import { monthYear, plural } from '@/lib/format';
 import { isCityHidden } from '@/lib/queries';
 import { countryName } from '@/lib/seo';
 import type { TitleFull, TitleStockist } from '@/lib/types';
-import { StockistFilter } from './StockistFilter';
+import type { ShopEvidence } from '@/lib/collect/server';
+import { StockistGroups, type CityGroup, type ShopLine } from './collect/StockistGroups';
 
-// "Where it's stocked" on a title page (stockists spec, Phase 1). Server
-// rendered so the shop list is in the HTML crawlers see. Lists are kept per
-// publisher, so a title shows its publisher's shops.
+// "Find shops that carry this magazine" on a title page. Server rendered so
+// the shop list is in the HTML crawlers see. Lists are kept per publisher,
+// so a title shows its publisher's shops. Each row says exactly what we
+// know: carries the magazine (stockist list), stocked an issue (reported),
+// or in stock (confirmed), with dates.
 
-const EXPANDED_CITIES = 5;
-const FILTER_THRESHOLD = 50;
+const RANK = { confirmed: 0, reported: 1, carries: 2 } as const;
 
-interface CityGroup {
-  key: string;
-  label: string;
-  citySlug: string | null;
-  shops: TitleStockist[];
-}
-
-function groupByCity(stockists: TitleStockist[]): { groups: CityGroup[]; unknown: TitleStockist[] } {
+function groupByCity(stockists: TitleStockist[], evidence: ShopEvidence[]): { groups: CityGroup[]; unknown: ShopLine[] } {
   const byCity = new Map<string, CityGroup>();
-  const unknown: TitleStockist[] = [];
-  for (const s of stockists) {
+  const unknown: ShopLine[] = [];
+  const bySlug = new Map(evidence.map((e) => [e.store_slug, e]));
+  const lines: (ShopLine & { country: string; city_slug: string | null })[] = stockists.map((s) => {
+    const e = bySlug.get(s.store_slug);
+    bySlug.delete(s.store_slug);
+    return {
+      store_slug: s.store_slug,
+      store_name: s.store_name,
+      borough: s.borough,
+      city: s.city,
+      country: s.country,
+      city_slug: s.city_slug,
+      level: e?.level ?? 'carries',
+      observed_on: e?.observed_on ?? null,
+      issue_label: e?.issue_label ?? null,
+      publisher_wide: !e && s.list_scope === 'publisher',
+    };
+  });
+  // Shops known only from an issue record still show.
+  for (const e of bySlug.values()) {
+    lines.push({
+      store_slug: e.store_slug,
+      store_name: e.store_name,
+      borough: e.borough,
+      city: e.city,
+      country: e.country,
+      city_slug: null,
+      level: e.level,
+      observed_on: e.observed_on,
+      issue_label: e.issue_label,
+      publisher_wide: false,
+    });
+  }
+  for (const s of lines) {
     if (!s.city) {
       unknown.push(s);
       continue;
@@ -34,38 +61,24 @@ function groupByCity(stockists: TitleStockist[]): { groups: CityGroup[]; unknown
       group = {
         key,
         label: country ? `${s.city}, ${country}` : s.city,
+        shortLabel: s.city,
         citySlug: isCityHidden(s.city_slug) ? null : s.city_slug,
+        rawCitySlug: s.city_slug,
         shops: [],
       };
       byCity.set(key, group);
     }
+    if (!group.rawCitySlug && s.city_slug) group.rawCitySlug = s.city_slug;
     group.shops.push(s);
   }
-  const byName = (a: TitleStockist, b: TitleStockist) =>
+  const order = (a: ShopLine, b: ShopLine) =>
+    RANK[a.level] - RANK[b.level] ||
+    Number(a.publisher_wide) - Number(b.publisher_wide) ||
     a.store_name.localeCompare(b.store_name, 'en', { sensitivity: 'base' });
   const groups = [...byCity.values()]
-    .map((g) => ({ ...g, shops: g.shops.sort(byName) }))
+    .map((g) => ({ ...g, shops: g.shops.sort(order) }))
     .sort((a, b) => b.shops.length - a.shops.length || a.label.localeCompare(b.label, 'en'));
-  return { groups, unknown: unknown.sort(byName) };
-}
-
-function CityList({ group }: { group: CityGroup }) {
-  return (
-    <div className="stockist-city" data-city={group.label.toLowerCase()}>
-      <h3>
-        {group.citySlug ? <Link href={`/cities/${group.citySlug}`}>{group.label}</Link> : group.label}{' '}
-        <span className="count">{group.shops.length}</span>
-      </h3>
-      <ul>
-        {group.shops.map((s) => (
-          <li key={s.store_slug} data-shop={s.store_name.toLowerCase()}>
-            <Link href={`/stores/${s.store_slug}`}>{s.store_name}</Link>
-            {s.borough && <span className="borough">{s.borough}</span>}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+  return { groups, unknown: unknown.sort(order) };
 }
 
 function SuggestShop({ title, prompt }: { title: TitleFull; prompt: string }) {
@@ -87,7 +100,7 @@ function SuggestShop({ title, prompt }: { title: TitleFull; prompt: string }) {
           <input name="email" type="email" maxLength={320} placeholder="So we can thank you" />
         </label>
         <div className="inline-actions">
-          <button className="btn solid" type="submit" style={{ padding: '14px 24px', fontSize: 15 }}>
+          <button className="btn ghost" type="submit" style={{ padding: '14px 24px', fontSize: 15 }}>
             Suggest this shop
           </button>
         </div>
@@ -99,79 +112,50 @@ function SuggestShop({ title, prompt }: { title: TitleFull; prompt: string }) {
 export function StockistsSection({
   title,
   stockists,
+  evidence = [],
   publisherTitleCount,
 }: {
   title: TitleFull;
   stockists: TitleStockist[];
+  evidence?: ShopEvidence[];
   publisherTitleCount: number;
 }) {
   const publisher = title.publisher;
   // A publisher-wide list shared by several Index titles tells us a shop
   // sells something from the publisher, so the count names the publisher.
-  const shared =
-    publisherTitleCount > 1 && stockists.some((s) => s.list_scope === 'publisher');
-  const { groups, unknown } = groupByCity(stockists);
-  const shopCount = stockists.length;
+  const shared = publisherTitleCount > 1 && stockists.some((s) => s.list_scope === 'publisher');
+  const { groups, unknown } = groupByCity(stockists, evidence);
+  const shopCount = groups.reduce((n, g) => n + g.shops.length, 0) + unknown.length;
   const collected = monthYear(stockists[0]?.collected_at ?? publisher.stockist_checked_at);
-  const head = groups.slice(0, EXPANDED_CITIES);
-  const rest = groups.slice(EXPANDED_CITIES);
+  const cities = plural(groups.length, 'city', 'cities');
 
   return (
     <section id="stockists" className="stockists" aria-labelledby="stockists-heading">
       <div className="wrap">
         <span className="eyebrow dim">Where it&rsquo;s stocked</span>
-        <h2 id="stockists-heading">Where to find {title.name}</h2>
-
-        {title.available_on_neesh && (
-          <p className="stockists-order">
-            Run a space?{' '}
-            <Link href={`/order/${title.slug}`} className="text-link">
-              Order wholesale on Neesh
-            </Link>
-          </p>
-        )}
+        <h2 id="stockists-heading">
+          <span className="c-only-m">Find shops that carry this magazine</span>
+          <span className="c-only-d">Find shops that carry {title.name}</span>
+        </h2>
 
         {shopCount > 0 ? (
           <>
-            {shared ? (
-              <p className="stockists-count">
-                {publisher.name} sells through {plural(shopCount, 'shop', 'shops')}
-                {groups.length > 0 && <> across {plural(groups.length, 'city', 'cities')}</>}.
-              </p>
-            ) : (
-              <p className="stockists-count">
-                Stocked in {plural(shopCount, 'shop', 'shops')}
-                {groups.length > 0 && <> across {plural(groups.length, 'city', 'cities')}</>}.
-              </p>
-            )}
-
-            {shopCount > FILTER_THRESHOLD && <StockistFilter />}
-
-            <div className="stockist-cities">
-              {head.map((g) => (
-                <CityList key={g.key} group={g} />
-              ))}
-            </div>
-
-            {(rest.length > 0 || unknown.length > 0) && (
-              <details className="stockists-more">
-                <summary>
-                  Show all {plural(groups.length, 'city', 'cities')}
-                  {unknown.length > 0 && <> and {plural(unknown.length, 'shop', 'shops')} without a city</>}
-                </summary>
-                <div className="stockist-cities">
-                  {rest.map((g) => (
-                    <CityList key={g.key} group={g} />
-                  ))}
-                  {unknown.length > 0 && (
-                    <CityList group={{ key: 'unknown', label: 'City unknown', citySlug: null, shops: unknown }} />
-                  )}
-                </div>
-              </details>
-            )}
-            <p className="stockists-empty" data-filter-empty hidden>
-              No shops match that search.
+            <p className="stockists-count">
+              {shared ? (
+                <>
+                  {publisher.name} sells through {plural(shopCount, 'shop', 'shops')}
+                  {groups.length > 0 && <> across {cities}</>}.
+                </>
+              ) : (
+                <>
+                  Stocked in {plural(shopCount, 'shop', 'shops')}
+                  {groups.length > 0 && <> across {cities}</>}.
+                </>
+              )}{' '}
+              Each row says exactly what we know.
             </p>
+
+            <StockistGroups titleId={title.id} groups={groups} unknown={unknown} filter={shopCount > 50} />
 
             <p className="stockists-source">
               From{' '}
@@ -184,15 +168,22 @@ export function StockistsSection({
               )}
               {collected && <>, collected {collected}</>}.
             </p>
-            <SuggestShop title={title} prompt="Know another shop that carries it?" />
+            <SuggestShop title={title} prompt="Know another shop that carries it? Suggest it" />
           </>
         ) : (
           <>
-            <p className="stockists-count">
-              {publisher.name} doesn&rsquo;t publish a stockist list yet.
-            </p>
-            <SuggestShop title={title} prompt="Know a shop that carries it?" />
+            <p className="stockists-count">{publisher.name} doesn&rsquo;t publish a stockist list yet.</p>
+            <SuggestShop title={title} prompt="Know a shop that carries it? Suggest it" />
           </>
+        )}
+
+        {title.available_on_neesh && (
+          <p className="stockists-order">
+            Run a space?{' '}
+            <Link href={`/order/${title.slug}`} className="text-link">
+              Order wholesale on Neesh
+            </Link>
+          </p>
         )}
       </div>
     </section>

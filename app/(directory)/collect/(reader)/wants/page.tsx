@@ -4,22 +4,17 @@ import Link from 'next/link';
 import { useEffect, useMemo, useState } from 'react';
 import { CollectTabs } from '@/components/collect/CollectTabs';
 import { useCollect } from '@/components/collect/CollectProvider';
-import { useTitlesWithIssues, type TitleWithIssues } from '@/components/collect/useIndexData';
-import { browserClient } from '@/lib/collect/browser';
-import {
-  FOUND_IT_AFTER_DAYS,
-  type Issue,
-  type IssueAvailability,
-  type ShopAvailability,
-} from '@/lib/collect/shared';
+import { Cover, issueCover, LoadError, LoadingRows, PageHead, ShopRow } from '@/components/collect/parts';
+import { useTitlesWithIssues } from '@/components/collect/useIndexData';
+import { FOUND_IT_AFTER_DAYS, issueMeta, TOAST, type IssueAvailability, type ShopAvailability } from '@/lib/collect/shared';
+import { plural } from '@/lib/format';
 
-// The want list. Each issue shows the shops that may have it, labelled only
-// as far as the evidence goes (spec: Availability), home city first. A shop
-// click logs stockist_click; a few days later the issue asks "Did you find
-// it?".
+// The want list. One job: get you to a shop. Each issue shows its nearest
+// shops with what we know about them, home city first. A shop click logs
+// stockist_click; a few days later the issue asks "Did you find it?".
 
 const CLICKS_KEY = 'neesh_collect_clicks';
-const SHOPS_SHOWN = 5;
+const SHOPS_SHOWN = 2;
 
 function readClicks(): Record<string, string> {
   try {
@@ -37,62 +32,20 @@ function writeClicks(clicks: Record<string, string>) {
   }
 }
 
-function shortDate(date: string): string {
-  return new Date(`${date}T00:00:00Z`).toLocaleDateString('en-GB', {
-    day: 'numeric',
-    month: 'short',
-    year: 'numeric',
-    timeZone: 'UTC',
-  });
-}
-
-function shopLabel(shop: ShopAvailability, issue: Issue, title: TitleWithIssues): string {
-  switch (shop.level) {
-    case 'confirmed':
-      return `In stock as of ${shortDate(shop.observed_on!)}`;
-    case 'reported':
-      return `Stocked ${issue.issue_label} as of ${shortDate(shop.observed_on!)}`;
-    case 'lapsed':
-      return `Reported stocking ${issue.issue_label} on ${shortDate(shop.last_reported_on!)}, not rechecked since`;
-    default:
-      return shop.publisher_wide && title.publisher
-        ? `Sells magazines from ${title.publisher.name}`
-        : `Carries ${title.name}`;
-  }
-}
-
 export default function WantsPage() {
-  const { ready, session, items, itemTitles, setIssueState, logEvent, notice } = useCollect();
-  const wantIds = useMemo(
-    () =>
-      Object.entries(items)
-        .filter(([, state]) => state === 'want')
-        .map(([id]) => id),
-    [items]
-  );
-  const { loading, titles } = useTitlesWithIssues(wantIds.map((id) => itemTitles[id]).filter(Boolean));
+  const { ready, session, items, itemTitles, homeCity, setIssueState, logEvent, notice } = useCollect();
+  const wantIds = useMemo(() => Object.keys(items).filter((id) => items[id] === 'want'), [items]);
+  const { loading, error, titles, retry } = useTitlesWithIssues(wantIds.map((id) => itemTitles[id]).filter(Boolean));
   const [availability, setAvailability] = useState<Record<string, ShopAvailability[]>>({});
-  const [homeCity, setHomeCity] = useState<string | null>(null);
   const [clicks, setClicks] = useState<Record<string, string>>({});
-  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
 
   useEffect(() => setClicks(readClicks()), []);
-
-  useEffect(() => {
-    const supabase = browserClient();
-    if (!session || !supabase) return;
-    supabase
-      .from('collectors')
-      .select('city:directory_cities(slug)')
-      .maybeSingle()
-      .then(({ data }) => setHomeCity((data?.city as unknown as { slug: string } | null)?.slug ?? null));
-  }, [session]);
 
   const idsKey = [...wantIds].sort().join(',');
   useEffect(() => {
     if (!idsKey) return;
     const params = new URLSearchParams({ issue_ids: idsKey });
-    if (homeCity) params.set('city', homeCity);
+    if (homeCity) params.set('city', homeCity.slug);
     fetch(`/api/collect/availability?${params}`)
       .then((res) => res.json())
       .then((data: { issues: IssueAvailability[] }) => {
@@ -110,11 +63,19 @@ export default function WantsPage() {
     setClicks(next);
   }
 
-  function answerFound(issueId: string, titleId: string, found: boolean) {
-    if (found) logEvent('acquired_confirmed', { issue_id: issueId, title_id: titleId, surface: 'wants' });
+  async function gotIt(issueId: string, titleId: string, confirmed: boolean) {
+    if (confirmed) logEvent('acquired_confirmed', { issue_id: issueId, title_id: titleId, surface: 'wants' });
+    const ok = await setIssueState(issueId, titleId, 'own', 'wants');
+    notice(ok ? TOAST.ownAdded : TOAST.failed);
     const next = readClicks();
-    if (found) next[issueId] = 'found';
-    else delete next[issueId];
+    delete next[issueId];
+    writeClicks(next);
+    setClicks(next);
+  }
+
+  function notYet(issueId: string) {
+    const next = readClicks();
+    delete next[issueId];
     writeClicks(next);
     setClicks(next);
   }
@@ -123,119 +84,96 @@ export default function WantsPage() {
   const rows = titles.flatMap((title) =>
     title.issues.filter((i) => items[i.id] === 'want').map((issue) => ({ title, issue }))
   );
+  const busy = !ready || (loading && wantIds.length > 0);
 
   return (
-    <section className="collect-page">
-      <div className="wrap">
+    <section className="c-page">
+      <div className="wrap c-narrow-wide">
         <CollectTabs />
-        <h1>Wants</h1>
-        {ready && !loading && rows.length === 0 && (
-          <div className="collect-empty">
-            <h2>Nothing on your list yet.</h2>
-            <p>
-              Mark an issue Want on any title page and it shows up here with the shops that carry it.{' '}
-              <Link href="/index" className="text-link">
-                Explore magazines
-              </Link>
-            </p>
+        {error ? (
+          <LoadError retry={retry} />
+        ) : busy ? (
+          <LoadingRows />
+        ) : (
+          <div className="c-stack lg">
+            <PageHead title="Wants" count={`${plural(rows.length, 'issue', 'issues')} on your list`} />
+            {rows.length === 0 ? (
+              <div className="c-stack">
+                <h2 className="c-h2 sm">Nothing on your list yet.</h2>
+                <p className="c-muted">
+                  Mark an issue Want on any title page and it shows up here with the shops that carry it.{' '}
+                  <Link href="/index" className="c-link">
+                    Explore magazines
+                  </Link>
+                </p>
+              </div>
+            ) : (
+              <>
+                <div>
+                  {rows.map(({ title, issue }) => {
+                    const shops = availability[issue.id];
+                    const click = clicks[issue.id];
+                    const ask = !!session && !!click && Date.parse(click) < askAfter;
+                    return (
+                      <div key={issue.id} className="c-want">
+                        <div className="c-want-top">
+                          <Cover className="c-want-cover" src={issueCover(issue)} alt={`${title.name}, ${issue.issue_label}`} />
+                          <div className="c-row-text">
+                            <Link href={`/titles/${title.slug}#issues`} className="c-result-name">
+                              {title.name} &middot; {issue.issue_label}
+                            </Link>
+                            {issueMeta(issue) && <span className="c-meta">{issueMeta(issue)}</span>}
+                          </div>
+                          <button
+                            type="button"
+                            className="c-pill"
+                            aria-pressed={false}
+                            aria-label={`Own ${title.name}, ${issue.issue_label}`}
+                            onClick={() => gotIt(issue.id, title.id, false)}
+                          >
+                            Own
+                          </button>
+                        </div>
+                        <div className="c-want-shops">
+                          {ask && (
+                            <div className="c-found">
+                              <span>Did you find it?</span>
+                              <button type="button" className="c-pill" onClick={() => gotIt(issue.id, title.id, true)}>
+                                Yes
+                              </button>
+                              <button type="button" className="c-textbtn" onClick={() => notYet(issue.id)}>
+                                Not yet
+                              </button>
+                            </div>
+                          )}
+                          {shops?.slice(0, SHOPS_SHOWN).map((shop) => (
+                            <ShopRow
+                              key={shop.store_slug}
+                              shop={shop}
+                              issueLabel={issue.issue_label}
+                              compact
+                              onClick={() => shopClick(issue.id, title.id, shop)}
+                            />
+                          ))}
+                          <Link href={`/titles/${title.slug}#stockists`} className="c-mono accent c-find">
+                            {shops && shops.length > SHOPS_SHOWN ? `All ${shops.length} shops` : 'Find shops'}
+                          </Link>
+                        </div>
+                      </div>
+                    );
+                  })}
+                  <div className="c-rule" />
+                </div>
+                <p className="c-fine">
+                  {homeCity ? <>Shops nearest {homeCity.name} first. </> : <>Set a home city to see nearby shops first. </>}
+                  <Link href="/collect/settings" className="c-link">
+                    {homeCity ? 'Change home city' : 'Set home city'}
+                  </Link>
+                </p>
+              </>
+            )}
           </div>
         )}
-
-        <ul className="wants-list">
-          {rows.map(({ title, issue }) => {
-            const shops = availability[issue.id];
-            const click = clicks[issue.id];
-            const ask = !!session && click && click !== 'found' && Date.parse(click) < askAfter;
-            const shown = expanded[issue.id] ? shops : shops?.slice(0, SHOPS_SHOWN);
-            return (
-              <li key={issue.id} className="want-item">
-                <header>
-                  <div>
-                    <Link href={`/titles/${title.slug}#issues`} className="want-title">
-                      {title.name}
-                    </Link>
-                    <span className="want-issue">{issue.issue_label}</span>
-                  </div>
-                  <button
-                    type="button"
-                    className="text-link"
-                    onClick={() => setIssueState(issue.id, title.id, null, 'wants')}
-                  >
-                    Remove
-                  </button>
-                </header>
-
-                {ask && (
-                  <div className="found-it">
-                    <span>Did you find it?</span>
-                    <button type="button" className="toggle" onClick={() => answerFound(issue.id, title.id, true)}>
-                      Yes
-                    </button>
-                    <button type="button" className="toggle" onClick={() => answerFound(issue.id, title.id, false)}>
-                      Not yet
-                    </button>
-                  </div>
-                )}
-                {click === 'found' && (
-                  <div className="found-it">
-                    <span>Got it. Move it to Own?</span>
-                    <button
-                      type="button"
-                      className="toggle on"
-                      onClick={async () => {
-                        if (await setIssueState(issue.id, title.id, 'own', 'wants')) notice('Saved to your collection');
-                      }}
-                    >
-                      Move to Own
-                    </button>
-                  </div>
-                )}
-
-                <p className="want-shops-head">Find shops that carry this magazine</p>
-                {!shops ? (
-                  <p className="want-shops-none">Looking for shops</p>
-                ) : shops.length === 0 ? (
-                  <p className="want-shops-none">
-                    We don&rsquo;t know a shop for this one yet.{' '}
-                    <Link href={`/titles/${title.slug}#stockists`} className="text-link">
-                      Know one?
-                    </Link>
-                  </p>
-                ) : (
-                  <>
-                    <ul className="want-shops">
-                      {shown!.map((shop) => (
-                        <li key={shop.store_slug} className={`level-${shop.level}`}>
-                          <Link href={`/stores/${shop.store_slug}`} onClick={() => shopClick(issue.id, title.id, shop)}>
-                            {shop.store_name}
-                          </Link>
-                          <span className="want-shop-place">
-                            {[shop.borough, shop.city].filter(Boolean).join(', ')}
-                          </span>
-                          <span className="want-shop-level">
-                            {shopLabel(shop, issue, title)}
-                            {shop.level === 'carries' && shop.last_reported_on && (
-                              <> &middot; reported stocking {issue.issue_label} on {shortDate(shop.last_reported_on)}</>
-                            )}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
-                    {shops.length > SHOPS_SHOWN && !expanded[issue.id] && (
-                      <button
-                        type="button"
-                        className="text-link"
-                        onClick={() => setExpanded((cur) => ({ ...cur, [issue.id]: true }))}
-                      >
-                        Show all {shops.length} shops
-                      </button>
-                    )}
-                  </>
-                )}
-              </li>
-            );
-          })}
-        </ul>
       </div>
     </section>
   );

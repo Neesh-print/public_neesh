@@ -13,13 +13,56 @@ export interface Issue {
   issue_number: number | null;
   sort_order: number | null;
   published_on: string | null;
+  published_year: number | null;
   cover_image_path: string | null;
   created_from: string;
   review_status: ReviewStatus;
+  created_at: string;
 }
 
 export const ISSUE_COLUMNS =
-  'id, title_id, issue_label, issue_number, sort_order, published_on, cover_image_path, created_from, review_status';
+  'id, title_id, issue_label, issue_number, sort_order, published_on, published_year, cover_image_path, created_from, review_status, created_at';
+
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+// "OCT 2026", or "2026" when only the year is known.
+export function issueDate(issue: Pick<Issue, 'published_on' | 'published_year'>): string | null {
+  if (issue.published_on) {
+    const [y, m] = issue.published_on.split('-');
+    return `${MONTHS[Number(m) - 1] ?? ''} ${y}`.trim();
+  }
+  return issue.published_year ? String(issue.published_year) : null;
+}
+
+// "NO. 04" from the issue number; null for unnumbered issues.
+export function issueNumberLabel(issue: Pick<Issue, 'issue_number'>): string | null {
+  if (issue.issue_number == null) return null;
+  const n = Number(issue.issue_number);
+  return `No. ${Number.isInteger(n) && n < 10 ? `0${n}` : n}`;
+}
+
+// Row metadata: "NO. 04 · OCT 2026" (rendered uppercase).
+export function issueMeta(issue: Pick<Issue, 'issue_number' | 'published_on' | 'published_year'>): string {
+  return [issueNumberLabel(issue), issueDate(issue)].filter(Boolean).join(' · ');
+}
+
+// Shelf cell caption: the number when there is one, else the label.
+export function issueCaption(issue: Pick<Issue, 'issue_number' | 'issue_label'>): string {
+  return issueNumberLabel(issue) ?? issue.issue_label;
+}
+
+// Confirmation toasts (set in mono caps).
+export const TOAST = {
+  ownAdded: 'Saved to your collection',
+  ownRemoved: 'Removed from your collection',
+  wantAdded: 'Added to your wants',
+  wantRemoved: 'Removed from your wants',
+  followed: "You're following this magazine on Neesh",
+  unfollowed: 'Unfollowed',
+  indexed: 'Added to the Index',
+  linkSent: 'Link sent. Check your inbox',
+  failed: "Couldn't save. Try again",
+} as const;
 
 // Newest first: manual order wins, then number, then date, then label.
 export function compareIssues(a: Issue, b: Issue): number {
@@ -39,11 +82,11 @@ export function isReaderAdded(row: { created_from: string; review_status: Review
   return row.created_from === 'reader_created' && row.review_status !== 'approved';
 }
 
-// Issue list footer copy, by catalogue coverage.
-export const COVERAGE_FOOTER: Record<Coverage, { text: string; link: string | null }> = {
-  complete: { text: 'Every issue to date', link: null },
-  partial: { text: 'Some issues not listed yet.', link: 'Add one' },
-  unknown: { text: "We're still building this list.", link: 'Add an issue' },
+// Coverage line under every issue list. Fixed strings only.
+export const COVERAGE_LINE: Record<Coverage, string> = {
+  complete: 'Every issue to date',
+  partial: 'Some issues not listed yet',
+  unknown: "We're still building this list",
 };
 
 // Event types a browser may log. Before sign-in the state changes are
@@ -110,6 +153,28 @@ export interface ShopAvailability {
   // then shows at the level below with this date as history, never as
   // current.
   last_reported_on: string | null;
+}
+
+// Evidence line on a shop row. Fixed strings, set in mono caps; only
+// confirmed and reported records read in ink.
+export function evidenceLabel(
+  shop: Pick<ShopAvailability, 'level' | 'observed_on' | 'last_reported_on' | 'publisher_wide'>,
+  issueLabel: string | null
+): { text: string; strong: boolean } {
+  const day = (d: string) => {
+    const [, m, dd] = d.split('-');
+    return `${Number(dd)} ${MONTHS[Number(m) - 1]}`;
+  };
+  switch (shop.level) {
+    case 'confirmed':
+      return { text: `In stock as of ${day(shop.observed_on!)}`, strong: true };
+    case 'reported':
+      return { text: `Stocked ${issueLabel ?? 'this issue'} as of ${day(shop.observed_on!)}`, strong: true };
+    case 'lapsed':
+      return { text: `Reported ${issueLabel ?? 'this issue'} on ${day(shop.last_reported_on!)}, not rechecked`, strong: false };
+    default:
+      return { text: shop.publisher_wide ? 'Carries this publisher' : 'Carries this magazine', strong: false };
+  }
 }
 
 export interface IssueAvailability {
