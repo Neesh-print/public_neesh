@@ -12,6 +12,7 @@ import type {
   TagWithCount,
   Title,
   TitleFull,
+  TitleIssue,
   TitleStockist,
   TitleWithPublisher,
 } from './types';
@@ -105,6 +106,25 @@ export async function getTitleBySlug(slug: string): Promise<TitleFull | null> {
     ...row,
     tags: sortSubjectFirst((row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean)),
   };
+}
+
+// A title's approved issues, newest first. RLS already hides removed,
+// merged and rejected rows; the explicit filters also keep pending reader
+// submissions off the public page.
+export async function getTitleIssues(titleId: string): Promise<TitleIssue[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient()
+    .from('directory_issues')
+    .select('id, issue_label, issue_number, published_on, published_year, cover_image_path, cover_price, currency')
+    .eq('title_id', titleId)
+    .eq('removed', false)
+    .is('merged_into', null)
+    .eq('review_status', 'approved')
+    .order('issue_number', { ascending: false, nullsFirst: false })
+    .order('published_on', { ascending: false, nullsFirst: false })
+    .order('published_year', { ascending: false, nullsFirst: false })
+    .order('created_at', { ascending: false });
+  return (data as TitleIssue[]) ?? [];
 }
 
 // Every shop on the title's publisher's current stockist list. Read through

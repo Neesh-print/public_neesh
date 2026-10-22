@@ -6,6 +6,7 @@ import {
   getAllVisibleTitleSlugs,
   getTagsWithCounts,
   getTitleBySlug,
+  getTitleIssues,
   getTitleStockists,
   tagPublishes,
 } from '@/lib/queries';
@@ -19,9 +20,11 @@ import {
   titleMetaDescription,
   titleMetaTitle,
 } from '@/lib/seo';
+import { formatPrice } from '@/lib/format';
 import { ArrowIcon } from '@/components/Logo';
 import { CoverCard } from '@/components/CoverCard';
 import { ClaimSection } from '@/components/ClaimSection';
+import { IssuesSection } from '@/components/IssuesSection';
 import { JsonLd } from '@/components/JsonLd';
 import { StockistsSection } from '@/components/StockistsSection';
 import { SubmittedNotice } from '@/components/SubmittedNotice';
@@ -65,35 +68,21 @@ export async function generateMetadata({
   };
 }
 
-function price(title: { cover_price: number | null; currency: string | null }): string | null {
-  if (title.cover_price == null) return null;
-  if (title.currency) {
-    try {
-      return new Intl.NumberFormat('en', {
-        style: 'currency',
-        currency: title.currency,
-      }).format(title.cover_price);
-    } catch {
-      return `${title.cover_price} ${title.currency}`;
-    }
-  }
-  return String(title.cover_price);
-}
-
 export default async function TitlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const [title, allTags] = await Promise.all([getTitleBySlug(slug), getTagsWithCounts()]);
   if (!title) notFound();
-  const [stockists, publisherTitleCount] = await Promise.all([
+  const [stockists, publisherTitleCount, issues] = await Promise.all([
     getTitleStockists(title.id),
     countPublisherTitles(title.publisher_id),
+    getTitleIssues(title.id),
   ]);
 
   const publishing = new Set(allTags.filter(tagPublishes).map((t) => t.slug));
   const primaryTag = title.tags[0];
   const primaryTagLive = primaryTag && publishing.has(primaryTag.slug);
   const place = placeLabel(title.city, title.country);
-  const coverPrice = price(title);
+  const coverPrice = formatPrice(title.cover_price, title.currency);
 
   // Profile states: listed on Neesh (orderable), claimed (verified), or
   // unclaimed (claim line + removal link). Neesh-listed titles belong to
@@ -262,6 +251,8 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
           </div>
         </div>
       </section>
+
+      <IssuesSection titleName={title.name} issues={issues} />
 
       <StockistsSection title={title} stockists={stockists} publisherTitleCount={publisherTitleCount} />
     </>

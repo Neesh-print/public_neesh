@@ -112,6 +112,19 @@ export interface StoreNeighbor {
   shared: number;
 }
 
+// One issue of a title, as shown on its profile. cover_image_path is either
+// a path in the covers bucket or a full URL (imported issues).
+export interface TitleIssue {
+  id: string;
+  issue_label: string | null;
+  issue_number: number | null;
+  published_on: string | null;
+  published_year: number | null;
+  cover_image_path: string | null;
+  cover_price: number | null;
+  currency: string | null;
+}
+
 // One row of v_title_stockists: a shop that carries a title.
 export interface TitleStockist {
   store_slug: string;

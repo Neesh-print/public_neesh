@@ -18,3 +18,16 @@ export function listJoin(items: string[]): string {
   if (items.length <= 1) return items.join('');
   return `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
 }
+
+// 19.95, "USD" -> "US$19.95"; falls back to the bare number without a currency.
+export function formatPrice(amount: number | null, currency: string | null): string | null {
+  if (amount == null) return null;
+  if (currency) {
+    try {
+      return new Intl.NumberFormat('en', { style: 'currency', currency }).format(amount);
+    } catch {
+      return `${amount} ${currency}`;
+    }
+  }
+  return String(amount);
+}

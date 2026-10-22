@@ -21,6 +21,9 @@ export function serviceClient(): SupabaseClient {
 }
 
 export function coverPublicUrl(coverImagePath: string | null): string | null {
-  if (!coverImagePath || !url) return null;
+  if (!coverImagePath) return null;
+  // Imported issues store the publisher's own image URL.
+  if (/^https?:\/\//i.test(coverImagePath)) return coverImagePath;
+  if (!url) return null;
   return `${url}/storage/v1/object/public/covers/${coverImagePath.replace(/^covers\//, '')}`;
 }
