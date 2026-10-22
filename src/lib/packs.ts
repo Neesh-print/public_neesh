@@ -88,7 +88,7 @@ export const PACKS: Pack[] = [
     short: 'Record Shops · Bars',
     price: 200,
     blurb:
-      "Music print goes deep, and most of it never makes it past four shops on two continents. This pack is the good stuff: scene documentation, label histories, and the kind of writing that sends you to a record you'd never have found. Titles run toward music, club culture, and sound.",
+      "Music print goes deep, and most of it never makes it past four shops on two continents. This pack is the good stuff. Scene documentation, label histories, and the kind of writing that sends you to a record you'd never have found. Titles run toward music, club culture, and sound.",
     count: '10 titles',
     retail: '$240.00',
     image: '/assets/pack-listening-room.jpg',
