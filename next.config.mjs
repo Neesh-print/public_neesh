@@ -7,6 +7,11 @@ const nextConfig = {
     // lives at /index.
     const redirects = [
       { source: '/curatedpacks', destination: '/packs', statusCode: 301 },
+      // Pack lineup rebuilt (October 2026). Retired pack pages land on the
+      // pack that replaced them, so September outreach links keep working.
+      { source: '/packs/studio', destination: '/packs/guest-room', statusCode: 301 },
+      { source: '/packs/locker-room', destination: '/packs/trailhead', statusCode: 301 },
+      { source: '/packs/upper-left', destination: '/packs', statusCode: 301 },
       { source: '/retailers', destination: '/spaces', statusCode: 301 },
       { source: '/pricing', destination: '/publishers', statusCode: 301 },
       { source: '/explore', destination: '/index', statusCode: 301 },

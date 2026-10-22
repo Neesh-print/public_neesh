@@ -1,6 +1,10 @@
-// The five curated packs (v2 design copy). Order CTAs keep the live Stripe
-// payment links from the current site; the prototype routed them to retailer
-// signup instead — flagged as an open design decision.
+// The six curated packs. Order CTAs point at each pack's Stripe Payment Link
+// in the "Neesh Print" account ($200 pack, $300 with the stand).
+
+// Until a pack's Stripe links exist, its order buttons open an email to
+// hi@neesh.art instead, so the page never shows a dead button.
+const PENDING_ORDER = (pack: string) =>
+  `mailto:hi@neesh.art?subject=${encodeURIComponent(`Order: ${pack}`)}`;
 
 // One title in a pack's box. Titles in the directory carry a slug and render
 // as linked cards with their directory cover; the rest ship a static cover
@@ -55,28 +59,29 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'studio',
-    name: 'The Studio',
-    rooms: 'Design Studios · Agencies · Workshops',
-    short: 'Studios · Agencies',
+    slug: 'fitting-room',
+    name: 'The Fitting Room',
+    rooms: 'Boutiques · Concept Stores · Showrooms · Vintage Shops',
+    short: 'Boutiques · Showrooms',
     price: 200,
     blurb:
-      'Nobody in a studio needs another screen. They need the thing on the table that starts an argument about a typeface. This pack is the one your team will quietly take home. Titles run toward design, architecture, photography, and craft.',
+      "Cloth, cut, closets, and the people who live in them. Print that tells a customer they're in the right shop before they touch a hanger.",
     count: '9 titles',
-    retail: '$253.50',
-    image: '/assets/pack-studio.jpg',
-    order: 'https://buy.stripe.com/bJefZgfFY6rsg7RbvM7N606',
-    withStand: 'https://buy.stripe.com/dRm5kCdxQ2bc5tddDU7N602',
+    retail: '$249.00',
+    image: '/assets/pack-fitting-room.jpg',
+    // TODO(stripe): replace with the Fitting Room $200 and $300 Payment Links.
+    order: PENDING_ORDER('The Fitting Room'),
+    withStand: PENDING_ORDER('The Fitting Room, with stand'),
     contents: [
-      { title: 'Luncheon', slug: 'luncheon' },
-      { title: 'Backstage Talks', image: '/assets/covers/studio_02_backstage-talks.jpg' },
-      { title: 'Aedo Magazine', slug: 'aedo-magazine' },
-      { title: 'The Plant', image: '/assets/covers/studio_04_the-plant.jpg' },
-      { title: 'Desired Landscapes', slug: 'desired-landscapes' },
-      { title: 'Deem Journal', slug: 'deem-journal' },
-      { title: 'MYTH', image: '/assets/covers/studio_07_myth.jpg' },
-      { title: 'MacGuffin', slug: 'macguffin' },
-      { title: 'Dirty Furniture', image: '/assets/covers/studio_09_dirty-furniture.jpg' },
+      { title: 'Wardrobe Theory Project', slug: 'wardrobe-theory-project' },
+      { title: 'Perfect', slug: 'perfect' },
+      { title: 'Viscose Journal', slug: 'viscose-journal' },
+      { title: 'Acne Paper', slug: 'acne-paper' },
+      { title: 'Twin', slug: 'twin' },
+      { title: 'TOO MUCH', slug: 'too-much' },
+      { title: 'Selvedge', slug: 'selvedge' },
+      { title: 'Mildew', slug: 'mildew' },
+      { title: 'The Skirt Chronicles', slug: 'the-skirt-chronicles' },
     ],
   },
   {
@@ -106,34 +111,35 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'locker-room',
-    name: 'The Locker Room',
-    rooms: 'Gyms · Climbing Walls · Saunas · Run Clubs',
-    short: 'Gyms · Run Clubs',
+    slug: 'trailhead',
+    name: 'The Trailhead',
+    rooms: 'Outdoor Shops · Running Stores · Climbing Gyms · Run Clubs',
+    short: 'Outdoor · Running',
     price: 200,
     blurb:
-      'Sport print has gotten very good and almost nobody stocks it. This pack is for the room where people are already in their bodies and want to read about it. Titles run toward movement, endurance, outdoors, and the culture around all three.',
+      "Mountains, courts, long runs, and the people who can't sit still. Print for the room where everyone just got back from somewhere.",
     count: '9 titles',
-    retail: '$232.00',
-    image: '/assets/pack-locker-room.jpg',
-    order: 'https://buy.stripe.com/eVq4gyfFY5no2h143k7N607',
-    withStand: 'https://buy.stripe.com/3cIbJ00L4178bRB57o7N605',
+    retail: '$255.00',
+    image: '/assets/pack-trailhead.jpg',
+    // TODO(stripe): replace with the Trailhead $200 and $300 Payment Links.
+    order: PENDING_ORDER('The Trailhead'),
+    withStand: PENDING_ORDER('The Trailhead, with stand'),
     contents: [
-      { title: 'Useless Fighters', image: '/assets/covers/lockerroom_01_useless-fighters.jpg' },
       { title: 'Mountain Gazette', slug: 'mountain-gazette' },
-      { title: "The Surfer's Journal", slug: 'the-surfers-journal' },
-      { title: 'Huck', image: '/assets/covers/lockerroom_04_huck.jpg' },
-      { title: 'Pitch', slug: 'pitch' },
       { title: 'Victory Journal', slug: 'victory-journal' },
       { title: 'Racquet', slug: 'racquet-mag' },
       { title: 'Good Sport', slug: 'good-sport' },
-      { title: 'Oh So', image: '/assets/covers/lockerroom_09_oh-so.jpg' },
+      { title: "The Surfer's Journal", slug: 'the-surfers-journal' },
+      { title: 'Like the Wind', slug: 'like-the-wind' },
+      { title: 'OPEN Tennis', slug: 'open-tennis-magazine' },
+      { title: 'Huck', image: '/assets/covers/lockerroom_04_huck.jpg' },
+      { title: 'Pitch', slug: 'pitch' },
     ],
   },
   {
     slug: 'table-service',
     name: 'Table Service',
-    rooms: 'Restaurants · Cafés · Wine Bars',
+    rooms: 'Cafés · Wine Bars · Wine Shops · Specialty Grocers',
     short: 'Cafés · Wine Bars',
     price: 200,
     blurb:
@@ -157,28 +163,28 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'upper-left',
-    name: 'The Upper Left',
-    rooms: 'Shops · Cafés · Hotels · Homesick Northwesterners',
-    short: 'Shops · Cafés',
+    slug: 'guest-room',
+    name: 'The Guest Room',
+    rooms: 'Hotels · Design Shops · Home & Gift Boutiques',
+    short: 'Hotels · Design Shops',
     price: 200,
     blurb:
-      'Rave flyers, public courts, secondhand clothes, and food from the source. Neesh ships from Seattle and grew up on Portland relationships. This pack is an homage to our roots.',
-    count: '9 titles',
-    retail: '$225.00',
-    image: '/assets/pack-upper-left.jpg',
-    order: 'https://buy.stripe.com/28EdR88dwg222h18jA7N60b',
-    withStand: 'https://buy.stripe.com/6oU9AS1P89DE1cXfM27N609',
+      'Rooms, objects, far-off places, and the people who make them. Print that makes a room feel lived in by someone with taste.',
+    count: '8 titles',
+    retail: '$254.50',
+    image: '/assets/pack-guest-room.jpg',
+    // TODO(stripe): replace with the Guest Room $200 and $300 Payment Links.
+    order: PENDING_ORDER('The Guest Room'),
+    withStand: PENDING_ORDER('The Guest Room, with stand'),
     contents: [
-      { title: 'Kitchen Table', slug: 'kitchen-table' },
-      { title: 'Buckman Journal', slug: 'buckman-journal' },
-      { title: 'Provecho', slug: 'provecho' },
-      { title: 'Portland Rave Flyers', slug: 'portland-rave-flyers' },
-      { title: 'Portland Tennis Courterly', slug: 'portland-tennis-courterly' },
-      { title: 'Heartbeat', slug: 'heartbeat' },
-      { title: 'Mildew', slug: 'mildew' },
-      { title: 'Trails', slug: 'trails' },
+      { title: 'Kinfolk', slug: 'kinfolk' },
+      { title: 'MacGuffin', slug: 'macguffin' },
       { title: 'Ori Magazine', slug: 'ori-magazine' },
+      { title: 'Cabana', slug: 'cabana' },
+      { title: 'Openhouse', slug: 'openhouse' },
+      { title: 'Magazine B', slug: 'magazine-b' },
+      { title: 'Desired Landscapes', slug: 'desired-landscapes' },
+      { title: 'Roads & Kingdoms', slug: 'roads-and-kingdoms' },
     ],
   },
 ];
