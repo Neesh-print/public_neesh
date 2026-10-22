@@ -247,7 +247,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                     See where it&rsquo;s stocked
                   </a>
                 </div>
-                <span className="cta-note">Wholesale, by the copy, no minimums.</span>
+                <span className="cta-note">Wholesale, by the copy. Cross-border orders may have a minimum.</span>
               </div>
             ) : (
               <div className="cta-row">
