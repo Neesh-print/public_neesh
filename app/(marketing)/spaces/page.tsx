@@ -133,15 +133,15 @@ export default function SpacesPage() {
             <img
               className="feature-img"
               src="/assets/pack-waiting-room.jpg"
-              alt="The Waiting Room pack, stacked"
+              alt="The Slow Read pack, stacked"
             />
             <div className="feature-copy">
               <span className="eyebrow dim">Curated packs</span>
               <h2 className="d2">A shelf, chosen for you. Shipped in one box.</h2>
               <p className="lede">
-                Six packs, each built around a kind of room: the waiting room, the fitting room,
-                the cafe, the trailhead. $200 flat, shipping included, eight to ten titles no one
-                else in your neighborhood carries.
+                Six packs, each built for a kind of space: the spa, the cafe, the record shop, the
+                boutique. $200 flat, shipping included, eight to ten titles no one else in your
+                neighborhood carries.
               </p>
               <p className="lede">
                 You don&rsquo;t have time to become a magazine buyer. We already are. Order a pack

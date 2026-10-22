@@ -35,8 +35,8 @@ export interface Pack {
 
 export const PACKS: Pack[] = [
   {
-    slug: 'waiting-room',
-    name: 'The Waiting Room',
+    slug: 'slow-read',
+    name: 'Slow Read',
     rooms: 'Spas · Therapy Offices · Clinics · Salons',
     short: 'Spas · Clinics',
     price: 200,
@@ -60,8 +60,8 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'fitting-room',
-    name: 'The Fitting Room',
+    slug: 'tear-sheet',
+    name: 'Tear Sheet',
     rooms: 'Boutiques · Concept Stores · Showrooms · Vintage Shops',
     short: 'Boutiques · Showrooms',
     price: 200,
@@ -70,9 +70,9 @@ export const PACKS: Pack[] = [
     count: '9 titles',
     retail: '$282.10',
     image: '/assets/pack-fitting-room.jpg',
-    // TODO(stripe): replace with the Fitting Room $200 and $300 Payment Links.
-    order: PENDING_ORDER('The Fitting Room'),
-    withStand: PENDING_ORDER('The Fitting Room, with stand'),
+    // TODO(stripe): replace with the Tear Sheet $200 and $300 Payment Links.
+    order: PENDING_ORDER('Tear Sheet'),
+    withStand: PENDING_ORDER('Tear Sheet, with stand'),
     contents: [
       { title: 'MANY OF THEM', slug: 'many-of-them' },
       { title: 'Petit Mort', slug: 'petit-mort' },
@@ -87,8 +87,8 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'listening-room',
-    name: 'The Listening Room',
+    slug: 'liner-notes',
+    name: 'Liner Notes',
     rooms: 'Record Shops · Bars · Listening Bars',
     short: 'Record Shops · Bars',
     price: 200,
@@ -113,8 +113,8 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'trailhead',
-    name: 'The Trailhead',
+    slug: 'dog-ear',
+    name: 'Dog Ear',
     rooms: 'Outdoor Shops · Running Stores · Bike Shops · Climbing Gyms',
     short: 'Outdoor · Running',
     price: 200,
@@ -123,9 +123,9 @@ export const PACKS: Pack[] = [
     count: '9 titles',
     retail: '$246.00',
     image: '/assets/pack-trailhead.jpg',
-    // TODO(stripe): replace with the Trailhead $200 and $300 Payment Links.
-    order: PENDING_ORDER('The Trailhead'),
-    withStand: PENDING_ORDER('The Trailhead, with stand'),
+    // TODO(stripe): replace with the Dog Ear $200 and $300 Payment Links.
+    order: PENDING_ORDER('Dog Ear'),
+    withStand: PENDING_ORDER('Dog Ear, with stand'),
     contents: [
       { title: 'Mountain Gazette', slug: 'mountain-gazette' },
       { title: 'New Mountain Magazine', slug: 'new-mountain-magazine' },
@@ -139,8 +139,8 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'table-service',
-    name: 'Table Service',
+    slug: 'the-spread',
+    name: 'The Spread',
     rooms: 'Cafés · Wine Bars · Wine Shops · Specialty Grocers',
     short: 'Cafés · Wine Bars',
     price: 200,
