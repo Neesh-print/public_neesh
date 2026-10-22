@@ -8,7 +8,8 @@ const PENDING_ORDER = (pack: string) =>
 
 // One title in a pack's box. Titles in the directory carry a slug and render
 // as linked cards with their directory cover; the rest ship a static cover
-// under /assets/covers.
+// under /assets/covers. A static image set alongside a slug overrides the
+// directory cover (for records whose stored cover is wrong).
 export interface PackTitle {
   title: string;
   slug?: string;
@@ -66,8 +67,8 @@ export const PACKS: Pack[] = [
     price: 200,
     blurb:
       "Cloth, cut, closets, and the people who live in them. Print that tells a customer they're in the right shop before they touch a hanger.",
-    count: '8 titles',
-    retail: '$269.10',
+    count: '9 titles',
+    retail: '$282.10',
     image: '/assets/pack-fitting-room.jpg',
     // TODO(stripe): replace with the Fitting Room $200 and $300 Payment Links.
     order: PENDING_ORDER('The Fitting Room'),
@@ -81,6 +82,8 @@ export const PACKS: Pack[] = [
       { title: 'Viscose Journal', slug: 'viscose-journal' },
       { title: 'ALL–IN', slug: 'allin-magazine' },
       { title: 'Acne Paper', slug: 'acne-paper' },
+      // Static cover until the Index record's image is replaced in storage.
+      { title: 'L’Étiquette', slug: 'letiquette', image: '/assets/covers/fittingroom_letiquette.jpg' },
     ],
   },
   {

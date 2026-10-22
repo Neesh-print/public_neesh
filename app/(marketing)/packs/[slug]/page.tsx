@@ -42,7 +42,7 @@ export default async function PackDetailPage({ params }: { params: Promise<{ slu
       key: entry.slug ?? entry.title,
       title: t?.name ?? entry.title,
       slug: t ? t.slug : null,
-      cover: t?.cover_image_path ? coverPublicUrl(t.cover_image_path) : (entry.image ?? null),
+      cover: entry.image ?? (t?.cover_image_path ? coverPublicUrl(t.cover_image_path) : null),
       publisher: t?.publisher.name ?? null,
     };
   });
