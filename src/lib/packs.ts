@@ -1,10 +1,6 @@
 // The six curated packs. Order CTAs point at each pack's Stripe Payment Link
 // in the "Neesh Print" account ($200 pack, $300 with the stand).
 
-// Until a pack's Stripe links exist, its order buttons open an email to
-// hi@neesh.art instead, so the page never shows a dead button.
-const PENDING_ORDER = (pack: string) =>
-  `mailto:hi@neesh.art?subject=${encodeURIComponent(`Order: ${pack}`)}`;
 
 // One title in a pack's box. Titles in the directory carry a slug and render
 // as linked cards with their directory cover; the rest ship a static cover
@@ -45,8 +41,8 @@ export const PACKS: Pack[] = [
     count: '9 titles',
     retail: '$250.00',
     image: '/assets/pack-waiting-room.jpg',
-    order: 'https://buy.stripe.com/eVq9AS0L4034bRBarI7N600',
-    withStand: 'https://buy.stripe.com/9B67sK8dw5no3l51Vc7N601',
+    order: 'https://buy.stripe.com/3cIfZg79sg22dZJ57o7N60i',
+    withStand: 'https://buy.stripe.com/fZu00i3Xg4jk8Fp43k7N60j',
     contents: [
       { title: 'Different Leaf', slug: 'different-leaf' },
       { title: 'Blumenhaus', image: '/assets/covers/waitingroom_02_blumenhaus.jpg' },
@@ -70,9 +66,8 @@ export const PACKS: Pack[] = [
     count: '9 titles',
     retail: '$282.10',
     image: '/assets/pack-fitting-room.jpg',
-    // TODO(stripe): replace with the Tear Sheet $200 and $300 Payment Links.
-    order: PENDING_ORDER('Tear Sheet'),
-    withStand: PENDING_ORDER('Tear Sheet, with stand'),
+    order: 'https://buy.stripe.com/6oUaEW3Xg034f3NczQ7N60c',
+    withStand: 'https://buy.stripe.com/eVq5kCeBU8zA8FparI7N60d',
     contents: [
       { title: 'MANY OF THEM', slug: 'many-of-them' },
       { title: 'Petit Mort', slug: 'petit-mort' },
@@ -97,8 +92,8 @@ export const PACKS: Pack[] = [
     count: '10 titles',
     retail: '$240.00',
     image: '/assets/pack-listening-room.jpg',
-    order: 'https://buy.stripe.com/28E9AS1P8g221cXeHY7N603',
-    withStand: 'https://buy.stripe.com/cNicN4alE7vw08TgQ67N604',
+    order: 'https://buy.stripe.com/14A00ieBU6rs9JtdDU7N60m',
+    withStand: 'https://buy.stripe.com/9B6aEWbpI9DEg7R2Zg7N60n',
     contents: [
       { title: 'Living Proof', image: '/assets/covers/listeningroom_01_living-proof.jpg' },
       { title: 'No Way Back', image: '/assets/covers/listeningroom_02_no-way-back.jpg' },
@@ -123,9 +118,8 @@ export const PACKS: Pack[] = [
     count: '9 titles',
     retail: '$246.00',
     image: '/assets/pack-trailhead.jpg',
-    // TODO(stripe): replace with the Dog Ear $200 and $300 Payment Links.
-    order: PENDING_ORDER('Dog Ear'),
-    withStand: PENDING_ORDER('Dog Ear, with stand'),
+    order: 'https://buy.stripe.com/00wbJ0eBUdTUf3NdDU7N60g',
+    withStand: 'https://buy.stripe.com/dRmeVc8dwg224p98jA7N60h',
     contents: [
       { title: 'Mountain Gazette', slug: 'mountain-gazette' },
       { title: 'New Mountain Magazine', slug: 'new-mountain-magazine' },
@@ -149,8 +143,8 @@ export const PACKS: Pack[] = [
     count: '10 titles',
     retail: '$249.00',
     image: '/assets/pack-table-service-alt.jpg',
-    order: 'https://buy.stripe.com/28EbJ0eBUcPQ8Fp6bs7N60a',
-    withStand: 'https://buy.stripe.com/28E5kC79sbLM7Bl1Vc7N608',
+    order: 'https://buy.stripe.com/8x27sK8dw178dZJ9nE7N60k',
+    withStand: 'https://buy.stripe.com/4gM9ASfFYeXY9Jt0R87N60l',
     contents: [
       { title: 'Yolo Journal', slug: 'yolo-journal' },
       { title: 'Anchoa', slug: 'anchoa' },
@@ -175,9 +169,8 @@ export const PACKS: Pack[] = [
     count: '9 titles',
     retail: '$254.45',
     image: '/assets/pack-guest-room.jpg',
-    // TODO(stripe): replace with the Fine Print $200 and $300 Payment Links.
-    order: PENDING_ORDER('Fine Print'),
-    withStand: PENDING_ORDER('Fine Print, with stand'),
+    order: 'https://buy.stripe.com/cNi5kC3Xg6rsdZJ57o7N60e',
+    withStand: 'https://buy.stripe.com/7sY7sKdxQ7vwcVFarI7N60f',
     contents: [
       { title: 'Apartamento', slug: 'apartamento' },
       { title: 'Untapped', slug: 'untapped', image: '/assets/covers/guestroom_untapped.jpg' },
