@@ -13,7 +13,7 @@ import { trackPackCtaClick } from '@/lib/neesh-analytics';
 // phone sticky bar). Ordering goes straight to the pack's Stripe link —
 // with-stand when the stand is on.
 const STAND_PRICE = 100;
-const STAND_IMG = '/assets/magazine-stand.jpg';
+const STAND_IMG = '/assets/stand-nestfest.jpg';
 
 export function PackShelf({ packs }: { packs: Pack[] }) {
   const [selectedId, setSelectedId] = useState(packs[0].slug);
@@ -117,7 +117,7 @@ export function PackShelf({ packs }: { packs: Pack[] }) {
               <span
                 className="cover stand-cover"
                 role="img"
-                aria-label="Wooden counter stand"
+                aria-label="Neesh wooden counter stand holding magazines at NestFest"
                 style={{ backgroundImage: `url(${STAND_IMG})` }}
               >
                 <span className="badge add" aria-hidden="true">
