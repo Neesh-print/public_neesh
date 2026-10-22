@@ -144,7 +144,7 @@ export default function SpacesPage() {
                 neighborhood carries.
               </p>
               <p className="lede">
-                You don&rsquo;t have time to become a magazine buyer. We already are. Order a pack
+                You don&rsquo;t have time to become a magazine curator. We already are. Order a pack
                 and your space starts saying something before anyone sits down.
               </p>
               <Link href="/packs" className="btn solid">
