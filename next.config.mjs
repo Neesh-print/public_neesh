@@ -9,7 +9,7 @@ const nextConfig = {
       { source: '/curatedpacks', destination: '/packs', statusCode: 301 },
       // Pack lineup rebuilt and renamed (October 2026). Retired and renamed
       // pack pages land on their replacement, so earlier links keep working.
-      { source: '/packs/studio', destination: '/packs/guest-room', statusCode: 301 },
+      { source: '/packs/studio', destination: '/packs/fine-print', statusCode: 301 },
       { source: '/packs/locker-room', destination: '/packs/dog-ear', statusCode: 301 },
       { source: '/packs/upper-left', destination: '/packs', statusCode: 301 },
       { source: '/packs/waiting-room', destination: '/packs/slow-read', statusCode: 301 },

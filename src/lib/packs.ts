@@ -165,8 +165,8 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'guest-room',
-    name: 'The Guest Room',
+    slug: 'fine-print',
+    name: 'Fine Print',
     rooms: 'Hotels · Design Shops · Home & Gift Boutiques',
     short: 'Hotels · Design Shops',
     price: 200,
@@ -175,9 +175,9 @@ export const PACKS: Pack[] = [
     count: '9 titles',
     retail: '$254.45',
     image: '/assets/pack-guest-room.jpg',
-    // TODO(stripe): replace with the Guest Room $200 and $300 Payment Links.
-    order: PENDING_ORDER('The Guest Room'),
-    withStand: PENDING_ORDER('The Guest Room, with stand'),
+    // TODO(stripe): replace with the Fine Print $200 and $300 Payment Links.
+    order: PENDING_ORDER('Fine Print'),
+    withStand: PENDING_ORDER('Fine Print, with stand'),
     contents: [
       { title: 'Apartamento', slug: 'apartamento' },
       { title: 'Untapped', slug: 'untapped', image: '/assets/covers/guestroom_untapped.jpg' },
