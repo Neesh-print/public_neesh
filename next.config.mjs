@@ -7,6 +7,14 @@ const nextConfig = {
     // lives at /index.
     const redirects = [
       { source: '/curatedpacks', destination: '/packs', statusCode: 301 },
+      // Pack lineup rebuilt and renamed (October 2026). Retired and renamed
+      // pack pages land on their replacement, so earlier links keep working.
+      { source: '/packs/studio', destination: '/packs/fine-print', statusCode: 301 },
+      { source: '/packs/locker-room', destination: '/packs/dog-ear', statusCode: 301 },
+      { source: '/packs/upper-left', destination: '/packs', statusCode: 301 },
+      { source: '/packs/waiting-room', destination: '/packs/slow-read', statusCode: 301 },
+      { source: '/packs/table-service', destination: '/packs/the-spread', statusCode: 301 },
+      { source: '/packs/listening-room', destination: '/packs/liner-notes', statusCode: 301 },
       { source: '/retailers', destination: '/spaces', statusCode: 301 },
       { source: '/pricing', destination: '/publishers', statusCode: 301 },
       { source: '/explore', destination: '/index', statusCode: 301 },

@@ -1,10 +1,15 @@
-// The five curated packs (v2 design copy). Order CTAs keep the live Stripe
-// payment links from the current site; the prototype routed them to retailer
-// signup instead — flagged as an open design decision.
+// The six curated packs. Order CTAs point at each pack's Stripe Payment Link
+// in the "Neesh Print" account ($200 pack, $300 with the stand).
+
+// Until a pack's Stripe links exist, its order buttons open an email to
+// hi@neesh.art instead, so the page never shows a dead button.
+const PENDING_ORDER = (pack: string) =>
+  `mailto:hi@neesh.art?subject=${encodeURIComponent(`Order: ${pack}`)}`;
 
 // One title in a pack's box. Titles in the directory carry a slug and render
 // as linked cards with their directory cover; the rest ship a static cover
-// under /assets/covers.
+// under /assets/covers. A static image set alongside a slug overrides the
+// directory cover (for records whose stored cover is wrong).
 export interface PackTitle {
   title: string;
   slug?: string;
@@ -30,8 +35,8 @@ export interface Pack {
 
 export const PACKS: Pack[] = [
   {
-    slug: 'waiting-room',
-    name: 'The Waiting Room',
+    slug: 'slow-read',
+    name: 'Slow Read',
     rooms: 'Spas · Therapy Offices · Clinics · Salons',
     short: 'Spas · Clinics',
     price: 200,
@@ -55,33 +60,35 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'studio',
-    name: 'The Studio',
-    rooms: 'Design Studios · Agencies · Workshops',
-    short: 'Studios · Agencies',
+    slug: 'tear-sheet',
+    name: 'Tear Sheet',
+    rooms: 'Boutiques · Concept Stores · Showrooms · Vintage Shops',
+    short: 'Boutiques · Showrooms',
     price: 200,
     blurb:
-      'Nobody in a studio needs another screen. They need the thing on the table that starts an argument about a typeface. This pack is the one your team will quietly take home. Titles run toward design, architecture, photography, and craft.',
+      "Cloth, cut, closets, and the people who live in them. Print that tells a customer they're in the right shop before they touch a hanger.",
     count: '9 titles',
-    retail: '$253.50',
-    image: '/assets/pack-studio.jpg',
-    order: 'https://buy.stripe.com/bJefZgfFY6rsg7RbvM7N606',
-    withStand: 'https://buy.stripe.com/dRm5kCdxQ2bc5tddDU7N602',
+    retail: '$282.10',
+    image: '/assets/pack-fitting-room.jpg',
+    // TODO(stripe): replace with the Tear Sheet $200 and $300 Payment Links.
+    order: PENDING_ORDER('Tear Sheet'),
+    withStand: PENDING_ORDER('Tear Sheet, with stand'),
     contents: [
-      { title: 'Luncheon', slug: 'luncheon' },
-      { title: 'Backstage Talks', image: '/assets/covers/studio_02_backstage-talks.jpg' },
-      { title: 'Aedo Magazine', slug: 'aedo-magazine' },
-      { title: 'The Plant', image: '/assets/covers/studio_04_the-plant.jpg' },
-      { title: 'Desired Landscapes', slug: 'desired-landscapes' },
-      { title: 'Deem Journal', slug: 'deem-journal' },
-      { title: 'MYTH', image: '/assets/covers/studio_07_myth.jpg' },
-      { title: 'MacGuffin', slug: 'macguffin' },
-      { title: 'Dirty Furniture', image: '/assets/covers/studio_09_dirty-furniture.jpg' },
+      { title: 'MANY OF THEM', slug: 'many-of-them' },
+      { title: 'Petit Mort', slug: 'petit-mort' },
+      { title: 'Majin', slug: 'majin-magazine' },
+      { title: 'Wardrobe Theory Project', slug: 'wardrobe-theory-project' },
+      { title: 'Fay', slug: 'fay' },
+      { title: 'Viscose Journal', slug: 'viscose-journal' },
+      { title: 'ALL–IN', slug: 'allin-magazine' },
+      { title: 'Acne Paper', slug: 'acne-paper' },
+      // Static cover until the Index record's image is replaced in storage.
+      { title: 'L’Étiquette', slug: 'letiquette', image: '/assets/covers/fittingroom_letiquette.jpg' },
     ],
   },
   {
-    slug: 'listening-room',
-    name: 'The Listening Room',
+    slug: 'liner-notes',
+    name: 'Liner Notes',
     rooms: 'Record Shops · Bars · Listening Bars',
     short: 'Record Shops · Bars',
     price: 200,
@@ -106,34 +113,35 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'locker-room',
-    name: 'The Locker Room',
-    rooms: 'Gyms · Climbing Walls · Saunas · Run Clubs',
-    short: 'Gyms · Run Clubs',
+    slug: 'dog-ear',
+    name: 'Dog Ear',
+    rooms: 'Outdoor Shops · Running Stores · Bike Shops · Climbing Gyms',
+    short: 'Outdoor · Running',
     price: 200,
     blurb:
-      'Sport print has gotten very good and almost nobody stocks it. This pack is for the room where people are already in their bodies and want to read about it. Titles run toward movement, endurance, outdoors, and the culture around all three.',
+      "Mountains, courts, long runs, and the people who can't sit still. Print for the room where everyone just got back from somewhere.",
     count: '9 titles',
-    retail: '$232.00',
-    image: '/assets/pack-locker-room.jpg',
-    order: 'https://buy.stripe.com/eVq4gyfFY5no2h143k7N607',
-    withStand: 'https://buy.stripe.com/3cIbJ00L4178bRB57o7N605',
+    retail: '$246.00',
+    image: '/assets/pack-trailhead.jpg',
+    // TODO(stripe): replace with the Dog Ear $200 and $300 Payment Links.
+    order: PENDING_ORDER('Dog Ear'),
+    withStand: PENDING_ORDER('Dog Ear, with stand'),
     contents: [
-      { title: 'Useless Fighters', image: '/assets/covers/lockerroom_01_useless-fighters.jpg' },
       { title: 'Mountain Gazette', slug: 'mountain-gazette' },
-      { title: "The Surfer's Journal", slug: 'the-surfers-journal' },
-      { title: 'Huck', image: '/assets/covers/lockerroom_04_huck.jpg' },
-      { title: 'Pitch', slug: 'pitch' },
-      { title: 'Victory Journal', slug: 'victory-journal' },
-      { title: 'Racquet', slug: 'racquet-mag' },
+      { title: 'New Mountain Magazine', slug: 'new-mountain-magazine' },
+      { title: 'Trails', slug: 'trails' },
+      { title: 'Field Mag', slug: 'field-mag' },
+      { title: 'Rouleur', slug: 'rouleur' },
+      { title: 'Like the Wind', slug: 'like-the-wind' },
       { title: 'Good Sport', slug: 'good-sport' },
-      { title: 'Oh So', image: '/assets/covers/lockerroom_09_oh-so.jpg' },
+      { title: 'OPEN Tennis', slug: 'open-tennis-magazine' },
+      { title: 'Pitch', slug: 'pitch' },
     ],
   },
   {
-    slug: 'table-service',
-    name: 'Table Service',
-    rooms: 'Restaurants · Cafés · Wine Bars',
+    slug: 'the-spread',
+    name: 'The Spread',
+    rooms: 'Cafés · Wine Bars · Wine Shops · Specialty Grocers',
     short: 'Cafés · Wine Bars',
     price: 200,
     blurb:
@@ -157,28 +165,29 @@ export const PACKS: Pack[] = [
     ],
   },
   {
-    slug: 'upper-left',
-    name: 'The Upper Left',
-    rooms: 'Shops · Cafés · Hotels · Homesick Northwesterners',
-    short: 'Shops · Cafés',
+    slug: 'fine-print',
+    name: 'Fine Print',
+    rooms: 'Hotels · Design Shops · Home & Gift Boutiques',
+    short: 'Hotels · Design Shops',
     price: 200,
     blurb:
-      'Rave flyers, public courts, secondhand clothes, and food from the source. Neesh ships from Seattle and grew up on Portland relationships. This pack is an homage to our roots.',
+      'Rooms, objects, far-off places, and the people who make them. Print that makes a room feel lived in by someone with taste.',
     count: '9 titles',
-    retail: '$225.00',
-    image: '/assets/pack-upper-left.jpg',
-    order: 'https://buy.stripe.com/28EdR88dwg222h18jA7N60b',
-    withStand: 'https://buy.stripe.com/6oU9AS1P89DE1cXfM27N609',
+    retail: '$254.45',
+    image: '/assets/pack-guest-room.jpg',
+    // TODO(stripe): replace with the Fine Print $200 and $300 Payment Links.
+    order: PENDING_ORDER('Fine Print'),
+    withStand: PENDING_ORDER('Fine Print, with stand'),
     contents: [
-      { title: 'Kitchen Table', slug: 'kitchen-table' },
-      { title: 'Buckman Journal', slug: 'buckman-journal' },
-      { title: 'Provecho', slug: 'provecho' },
-      { title: 'Portland Rave Flyers', slug: 'portland-rave-flyers' },
-      { title: 'Portland Tennis Courterly', slug: 'portland-tennis-courterly' },
-      { title: 'Heartbeat', slug: 'heartbeat' },
-      { title: 'Mildew', slug: 'mildew' },
-      { title: 'Trails', slug: 'trails' },
+      { title: 'Apartamento', slug: 'apartamento' },
+      { title: 'Untapped', slug: 'untapped', image: '/assets/covers/guestroom_untapped.jpg' },
+      { title: 'MacGuffin', slug: 'macguffin' },
+      { title: 'ARK Journal', slug: 'ark-journal' },
       { title: 'Ori Magazine', slug: 'ori-magazine' },
+      { title: 'Never Too Small', slug: 'never-too-small' },
+      { title: 'Openhouse', slug: 'openhouse' },
+      { title: 'UPPERCASE', slug: 'uppercase' },
+      { title: 'Design Anthology', slug: 'design-anthology', image: '/assets/covers/guestroom_design-anthology.jpg' },
     ],
   },
 ];
