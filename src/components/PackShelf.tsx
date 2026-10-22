@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { Pack } from '@/lib/packs';
 import { trackPackCtaClick } from '@/lib/neesh-analytics';
 
-// The shelf treatment (design handoff "Packs Shelf 1b"): all five packs on
+// The shelf treatment (design handoff "Packs Shelf 1b"): all six packs on
 // one row sorted by room, the selected pack lifting off the shelf, a detail
 // row beneath, and an order column where the stand is a checkbox that
 // rewrites a single running total. One selection, always-one-selected; one
