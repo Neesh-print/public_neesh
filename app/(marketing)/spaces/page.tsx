@@ -132,7 +132,7 @@ export default function SpacesPage() {
           <div className="feature-cols">
             <img
               className="feature-img"
-              src="/assets/pack-waiting-room.jpg"
+              src="/assets/pack-slow-read.jpg"
               alt="The Slow Read pack, stacked"
             />
             <div className="feature-copy">

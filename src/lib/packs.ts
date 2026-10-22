@@ -44,7 +44,7 @@ export const PACKS: Pack[] = [
       'Plants, mushrooms, slow attention, and the body. Print that lowers the heart rate of the room it sits in.',
     count: '9 titles',
     retail: '$250.00',
-    image: '/assets/pack-waiting-room.jpg',
+    image: '/assets/pack-slow-read.jpg',
     order: 'https://buy.stripe.com/eVq9AS0L4034bRBarI7N600',
     withStand: 'https://buy.stripe.com/9B67sK8dw5no3l51Vc7N601',
     contents: [
@@ -69,7 +69,7 @@ export const PACKS: Pack[] = [
       "Cloth, cut, closets, and the people who live in them. Print that tells a customer they're in the right shop before they touch a hanger.",
     count: '9 titles',
     retail: '$282.10',
-    image: '/assets/pack-fitting-room.jpg',
+    image: '/assets/pack-tear-sheet.jpg',
     // TODO(stripe): replace with the Tear Sheet $200 and $300 Payment Links.
     order: PENDING_ORDER('Tear Sheet'),
     withStand: PENDING_ORDER('Tear Sheet, with stand'),
@@ -96,7 +96,7 @@ export const PACKS: Pack[] = [
       "Music print goes deep, and most of it never makes it past four shops on two continents. This pack is the good stuff: scene documentation, label histories, and the kind of writing that sends you to a record you'd never have found. Titles run toward music, club culture, and sound.",
     count: '10 titles',
     retail: '$240.00',
-    image: '/assets/pack-listening-room.jpg',
+    image: '/assets/pack-liner-notes.jpg',
     order: 'https://buy.stripe.com/28E9AS1P8g221cXeHY7N603',
     withStand: 'https://buy.stripe.com/cNicN4alE7vw08TgQ67N604',
     contents: [
@@ -122,7 +122,7 @@ export const PACKS: Pack[] = [
       "Mountains, courts, long runs, and the people who can't sit still. Print for the room where everyone just got back from somewhere.",
     count: '9 titles',
     retail: '$246.00',
-    image: '/assets/pack-trailhead.jpg',
+    image: '/assets/pack-dog-ear.jpg',
     // TODO(stripe): replace with the Dog Ear $200 and $300 Payment Links.
     order: PENDING_ORDER('Dog Ear'),
     withStand: PENDING_ORDER('Dog Ear, with stand'),
@@ -148,7 +148,7 @@ export const PACKS: Pack[] = [
       'Solo diners, early arrivals, and anyone waiting on a table. Food print is beautiful, it photographs well, and it keeps people at the counter one more drink. Titles run toward food, drink, agriculture, and hospitality.',
     count: '10 titles',
     retail: '$249.00',
-    image: '/assets/pack-table-service-alt.jpg',
+    image: '/assets/pack-the-spread.jpg',
     order: 'https://buy.stripe.com/28EbJ0eBUcPQ8Fp6bs7N60a',
     withStand: 'https://buy.stripe.com/28E5kC79sbLM7Bl1Vc7N608',
     contents: [
@@ -174,7 +174,7 @@ export const PACKS: Pack[] = [
       'Rooms, objects, far-off places, and the people who make them. Print that makes a room feel lived in by someone with taste.',
     count: '9 titles',
     retail: '$254.45',
-    image: '/assets/pack-guest-room.jpg',
+    image: '/assets/pack-fine-print.jpg',
     // TODO(stripe): replace with the Fine Print $200 and $300 Payment Links.
     order: PENDING_ORDER('Fine Print'),
     withStand: PENDING_ORDER('Fine Print, with stand'),
