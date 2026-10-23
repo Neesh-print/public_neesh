@@ -168,7 +168,7 @@ export function PackShelf({ packs }: { packs: Pack[] }) {
               onClick={() => setStandAdded((v) => !v)}
             >
               {standCheckbox('panel')}
-              <img src={STAND_IMG} alt="" className="thumb" />
+              <img loading="lazy" decoding="async" src={STAND_IMG} alt="" className="thumb" />
               <span className="toggle-copy">
                 <span className="toggle-label">Wooden stand</span>
                 <span className="toggle-note">
@@ -197,7 +197,7 @@ export function PackShelf({ packs }: { packs: Pack[] }) {
           onClick={() => setStandAdded((v) => !v)}
         >
           {standCheckbox('panel')}
-          <img src={STAND_IMG} alt="" className="thumb" />
+          <img loading="lazy" decoding="async" src={STAND_IMG} alt="" className="thumb" />
           <span className={`bar-label${standAdded ? ' on' : ''}`}>
             {standAdded ? 'Wooden stand added' : 'Add the wooden stand'}
           </span>

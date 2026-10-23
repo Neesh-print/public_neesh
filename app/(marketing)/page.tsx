@@ -27,7 +27,7 @@ export default async function HomePage() {
   return (
     <>
       <section className="home-hero">
-        <img src="/assets/flatlay-red-wide.jpg" alt="Independent magazines laid out on a red backdrop" />
+        <img fetchPriority="high" src="/assets/flatlay-red-wide.jpg" alt="Independent magazines laid out on a red backdrop" />
         <div className="scrim" />
         <div className="home-hero-content">
           <span className="eyebrow">300+ independent titles from 30+ countries</span>
@@ -61,7 +61,7 @@ export default async function HomePage() {
 
       <section className="doors">
         <Link href="/publishers" className="door publisher">
-          <img src="/assets/bench-tempura.jpg" alt="A publisher reading on a bench" />
+          <img loading="lazy" decoding="async" src="/assets/bench-tempura.jpg" alt="A publisher reading on a bench" />
           <div className="scrim" />
           <div className="door-content">
             <span className="eyebrow">For publishers</span>
@@ -84,7 +84,7 @@ export default async function HomePage() {
           </div>
         </Link>
         <Link href="/spaces" className="door spaces">
-          <img src="/assets/table-sport.jpg" alt="Magazines laid out on a table in a room" />
+          <img loading="lazy" decoding="async" src="/assets/table-sport.jpg" alt="Magazines laid out on a table in a room" />
           <div className="scrim" />
           <div className="door-content">
             <span className="eyebrow">For spaces</span>
@@ -157,7 +157,7 @@ export default async function HomePage() {
               </Link>
             </div>
             <a href={FILM_URL} className="film-link" rel="noopener noreferrer" target="_blank">
-              <img src="/assets/city-reader-wall.jpg" alt="Still from the Neesh film" />
+              <img loading="lazy" decoding="async" src="/assets/city-reader-wall.jpg" alt="Still from the Neesh film" />
               <span className="film-play">
                 <span>
                   <svg width="20" height="22" viewBox="0 0 20 22" fill="#FFFFFF" aria-hidden="true">
@@ -175,6 +175,8 @@ export default async function HomePage() {
         <div className="wrap">
           <div className="feature-cols">
             <img
+              loading="lazy"
+              decoding="async"
               className="feature-img"
               src="/assets/pack-slow-read.jpg"
               alt="The Slow Read pack, stacked"
@@ -214,7 +216,7 @@ export default async function HomePage() {
       </section>
 
       <section className="closing">
-        <img src="/assets/couch-pair.jpg" alt="Two people reading magazines on a couch" />
+        <img loading="lazy" decoding="async" src="/assets/couch-pair.jpg" alt="Two people reading magazines on a couch" />
         <div className="closing-content">
           <h2>Print didn&rsquo;t die. The shelf did.</h2>
           <p>

@@ -58,6 +58,7 @@ export default function PublishersPage() {
     <>
       <section className="page-hero">
         <img
+          fetchPriority="high"
           src="/assets/publisher-portrait.jpg"
           alt="A publisher with her magazines"
           style={{ objectPosition: '50% 24%' }}
@@ -125,6 +126,8 @@ export default function PublishersPage() {
 
       <section className="closing scrimmed closing-big-cta">
         <img
+          loading="lazy"
+          decoding="async"
           src="/assets/market-print.jpg"
           alt="A publisher handling a print"
           style={{ objectPosition: '50% 36%', opacity: 0.5 }}
