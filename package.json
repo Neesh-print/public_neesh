@@ -10,7 +10,11 @@
     "load": "tsx scripts/load.ts",
     "remove": "tsx scripts/remove.ts",
     "approve": "tsx scripts/approve-claim.ts",
-    "approve-store": "tsx scripts/approve-store.ts"
+    "approve-store": "tsx scripts/approve-store.ts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "optimize-images": "node scripts/optimize-images.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.0",

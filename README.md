@@ -21,6 +21,7 @@ Next.js (App Router) on Vercel plus Supabase. Carries two things.
 /api/signal                    POST demand signal ingest (JSON or form post)
 /api/claim                     POST claim submission (manual review in v1)
 /api/revalidate                POST token-protected on-demand revalidation
+/api/client-error              POST browser render-error reports (error boundaries)
 /api/og                        branded OG image fallback
 /sitemap.xml                   generated from the DB on request
 /robots.txt                    all crawlers allowed, answer-engine bots named
@@ -75,3 +76,26 @@ error.
 Copy `.env.example` to `.env` and fill it in. Vercel needs the same
 variables. Nothing renders private data; `contact_email` and claim emails
 never reach a page.
+
+## Checks
+
+```bash
+npm run typecheck           # tsc
+npm test                    # unit and regression tests (node:test, no database)
+npm run smoke               # status, redirect and header checks against a running site
+                            # SMOKE_URL=https://... to point it elsewhere
+```
+
+CI (`.github/workflows/ci.yml`) runs all of these plus `npm audit` and a
+production build on every push, with the database env blanked so nothing
+touches production.
+
+The public form routes share `src/lib/forms.ts` (parsing, honeypot,
+same-origin redirects) and are rate limited per IP (`src/lib/rate-limit.ts`).
+Anything a visitor types is HTML-escaped in emails and only echoed back
+through `echoSafe` (`src/lib/notify.ts`).
+
+## Operations
+
+Deploys, rollback, backups and restore, monitoring, staging, spend caps and
+email DNS: `docs/operations.md`.
