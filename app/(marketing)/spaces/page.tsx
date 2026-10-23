@@ -38,6 +38,7 @@ export default function SpacesPage() {
     <>
       <section className="page-hero">
         <img
+          fetchPriority="high"
           src="/assets/shop-browsing.jpg"
           alt="People browsing the magazine shelves in a shop"
           style={{ objectPosition: '50% 42%' }}
@@ -131,6 +132,8 @@ export default function SpacesPage() {
         <div className="wrap">
           <div className="feature-cols">
             <img
+              loading="lazy"
+              decoding="async"
               className="feature-img"
               src="/assets/pack-slow-read.jpg"
               alt="The Slow Read pack, stacked"
@@ -186,6 +189,8 @@ export default function SpacesPage() {
               </p>
             </div>
             <img
+              loading="lazy"
+              decoding="async"
               src="/assets/reader-yolo.jpg"
               alt="A reader with a copy of YOLO Journal"
               style={{
@@ -218,7 +223,7 @@ export default function SpacesPage() {
       </section>
 
       <section className="closing closing-big-cta">
-        <img src="/assets/table-sport.jpg" alt="Magazines laid out on a table" style={{ opacity: 0.42 }} />
+        <img loading="lazy" decoding="async" src="/assets/table-sport.jpg" alt="Magazines laid out on a table" style={{ opacity: 0.42 }} />
         <div className="closing-content">
           <h2 style={{ maxWidth: '20ch' }}>Make the room say something</h2>
           <div className="closing-ctas">
