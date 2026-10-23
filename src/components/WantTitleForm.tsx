@@ -1,3 +1,5 @@
+import { Honeypot } from './Honeypot';
+
 // The single demand CTA on a title profile: one form for spaces and readers
 // alike (email, postcode, which one you are). Progressively enhanced, plain
 // form post, no JS required; the API maps the role onto the stored signal
@@ -10,6 +12,7 @@ export function WantTitleForm({ titleId }: { titleId: string }) {
         <span className="hint">Tell us where you are and we will let you know when it is near you.</span>
       </summary>
       <form className="want-form" action="/api/signal" method="post">
+        <Honeypot />
         <input type="hidden" name="title_id" value={titleId} />
         <input type="hidden" name="signal_type" value="title_interest" />
         <label className="field">

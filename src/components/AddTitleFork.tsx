@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { ArrowIcon } from './Logo';
 
+import { Honeypot } from './Honeypot';
 // The Add a title fork, v2: one entry point for everyone. Publishers head
 // into the claim flow (search first, so claiming beats duplicating); spaces
 // and readers get a mini form that lands in directory_suggestions.
@@ -64,6 +65,7 @@ export function AddTitleFork() {
       <h1>What are we missing?</h1>
       <p className="sub">If it fits the index, we will add it.</p>
       <form action="/api/suggest-title" method="post" className="utility-form">
+        <Honeypot />
         <label className="field">
           <span>Magazine title</span>
           <input name="title_name" required maxLength={200} placeholder="e.g. Mushroom People" />

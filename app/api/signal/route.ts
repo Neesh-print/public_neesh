@@ -1,9 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { anonClient, serviceClient } from '@/lib/supabase';
 import { clientIp, ipHash, isBot, payloadSchemas, signalSchema } from '@/lib/signals';
-import { emailHtml, notify, sendEmail } from '@/lib/notify';
+import { echoSafe, emailHtml, notify, sendEmail } from '@/lib/notify';
 import { canonical } from '@/lib/seo';
 import { TAG_THRESHOLD } from '@/lib/queries';
+import { readSubmission, redirectWithNotice } from '@/lib/forms';
+import { limitFormRequest, limitRequest } from '@/lib/rate-limit';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -11,48 +14,36 @@ function noContent() {
   return new NextResponse(null, { status: 204 });
 }
 
-function redirectBack(req: NextRequest, param: string) {
-  const referer = req.headers.get('referer');
-  const url = referer ? new URL(referer) : new URL('/index', req.url);
-  url.searchParams.set('submitted', param);
-  return NextResponse.redirect(url, 303);
-}
-
-function prune(fields: Record<string, string>): Record<string, string> {
-  const out: Record<string, string> = {};
-  for (const [k, v] of Object.entries(fields)) {
-    if (typeof v === 'string' && v.trim() !== '') out[k] = v.trim();
-  }
-  return out;
-}
+// Signal types that email the person who sent them.
+const EMAILING_TYPES = new Set(['stock_request', 'want_near', 'title_interest']);
 
 // Demand signal ingest (spec 8). Always answers 204 (or a 303 back to the
 // form page) so the client never branches on the result.
 export async function POST(req: NextRequest) {
-  const contentType = req.headers.get('content-type') ?? '';
-  const isForm =
-    contentType.includes('application/x-www-form-urlencoded') ||
-    contentType.includes('multipart/form-data');
-
+  const submission = await readSubmission(req);
   let raw: unknown = null;
   let signalTypeForRedirect = 'ok';
-  try {
-    if (isForm) {
-      const fd = await req.formData();
-      const entries: Record<string, string> = {};
-      for (const [k, v] of fd.entries()) {
-        if (typeof v === 'string') entries[k] = v;
-      }
-      const { title_id, signal_type, ...rest } = entries;
-      signalTypeForRedirect = signal_type ?? 'ok';
-      raw = { title_id, signal_type, payload: prune(rest) };
-    } else {
-      raw = await req.json();
-    }
-  } catch {
-    return isForm ? redirectBack(req, signalTypeForRedirect) : noContent();
+  if (submission.ok && submission.isForm) {
+    const { title_id, signal_type, ...rest } = submission.raw as Record<string, string>;
+    signalTypeForRedirect = signal_type ?? 'ok';
+    raw = { title_id, signal_type, payload: rest };
+  } else if (submission.ok) {
+    raw = submission.raw;
   }
-  const done = () => (isForm ? redirectBack(req, signalTypeForRedirect) : noContent());
+  const done = () =>
+    submission.isForm ? redirectWithNotice(req, signalTypeForRedirect) : noContent();
+  if (!submission.ok || submission.trapped) return done();
+
+  // Beacons fire on every profile view; the emailing types get the same
+  // limits as the other public forms. Over the limit is answered like a
+  // success and nothing is stored.
+  const requestedType =
+    raw && typeof raw === 'object' ? (raw as { signal_type?: unknown }).signal_type : undefined;
+  const allowed =
+    typeof requestedType === 'string' && EMAILING_TYPES.has(requestedType)
+      ? await limitFormRequest(req, 'signal-email')
+      : await limitRequest(req, 'signal-beacon', 60, 60);
+  if (!allowed) return done();
 
   // The merged "Want this title?" form submits a virtual title_interest
   // type; the chosen role decides which stored signal it becomes, so the
@@ -84,7 +75,7 @@ export async function POST(req: NextRequest) {
       user_agent: ua ? ua.slice(0, 500) : null,
     });
     if (error) {
-      console.error('signal insert failed', error.message);
+      log('error', 'signal.insert_failed', { error: error.message });
       return done();
     }
 
@@ -109,6 +100,7 @@ export async function POST(req: NextRequest) {
       // forwarded to the publisher, and the email must not claim otherwise.
       if (parsed.data.signal_type === 'stock_request' && title) {
         const request = payload.data as { business_name?: string; email: string };
+        const business = echoSafe(request.business_name, '', 80);
         // Primary niche and its live-title count, through the anon client so
         // the count respects the visibility predicate.
         let nichePara = '';
@@ -146,7 +138,7 @@ export async function POST(req: NextRequest) {
         const bodyStart =
           `Hi,\n\n` +
           `Thanks for asking about **${title.name}**` +
-          `${request.business_name ? ` for ${request.business_name}` : ''}. ` +
+          `${business ? ` for ${business}` : ''}. ` +
           `We're checking availability and terms and we'll come back to you.\n\n` +
           `Usually takes a couple of days. If it's urgent, reply and say so.`;
         const body = bodyStart + nichePara;
@@ -162,9 +154,10 @@ export async function POST(req: NextRequest) {
       // rather than a city (spec 8), so the postcode stands in for {city}.
       if (parsed.data.signal_type === 'want_near' && title) {
         const request = payload.data as { postcode: string; email: string };
+        const place = echoSafe(request.postcode, 'your area', 16);
         const body =
           `Hi,\n\n` +
-          `Thanks for telling us you want **${title.name}** in ${request.postcode}. ` +
+          `Thanks for telling us you want **${title.name}** in ${place}. ` +
           `We keep track of these, and when enough people ask for a title in one ` +
           `place, we go find a shop or café to stock it.\n\n` +
           `We'll email you if that happens. That's the only reason we'll email you.\n\n` +
@@ -172,14 +165,14 @@ export async function POST(req: NextRequest) {
           `**Buy ${title.name} direct:** ${canonical(`/out/${title.slug}`)}`;
         await sendEmail({
           to: request.email,
-          subject: `Noted, ${title.name} in ${request.postcode}`,
+          subject: `Noted, ${title.name} near you`,
           text: body.replace(/\*\*/g, ''),
           html: emailHtml(body),
         });
       }
     }
   } catch (err) {
-    console.error('signal ingest failed', err);
+    log('error', 'signal.failed', { error: err });
   }
   return done();
 }
