@@ -46,7 +46,7 @@ export const payloadSchemas: Record<SignalType, z.ZodTypeAny> = {
 export const signalSchema = z.object({
   title_id: z.string().uuid(),
   signal_type: z.enum(SIGNAL_TYPES),
-  payload: z.record(z.unknown()).optional().default({}),
+  payload: z.record(z.string(), z.unknown()).optional().default({}),
 });
 
 const BOT_UA =
