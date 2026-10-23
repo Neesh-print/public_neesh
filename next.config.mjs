@@ -1,6 +1,33 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
+  poweredByHeader: false,
+  async headers() {
+    // Baseline security headers on every response. HSTS is deliberately
+    // without includeSubDomains/preload until every neesh.art subdomain is
+    // confirmed HTTPS-only. The CSP covers framing, plugins and base-URI
+    // hijacking only; a full script-src policy needs the GTM container's
+    // tag list first (see docs/operations.md).
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'self'; base-uri 'self'; object-src 'none'",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     // Marketing-site IA. All 301 permanent; Next preserves query strings on
     // redirects, so Stripe links pointed at /curatedpacks survive. The index

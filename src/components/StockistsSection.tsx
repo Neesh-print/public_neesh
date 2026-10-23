@@ -5,6 +5,7 @@ import { countryName } from '@/lib/seo';
 import type { TitleFull, TitleStockist } from '@/lib/types';
 import { StockistFilter } from './StockistFilter';
 
+import { Honeypot } from './Honeypot';
 // "Where it's stocked" on a title page (stockists spec, Phase 1). Server
 // rendered so the shop list is in the HTML crawlers see. Lists are kept per
 // publisher, so a title shows its publisher's shops.
@@ -73,6 +74,7 @@ function SuggestShop({ title, prompt }: { title: TitleFull; prompt: string }) {
     <details className="stockist-suggest">
       <summary>{prompt}</summary>
       <form action="/api/suggest-stockist" method="post" className="want-form">
+        <Honeypot />
         <input type="hidden" name="title_id" value={title.id} />
         <label className="field">
           <span>Shop name</span>

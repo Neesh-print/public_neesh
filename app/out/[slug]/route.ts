@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { anonClient, hasSupabaseEnv, serviceClient } from '@/lib/supabase';
 import { clientIp, ipHash, isBot } from '@/lib/signals';
+import { limitRequest } from '@/lib/rate-limit';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -24,8 +26,9 @@ export async function GET(
 
   if (!title) return NextResponse.redirect(new URL('/index', req.url), 302);
 
+  // Over the limit the redirect still works; the click just is not counted.
   const ua = req.headers.get('user-agent');
-  if (!isBot(ua)) {
+  if (!isBot(ua) && (await limitRequest(req, 'out', 60, 60))) {
     try {
       await serviceClient().from('directory_demand_signals').insert({
         title_id: title.id,
@@ -35,7 +38,7 @@ export async function GET(
         user_agent: ua ? ua.slice(0, 500) : null,
       });
     } catch (err) {
-      console.error('outbound_click log failed', err);
+      log('error', 'outbound_click.log_failed', { error: err });
     }
   }
 

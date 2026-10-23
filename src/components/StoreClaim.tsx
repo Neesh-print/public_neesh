@@ -1,5 +1,6 @@
 import { appUrl } from '@/lib/seo';
 
+import { Honeypot } from './Honeypot';
 // The claim banner on an unclaimed store page (stockists spec, Phase 2).
 // A plain form post, no JS: the claim is stored for manual review, and the
 // space is pointed at Neesh signup so the approved page links to an account.
@@ -16,6 +17,7 @@ export function StoreClaim({ storeId, storeName }: { storeId: string; storeName:
           <span className="hint">A person checks every claim, usually within a day.</span>
         </summary>
         <form className="want-form" action="/api/claim-store" method="post">
+          <Honeypot />
           <input type="hidden" name="store_id" value={storeId} />
           <label className="field">
             <span>Your name</span>
