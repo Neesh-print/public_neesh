@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useEffect } from 'react';
 import { ArrowIcon } from '@/components/Logo';
+import { trackTitleCta } from '@/components/TrackedCta';
 import type { Coverage, Issue } from '@/lib/collect/shared';
 import { useCollect } from './CollectProvider';
 import { AlertToggle } from './AlertToggle';
@@ -63,14 +64,18 @@ export function OrderCta({ titleId, titleSlug, listed }: { titleId: string; titl
   const following = titles[titleId]?.following ?? false;
   if (!listed) {
     return (
-      <a className="c-btn" href="#stockists">
+      <a className="c-btn" href="#stockists" onClick={() => trackTitleCta('see_stocked', titleSlug)}>
         Find shops
       </a>
     );
   }
   return (
     <div className="c-order">
-      <Link href={`/order/${titleSlug}`} className={`btn ${following ? 'ghost' : 'solid'} c-order-btn`}>
+      <Link
+        href={`/order/${titleSlug}`}
+        className={`btn ${following ? 'ghost' : 'solid'} c-order-btn`}
+        onClick={() => trackTitleCta('stock_it', titleSlug)}
+      >
         Order wholesale on Neesh
         <ArrowIcon />
       </Link>

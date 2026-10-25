@@ -1,8 +1,9 @@
 import Link from 'next/link';
 
 // The v2 index card: 3/4 cover at 4px radius (scale 1.05 on hover via CSS),
-// Featured pill, Archivo name, mono publisher, niche chip + "Order now" chip.
-// Plain component so both server pages (niche, publisher) and the client
+// Featured pill, Archivo name, mono publisher, mono origin/frequency line,
+// niche chip + "Order now" chip. Pass niche: null where every card would
+// carry the same niche (a niche page). Plain component so both server pages (niche, publisher) and the client
 // grid can render it.
 export interface GridItem {
   id: string;
@@ -11,6 +12,8 @@ export interface GridItem {
   cover: string | null;
   publisher: string;
   niche: string | null;
+  // "City, Country · Frequency" from titleCardMeta; omitted where unknown.
+  meta?: string | null;
   onNeesh: boolean;
   featured: boolean;
 }
@@ -34,10 +37,13 @@ export function TitleGridCard({ item, eager = false }: { item: GridItem; eager?:
       </div>
       <span className="t-card-name">{item.name}</span>
       <span className="t-card-pub">{item.publisher}</span>
-      <div className="t-card-chips">
-        {item.niche && <span className="chip">{item.niche}</span>}
-        {item.onNeesh && <span className="chip order">Order now</span>}
-      </div>
+      {item.meta && <span className="t-card-meta">{item.meta}</span>}
+      {(item.niche || item.onNeesh) && (
+        <div className="t-card-chips">
+          {item.niche && <span className="chip">{item.niche}</span>}
+          {item.onNeesh && <span className="chip order">Order now</span>}
+        </div>
+      )}
     </Link>
   );
 }

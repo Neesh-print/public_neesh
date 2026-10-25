@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { monthYear, plural } from '@/lib/format';
 import { isCityHidden } from '@/lib/queries';
 import { countryName } from '@/lib/seo';
@@ -6,6 +5,7 @@ import type { TitleFull, TitleStockist } from '@/lib/types';
 import type { ShopEvidence } from '@/lib/collect/server';
 import { StockistGroups, type CityGroup, type ShopLine } from './collect/StockistGroups';
 import { Honeypot } from './Honeypot';
+import { TrackedLink } from './TrackedCta';
 
 // "Find shops that carry this magazine" on a title page. Server rendered so
 // the shop list is in the HTML crawlers see. Lists are kept per publisher,
@@ -182,9 +182,9 @@ export function StockistsSection({
         {title.available_on_neesh && (
           <p className="stockists-order">
             Run a space?{' '}
-            <Link href={`/order/${title.slug}`} className="text-link">
+            <TrackedLink href={`/order/${title.slug}`} className="text-link" cta="stock_it" titleSlug={title.slug}>
               Order wholesale on Neesh
-            </Link>
+            </TrackedLink>
           </p>
         )}
       </div>

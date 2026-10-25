@@ -401,19 +401,76 @@ export async function getTagBySlug(slug: string): Promise<TagWithCount | null> {
   return { ...tag, live_count: directory_title_tags?.[0]?.count ?? 0 };
 }
 
+// The Featured trio: the three Neesh titles whose publishers joined the
+// platform most recently. Gate: the publisher must actually have a magazine
+// listed (neesh_magazine_id), not just an approved account.
+export const FEATURED_COUNT = 3;
+
+export function pickFeaturedSlugs(
+  titles: Pick<Title, 'slug' | 'available_on_neesh' | 'neesh_magazine_id' | 'neesh_listed_at'>[]
+): string[] {
+  return titles
+    .filter((t) => t.available_on_neesh && t.neesh_magazine_id && t.neesh_listed_at)
+    .sort((a, b) => (b.neesh_listed_at ?? '').localeCompare(a.neesh_listed_at ?? ''))
+    .slice(0, FEATURED_COUNT)
+    .map((t) => t.slug);
+}
+
+// The same trio straight from the database, for pages that do not load the
+// whole catalog.
+export async function getFeaturedSlugs(): Promise<string[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient()
+    .from('directory_titles')
+    .select('slug, available_on_neesh, neesh_magazine_id, neesh_listed_at, publisher:directory_publishers!inner(id)')
+    .eq('removed', false)
+    .in('status', ['active', 'dormant'])
+    .eq('available_on_neesh', true)
+    .not('neesh_magazine_id', 'is', null)
+    .not('neesh_listed_at', 'is', null)
+    .order('neesh_listed_at', { ascending: false })
+    .limit(FEATURED_COUNT);
+  return pickFeaturedSlugs(
+    (data as Pick<Title, 'slug' | 'available_on_neesh' | 'neesh_magazine_id' | 'neesh_listed_at'>[]) ?? []
+  );
+}
+
+// Index ordering, shared by /index and the niche pages: Featured first (in
+// Featured order), then everything orderable on Neesh, then the rest, each
+// group alphabetical. Expects rows already sorted by name; Array.sort is
+// stable, so ties keep that order.
+export function sortForIndex<T extends { slug: string; available_on_neesh: boolean }>(
+  rows: T[],
+  featuredSlugs: string[]
+): T[] {
+  const rank = (row: T) => {
+    const f = featuredSlugs.indexOf(row.slug);
+    if (f >= 0) return f;
+    return row.available_on_neesh ? featuredSlugs.length : featuredSlugs.length + 1;
+  };
+  return [...rows].sort((a, b) => rank(a) - rank(b));
+}
+
+// A niche's titles in Index order, one page at a time. The ordering has to
+// hold across pages (an orderable title must never land on page 2 behind
+// unorderable ones on page 1), so the whole tag is read in one query and
+// sorted before it is sliced. Tags run to a few hundred titles at most,
+// well under the row cap.
 export async function getTitlesForTag(
   tagId: string,
-  page: number
+  page: number,
+  featuredSlugs: string[] = []
 ): Promise<{ titles: TitleWithPublisher[]; total: number }> {
   if (!hasSupabaseEnv) return { titles: [], total: 0 };
   const from = (page - 1) * PAGE_SIZE;
-  const { data, count } = await anonClient()
+  const { data } = await anonClient()
     .from('directory_titles')
-    .select(`${TITLE_SELECT}, directory_title_tags!inner(tag_id)`, { count: 'exact' })
+    .select(`${TITLE_SELECT}, directory_title_tags!inner(tag_id)`)
     .eq('directory_title_tags.tag_id', tagId)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
     .order('name')
-    .range(from, from + PAGE_SIZE - 1);
-  return { titles: (data as unknown as TitleWithPublisher[]) ?? [], total: count ?? 0 };
+    .limit(1000);
+  const all = sortForIndex((data as unknown as TitleWithPublisher[]) ?? [], featuredSlugs);
+  return { titles: all.slice(from, from + PAGE_SIZE), total: all.length };
 }
