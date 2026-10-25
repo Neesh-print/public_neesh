@@ -11,9 +11,9 @@
 -- page 1 of /index/<slug> only.
 
 update directory_tags
-set intro_md = $md$Independent travel magazines take their time with a place, through long reporting, photo essays and writing from people who actually live there. They are made to be read slowly and kept, which is why they sell to the reader planning the next trip and to the shop that wants something worth picking up off the table. Some of these titles can be ordered wholesale through Neesh, and every title page shows where it's stocked.$md$
+set intro_md = $md$Independent travel magazines stay long enough to know a place, with reporting that takes weeks, photographs that wait for the light and writers who live down the street from the story. They are the souvenir that outlasts the trip, and a stack of them turns into a map of everywhere you have been and everywhere you keep meaning to go. Find one here, see which shop near you carries it, and start keeping track in your collection.$md$
 where slug = 'travel';
 
 update directory_tags
-set intro_md = $md$Independent fashion magazines treat clothing as culture, with essays, archives, long interviews and photography that has room to breathe. They reach readers who care how things are made and worn, and they give a shop a reason for those readers to come back when the next issue lands. Some of these titles can be ordered wholesale through Neesh, and every title page shows where it's stocked.$md$
+set intro_md = $md$Independent fashion magazines are where clothes get taken seriously, as history, as craft and as a way of seeing. They run the long interview, the archive dig and the shoot that would never survive a brand meeting, and they hold their value on the shelf long after the season ends. Every issue picks up the conversation where the last one left off, so find the title that speaks your language, see where it's stocked, and collect the run.$md$
 where slug = 'fashion';
