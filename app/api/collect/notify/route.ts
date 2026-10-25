@@ -145,7 +145,7 @@ export async function GET(req: NextRequest) {
         })),
         { logo: canonical('/neesh-logo.png'), settings: canonical('/collect/settings') }
       );
-      await sendEmail({ to, subject: email.subject, text: email.text, html: email.html });
+      await sendEmail({ to, subject: email.subject, text: email.text, html: email.html, throttle: false });
       await supabase.from('collection_events').insert(
         list.map((i) => ({
           user_id: userId,
@@ -213,6 +213,7 @@ export async function GET(req: NextRequest) {
           subject: `${r.issue.title.name} ${r.issue.issue_label} is at ${r.store.name}`,
           text,
           html: emailHtml(text),
+          throttle: false,
         });
         await supabase
           .from('availability_requests')

@@ -18,8 +18,12 @@ interface EmailInput {
   subject: string;
   text: string;
   html?: string;
-  /** Cap confirmations per recipient. Off only for the admin inbox. */
-  throttle?: boolean;
+  /**
+   * Emails per recipient per day for mail a visitor can trigger to any
+   * address (default 3). false for mail we initiate: the admin inbox and
+   * the scheduled reader notifications.
+   */
+  throttle?: number | false;
 }
 
 const RECIPIENT_LIMIT = 3;
@@ -41,10 +45,16 @@ async function postToResend(apiKey: string, body: string): Promise<Response> {
   }
 }
 
-export async function sendEmail({ to, subject, text, html, throttle = true }: EmailInput): Promise<void> {
+export async function sendEmail({
+  to,
+  subject,
+  text,
+  html,
+  throttle = RECIPIENT_LIMIT,
+}: EmailInput): Promise<void> {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) return;
-  if (throttle && !(await rateLimit(`email-to:${hashKey(to)}`, RECIPIENT_LIMIT, RECIPIENT_WINDOW_SEC))) {
+  if (throttle !== false && !(await rateLimit(`email-to:${hashKey(to)}`, throttle, RECIPIENT_WINDOW_SEC))) {
     log('warn', 'email.recipient_throttled', { subject });
     return;
   }
@@ -117,9 +127,16 @@ export function echoSafe(value: string | null | undefined, fallback: string, max
 }
 
 // Minimal markdown-ish to HTML for email bodies: **bold** and paragraphs.
-// The text is escaped first, so nothing in it can become markup.
-export function emailHtml(text: string): string {
-  const paragraphs = escapeHtml(text)
+// The text is escaped first, so nothing in it can become markup. links maps
+// a URL that appears in the text to the label it should show as an anchor;
+// it is the only way a link gets into the HTML, so pass only URLs we built.
+export function emailHtml(text: string, links: Record<string, string> = {}): string {
+  let escaped = escapeHtml(text);
+  for (const [url, label] of Object.entries(links)) {
+    const href = escapeHtml(url);
+    escaped = escaped.split(href).join(`<a href="${href}">${escapeHtml(label)}</a>`);
+  }
+  const paragraphs = escaped
     .split(/\n\n+/)
     .map((p) =>
       p

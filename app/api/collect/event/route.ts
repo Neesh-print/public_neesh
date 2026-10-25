@@ -4,6 +4,7 @@ import { serviceClient } from '@/lib/supabase';
 import { isBot } from '@/lib/signals';
 import { CLIENT_EVENT_TYPES, STATE_EVENT_TYPES } from '@/lib/collect/shared';
 import { cleanUtm, readerFromRequest } from '@/lib/collect/server';
+import { limitRequest } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
 
@@ -32,6 +33,7 @@ const schema = z.object({
 // reader are dropped to avoid counting twice.
 export async function POST(req: NextRequest) {
   if (isBot(req.headers.get('user-agent'))) return new NextResponse(null, { status: 204 });
+  if (!(await limitRequest(req, 'collect-event', 120, 60))) return new NextResponse(null, { status: 204 });
   let raw: unknown;
   try {
     raw = await req.json();

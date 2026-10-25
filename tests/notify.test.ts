@@ -78,3 +78,17 @@ test('sendEmail retries once on a 5xx', async () => {
   await sendEmail({ to: 'a@example.com', subject: 's', text: 't' });
   assert.equal(n, 2);
 });
+
+test('emailHtml links only the URLs passed explicitly', () => {
+  const url = 'https://neesh.art/collect/auth?token_hash=abc&type=magiclink';
+  const html = emailHtml(`Sign in:\n\n${url}\n\nor visit https://evil.example`, { [url]: 'Sign in to Neesh' });
+  assert.ok(html.includes('<a href="https://neesh.art/collect/auth?token_hash=abc&amp;type=magiclink">Sign in to Neesh</a>'));
+  assert.equal(html.match(/<a /g)?.length, 1);
+});
+
+test('throttle can be raised per email or turned off', async () => {
+  for (let i = 0; i < 8; i++) await sendEmail({ to: 'reader@example.com', subject: 's', text: 't', throttle: 6 });
+  assert.equal(calls.length, 6);
+  for (let i = 0; i < 5; i++) await sendEmail({ to: 'cron@example.com', subject: 's', text: 't', throttle: false });
+  assert.equal(calls.length, 11);
+});
