@@ -46,7 +46,7 @@ export const payloadSchemas: Record<SignalType, z.ZodTypeAny> = {
 export const signalSchema = z.object({
   title_id: z.string().uuid(),
   signal_type: z.enum(SIGNAL_TYPES),
-  payload: z.record(z.unknown()).optional().default({}),
+  payload: z.record(z.string(), z.unknown()).optional().default({}),
 });
 
 const BOT_UA =
@@ -64,8 +64,19 @@ function sha256(input: string): string {
 
 // ip_hash = sha256(ip + daily_salt) where daily_salt = sha256(secret + date).
 // The daily rotation means no stable identifier for a person is ever stored.
-export function ipHash(ip: string): string {
-  const secret = process.env.SIGNAL_SALT_SECRET ?? 'neesh-directory';
+// Without SIGNAL_SALT_SECRET there is no safe salt (a constant one would make
+// the hash reversible by brute force over the IPv4 space), so no hash is
+// stored at all.
+let warnedNoSalt = false;
+export function ipHash(ip: string): string | null {
+  const secret = process.env.SIGNAL_SALT_SECRET;
+  if (!secret) {
+    if (!warnedNoSalt) {
+      console.warn(JSON.stringify({ level: 'warn', event: 'signals.salt_missing' }));
+      warnedNoSalt = true;
+    }
+    return null;
+  }
   const day = new Date().toISOString().slice(0, 10);
   const dailySalt = sha256(secret + day);
   return sha256(ip + dailySalt);

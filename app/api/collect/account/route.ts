@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
     to: reader.email,
     subject: 'Confirm deleting your collection on Neesh',
     text: body,
-    html: emailHtml(body.replace(link, `<a href="${link}">Delete my collection</a>`)),
+    html: emailHtml(body, { [link]: 'Delete my collection' }),
   });
   return NextResponse.json({ ok: true });
 }

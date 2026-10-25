@@ -28,24 +28,28 @@ export default function AuthPublisherPage() {
   const [exact, setExact] = useState<TitleSearchResult | null>(null);
   const [near, setNear] = useState<TitleSearchResult[]>([]);
   const [busy, setBusy] = useState(false);
+  const [failed, setFailed] = useState(false);
 
   async function search(event: React.FormEvent) {
     event.preventDefault();
     const q = query.trim();
     if (!q) return;
     setBusy(true);
+    setFailed(false);
     try {
-      const res = await fetch(`/api/title-search?q=${encodeURIComponent(q)}`);
+      const res = await fetch(`/api/title-search?q=${encodeURIComponent(q)}`, {
+        signal: AbortSignal.timeout(8000),
+      });
+      if (!res.ok) throw new Error(`title search ${res.status}`);
       const data: { exact: TitleSearchResult | null; near: TitleSearchResult[] } = await res.json();
       setSearched(q);
       setExact(data.exact);
       setNear(data.near);
       setPhase(data.exact ? 'found' : data.near.length > 0 ? 'near' : 'none');
     } catch {
-      setSearched(q);
-      setExact(null);
-      setNear([]);
-      setPhase('none');
+      // A failed search is not "no match": showing the add-new path here
+      // would create duplicates of titles already in the index.
+      setFailed(true);
     } finally {
       setBusy(false);
     }
@@ -119,9 +123,14 @@ export default function AuthPublisherPage() {
                 aria-label="Your magazine or publisher name"
               />
               <button type="submit" className="btn solid" disabled={busy}>
-                Search
+                {busy ? 'Searching…' : 'Search'}
               </button>
             </form>
+            {failed && (
+              <p className="small" role="alert">
+                The search didn&rsquo;t load. Check your connection and try again.
+              </p>
+            )}
           </>
         )}
 

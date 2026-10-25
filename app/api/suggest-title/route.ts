@@ -1,7 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { serviceClient } from '@/lib/supabase';
-import { emailHtml, notify, sendEmail } from '@/lib/notify';
+import { echoSafe, emailHtml, notify, sendEmail } from '@/lib/notify';
+import { readSubmission, redirectWithNotice, tooManyRequests } from '@/lib/forms';
+import { limitFormRequest } from '@/lib/rate-limit';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -15,36 +18,17 @@ const suggestSchema = z.object({
 // The non-publisher branch of Add a title: store the suggestion, tell the
 // admin, and confirm to the suggester. Nothing goes live without review.
 export async function POST(req: NextRequest) {
-  const contentType = req.headers.get('content-type') ?? '';
-  const isForm =
-    contentType.includes('application/x-www-form-urlencoded') ||
-    contentType.includes('multipart/form-data');
+  const submission = await readSubmission(req);
+  if (!submission.ok) return NextResponse.json({ ok: false }, { status: 400 });
+  const { isForm, raw, trapped } = submission;
 
-  let raw: unknown;
-  try {
-    if (isForm) {
-      const fd = await req.formData();
-      const entries: Record<string, string> = {};
-      for (const [k, v] of fd.entries()) {
-        if (typeof v === 'string' && v.trim() !== '') entries[k] = v.trim();
-      }
-      raw = entries;
-    } else {
-      raw = await req.json();
-    }
-  } catch {
-    return NextResponse.json({ ok: false }, { status: 400 });
+  const finish = () =>
+    isForm ? redirectWithNotice(req, 'suggestion', '/add-title') : NextResponse.json({ ok: true });
+
+  if (!(await limitFormRequest(req, 'suggest-title'))) {
+    return isForm ? finish() : tooManyRequests();
   }
-
-  const finish = () => {
-    if (isForm) {
-      const referer = req.headers.get('referer');
-      const url = referer ? new URL(referer) : new URL('/add-title', req.url);
-      url.searchParams.set('submitted', 'suggestion');
-      return NextResponse.redirect(url, 303);
-    }
-    return NextResponse.json({ ok: true });
-  };
+  if (trapped) return finish();
 
   const parsed = suggestSchema.safeParse(raw);
   if (!parsed.success) {
@@ -61,19 +45,22 @@ export async function POST(req: NextRequest) {
       role,
     });
     if (error) {
-      console.error('suggestion insert failed', error.message);
+      log('error', 'suggestion.insert_failed', { error: error.message });
       return finish();
     }
 
+    // The title name is whatever the visitor typed, so it is echoed only
+    // when it is plain words and never goes in the subject.
+    const echoed = echoSafe(title_name, '');
     const body =
       `Hi,\n\n` +
-      `Thanks for suggesting **${title_name}** for the Neesh Index. A person ` +
+      `Thanks for suggesting ${echoed ? `**${echoed}**` : 'a title'} for the Neesh Index. A person ` +
       `checks every suggestion; if it fits, it's usually live within a couple ` +
       `of days and we'll email you the page.\n\n` +
       `That's the only reason we'll email you.`;
     await sendEmail({
       to: email,
-      subject: `Got it, ${title_name} is in the queue`,
+      subject: 'Got it, your suggestion is in the queue',
       text: body.replace(/\*\*/g, ''),
       html: emailHtml(body),
     });
@@ -86,7 +73,7 @@ export async function POST(req: NextRequest) {
         `status 'added' in directory_suggestions; they get emailed the page.`
     );
   } catch (err) {
-    console.error('suggestion failed', err);
+    log('error', 'suggestion.failed', { error: err });
   }
   return finish();
 }

@@ -5,6 +5,7 @@ import { countryName } from '@/lib/seo';
 import type { TitleFull, TitleStockist } from '@/lib/types';
 import type { ShopEvidence } from '@/lib/collect/server';
 import { StockistGroups, type CityGroup, type ShopLine } from './collect/StockistGroups';
+import { Honeypot } from './Honeypot';
 
 // "Find shops that carry this magazine" on a title page. Server rendered so
 // the shop list is in the HTML crawlers see. Lists are kept per publisher,
@@ -86,6 +87,7 @@ function SuggestShop({ title, prompt }: { title: TitleFull; prompt: string }) {
     <details className="stockist-suggest">
       <summary>{prompt}</summary>
       <form action="/api/suggest-stockist" method="post" className="want-form">
+        <Honeypot />
         <input type="hidden" name="title_id" value={title.id} />
         <label className="field">
           <span>Shop name</span>

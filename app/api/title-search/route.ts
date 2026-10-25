@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { anonClient, coverPublicUrl, hasSupabaseEnv } from '@/lib/supabase';
+import { limitRequest } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
 
@@ -25,6 +26,9 @@ function escapeLike(value: string): string {
 // directory uses, subject to the visibility predicate (handoff section 7);
 // the anon key enforces it via RLS on top of the explicit filters.
 export async function GET(req: NextRequest) {
+  if (!(await limitRequest(req, 'title-search', 60, 60))) {
+    return NextResponse.json({ exact: null, near: [] }, { status: 429 });
+  }
   const q = (req.nextUrl.searchParams.get('q') ?? '').trim().slice(0, 120);
   if (!q || !hasSupabaseEnv) {
     return NextResponse.json({ exact: null, near: [] });

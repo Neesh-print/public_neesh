@@ -44,7 +44,7 @@ export default async function HomePage() {
   return (
     <>
       <section className="home-hero">
-        <img src="/assets/flatlay-red-wide.jpg" alt="Independent magazines laid out on a red backdrop" />
+        <img fetchPriority="high" src="/assets/flatlay-red-wide.jpg" alt="Independent magazines laid out on a red backdrop" />
         <div className="scrim" />
         <div className="home-hero-content">
           <span className="eyebrow">Independent magazines &middot; 300+ titles &middot; 30+ countries</span>
@@ -78,7 +78,7 @@ export default async function HomePage() {
 
       <section className="mission-doors">
         <Link href="/index" className="m-door readers">
-          <img src="/assets/reader-yolo.jpg" alt="A reader holding YOLO magazine on a couch" />
+          <img loading="lazy" decoding="async" src="/assets/reader-yolo.jpg" alt="A reader holding YOLO magazine on a couch" />
           <span className="scrim" />
           <div className="m-door-content">
             <span className="eyebrow">For readers</span>
@@ -93,7 +93,7 @@ export default async function HomePage() {
           </div>
         </Link>
         <Link href="/packs" className="m-door spaces">
-          <img src="/assets/table-sport.jpg" alt="Magazines laid out on a table in a room" />
+          <img loading="lazy" decoding="async" src="/assets/table-sport.jpg" alt="Magazines laid out on a table in a room" />
           <span className="scrim" />
           <div className="m-door-content">
             <span className="eyebrow">For spaces</span>
@@ -110,6 +110,8 @@ export default async function HomePage() {
         </Link>
         <Link href="/publishers" className="m-door publishers">
           <img
+            loading="lazy"
+            decoding="async"
             src="/assets/bench-tempura.jpg"
             alt="A publisher reading on a bench"
             style={{ objectPosition: '50% 34%' }}
@@ -174,7 +176,7 @@ export default async function HomePage() {
               </div>
             </div>
             <a href={FILM_URL} className="film-link" rel="noopener noreferrer" target="_blank">
-              <img src="/assets/city-reader-wall.jpg" alt="Still from the Neesh film" />
+              <img loading="lazy" decoding="async" src="/assets/city-reader-wall.jpg" alt="Still from the Neesh film" />
               <span className="film-play">
                 <span>
                   <svg width="20" height="22" viewBox="0 0 20 22" fill="#FFFFFF" aria-hidden="true">
@@ -192,6 +194,8 @@ export default async function HomePage() {
         <div className="wrap">
           <div className="feature-cols">
             <img
+              loading="lazy"
+              decoding="async"
               className="feature-img"
               src="/assets/pack-slow-read.jpg"
               alt="The Slow Read pack, stacked"
@@ -218,7 +222,7 @@ export default async function HomePage() {
       </section>
 
       <section className="closing home-closing">
-        <img src="/assets/couch-pair.jpg" alt="Two people reading magazines on a couch" />
+        <img loading="lazy" decoding="async" src="/assets/couch-pair.jpg" alt="Two people reading magazines on a couch" />
         <div className="closing-content">
           <h2>Magazines belong where people are.</h2>
           <div className="closing-ctas">

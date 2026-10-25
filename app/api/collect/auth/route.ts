@@ -4,6 +4,7 @@ import { serviceClient } from '@/lib/supabase';
 import { emailHtml, sendEmail } from '@/lib/notify';
 import { isBot } from '@/lib/signals';
 import { siteUrl } from '@/lib/seo';
+import { limitFormRequest } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,6 +22,11 @@ const schema = z.object({
 // verifies the token at /collect/auth and claims any marks on the device.
 export async function POST(req: NextRequest) {
   if (isBot(req.headers.get('user-agent'))) return NextResponse.json({ ok: true });
+  // Sends mail to whatever address is typed in, so it shares the public
+  // form limits, and each address gets at most 6 sign-in links a day.
+  if (!(await limitFormRequest(req, 'collect-auth'))) {
+    return NextResponse.json({ ok: false, error: 'rate_limited' }, { status: 429 });
+  }
   let raw: unknown;
   try {
     raw = await req.json();
@@ -56,7 +62,8 @@ export async function POST(req: NextRequest) {
       to: email,
       subject: 'Your sign-in link for Neesh',
       text: body,
-      html: emailHtml(body.replace(link.toString(), `<a href="${link.toString()}">Sign in to Neesh</a>`)),
+      html: emailHtml(body, { [link.toString()]: 'Sign in to Neesh' }),
+      throttle: 6,
     });
   } catch (err) {
     console.error('collect auth failed', err);

@@ -2,6 +2,7 @@
 
 import { appUrl } from '@/lib/seo';
 
+import { Honeypot } from './Honeypot';
 // The claim line under a title's details: "Is this your magazine? Claim it"
 // on an unclaimed profile, "Claimed by publisher" once it has an owner.
 // Claiming fires a claim_click signal then hands off to the full publisher
@@ -51,6 +52,7 @@ export function ClaimSection({
       <details className="remove-details">
         <summary>Remove this profile</summary>
         <form className="remove-form" action="/api/remove-request" method="post">
+          <Honeypot />
           <input type="hidden" name="title_id" value={titleId} />
           <input
             name="email"

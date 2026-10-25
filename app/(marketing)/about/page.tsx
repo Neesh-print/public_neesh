@@ -15,6 +15,7 @@ export default function AboutPage() {
     <>
       <section className="page-hero short">
         <img
+          fetchPriority="high"
           src="/assets/city-reader-wall.jpg"
           alt="A wall of independent magazines"
           style={{ objectPosition: '50% 46%' }}
@@ -66,7 +67,7 @@ export default function AboutPage() {
       <section className="founder-band tint-section">
         <div className="wrap">
           <div className="founder-cols">
-            <img src="/assets/gem-portrait.jpg" alt="Gem holding a stack of independent magazines" />
+            <img loading="lazy" decoding="async" src="/assets/gem-portrait.jpg" alt="Gem holding a stack of independent magazines" />
             <div className="founder-copy">
               <h2>Who&rsquo;s behind this</h2>
               <p>
