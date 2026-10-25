@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { getAllVisiblePublisherSlugs, getPublisherBySlug } from '@/lib/queries';
 import { canonical } from '@/lib/seo';
 import { coverPublicUrl } from '@/lib/supabase';
+import type { Publisher, Title } from '@/lib/types';
 import { JsonLd } from '@/components/JsonLd';
 import { TitleGridCard } from '@/components/TitleGridCard';
 
@@ -17,6 +18,13 @@ export async function generateStaticParams() {
   return slugs.map(({ slug }) => ({ slug }));
 }
 
+// A reader-added publisher none of whose titles has been approved yet.
+// Their own review state is not readable with the public key, so it is
+// judged by their titles.
+function unreviewed({ publisher, titles }: { publisher: Publisher; titles: Title[] }): boolean {
+  return publisher.created_from === 'reader_created' && !titles.some((t) => t.review_status === 'approved');
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -27,6 +35,7 @@ export async function generateMetadata({
   if (!result) return { title: 'Not found | Neesh' };
   return {
     title: `${result.publisher.name} | Independent publisher | Neesh`,
+    ...(unreviewed(result) ? { robots: { index: false, follow: false } } : {}),
     description: `${result.publisher.name} publishes ${result.titles
       .map((t) => t.name)
       .join(', ')}. Profiles on the Neesh independent magazine directory.`,
@@ -43,6 +52,7 @@ export default async function PublisherPage({
   const result = await getPublisherBySlug(slug);
   if (!result) notFound();
   const { publisher, titles } = result;
+  const hideWebsite = unreviewed(result);
 
   return (
     <>
@@ -52,7 +62,7 @@ export default async function PublisherPage({
           '@type': 'Organization',
           name: publisher.name,
           url: canonical(`/publishers/${publisher.slug}`),
-          ...(publisher.website ? { sameAs: [publisher.website] } : {}),
+          ...(publisher.website && !hideWebsite ? { sameAs: [publisher.website] } : {}),
         }}
       />
       <nav className="crumbs" aria-label="Breadcrumb">

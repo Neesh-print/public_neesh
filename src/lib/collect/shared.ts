@@ -20,6 +20,28 @@ export interface Issue {
   created_at: string;
 }
 
+// Where to send a reader after sign-in. Only a path on this site: a bare
+// "/x" check lets "/\evil.com" through, which browsers read as
+// "//evil.com". Anything else falls back to the shelf.
+export function safeNextPath(raw: string | null | undefined, fallback = '/collect/shelf'): string {
+  if (!raw || raw.length > 500 || !raw.startsWith('/')) return fallback;
+  if (raw.startsWith('//') || raw.includes('\\') || /[\u0000-\u001f\u007f]/.test(raw)) return fallback;
+  try {
+    const base = 'https://neesh.invalid';
+    const url = new URL(raw, base);
+    return url.origin === base ? `${url.pathname}${url.search}${url.hash}` : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+// A reader-added record nobody has checked yet. It shows on the site with a
+// Reader-added tag, but stays out of search, the sitemap and outbound
+// redirects until a person approves it.
+export function isUnreviewedReaderRecord(r: { created_from?: string | null; review_status?: string | null }): boolean {
+  return r.created_from === 'reader_created' && r.review_status !== 'approved';
+}
+
 export const ISSUE_COLUMNS =
   'id, title_id, issue_label, issue_number, sort_order, published_on, published_year, cover_image_path, created_from, review_status, created_at';
 

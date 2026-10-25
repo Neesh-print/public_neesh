@@ -33,7 +33,7 @@ export const PAGE_SIZE = 50;
 // and eligibility_note are not readable by anon (column grants), so never
 // select directory_publishers with *.
 const PUBLISHER_COLUMNS =
-  'id, name, slug, website, country, city, claimed, claimed_at, removed, eligible, stockist_page_url, stockist_status, stockist_checked_at, created_at, updated_at';
+  'id, name, slug, website, country, city, claimed, claimed_at, removed, eligible, created_from, stockist_page_url, stockist_status, stockist_checked_at, created_at, updated_at';
 const TITLE_SELECT = `*, publisher:directory_publishers!inner(${PUBLISHER_COLUMNS})`;
 
 function visibleTitles(client = anonClient()) {
@@ -66,6 +66,8 @@ export async function getAllVisibleTitleSlugs(): Promise<
     .select('slug, updated_at, publisher:directory_publishers!inner(id)')
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
+    // Unreviewed reader additions stay out of the sitemap (they are noindex).
+    .or('created_from.neq.reader_created,review_status.eq.approved')
     .limit(10000);
   return (data ?? []).map((r) => ({ slug: r.slug, updated_at: r.updated_at }));
 }
@@ -362,6 +364,9 @@ export async function getAllVisiblePublisherSlugs(): Promise<
     .select('slug, updated_at')
     .eq('removed', false)
     .eq('eligible', true)
+    // Reader-added publishers are left out: anon cannot read their review
+    // state (column grant), and their titles carry them into the index.
+    .neq('created_from', 'reader_created')
     .limit(10000);
   return data ?? [];
 }
