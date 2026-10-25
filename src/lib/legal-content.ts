@@ -244,7 +244,7 @@ export const LEGAL_DOCS: Record<
   "privacy": {
     "h1": "Privacy Policy",
     "sub": "What we collect, how we use it, who we share it with, and the rights you have.",
-    "effective": "Effective August 19, 2026",
+    "effective": "Effective October 25, 2026",
     "intro": [
       "Neesh (“Neesh,” “we,” “us”) is operated by WAU LLC, an Oregon limited liability company. Neesh is a wholesale marketplace that connects independent magazine publishers with retailers. This policy explains what personal information we collect, how we use it, who we share it with, and the choices you have. It applies to neesh.art and all Neesh services, including publisher and retailer accounts, applications, and our email communications.",
       "If you have any questions, or want to exercise any of the rights described below, email us at <strong><a href=\"mailto:hi@neesh.art\">hi@neesh.art</a></strong>."
@@ -265,7 +265,22 @@ export const LEGAL_DOCS: Record<
           },
           {
             "kind": "p",
-            "html": "<strong>Information collected automatically.</strong> Like most websites, we and our service providers collect standard technical data when you use the site: IP address, browser type, device information, and pages visited. Emails we send may contain open and click tracking so we can tell whether our messages are useful; unsubscribing from marketing email ends that tracking for marketing messages. Our website uses only cookies and similar technologies that are necessary for login sessions and site functionality — we do not use advertising or cross-site tracking cookies, which is why you do not see a cookie consent banner. If we ever add non-essential cookies, we will update this policy and add appropriate consent controls first."
+            "html": "<strong>Information collected automatically.</strong> Like most websites, we and our service providers collect standard technical data when you use the site: IP address, browser type, device information, and pages visited. Emails we send may contain open and click tracking so we can tell whether our messages are useful; unsubscribing from marketing email ends that tracking for marketing messages."
+          },
+          {
+            "kind": "p",
+            "html": "<strong>Cookies.</strong> Our website uses cookies that are necessary for it to work, such as remembering your cookie choice and keeping you signed in on app.neesh.art. With your permission, we also use:"
+          },
+          {
+            "kind": "list",
+            "items": [
+              "<strong>Google Analytics</strong> (loaded through Google Tag Manager), which sets cookies (<code>_ga</code>, <code>_ga_*</code>) to tell us how the site is used, such as which pages are visited and how people arrive. Google processes this data on our behalf.",
+              "<strong>A first-touch cookie</strong> (<code>neesh_ft</code>, kept for 180 days), which remembers how you first found Neesh, for example a search engine or a campaign link, so we can see which channels bring publishers and spaces to us."
+            ]
+          },
+          {
+            "kind": "p",
+            "html": "We ask before setting any of these, and nothing is set if you decline. You can change your choice at any time with <strong>Cookie settings</strong> at the bottom of every page. We also use Vercel Web Analytics and Speed Insights, which measure page views and performance without cookies or cross-site identifiers. We do not use advertising or cross-site tracking cookies."
           },
           {
             "kind": "p",
@@ -305,7 +320,8 @@ export const LEGAL_DOCS: Record<
               "<strong>Resend</strong> — transactional and marketing email delivery, including open and click tracking",
               "<strong>HubSpot</strong> — customer relationship management and email signups",
               "<strong>Google Cloud Storage</strong> — hosting of some site images and uploaded files",
-              "<strong>Vercel</strong> — website hosting"
+              "<strong>Google</strong> — website analytics (Google Analytics, Google Tag Manager), only with your consent",
+              "<strong>Vercel</strong> — website hosting and cookieless analytics"
             ]
           },
           {

@@ -2,12 +2,12 @@ import { createHash } from 'crypto';
 import type { NextRequest } from 'next/server';
 import { clientIp } from './signals';
 
-// Fixed-window rate limiting for the public routes. With
-// UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN set (Vercel
-// Marketplace, Upstash Redis), counts are shared across every serverless
-// instance. Without them, or if Redis does not answer within a second, it
-// falls back to a per-instance in-memory counter: weaker, since each warm
-// instance counts separately, but it still blunts a burst from one client.
+// Fixed-window rate limiting for the public routes. With Upstash Redis
+// connected (UPSTASH_REDIS_REST_* or the Marketplace's KV_REST_API_*
+// variables), counts are shared across every serverless instance. Without
+// them, or if Redis does not answer within a second, it falls back to a
+// per-instance in-memory counter: weaker, since each warm instance counts
+// separately, but it still blunts a burst from one client.
 
 const memory = new Map<string, { count: number; resetAt: number }>();
 
@@ -26,8 +26,10 @@ function memoryIncr(key: string, windowSec: number): number {
 }
 
 async function redisIncr(key: string, windowSec: number): Promise<number | null> {
-  const url = process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.UPSTASH_REDIS_REST_TOKEN;
+  // The Vercel Marketplace integration names these KV_REST_API_*; a
+  // direct Upstash setup names them UPSTASH_REDIS_REST_*. Either works.
+  const url = process.env.UPSTASH_REDIS_REST_URL ?? process.env.KV_REST_API_URL;
+  const token = process.env.UPSTASH_REDIS_REST_TOKEN ?? process.env.KV_REST_API_TOKEN;
   if (!url || !token) return null;
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 1000);
