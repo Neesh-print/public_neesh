@@ -5,6 +5,8 @@ import { emailHtml, sendEmail } from '@/lib/notify';
 import { isBot } from '@/lib/signals';
 import { siteUrl } from '@/lib/seo';
 import { limitFormRequest } from '@/lib/rate-limit';
+import { safeNextPath } from '@/lib/collect/shared';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -36,7 +38,7 @@ export async function POST(req: NextRequest) {
   const parsed = schema.safeParse(raw);
   if (!parsed.success) return NextResponse.json({ ok: false }, { status: 400 });
   const email = parsed.data.email.trim().toLowerCase();
-  const next = parsed.data.next?.startsWith('/') && !parsed.data.next.startsWith('//') ? parsed.data.next : '/collect/shelf';
+  const next = safeNextPath(parsed.data.next);
 
   try {
     const { data, error } = await serviceClient().auth.admin.generateLink({
@@ -45,7 +47,7 @@ export async function POST(req: NextRequest) {
       options: { data: { role: 'reader' } },
     });
     if (error || !data.properties?.hashed_token) {
-      console.error('collect auth: generateLink failed', error?.message);
+      log('error', 'collect_auth.generate_link_failed', { error: error?.message });
       return NextResponse.json({ ok: false }, { status: 502 });
     }
     const link = new URL('/collect/auth', siteUrl());
@@ -66,7 +68,7 @@ export async function POST(req: NextRequest) {
       throttle: 6,
     });
   } catch (err) {
-    console.error('collect auth failed', err);
+    log('error', 'collect_auth.failed', { error: err });
     return NextResponse.json({ ok: false }, { status: 500 });
   }
   return NextResponse.json({ ok: true });

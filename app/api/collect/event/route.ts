@@ -5,6 +5,7 @@ import { isBot } from '@/lib/signals';
 import { CLIENT_EVENT_TYPES, STATE_EVENT_TYPES } from '@/lib/collect/shared';
 import { cleanUtm, readerFromRequest } from '@/lib/collect/server';
 import { limitRequest } from '@/lib/rate-limit';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -72,9 +73,9 @@ export async function POST(req: NextRequest) {
       surface: e.surface ?? null,
       ...cleanUtm(e.utm),
     });
-    if (error) console.error('collect event insert failed', error.message);
+    if (error) log('error', 'collect_event.insert_failed', { error: error.message });
   } catch (err) {
-    console.error('collect event failed', err);
+    log('error', 'collect_event.failed', { error: err });
   }
   return new NextResponse(null, { status: 204 });
 }

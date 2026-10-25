@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { hasSupabaseEnv, serviceClient } from '@/lib/supabase';
+import { anonClient, hasSupabaseEnv, serviceClient } from '@/lib/supabase';
+import { limitRequest } from '@/lib/rate-limit';
 import { LEVEL_RANK, type IssueAvailability, type ShopAvailability } from '@/lib/collect/shared';
 
 export const dynamic = 'force-dynamic';
@@ -20,7 +21,15 @@ interface StoreRow {
 // issue-level "reported" and "confirmed" from dated records. Expired records
 // are read here (the public RLS hides them) so they can fall back a level
 // with their date as history instead of vanishing. Home city first.
+//
+// Which issues and shops may be shown is decided by the public RLS: issues
+// and stockist links are read with the anon key, so removed, rejected and
+// excluded titles never come back. Only the dated records, for issues that
+// passed that check, are read with the service role.
 export async function GET(req: NextRequest) {
+  if (!(await limitRequest(req, 'collect-availability', 60, 60))) {
+    return NextResponse.json({ issues: [] }, { status: 429 });
+  }
   const ids = (req.nextUrl.searchParams.get('issue_ids') ?? '')
     .split(',')
     .filter((id) => UUID_RE.test(id))
@@ -29,17 +38,20 @@ export async function GET(req: NextRequest) {
   if (ids.length === 0 || !hasSupabaseEnv) return NextResponse.json({ issues: [] });
 
   const supabase = serviceClient();
-  const { data: issues } = await supabase
+  const publicDb = anonClient();
+  const { data: issues } = await publicDb
     .from('directory_issues')
     .select('id, title_id')
     .in('id', ids)
     .eq('removed', false)
     .is('merged_into', null);
   const titleIds = [...new Set((issues ?? []).map((i) => i.title_id as string))];
+  const visibleIds = (issues ?? []).map((i) => i.id as string);
+  if (visibleIds.length === 0) return NextResponse.json({ issues: [] });
 
   const [stockistRes, recordRes] = await Promise.all([
     titleIds.length
-      ? supabase
+      ? publicDb
           .from('v_title_stockists')
           .select('title_id, store_slug, store_name, city, borough, city_slug, list_scope')
           .in('title_id', titleIds)
@@ -48,7 +60,7 @@ export async function GET(req: NextRequest) {
     supabase
       .from('directory_issue_availability')
       .select('issue_id, store_id, level, observed_on, expires_on')
-      .in('issue_id', ids)
+      .in('issue_id', visibleIds)
       .order('observed_on', { ascending: false }),
   ]);
 

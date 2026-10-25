@@ -2,11 +2,14 @@
 
 import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 import type { CollectionState, Utm } from './shared';
+import { readConsent } from '@/lib/consent';
 
 // Browser-side state for Your collection. Before sign-in, marks live in
-// local storage on this device; the device id and the campaign tags of the
-// first visit live in first-party cookies. Everything here is best-effort:
-// a blocked cookie or storage call never breaks the page.
+// local storage on this device (the reader asked for them). The device id
+// and the campaign tags of the first visit are analytics, so their cookies
+// are only set once the visitor accepts cookies (src/lib/consent.ts).
+// Everything here is best-effort: a blocked cookie or storage call never
+// breaks the page.
 
 const ANON_COOKIE = 'neesh_anon';
 const UTM_COOKIE = 'neesh_collect_utm';
@@ -55,7 +58,12 @@ function writeCookie(name: string, value: string): void {
 
 const UUID_RE = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
-export function anonId(): string {
+// The device id, created on first use once cookies are accepted. Null
+// without consent: anonymous events are then not logged at all.
+export function anonId(): string | null {
+  // Checked before reading too: a cookie set before consent existed is
+  // not used either.
+  if (readConsent() !== 'granted') return null;
   const existing = readCookie(ANON_COOKIE);
   if (existing && UUID_RE.test(existing)) return existing;
   const id = crypto.randomUUID();
@@ -66,6 +74,7 @@ export function anonId(): string {
 // Keep the first campaign that brought this device here (poster, sticker).
 export function captureUtm(): void {
   if (typeof window === 'undefined' || readCookie(UTM_COOKIE)) return;
+  if (readConsent() !== 'granted') return;
   const params = new URLSearchParams(window.location.search);
   const utm: Utm = {};
   for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content'] as const) {
@@ -76,6 +85,7 @@ export function captureUtm(): void {
 }
 
 export function readUtm(): Utm {
+  if (readConsent() !== 'granted') return {};
   try {
     return JSON.parse(readCookie(UTM_COOKIE) ?? '{}') as Utm;
   } catch {

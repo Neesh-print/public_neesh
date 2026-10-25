@@ -30,6 +30,7 @@ import { FollowPill, ReaderAdded } from '@/components/collect/parts';
 import { OrderCta, TitleIssues } from '@/components/collect/TitleIssues';
 import { ReportLink } from '@/components/collect/ReportButton';
 import { getTitleIssues, getTitleShopEvidence } from '@/lib/collect/server';
+import { isUnreviewedReaderRecord } from '@/lib/collect/shared';
 
 export const revalidate = 86400;
 export const dynamicParams = true;
@@ -52,8 +53,10 @@ export async function generateMetadata({
   return {
     title: metaTitle,
     description,
-    // Reader-added titles stay out of search until a person has checked them.
-    ...(title.review_status !== 'approved' ? { robots: { index: false, follow: true } } : {}),
+    // Reader-added titles stay out of search until a person has checked
+    // them, and pass no link weight to the website the reader gave. A
+    // flagged admin title stays indexed: a report alone is not a verdict.
+    ...(isUnreviewedReaderRecord(title) ? { robots: { index: false, follow: false } } : {}),
     alternates: { canonical: canonical(`/titles/${title.slug}`) },
     openGraph: {
       title: metaTitle,
@@ -95,7 +98,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
     getTitleIssues(title.id),
     getTitleShopEvidence(title.id),
   ]);
-  const readerAdded = title.created_from === 'reader_created' && title.review_status !== 'approved';
+  const readerAdded = isUnreviewedReaderRecord(title);
 
   const publishing = new Set(allTags.filter(tagPublishes).map((t) => t.slug));
   const primaryTag = title.tags[0];

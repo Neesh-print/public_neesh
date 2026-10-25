@@ -4,6 +4,7 @@ import { Suspense, useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { browserClient } from '@/lib/collect/browser';
+import { safeNextPath } from '@/lib/collect/shared';
 import { useCollect } from '@/components/collect/CollectProvider';
 
 // Where the sign-in email lands. Verifies the one-time token, records
@@ -22,8 +23,7 @@ function AuthInner() {
     ran.current = true;
     const supabase = browserClient();
     const tokenHash = params.get('token_hash');
-    const rawNext = params.get('next') ?? '/collect/shelf';
-    const next = rawNext.startsWith('/') && !rawNext.startsWith('//') ? rawNext : '/collect/shelf';
+    const next = safeNextPath(params.get('next'));
     if (!supabase || !tokenHash) {
       setFailed(true);
       return;

@@ -14,6 +14,7 @@ import {
   type LocalMarks,
 } from '@/lib/collect/browser';
 import { TOAST, type ClientEventType, type CollectionState } from '@/lib/collect/shared';
+import { CONSENT_EVENT, type Consent } from '@/lib/consent';
 import { SaveSheet } from './SaveSheet';
 
 // Reader state for every page that shows the site header: who is signed in,
@@ -184,9 +185,21 @@ export function CollectProvider({ children }: { children: React.ReactNode }) {
     setHomeCityState((collectorRes.data?.city as unknown as HomeCity | null) ?? null);
   }, []);
 
+  // The device id and campaign cookies wait for cookie consent.
   useEffect(() => {
-    captureUtm();
-    anonId();
+    const start = () => {
+      captureUtm();
+      anonId();
+    };
+    start();
+    const onConsent = (event: Event) => {
+      if ((event as CustomEvent<Consent>).detail === 'granted') start();
+    };
+    window.addEventListener(CONSENT_EVENT, onConsent);
+    return () => window.removeEventListener(CONSENT_EVENT, onConsent);
+  }, []);
+
+  useEffect(() => {
     const supabase = browserClient();
     if (!supabase) {
       applyLocal(readMarks());

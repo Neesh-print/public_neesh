@@ -19,6 +19,7 @@ export interface Publisher {
   country: string | null;
   city: string | null;
   claimed: boolean;
+  created_from: string;
   // Where the publisher's own stockist list lives, and what we found there.
   stockist_page_url: string | null;
   stockist_status: StockistStatus | null;
