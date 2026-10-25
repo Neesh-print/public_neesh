@@ -1,8 +1,20 @@
 # Proposed privacy policy change: cookies
 
-**Status: draft for counsel. Not applied.** `src/lib/legal-content.ts` is
-generated from the legal source documents and says to change it only with
-counsel's sign-off, so this text has not been put on the site.
+**Status: approved by counsel and applied** (privacy policy effective
+October 25, 2026). The cookie paragraph and the two provider entries below
+are in `src/lib/legal-content.ts`.
+
+**Open item for counsel.** After the draft was approved, the site also put
+two `/collect` cookies behind the same consent: `neesh_anon` (a random
+device id, one year, used to count anonymous activity on Your collection
+and attach it to an account at sign-in) and `neesh_collect_utm` (the
+campaign tags of the first visit, one year). They are not set without
+consent, but the policy does not name them. Proposed third bullet:
+
+> **Your collection cookies** (`neesh_anon`, `neesh_collect_utm`, kept for
+> one year), which count how people use Your collection before signing in
+> and remember the campaign that brought them, so their activity can be
+> added to their account when they sign in.
 
 ## Why it needs changing
 
