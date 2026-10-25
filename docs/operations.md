@@ -208,8 +208,9 @@ subdomain is HTTPS-only, add `includeSubDomains` in `next.config.mjs`.
 - **Next.js 16 and TypeScript 7.** Both are major upgrades with breaking
   changes (Next 16 renames middleware to proxy and changes build defaults);
   do them in their own PR with CI and a preview check.
-- **Image weight.** `npm run optimize-images` (dry run) shows about 9 MB of
-  assets recompressible to about 5 MB; review, then run with `-- --write`.
+- **Image weight.** Existing assets were recompressed (9.4 MB to 5.1 MB) in
+  October 2026. Run `npm run optimize-images` after adding large photos; it
+  reports savings, and `-- --write` applies them.
 - **Privacy policy.** The cookie paragraph needs updating for the new
   consent banner; proposed text for counsel is in
   `docs/privacy-cookie-update.md`.
