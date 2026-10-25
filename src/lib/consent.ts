@@ -33,13 +33,16 @@ export function readConsent(): Consent | null {
   return match ? (match[1] as Consent) : null;
 }
 
-// Cookies set by the tracking we gate: GA4 (_ga, _ga_<id>, _gid) and first
-// touch. Cleared on decline in case an earlier visit had accepted.
+// Cookies set by the tracking we gate: GA4 (_ga, _ga_<id>, _gid), first
+// touch, and the collection device id and campaign tags. Cleared on decline
+// in case an earlier visit had accepted.
+const GATED_COOKIES = new Set(['neesh_ft', '_gid', '_ga', 'neesh_anon', 'neesh_collect_utm']);
+
 function clearTrackingCookies(): void {
   const names = document.cookie
     .split('; ')
     .map((part) => part.split('=')[0])
-    .filter((name) => name === 'neesh_ft' || name === '_gid' || name === '_ga' || name.startsWith('_ga_'));
+    .filter((name) => GATED_COOKIES.has(name) || name.startsWith('_ga_'));
   const host = window.location.hostname;
   const domains = ['', `; domain=${host}`, sharedDomain(), '; domain=.' + host.replace(/^www\./, '')];
   for (const name of names) {
