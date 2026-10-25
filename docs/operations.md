@@ -20,8 +20,9 @@ section 6).
 | `SIGNAL_SALT_SECRET` | yes | Daily IP-hash salt. Unset means no IP hash is stored at all |
 | `REVALIDATE_TOKEN` | yes | `POST /api/revalidate`, `Authorization: Bearer` header only |
 | `RESEND_API_KEY`, `NOTIFY_EMAIL`, `NOTIFY_FROM`, `NOTIFY_REPLY_TO` | yes | Email |
-| `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` | recommended | Shared rate-limit counters (section 4) |
-| `ALERT_WEBHOOK_URL` | recommended | Slack or Discord webhook for error alerts (section 3) |
+| `UPSTASH_REDIS_REST_*` or `KV_REST_API_*` | recommended | Shared rate-limit counters (section 4); the Marketplace integration sets `KV_REST_API_URL` and `KV_REST_API_TOKEN` |
+| `ALERT_EMAIL` | optional | Where error alerts are emailed; defaults to `NOTIFY_EMAIL` (section 3) |
+| `ALERT_WEBHOOK_URL` | optional | Slack or Discord webhook that also receives error alerts |
 | `CRON_SECRET` | yes | Bearer token Vercel Cron sends to `/api/collect/notify` |
 | `COLLECT_LINK_SECRET` | recommended | Signs unfollow and account-deletion links. Unset, links are signed with the service role key (logged as `collect_tokens.secret_fallback`); setting it later keeps links already sent working |
 
@@ -59,14 +60,18 @@ Already in the code:
 - **Structured logs:** one JSON object per line (`src/lib/log.ts`) with
   `level` and `event`; emails, tokens and keys are redacted. Search them in
   Vercel → Logs, e.g. `"level":"error"`.
-- **Alerts:** every error-level event posts to `ALERT_WEBHOOK_URL` (at most
-  once per event per instance every 10 minutes). Covers failed inserts,
-  failed email sends (Resend down or key revoked) and unhandled errors.
+- **Alerts:** every error-level event, from production only, is emailed to
+  `ALERT_EMAIL` (or `NOTIFY_EMAIL`), added as a high-priority `system`
+  notification for every admin (`public.users.role = 'admin'`) on the admin
+  dashboard, and posted to `ALERT_WEBHOOK_URL` if set. At most once per
+  event per instance every 10 minutes. Covers failed inserts, failed email
+  sends, the notify cron and unhandled errors. If Resend itself is down the
+  email cannot go out, but the dashboard notification still lands.
 - **Performance:** Vercel Speed Insights is installed.
 
 **Dashboard, to finish:**
-- [ ] Create a Slack (or Discord) incoming webhook and set `ALERT_WEBHOOK_URL`
-      for Production.
+- [ ] Optional: set `ALERT_EMAIL` if alerts should go somewhere other than
+      `NOTIFY_EMAIL`, or `ALERT_WEBHOOK_URL` for a Slack or Discord channel.
 - [ ] Vercel → Project → Speed Insights → Enable. (On Pro this is a paid add-on;
       check the price first.)
 - [ ] Optional: a log drain (Vercel → Settings → Log Drains) to Axiom or
@@ -94,9 +99,10 @@ address receives at most 3 confirmation emails a day. Forms also carry a
 honeypot field.
 
 Without Upstash the counters are per serverless instance, which only slows
-a determined client. **Dashboard:** Vercel → Marketplace → Upstash Redis
-(free tier is enough), connect it to the project, and the two
-`UPSTASH_REDIS_REST_*` variables are set for you. Optionally add a Vercel
+a determined client. **Dashboard:** Vercel → Marketplace → Upstash →
+**Upstash for Redis** (free plan is enough), connect it to this project, and
+its `KV_REST_API_URL` / `KV_REST_API_TOKEN` variables are set for you; the
+code reads those or `UPSTASH_REDIS_REST_*`. Redeploy afterwards. Optionally add a Vercel
 Firewall rate-limit rule on `/api/*` as a second layer.
 
 ## 5. Backups and restore
