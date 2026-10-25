@@ -22,6 +22,8 @@ section 6).
 | `RESEND_API_KEY`, `NOTIFY_EMAIL`, `NOTIFY_FROM`, `NOTIFY_REPLY_TO` | yes | Email |
 | `UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN` | recommended | Shared rate-limit counters (section 4) |
 | `ALERT_WEBHOOK_URL` | recommended | Slack or Discord webhook for error alerts (section 3) |
+| `CRON_SECRET` | yes | Bearer token Vercel Cron sends to `/api/collect/notify` |
+| `COLLECT_LINK_SECRET` | recommended | Signs unfollow and account-deletion links. Unset, links are signed with the service role key (logged as `collect_tokens.secret_fallback`); setting it later keeps links already sent working |
 
 ## 2. Deploys and rollback
 
@@ -158,6 +160,11 @@ automatically):
 - `20261023120000_revoke_internal_function_execute.sql`: stops the public
   key from calling `refresh_directory_cities()` and the internal helpers.
   Safe for the site; apply with `supabase db push` or the SQL editor.
+- `20261025120000_collect_hardening.sql`: one open report per reader per
+  record, flagging needs two different readers, 20 reports a day per
+  reader; drops the reader-edit policies; the duplicate checks stop
+  suggesting removed and rejected records; anonymous-activity claims limited
+  to 30 days. Safe for the site and the add flow; apply as above.
 
 Confirm already-written migrations are live:
 - `20261014130000_hide_publisher_private_columns.sql`. Check with
@@ -214,3 +221,17 @@ subdomain is HTTPS-only, add `includeSubDomains` in `next.config.mjs`.
 - **Privacy policy.** The cookie paragraph needs updating for the new
   consent banner; proposed text for counsel is in
   `docs/privacy-cookie-update.md`.
+
+## 11. Your collection (/collect)
+
+- **Notify cron** (`/api/collect/notify`, daily via `vercel.json`): returns
+  `unfinished: true` when it ran out of time; the next run completes the
+  job without re-sending. A query error now fails the run (500) and alerts.
+- **Newsletter opt-in** is stored on `collectors.newsletter_opt_in` with
+  `newsletter_consent_at`. Nothing in this repo sends to or syncs it into the
+  mailing list: whatever sends the newsletter has to read it, and stop
+  mailing readers who delete their account (the row is deleted with them).
+- **Reports**: two different readers reporting a record set it to
+  `flagged` for review. Flagged admin records stay public and indexed;
+  unreviewed reader additions are `noindex`, out of the sitemap, and their
+  website is not linked or redirected to until approved.
