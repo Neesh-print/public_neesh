@@ -5,6 +5,7 @@ import { z } from 'zod';
 import { serviceClient } from '@/lib/supabase';
 import { MAX_ADDITIONS_PER_DAY, MAX_UPLOAD_BYTES, UPLOAD_TYPES } from '@/lib/collect/shared';
 import { freeSlug, hasBlockedText, hasLinkInText, readerFromRequest, slugify } from '@/lib/collect/server';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -158,7 +159,7 @@ export async function POST(req: NextRequest) {
       .from('reader-uploads')
       .upload(objectPath, bytes, { contentType: file.type, upsert: false });
     if (error) {
-      console.error('reader upload failed', error.message);
+      log('error', 'collect_add.upload_failed', { error: error.message });
       return fail('upload', 500);
     }
     coverPath = `reader-uploads/${objectPath}`;
@@ -187,7 +188,7 @@ export async function POST(req: NextRequest) {
         .select('id')
         .single();
       if (error || !data) {
-        console.error('reader publisher insert failed', error?.message);
+        log('error', 'collect_add.publisher_insert_failed', { error: error?.message });
         return fail('save', 500);
       }
       publisherId = data.id as string;
@@ -204,7 +205,7 @@ export async function POST(req: NextRequest) {
       .select('id, slug, name')
       .single();
     if (error || !data) {
-      console.error('reader title insert failed', error?.message);
+      log('error', 'collect_add.title_insert_failed', { error: error?.message });
       return fail('save', 500);
     }
     titleId = data.id as string;
@@ -240,7 +241,7 @@ export async function POST(req: NextRequest) {
     .single();
   if (issueError || !issue) {
     if (issueError?.code === '23505') return fail('duplicate_label', 409);
-    console.error('reader issue insert failed', issueError?.message);
+    log('error', 'collect_add.issue_insert_failed', { error: issueError?.message });
     return fail('save', 500);
   }
 
