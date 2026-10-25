@@ -42,7 +42,13 @@ export function ReportLink({ targets }: { targets: Target[] }) {
       reporter_id: session.user.id,
     });
     setSending(false);
-    if (error) {
+    // 23505: this reader already has an open report on it, which is the
+    // outcome they wanted. P0001: the daily report limit.
+    if (error && error.code === 'P0001') {
+      notice("You've sent a lot of reports today. Try again tomorrow");
+      return;
+    }
+    if (error && error.code !== '23505') {
       notice("Couldn't send. Try again");
       return;
     }
