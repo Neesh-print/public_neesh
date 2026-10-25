@@ -27,15 +27,14 @@ export function ConsentBanner() {
   return (
     <section className="consent-banner" role="region" aria-label="Cookie choices">
       <p>
-        Can we use analytics cookies? They tell us which pages people use (Google Analytics) and
-        how you first found Neesh. Nothing is set unless you say yes.{' '}
-        <Link href="/privacy">Privacy policy</Link>
+        Can we use analytics cookies to see how the site is used and how you found us? Nothing is
+        set unless you say yes. <Link href="/privacy">Privacy</Link>
       </p>
       <div className="consent-actions">
-        <button type="button" className="btn ghost" onClick={() => choose(false)}>
+        <button type="button" className="consent-btn" onClick={() => choose(false)}>
           No thanks
         </button>
-        <button type="button" className="btn solid" onClick={() => choose(true)}>
+        <button type="button" className="consent-btn solid" onClick={() => choose(true)}>
           Accept
         </button>
       </div>
