@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { trackCollectionEmail } from '@/lib/neesh-analytics';
 import { useCollect } from './CollectProvider';
 import { SignInFields, useSendLink } from './SignInForm';
 
@@ -23,8 +24,12 @@ export function SaveSheet() {
     }
   }, [open]);
 
+  // The send resolved: the email is in and the sign-in link is on its way.
+  // GTM's collection_email_submitted fires here, on success, never on submit.
   useEffect(() => {
-    if (link.status === 'sent') setSheet('sent');
+    if (link.status !== 'sent') return;
+    trackCollectionEmail(window.location.pathname);
+    setSheet('sent');
   }, [link.status, setSheet]);
 
   useEffect(() => {

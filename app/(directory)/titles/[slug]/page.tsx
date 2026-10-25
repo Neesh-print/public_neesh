@@ -261,7 +261,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               claimed={claimed || listed}
             />
 
-            <WantTitleForm titleId={title.id} />
+            <WantTitleForm titleId={title.id} titleSlug={title.slug} />
 
             <ReportLink
               targets={[

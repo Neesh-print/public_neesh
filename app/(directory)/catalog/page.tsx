@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { getCatalogTitles } from '@/lib/queries';
+import { getCatalogTitles, pickFeaturedSlugs, sortForIndex } from '@/lib/queries';
+import { titleCardMeta } from '@/lib/format';
 import { canonical } from '@/lib/seo';
 import { coverPublicUrl } from '@/lib/supabase';
 import { CatalogGrid, type CatalogItem } from '@/components/CatalogGrid';
@@ -23,29 +24,24 @@ export default async function DirectoryHome() {
   const titles = await getCatalogTitles();
 
   // Featured = the three Neesh titles whose publishers joined the platform
-  // most recently. Gate: the publisher must actually have a magazine listed
-  // (neesh_magazine_id), not just an approved account. They lead the grid;
-  // everyone else stays alphabetical.
-  const featuredSlugs = new Set(
-    titles
-      .filter((t) => t.available_on_neesh && t.neesh_magazine_id && t.neesh_listed_at)
-      .sort((a, b) => (b.neesh_listed_at ?? '').localeCompare(a.neesh_listed_at ?? ''))
-      .slice(0, 3)
-      .map((t) => t.slug)
-  );
+  // most recently (see pickFeaturedSlugs). They lead the grid, then every
+  // title orderable on Neesh, then everyone else, each group alphabetical.
+  // Same ordering as the niche pages (sortForIndex).
+  const featured = pickFeaturedSlugs(titles);
+  const featuredSlugs = new Set(featured);
 
   // Only the public fields cross into the client grid.
-  const items: CatalogItem[] = titles.map((title) => ({
+  const items: CatalogItem[] = sortForIndex(titles, featured).map((title) => ({
     id: title.id,
     name: title.name,
     slug: title.slug,
     cover: coverPublicUrl(title.cover_image_path),
     publisher: title.publisher.name,
+    meta: titleCardMeta(title),
     niches: title.tags.filter((tag) => tag.category === 'subject').map((tag) => tag.name),
     onNeesh: title.available_on_neesh,
     featured: featuredSlugs.has(title.slug),
   }));
-  items.sort((a, b) => Number(b.featured) - Number(a.featured));
 
   return (
     <>

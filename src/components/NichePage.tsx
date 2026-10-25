@@ -2,12 +2,13 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { marked } from 'marked';
 import {
-  getCatalogTitles,
+  getFeaturedSlugs,
   getTagBySlug,
   getTitlesForTag,
   PAGE_SIZE,
   tagPublishes,
 } from '@/lib/queries';
+import { titleCardMeta } from '@/lib/format';
 import { breadcrumbLd, itemListLd, nicheProse } from '@/lib/seo';
 import { coverPublicUrl } from '@/lib/supabase';
 import { JsonLd } from './JsonLd';
@@ -20,35 +21,29 @@ export async function NichePage({ tagSlug, page }: { tagSlug: string; page: numb
   const tag = await getTagBySlug(tagSlug);
   if (!tag || !tagPublishes(tag)) notFound();
 
-  const { titles, total } = await getTitlesForTag(tag.id, page);
+  // Featured trio (same computation as the index) so the badge and ordering
+  // carry through. getTitlesForTag orders the whole niche before paging:
+  // Featured, then orderable on Neesh, then the rest, each alphabetical.
+  const featured = await getFeaturedSlugs();
+  const { titles, total } = await getTitlesForTag(tag.id, page, featured);
   const lastPage = Math.max(1, Math.ceil(total / PAGE_SIZE));
   if (page > lastPage || titles.length === 0) notFound();
-
-  // Featured trio (same computation as the index) so the badge and ordering
-  // carry through to niche pages.
-  const all = await getCatalogTitles();
-  const featuredSlugs = new Set(
-    all
-      .filter((t) => t.available_on_neesh && t.neesh_magazine_id && t.neesh_listed_at)
-      .sort((a, b) => (b.neesh_listed_at ?? '').localeCompare(a.neesh_listed_at ?? ''))
-      .slice(0, 3)
-      .map((t) => t.slug)
-  );
+  const featuredSlugs = new Set(featured);
 
   const prose = nicheProse(tag.name);
   const intro = page === 1 && tag.intro_md ? (marked.parse(tag.intro_md) as string) : null;
-  const items = titles
-    .map((title) => ({
-      id: title.id,
-      name: title.name,
-      slug: title.slug,
-      cover: coverPublicUrl(title.cover_image_path),
-      publisher: title.publisher.name,
-      niche: tag.name,
-      onNeesh: title.available_on_neesh,
-      featured: featuredSlugs.has(title.slug),
-    }))
-    .sort((a, b) => Number(b.featured) - Number(a.featured));
+  // Every card here shares the niche, so the niche chip is left off.
+  const items = titles.map((title) => ({
+    id: title.id,
+    name: title.name,
+    slug: title.slug,
+    cover: coverPublicUrl(title.cover_image_path),
+    publisher: title.publisher.name,
+    meta: titleCardMeta(title),
+    niche: null,
+    onNeesh: title.available_on_neesh,
+    featured: featuredSlugs.has(title.slug),
+  }));
 
   const count = `${total} ${total === 1 ? 'title' : 'titles'}`;
 
