@@ -24,6 +24,8 @@ section 6).
 | `ALERT_EMAIL` | optional | Where error alerts are emailed; defaults to `NOTIFY_EMAIL` (section 3) |
 | `ALERT_WEBHOOK_URL` | optional | Slack or Discord webhook that also receives error alerts |
 | `CRON_SECRET` | yes | Bearer token Vercel Cron sends to `/api/collect/notify` |
+| `HUBSPOT_ACCESS_TOKEN` | for the HubSpot sync | Private app token (section 12). Unset, the sync does nothing and changes wait in the queue |
+| `HUBSPOT_SUBSCRIPTION_ID` | for the HubSpot sync | The newsletter subscription type. Unset, contacts are created but consent changes wait in the queue |
 | `COLLECT_LINK_SECRET` | recommended | Signs unfollow and account-deletion links. Unset, links are signed with the service role key (logged as `collect_tokens.secret_fallback`); setting it later keeps links already sent working |
 
 ## 2. Deploys and rollback
@@ -234,10 +236,43 @@ subdomain is HTTPS-only, add `includeSubDomains` in `next.config.mjs`.
   `unfinished: true` when it ran out of time; the next run completes the
   job without re-sending. A query error now fails the run (500) and alerts.
 - **Newsletter opt-in** is stored on `collectors.newsletter_opt_in` with
-  `newsletter_consent_at`. Nothing in this repo sends to or syncs it into the
-  mailing list: whatever sends the newsletter has to read it, and stop
-  mailing readers who delete their account (the row is deleted with them).
+  `newsletter_consent_at`, and synced to HubSpot (section 12).
 - **Reports**: two different readers reporting a record set it to
   `flagged` for review. Flagged admin records stay public and indexed;
   unreviewed reader additions are `noindex`, out of the sitemap, and their
   website is not linked or redirected to until approved.
+
+## 12. HubSpot newsletter sync
+
+Newsletter consent from neesh.art reaches HubSpot through a queue:
+`supabase/migrations/20261025150000_hubspot_sync_queue.sql` adds the
+`hubspot_sync_queue` table and triggers on `mailing_list_subscribers` (the
+newsletter form) and `collectors` (Your collection readers), and
+`/api/cron/hubspot-sync` sends the queue to HubSpot daily at 16:30 UTC.
+
+- Sign-ups and opt-ins are subscribed to the newsletter subscription type
+  with the legal basis "consent with notice".
+- Opt-outs, a mailing-list row set to anything but `active` or deleted, and
+  deleted reader accounts that had opted in are unsubscribed.
+- The sign-ups that existed when the sync shipped are created as contacts
+  but **not** subscribed, because HubSpot may already hold an opt-out for
+  some of them. Subscribe them in HubSpot by hand after checking.
+- Failures retry on the next run; after 5 attempts a row is left with its
+  `last_error` and an alert goes out. Check what is waiting with
+  `select action, count(*), max(last_error) from hubspot_sync_queue where processed_at is null group by 1;`
+
+**Setup:**
+1. HubSpot → Settings → Integrations → Private Apps → Create a private app.
+   Scopes: `crm.objects.contacts.read`, `crm.objects.contacts.write`,
+   `communication_preferences.read_write`. Copy the access token.
+2. HubSpot → Settings → Marketing → Email → Subscriptions: open the
+   newsletter subscription type and copy its ID.
+3. Vercel → Environment Variables (Production): `HUBSPOT_ACCESS_TOKEN`,
+   `HUBSPOT_SUBSCRIPTION_ID`. Redeploy.
+4. Apply the migration (SQL editor).
+
+To run it now instead of waiting for the schedule:
+`curl -H "Authorization: Bearer $CRON_SECRET" https://neesh.art/api/cron/hubspot-sync`
+(Vercel's bot protection may challenge requests from outside a browser; the
+Vercel Cron call is not affected.)
+

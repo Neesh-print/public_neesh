@@ -44,6 +44,21 @@ export async function DELETE(req: NextRequest) {
       const { error } = await supabase.from('collectors').delete().eq('user_id', userId);
       if (error) throw new Error(error.message);
     } else {
+      // Deleting the auth user cascades to collectors after the address is
+      // gone, so the newsletter unsubscribe is queued here first.
+      const { data: collector } = await supabase
+        .from('collectors')
+        .select('newsletter_opt_in')
+        .eq('user_id', userId)
+        .maybeSingle();
+      if (collector?.newsletter_opt_in) {
+        const { data: user } = await supabase.auth.admin.getUserById(userId);
+        if (user.user?.email) {
+          await supabase
+            .from('hubspot_sync_queue')
+            .insert({ email: user.user.email.toLowerCase(), action: 'unsubscribe', source: 'collect:account_deleted' });
+        }
+      }
       const { error } = await supabase.auth.admin.deleteUser(userId);
       if (error && !/not found/i.test(error.message)) throw new Error(error.message);
     }
