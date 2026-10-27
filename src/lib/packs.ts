@@ -54,7 +54,7 @@ export const PACKS: Pack[] = [
       { title: 'Mushroom People', slug: 'mushroom-people' },
       { title: 'Catnip', slug: 'catnip' },
       { title: 'Elastic', slug: 'elastic' },
-      { title: 'Undergrowth', image: '/assets/covers/waitingroom_07_undergrowth.jpg' },
+      { title: 'perhaps', slug: 'perhaps' },
       { title: 'Elementum', image: '/assets/covers/waitingroom_08_elementum.jpg' },
       { title: 'Pleasant Place', slug: 'pleasant-place' },
     ],
