@@ -155,6 +155,9 @@ export interface Title {
   created_from: string;
   review_status: 'approved' | 'pending' | 'flagged' | 'rejected';
   collect_pilot: boolean;
+  // The publisher's own subscription page. Shown only once the title is
+  // claimed or listed, so it always comes from the publisher.
+  subscribe_url: string | null;
   created_at: string;
   updated_at: string;
 }
