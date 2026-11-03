@@ -32,7 +32,17 @@ export interface CityGroup {
 
 const EXPANDED_CITIES = 6;
 
-function CityList({ group, home, onShop }: { group: CityGroup; home: boolean; onShop: () => void }) {
+function CityList({
+  group,
+  home,
+  onShop,
+  publisherName,
+}: {
+  group: CityGroup;
+  home: boolean;
+  onShop: () => void;
+  publisherName?: string;
+}) {
   return (
     <div className="stockist-city" data-city={group.label.toLowerCase()}>
       <h3>
@@ -46,7 +56,8 @@ function CityList({ group, home, onShop }: { group: CityGroup; home: boolean; on
         {group.shops.map((s) => {
           const evidence = evidenceLabel(
             { level: s.level, observed_on: s.observed_on, last_reported_on: null, publisher_wide: s.publisher_wide },
-            s.issue_label
+            s.issue_label,
+            publisherName
           );
           return (
             <li key={s.store_slug} data-shop={s.store_name.toLowerCase()}>
@@ -70,8 +81,10 @@ export function StockistGroups({
   groups,
   unknown,
   filter,
+  publisherName,
 }: {
   titleId: string;
+  publisherName?: string;
   groups: CityGroup[];
   unknown: ShopLine[];
   filter: boolean;
@@ -90,7 +103,7 @@ export function StockistGroups({
       {filter && <StockistFilter />}
       <div className="stockist-cities">
         {head.map((g) => (
-          <CityList key={g.key} group={g} home={g.rawCitySlug === homeSlug && !!homeSlug} onShop={onShop} />
+          <CityList key={g.key} group={g} home={g.rawCitySlug === homeSlug && !!homeSlug} onShop={onShop} publisherName={publisherName} />
         ))}
       </div>
       {(rest.length > 0 || unknown.length > 0) && (
@@ -101,13 +114,14 @@ export function StockistGroups({
           </summary>
           <div className="stockist-cities">
             {rest.map((g) => (
-              <CityList key={g.key} group={g} home={false} onShop={onShop} />
+              <CityList key={g.key} group={g} home={false} onShop={onShop} publisherName={publisherName} />
             ))}
             {unknown.length > 0 && (
               <CityList
                 group={{ key: 'unknown', label: 'City unknown', shortLabel: 'City unknown', citySlug: null, rawCitySlug: null, shops: unknown }}
                 home={false}
                 onShop={onShop}
+                publisherName={publisherName}
               />
             )}
           </div>

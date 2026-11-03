@@ -181,7 +181,8 @@ export interface ShopAvailability {
 // confirmed and reported records read in ink.
 export function evidenceLabel(
   shop: Pick<ShopAvailability, 'level' | 'observed_on' | 'last_reported_on' | 'publisher_wide'>,
-  issueLabel: string | null
+  issueLabel: string | null,
+  publisherName?: string | null
 ): { text: string; strong: boolean } {
   const day = (d: string) => {
     const [, m, dd] = d.split('-');
@@ -195,7 +196,11 @@ export function evidenceLabel(
     case 'lapsed':
       return { text: `Reported ${issueLabel ?? 'this issue'} on ${day(shop.last_reported_on!)}, not rechecked`, strong: false };
     default:
-      return { text: shop.publisher_wide ? 'Carries this publisher' : 'Carries this magazine', strong: false };
+      // Says where the row came from, not that Neesh has verified it.
+      return {
+        text: publisherName ? `On ${publisherName}’s stockist list` : 'On the publisher’s stockist list',
+        strong: false,
+      };
   }
 }
 

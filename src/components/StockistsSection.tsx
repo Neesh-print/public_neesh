@@ -157,7 +157,13 @@ export function StockistsSection({
               Each row says exactly what we know.
             </p>
 
-            <StockistGroups titleId={title.id} groups={groups} unknown={unknown} filter={shopCount > 50} />
+            <StockistGroups
+              titleId={title.id}
+              groups={groups}
+              unknown={unknown}
+              filter={shopCount > 50}
+              publisherName={publisher.name}
+            />
 
             <p className="stockists-source">
               From{' '}

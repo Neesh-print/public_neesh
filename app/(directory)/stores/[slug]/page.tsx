@@ -232,7 +232,7 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
             </div>
           )}
 
-          {!store.claimed && <StoreClaim storeId={store.id} storeName={store.name} />}
+          {!store.claimed && <StoreClaim storeId={store.id} storeName={store.name} orderableCount={onNeesh} />}
         </div>
       </section>
     </>

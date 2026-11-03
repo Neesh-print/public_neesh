@@ -216,6 +216,11 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                   See all their titles
                 </Link>
               </p>
+              {!claimed && !listed && (
+                <p className="unclaimed-note">
+                  This publisher hasn&rsquo;t joined Neesh. This page is compiled from public sources.
+                </p>
+              )}
               <FollowPill titleId={title.id} surface="title_page" note />
             </div>
 
@@ -261,7 +266,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               claimed={claimed || listed}
             />
 
-            <WantTitleForm titleId={title.id} titleSlug={title.slug} />
+            <WantTitleForm titleId={title.id} titleSlug={title.slug} listed={listed} />
 
             <ReportLink
               targets={[
