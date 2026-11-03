@@ -8,7 +8,7 @@ import { ArrowIcon } from '@/components/Logo';
 export const metadata: Metadata = {
   title: 'Free fulfillment for our first 100 publishers | Neesh',
   description:
-    'Send us your copies and we pick, pack and ship every Neesh order, free through April 2027. Open to the first 100 publishers on Neesh.',
+    'Send us your copies and we pick, pack and ship every Neesh order, free until June 2027. Open to the first 100 publishers on Neesh.',
   alternates: { canonical: '/fulfillment' },
   robots: { index: false, follow: false },
 };
@@ -20,7 +20,7 @@ const HOW: [string, string, string][] = [
 ];
 
 const TERMS: [string, string][] = [
-  ['Free through April 2027', 'No fulfillment fee, no storage fee and no packing fee until the end of April 2027. You pay the same 10 percent of wholesale as every publisher on Neesh.'],
+  ['Free until June 2027', 'No fulfillment fee, no storage fee and no packing fee until June 2027. You pay the same 10 percent of wholesale as every publisher on Neesh.'],
   ['Spaces pay shipping', 'Postage to the space is charged at checkout. You never pay to ship an order.'],
   ['Paid when it ships', 'Your payout is released as soon as we confirm the order has shipped.'],
   ['A year on the shelf', 'We hold your stock for 365 days from arrival. Copies that haven’t sold can go into our curated packs, and anything still left comes back to you at your cost.'],
@@ -30,7 +30,7 @@ const FAQ: [string, string][] = [
   ['Who can join?', 'The first 100 independent publishers to claim their page and sign up. Once the spots are gone, they’re gone.'],
   ['Do I still set my own price?', 'Yes. Your wholesale price, your minimums and your terms stay yours. We only handle the boxes.'],
   ['Can I keep my distributor?', 'Yes. Neesh sits alongside any distributor you already use and reaches the shops they don’t call on.'],
-  ['What happens after April 2027?', 'We\u2019ll tell you the rate well before then. Keep using Neesh fulfillment, or take your copies back and ship orders yourself. Either way, your page and your spaces stay with you.'],
+  ['What happens after June 2027?', 'Fulfillment becomes an extra 15 percent of wholesale, so 25 percent in total on orders we ship for you. Keep it, or take your copies back and ship orders yourself at the usual 10 percent. Either way, your page and your spaces stay with you.'],
 ];
 
 export default function FulfillmentPage() {
@@ -49,7 +49,7 @@ export default function FulfillmentPage() {
           <h1>We&rsquo;ll ship your magazine. Free.</h1>
           <div className="page-hero-row">
             <p>
-              Send us your copies and we pick, pack and ship every Neesh order, free through April
+              Send us your copies and we pick, pack and ship every Neesh order, free until June
               2027. No fulfillment fee. You make the magazine, we move it.
             </p>
             <div className="page-hero-cta">
