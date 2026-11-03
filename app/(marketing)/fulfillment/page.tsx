@@ -23,13 +23,14 @@ const TERMS: [string, string][] = [
   ['Free until June 2027', 'No fulfillment fee, no storage fee and no packing fee until June 2027. You pay the same 10 percent of wholesale as every publisher on Neesh.'],
   ['Spaces pay shipping', 'Postage to the space is charged at checkout. You never pay to ship an order.'],
   ['Paid when it ships', 'Your payout is released as soon as we confirm the order has shipped.'],
-  ['A year on the shelf', 'We hold your stock for 365 days from arrival. When we put your copies in our curated packs, we buy them from you at your wholesale price. Anything still unsold after a year comes back to you at your cost.'],
+  ['A year on the shelf', 'We hold your stock for 365 days from arrival. When we put your copies in our curated packs, we buy them from you at your wholesale price.'],
 ];
 
 const FAQ: [string, string][] = [
   ['Who can join?', 'The first 100 independent publishers to claim their page and sign up. Once the spots are gone, they’re gone.'],
   ['Do I still set my own price?', 'Yes. Your wholesale price, your minimums and your terms stay yours. We only handle the boxes.'],
   ['Can I keep my distributor?', 'Yes. Neesh sits alongside any distributor you already use and reaches the shops they don’t call on.'],
+  ['What if copies don’t sell?', 'Anything still unsold after a year comes back to you at your cost.'],
   ['What happens after June 2027?', 'Fulfillment becomes an extra 15 percent of wholesale, so 25 percent in total on orders we ship for you. Keep it, or take your copies back and ship orders yourself at the usual 10 percent. Either way, your page and your spaces stay with you.'],
 ];
 
