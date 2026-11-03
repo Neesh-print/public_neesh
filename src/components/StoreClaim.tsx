@@ -4,7 +4,15 @@ import { Honeypot } from './Honeypot';
 // The claim banner on an unclaimed store page (stockists spec, Phase 2).
 // A plain form post, no JS: the claim is stored for manual review, and the
 // space is pointed at Neesh signup so the approved page links to an account.
-export function StoreClaim({ storeId, storeName }: { storeId: string; storeName: string }) {
+export function StoreClaim({
+  storeId,
+  storeName,
+  orderableCount = 0,
+}: {
+  storeId: string;
+  storeName: string;
+  orderableCount?: number;
+}) {
   return (
     <div className="publisher-zone store-claim">
       <span className="blurb">
@@ -48,13 +56,16 @@ export function StoreClaim({ storeId, storeName }: { storeId: string; storeName:
           </div>
         </form>
       </details>
-      <span className="store-claim-note">
-        Buying for a space?{' '}
-        <a href={appUrl('/apply/retailer')} className="text-link">
-          Set up a Neesh account
-        </a>{' '}
-        to order Index titles at wholesale.
-      </span>
+      {/* Only point at wholesale when this shelf has titles Neesh can sell. */}
+      {orderableCount > 0 && (
+        <span className="store-claim-note">
+          Buying for a space?{' '}
+          <a href={appUrl('/apply/retailer')} className="text-link">
+            Set up a Neesh account
+          </a>{' '}
+          to order the titles marked Order now at wholesale.
+        </span>
+      )}
     </div>
   );
 }

@@ -6508,3 +6508,19 @@ button.c-link {
   white-space: nowrap;
   border: 0;
 }
+
+/* Unclaimed title profiles: a plain line that the publisher isn't on Neesh */
+.unclaimed-note {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--muted-2);
+}
+
+/* Claimed titles: link to the publisher's own subscription page */
+.subscribe-line {
+  margin: 12px 0 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--muted);
+}
