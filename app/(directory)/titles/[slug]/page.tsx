@@ -32,7 +32,10 @@ import { ReportLink } from '@/components/collect/ReportButton';
 import { getTitleIssues, getTitleShopEvidence } from '@/lib/collect/server';
 import { isUnreviewedReaderRecord } from '@/lib/collect/shared';
 
-export const revalidate = 86400;
+// Five minutes, so a publisher's edit from the Neesh portal shows up
+// quickly. The portal's on-demand refresh (/api/revalidate-listing) is
+// challenged by the Vercel firewall, so this is what keeps pages fresh.
+export const revalidate = 300;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {

@@ -4,7 +4,10 @@ import { getTagBySlug, getTagsWithCounts, PAGE_SIZE, tagPublishes } from '@/lib/
 import { canonical, nicheProse } from '@/lib/seo';
 import { NichePage } from '@/components/NichePage';
 
-export const revalidate = 86400;
+// Five minutes, so a publisher's edit from the Neesh portal shows up
+// quickly. The portal's on-demand refresh (/api/revalidate-listing) is
+// challenged by the Vercel firewall, so this is what keeps pages fresh.
+export const revalidate = 300;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
