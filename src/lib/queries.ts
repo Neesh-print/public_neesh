@@ -77,16 +77,16 @@ export async function getCatalogTitles(limit = 400): Promise<TitleFull[]> {
   if (!hasSupabaseEnv) return [];
   const { data } = await anonClient()
     .from('directory_titles')
-    .select(`${TITLE_SELECT}, directory_title_tags(tag:directory_tags(*))`)
+    .select(`${TITLE_SELECT}, directory_title_tags(*, tag:directory_tags(*))`)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
     .order('name')
     .limit(limit);
   return ((data as unknown as (TitleWithPublisher & {
-    directory_title_tags: { tag: Tag }[];
+    directory_title_tags: TagLink[];
   })[]) ?? []).map((row) => ({
     ...row,
-    tags: sortSubjectFirst((row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean)),
+    tags: orderTags(row.directory_title_tags ?? []),
   }));
 }
 
@@ -94,18 +94,18 @@ export async function getTitleBySlug(slug: string): Promise<TitleFull | null> {
   if (!hasSupabaseEnv) return null;
   const { data } = await anonClient()
     .from('directory_titles')
-    .select(`${TITLE_SELECT}, directory_title_tags(tag:directory_tags(*))`)
+    .select(`${TITLE_SELECT}, directory_title_tags(*, tag:directory_tags(*))`)
     .eq('slug', slug)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
     .maybeSingle();
   if (!data) return null;
   const row = data as unknown as TitleWithPublisher & {
-    directory_title_tags: { tag: Tag }[];
+    directory_title_tags: TagLink[];
   };
   return {
     ...row,
-    tags: sortSubjectFirst((row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean)),
+    tags: orderTags(row.directory_title_tags ?? []),
   };
 }
 
@@ -327,11 +327,24 @@ export async function countListedStores(): Promise<number> {
   return count ?? 0;
 }
 
-// Subject tags ahead of identity tags, so tags[0] is always the primary niche.
-function sortSubjectFirst(tags: Tag[]): Tag[] {
-  return [...tags].sort((a, b) =>
-    (a.category === 'subject' ? 0 : 1) - (b.category === 'subject' ? 0 : 1)
-  );
+// One directory_title_tags row with its tag. is_primary arrives through the
+// row's *, so these reads keep working on a database that predates the
+// column (every link then reads as not primary).
+export interface TagLink {
+  is_primary?: boolean | null;
+  tag: Tag | null;
+}
+
+// The primary niche first, then other subject tags, then identity tags, so
+// tags[0] is always the primary niche. Titles whose publisher has not chosen
+// a primary keep the database order among subject tags.
+export function orderTags(links: TagLink[]): Tag[] {
+  const rank = (link: TagLink) =>
+    link.tag?.category === 'subject' ? (link.is_primary ? 0 : 1) : 2;
+  return [...links]
+    .filter((link): link is TagLink & { tag: Tag } => Boolean(link.tag))
+    .sort((a, b) => rank(a) - rank(b))
+    .map((link) => link.tag);
 }
 
 export async function getPublisherBySlug(
