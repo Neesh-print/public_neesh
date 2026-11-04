@@ -10,10 +10,7 @@ import { createHmac, timingSafeEqual } from 'crypto';
 // links use it and links already sent (unfollow links last a year) still
 // verify against the old key.
 
-// listing-link: the emailed sign-in link to edit an Index listing.
-// listing-session: the cookie that link leaves behind. Both carry the
-// publisher's email address as the subject.
-type Action = 'unfollow' | 'delete' | 'listing-link' | 'listing-session';
+type Action = 'unfollow' | 'delete';
 
 let warnedFallback = false;
 
@@ -40,7 +37,7 @@ function macMatches(payload: string, mac: string, key: string): boolean {
 }
 
 export function makeToken(action: Action, subject: string, days: number): string {
-  const expires = Math.floor(Date.now() / 1000 + days * 24 * 60 * 60);
+  const expires = Math.floor(Date.now() / 1000) + days * 24 * 60 * 60;
   const payload = Buffer.from(JSON.stringify({ a: action, s: subject, e: expires })).toString('base64url');
   return `${payload}.${sign(payload, secrets().signing)}`;
 }

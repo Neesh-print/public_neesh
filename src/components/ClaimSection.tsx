@@ -23,12 +23,7 @@ export function ClaimSection({
   if (claimed) {
     return (
       <div className="claim-line">
-        <div className="claim-row">
-          <span className="claim-note">Claimed by publisher</span>
-          <a className="claim-link" href="/listing">
-            Edit this listing &rarr;
-          </a>
-        </div>
+        <span className="claim-note">Claimed by publisher</span>
       </div>
     );
   }
