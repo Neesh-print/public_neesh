@@ -7,7 +7,10 @@ import { RankFilter } from '@/components/RankFilter';
 
 // The spaces index: every space carrying STORE_RANK_MIN or more Index titles,
 // ranked by how many it carries. Spaces with fewer live on their city page.
-export const revalidate = 86400;
+// Five minutes, so a publisher's edit from the Neesh portal shows up
+// quickly. The portal's on-demand refresh (/api/revalidate-listing) is
+// challenged by the Vercel firewall, so this is what keeps pages fresh.
+export const revalidate = 300;
 
 const TITLE = 'Where to buy independent magazines, space by space | Neesh Index';
 const DESCRIPTION =

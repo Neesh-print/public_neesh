@@ -4,7 +4,10 @@ import { getTitleBySlug } from '@/lib/queries';
 import { canonical } from '@/lib/seo';
 import { OrderFork } from '@/components/OrderFork';
 
-export const revalidate = 86400;
+// Five minutes, so a publisher's edit from the Neesh portal shows up
+// quickly. The portal's on-demand refresh (/api/revalidate-listing) is
+// challenged by the Vercel firewall, so this is what keeps pages fresh.
+export const revalidate = 300;
 
 export async function generateMetadata({
   params,

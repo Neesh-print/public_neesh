@@ -29,7 +29,9 @@ Next.js (App Router) on Vercel plus Supabase. Carries two things.
 ```
 
 Rendering is ISR everywhere. `generateStaticParams` prebuilds title,
-publisher, and tag pages; `revalidate = 86400` is the safety net; POST
+publisher, and tag pages. Directory pages (titles, publishers, niches,
+cities, stores) use `revalidate = 300`, so a publisher's edit from the Neesh
+portal shows within about five minutes; marketing pages keep `86400`. POST
 `/api/revalidate` (empty body refreshes the whole tree) after imports or
 edits. The only client-side JS on a profile page is the view beacon and two
 tiny form enhancements; every CTA is a plain form that works with JS off.
