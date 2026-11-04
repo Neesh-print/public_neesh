@@ -89,7 +89,11 @@ export default function AuthPublisherPage() {
           </span>
           {result.claimed ? (
             <span className="claimed-line">
-              Already claimed. If this is your title,{' '}
+              Already claimed. If it is yours,{' '}
+              <a href="/listing" className="text-link">
+                edit your listing
+              </a>
+              . If someone else claimed it,{' '}
               <a href="mailto:hi@neesh.art" className="text-link">
                 email us
               </a>{' '}
