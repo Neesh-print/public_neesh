@@ -269,18 +269,19 @@ export const LEGAL_DOCS: Record<
           },
           {
             "kind": "p",
-            "html": "<strong>Cookies.</strong> Our website uses cookies that are necessary for it to work, such as remembering your cookie choice and keeping you signed in on app.neesh.art. With your permission, we also use:"
+            "html": "<strong>Cookies.</strong> Our website uses cookies that are necessary for it to work, such as remembering your cookie choice and keeping you signed in on app.neesh.art. We also use the following measurement cookies:"
           },
           {
             "kind": "list",
             "items": [
               "<strong>Google Analytics</strong> (loaded through Google Tag Manager), which sets cookies (<code>_ga</code>, <code>_ga_*</code>) to tell us how the site is used, such as which pages are visited and how people arrive. Google processes this data on our behalf.",
+              "<strong>Google Ads click measurement</strong> (<code>_gcl_*</code>), which tells us whether a visit came from one of our Google search ads and whether it led to an action on the site, so we can see which ads are worth paying for. We do not use these cookies to show you ads elsewhere (no remarketing).",
               "<strong>A first-touch cookie</strong> (<code>neesh_ft</code>, kept for 180 days), which remembers how you first found Neesh, for example a search engine or a campaign link, so we can see which channels bring publishers and spaces to us."
             ]
           },
           {
             "kind": "p",
-            "html": "We ask before setting any of these, and nothing is set if you decline. You can change your choice at any time with <strong>Cookie settings</strong> at the bottom of every page. We also use Vercel Web Analytics and Speed Insights, which measure page views and performance without cookies or cross-site identifiers. We do not use advertising or cross-site tracking cookies."
+            "html": "If you are in the European Union, European Economic Area, United Kingdom, or Switzerland, we ask before setting any of these, and nothing is set if you decline. Elsewhere, they are on by default and you can opt out with one click. If your browser sends a Global Privacy Control signal, we treat it as an opt-out and ask before setting any of these. You can change your choice at any time with <strong>Cookie settings</strong> at the bottom of every page; opting out stops these cookies and removes the ones already set. We work out which of these applies from your browser’s time zone, not your location. We also use Vercel Web Analytics and Speed Insights, which measure page views and performance without cookies or cross-site identifiers. We do not sell your personal information or use it for ads targeted across other sites."
           },
           {
             "kind": "p",
@@ -320,7 +321,7 @@ export const LEGAL_DOCS: Record<
               "<strong>Resend</strong> — transactional and marketing email delivery, including open and click tracking",
               "<strong>HubSpot</strong> — customer relationship management and email signups",
               "<strong>Google Cloud Storage</strong> — hosting of some site images and uploaded files",
-              "<strong>Google</strong> — website analytics (Google Analytics, Google Tag Manager), only with your consent",
+              "<strong>Google</strong> — website analytics and ad measurement (Google Analytics, Google Tag Manager, Google Ads), subject to your cookie choice",
               "<strong>Vercel</strong> — website hosting and cookieless analytics"
             ]
           },
