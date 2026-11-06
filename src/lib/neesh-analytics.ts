@@ -18,14 +18,37 @@ function push(event: string, params: Record<string, unknown> = {}): void {
   window.dataLayer.push({ event, ...params });
 }
 
+// A gtag() command on the dataLayer. The Google tag that GTM loads reads
+// these directly (the same way it reads the consent commands from the head
+// script), so the event reaches GA4 without a GTM trigger. Must push an
+// arguments object, not an array or plain object.
+function gtagEvent(name: string, params: Record<string, unknown>): void {
+  if (typeof window === 'undefined') return;
+  window.dataLayer = window.dataLayer || [];
+  (function (..._args: unknown[]) {
+    // eslint-disable-next-line prefer-rest-params
+    (window.dataLayer as unknown[]).push(arguments);
+  })('event', name, params);
+}
+
 /**
  * A curated pack was paid for. Fire on the Stripe checkout success return
  * for a pack, never on the buy click. `value` is the order total in whole
- * currency units (200 for a pack, 300 with the stand); GTM forwards value
- * and currency to GA4 as the conversion value.
+ * currency units (200 for a pack, 300 with the stand).
+ *
+ * Sends two events: pack_purchase (the existing GTM-triggered event, kept so
+ * reports stay continuous) and GA4's standard purchase event, which is the
+ * key event imported into Google Ads. transaction_id (the Stripe Checkout
+ * session id) lets GA4 drop a repeat of the same order.
  */
-export function trackPackPurchase(value: number, currency = 'USD'): void {
+export function trackPackPurchase(value: number, currency = 'USD', transactionId?: string): void {
   push('pack_purchase', { value, currency });
+  gtagEvent('purchase', {
+    value,
+    currency,
+    ...(transactionId ? { transaction_id: transactionId } : {}),
+    items: [{ item_id: 'curated-pack', item_name: 'Curated pack', price: value, quantity: 1 }],
+  });
 }
 
 /**

@@ -43,7 +43,11 @@ export function PackPurchaseBeacon() {
     }
 
     const value = Number(params.get('value'));
-    trackPackPurchase(Number.isFinite(value) && value > 0 ? value : PACK_PRICE);
+    trackPackPurchase(
+      Number.isFinite(value) && value > 0 ? value : PACK_PRICE,
+      'USD',
+      sessionId.startsWith('cs_') ? sessionId : undefined
+    );
 
     for (const key of RETURN_PARAMS) params.delete(key);
     const query = params.toString();
