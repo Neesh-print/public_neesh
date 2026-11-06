@@ -2383,6 +2383,13 @@ button {
   outline-offset: 3px;
 }
 
+.claim-sub {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--muted-2);
+}
+
 .remove-details summary {
   cursor: pointer;
   list-style: none;

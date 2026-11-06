@@ -4,7 +4,7 @@ import { LegalDoc } from '@/components/LegalDoc';
 
 export const metadata: Metadata = {
   title: 'Publisher Agreement | Neesh',
-  description: "The terms that apply once your publisher application is approved: listings, fulfillment windows, commission, payouts, and returns.",
+  description: "The terms that apply once you are approved to sell on Neesh: listings, fulfillment windows, commission, payouts, and returns.",
   alternates: { canonical: '/publisher-agreement' },
 };
 
