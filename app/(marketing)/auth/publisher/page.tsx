@@ -61,7 +61,8 @@ export default function AuthPublisherPage() {
 
   function claimUrl(result: TitleSearchResult) {
     return appUrl(
-      `/apply/publisher?title=${encodeURIComponent(result.name)}&claim=${encodeURIComponent(result.slug)}`
+      `/apply/publisher?title=${encodeURIComponent(result.name)}&claim=${encodeURIComponent(result.slug)}` +
+        `&publisher=${encodeURIComponent(result.publisher)}`
     );
   }
 

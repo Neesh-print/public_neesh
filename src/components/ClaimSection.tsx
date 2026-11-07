@@ -15,11 +15,13 @@ export function ClaimSection({
   titleId,
   titleName,
   titleSlug,
+  publisherName,
   claimed,
 }: {
   titleId: string;
   titleName: string;
   titleSlug: string;
+  publisherName?: string;
   claimed: boolean;
 }) {
   if (claimed) {
@@ -31,7 +33,8 @@ export function ClaimSection({
   }
 
   const href = appUrl(
-    `/apply/publisher?title=${encodeURIComponent(titleName)}&claim=${titleSlug}`
+    `/apply/publisher?title=${encodeURIComponent(titleName)}&claim=${titleSlug}` +
+      (publisherName ? `&publisher=${encodeURIComponent(publisherName)}` : '')
   );
 
   function onClick() {
