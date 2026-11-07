@@ -20,7 +20,8 @@ type Phase = 'search' | 'found' | 'near' | 'none';
 // The publisher path, v2: search the index first. An exact match asks "Is
 // this you?", near matches prevent duplicate records, and the empty result
 // celebrates the gap before converting. Claim CTAs carry the slug so the
-// application prefills.
+// application prefills. Claiming is free and separate from selling; the
+// application asks about selling as its own step.
 export default function AuthPublisherPage() {
   const [query, setQuery] = useState('');
   const [searched, setSearched] = useState('');
@@ -60,7 +61,8 @@ export default function AuthPublisherPage() {
 
   function claimUrl(result: TitleSearchResult) {
     return appUrl(
-      `/apply/publisher?title=${encodeURIComponent(result.name)}&claim=${encodeURIComponent(result.slug)}`
+      `/apply/publisher?title=${encodeURIComponent(result.name)}&claim=${encodeURIComponent(result.slug)}` +
+        `&publisher=${encodeURIComponent(result.publisher)}`
     );
   }
 
@@ -109,7 +111,10 @@ export default function AuthPublisherPage() {
           <>
             <span className="eyebrow">For publishers</span>
             <h1>Find your magazine</h1>
-            <p className="sub">It may already be in the index. Claiming beats starting over.</p>
+            <p className="sub">
+              It may already be in the index. Claiming is free, and you don&rsquo;t have to sell
+              on Neesh to do it.
+            </p>
             <form className="search-row" onSubmit={search}>
               <input
                 type="text"
@@ -173,7 +178,9 @@ export default function AuthPublisherPage() {
                 Search again
               </button>
             </div>
-            <p className="small">We review every claim by hand.</p>
+            <p className="small">
+              We review every claim by hand. Claiming is free and separate from selling.
+            </p>
           </>
         )}
       </div>

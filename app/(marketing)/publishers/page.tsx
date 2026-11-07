@@ -11,6 +11,10 @@ export const metadata: Metadata = {
 
 const FAQ: [string, string][] = [
   [
+    'Does claiming my page mean I have to sell on Neesh?',
+    "No. Claiming is free and gets you your page on the Neesh Index to edit and keep current. Selling is a separate choice you can make when you claim or any time after, from your dashboard.",
+  ],
+  [
     'Is Neesh a distributor?',
     "No. We're a marketplace and the software underneath it. You set terms, we connect you with buyers and handle the transaction. If you already work with a distributor, Neesh sits alongside it and reaches the shops they don't call on.",
   ],
@@ -44,8 +48,16 @@ const BENEFITS: [string, string][] = [
 ];
 
 const HOW: [string, string, string][] = [
-  ['01', 'Claim your page', 'Your title is probably already in our index. Claim it and share your link.'],
-  ['02', 'Set your terms', 'Your wholesale price, your minimums, your rules. Fulfill it yourself or hand it to us.'],
+  [
+    '01',
+    'Claim your page',
+    "Your title is probably already in our index. Claim it for free, keep it up to date, and share your link. Claiming doesn't sign you up to sell.",
+  ],
+  [
+    '02',
+    'Sell if you want to',
+    'Selling is a separate choice. Opt in and set your wholesale price, your minimums, your rules. Fulfill it yourself or hand it to us.',
+  ],
   [
     '03',
     'We bring the shelves',
@@ -136,7 +148,7 @@ export default function PublishersPage() {
             Claim your title
             <ArrowIcon />
           </Link>
-          <span className="hand-note">We review every claim by hand.</span>
+          <span className="hand-note">Claiming is free. We review every claim by hand.</span>
         </div>
       </section>
     </>
