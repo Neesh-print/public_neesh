@@ -14,6 +14,10 @@ const GROUPS: { label: string; items: [string, string][] }[] = [
     label: 'For publishers',
     items: [
       [
+        'Does claiming my page mean I have to sell on Neesh?',
+        "No. Claiming is free and gets you your page on the Neesh Index to edit and keep current. Selling is a separate choice you can make when you claim or any time after, from your dashboard.",
+      ],
+      [
         'Is Neesh a distributor?',
         "No. We're a marketplace and the software underneath it. You set terms, we connect you with buyers and handle the transaction. If you already work with a distributor, Neesh sits alongside it and reaches the shops they don't call on.",
       ],

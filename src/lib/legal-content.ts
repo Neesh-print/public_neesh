@@ -24,7 +24,7 @@ export interface LegalDocData {
 }
 
 export const LEGAL_DOCS: Record<
-  'terms' | 'privacy' | 'publisherAgreement' | 'retailerAgreement',
+  'terms' | 'privacy' | 'publisherAgreement' | 'retailerAgreement' | 'indexTerms',
   LegalDocData
 > = {
   "terms": {
@@ -33,7 +33,7 @@ export const LEGAL_DOCS: Record<
     "effective": "Effective August 19, 2026",
     "intro": [
       "These Terms of Service (“Terms”) govern your use of neesh.art and the Neesh marketplace (the “Service”), operated by WAU LLC, an Oregon limited liability company (“Neesh,” “we,” “us”). By using the Service, creating an account, or submitting an application, you agree to these Terms. If you use the Service on behalf of a business, you represent that you are authorized to bind that business, and “you” refers to the business.",
-      "If you are approved as a publisher, the <a href=\"/publisher-agreement\">Publisher Agreement</a> also applies to you. If you are approved as a retailer, the <a href=\"/retailer-agreement\">Retailer Agreement</a> also applies. If those agreements conflict with these Terms, the role-specific agreement controls."
+      "If you claim a page on the Neesh Index, the <a href=\"/index-terms\">Index Terms</a> also apply to you. If you are approved to sell as a publisher, the <a href=\"/publisher-agreement\">Publisher Agreement</a> also applies to you. If you are approved as a retailer, the <a href=\"/retailer-agreement\">Retailer Agreement</a> also applies. If those agreements conflict with these Terms, the role-specific agreement controls."
     ],
     "sections": [
       {
@@ -401,12 +401,88 @@ export const LEGAL_DOCS: Record<
       }
     ]
   },
+  "indexTerms": {
+    "h1": "Index Terms",
+    "sub": "The terms for publishers who claim a page on the Neesh Index: owning your page, keeping it accurate, and taking it down.",
+    "effective": "Draft, pending review",
+    "intro": [
+      "These Index Terms apply when you claim a publisher or title page on the Neesh Index, operated by WAU LLC, an Oregon limited liability company (“Neesh,” “we,” “us”). They supplement the <a href=\"/terms\">Neesh Terms of Service</a>. Claiming a page is free and does not make you a seller on Neesh. If you later choose to sell on Neesh and are approved, the <a href=\"/publisher-agreement\">Publisher Agreement</a> also applies to you."
+    ],
+    "sections": [
+      {
+        "id": "index-what-claiming-is",
+        "num": "01",
+        "heading": "What claiming is",
+        "body": [
+          {
+            "kind": "p",
+            "html": "Claiming gives you control of your page on the Neesh Index: you can edit its details, keep your issues up to date, and see who is looking. Claiming does not list your titles for wholesale purchase, does not create any obligation to sell, ship, or fulfill orders, and does not create a distribution, agency, or consignment relationship. Neesh charges nothing for claiming."
+          }
+        ]
+      },
+      {
+        "id": "index-who-can-claim",
+        "num": "02",
+        "heading": "Who can claim",
+        "body": [
+          {
+            "kind": "p",
+            "html": "You may claim a page only for a title you publish or are authorized to represent. When you claim, you confirm that you hold the rights to the title and to the content you add to the page. Every claim is reviewed by a person, and we may ask for reasonable proof, such as an email address on the title’s domain or access to its social accounts. We may decline or reverse a claim we reasonably believe is not genuine."
+          }
+        ]
+      },
+      {
+        "id": "index-keeping-it-accurate",
+        "num": "03",
+        "heading": "Keeping your page accurate",
+        "body": [
+          {
+            "kind": "p",
+            "html": "You agree to keep your page accurate and current, and not to add content that is misleading, infringing, or unlawful. You keep ownership of the content you add, and you grant Neesh the license to display and use it described in the <a href=\"/terms\">Terms of Service</a>. We may edit or remove content that breaks these Index Terms or the Terms of Service."
+          }
+        ]
+      },
+      {
+        "id": "index-removing-your-page",
+        "num": "04",
+        "heading": "Removing your page",
+        "body": [
+          {
+            "kind": "p",
+            "html": "You can ask us to take your page down at any time by emailing <a href=\"mailto:hi@neesh.art\">hi@neesh.art</a> or using the removal link on the page. We remove listings on request. We may also remove a listing ourselves, with notice where practicable, if a title has stopped publishing, if ownership is disputed, or if the page breaks these Index Terms."
+          }
+        ]
+      },
+      {
+        "id": "index-selling-later",
+        "num": "05",
+        "heading": "Selling later",
+        "body": [
+          {
+            "kind": "p",
+            "html": "If you decide to sell on Neesh, you can apply from your dashboard at any time. Selling goes through its own review, and your titles are offered to retailers only once you are approved and accept the <a href=\"/publisher-agreement\">Publisher Agreement</a>."
+          }
+        ]
+      },
+      {
+        "id": "index-contact",
+        "num": "06",
+        "heading": "Contact",
+        "body": [
+          {
+            "kind": "p",
+            "html": "WAU LLC (operating Neesh), Portland, Oregon, USA. <strong><a href=\"mailto:hi@neesh.art\">hi@neesh.art</a></strong>"
+          }
+        ]
+      }
+    ]
+  },
   "publisherAgreement": {
     "h1": "Publisher Agreement",
-    "sub": "The terms that apply once your publisher application is approved: listings, fulfillment windows, commission, payouts, and returns.",
+    "sub": "The terms that apply once you are approved to sell on Neesh: listings, fulfillment windows, commission, payouts, and returns.",
     "effective": "Effective August 19, 2026",
     "intro": [
-      "This Publisher Agreement is between WAU LLC, an Oregon limited liability company operating Neesh (“Neesh”), and the publisher accepting it (“Publisher,” “you”). It applies when your publisher application is approved and you accept it during onboarding, and it supplements the <a href=\"/terms\">Neesh Terms of Service</a>. Capitalized terms not defined here have the meanings in the Terms."
+      "This Publisher Agreement is between WAU LLC, an Oregon limited liability company operating Neesh (“Neesh”), and the publisher accepting it (“Publisher,” “you”). It applies when you are approved to sell on Neesh and you accept it during onboarding, and it supplements the <a href=\"/terms\">Neesh Terms of Service</a>. Claiming a page on the Neesh Index without selling is covered by the <a href=\"/index-terms\">Index Terms</a>, not this Agreement. Capitalized terms not defined here have the meanings in the Terms."
     ],
     "sections": [
       {
