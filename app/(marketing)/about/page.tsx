@@ -96,7 +96,7 @@ export default function AboutPage() {
               <Link href="/auth/publisher" className="text-link">
                 claim your title
               </Link>{' '}
-              and set your terms. If you run a space and want help choosing, write to{' '}
+              for free, and if you want to sell on Neesh, set your terms. If you run a space and want help choosing, write to{' '}
               <a href="mailto:hi@neesh.art" className="text-link">
                 hi@neesh.art
               </a>{' '}
