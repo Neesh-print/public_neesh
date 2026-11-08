@@ -18,10 +18,11 @@ import { JsonLd } from '@/components/JsonLd';
 // in a city, from the publishers' own stockist lists. Rendered on first
 // request and cached. Unpublished cities (too few shops, or hidden) render
 // but stay out of search and the city index.
-// Five minutes, so a publisher's edit from the Neesh portal shows up
-// quickly. The portal's on-demand refresh (/api/revalidate-listing) is
-// challenged by the Vercel firewall, so this is what keeps pages fresh.
-export const revalidate = 300;
+// Daily. A five-minute window meant any crawler sweeping thousands of
+// store and city pages forced a fresh database render on almost every hit
+// (the Nov 7 and Nov 8 timeout storms). Publisher edits reach these pages
+// through /api/revalidate-listing, and imports through /api/revalidate.
+export const revalidate = 86400;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {

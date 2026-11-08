@@ -73,9 +73,11 @@ export async function POST(req: NextRequest) {
       surface: e.surface ?? null,
       ...cleanUtm(e.utm),
     });
-    if (error) log('error', 'collect_event.insert_failed', { error: error.message });
+    // Analytics events only (collection adds go through /api/collect/add),
+    // so a failed write is logged, not alerted.
+    if (error) log('warn', 'collect_event.insert_failed', { error: error.message });
   } catch (err) {
-    log('error', 'collect_event.failed', { error: err });
+    log('warn', 'collect_event.failed', { error: err });
   }
   return new NextResponse(null, { status: 204 });
 }
