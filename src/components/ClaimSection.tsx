@@ -5,19 +5,24 @@ import { appUrl } from '@/lib/seo';
 import { Honeypot } from './Honeypot';
 // The claim line under a title's details: "Is this your magazine? Claim it"
 // on an unclaimed profile, "Claimed by publisher" once it has an owner.
-// Claiming fires a claim_click signal then hands off to the full publisher
-// signup flow, prefilled for this title; every claim still passes manual
-// review. Removal stays as a small link that asks for an email and triggers
-// an "are you sure" email before anything comes down.
+// Claiming fires a claim_click signal then hands off to the publisher
+// application, prefilled for this title. Claiming is free and separate from
+// selling: the application asks whether they want to sell after the page
+// details, and "just claim my page" never touches pricing or fulfillment.
+// Every claim still passes manual review. Removal stays as a small link that
+// asks for an email and triggers an "are you sure" email before anything
+// comes down.
 export function ClaimSection({
   titleId,
   titleName,
   titleSlug,
+  publisherName,
   claimed,
 }: {
   titleId: string;
   titleName: string;
   titleSlug: string;
+  publisherName?: string;
   claimed: boolean;
 }) {
   if (claimed) {
@@ -29,7 +34,8 @@ export function ClaimSection({
   }
 
   const href = appUrl(
-    `/apply/publisher?title=${encodeURIComponent(titleName)}&claim=${titleSlug}`
+    `/apply/publisher?title=${encodeURIComponent(titleName)}&claim=${titleSlug}` +
+      (publisherName ? `&publisher=${encodeURIComponent(publisherName)}` : '')
   );
 
   function onClick() {
@@ -49,6 +55,10 @@ export function ClaimSection({
           Claim it &rarr;
         </a>
       </div>
+      <p className="claim-sub">
+        Claiming is free and you don&rsquo;t have to sell on Neesh. Selling is a separate choice
+        you can make any time.
+      </p>
       <details className="remove-details">
         <summary>Remove this profile</summary>
         <form className="remove-form" action="/api/remove-request" method="post">

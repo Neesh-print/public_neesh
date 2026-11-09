@@ -276,6 +276,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               titleId={title.id}
               titleName={title.name}
               titleSlug={title.slug}
+              publisherName={title.publisher.name}
               claimed={claimed || listed}
             />
 
