@@ -21,3 +21,31 @@ test('revalidate-listing needs a publisher token', async () => {
   const res = await revalidateListing(new NextRequest('https://neesh.art/api/revalidate-listing', { method: 'POST' }));
   assert.equal(res.status, 401);
 });
+
+test('listingPaths refreshes only the pages a publisher appears on', async () => {
+  const { listingPaths } = await import('@/lib/listing-paths');
+  const paths = listingPaths({
+    publisherSlugs: ['chew-co'],
+    titleSlugs: ['chew', 'chew'],
+    tagSlugs: ['food'],
+    storeSlugs: ['camden-art-centre-london'],
+    citySlugs: ['london'],
+  });
+  assert.deepEqual(
+    paths.sort(),
+    [
+      '/',
+      '/catalog',
+      '/catalog/food',
+      '/cities',
+      '/cities/london',
+      '/order/chew',
+      '/publishers/chew-co',
+      '/stores',
+      '/stores/camden-art-centre-london',
+      '/titles/chew',
+    ].sort()
+  );
+  // No whole-tree refresh, and no other store or title.
+  assert.ok(!paths.includes('/stores/somewhere-else'));
+});

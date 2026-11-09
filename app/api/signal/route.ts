@@ -75,7 +75,14 @@ export async function POST(req: NextRequest) {
       user_agent: ua ? ua.slice(0, 500) : null,
     });
     if (error) {
-      log('error', 'signal.insert_failed', { error: error.message });
+      // A lost page view is not worth an alert (crawls produce them by the
+      // hundred when the database is busy). A lost request from a person
+      // asking for a title is, so those still alert.
+      const level = parsed.data.signal_type === 'view' ? 'warn' : 'error';
+      log(level, 'signal.insert_failed', {
+        signal_type: parsed.data.signal_type,
+        error: error.message,
+      });
       return done();
     }
 

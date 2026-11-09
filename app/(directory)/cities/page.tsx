@@ -7,10 +7,11 @@ import { JsonLd } from '@/components/JsonLd';
 
 // The city index (stockists spec, Phase 3): every published city ranked by
 // how many shops carry Index titles. The live version of the cities post.
-// Five minutes, so a publisher's edit from the Neesh portal shows up
-// quickly. The portal's on-demand refresh (/api/revalidate-listing) is
-// challenged by the Vercel firewall, so this is what keeps pages fresh.
-export const revalidate = 300;
+// Daily. A five-minute window meant any crawler sweeping thousands of
+// store and city pages forced a fresh database render on almost every hit
+// (the Nov 7 and Nov 8 timeout storms). Publisher edits reach these pages
+// through /api/revalidate-listing, and imports through /api/revalidate.
+export const revalidate = 86400;
 
 const TITLE = 'Where to buy independent magazines, city by city | Neesh Index';
 const DESCRIPTION =

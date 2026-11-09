@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { anonClient, hasSupabaseEnv } from './supabase';
 import type {
   City,
@@ -90,7 +91,7 @@ export async function getCatalogTitles(limit = 400): Promise<TitleFull[]> {
   }));
 }
 
-export async function getTitleBySlug(slug: string): Promise<TitleFull | null> {
+async function loadTitleBySlug(slug: string): Promise<TitleFull | null> {
   if (!hasSupabaseEnv) return null;
   const { data } = await anonClient()
     .from('directory_titles')
@@ -155,7 +156,7 @@ export async function countPublisherTitles(publisherId: string): Promise<number>
 const STORE_COLUMNS =
   'id, slug, name, city, borough, country, website, claimed, claimed_at, address, instagram, hours, description, on_neesh';
 
-export async function getStoreBySlug(slug: string): Promise<Store | null> {
+async function loadStoreBySlug(slug: string): Promise<Store | null> {
   if (!hasSupabaseEnv) return null;
   const { data } = await anonClient()
     .from('directory_stores')
@@ -167,7 +168,7 @@ export async function getStoreBySlug(slug: string): Promise<Store | null> {
 
 // Every Index title on a shop's shelf, one row per title (a title can come
 // from both a publisher-wide and a title-specific link; keep the specific).
-export async function getStoreTitles(slug: string): Promise<StoreTitle[]> {
+async function loadStoreTitles(slug: string): Promise<StoreTitle[]> {
   if (!hasSupabaseEnv) return [];
   const { data } = await anonClient()
     .from('v_store_titles')
@@ -235,7 +236,7 @@ export function isCityPublished(city: Pick<City, 'slug' | 'store_count'>): boole
 
 const CITY_COLUMNS = 'slug, name, country, store_count, title_count, updated_at';
 
-export async function getCityBySlug(slug: string): Promise<City | null> {
+async function loadCityBySlug(slug: string): Promise<City | null> {
   if (!hasSupabaseEnv) return null;
   const { data } = await anonClient()
     .from('directory_cities')
@@ -347,7 +348,7 @@ export function orderTags(links: TagLink[]): Tag[] {
     .map((link) => link.tag);
 }
 
-export async function getPublisherBySlug(
+async function loadPublisherBySlug(
   slug: string
 ): Promise<{ publisher: Publisher; titles: Title[] } | null> {
   if (!hasSupabaseEnv) return null;
@@ -487,3 +488,13 @@ export async function getTitlesForTag(
   const all = sortForIndex((data as unknown as TitleWithPublisher[]) ?? [], featuredSlugs);
   return { titles: all.slice(from, from + PAGE_SIZE), total: all.length };
 }
+
+// Pages call these from both generateMetadata and the page itself. cache()
+// makes the second call in the same render reuse the first result, so a page
+// build reads each row once instead of twice. It is per request only: nothing
+// is shared between visitors or kept after the render.
+export const getStoreBySlug = cache(loadStoreBySlug);
+export const getStoreTitles = cache(loadStoreTitles);
+export const getCityBySlug = cache(loadCityBySlug);
+export const getPublisherBySlug = cache(loadPublisherBySlug);
+export const getTitleBySlug = cache(loadTitleBySlug);
