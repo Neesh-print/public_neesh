@@ -3,10 +3,11 @@ import { getTagBySlug, getTagsWithCounts, tagPublishes } from '@/lib/queries';
 import { canonical, nicheProse } from '@/lib/seo';
 import { NichePage } from '@/components/NichePage';
 
-// Five minutes, so a publisher's edit from the Neesh portal shows up
-// quickly. The portal's on-demand refresh (/api/revalidate-listing) is
-// challenged by the Vercel firewall, so this is what keeps pages fresh.
-export const revalidate = 300;
+// Daily, as a safety net. A publisher's portal edit refreshes the pages it
+// touches straight away through /api/revalidate-listing, and imports refresh
+// through /api/revalidate, so the timer only has to catch anything else. A
+// short timer made every crawl rebuild these pages from the database.
+export const revalidate = 86400;
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
