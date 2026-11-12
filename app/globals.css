@@ -6531,3 +6531,18 @@ button.c-link {
   line-height: 1.5;
   color: var(--muted);
 }
+
+/* Magazine covers sit in 3:4 frames with object-fit: cover. A cover taller
+   than 3:4 used to lose equal slices off the top and bottom, which cut off
+   the masthead. Anchor every cover to its top edge so the masthead and
+   cover lines always show; only the bottom is trimmed. */
+.title-cover,
+.t-card-cover img,
+.city-top-cover img,
+.cover-marquee-seq img,
+.mini-cover-grid img,
+.c-row-cover,
+.c-result-cover,
+.c-cell-cover {
+  object-position: center top;
+}
