@@ -21,16 +21,19 @@ export interface FetchedCover {
   lowResolution: boolean;
 }
 
-// Downloads an image and re-encodes it as a JPEG at its original size.
-// Transparent PNGs are flattened on white. Throws when the URL does not
-// resolve to an image.
-export async function fetchCover(url: string): Promise<FetchedCover> {
+// Downloads an image. Throws on a non-2xx response.
+export async function downloadImage(url: string): Promise<Buffer> {
   const res = await fetch(url, { headers: { 'User-Agent': UA, Accept: 'image/*,*/*;q=0.8' } });
   if (!res.ok) throw new Error(`HTTP ${res.status} fetching ${url}`);
-  const input = Buffer.from(await res.arrayBuffer());
+  return Buffer.from(await res.arrayBuffer());
+}
+
+// Re-encodes an image as a JPEG at its original size. Transparent PNGs are
+// flattened on white. Throws when the bytes are not an image.
+export async function convertCover(input: Buffer, label = 'image'): Promise<FetchedCover> {
   const image = sharp(input, { failOn: 'none' }).rotate();
   const meta = await image.metadata();
-  if (!meta.width || !meta.height || !meta.format) throw new Error(`not an image: ${url}`);
+  if (!meta.width || !meta.height || !meta.format) throw new Error(`not an image: ${label}`);
   const jpeg = await image.flatten({ background: '#ffffff' }).jpeg({ quality: 90, mozjpeg: true }).toBuffer();
   const longEdge = Math.max(meta.width, meta.height);
   return {
@@ -40,6 +43,10 @@ export async function fetchCover(url: string): Promise<FetchedCover> {
     sourceFormat: meta.format,
     lowResolution: longEdge < MIN_LONG_EDGE,
   };
+}
+
+export async function fetchCover(url: string): Promise<FetchedCover> {
+  return convertCover(await downloadImage(url), url);
 }
 
 export function coverObjectPath(titleSlug: string): string {
