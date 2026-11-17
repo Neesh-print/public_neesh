@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { serviceClient } from '@/lib/supabase';
 import { emailHtml, notify, sendEmail } from '@/lib/notify';
+import { domainMatch, readSubmission, redirectWithNotice, tooManyRequests } from '@/lib/forms';
+import { limitFormRequest } from '@/lib/rate-limit';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,51 +16,21 @@ const claimSchema = z.object({
   message: z.string().max(4000).optional(),
 });
 
-function domainMatch(email: string, website: string | null): boolean {
-  if (!website) return false;
-  try {
-    const emailDomain = email.split('@')[1]?.toLowerCase();
-    const siteDomain = new URL(website).hostname.toLowerCase().replace(/^www\./, '');
-    return Boolean(emailDomain) && (emailDomain === siteDomain || emailDomain.endsWith(`.${siteDomain}`));
-  } catch {
-    return false;
-  }
-}
-
 // Claim submission (spec 1.2): writes a row to directory_claims, then sends
 // email 1.1a to the claimant and 1.1b to the admin (handoff 5.3). Approval
 // is manual, via npm run approve, which sends email 1.2.
 export async function POST(req: NextRequest) {
-  const contentType = req.headers.get('content-type') ?? '';
-  const isForm =
-    contentType.includes('application/x-www-form-urlencoded') ||
-    contentType.includes('multipart/form-data');
+  const submission = await readSubmission(req);
+  if (!submission.ok) return NextResponse.json({ ok: false }, { status: 400 });
+  const { isForm, raw, trapped } = submission;
 
-  let raw: unknown;
-  try {
-    if (isForm) {
-      const fd = await req.formData();
-      const entries: Record<string, string> = {};
-      for (const [k, v] of fd.entries()) {
-        if (typeof v === 'string' && v.trim() !== '') entries[k] = v.trim();
-      }
-      raw = entries;
-    } else {
-      raw = await req.json();
-    }
-  } catch {
-    return NextResponse.json({ ok: false }, { status: 400 });
+  const finish = () =>
+    isForm ? redirectWithNotice(req, 'claim') : NextResponse.json({ ok: true });
+
+  if (!(await limitFormRequest(req, 'claim'))) {
+    return isForm ? finish() : tooManyRequests();
   }
-
-  const finish = () => {
-    if (isForm) {
-      const referer = req.headers.get('referer');
-      const url = referer ? new URL(referer) : new URL('/index', req.url);
-      url.searchParams.set('submitted', 'claim');
-      return NextResponse.redirect(url, 303);
-    }
-    return NextResponse.json({ ok: true });
-  };
+  if (trapped) return finish();
 
   const parsed = claimSchema.safeParse(raw);
   if (!parsed.success) {
@@ -71,7 +44,7 @@ export async function POST(req: NextRequest) {
       .from('directory_claims')
       .insert({ publisher_id, email, name, message });
     if (error) {
-      console.error('claim insert failed', error.message);
+      log('error', 'claim.insert_failed', { error: error.message });
       return finish();
     }
 
@@ -117,7 +90,7 @@ export async function POST(req: NextRequest) {
         `resolves the claim, and sends the approval email)`
     );
   } catch (err) {
-    console.error('claim failed', err);
+    log('error', 'claim.failed', { error: err });
   }
   return finish();
 }

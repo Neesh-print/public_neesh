@@ -1,6 +1,33 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
+  poweredByHeader: false,
+  async headers() {
+    // Baseline security headers on every response. HSTS is deliberately
+    // without includeSubDomains/preload until every neesh.art subdomain is
+    // confirmed HTTPS-only. The CSP covers framing, plugins and base-URI
+    // hijacking only; a full script-src policy needs the GTM container's
+    // tag list first (see docs/operations.md).
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Strict-Transport-Security', value: 'max-age=63072000' },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'SAMEORIGIN' },
+          { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()',
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "frame-ancestors 'self'; base-uri 'self'; object-src 'none'",
+          },
+        ],
+      },
+    ];
+  },
   async redirects() {
     // Marketing-site IA. All 301 permanent; Next preserves query strings on
     // redirects, so Stripe links pointed at /curatedpacks survive. The index
@@ -44,6 +71,34 @@ const nextConfig = {
       { source: '/stores/chess-club-us', destination: '/stores/chess-club-portland', statusCode: 301 },
       { source: '/stores/smoke-signals-newsstand-us', destination: '/stores/smoke-signals-san-francisco', statusCode: 301 },
     ];
+
+    // Fall 2026 awareness campaign QR codes: /go/<line>-<piece> lands on the
+    // homepage with UTMs. Temporary (307) so destinations can change after
+    // the codes are printed. Keep the slugs in sync with src/lib/campaign.ts.
+    const campaignLines = [
+      'picture-books',
+      'fewer-words',
+      'read-it-or-dont',
+      'coffee-table',
+      'tired-of-internet',
+      'kept-the-poster',
+      'screen-time',
+      'too-many-interests',
+    ];
+    for (const line of campaignLines) {
+      for (const piece of ['poster', 'sticker', 'flyer']) {
+        redirects.push({
+          source: `/go/${line}-${piece}`,
+          destination: `/?utm_source=print&utm_medium=${piece}&utm_campaign=awareness-nyc-fall26&utm_content=${line}`,
+          permanent: false,
+        });
+      }
+    }
+    redirects.push({
+      source: '/go/:path*',
+      destination: '/?utm_source=print&utm_campaign=awareness-nyc-fall26',
+      permanent: false,
+    });
 
     // Domain cutover passthroughs: once this site serves neesh.art and the
     // app moves to its own subdomain, set NEXT_PUBLIC_APP_URL (e.g.

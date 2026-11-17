@@ -59,3 +59,43 @@ export function trackPublisherMessage(): void {
 export function trackTitleRequest(): void {
   push('title_request_submitted');
 }
+
+// Title-page CTA clicks. Click events by definition, like
+// trackPackCtaClick: they fire on the click itself and never hold up the
+// navigation or form post behind it, so every CTA still works with JS off.
+
+/**
+ * A "Stock it" CTA was clicked: "Order wholesale on Neesh" on a title page
+ * (the order button and the line under the stockist list), which leads into
+ * the wholesale order fork.
+ */
+export function trackStockItClick(titleSlug: string): void {
+  push('stock_it_click', { title_slug: titleSlug });
+}
+
+/**
+ * A "Request it" CTA was used: the "Let me know" submit on the "Buy it
+ * wholesale." form. The confirmed request is still title_request_submitted
+ * (trackTitleRequest); this one is the attempt.
+ */
+export function trackRequestItClick(titleSlug: string): void {
+  push('request_it_click', { title_slug: titleSlug });
+}
+
+/**
+ * A "See where it's stocked" CTA was clicked: "Find shops" on a title page
+ * that is not orderable, and "See where it's stocked" on the reader branch
+ * of the order fork. Both jump to the stockist list.
+ */
+export function trackSeeStockedClick(titleSlug: string): void {
+  push('see_stocked_click', { title_slug: titleSlug });
+}
+
+/**
+ * A reader added their email in the "Save it to your collection" sheet and
+ * the sign-in link was sent. Fire on the successful send, not the submit.
+ * `source` is the page path the sheet was opened on.
+ */
+export function trackCollectionEmail(source?: string): void {
+  push('collection_email_submitted', source ? { source } : {});
+}

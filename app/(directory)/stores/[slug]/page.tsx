@@ -14,6 +14,10 @@ import { TitleGridCard } from '@/components/TitleGridCard';
 // Store pages (stockists spec, Phase 2): every shop on a publisher's
 // stockist list gets a page showing its shelf of Index titles. Rendered on
 // first request and cached; ~5,400 pages are not worth building up front.
+// Daily. A five-minute window meant any crawler sweeping thousands of
+// store and city pages forced a fresh database render on almost every hit
+// (the Nov 7 and Nov 8 timeout storms). Publisher edits reach these pages
+// through /api/revalidate-listing, and imports through /api/revalidate.
 export const revalidate = 86400;
 export const dynamicParams = true;
 
@@ -232,7 +236,7 @@ export default async function StorePage({ params }: { params: Promise<{ slug: st
             </div>
           )}
 
-          {!store.claimed && <StoreClaim storeId={store.id} storeName={store.name} />}
+          {!store.claimed && <StoreClaim storeId={store.id} storeName={store.name} orderableCount={onNeesh} />}
         </div>
       </section>
     </>

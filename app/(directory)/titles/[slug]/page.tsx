@@ -19,7 +19,6 @@ import {
   titleMetaDescription,
   titleMetaTitle,
 } from '@/lib/seo';
-import { ArrowIcon } from '@/components/Logo';
 import { CoverCard } from '@/components/CoverCard';
 import { ClaimSection } from '@/components/ClaimSection';
 import { JsonLd } from '@/components/JsonLd';
@@ -27,7 +26,16 @@ import { StockistsSection } from '@/components/StockistsSection';
 import { SubmittedNotice } from '@/components/SubmittedNotice';
 import { ViewBeacon } from '@/components/ViewBeacon';
 import { WantTitleForm } from '@/components/WantTitleForm';
+import { FollowPill, ReaderAdded } from '@/components/collect/parts';
+import { OrderCta, TitleIssues } from '@/components/collect/TitleIssues';
+import { ReportLink } from '@/components/collect/ReportButton';
+import { getTitleIssues, getTitleShopEvidence } from '@/lib/collect/server';
+import { isUnreviewedReaderRecord } from '@/lib/collect/shared';
 
+// Daily, as a safety net. A publisher's portal edit refreshes the pages it
+// touches straight away through /api/revalidate-listing, and imports refresh
+// through /api/revalidate, so the timer only has to catch anything else. A
+// short timer made every crawl rebuild these pages from the database.
 export const revalidate = 86400;
 export const dynamicParams = true;
 
@@ -49,6 +57,10 @@ export async function generateMetadata({
   return {
     title: metaTitle,
     description,
+    // Reader-added titles stay out of search until a person has checked
+    // them, and pass no link weight to the website the reader gave. A
+    // flagged admin title stays indexed: a report alone is not a verdict.
+    ...(isUnreviewedReaderRecord(title) ? { robots: { index: false, follow: false } } : {}),
     alternates: { canonical: canonical(`/titles/${title.slug}`) },
     openGraph: {
       title: metaTitle,
@@ -84,10 +96,13 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
   const { slug } = await params;
   const [title, allTags] = await Promise.all([getTitleBySlug(slug), getTagsWithCounts()]);
   if (!title) notFound();
-  const [stockists, publisherTitleCount] = await Promise.all([
+  const [stockists, publisherTitleCount, issues, evidence] = await Promise.all([
     getTitleStockists(title.id),
     countPublisherTitles(title.publisher_id),
+    getTitleIssues(title.id),
+    getTitleShopEvidence(title.id),
   ]);
+  const readerAdded = isUnreviewedReaderRecord(title);
 
   const publishing = new Set(allTags.filter(tagPublishes).map((t) => t.slug));
   const primaryTag = title.tags[0];
@@ -196,6 +211,7 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                   Verified by the publisher
                 </span>
               )}
+              {readerAdded && <ReaderAdded />}
               <h1>{title.name}</h1>
               <p className="publisher-line">
                 Published by {title.publisher.name}
@@ -204,6 +220,12 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
                   See all their titles
                 </Link>
               </p>
+              {!claimed && !listed && (
+                <p className="unclaimed-note">
+                  This publisher hasn&rsquo;t joined Neesh. This page is compiled from public sources.
+                </p>
+              )}
+              <FollowPill titleId={title.id} surface="title_page" note />
             </div>
 
             <SubmittedNotice />
@@ -227,6 +249,27 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               ))}
             </dl>
 
+            <TitleIssues
+              titleId={title.id}
+              titleSlug={title.slug}
+              titleName={title.name}
+              issues={issues}
+              coverage={title.catalogue_coverage ?? 'unknown'}
+              pilot={Boolean(title.collect_pilot)}
+            />
+
+            {/* Only one solid black button on the page (see OrderCta). */}
+            <OrderCta titleId={title.id} titleSlug={title.slug} listed={listed} />
+
+            {(claimed || listed) && title.subscribe_url && (
+              <p className="subscribe-line">
+                <a href={title.subscribe_url} className="text-link" target="_blank" rel="noopener">
+                  Subscribe to {title.name}
+                </a>{' '}
+                on the publisher&rsquo;s site
+              </p>
+            )}
+
             {/* Titles listed on Neesh belong to publishers with accounts, so
                 they read as claimed too. */}
             <ClaimSection
@@ -237,34 +280,24 @@ export default async function TitlePage({ params }: { params: Promise<{ slug: st
               claimed={claimed || listed}
             />
 
-            {listed ? (
-              <div className="cta-stack">
-                <div className="cta-row">
-                  <Link href={`/order/${title.slug}`} className="btn solid">
-                    Order on Neesh
-                    <ArrowIcon />
-                  </Link>
-                  <a className="btn ghost" href="#stockists">
-                    See where it&rsquo;s stocked
-                  </a>
-                </div>
-                <span className="cta-note">Wholesale, by the copy, no minimums.</span>
-              </div>
-            ) : (
-              <div className="cta-row">
-                <a className="btn solid" href="#stockists">
-                  See where it&rsquo;s stocked
-                  <ArrowIcon />
-                </a>
-              </div>
-            )}
+            <WantTitleForm titleId={title.id} titleSlug={title.slug} listed={listed} />
 
-            <WantTitleForm titleId={title.id} />
+            <ReportLink
+              targets={[
+                { kind: 'title', id: title.id, label: title.name },
+                ...issues.map((i) => ({ kind: 'issue' as const, id: i.id, label: `${title.name}, ${i.issue_label}` })),
+              ]}
+            />
           </div>
         </div>
       </section>
 
-      <StockistsSection title={title} stockists={stockists} publisherTitleCount={publisherTitleCount} />
+      <StockistsSection
+        title={title}
+        stockists={stockists}
+        evidence={evidence}
+        publisherTitleCount={publisherTitleCount}
+      />
     </>
   );
 }

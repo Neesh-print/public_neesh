@@ -7,6 +7,10 @@ import { RankFilter } from '@/components/RankFilter';
 
 // The spaces index: every space carrying STORE_RANK_MIN or more Index titles,
 // ranked by how many it carries. Spaces with fewer live on their city page.
+// Daily. A five-minute window meant any crawler sweeping thousands of
+// store and city pages forced a fresh database render on almost every hit
+// (the Nov 7 and Nov 8 timeout storms). Publisher edits reach these pages
+// through /api/revalidate-listing, and imports through /api/revalidate.
 export const revalidate = 86400;
 
 const TITLE = 'Where to buy independent magazines, space by space | Neesh Index';

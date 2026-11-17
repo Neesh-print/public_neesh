@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { serviceClient } from '@/lib/supabase';
 import { notify } from '@/lib/notify';
+import { readSubmission, redirectWithNotice, tooManyRequests } from '@/lib/forms';
+import { limitFormRequest } from '@/lib/rate-limit';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -15,37 +18,19 @@ const schema = z.object({
 // "Know a shop that carries it?" on a title page. Stored for review; nothing
 // reaches the public list until an admin adds it as a stockist link.
 export async function POST(req: NextRequest) {
-  const contentType = req.headers.get('content-type') ?? '';
-  const isForm =
-    contentType.includes('application/x-www-form-urlencoded') ||
-    contentType.includes('multipart/form-data');
+  const submission = await readSubmission(req);
+  if (!submission.ok) return NextResponse.json({ ok: false }, { status: 400 });
+  const { isForm, raw, trapped } = submission;
 
-  let raw: unknown;
-  try {
-    if (isForm) {
-      const fd = await req.formData();
-      const entries: Record<string, string> = {};
-      for (const [k, v] of fd.entries()) {
-        if (typeof v === 'string' && v.trim() !== '') entries[k] = v.trim();
-      }
-      raw = entries;
-    } else {
-      raw = await req.json();
-    }
-  } catch {
-    return NextResponse.json({ ok: false }, { status: 400 });
+  const finish = () =>
+    isForm
+      ? redirectWithNotice(req, 'stockist', '/index', 'stockists')
+      : NextResponse.json({ ok: true });
+
+  if (!(await limitFormRequest(req, 'suggest-stockist'))) {
+    return isForm ? finish() : tooManyRequests();
   }
-
-  const finish = () => {
-    if (isForm) {
-      const referer = req.headers.get('referer');
-      const url = referer ? new URL(referer) : new URL('/index', req.url);
-      url.searchParams.set('submitted', 'stockist');
-      url.hash = 'stockists';
-      return NextResponse.redirect(url, 303);
-    }
-    return NextResponse.json({ ok: true });
-  };
+  if (trapped) return finish();
 
   const parsed = schema.safeParse(raw);
   if (!parsed.success) {
@@ -69,7 +54,7 @@ export async function POST(req: NextRequest) {
       email: email ?? null,
     });
     if (error) {
-      console.error('stockist suggestion insert failed', error.message);
+      log('error', 'stockist_suggestion.insert_failed', { error: error.message });
       return finish();
     }
 
@@ -80,7 +65,7 @@ export async function POST(req: NextRequest) {
         `suggestion status 'added' in directory_stockist_suggestions.`
     );
   } catch (err) {
-    console.error('stockist suggestion failed', err);
+    log('error', 'stockist_suggestion.failed', { error: err });
   }
   return finish();
 }

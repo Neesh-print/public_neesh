@@ -3,6 +3,10 @@ import { getTagBySlug, getTagsWithCounts, tagPublishes } from '@/lib/queries';
 import { canonical, nicheProse } from '@/lib/seo';
 import { NichePage } from '@/components/NichePage';
 
+// Daily, as a safety net. A publisher's portal edit refreshes the pages it
+// touches straight away through /api/revalidate-listing, and imports refresh
+// through /api/revalidate, so the timer only has to catch anything else. A
+// short timer made every crawl rebuild these pages from the database.
 export const revalidate = 86400;
 export const dynamicParams = true;
 

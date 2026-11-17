@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { anonClient, hasSupabaseEnv, serviceClient } from '@/lib/supabase';
 import { clientIp, ipHash, isBot } from '@/lib/signals';
+import { limitRequest } from '@/lib/rate-limit';
+import { log } from '@/lib/log';
+import { isUnreviewedReaderRecord } from '@/lib/collect/shared';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,7 +19,7 @@ export async function GET(
   // Anon lookup: RLS means removed or excluded titles never redirect.
   const { data: title } = await anonClient()
     .from('directory_titles')
-    .select('id, slug, publisher:directory_publishers!inner(website)')
+    .select('id, slug, created_from, review_status, publisher:directory_publishers!inner(website)')
     .eq('slug', slug)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
@@ -24,8 +27,15 @@ export async function GET(
 
   if (!title) return NextResponse.redirect(new URL('/index', req.url), 302);
 
+  // The website on an unreviewed reader-added title is whatever the reader
+  // typed. Until a person approves it, neesh.art does not redirect there.
+  if (isUnreviewedReaderRecord(title)) {
+    return NextResponse.redirect(new URL(`/titles/${title.slug}`, req.url), 302);
+  }
+
+  // Over the limit the redirect still works; the click just is not counted.
   const ua = req.headers.get('user-agent');
-  if (!isBot(ua)) {
+  if (!isBot(ua) && (await limitRequest(req, 'out', 60, 60))) {
     try {
       await serviceClient().from('directory_demand_signals').insert({
         title_id: title.id,
@@ -35,7 +45,7 @@ export async function GET(
         user_agent: ua ? ua.slice(0, 500) : null,
       });
     } catch (err) {
-      console.error('outbound_click log failed', err);
+      log('error', 'outbound_click.log_failed', { error: err });
     }
   }
 

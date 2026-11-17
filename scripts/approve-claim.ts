@@ -7,6 +7,7 @@ import { loadEnv, scriptServiceClient } from './lib';
 loadEnv();
 
 async function sendApprovalEmail(
+  portal: string,
   to: string,
   name: string | null,
   titleName: string,
@@ -23,6 +24,9 @@ async function sendApprovalEmail(
     `publisher, and we'll send you a monthly note on who's looking at it and ` +
     `where they are.\n\n` +
     `**See your page:** ${pageUrl}\n\n` +
+    `**Edit it any time** from your Neesh portal, under Index listing: ` +
+    `${portal}/publisher/index-listing. Change the description, cover, ` +
+    `niche, frequency, price, anything on the page.\n\n` +
     `Two things that help us right now. Reply with your wholesale terms and ` +
     `we'll get them on the page. And tell us what back issues you're sitting ` +
     `on, because we move a lot of back stock into spaces where nobody's ` +
@@ -105,7 +109,8 @@ async function main() {
     : `${site}/publishers/${publisher.slug}`;
 
   console.log(`approved: ${publisher.name}, claimed by ${claim.email}`);
-  await sendApprovalEmail(claim.email, claim.name, title?.name ?? publisher.name, pageUrl);
+  const portal = (process.env.NEXT_PUBLIC_APP_URL ?? 'https://neesh.art').replace(/\/$/, '');
+  await sendApprovalEmail(portal, claim.email, claim.name, title?.name ?? publisher.name, pageUrl);
   console.log('Remember to hit /api/revalidate so the claimed badge renders.');
 }
 
