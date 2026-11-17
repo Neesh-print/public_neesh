@@ -37,12 +37,21 @@ const PUBLISHER_COLUMNS =
   'id, name, slug, website, country, city, claimed, claimed_at, removed, eligible, created_from, stockist_page_url, stockist_status, stockist_checked_at, created_at, updated_at';
 const TITLE_SELECT = `*, publisher:directory_publishers!inner(${PUBLISHER_COLUMNS})`;
 
+// Review gate for public surfaces. Imported and admin-created rows stay off
+// every public page and out of the sitemap until a person approves them
+// (bulk imports land as review_status = pending). Reader additions are the
+// one exception: they show at once, noindex, with a Reader-added tag (see
+// isUnreviewedReaderRecord). RLS only hides rejected rows, so this filter
+// is what keeps a pending import private.
+export const PUBLIC_REVIEW_FILTER = 'review_status.eq.approved,created_from.eq.reader_created';
+
 function visibleTitles(client = anonClient()) {
   return client
     .from('directory_titles')
     .select(TITLE_SELECT)
     .eq('removed', false)
-    .in('status', ['active', 'dormant']);
+    .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER);
 }
 
 // Only subject tags at or over the threshold generate niche pages, enter
@@ -67,8 +76,9 @@ export async function getAllVisibleTitleSlugs(): Promise<
     .select('slug, updated_at, publisher:directory_publishers!inner(id)')
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
-    // Unreviewed reader additions stay out of the sitemap (they are noindex).
-    .or('created_from.neq.reader_created,review_status.eq.approved')
+    // Sitemap: approved rows only. Unreviewed reader additions are noindex
+    // and pending imports are not public yet.
+    .eq('review_status', 'approved')
     .limit(10000);
   return (data ?? []).map((r) => ({ slug: r.slug, updated_at: r.updated_at }));
 }
@@ -81,6 +91,7 @@ export async function getCatalogTitles(limit = 400): Promise<TitleFull[]> {
     .select(`${TITLE_SELECT}, directory_title_tags(*, tag:directory_tags(*))`)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER)
     .order('name')
     .limit(limit);
   return ((data as unknown as (TitleWithPublisher & {
@@ -99,6 +110,7 @@ async function loadTitleBySlug(slug: string): Promise<TitleFull | null> {
     .eq('slug', slug)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER)
     .maybeSingle();
   if (!data) return null;
   const row = data as unknown as TitleWithPublisher & {
@@ -149,7 +161,8 @@ export async function countPublisherTitles(publisherId: string): Promise<number>
     .select('id', { count: 'exact', head: true })
     .eq('publisher_id', publisherId)
     .eq('removed', false)
-    .in('status', ['active', 'dormant']);
+    .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER);
   return count ?? 0;
 }
 
@@ -365,8 +378,12 @@ async function loadPublisherBySlug(
     .eq('publisher_id', publisher.id)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER)
     .order('name');
-  return { publisher: publisher as Publisher, titles: (titles as Title[]) ?? [] };
+  // A publisher with no public title has no page yet (its titles may still
+  // be awaiting review).
+  if (!titles || titles.length === 0) return null;
+  return { publisher: publisher as Publisher, titles: titles as Title[] };
 }
 
 export async function getAllVisiblePublisherSlugs(): Promise<
@@ -375,14 +392,19 @@ export async function getAllVisiblePublisherSlugs(): Promise<
   if (!hasSupabaseEnv) return [];
   const { data } = await anonClient()
     .from('directory_publishers')
-    .select('slug, updated_at')
+    .select('slug, updated_at, directory_titles!inner(id)')
     .eq('removed', false)
     .eq('eligible', true)
     // Reader-added publishers are left out: anon cannot read their review
     // state (column grant), and their titles carry them into the index.
     .neq('created_from', 'reader_created')
+    // A publisher page is in the sitemap only once it has a public title, so
+    // a publisher created by a pending import waits with its titles.
+    .eq('directory_titles.removed', false)
+    .in('directory_titles.status', ['active', 'dormant'])
+    .eq('directory_titles.review_status', 'approved')
     .limit(10000);
-  return data ?? [];
+  return (data ?? []).map((r) => ({ slug: r.slug, updated_at: r.updated_at }));
 }
 
 // Tag counts come through the RLS-filtered title_tags rows, so live_count is
@@ -439,6 +461,7 @@ export async function getFeaturedSlugs(): Promise<string[]> {
     .select('slug, available_on_neesh, neesh_magazine_id, neesh_listed_at, publisher:directory_publishers!inner(id)')
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER)
     .eq('available_on_neesh', true)
     .not('neesh_magazine_id', 'is', null)
     .not('neesh_listed_at', 'is', null)
@@ -483,6 +506,7 @@ export async function getTitlesForTag(
     .eq('directory_title_tags.tag_id', tagId)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER)
     .order('name')
     .limit(1000);
   const all = sortForIndex((data as unknown as TitleWithPublisher[]) ?? [], featuredSlugs);
