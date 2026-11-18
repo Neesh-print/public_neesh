@@ -80,3 +80,13 @@ test('quiz: selling out leaves no comps; ad rate is the reader’s own', () => {
   assert.equal(withGrant.grant, 1500);
   assert.equal(withGrant.ch?.brands, true);
 });
+
+test('plan email carries the four figures, the verdict and the link', async () => {
+  const { planEmail } = await import('./email');
+  const m = planEmail(DEFAULTS.indie, 'Indie biannual', 'https://neesh.art/calculator?p=abc');
+  assert.equal(m.subject, 'Your plan for Indie biannual');
+  for (const line of ['**Profit** $1,746', '**Confirmed only** -$10,301', '**Cash needed** $12,124', '**Break-even** 942 copies', 'https://neesh.art/calculator?p=abc']) {
+    assert.ok(m.text.includes(line), line);
+  }
+  assert.ok(m.text.includes(verdict(DEFAULTS.indie)));
+});

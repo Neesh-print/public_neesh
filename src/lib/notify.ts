@@ -10,9 +10,10 @@ interface EmailInput {
   html?: string;
 }
 
-export async function sendEmail({ to, subject, text, html }: EmailInput): Promise<void> {
+/** Resolves true when Resend accepted the message. Callers that only notify can ignore it. */
+export async function sendEmail({ to, subject, text, html }: EmailInput): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) return;
+  if (!apiKey) return false;
   const from = process.env.NOTIFY_FROM ?? 'Neesh <hi@neesh.art>';
   const replyTo = process.env.NOTIFY_REPLY_TO ?? 'hi@neesh.art';
   try {
@@ -26,9 +27,12 @@ export async function sendEmail({ to, subject, text, html }: EmailInput): Promis
     });
     if (!res.ok) {
       console.error('sendEmail: resend responded', res.status, await res.text());
+      return false;
     }
+    return true;
   } catch (err) {
     console.error('sendEmail: send failed', err);
+    return false;
   }
 }
 

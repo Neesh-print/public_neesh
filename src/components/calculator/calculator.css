@@ -320,3 +320,11 @@
   .calc .cards .card:nth-child(odd){border-left:0;padding-left:0}
   .calc .cards .card:last-child:nth-child(odd){grid-column:1/-1}
 }
+
+/* Email me this plan, under the best next move. Optional, never a gate. */
+.calc .mailplan{padding:12px 0;border-bottom:1px solid var(--hair);font-size:13px}
+.calc .mailform{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.calc .mailform input[type=email]{flex:1;min-width:200px;font:500 14px "IBM Plex Mono",ui-monospace,monospace;padding:7px 8px;border:1px solid var(--hair);border-radius:0;background:#fff;color:var(--ink)}
+.calc .mailform input[type=email]:focus{outline:1px solid var(--accent);border-color:var(--accent)}
+.calc .mailform label{display:flex;gap:6px;align-items:center;width:100%;font-size:12px;color:var(--grey)}
+.calc .mailform input[type=checkbox]{accent-color:var(--accent);margin:0}

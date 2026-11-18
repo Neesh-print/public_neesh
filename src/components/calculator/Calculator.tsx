@@ -11,8 +11,9 @@ import {
   type ChannelKey, type FundingKey, type NumericPlanKey, type Plan, type PresetKey, type QuizState,
 } from '@/lib/calculator/model';
 import { decodePlan, shareUrl } from '@/lib/calculator/share';
+import { readFirstTouch } from '@/lib/first-touch';
 import {
-  trackCalculatorClaimClick, trackCalculatorExampleOpen, trackCalculatorLinkCopied,
+  trackCalculatorClaimClick, trackCalculatorExampleOpen, trackCalculatorLinkCopied, trackCalculatorPlanEmailed,
   trackCalculatorPlanSaved, trackCalculatorQuizComplete, trackCalculatorTabView,
 } from '@/lib/neesh-analytics';
 import { CHIPS, DYNAMIC_HINTS, FUNDING_CHIPS, GROUPS, QUIZ_COPY_CHIPS, SCH, isTab, type FieldDef, type Tab } from './fields';
@@ -135,6 +136,12 @@ export function Calculator() {
   const [modal, setModal] = useState<ModalState | null>(null);
   const [sc, setSc] = useState<Saved>({});
   const [cmpSel, setCmpSel] = useState<string[]>([]);
+  // Email me this plan. Optional, never a gate.
+  const [mailOpen, setMailOpen] = useState(false);
+  const [mailTo, setMailTo] = useState('');
+  const [mailOptIn, setMailOptIn] = useState(false);
+  const [mailState, setMailState] = useState<'idle' | 'busy' | 'done' | 'error'>('idle');
+  const utmRef = useRef<Record<string, string>>({});
 
   const sideRef = useRef<HTMLElement>(null);
   const tabsRef = useRef<HTMLElement>(null);
@@ -158,7 +165,12 @@ export function Calculator() {
   /* ---- mount: shared link, stored plan, quiz state, hash ---- */
   useEffect(() => {
     let s: Plan | null = null, name: string | null = null, pr: PresetKey | null = 'indie', quiz = false;
-    const shared = decodePlan(new URLSearchParams(window.location.search).get('p'));
+    const params = new URLSearchParams(window.location.search);
+    (['source', 'medium', 'campaign', 'term', 'content'] as const).forEach((k) => {
+      const v = params.get(`utm_${k}`);
+      if (v) utmRef.current[k] = v.slice(0, 200);
+    });
+    const shared = decodePlan(params.get('p'));
     if (shared) {
       s = shared.S; name = shared.name || 'Your plan'; pr = null;
       try { localStorage.setItem(QK, '1'); } catch { /* storage blocked */ }
@@ -423,6 +435,29 @@ export function Calculator() {
     }
   }, [modal]);
   useEffect(() => () => { if (downloadHref) URL.revokeObjectURL(downloadHref); }, [downloadHref]);
+
+  /* ---- email me this plan ---- */
+  async function sendPlan(e: React.FormEvent) {
+    e.preventDefault();
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(mailTo)) { setMailState('error'); return; }
+    setMailState('busy');
+    try {
+      const { stash: _stash, ...plan } = S;
+      void _stash;
+      const res = await fetch('/api/calculator/email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: mailTo, name: curName, plan, newsletter: mailOptIn, utm: utmRef.current, firstTouch: readFirstTouch() ?? undefined }),
+      });
+      const data = (await res.json().catch(() => ({}))) as { sent?: boolean };
+      if (res.ok && data.sent) {
+        setMailState('done');
+        trackCalculatorPlanEmailed(mailOptIn);
+      } else setMailState('error');
+    } catch {
+      setMailState('error');
+    }
+  }
 
   /* ---- sheet and refine ---- */
   function refine() {
@@ -1090,6 +1125,20 @@ export function Calculator() {
                         <span><span className="mono" style={{ color: 'var(--grey)', marginRight: 8 }}>Best next move</span><b>{recs[0].title}</b>, worth +{fmt(recs[0].d)}</span>
                         <a href="#do" onClick={() => requestAnimationFrame(scrollToTabsIfStuck)}>All {recs.length} moves</a>
                       </>
+                    )}
+                  </div>
+                  <div className="mailplan">
+                    {mailState === 'done' ? (
+                      <span className="small" style={{ margin: 0 }} role="status">Sent. Your plan is in your inbox.</span>
+                    ) : !mailOpen ? (
+                      <button type="button" className="linkb mono" onClick={() => setMailOpen(true)}>Email me this plan</button>
+                    ) : (
+                      <form className="mailform" onSubmit={sendPlan}>
+                        <input type="email" value={mailTo} onChange={(e) => { setMailTo(e.target.value); if (mailState === 'error') setMailState('idle'); }} placeholder="you@yourmagazine.com" aria-label="Email address" required autoFocus />
+                        <button type="submit" className="sbtn dark" disabled={mailState === 'busy'}>Send</button>
+                        <label><input type="checkbox" checked={mailOptIn} onChange={(e) => setMailOptIn(e.target.checked)} /> Join Indexed, the Neesh newsletter</label>
+                        {mailState === 'error' && <span className="small" style={{ margin: 0, width: '100%' }} role="alert">That didn’t go through. Check the address and try again.</span>}
+                      </form>
                     )}
                   </div>
                   {warnings.length > 0 && (

@@ -9,7 +9,7 @@ const num = z.number().finite();
 const quote = z.object({ q: num, u: num });
 const bool = z.boolean();
 
-const PlanSchema = z.object({
+export const PlanSchema = z.object({
   printMode: z.enum(['est', 'quotes']).optional(),
   trim: z.enum(['digest', 'standard', 'oversize']).optional(),
   paper: z.enum(['uncoated', 'coated', 'premium']).optional(),
@@ -78,6 +78,11 @@ export function decodePlan(p: string | null | undefined): SharedPlan | null {
   } catch {
     return null;
   }
+}
+
+/** The page path with the plan in it, for links built on the server. */
+export function sharePath(S: Plan, name?: string): string {
+  return `/calculator?p=${encodePlan(S, name)}`;
 }
 
 export function shareUrl(S: Plan, name?: string): string {

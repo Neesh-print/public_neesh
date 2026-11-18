@@ -93,6 +93,11 @@ export function trackCalculatorLinkCopied(): void {
   push('calculator_link_copied');
 }
 
+/** The plan email was sent. Fire when the send resolves, not on submit. */
+export function trackCalculatorPlanEmailed(newsletterOptIn: boolean): void {
+  push('calculator_plan_emailed', { newsletter_opt_in: newsletterOptIn });
+}
+
 /** Claim your title was clicked at the foot of the calculator. */
 export function trackCalculatorClaimClick(): void {
   push('calculator_claim_click');

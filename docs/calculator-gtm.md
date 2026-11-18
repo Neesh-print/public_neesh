@@ -18,12 +18,7 @@ parameter column and passed as event parameters of the same name.
 | `calculator_plan_saved` | Save is pressed in the Scenarios tab | none |
 | `calculator_link_copied` | Copy link succeeds | none |
 | `calculator_claim_click` | Claim your title is clicked at the foot of the page | none |
-
-Second release, not fired yet:
-
-| Event | Fires when | Data Layer Variables |
-| --- | --- | --- |
-| `calculator_plan_emailed` | The email send resolves | `newsletter_opt_in` (true or false) |
+| `calculator_plan_emailed` | The plan email send resolves | `newsletter_opt_in` (true or false) |
 
 Notes
 
