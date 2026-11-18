@@ -59,3 +59,38 @@ export function trackPublisherMessage(): void {
 export function trackTitleRequest(): void {
   push('title_request_submitted');
 }
+
+/* ---------------- magazine calculator ---------------- */
+// Each event below needs a Custom Event trigger and a GA4 event tag in the
+// GTM container. See docs/calculator-gtm.md for the list. No plan
+// financials leave the page beyond the four quiz inputs.
+
+/** The fifth quiz answer was submitted. */
+export function trackCalculatorQuizComplete(q: { price: number; pages: number; run: number; issuesPerYear: number }): void {
+  push('calculator_quiz_complete', { price: q.price, pages: q.pages, run: q.run, issues_per_year: q.issuesPerYear });
+}
+
+/** An example plan (Zine, Indie biannual, Big annual, Creator launch) was opened. */
+export function trackCalculatorExampleOpen(example: string): void {
+  push('calculator_example_open', { example });
+}
+
+/** A tab was opened by the reader. */
+export function trackCalculatorTabView(tab: string): void {
+  push('calculator_tab_view', { tab });
+}
+
+/** A plan was saved in the browser. */
+export function trackCalculatorPlanSaved(): void {
+  push('calculator_plan_saved');
+}
+
+/** Copy link succeeded. Fire once the clipboard write resolves. */
+export function trackCalculatorLinkCopied(): void {
+  push('calculator_link_copied');
+}
+
+/** Claim your title was clicked at the foot of the calculator. */
+export function trackCalculatorClaimClick(): void {
+  push('calculator_claim_click');
+}

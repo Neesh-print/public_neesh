@@ -108,6 +108,20 @@ export default function PublishersPage() {
         </div>
       </section>
 
+      <section className="feature-band tint">
+        <div className="wrap">
+          <div className="feature-copy" style={{ maxWidth: 720 }}>
+            <span className="eyebrow">Calculator</span>
+            <h2 className="d2">Know what your issue makes before you print.</h2>
+            <p className="lede">Answer five questions. See your profit, your cash gap and your next move.</p>
+            <Link href="/calculator" className="btn solid">
+              Open the calculator
+              <ArrowIcon />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="benefits">
         <div className="wrap">
           <div className="benefits-grid roomy">
