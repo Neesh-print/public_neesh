@@ -302,3 +302,13 @@
 .calc h1,.calc h2,.calc h3{font-variation-settings:normal}
 .calc .foot{padding:20px 0 50px;color:var(--grey);font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
 .calc .scen .sbtn{white-space:nowrap}
+
+/* Example plans. One row on desktop as in the prototype. Under 600px the
+   four pills cannot share a row without scrolling, so the label takes its
+   own line and the pills sit in a two-by-two grid of equal width, which
+   reads as one group. */
+@media (max-width:600px){
+  .calc .presets{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+  .calc .presets>.mono{grid-column:1/-1;margin-bottom:2px}
+  .calc .presets .cpill{width:100%;text-align:center;padding:9px 10px}
+}
