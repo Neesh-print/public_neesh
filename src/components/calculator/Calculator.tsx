@@ -558,7 +558,7 @@ export function Calculator() {
         {GROUPS.filter((g) => g.id !== 'issue').map((g) => {
           const adv = g.fields.filter((f) => f.adv);
           return (
-            <details key={g.id} style={g.ch && !chOn[g.ch] ? { display: 'none' } : undefined}>
+            <details key={g.id} open={g.open || undefined} style={g.ch && !chOn[g.ch] ? { display: 'none' } : undefined}>
               <summary>
                 <h3>{g.title}</h3>
                 <span className="mono">{g.sub} <span className="chev">+</span></span>

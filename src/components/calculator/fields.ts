@@ -46,7 +46,7 @@ export interface Group {
   id: string;
   title: string;
   sub: string;
-  /** The prototype's flag, which it never applied: every group starts collapsed. Kept for parity. */
+  /** Starts open. Gem's call, Nov 18, 2026: Printing only, so the print assumption is in view and the rest reads as a map. */
   open: boolean;
   ch?: ChannelKey;
   fields: FieldDef[];
@@ -86,7 +86,7 @@ export const GROUPS: Group[] = [
     F('otherFixed', 'Launch, marketing, software', { min: 0, max: 30000, step: 100 }),
     F('otherBefore', 'Share paid before printing', { min: 0, max: 100, step: 5, unit: '%' }),
   ] },
-  { id: 'subs', ch: 'subs', title: 'Subscribers', sub: 'paid before you print', open: true, fields: [
+  { id: 'subs', ch: 'subs', title: 'Subscribers', sub: 'paid before you print', open: false, fields: [
     F('subs', 'Subscribers getting this issue', { min: 0, max: 10000, step: 10, hint: 'Count subscribers you still expect.' }),
     F('subsSec', 'Of those, already paid', { min: 0, max: 10000, step: 10, secured: true }),
     F('subPrice', 'Subscription price, per year', { min: 0, max: 400, step: 1, hint: 'subHint' }),
