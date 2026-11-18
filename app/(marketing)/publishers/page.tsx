@@ -113,7 +113,7 @@ export default function PublishersPage() {
           <div className="feature-copy" style={{ maxWidth: 720 }}>
             <span className="eyebrow">Calculator</span>
             <h2 className="d2">Know what your issue makes before you print.</h2>
-            <p className="lede">Answer five questions. See your profit, your cash gap and your next move.</p>
+            <p className="lede">Answer a few questions. See your profit, your cash gap and your next move.</p>
             <Link href="/calculator" className="btn solid">
               Open the calculator
               <ArrowIcon />

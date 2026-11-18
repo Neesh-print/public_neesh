@@ -146,10 +146,10 @@ export const CHIPS: [string, [ChannelKey, string][]][] = [
 /** The quiz asks about copies first, then money beyond copies on its own question. */
 export const QUIZ_COPY_CHIPS = CHIPS.slice(0, 2);
 
-// Placeholder copy for the funding question until Gem picks a version.
+// Copy approved by Gem, Nov 18, 2026.
 export const FUNDING_CHIPS: [FundingKey, string][] = [
-  ['ads', 'Ads or sponsor pages'],
-  ['partners', 'Launch-night partners'],
+  ['ads', 'Advertisers'],
+  ['partners', 'Sponsors'],
   ['grants', 'Grants'],
 ];
 

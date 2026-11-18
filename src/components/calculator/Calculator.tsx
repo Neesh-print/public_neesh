@@ -585,8 +585,7 @@ export function Calculator() {
       { h: 'How many pages, and how many issues a year?', hint: 'Most indie titles come out two to four times a year.' },
       { h: 'How many copies will you print?', hint: 'Most indies start at 1,000 to 2,000.' },
       { h: 'How will you sell it?', hint: 'Pick every one that applies. You can change it later.' },
-      // Placeholder copy until Gem picks a version.
-      { h: 'Will you sell ads or apply for grants?', hint: 'Pick any you are planning. Only confirmed grant money counts.' },
+      { h: 'Where else will money come from?', hint: 'Pick whichever you are planning to see how they affect the run.' },
       { h: 'How many will you sell?', hint: 'Your best guess. You will also see a slow case and a strong one.' },
     ];
     const q = steps[qi];
@@ -1035,7 +1034,7 @@ export function Calculator() {
         <section className="hero">
           <span className="mono acc">The magazine calculator</span>
           <h1>Know what your issue makes before you print.</h1>
-          <p>Answer five questions. See your profit, the cash you need up front and what to change. Built on a year of buying, selling and shipping indie magazines.</p>
+          <p>Answer a few questions. See your profit, the cash you need up front and what to change. Built on a year of buying, selling and shipping indie magazines.</p>
           <div className="presets">
             <span className="mono" style={{ alignSelf: 'center', color: 'var(--grey)' }}>Or start from an example</span>
             {(['zine', 'indie', 'annual', 'creator'] as PresetKey[]).map((p) => (
