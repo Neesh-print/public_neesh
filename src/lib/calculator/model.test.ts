@@ -59,3 +59,24 @@ test('quiz check from the spec', () => {
 test('BASE carries no per-magazine figures', () => {
   assert.equal('price' in BASE, false);
 });
+
+test('confirmed grant money counts dollar for dollar, before printing', () => {
+  const s = { ...DEFAULTS.indie, grant: 2000 };
+  const m = model(s);
+  assert.equal(m.profit.toFixed(2), (model(DEFAULTS.indie).profit + 2000).toFixed(2));
+  assert.equal(model(securedState(s)).profit.toFixed(2), (model(securedState(DEFAULTS.indie)).profit + 2000).toFixed(2));
+  const before = cash(s).stages[0].items.find((i) => i[0] === 'Grant money');
+  assert.deepEqual(before, ['Grant money', 2000]);
+});
+
+test('quiz: selling out leaves no comps; ad rate is the reader’s own', () => {
+  const sellOut = fromQuiz({ ...QUIZ_START, run: 1000, sold: 1000, touched: true });
+  assert.equal(sellOut.comps, 0);
+  assert.equal(model(sellOut).allocated <= 1000, true);
+  const noRate = fromQuiz({ ...QUIZ_START, fund: { ads: true, partners: false, grants: false } });
+  assert.equal(noRate.adRate, 0);
+  assert.equal(noRate.adPages, 2);
+  const withGrant = fromQuiz({ ...QUIZ_START, fund: { ads: false, partners: false, grants: true }, grant: 1500 });
+  assert.equal(withGrant.grant, 1500);
+  assert.equal(withGrant.ch?.brands, true);
+});

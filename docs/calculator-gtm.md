@@ -12,7 +12,7 @@ parameter column and passed as event parameters of the same name.
 
 | Event | Fires when | Data Layer Variables |
 | --- | --- | --- |
-| `calculator_quiz_complete` | The fifth quiz answer is submitted | `price`, `pages`, `run`, `issues_per_year` |
+| `calculator_quiz_complete` | The last quiz answer is submitted | `price`, `pages`, `run`, `issues_per_year`, `funding` (comma list of ads, partners, grants, or none) |
 | `calculator_example_open` | An example plan is opened from the hero | `example` (Zine, Indie biannual, Big annual, Creator launch) |
 | `calculator_tab_view` | A tab is opened by the reader (hash change) | `tab` (do, cash, channels, pricing, scenarios, statement, sources) |
 | `calculator_plan_saved` | Save is pressed in the Scenarios tab | none |

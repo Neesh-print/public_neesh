@@ -4,7 +4,7 @@
 // trusted HTML; they are constants, never user input.
 
 import type { BenchType } from '@/lib/calculator/benchmarks';
-import type { ChannelKey, NumericPlanKey, Plan } from '@/lib/calculator/model';
+import type { ChannelKey, FundingKey, NumericPlanKey, Plan } from '@/lib/calculator/model';
 
 export type SegKey = 'printMode' | 'trim' | 'paper' | 'color' | 'binding' | 'via' | 'fulfil' | 'neeshFulfilPaid';
 
@@ -53,7 +53,7 @@ export interface Group {
 }
 
 const PRIMARY = new Set<string>([
-  'price', 'ipy', 'run', 'pages', 'printMode', 'quotes', 'editorial', 'otherFixed', 'subs', 'subsSec', 'subPrice', 'pre', 'dCopies', 'wCopies', 'wSec', 'wPct', 'via', 'xCopies', 'xPct', 'xSell', 'adPages', 'adSec', 'adRate', 'events', 'eventsSec', 'eventRate',
+  'grant', 'price', 'ipy', 'run', 'pages', 'printMode', 'quotes', 'editorial', 'otherFixed', 'subs', 'subsSec', 'subPrice', 'pre', 'dCopies', 'wCopies', 'wSec', 'wPct', 'via', 'xCopies', 'xPct', 'xSell', 'adPages', 'adSec', 'adRate', 'events', 'eventsSec', 'eventRate',
 ]);
 
 type NumOpts = Omit<NumFieldDef, 'k' | 'l' | 'adv' | 'type'>;
@@ -106,7 +106,7 @@ export const GROUPS: Group[] = [
     F('wSec', 'Of those, in confirmed orders', { min: 0, max: 10000, step: 10, secured: true }),
     F('wPct', 'Wholesale, % of cover', { min: 30, max: 80, step: 1, unit: '%', tag: 'obs', hint: 'wHint' }),
     F('wCpo', 'Copies per space order', { min: 1, max: 50, step: 1 }),
-    F('spaceShip', 'Shipping the space pays, per copy', { min: 0, max: 5, step: 0.1, hint: "Comes out of the space's margin, so it affects reorders." }),
+    F('spaceShip', 'Shipping the space pays, per copy', { min: 0, max: 5, step: 0.1, hint: "Comes out of the space’s margin, so it affects reorders." }),
     SEG('via', 'How spaces order', [['self', 'Email, DM, invoice'], ['neesh', 'Through Neesh']]),
     F('wTerms', 'Days until spaces pay you', { min: 0, max: 90, step: 5, showIf: (s) => s.via === 'self', hint: 'Invoiced spaces often pay in 30 days. Neesh orders are paid at checkout.' }),
     SEG('fulfil', 'Who packs Neesh orders', [['self', 'You do'], ['neesh', 'Neesh does']], (s) => s.via === 'neesh'),
@@ -114,7 +114,7 @@ export const GROUPS: Group[] = [
     F('wPackPerOrder', 'Your packing cost per order', { min: 0, max: 15, step: 0.5, showIf: (s) => !(s.via === 'neesh' && s.fulfil === 'neesh') }),
   ] },
   { id: 'dist', ch: 'dist', title: 'Distributor', sub: 'newsstand, sale or return', open: false, fields: [
-    F('xCopies', 'Copies shipped to distributor', { min: 0, max: 10000, step: 10, hint: "Shipped is not sold. You're paid only for copies that sell." }),
+    F('xCopies', 'Copies shipped to distributor', { min: 0, max: 10000, step: 10, hint: "Shipped is not sold. You’re paid only for copies that sell." }),
     F('xPct', 'You receive, % of cover', { min: 20, max: 60, step: 1, unit: '%', tag: 'quote', hint: 'One design publisher gets <b>40%</b>. The distributor takes 20%, the shop 40%.' }),
     F('xSell', 'Sell-through', { min: 10, max: 100, step: 1, unit: '%', tag: 'anec', hint: 'One long-time publisher calls <b>50%</b> a good result.' }),
     F('xFreight', 'Freight to distributor, per copy', { min: 0, max: 5, step: 0.05 }),
@@ -130,6 +130,7 @@ export const GROUPS: Group[] = [
     F('eventRate', 'Per partner', { min: 0, max: 5000, step: 50, tag: 'obs', hint: 'Our New York launch partnerships start at <b>$250</b>.' }),
     F('bCopies', 'Copies a brand buys to gift', { min: 0, max: 3000, step: 10, hint: 'Gift-with-purchase or client gifts, at your wholesale price.' }),
     F('bSec', 'Of those, ordered', { min: 0, max: 3000, step: 10, secured: true }),
+    F('grant', 'Grant money, confirmed', { min: 0, max: 50000, step: 250, secured: true, hint: 'Counts once the award is in writing. Lands before you print.' }),
   ] },
 ];
 
@@ -140,6 +141,16 @@ export const CHIPS: [string, [ChannelKey, string][]][] = [
   ['Sell it yourself', [['subs', 'Subscribers'], ['single', 'Readers, one copy at a time'], ['spaces', 'Shops, cafés, hotels']]],
   ['Hand it off', [['dist', 'A distributor']]],
   ['Beyond copies', [['brands', 'Brands and sponsors']]],
+];
+
+/** The quiz asks about copies first, then money beyond copies on its own question. */
+export const QUIZ_COPY_CHIPS = CHIPS.slice(0, 2);
+
+// Placeholder copy for the funding question until Gem picks a version.
+export const FUNDING_CHIPS: [FundingKey, string][] = [
+  ['ads', 'Ads or sponsor pages'],
+  ['partners', 'Launch-night partners'],
+  ['grants', 'Grants'],
 ];
 
 /** Channel words in the fill-in sentence. */

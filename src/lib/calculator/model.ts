@@ -58,6 +58,8 @@ export interface BasePlan {
   adSec: number;
   eventsSec: number;
   bSec: number;
+  /** Confirmed grant money for this issue. Counts only once promised, so it is in confirmed money and lands before printing. */
+  grant: number;
 }
 
 /** A complete plan: BASE plus the figures that differ per magazine. */
@@ -95,7 +97,7 @@ export const BASE: BasePlan = {
   printMode: 'est', trim: 'standard', paper: 'coated', color: 'four', binding: 'perfect',
   quotes: [{ q: 1000, u: 0 }, { q: 2000, u: 0 }, { q: 3000, u: 0 }, { q: 5000, u: 0 }],
   printDeposit: 50, edBefore: 100, otherBefore: 50, feePct: 2.9, cpo: 1.2, pack: 1.5, shipAbsorb: 0, wCpo: 10, spaceShip: 0.8, via: 'self', wTerms: 30, fulfil: 'self', neeshFulfilPaid: 'free', wPackPerOrder: 6,
-  xPct: 40, xSell: 50, xFreight: 0.4, xTerms: 120, subPost: 5.5, subRenew: 60, adDeposit: 50, pre: 0, subsSec: 0, wSec: 0, adSec: 0, eventsSec: 0, bSec: 0,
+  xPct: 40, xSell: 50, xFreight: 0.4, xTerms: 120, subPost: 5.5, subRenew: 60, adDeposit: 50, pre: 0, subsSec: 0, wSec: 0, adSec: 0, eventsSec: 0, bSec: 0, grant: 0,
 };
 
 export type PresetKey = 'indie' | 'zine' | 'annual' | 'creator';
@@ -126,7 +128,7 @@ export const CHF: Record<ChannelKey, NumericPlanKey[]> = {
   single: ['pre', 'dCopies'],
   spaces: ['wCopies', 'wSec'],
   dist: ['xCopies'],
-  brands: ['adPages', 'adSec', 'events', 'eventsSec', 'bCopies', 'bSec'],
+  brands: ['adPages', 'adSec', 'events', 'eventsSec', 'bCopies', 'bSec', 'grant'],
 };
 
 /** Confirmed count never exceeds its planned total. */
@@ -186,7 +188,7 @@ export function printUnit(s: Plan, run: number): number {
 
 /* ---------------- core model ---------------- */
 
-export type RevenueKey = 'sub' | 'single' | 'space' | 'dist' | 'bulk' | 'ads' | 'events';
+export type RevenueKey = 'sub' | 'single' | 'space' | 'dist' | 'bulk' | 'ads' | 'events' | 'grant';
 export type CopiesKey = 'sub' | 'single' | 'space' | 'dist' | 'bulk';
 
 export interface ModelResult {
@@ -223,7 +225,7 @@ export function model(s: Plan, o: { run?: number } = {}): ModelResult {
   // revenue
   const subPer = s.subPrice / ipy;
   const R: Record<RevenueKey, number> = {
-    sub: subs * subPer, single: (pre + d) * P, space: w * wPrice, dist: (xSold * P * s.xPct) / 100, bulk: b * wPrice, ads: s.adPages * s.adRate, events: s.events * s.eventRate,
+    sub: subs * subPer, single: (pre + d) * P, space: w * wPrice, dist: (xSold * P * s.xPct) / 100, bulk: b * wPrice, ads: s.adPages * s.adRate, events: s.events * s.eventRate, grant: s.grant,
   };
   // variable selling costs
   const singleOrders = (pre + d) / s.cpo, wOrders = w / Math.max(1, s.wCpo);
@@ -237,6 +239,7 @@ export function model(s: Plan, o: { run?: number } = {}): ModelResult {
     bulk: b > 0 ? s.wPackPerOrder : 0,
     ads: 0,
     events: 0,
+    grant: 0,
   };
   const copiesBy: Record<CopiesKey, number> = { sub: subs, single: pre + d, space: w, dist: x, bulk: b };
   const allocated = subs + pre + d + w + x + b + s.comps;
@@ -285,6 +288,7 @@ export function cash(s: Plan): CashResult {
   add(A, 'Signed launch partners', s.eventsSec * s.eventRate);
   if (s.via === 'neesh') add(A, 'Confirmed space orders', s.wSec * wNetPer);
   add(A, 'Confirmed brand order', s.bSec * m.wPrice);
+  add(A, 'Grant money', s.grant);
   // B delivery
   add(B, 'Printer balance', -printOnly * (1 - s.printDeposit / 100));
   add(B, 'Freight in', -s.freight * s.run);
@@ -435,11 +439,11 @@ export function recCandidates(S: Plan): Rec[] {
   };
   if (P < band.med) {
     const t = Math.round(band.med);
-    tryIt(`Raise your cover to ${fmt(t)}`, `Titles your length sell for ${fmt(band.p25)} to ${fmt(band.p75)}, median ${fmt(band.med, band.med % 1 ? 2 : 0)}. You're under the median.`, { ...S, price: t });
+    tryIt(`Raise your cover to ${fmt(t)}`, `Titles your length sell for ${fmt(band.p25)} to ${fmt(band.p75)}, median ${fmt(band.med, band.med % 1 ? 2 : 0)}. You’re under the median.`, { ...S, price: t });
   } else if (P + 2 <= Math.max(30, band.p75)) tryIt(`Raise your cover by $2, to ${fmt(P + 2)}`, `Still inside the $20 to $30 most indie titles charge. Subscriptions stay put.`, { ...S, price: P + 2 });
   if (S.xCopies > 0) {
     const sold = Math.round(m.xSold);
-    tryIt(`Sell your distributor's ${fmtN(sold)} copies to spaces yourself`, `Same copies sold at ${S.wPct}% wholesale. No returns, no freight to the distributor, paid in weeks.`, { ...S, xCopies: 0, wCopies: S.wCopies + sold });
+    tryIt(`Sell your distributor’s ${fmtN(sold)} copies to spaces yourself`, `Same copies sold at ${S.wPct}% wholesale. No returns, no freight to the distributor, paid in weeks.`, { ...S, xCopies: 0, wCopies: S.wCopies + sold });
     const half = Math.round(S.xCopies / 2);
     tryIt(`Ship ${fmtN(half)} fewer copies to the distributor`, `At ${S.xSell}% sell-through each copy shipped earns ${fmt(youPart(perCopy(S).dist), 2)}. Ship fewer, get fewer back.`, { ...S, xCopies: S.xCopies - half });
   }
@@ -486,18 +490,27 @@ export function planSummary(s: Plan): Record<string, string | number> {
 
 /* ---------------- quiz ---------------- */
 
+export type FundingKey = 'ads' | 'partners' | 'grants';
+
 export interface QuizState {
   price: number;
   pages: number;
   ipy: number;
   run: number;
   ch: Record<ChannelKey, boolean>;
+  /** Money beyond copies: ads, launch partners, grants. */
+  fund: Record<FundingKey, boolean>;
+  /** Rate per ad page, when ads are ticked. Zero until the reader gives one. */
+  adRate: number;
+  /** Confirmed grant money, when grants are ticked. */
+  grant: number;
   sold: number;
   touched: boolean;
 }
 
 export const QUIZ_START: QuizState = {
-  price: 25, pages: 120, ipy: 2, run: 1000, ch: { subs: true, single: true, spaces: true, dist: false, brands: false }, sold: 650, touched: false,
+  price: 25, pages: 120, ipy: 2, run: 1000, ch: { subs: true, single: true, spaces: true, dist: false, brands: false },
+  fund: { ads: false, partners: false, grants: false }, adRate: 0, grant: 0, sold: 650, touched: false,
 };
 
 export const r10 = (v: number): number => Math.round(v / 10) * 10;
@@ -505,22 +518,26 @@ export const r10 = (v: number): number => Math.round(v / 10) * 10;
 export function fromQuiz(Q: QuizState): Plan {
   const P = Q.price;
   const base = clone(BASE);
+  // Comps start at 5% of the run and give way as the sales guess climbs, so
+  // a title can sell out: at 100% sold there are no comps left.
+  const comps = Math.min(Math.round((Q.run * 0.05) / 5) * 5, Math.max(0, Q.run - Q.sold));
   const s: Plan = {
     ...base,
-    price: P, pages: Q.pages, ipy: Q.ipy, run: Q.run, freight: 0.6, comps: Math.round((Q.run * 0.05) / 5) * 5, editorial: Math.round((Q.pages * 40) / 250) * 250, otherFixed: 1000,
-    binding: Q.pages <= 64 ? 'saddle' : 'perfect', subPrice: Math.round(P * Q.ipy * 0.9 + base.subPost * Q.ipy), wPct: 50, adRate: 500, eventRate: 250,
-    subs: 0, pre: 0, dCopies: 0, wCopies: 0, xCopies: 0, adPages: 0, events: 0, bCopies: 0,
+    price: P, pages: Q.pages, ipy: Q.ipy, run: Q.run, freight: 0.6, comps, editorial: Math.round((Q.pages * 40) / 250) * 250, otherFixed: 1000,
+    binding: Q.pages <= 64 ? 'saddle' : 'perfect', subPrice: Math.round(P * Q.ipy * 0.9 + base.subPost * Q.ipy), wPct: 50, adRate: Q.fund.ads ? Q.adRate : 0, eventRate: 250,
+    subs: 0, pre: 0, dCopies: 0, wCopies: 0, xCopies: 0, adPages: 0, events: 0, bCopies: 0, grant: Q.fund.grants ? Q.grant : 0,
   };
   const W: Record<'subs' | 'single' | 'spaces' | 'dist', number> = { subs: 20, single: 30, spaces: 35, dist: 15 };
   const on = (Object.keys(W) as (keyof typeof W)[]).filter((k) => Q.ch[k]), tw = on.reduce((a, k) => a + W[k], 0) || 1;
   const sold = Math.min(Q.sold, Q.run - s.comps), part = (k: keyof typeof W) => (Q.ch[k] ? (sold * W[k]) / tw : 0);
   s.subs = r10(part('subs')); s.dCopies = r10(part('single')); s.wCopies = r10(part('spaces')); s.xCopies = r10(part('dist') / (s.xSell / 100));
-  if (Q.ch.brands) { s.adPages = 2; s.events = 1; }
+  if (Q.fund.ads) s.adPages = 2;
+  if (Q.fund.partners) s.events = 1;
   (['xCopies', 'dCopies', 'wCopies', 'subs'] as const).forEach((k) => {
     const over = s.subs + s.dCopies + s.wCopies + s.xCopies + s.comps - s.run;
     if (over > 0) s[k] = Math.max(0, s[k] - over);
   });
-  s.ch = { ...Q.ch }; s.stash = {};
+  s.ch = { ...Q.ch, brands: Q.fund.ads || Q.fund.partners || Q.fund.grants }; s.stash = {};
   return s;
 }
 

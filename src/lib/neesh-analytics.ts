@@ -65,9 +65,12 @@ export function trackTitleRequest(): void {
 // GTM container. See docs/calculator-gtm.md for the list. No plan
 // financials leave the page beyond the four quiz inputs.
 
-/** The fifth quiz answer was submitted. */
-export function trackCalculatorQuizComplete(q: { price: number; pages: number; run: number; issuesPerYear: number }): void {
-  push('calculator_quiz_complete', { price: q.price, pages: q.pages, run: q.run, issues_per_year: q.issuesPerYear });
+/**
+ * The last quiz answer was submitted. `funding` lists the money-beyond-copies
+ * sources ticked (ads, partners, grants), comma separated, or "none".
+ */
+export function trackCalculatorQuizComplete(q: { price: number; pages: number; run: number; issuesPerYear: number; funding: string[] }): void {
+  push('calculator_quiz_complete', { price: q.price, pages: q.pages, run: q.run, issues_per_year: q.issuesPerYear, funding: q.funding.length ? q.funding.join(',') : 'none' });
 }
 
 /** An example plan (Zine, Indie biannual, Big annual, Creator launch) was opened. */

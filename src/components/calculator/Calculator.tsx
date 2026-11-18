@@ -8,14 +8,14 @@ import {
   BASE, CHF, DEFAULTS, PRESET_NAMES, QUIZ_START, SECPAIRS,
   breakEven, caseSet, cash, clone, deriveCh, estPrint, fromQuiz, heatProfit, leverValues, model,
   perCopy, planSummary, quoteFit, r10, recCandidates, securedState, verdict as verdictFor, youPart,
-  type ChannelKey, type NumericPlanKey, type Plan, type PresetKey, type QuizState,
+  type ChannelKey, type FundingKey, type NumericPlanKey, type Plan, type PresetKey, type QuizState,
 } from '@/lib/calculator/model';
 import { decodePlan, shareUrl } from '@/lib/calculator/share';
 import {
   trackCalculatorClaimClick, trackCalculatorExampleOpen, trackCalculatorLinkCopied,
   trackCalculatorPlanSaved, trackCalculatorQuizComplete, trackCalculatorTabView,
 } from '@/lib/neesh-analytics';
-import { CHIPS, DYNAMIC_HINTS, GROUPS, SCH, isTab, type FieldDef, type Tab } from './fields';
+import { CHIPS, DYNAMIC_HINTS, FUNDING_CHIPS, GROUPS, QUIZ_COPY_CHIPS, SCH, isTab, type FieldDef, type Tab } from './fields';
 import './calculator.css';
 
 // The magazine calculator page body. A straight port of the approved
@@ -175,7 +175,7 @@ export function Calculator() {
     setSc(readJSON<Saved>(SKEY) || {});
     const h = window.location.hash.slice(1);
     setTab(isTab(h) ? h : 'do');
-    if (quiz) setQuizzing(true);
+    if (quiz) { setQuizzing(true); setPreset(null); }
     setReady(true);
   }, []);
 
@@ -298,11 +298,10 @@ export function Calculator() {
     if (qi === 1 && !(Q.pages > 0 && Q.ipy > 0)) return toast('Enter pages and issues a year');
     if (qi === 2 && !(Q.run >= 50)) return toast('Enter a print run of 50 or more');
     if (qi === 3 && !(['subs', 'single', 'spaces', 'dist'] as ChannelKey[]).some((k) => Q.ch[k])) return toast('Pick at least one way to sell copies');
-    if (qi < 4) {
-      if (qi === 3) {
-        // Entering the last question: default the guess to 65% of the run until touched, capped at 95%.
-        const mx = r10(Q.run * 0.95);
-        setQ({ ...Q, sold: Math.min(Q.touched ? Q.sold : r10(Q.run * 0.65), mx) });
+    if (qi < 5) {
+      if (qi === 4) {
+        // Entering the last question: default the guess to 65% of the run until touched. The slider runs to the whole run.
+        setQ({ ...Q, sold: Math.min(Q.touched ? Q.sold : r10(Q.run * 0.65), Q.run) });
       }
       setQi(qi + 1);
       return;
@@ -313,7 +312,7 @@ export function Calculator() {
     setPlMix(MIX0);
     endQuiz();
     setTab('do');
-    trackCalculatorQuizComplete({ price: Q.price, pages: Q.pages, run: Q.run, issuesPerYear: Q.ipy });
+    trackCalculatorQuizComplete({ price: Q.price, pages: Q.pages, run: Q.run, issuesPerYear: Q.ipy, funding: (Object.keys(Q.fund) as FundingKey[]).filter((k) => Q.fund[k]) });
     pendingScroll.current = 'sentence';
   }
   function quizSkip() {
@@ -456,7 +455,7 @@ export function Calculator() {
       ? ''
       : (S.binding === 'saddle' && S.pages > 80 ? '<b>Saddle stitch tops out around 64 to 80 pages.</b> Past that, use perfect binding. ' : '') +
         `About <b>${fmt(est.u, 2)}</b> a copy for ${fmtN(S.run)} copies, printed ${est.m}. An estimate until you have a quote.`,
-    priceHint: `The median across 156 indie titles on US shelves is <b>$25</b>. Half sit between <b>$20 and $30</b>. You're ${allPos} the shelf.`,
+    priceHint: `The median across 156 indie titles on US shelves is <b>$25</b>. Half sit between <b>$20 and $30</b>. You’re ${allPos} the shelf.`,
     subHint: `<b>${fmt(perIssue, 2)}</b> an issue, ${fmt(netIssue, 2)} after postage, ${netIssue <= P ? pct(1 - netIssue / P) + ' under' : pct(netIssue / P - 1) + ' over'} your cover.`,
     wHint: `The median on Neesh is <b>50%</b>. Half sit between 50 and 60%. The space keeps <b>${pct(spaceGross)}</b> of cover, <b>${pct(spaceNet)}</b> after the shipping it pays.`,
     viaHint: S.via === 'neesh' ? 'Neesh takes 10% of each order. Spaces find you there, pay at checkout and pay shipping.' : 'No platform fee. You find the spaces, invoice them and wait to be paid.',
@@ -586,12 +585,14 @@ export function Calculator() {
       { h: 'How many pages, and how many issues a year?', hint: 'Most indie titles come out two to four times a year.' },
       { h: 'How many copies will you print?', hint: 'Most indies start at 1,000 to 2,000.' },
       { h: 'How will you sell it?', hint: 'Pick every one that applies. You can change it later.' },
+      // Placeholder copy until Gem picks a version.
+      { h: 'Will you sell ads or apply for grants?', hint: 'Pick any you are planning. Only confirmed grant money counts.' },
       { h: 'How many will you sell?', hint: 'Your best guess. You will also see a slow case and a strong one.' },
     ];
     const q = steps[qi];
     const onKey = (e: React.KeyboardEvent) => { if (e.key === 'Enter') quizNext(); };
     const setQk = (k: 'price' | 'pages' | 'ipy' | 'run') => (v: number) => setQ({ ...Q, [k]: v || 0 });
-    const mx = r10(Q.run * 0.95);
+    const mx = Q.run;
     return (
       <section className="quiz" ref={quizRef}>
         <div className="qprog">{steps.map((_, i) => <i key={i} className={i <= qi ? 'on' : undefined} />)}</div>
@@ -606,7 +607,7 @@ export function Calculator() {
             </>
           )}
           {qi === 2 && <label className="qin"><NumInput blankZero min={50} step={50} value={Q.run} onChange={setQk('run')} onKeyDown={onKey} /> copies</label>}
-          {qi === 3 && CHIPS.map(([h, cs]) => (
+          {qi === 3 && QUIZ_COPY_CHIPS.map(([h, cs]) => (
             <div className="chipg" key={h}>
               <span className="mono">{h}</span>
               <div className="chips">
@@ -617,6 +618,19 @@ export function Calculator() {
             </div>
           ))}
           {qi === 4 && (
+            <>
+              <div className="chipg">
+                <div className="chips">
+                  {FUNDING_CHIPS.map(([k, l]) => (
+                    <button key={k} type="button" className={`cchip ${Q.fund[k] ? 'on' : ''}`} onClick={() => setQ({ ...Q, fund: { ...Q.fund, [k]: !Q.fund[k] } })}>{l}</button>
+                  ))}
+                </div>
+              </div>
+              {Q.fund.ads && <label className="qin">$ <NumInput blankZero min={0} step={50} value={Q.adRate} onChange={(v) => setQ({ ...Q, adRate: v || 0 })} onKeyDown={onKey} aria-label="Rate per ad page" style={{ width: 130 }} /> per ad page</label>}
+              {Q.fund.grants && <label className="qin">$ <NumInput blankZero min={0} step={250} value={Q.grant} onChange={(v) => setQ({ ...Q, grant: v || 0 })} onKeyDown={onKey} aria-label="Confirmed grant money" style={{ width: 130 }} /> in confirmed grants</label>}
+            </>
+          )}
+          {qi === 5 && (
             <>
               <div className="qsold"><b>{fmtN(Q.sold)}</b> copies, <span>{pct(Q.sold / Q.run)}</span> of your run</div>
               <input type="range" min={0} max={mx} step={10} value={Q.sold} style={{ width: '100%' }} aria-label="Copies you will sell" onChange={(e) => setQ({ ...Q, sold: +e.target.value, touched: true })} />
@@ -701,7 +715,7 @@ export function Calculator() {
           {gap <= 0 ? (
             <>{plBasis === 'secured' ? 'Confirmed money' : 'The full plan'} already clears your target by <b>{fmt(-gap)}</b>. Use the sliders to test more.</>
           ) : (
-            <>{plBasis === 'secured' ? 'On confirmed money' : 'On the full plan'} you're <b>{fmt(gap)}</b> short of {target ? fmt(target) + ' profit' : 'break-even'}. Any one of these closes the gap. You have <b>{fmtN(inv)}</b> copies unsold.</>
+            <>{plBasis === 'secured' ? 'On confirmed money' : 'On the full plan'} you’re <b>{fmt(gap)}</b> short of {target ? fmt(target) + ' profit' : 'break-even'}. Any one of these closes the gap. You have <b>{fmtN(inv)}</b> copies unsold.</>
           )}
         </p>
         <div className="cards">{cards}</div>
@@ -747,7 +761,7 @@ export function Calculator() {
   }
 
   function renderChannels() {
-    const rows: [string, keyof typeof m.R][] = [['Subscribers', 'sub'], ['Single copies', 'single'], ['Spaces', 'space'], ['Brand bulk', 'bulk'], ['Distributor', 'dist'], ['Ads', 'ads'], ['Launch partners', 'events']];
+    const rows: [string, keyof typeof m.R][] = [['Subscribers', 'sub'], ['Single copies', 'single'], ['Spaces', 'space'], ['Brand bulk', 'bulk'], ['Distributor', 'dist'], ['Ads', 'ads'], ['Launch partners', 'events'], ['Grants', 'grant']];
     let tot = 0;
     const body: React.ReactNode[] = [];
     rows.forEach(([l, k]) => {
@@ -864,7 +878,7 @@ export function Calculator() {
         <p className="small">From 41 Neesh listings with page counts. The range is the middle half. Small samples, so use it as a guide.</p>
         <div className="sub-h mono">What a space keeps</div>
         <div className="cards">
-          <div className="card"><span className="mono">Space's share of cover</span><div className="k">{pct(spaceGross)}</div><p>What a space keeps before its costs at {S.wPct}% wholesale.</p></div>
+          <div className="card"><span className="mono">Space’s share of cover</span><div className="k">{pct(spaceGross)}</div><p>What a space keeps before its costs at {S.wPct}% wholesale.</p></div>
           <div className="card"><span className="mono">After the shipping it pays</span><div className={`k ${spaceNet < 0.25 ? 'neg' : ''}`}>{pct(spaceNet)}</div><p>{spaceVerdict}</p></div>
           <div className="card"><span className="mono">What you keep per copy</span><div className="k">{fmt(youPart(pc.space), 2)}</div><p>After print, freight, fees and packing.</p></div>
         </div>
@@ -932,7 +946,7 @@ export function Calculator() {
   }
 
   function renderPL() {
-    const R: [string, keyof typeof m.R][] = [['Subscribers', 'sub'], ['Single copies', 'single'], ['Spaces', 'space'], ['Brand bulk', 'bulk'], ['Distributor, sold copies only', 'dist'], ['Ads', 'ads'], ['Launch partners', 'events']];
+    const R: [string, keyof typeof m.R][] = [['Subscribers', 'sub'], ['Single copies', 'single'], ['Spaces', 'space'], ['Brand bulk', 'bulk'], ['Distributor, sold copies only', 'dist'], ['Ads', 'ads'], ['Launch partners', 'events'], ['Grants', 'grant']];
     const V: [string, keyof typeof m.V][] = [['Subscriber fees and postage', 'sub'], ['Single copy fees, packing and shipping', 'single'], [S.via === 'neesh' ? 'Neesh fee and fulfillment' : 'Card fees and packing for spaces', 'space'], ['Packing brand order', 'bulk'], ['Freight to distributor', 'dist']];
     const row = (l: string, a: number, b: number, cls = '') => (
       <tr className={cls || undefined} key={l}><td className="t">{l}</td><td className={sign(a)}>{fmt(a)}</td><td className={sign(b)}>{fmt(b)}</td></tr>
@@ -1043,7 +1057,7 @@ export function Calculator() {
             <main className={`main ${over > 0 ? 'invalid' : ''}`}>
               {over > 0 && (
                 <div className="alert" style={{ display: 'block' }}>
-                  <b>This plan needs {fmtN(m.allocated)} copies. You're printing {fmtN(S.run)}.</b> Sales and comps run {fmtN(over)} copies over. Results stay hidden until the plan fits.<br />
+                  <b>This plan needs {fmtN(m.allocated)} copies. You’re printing {fmtN(S.run)}.</b> Sales and comps run {fmtN(over)} copies over. Results stay hidden until the plan fits.<br />
                   <button type="button" className="sbtn dark" onClick={() => { setPreset(null); setS({ ...S, run: Math.ceil(m.allocated / 50) * 50 }); }}>Set print run to {fmtN(Math.ceil(m.allocated / 50) * 50)}</button>
                 </div>
               )}
@@ -1052,7 +1066,7 @@ export function Calculator() {
                   <div className="rule" />
                   <div className="dateline"><span className="mono acc">Your magazine</span><button type="button" className="linkb mono" onClick={requiz}>Retake the quiz</button></div>
                   <p className="sline">
-                    I'm printing <NumInput fit value={S.run} onChange={(v) => { if (v > 0) setField('run', v); }} aria-label="Print run" /> copies of a <NumInput fit value={S.pages} onChange={(v) => { if (v > 0) setField('pages', v); }} aria-label="Pages" />-page magazine at $<NumInput fit value={S.price} onChange={(v) => { if (v > 0) setField('price', v); }} aria-label="Cover price" />, <NumInput fit value={S.ipy} onChange={(v) => { if (v > 0) setField('ipy', v); }} aria-label="Issues a year" /> times a year, selling to{' '}
+                    I’m printing <NumInput fit value={S.run} onChange={(v) => { if (v > 0) setField('run', v); }} aria-label="Print run" /> copies of a <NumInput fit value={S.pages} onChange={(v) => { if (v > 0) setField('pages', v); }} aria-label="Pages" />-page magazine at $<NumInput fit value={S.price} onChange={(v) => { if (v > 0) setField('price', v); }} aria-label="Cover price" />, <NumInput fit value={S.ipy} onChange={(v) => { if (v > 0) setField('ipy', v); }} aria-label="Issues a year" /> times a year, selling to{' '}
                     <span>
                       {SCH.map(([k, l], i) => (
                         <span key={k}>{i > 0 && ', '}<button type="button" className={`sch ${chOn[k] ? '' : 'off'}`} onClick={() => toggleCh(k)}>{l}</button></span>
@@ -1111,12 +1125,12 @@ export function Calculator() {
                     <span className="mono">02 / 05</span><h2>Cash before you print</h2>
                     <p>
                       {need > 0
-                        ? <>At the lowest point you're <b>{fmt(need)}</b> out of pocket. Have that saved, raised or presold before you book the printer.</>
+                        ? <>At the lowest point you’re <b>{fmt(need)}</b> out of pocket. Have that saved, raised or presold before you book the printer.</>
                         : 'Confirmed money covers every cost as it lands. You never go below zero.'}
                     </p>
                   </header>
                   {renderCash()}
-                  <p className="small">Subscription money counts for this issue's share only. Projected sales arrive after the printer is paid, so confirmed money matters most.</p>
+                  <p className="small">Subscription money counts for this issue’s share only. Projected sales arrive after the printer is paid, so confirmed money matters most.</p>
                 </section>
 
                 <section className={`tab ${tab === 'channels' ? 'on' : ''}`}>
@@ -1126,7 +1140,7 @@ export function Calculator() {
                   <div className="legend">
                     <span><i style={{ background: 'var(--c-print)' }} />Print and freight</span>
                     <span><i style={{ background: 'var(--c-fees)' }} />Fees, postage, packing</span>
-                    <span><i style={{ background: 'var(--c-shop)' }} />The space's margin</span>
+                    <span><i style={{ background: 'var(--c-shop)' }} />The space’s margin</span>
                     <span><i style={{ background: 'var(--c-dist)' }} />Distributor and unsold</span>
                     <span><i style={{ background: 'var(--c-you)' }} />Yours</span>
                   </div>

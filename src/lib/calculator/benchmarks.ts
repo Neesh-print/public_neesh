@@ -48,7 +48,7 @@ export type BenchRow = [string, string, string, BenchType, string, string];
 
 export const BENCH: BenchRow[] = [
   ['US shelf price', 'Median $25. Half sit between $20 and $30. 80% fall between $15.50 and $38', '156 titles', 'obs', 'Neesh marketplace listings (56 titles) plus the full online catalog of a US independent magazine shop (107 titles). 7 overlap. No mainstream titles', 'Nov 17, 2026'],
-  ['London shelf price', 'Median £16. Half sit between £12 and £22', '213 titles', 'obs', "A London independent magazine shop's online catalog. First page in full, second page in part", 'Nov 17, 2026'],
+  ['London shelf price', 'Median £16. Half sit between £12 and £22', '213 titles', 'obs', "A London independent magazine shop’s online catalog. First page in full, second page in part", 'Nov 17, 2026'],
   ['Import price gap', 'The US price is about 1.5 times the London £ price', '21 titles sold in both shops', 'obs', 'Same two shop catalogs', 'Nov 17, 2026'],
   ['Price by page count', '$15 under 64 pages, $23.50 at 64 to 119, $25 at 120 to 179, $24 at 180 and up', '41 listings', 'obs', 'Neesh marketplace listings that include page count', 'Nov 17, 2026'],
   ['Wholesale as a share of cover', 'Median 50%. Half sit between 50 and 60%. 80% fall between 42 and 70%', '76 listings (56 titles)', 'obs', 'Neesh marketplace, the wholesale price publishers set against their suggested retail. One Korean distributor catalog left out', 'Nov 17, 2026'],

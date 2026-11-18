@@ -27,7 +27,7 @@ const PlanSchema = z.object({
   xPct: num.optional(), xSell: num.optional(), xFreight: num.optional(), xTerms: num.optional(),
   subPost: num.optional(), subRenew: num.optional(), adDeposit: num.optional(),
   pre: num.optional(), subsSec: num.optional(), wSec: num.optional(), adSec: num.optional(),
-  eventsSec: num.optional(), bSec: num.optional(),
+  eventsSec: num.optional(), bSec: num.optional(), grant: num.optional(),
   // Per-magazine figures. BASE has no value for these, so a link must carry them.
   price: num, pages: num, ipy: num, run: num, freight: num, comps: num, editorial: num, otherFixed: num,
   subs: num, subPrice: num, dCopies: num, wCopies: num, wPct: num, xCopies: num,
