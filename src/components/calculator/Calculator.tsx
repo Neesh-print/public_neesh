@@ -661,9 +661,12 @@ export function Calculator() {
     const mb = model(base), target = plTarget || 0;
     const gap = target - mb.profit, inv = Math.max(0, S.run - mb.allocated), L = leverValues(S);
     const copiesAtCover = mb.copiesBy.single * (1 - S.feePct / 100) + ((mb.copiesBy.space + mb.copiesBy.bulk) * S.wPct / 100) * (S.via === 'neesh' ? 0.9 : 1) + (mb.xSold * S.xPct) / 100;
-    const card = (k: string, val: string, p: string, flag = '') => (
+    // A lever with no figure cannot close the gap (nothing sold at cover yet,
+    // or a subscription that loses money per copy), so it is left out rather
+    // than shown with a blank number.
+    const card = (k: string, val: string, p: string, flag = '') => val ? (
       <div className="card" key={k}><span className="mono">{k}</span><div className="k">{val}</div><p>{p}</p>{flag ? <div className="flag">{flag}</div> : null}</div>
-    );
+    ) : null;
     let cards: React.ReactNode = null;
     if (gap > 0) {
       const ns = L.sub > 0 ? Math.ceil(gap / L.sub) : Infinity, nst = L.stockist > 0 ? Math.ceil(gap / L.stockist) : Infinity, ng = L.single > 0 ? Math.ceil(gap / L.single) : Infinity;

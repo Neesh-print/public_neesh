@@ -312,3 +312,11 @@
   .calc .presets>.mono{grid-column:1/-1;margin-bottom:2px}
   .calc .presets .cpill{width:100%;text-align:center;padding:9px 10px}
 }
+
+/* Planner and pricing cards sit two across on phones. An odd card left over
+   on the last row stretches across both columns instead of leaving a gap. */
+@media (max-width:600px){
+  .calc .cards{grid-template-columns:1fr 1fr}
+  .calc .cards .card:nth-child(odd){border-left:0;padding-left:0}
+  .calc .cards .card:last-child:nth-child(odd){grid-column:1/-1}
+}
