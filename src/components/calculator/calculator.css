@@ -321,10 +321,17 @@
   .calc .cards .card:last-child:nth-child(odd){grid-column:1/-1}
 }
 
-/* Email me this plan, under the best next move. Optional, never a gate. */
-.calc .mailplan{padding:12px 0;border-bottom:1px solid var(--hair);font-size:13px}
-.calc .mailform{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.calc .mailform input[type=email]{flex:1;min-width:200px;font:500 14px "IBM Plex Mono",ui-monospace,monospace;padding:7px 8px;border:1px solid var(--hair);border-radius:0;background:#fff;color:var(--ink)}
+/* Email me this plan. An action row straight under the four figures, the
+   point every reader reaches. The form opens in place. Optional, never a gate. */
+.calc .mailplan{padding:16px 0;border-bottom:1px solid var(--hair);font-size:13px}
+.calc .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.calc .actions .sbtn{padding:13px 16px}
+.calc .sent-line{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:17px;letter-spacing:-.02em}
+.calc .mailform{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.calc .mailform input[type=email]{flex:1;min-width:220px;font:500 15px "IBM Plex Mono",ui-monospace,monospace;padding:12px 12px;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink)}
 .calc .mailform input[type=email]:focus{outline:1px solid var(--accent);border-color:var(--accent)}
-.calc .mailform label{display:flex;gap:6px;align-items:center;width:100%;font-size:12px;color:var(--grey)}
+.calc .mailform label{display:flex;gap:6px;align-items:center;width:100%;font-size:12.5px;color:var(--grey)}
 .calc .mailform input[type=checkbox]{accent-color:var(--accent);margin:0}
+@media (max-width:600px){
+  .calc .actions .btn{flex:1;text-align:center}
+}

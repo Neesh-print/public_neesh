@@ -1119,26 +1119,29 @@ export function Calculator() {
                     <div className="fig"><span className="mono">Cash needed</span><div className="num">{need > 0 ? fmt(need) : '$0'}</div><div className="sub">{need > 0 ? 'before sales pay it back' : 'confirmed money covers costs'}</div></div>
                     <div className="fig"><span className="mono">Break-even</span><div className="num">{isFinite(be.copies) ? fmtN(be.copies) : 'Never'}</div><div className="sub">{!isFinite(be.copies) ? 'each copy loses money' : be.feasible ? 'copies, at your mix' : 'copies, more than you print'}</div></div>
                   </div>
+                  <div className="mailplan">
+                    {mailState === 'done' ? (
+                      <span className="sent-line" role="status">Sent. Your plan is in your inbox.</span>
+                    ) : !mailOpen ? (
+                      <div className="actions">
+                        <button type="button" className="btn" onClick={() => setMailOpen(true)}>Email me this plan</button>
+                        <button type="button" className="sbtn" onClick={copyLink}>Copy link</button>
+                      </div>
+                    ) : (
+                      <form className="mailform" onSubmit={sendPlan}>
+                        <input type="email" value={mailTo} onChange={(e) => { setMailTo(e.target.value); if (mailState === 'error') setMailState('idle'); }} placeholder="you@yourmagazine.com" aria-label="Email address" required autoFocus />
+                        <button type="submit" className="btn" disabled={mailState === 'busy'}>Send</button>
+                        <label><input type="checkbox" checked={mailOptIn} onChange={(e) => setMailOptIn(e.target.checked)} /> Join Indexed, the Neesh newsletter</label>
+                        {mailState === 'error' && <span className="small" style={{ margin: 0, width: '100%' }} role="alert">That didn’t go through. Check the address and try again.</span>}
+                      </form>
+                    )}
+                  </div>
                   <div className="toprec">
                     {recs[0] && (
                       <>
                         <span><span className="mono" style={{ color: 'var(--grey)', marginRight: 8 }}>Best next move</span><b>{recs[0].title}</b>, worth +{fmt(recs[0].d)}</span>
                         <a href="#do" onClick={() => requestAnimationFrame(scrollToTabsIfStuck)}>All {recs.length} moves</a>
                       </>
-                    )}
-                  </div>
-                  <div className="mailplan">
-                    {mailState === 'done' ? (
-                      <span className="small" style={{ margin: 0 }} role="status">Sent. Your plan is in your inbox.</span>
-                    ) : !mailOpen ? (
-                      <button type="button" className="linkb mono" onClick={() => setMailOpen(true)}>Email me this plan</button>
-                    ) : (
-                      <form className="mailform" onSubmit={sendPlan}>
-                        <input type="email" value={mailTo} onChange={(e) => { setMailTo(e.target.value); if (mailState === 'error') setMailState('idle'); }} placeholder="you@yourmagazine.com" aria-label="Email address" required autoFocus />
-                        <button type="submit" className="sbtn dark" disabled={mailState === 'busy'}>Send</button>
-                        <label><input type="checkbox" checked={mailOptIn} onChange={(e) => setMailOptIn(e.target.checked)} /> Join Indexed, the Neesh newsletter</label>
-                        {mailState === 'error' && <span className="small" style={{ margin: 0, width: '100%' }} role="alert">That didn’t go through. Check the address and try again.</span>}
-                      </form>
                     )}
                   </div>
                   {warnings.length > 0 && (
