@@ -37,6 +37,7 @@ columns. All are optional; `npm run load -- --insert-only` reads them.
 
 | Canonical CSV header | Notes |
 |---|---|
+| `title_slug` | override the slug derived from the name, for names whose ASCII fold is unreadable |
 | `publisher_slug` | pin the row to an existing publisher row, or share one slug across sibling titles of a new publisher |
 | `subscribe_url` | the publisher's own subscribe or shop page |
 | `primary_tag` | one of the row's `tags`; the title's primary niche |

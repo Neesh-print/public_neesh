@@ -3,7 +3,7 @@
 // sheet. Never fixes data. Outputs data/clean.json for load.ts plus
 // data/rejects.csv and data/tags-missing.csv.
 //
-// Optional columns (see docs/mapping.md): publisher_slug, subscribe_url,
+// Optional columns (see docs/mapping.md): publisher_slug, title_slug, subscribe_url,
 // primary_tag, review_status, cover_url, cover_page_url, cover_source_type,
 // issue_label, issue_number, issue_date, issue_source_url. They carry a
 // reviewed import's cover and latest-issue evidence through to load.ts.
@@ -291,7 +291,11 @@ async function main() {
       publisherSlug = uniqueSlug(publisherName, publisherSlugs);
       publisherSlugByName.set(publisherName, publisherSlug);
     }
-    const titleSlug = uniqueSlug(titleName, titleSlugs);
+    // title_slug overrides the derived slug when the ASCII fold of a name is
+    // unreadable (HÅNDVÆRK would otherwise become handvrk).
+    const titleSlug = get('title_slug')
+      ? uniqueSlug(slugify(get('title_slug')), titleSlugs)
+      : uniqueSlug(titleName, titleSlugs);
 
     clean.push({
       publisher: {
