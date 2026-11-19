@@ -15,6 +15,7 @@ const DRAWER_LINKS = [
   { label: 'Explore', href: '/index' },
   { label: 'Your collection', href: '/collect' },
   { label: 'For Publishers', href: '/publishers' },
+  { label: 'Calculator', href: '/calculator' },
   { label: 'For Spaces', href: '/spaces' },
   { label: 'Packs', href: '/packs' },
   { label: 'Journal', href: '/journal' },
@@ -102,9 +103,14 @@ function NavLinks({ pathname }: { pathname: string }) {
         Your collection
         <CollectCount />
       </Link>
-      <Link href="/publishers" className={isActive(pathname, '/publishers') ? 'active' : undefined}>
-        For Publishers
-      </Link>
+      <div className="nav-item">
+        <Link href="/publishers" className={isActive(pathname, '/publishers') ? 'active' : undefined}>
+          For Publishers
+        </Link>
+        <div className="nav-menu">
+          <Link href="/calculator">Calculator</Link>
+        </div>
+      </div>
       <div className="nav-item">
         <Link href="/spaces" className={isActive(pathname, '/spaces') ? 'active' : undefined}>
           For Spaces

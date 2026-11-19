@@ -45,18 +45,19 @@ async function postToResend(apiKey: string, body: string): Promise<Response> {
   }
 }
 
+/** Resolves true when Resend accepted the message. Callers that only notify can ignore it. */
 export async function sendEmail({
   to,
   subject,
   text,
   html,
   throttle = RECIPIENT_LIMIT,
-}: EmailInput): Promise<void> {
+}: EmailInput): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) return;
+  if (!apiKey) return false;
   if (throttle !== false && !(await rateLimit(`email-to:${hashKey(to)}`, throttle, RECIPIENT_WINDOW_SEC))) {
     log('warn', 'email.recipient_throttled', { subject });
-    return;
+    return false;
   }
   const from = process.env.NOTIFY_FROM ?? 'Neesh <hi@neesh.art>';
   const replyTo = process.env.NOTIFY_REPLY_TO ?? 'hi@neesh.art';
@@ -73,20 +74,21 @@ export async function sendEmail({
   for (let attempt = 1; attempt <= 2; attempt++) {
     try {
       const res = await postToResend(apiKey, body);
-      if (res.ok) return;
+      if (res.ok) return true;
       const retryable = res.status === 429 || res.status >= 500;
       if (!retryable || attempt === 2) {
         log('error', 'email.send_rejected', { status: res.status, response: await res.text(), subject });
-        return;
+        return false;
       }
     } catch (err) {
       if (attempt === 2) {
         log('error', 'email.send_failed', { error: err, subject });
-        return;
+        return false;
       }
     }
     await new Promise((r) => setTimeout(r, 500));
   }
+  return false;
 }
 
 // Admin notifications go to NOTIFY_EMAIL.

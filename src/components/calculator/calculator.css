@@ -1,0 +1,337 @@
+/* The magazine calculator, ported from the approved prototype
+   (neesh-magazine-calculator.html). Every rule is scoped under .calc so
+   nothing here reaches globals.css. Four prototype class names collide with
+   site classes and are renamed: .field -> .cfield, .hint stays (the site's
+   rule is .field .hint), .chip -> .cchip, .pill -> .cpill. Tokens: white
+   paper, black hairlines, accent #7d3bbf on the profit figure, section
+   markers and the reader's own price only. No red or green. */
+
+.calc{--paper:#fff;--ink:#000;--grey:#5c5c5c;--hair:#d9d9d9;--soft:#f4f4f4;--accent:#7D3BBF;--accent-soft:#f6f0fb;--pos:#1f7a4d;--neg:#b3261e;--warn:#9a6a00;
+--c-print:#1a1a1a;--c-fees:#8a8a8a;--c-shop:#c9c9c9;--c-dist:#e6e6e6;--c-you:#7D3BBF}
+.calc,.calc{margin:0;background:var(--paper);color:var(--ink)}
+.calc{font-family:Manrope,system-ui,sans-serif;font-size:15px;line-height:1.5}
+.calc .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.calc .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;text-transform:uppercase;letter-spacing:.08em;font-size:11px}
+.calc h1,.calc h2,.calc h3{font-family:Archivo,sans-serif;font-weight:600;letter-spacing:-.035em;line-height:.95;margin:0}
+.calc a{color:inherit}
+.calc button{font-family:inherit}
+.calc .hero{padding:52px 0 32px;border-bottom:1px solid var(--hair)}
+.calc .hero .mono{color:var(--accent)}
+.calc .hero h1{font-size:clamp(44px,7vw,92px);margin:14px 0 18px;max-width:14ch}
+.calc .hero p{max-width:62ch;color:var(--grey);font-size:17px;margin:0}
+.calc .presets{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.calc .cpill{border:1px solid var(--ink);background:none;border-radius:999px;padding:7px 14px;font:500 12px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;color:var(--ink)}
+.calc .cpill:hover,.calc .cpill.on{background:var(--ink);color:var(--paper)}
+.calc .grid{display:grid;grid-template-columns:400px minmax(0,1fr);border-bottom:1px solid var(--hair)}
+
+@media (max-width:960px){.calc .grid{grid-template-columns:1fr}
+}
+.calc .inputs{border-right:1px solid var(--hair);padding:0 24px 40px 0}
+
+@media (max-width:960px){.calc .inputs{border-right:0;padding-right:0}
+}
+.calc .outputs{padding:22px 0 40px 32px;min-width:0}
+
+@media (max-width:960px){.calc .outputs{padding-left:0}
+}
+.calc details{border-bottom:1px solid var(--hair)}
+.calc summary{list-style:none;cursor:pointer;padding:16px 0;display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.calc summary::-webkit-details-marker{display:none}
+.calc summary h3{font-size:21px}
+.calc summary .mono{color:var(--grey);text-align:right}
+.calc details[open] summary .chev{transform:rotate(45deg)}
+.calc .chev{display:inline-block;transition:transform .15s;font-family:Archivo,system-ui,sans-serif;font-size:20px}
+.calc .ghead{font:500 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;padding:22px 0 4px;border-bottom:1px solid var(--ink)}
+.calc .ghead.direct{color:var(--accent)}
+.calc .cfield{margin:0 0 15px}
+.calc .cfield label{display:flex;justify-content:space-between;gap:12px;font-weight:600;font-size:13px;margin-bottom:6px}
+.calc .cfield .hint{font-size:12px;color:var(--grey);margin-top:5px;line-height:1.45}
+.calc .cfield .hint b{color:var(--accent);font-weight:600}
+.calc .row{display:flex;gap:10px;align-items:center}
+.calc input[type=range]{flex:1;accent-color:var(--accent);min-width:0}
+.calc input[type=number],.calc input[type=text],.calc select,.calc textarea{font:500 14px "IBM Plex Mono",monospace;padding:7px 8px;border:1px solid var(--hair);border-radius:0;background:#fff;color:var(--ink)}
+.calc input[type=number]{width:96px}
+.calc input:focus,.calc select:focus,.calc textarea:focus{outline:1px solid var(--accent);border-color:var(--accent)}
+.calc .seg{display:flex;border:1px solid var(--ink);flex-wrap:wrap}
+.calc .seg button{flex:1;border:0;background:none;padding:8px 6px;font:500 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.04em;cursor:pointer;color:var(--ink);min-width:70px}
+.calc .seg button.on{background:var(--ink);color:#fff}
+.calc .tag{display:inline-block;font:500 9.5px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;padding:1px 5px;border:1px solid currentColor;margin-left:6px;vertical-align:1px;white-space:nowrap}
+.calc .tag.obs{color:var(--accent)}
+.calc .tag.quote{color:#2b6cb0}
+.calc .tag.est{color:var(--warn)}
+.calc .tag.policy{color:#333}
+.calc .tag.anec{color:#8a5a8a}
+.calc .qtable{width:100%;border-collapse:collapse;margin-top:6px}
+.calc .qtable td{padding:3px 4px 3px 0;border:0}
+.calc .qtable input{width:100%}
+.calc .split2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.calc .scen{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:0 0 16px;border-bottom:1px solid var(--hair);margin-bottom:18px}
+.calc .scen input[type=text]{flex:1;min-width:150px}
+.calc .sbtn{border:1px solid var(--ink);background:none;padding:7px 11px;font:500 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;color:var(--ink)}
+.calc .sbtn:hover,.calc .sbtn.dark{background:var(--ink);color:#fff}
+.calc .headline{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--hair)}
+
+@media (max-width:700px){.calc .headline{grid-template-columns:1fr 1fr}
+}
+.calc .stat{padding:14px 14px 16px 0;min-width:0}
+.calc .stat+.stat{padding-left:14px;border-left:1px solid var(--hair)}
+
+@media (max-width:700px){.calc .stat:nth-child(3){border-left:0;padding-left:0}
+.calc .stat:nth-child(n+3){border-top:1px solid var(--hair)}
+}
+.calc .stat .num{font-family:Archivo,system-ui,sans-serif;font-weight:600;letter-spacing:-.04em;font-size:clamp(26px,3.4vw,42px);line-height:1;margin-top:8px}
+.calc .stat .sub{font-size:12px;color:var(--grey);margin-top:6px}
+.calc .pos{color:var(--pos)}
+.calc .neg{color:var(--neg)}
+.calc .verdict{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:21px;letter-spacing:-.025em;line-height:1.18;margin:20px 0 4px;max-width:46ch}
+.calc .alert{border-left:3px solid var(--neg);padding:12px 14px;background:#fbf1f0;font-size:13.5px;margin-top:14px;display:none}
+.calc .alert.amber{border-color:var(--warn);background:#fbf6ea}
+.calc .alert button{margin-top:8px}
+.calc .invalid .dimmable{opacity:.28;pointer-events:none;filter:grayscale(1)}
+.calc section.block{margin-top:34px}
+.calc section.block>.mono:first-child{color:var(--grey);display:block;padding-bottom:10px;border-bottom:1px solid var(--ink);margin-bottom:14px}
+.calc .lead{margin:0 0 14px;font-size:14px;color:var(--grey);max-width:66ch}
+.calc .lead b{color:var(--ink)}
+.calc table{border-collapse:collapse;width:100%;font-size:13px}
+.calc th,.calc td{padding:8px 10px;border-bottom:1px solid var(--hair);text-align:right;white-space:nowrap}
+.calc th:first-child,.calc td:first-child{text-align:left}
+.calc th{font:500 10px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.06em;color:var(--grey)}
+.calc td{font-family:"IBM Plex Mono",monospace}
+.calc td.t{font-family:Manrope,system-ui,sans-serif;white-space:normal}
+.calc tr.sec td{font:500 10px "IBM Plex Mono",monospace;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);padding-top:16px}
+.calc tr.sub td{font-weight:600;border-top:1px solid #999}
+.calc tr.total td{font-weight:600;border-bottom:1px solid var(--ink);border-top:1px solid var(--ink)}
+.calc .scroll{overflow-x:auto}
+.calc .heat td{text-align:center}
+.calc .heat td:first-child{text-align:left}
+.calc .heat td.cur{outline:2px solid var(--accent);outline-offset:-2px}
+.calc .chart{width:100%;height:auto;display:block}
+.calc .bars{display:flex;flex-direction:column;gap:13px}
+.calc .bar-row .lbl{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:5px;gap:12px}
+.calc .bar-row .lbl span:last-child{font-family:"IBM Plex Mono",monospace;font-weight:500}
+.calc .bar{display:flex;height:28px;width:100%;background:var(--soft)}
+.calc .bar div{height:100%;display:flex;align-items:center;justify-content:center;font:500 10px "IBM Plex Mono",monospace;color:#fff;overflow:hidden;white-space:nowrap;min-width:0}
+.calc .bar-group{font:500 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;margin:6px 0 -4px;color:var(--grey)}
+.calc .bar-group.direct{color:var(--accent)}
+.calc .legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:12px;font-size:12px;color:var(--grey)}
+.calc .legend i{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+.calc .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));border-top:1px solid var(--ink)}
+.calc .card{padding:14px 14px 16px 0;border-bottom:1px solid var(--hair)}
+.calc .card+.card{padding-left:14px;border-left:1px solid var(--hair)}
+.calc .card .k{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:30px;letter-spacing:-.04em;line-height:1;margin:8px 0 6px}
+.calc .card p{margin:0;font-size:12.5px;color:var(--grey)}
+.calc .card .flag{font-size:11.5px;color:var(--warn);margin-top:6px}
+.calc .planner{display:grid;grid-template-columns:1fr 1fr;gap:4px 24px;margin-top:18px;padding:16px;background:var(--soft)}
+
+@media (max-width:700px){.calc .planner{grid-template-columns:1fr}
+}
+.calc .planner .res{grid-column:1/-1;display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--ink);padding-top:12px;margin-top:6px;gap:12px;flex-wrap:wrap}
+.calc .planner .res .num{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:34px;letter-spacing:-.04em}
+.calc .cash{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink)}
+
+@media (max-width:700px){.calc .cash{grid-template-columns:1fr 1fr}
+}
+.calc .cash>div{padding:12px 12px 14px 0;border-bottom:1px solid var(--hair)}
+.calc .cash>div+div{padding-left:12px;border-left:1px solid var(--hair)}
+.calc .cash .amt{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:24px;letter-spacing:-.03em;margin:6px 0 2px}
+.calc .cash .cum{font:500 11px "IBM Plex Mono",monospace;color:var(--grey)}
+.calc .cash ul{margin:8px 0 0;padding:0;list-style:none;font-size:11.5px;color:var(--grey)}
+.calc .cash li{display:flex;justify-content:space-between;gap:8px}
+.calc .callout{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
+
+@media (max-width:640px){.calc .callout{grid-template-columns:1fr}
+}
+.calc .callout>div{padding:16px 16px 18px 0;border-bottom:1px solid var(--hair)}
+.calc .callout>div+div{padding-left:16px;border-left:1px solid var(--hair)}
+.calc .callout .k{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:36px;letter-spacing:-.04em;line-height:1;margin:8px 0 6px}
+.calc .callout p{margin:0;font-size:13px;color:var(--grey)}
+.calc .price-guide{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ink)}
+
+@media (max-width:640px){.calc .price-guide{grid-template-columns:1fr 1fr}
+}
+.calc .pg{padding:14px 14px 16px 0;border-bottom:1px solid var(--hair)}
+.calc .pg+.pg{padding-left:14px;border-left:1px solid var(--hair)}
+.calc .pg.me{background:var(--accent-soft)}
+.calc .pg .k{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:28px;letter-spacing:-.04em;margin:6px 0 2px}
+.calc .pg p{margin:0;font-size:12px;color:var(--grey)}
+.calc .small{font-size:12px;color:var(--grey);margin:10px 0 0}
+.calc .fieldnotes{padding:56px 0 20px}
+.calc .fieldnotes h2{font-size:clamp(34px,5vw,58px);margin:10px 0 14px}
+.calc .fieldnotes>p{max-width:64ch;color:var(--grey);margin:0 0 22px}
+.calc .bench td{vertical-align:top}
+.calc .cta{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:end;padding:44px 0;border-top:1px solid var(--ink);margin-top:44px}
+
+@media (max-width:700px){.calc .cta{grid-template-columns:1fr}
+}
+.calc .cta h2{font-size:clamp(30px,4.5vw,52px);max-width:17ch}
+.calc .btn{display:inline-block;background:var(--ink);color:#fff;padding:14px 22px;text-decoration:none;font:500 12px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;border:0;cursor:pointer}
+.calc .toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;font:500 12px "IBM Plex Mono",monospace;opacity:0;transition:opacity .2s;pointer-events:none;z-index:20}
+.calc .toast.show{opacity:1}
+.calc .modal{position:fixed;inset:0;background:rgba(0,0,0,.4);display:none;align-items:center;justify-content:center;z-index:15;padding:20px}
+.calc .modal.show{display:flex}
+.calc .modal .box{background:#fff;max-width:640px;width:100%;padding:22px;border:1px solid var(--ink)}
+.calc .modal textarea{width:100%;height:200px;font-size:12px}
+
+@media (max-width:960px){}
+.calc{--pos:#000;--neg:#000;--warn:#5c5f6b;--grey:#5c5f6b;--band:#efeef6}
+.calc h1,.calc h2,.calc h3{font-weight:700}
+.calc .acc{color:var(--accent)}
+.calc .hero{padding:44px 0 28px}
+.calc .hero h1{font-weight:800;letter-spacing:-.038em;line-height:.9}
+.calc .cpill{padding:7px 14px}
+.calc .shell{display:grid;grid-template-columns:372px minmax(0,1fr);border-bottom:1px solid var(--hair)}
+.calc .side{border-right:1px solid var(--hair);padding:0 24px 40px 0;position:sticky;top:var(--calc-top,75px);align-self:start;max-height:calc(100vh - var(--calc-top,75px));overflow-y:auto}
+.calc .main{padding:0 0 56px 36px;min-width:0}
+.calc .sheet-head,.calc .backdrop,.calc .mbar{display:none}
+.calc .setup{padding:22px 0 18px;border-bottom:1px solid var(--ink)}
+.calc .setup>.mono{color:var(--accent);display:block;margin-bottom:14px}
+.calc .chipg{margin-top:10px}
+.calc .chipg .mono{font-size:10px;color:var(--grey);display:block;margin-bottom:6px}
+.calc .chips{display:flex;flex-wrap:wrap;gap:6px}
+.calc .cchip{border:1px solid var(--hair);background:#fff;border-radius:999px;padding:6px 12px;font:500 12.5px Manrope,sans-serif;cursor:pointer;color:var(--grey)}
+.calc .cchip.on{border-color:var(--ink);background:var(--ink);color:#fff}
+.calc summary h3{font-size:19px;font-weight:600}
+.calc details.refine{border:0;border-top:1px dashed var(--hair);margin:4px 0 14px}
+.calc details.refine>summary{padding:10px 0;font:500 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;color:var(--grey);justify-content:flex-start;gap:6px}
+.calc details.refine[open]>summary .chev{transform:rotate(45deg)}
+.calc .tag,.calc .tag.obs,.calc .tag.quote,.calc .tag.est,.calc .tag.policy,.calc .tag.anec{color:var(--grey)}
+.calc .tag.conf{color:var(--ink)}
+.calc .cfield .hint b{color:var(--ink)}
+.calc .alert,.calc .alert.amber{background:#fff;border:1px solid var(--hair);border-left:3px solid var(--ink);margin:18px 0 0}
+.calc .answer{padding-top:26px}
+.calc .answer .rule{border-top:1px solid var(--ink);margin-bottom:12px}
+.calc .dateline{display:flex;justify-content:space-between;gap:12px;color:var(--grey)}
+.calc .verdict{font-family:Archivo,sans-serif;font-weight:700;font-size:clamp(24px,2.9vw,36px);letter-spacing:-.03em;line-height:1.06;margin:18px 0 22px;max-width:28ch}
+.calc .figs{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
+.calc .fig{padding:14px 14px 16px 0;min-width:0}
+.calc .fig+.fig{padding-left:14px;border-left:1px solid var(--hair)}
+.calc .fig .mono{color:var(--grey)}
+.calc .fig .num{font-family:Archivo,system-ui,sans-serif;font-weight:700;letter-spacing:-.04em;font-size:clamp(24px,3vw,38px);line-height:1;margin-top:8px}
+.calc .fig .sub{font-size:12px;color:var(--grey);margin-top:6px}
+.calc #o-profit{color:var(--accent)}
+.calc .toprec{display:flex;gap:14px;align-items:baseline;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--ink);font-size:14px;flex-wrap:wrap}
+.calc .toprec b{font-weight:600}
+.calc .toprec a{font:500 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;white-space:nowrap}
+.calc .tabs{position:sticky;top:var(--calc-top,75px);z-index:4;background:#fff;display:flex;gap:22px;align-items:baseline;border-bottom:1px solid var(--hair);margin-top:30px;overflow-x:auto;scrollbar-width:none}
+.calc .tabs::-webkit-scrollbar{display:none}
+.calc .tabs a{padding:14px 0 12px;text-decoration:none;font:600 14px Manrope,sans-serif;color:var(--grey);white-space:nowrap;border-bottom:2px solid transparent}
+.calc .tabs a i{font:500 10px "IBM Plex Mono",monospace;font-style:normal;margin-right:6px;letter-spacing:.06em}
+.calc .tabs a.on{color:var(--ink);border-color:var(--ink)}
+.calc .tabs a.on i{color:var(--accent)}
+.calc .tabs .gap{flex:1}
+.calc .tabs a.back{font:500 11px "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em}
+.calc .tab{display:none;padding-top:30px}
+.calc .tab.on{display:block}
+.calc .th .mono{color:var(--accent)}
+.calc .th h2{font-size:clamp(34px,4.6vw,56px);font-weight:700;letter-spacing:-.034em;margin:10px 0 12px}
+.calc .th p{max-width:60ch;color:var(--grey);margin:0 0 26px;font-size:15.5px}
+.calc .th p b{color:var(--ink)}
+.calc .sub-h{color:var(--grey);padding-bottom:10px;border-bottom:1px solid var(--ink);margin:38px 0 14px}
+.calc .th+.sub-h{margin-top:0}
+.calc .wrapr{gap:16px;flex-wrap:wrap}
+.calc .inl{font-size:13px;font-weight:600;gap:8px}
+.calc .pg.me{background:none;box-shadow:inset 0 3px 0 var(--accent)}
+.calc .planner{background:var(--band)}
+.calc .scen{border-bottom:0;margin-bottom:6px;padding-bottom:6px}
+.calc .card .k,.calc .callout .k,.calc .pg .k,.calc .cash .amt,.calc .planner .res .num{font-weight:700}
+.calc .cta h2{font-weight:700}
+
+@media (max-width:960px){.calc .shell{grid-template-columns:1fr}
+.calc .main{padding-left:0}
+.calc .mbar{display:flex;position:sticky;top:var(--calc-top,75px);z-index:6;background:#fff;border-bottom:1px solid var(--ink);padding:8px 16px;justify-content:space-between;align-items:center;gap:10px;font:500 11.5px "IBM Plex Mono",monospace}
+.calc .mbar .sbtn{padding:6px 12px}
+.calc .tabs{top:calc(var(--calc-top,75px) + 44px);gap:18px;margin-left:-24px;margin-right:-24px;padding:0 24px}
+.calc .side{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:12;background:#fff;max-height:86vh;height:86vh;border:0;border-top:1px solid var(--ink);padding:0 20px 40px;transform:translateY(102%);visibility:hidden;transition:transform .25s ease,visibility 0s .25s}
+.calc .side.open{transform:none;visibility:visible;transition:transform .25s ease}
+.calc .sheet-head{display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:#fff;padding:12px 0;border-bottom:1px solid var(--hair);z-index:2}
+.calc .backdrop.open{display:block;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:11}
+.calc .figs{grid-template-columns:1fr 1fr}
+.calc .fig:nth-child(3){border-left:0;padding-left:0}
+.calc .fig:nth-child(n+3){border-top:1px solid var(--hair)}
+.calc .gap{display:none}
+
+}
+.calc td.t{font-family:Manrope,system-ui,sans-serif}
+.calc .verdict{max-width:24ch}
+.calc .quiz{display:none;max-width:680px;padding:40px 0 80px}
+.calc.quizzing .quiz{display:block}
+.calc.quizzing .shell{display:none}
+.calc.quizzing .mbar{display:none!important}
+.calc .qprog{display:flex;gap:4px;margin-bottom:22px}
+.calc .qprog i{flex:1;height:3px;background:var(--hair)}
+.calc .qprog i.on{background:var(--ink)}
+.calc .quiz h2{font-size:clamp(30px,4.4vw,48px);margin:12px 0 22px;line-height:1}
+.calc .qin{display:flex;align-items:baseline;gap:12px;font:600 22px Archivo,system-ui,sans-serif;margin:0 0 18px;letter-spacing:-.02em}
+.calc .qin input{font:700 44px Archivo,system-ui,sans-serif;letter-spacing:-.03em;width:190px;border:0;border-bottom:2px solid var(--ink);padding:2px 0;border-radius:0}
+.calc .qin input:focus{outline:0;border-color:var(--accent)}
+.calc .qsold{font:600 22px Archivo,system-ui,sans-serif;letter-spacing:-.02em;margin-bottom:14px}
+.calc .qsold b{font-size:44px;font-weight:700;letter-spacing:-.03em}
+.calc .quiz .cchip{font-size:15px;padding:9px 16px}
+.calc .quiz .chipg{margin:0 0 14px}
+.calc .qnav{display:flex;gap:10px;margin-top:30px;align-items:center;flex-wrap:wrap}
+.calc .qskip,.calc .linkb{border:0;background:none;cursor:pointer;color:var(--grey);text-decoration:underline;text-underline-offset:3px;padding:0}
+.calc .qskip{font:500 13px Manrope,system-ui,sans-serif;margin-left:8px}
+.calc .sent{padding-top:26px}
+.calc .sent .rule{border-top:1px solid var(--ink);margin-bottom:12px}
+.calc .sline{font:600 clamp(20px,2.3vw,27px)/1.5 Archivo,system-ui,sans-serif;letter-spacing:-.02em;margin:14px 0 14px;max-width:34ch}
+.calc .sline input{font:inherit;letter-spacing:inherit;border:0;border-bottom:2px solid var(--accent);padding:0 1px;width:5ch;text-align:center;color:var(--ink);background:none;border-radius:0;-moz-appearance:textfield}
+.calc .sline input::-webkit-outer-spin-button,.calc .sline input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.calc .sline input:focus{outline:0;background:var(--band)}
+.calc .sch{font:inherit;letter-spacing:inherit;border:0;background:none;border-bottom:2px solid var(--accent);cursor:pointer;padding:0;color:var(--ink)}
+.calc .sch.off{color:#b9bac3;border-color:transparent;text-decoration:line-through}
+.calc .sent .wrapr{justify-content:space-between;align-items:center}
+.calc .answer{padding-top:0}
+.calc .answer>.rule{display:none}
+.calc .side.flash{box-shadow:inset 0 0 0 2px var(--accent)}
+.calc.quizzing .hero{padding:26px 0 20px}
+.calc.quizzing .hero h1{font-size:clamp(32px,4.6vw,56px);margin:10px 0 12px;max-width:none}
+.calc.quizzing .hero p{font-size:15px}
+.calc.quizzing .presets{margin-top:14px}
+.calc.quizzing .quiz{padding-top:28px}
+
+
+/* --calc-top is the sticky site header's height, measured by the component,
+   so the page's own sticky bars sit under it rather than behind it. */
+
+/* Site chrome interplay. The marketing header and footer wrap this page;
+   these keep its own links, buttons and headings on the prototype's
+   styles where globals.css would otherwise reach them. */
+.calc a:hover{color:inherit}
+.calc .btn{border-radius:0;gap:0}
+.calc .btn:hover{background:var(--accent);color:#fff}
+.calc h1,.calc h2,.calc h3{font-variation-settings:normal}
+.calc .foot{padding:20px 0 50px;color:var(--grey);font-size:12px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.calc .scen .sbtn{white-space:nowrap}
+
+/* Example plans. One row on desktop as in the prototype. Under 600px the
+   four pills cannot share a row without scrolling, so the label takes its
+   own line and the pills sit in a two-by-two grid of equal width, which
+   reads as one group. */
+@media (max-width:600px){
+  .calc .presets{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:20px}
+  .calc .presets>.mono{grid-column:1/-1;margin-bottom:2px}
+  .calc .presets .cpill{width:100%;text-align:center;padding:9px 10px}
+}
+
+/* Planner and pricing cards sit two across on phones. An odd card left over
+   on the last row stretches across both columns instead of leaving a gap. */
+@media (max-width:600px){
+  .calc .cards{grid-template-columns:1fr 1fr}
+  .calc .cards .card:nth-child(odd){border-left:0;padding-left:0}
+  .calc .cards .card:last-child:nth-child(odd){grid-column:1/-1}
+}
+
+/* Email me this plan. An action row straight under the four figures, the
+   point every reader reaches. The form opens in place. Optional, never a gate. */
+.calc .mailplan{padding:16px 0;border-bottom:1px solid var(--hair);font-size:13px}
+.calc .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.calc .actions .sbtn{padding:13px 16px}
+.calc .sent-line{font-family:Archivo,system-ui,sans-serif;font-weight:600;font-size:17px;letter-spacing:-.02em}
+.calc .mailform{display:flex;flex-wrap:wrap;gap:8px 10px;align-items:center}
+.calc .mailform input[type=email]{flex:1;min-width:220px;font:500 15px "IBM Plex Mono",ui-monospace,monospace;padding:12px 12px;border:1px solid var(--ink);border-radius:0;background:#fff;color:var(--ink)}
+.calc .mailform input[type=email]:focus{outline:1px solid var(--accent);border-color:var(--accent)}
+.calc .mailform label{display:flex;gap:6px;align-items:center;width:100%;font-size:12.5px;color:var(--grey)}
+.calc .mailform input[type=checkbox]{accent-color:var(--accent);margin:0}
+@media (max-width:600px){
+  .calc .actions .btn{flex:1;text-align:center}
+}

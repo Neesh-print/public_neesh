@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "test": "tsx --test src/lib/calculator/*.test.ts",
     "validate": "tsx scripts/validate.ts",
     "load": "tsx scripts/load.ts",
     "remove": "tsx scripts/remove.ts",
