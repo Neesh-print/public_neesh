@@ -50,7 +50,9 @@ export function planEmail(s: Plan, name: string | undefined | null, links: PlanE
   const lo = model(caseState(s, 0.6, -15)).profit, hi = model(caseState(s, 1.25, 10)).profit;
   const recs = recCandidates(s).slice(0, 3);
 
-  const subject = f.profit >= 0 ? `${title} makes ${fmt(f.profit)} if sales hit plan` : `${title} loses ${fmt(-f.profit)} even if sales hit plan`;
+  // Plain and transactional on purpose. A verdict-style subject read as a
+  // campaign headline and Gmail filed it under Promotions.
+  const subject = `Your plan for ${title === 'Your issue' ? 'your magazine' : title}`;
 
   // The reading.
   const read: string[] = [];
