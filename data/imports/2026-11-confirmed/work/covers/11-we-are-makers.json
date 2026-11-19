@@ -1,12 +1,12 @@
 {
   "key": "11-we-are-makers",
   "status": "ok",
-  "url": "https://cdn.shopify.com/s/files/1/0794/9946/0923/files/20.png?v=1792876155",
-  "page_url": "https://www.wearemakers.shop/products/edition-twenty",
-  "source_type": "publisher",
+  "url": "https://magculture.com/cdn/shop/files/WeAreMakers20.png",
+  "page_url": null,
+  "source_type": "stockist",
   "issue_label": "Edition Twenty",
-  "width": 1080,
-  "height": 1080,
-  "bytes": 85098,
+  "width": 1000,
+  "height": 1301,
+  "bytes": 148351,
   "errors": []
 }

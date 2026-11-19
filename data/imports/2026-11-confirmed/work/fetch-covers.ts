@@ -82,6 +82,22 @@ async function main() {
       console.log(`FAILED ${key}: ${errors.join(' | ')}`);
       continue;
     }
+    const ops = (cur as { cover_ops?: { crop?: string; trim?: number } } | undefined)?.cover_ops;
+    if (ops) {
+      const tmp = join(OUT, `${key}.tmp.jpg`);
+      writeFileSync(tmp, best.jpeg);
+      const args: string[] = [tmp];
+      if (ops.crop === 'left') args.push('-gravity', 'West', '-crop', '50%x100%+0+0', '+repage');
+      if (ops.crop === 'right') args.push('-gravity', 'East', '-crop', '50%x100%+0+0', '+repage');
+      if (ops.crop && ops.crop.startsWith('center:')) args.push('-gravity', 'Center', '-crop', ops.crop.slice(7) + '+0+0', '+repage');
+      if (ops.trim) args.push('-fuzz', `${ops.trim}%`, '-trim', '+repage');
+      args.push('-quality', '90', tmp);
+      execFileSync('convert', args);
+      best.jpeg = readFileSync(tmp);
+      const dims = execFileSync('identify', ['-format', '%w %h', tmp]).toString().trim().split(' ').map(Number);
+      best.width = dims[0]; best.height = dims[1]; best.low = Math.max(dims[0], dims[1]) < MIN_LONG_EDGE;
+      execFileSync('rm', [tmp]);
+    }
     writeFileSync(join(OUT, `${key}.jpg`), best.jpeg);
     writeFileSync(
       outJson,

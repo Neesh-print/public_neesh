@@ -1,12 +1,5 @@
 {
   "key": "02-synth-history",
-  "status": "ok",
-  "url": "https://cdn.shopify.com/s/files/1/0822/0062/5490/files/AB8312-synth-history-5-03_f6afce61-e587-48a4-8a1a-26402636b34a.jpg?v=1792373867",
-  "page_url": "https://antennebooks.com/products/synth-history-issue-five",
-  "source_type": "distributor",
-  "issue_label": "Issue 5",
-  "width": 2378,
-  "height": 1787,
-  "bytes": 122350,
-  "errors": []
+  "status": "none",
+  "reason": "no candidates"
 }

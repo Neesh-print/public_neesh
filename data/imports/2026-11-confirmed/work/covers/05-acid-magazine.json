@@ -1,12 +1,12 @@
 {
   "key": "05-acid-magazine",
   "status": "ok",
-  "url": "https://acid-magazine.com/wp-content/uploads/2026/09/Images-Site.jpg",
-  "page_url": "https://acid-magazine.com/product/acid-magazine-no8/",
-  "source_type": "publisher",
+  "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Screenshot2026-10-14at11.09.24.png?v=1791972582",
+  "page_url": null,
+  "source_type": "stockist",
   "issue_label": "No8",
-  "width": 800,
-  "height": 1000,
-  "bytes": 120523,
+  "width": 844,
+  "height": 1178,
+  "bytes": 170877,
   "errors": []
 }

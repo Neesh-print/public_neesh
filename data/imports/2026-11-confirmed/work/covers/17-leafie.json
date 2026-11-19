@@ -1,12 +1,12 @@
 {
   "key": "17-leafie",
-  "status": "ok",
+  "status": "low",
   "url": "https://www.leafie.co.uk/wp-content/uploads/2025/03/leafie-issue-2-front.jpg",
   "page_url": "https://www.leafie.co.uk/products/the-leafie-magazine-issue-02/",
   "source_type": "publisher",
   "issue_label": "Issue 02",
-  "width": 1000,
-  "height": 1000,
-  "bytes": 78908,
+  "width": 640,
+  "height": 917,
+  "bytes": 110780,
   "errors": []
 }

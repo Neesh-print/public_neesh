@@ -1,12 +1,5 @@
 {
   "key": "17-yolk",
-  "status": "ok",
-  "url": "https://cdn.prod.website-files.com/5ddafb5dd31f0f479368acfa/6a501a1233ee73cfddc3b36c_Untitled%20design.jpg",
-  "page_url": "https://www.yolkliterary.ca/shop",
-  "source_type": "publisher",
-  "issue_label": "Volume 5.2, Spring 2026",
-  "width": 1080,
-  "height": 1080,
-  "bytes": 216434,
-  "errors": []
+  "status": "none",
+  "reason": "no candidates"
 }

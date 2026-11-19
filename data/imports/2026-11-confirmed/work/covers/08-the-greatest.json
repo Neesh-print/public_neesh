@@ -1,12 +1,14 @@
 {
   "key": "08-the-greatest",
-  "status": "ok",
-  "url": "https://www.thegreatestmagazine.com/wp-content/uploads/2026/10/1.jpg",
+  "status": "low",
+  "url": "https://www.thegreatestmagazine.com/wp-content/uploads/2026/10/3.jpg",
   "page_url": "https://www.thegreatestmagazine.com/product/the-greatest-30-the-evernew-issue/",
   "source_type": "publisher",
-  "issue_label": "Issue 30 – The Evernew Issue (cover 1 of 10, Vasko shot by Hein Gijsbers)",
-  "width": 1024,
-  "height": 819,
-  "bytes": 90249,
-  "errors": []
+  "issue_label": "Issue 30 – The Evernew Issue (alternate cover)",
+  "width": 573,
+  "height": 749,
+  "bytes": 128104,
+  "errors": [
+    "https://www.thegreatestmagazine.com/wp-content/uploads/2026/10/1.jpg: Command failed: curl -sSL --fail --max-time 60 -A Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36 https://www.thegreatestmagazine.com/wp-content/uploads/2026/10/1.jpg\ncurl: (35) Recv failure: Connection reset by peer\n"
+  ]
 }
