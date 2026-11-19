@@ -85,12 +85,14 @@ test('plan email carries the four figures, the moves and the links', async () =>
   const { planEmail, emailText } = await import('./email');
   const m = planEmail(DEFAULTS.indie, 'Indie biannual', { shareUrl: 'https://neesh.art/calculator?s=abcdefghij', claimUrl: 'https://neesh.art/auth/publisher' });
   assert.equal(m.subject, 'Your plan for Indie biannual');
-  for (const line of ['**Profit** $1,746', '**Confirmed only** -$10,301', '**Cash needed** $12,124', '**Break-even** 942 copies', 'lands between -$2,971 and $4,713.', '1. Raise your cover by $2, to $27. Worth +$1,091.', '[Open and edit your plan](https://neesh.art/calculator?s=abcdefghij)', '[Claim your title on Neesh for free](https://neesh.art/auth/publisher).']) {
+  for (const line of ['**Profit** $1,746', '**Confirmed only** -$10,301', '**Cash needed** $12,124', '**Break-even** 942 copies', 'lands between -$2,971 and $4,713.', '1. Raise your cover by $2, to $27. Worth +$1,091.', '\nhttps://neesh.art/calculator?s=abcdefghij\n', '\nhttps://neesh.art/auth/publisher\n']) {
     assert.ok(m.text.includes(line), line);
   }
+  assert.equal(m.links['https://neesh.art/calculator?s=abcdefghij'], 'Open and edit your plan');
+  assert.equal(m.links['https://neesh.art/auth/publisher'], 'Claim your title on Neesh for free');
   assert.ok(!m.text.includes(verdict(DEFAULTS.indie)), 'no verdict sentence in the tightened email');
   assert.ok(!m.text.includes('\u2014'), 'no em dashes');
-  assert.ok(emailText(m.text).includes('Open and edit your plan, https://neesh.art/calculator?s=abcdefghij'));
+  assert.ok(!emailText(m.text).includes('**'));
   const unnamed = planEmail(DEFAULTS.zine, undefined, { shareUrl: 'https://x/y', claimUrl: 'https://x/c' });
   assert.equal(unnamed.subject, 'Your plan for your magazine');
 });

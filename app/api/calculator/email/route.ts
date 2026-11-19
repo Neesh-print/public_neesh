@@ -29,7 +29,7 @@ const bodySchema = z.object({
     .object({ source: utm, medium: utm, campaign: utm, term: utm, content: utm })
     .partial()
     .optional(),
-  firstTouch: z.record(z.unknown()).optional(),
+  firstTouch: z.record(z.string(), z.unknown()).optional(),
 });
 
 export async function POST(req: NextRequest) {
@@ -96,6 +96,8 @@ export async function POST(req: NextRequest) {
   }
 
   const mail = planEmail(plan, name, { shareUrl, claimUrl: canonical('/auth/publisher') });
-  const sent = await sendEmail({ to: email, subject: mail.subject, text: emailText(mail.text), html: emailHtml(mail.text) });
+  // A reader iterating on a plan may email it a few times; allow more than
+  // the default three a day per address, still bounded.
+  const sent = await sendEmail({ to: email, subject: mail.subject, text: emailText(mail.text), html: emailHtml(mail.text, mail.links), throttle: 10 });
   return NextResponse.json({ ok: sent, sent });
 }

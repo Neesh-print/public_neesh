@@ -29,7 +29,14 @@ export interface PlanEmailLinks {
   claimUrl: string;
 }
 
-export function planEmail(s: Plan, name: string | undefined | null, links: PlanEmailLinks): { subject: string; text: string } {
+export interface PlanEmail {
+  subject: string;
+  text: string;
+  /** URL to anchor label, for emailHtml. The text carries the bare URLs. */
+  links: Record<string, string>;
+}
+
+export function planEmail(s: Plan, name: string | undefined | null, links: PlanEmailLinks): PlanEmail {
   const f = planFigures(s);
   const title = name && name.trim() ? name.trim() : 'your magazine';
   const lo = model(caseState(s, 0.6, -15)).profit, hi = model(caseState(s, 1.25, 10)).profit;
@@ -53,15 +60,19 @@ export function planEmail(s: Plan, name: string | undefined | null, links: PlanE
     `**Break-even** ${f.breakEvenCopies === null ? 'Never' : `${fmtN(f.breakEvenCopies)} copies`}\n\n` +
     `Between a slow launch and a strong one, the issue lands between ${fmt(lo)} and ${fmt(hi)}.\n\n` +
     `**What to do first**\n\n${moves}\n\n` +
-    `[Open and edit your plan](${links.shareUrl})\n\n` +
+    `${links.shareUrl}\n\n` +
     `Neesh is where shops, cafés, hotels and studios order independent magazines direct from the publisher. You set the wholesale price and the minimums, they pay at checkout, and we take 10% of the order.\n\n` +
-    `[Claim your title on Neesh for free](${links.claimUrl}).\n\n` +
+    `${links.claimUrl}\n\n` +
     `Questions? Just reply to this email.`;
 
-  return { subject, text };
+  return {
+    subject,
+    text,
+    links: { [links.shareUrl]: 'Open and edit your plan', [links.claimUrl]: 'Claim your title on Neesh for free' },
+  };
 }
 
-/** Plain-text rendering: bold markers dropped, links as "text, url". */
+/** Plain-text rendering: bold markers dropped. */
 export function emailText(text: string): string {
-  return text.replace(/\*\*/g, '').replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '$1, $2');
+  return text.replace(/\*\*/g, '');
 }
