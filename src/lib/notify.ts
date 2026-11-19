@@ -43,11 +43,19 @@ export async function notify(subject: string, text: string): Promise<void> {
   await sendEmail({ to, subject, text });
 }
 
-// Minimal markdown-ish to HTML for email bodies: **bold** and paragraphs.
+// Minimal markdown-ish to HTML for email bodies: **bold**, [text](url)
+// links and paragraphs.
 export function emailHtml(text: string): string {
   const paragraphs = text
     .split(/\n\n+/)
-    .map((p) => p.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>'))
+    .map((p) =>
+      p
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+        .replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g, '<a href="$2" style="color:#7d3bbf">$1</a>')
+        .replace(/\n/g, '<br>')
+    )
     .map((p) => `<p style="margin:0 0 1em">${p}</p>`)
     .join('');
   return `<div style="font-family:Inter,system-ui,sans-serif;font-size:15px;color:#000;line-height:1.55;max-width:36em">${paragraphs}</div>`;

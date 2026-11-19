@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
-import { planEmail, planFigures } from '@/lib/calculator/email';
+import { emailText, planEmail, planFigures } from '@/lib/calculator/email';
 import { BASE, type Plan } from '@/lib/calculator/model';
-import { PlanSchema, sharePath } from '@/lib/calculator/share';
+import { PlanSchema } from '@/lib/calculator/share';
+import { longShareUrl, newShareId, shortShareUrl } from '@/lib/calculator/server';
 import { emailHtml, sendEmail } from '@/lib/notify';
 import { canonical } from '@/lib/seo';
 import { clientIp, ipHash, isBot } from '@/lib/signals';
@@ -46,12 +47,17 @@ export async function POST(req: NextRequest) {
   const { email, name, newsletter = false } = parsed.data;
   const plan = { ...BASE, ...parsed.data.plan } as Plan;
   const figures = planFigures(plan);
-  const shareUrl = canonical(sharePath(plan, name));
+  // The short link points at the stored row. If storing fails the email
+  // still goes out, with the plan packed into the link instead.
+  const shareId = newShareId();
+  let shareUrl = shortShareUrl(shareId);
 
   // Store first, so a failed send still leaves the request on record.
   try {
     const supabase = serviceClient();
     const { error } = await supabase.from('calculator_plans').insert({
+      kind: 'email',
+      share_id: shareId,
       email,
       plan_name: name ?? null,
       plan,
@@ -71,7 +77,10 @@ export async function POST(req: NextRequest) {
       ip_hash: ipHash(clientIp(req.headers)),
       user_agent: req.headers.get('user-agent')?.slice(0, 300) ?? null,
     });
-    if (error) console.error('calculator_plans insert failed', error.message);
+    if (error) {
+      console.error('calculator_plans insert failed', error.message);
+      shareUrl = longShareUrl(plan, name);
+    }
 
     if (newsletter) {
       // Same list as the newsletter form. A unique-email conflict means
@@ -83,9 +92,10 @@ export async function POST(req: NextRequest) {
     }
   } catch (err) {
     console.error('calculator email: store failed', err);
+    shareUrl = longShareUrl(plan, name);
   }
 
-  const mail = planEmail(plan, name, shareUrl);
-  const sent = await sendEmail({ to: email, subject: mail.subject, text: mail.text.replace(/\*\*/g, ''), html: emailHtml(mail.text) });
+  const mail = planEmail(plan, name, { shareUrl, claimUrl: canonical('/auth/publisher') });
+  const sent = await sendEmail({ to: email, subject: mail.subject, text: emailText(mail.text), html: emailHtml(mail.text) });
   return NextResponse.json({ ok: sent, sent });
 }

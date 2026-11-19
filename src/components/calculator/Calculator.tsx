@@ -10,7 +10,7 @@ import {
   perCopy, planSummary, quoteFit, r10, recCandidates, securedState, verdict as verdictFor, youPart,
   type ChannelKey, type FundingKey, type NumericPlanKey, type Plan, type PresetKey, type QuizState,
 } from '@/lib/calculator/model';
-import { decodePlan, shareUrl } from '@/lib/calculator/share';
+import { decodePlan, parsePlan, shareUrl, type SharedPlan } from '@/lib/calculator/share';
 import { readFirstTouch } from '@/lib/first-touch';
 import {
   trackCalculatorClaimClick, trackCalculatorExampleOpen, trackCalculatorLinkCopied, trackCalculatorPlanEmailed,
@@ -164,13 +164,35 @@ export function Calculator() {
 
   /* ---- mount: shared link, stored plan, quiz state, hash ---- */
   useEffect(() => {
-    let s: Plan | null = null, name: string | null = null, pr: PresetKey | null = 'indie', quiz = false;
+    let cancelled = false;
     const params = new URLSearchParams(window.location.search);
     (['source', 'medium', 'campaign', 'term', 'content'] as const).forEach((k) => {
       const v = params.get(`utm_${k}`);
       if (v) utmRef.current[k] = v.slice(0, 200);
     });
-    const shared = decodePlan(params.get('p'));
+    // A short link (?s=) fetches the stored plan; a long link (?p=) carries it.
+    const short = params.get('s');
+    const fetchShort = async (): Promise<SharedPlan | null> => {
+      if (!short) return null;
+      try {
+        const res = await fetch(`/api/calculator/plan?s=${encodeURIComponent(short)}`);
+        if (!res.ok) return null;
+        const data = (await res.json()) as { S?: unknown; name?: string | null };
+        return parsePlan(data.S, data.name);
+      } catch {
+        return null;
+      }
+    };
+    fetchShort().then((fromShort) => {
+      if (cancelled) return;
+      init(fromShort ?? decodePlan(params.get('p')));
+    });
+    return () => { cancelled = true; };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function init(shared: SharedPlan | null) {
+    let s: Plan | null = null, name: string | null = null, pr: PresetKey | null = 'indie', quiz = false;
     if (shared) {
       s = shared.S; name = shared.name || 'Your plan'; pr = null;
       try { localStorage.setItem(QK, '1'); } catch { /* storage blocked */ }
@@ -189,7 +211,7 @@ export function Calculator() {
     setTab(isTab(h) ? h : 'do');
     if (quiz) { setQuizzing(true); setPreset(null); }
     setReady(true);
-  }, []);
+  }
 
   /* ---- persist the current plan ---- */
   useEffect(() => {
@@ -407,8 +429,22 @@ export function Calculator() {
       toast('Paste the JSON this calculator exported');
     }
   }
+  // Short link from the server when it answers, the long self-contained
+  // link otherwise.
+  async function makeShareUrl(): Promise<string> {
+    try {
+      const { stash: _stash, ...plan } = S;
+      void _stash;
+      const res = await fetch('/api/calculator/share', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ plan, name: curName }) });
+      if (res.ok) {
+        const data = (await res.json()) as { url?: string };
+        if (data.url) return data.url;
+      }
+    } catch { /* fall through */ }
+    return shareUrl(S, curName);
+  }
   async function copyLink() {
-    const url = shareUrl(S, curName);
+    const url = await makeShareUrl();
     try {
       await navigator.clipboard.writeText(url);
       toast('Link copied');

@@ -80,6 +80,13 @@ export function decodePlan(p: string | null | undefined): SharedPlan | null {
   }
 }
 
+/** A plan object from the server (short link route), validated the same way. */
+export function parsePlan(obj: unknown, name?: string | null): SharedPlan | null {
+  const parsed = PlanSchema.safeParse(obj);
+  if (!parsed.success) return null;
+  return { S: { ...BASE, ...parsed.data } as Plan, name: name ?? undefined };
+}
+
 /** The page path with the plan in it, for links built on the server. */
 export function sharePath(S: Plan, name?: string): string {
   return `/calculator?p=${encodePlan(S, name)}`;
