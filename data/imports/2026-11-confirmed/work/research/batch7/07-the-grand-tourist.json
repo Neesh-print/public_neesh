@@ -1,0 +1,58 @@
+{
+  "input_title": "The Grand Tourist",
+  "official_name": "The Grand Tourist",
+  "publisher_name": "Design Media LLC",
+  "publisher_website": "https://thegrandtourist.net/",
+  "country": "US",
+  "city": null,
+  "frequency": "biannual",
+  "cover_price": 48.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": 416,
+  "subscribe_url": "https://the-grand-tourist-2.myshopify.com/",
+  "latest_issue_label": "Issue 03 (Fall 2026): Built to Last",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://the-grand-tourist-2.myshopify.com/products/issue-03-rome",
+  "independent": "yes",
+  "independence_evidence": "Site copyright and privacy policy name the owner as Design Media LLC, the small company behind the podcast and magazine founded by its host; no media-group parent is named. Several cover editions carry brand or partner names (Boucheron, Poliform, Formafantasma), which suggests partnership funding.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently owned US print title with hardcover Issue 02 (Spring 2026) and Issue 03 (Fall 2026) on sale from the publisher's own shop.",
+  "what_it_is": "A hardcover, linen-bound magazine that grew out of a design and luxury-lifestyle interview podcast, with around 400 pages per volume of long interviews, commissioned photography and travel dispatches covering interiors, architecture, fashion, jewellery, art, food and hotels. Each issue appears in several cover editions, often tied to a featured designer or brand, and the Fall 2026 volume includes conversations with Dries Van Noten, Smiljan Radić Clarke and Dominique Crenn. It is aimed at affluent readers and design professionals who follow the high end of interiors, craft and travel and want a collectible book-like object rather than a newsstand glossy.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0709/9678/7274/files/TGTI3SHOPIFYCROPS7.jpg?v=1791848597",
+      "source_type": "publisher",
+      "page_url": "https://the-grand-tourist-2.myshopify.com/products/issue-03-rome",
+      "issue_label": "Issue 03 (Rome cover)",
+      "width": 1500,
+      "height": 1200,
+      "notes": "Publisher's product photo of the green linen hardcover (Rome / 'The Architecture of Memory' cover) lying flat on a pale grey background with a soft shadow; landscape framing, would need cropping. One of four cover editions; no flat artwork file found."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0709/9678/7274/files/TGTI3SHOPIFYCROPS5.jpg?v=1791843850",
+      "source_type": "publisher",
+      "page_url": "https://the-grand-tourist-2.myshopify.com/products/issue-03-dries-van-noten",
+      "issue_label": "Issue 03 (Dries Van Noten cover)",
+      "width": 1500,
+      "height": 1200,
+      "notes": "Same style of product photo for the Dries Van Noten cover edition; not a flat image."
+    }
+  ],
+  "evidence_urls": [
+    "https://thegrandtourist.net/",
+    "https://thegrandtourist.net/about/",
+    "https://thegrandtourist.net/contact/",
+    "https://thegrandtourist.net/privacy-policy/",
+    "https://the-grand-tourist-2.myshopify.com/products.json?limit=250",
+    "https://the-grand-tourist-2.myshopify.com/products/issue-03-rome"
+  ],
+  "uncertainties": "The publisher's city is not stated anywhere on the site (US title, so not required). Issue 03's exact release date is not given; the four Issue 03 products were published in the shop on 2026-10-13 and the issue is described as the first fall print issue, so October 2026 is inferred. Trim size is not stated. Four different Issue 03 covers exist; the Rome cover is recorded first only because it is listed first. All available cover images are styled product photographs rather than flat scans."
+}

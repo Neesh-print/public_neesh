@@ -1,0 +1,76 @@
+{
+  "input_title": "Badlon Magazine",
+  "official_name": "Badlon",
+  "publisher_name": "Badlon Magazine",
+  "publisher_website": "https://www.badlonmagazine.com/",
+  "country": "FR",
+  "city": null,
+  "frequency": "annual",
+  "cover_price": 50.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": 510,
+  "subscribe_url": "https://www.badlonmagazine.com/shop",
+  "latest_issue_label": "6th Issue — Summer 2026 (N°6, 'Other Worlds')",
+  "latest_issue_date": "2026-06-22",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.badlonmagazine.com/issues/6th-issue----summer-2026",
+  "independent": "yes",
+  "independence_evidence": "About page: 'Badlon is an independent French publication'; site is self-published under the Badlon Magazine name, distributed by KD Presse, with no media group named anywhere.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent annual print title whose 6th issue ('Other Worlds', 510 pages) was released 22 June 2026 and is on sale.",
+  "what_it_is": "Badlon is a thick, annual print almanac of fashion photography, art and visual essays, each edition released with several covers by different young artists. Issue 6, 'Other Worlds', runs to 510 pages of fashion stories, photography and texts around escapism, subcultures and imagined inner worlds. It is aimed at collectors of fashion and photography books rather than readers looking for news or regular features.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.prod.website-files.com/6075915894bb7ba198fb5f2e/6a366ce8753b8474e013737a_Cover%201.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.badlonmagazine.com/print",
+      "issue_label": "6th Issue — Summer 2026 (Cover 1)",
+      "width": 2312,
+      "height": 2696,
+      "notes": "Photographic cover (model in sheer dress, 'other worlds' in pink script) shown front-on as a render on a white background with a drop shadow and wide margins; needs cropping. Measured with identify."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/Badlon6Cover1fb.jpg?v=1782381531",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/badlon-n-6",
+      "issue_label": "Badlon N°6",
+      "width": 960,
+      "height": 1200,
+      "notes": "Same cover 1 on KD Presse, front-on with slight shadow on white; below 1000 px."
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/6075915894bb7ba198fb5f2e/6a366ceaf139279efd785c3d_Cover%202.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.badlonmagazine.com/print",
+      "issue_label": "6th Issue — Summer 2026 (Cover 2, artist cover)",
+      "width": 2312,
+      "height": 2696,
+      "notes": "Alternative artist cover (Evgeny Muzalevsky painting on a cream ground), also a front-on render with shadow and margins."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.badlonmagazine.com/",
+    "https://www.badlonmagazine.com/about",
+    "https://www.badlonmagazine.com/print",
+    "https://www.badlonmagazine.com/shop",
+    "https://www.badlonmagazine.com/issues/6th-issue----summer-2026",
+    "https://www.badlonmagazine.com/contact-us",
+    "https://kdpresse.com/products.json?limit=250",
+    "https://www.paris.fr/evenements/soiree-de-lancement-badlon-magazine-n-6-other-worlds-113524"
+  ],
+  "uncertainties": [
+    "City not established: the publisher's site gives only office@badlonmagazine.com and no imprint or address. The issue 6 launch was held in Paris (Lafayette Anticipations, 19 June 2026) and the about page calls it a French publication, but no page states the city where it is made.",
+    "Price: the publisher's own issue page shows '50$ 3700₽' (US dollars and roubles) with a Buy button that goes to KD Presse, where N°6 is EUR 45 (special edition EUR 52). Recorded the publisher's stated 50 USD; the EUR 45 KD Presse price may be the more realistic retail figure.",
+    "Release date 22 June 2026 and page count (510) come from the KD Presse listing text, which reads as supplied by the publisher; the publisher's own page says only 'Summer 2026'.",
+    "Cadence is one issue a year (Summer 2023, Spring 2024, Spring 2025, Summer 2026), matching the publisher's statement 'Print version is released annually'.",
+    "No flat cover file was found; both publisher cover images are front-on renders with a drop shadow on white and would need cropping.",
+    "Credits on the issue page list a largely Russian-named team and prices in roubles, which sits oddly with the 'French publication' description; recorded as the publisher states it."
+  ]
+}

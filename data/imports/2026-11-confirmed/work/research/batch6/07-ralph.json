@@ -1,0 +1,55 @@
+{
+  "input_title": "Ralph",
+  "official_name": "Ralph",
+  "publisher_name": "Ralph Creative Ltd",
+  "publisher_website": "https://ralph.world/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "quarterly",
+  "cover_price": 10.0,
+  "currency": "GBP",
+  "trim_size": "195 x 270 mm",
+  "page_count": 124,
+  "subscribe_url": "https://ralph.world/shop",
+  "latest_issue_label": "Ralph Mag #9 (Autumn 2026)",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://ralph.world/shop",
+  "independent": "yes",
+  "independence_evidence": "Site footer '© Ralph Creative Ltd, 2026' with London address 2nd Floor 27-33 Bethnal Green Rd, E1 6LA; Ralph is an independent creative studio/agency that publishes the magazine itself (https://ralph.world/shop). Not part of a media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently published quarterly with nine issues since autumn 2024, the latest dated Autumn 2026.",
+  "what_it_is": "A glossy quarterly about pop culture and entertainment, with long interviews with comedians, musicians, TV people and animators alongside photo stories and humour pieces. It is deliberately playful and broad rather than niche. It suits readers who want a fun, mainstream-leaning entertainment magazine in print.",
+  "suggested_primary_tag": "lifestyle",
+  "suggested_secondary_tag": "film",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0894/1754/8119/files/Ralph_Magazine_No_9_Design_Final.jpg",
+      "source_type": "publisher",
+      "page_url": "https://ralph.world/shop",
+      "issue_label": "#9 Autumn 2026",
+      "width": 2303,
+      "height": 3189,
+      "notes": "Flat front cover served from the publisher's Shopify CDN."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Ralph06_7487d74b-79a6-41ba-a6ef-0828d1357302.jpg",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/ralph-9",
+      "issue_label": "#9",
+      "width": 1000,
+      "height": 1389,
+      "notes": "magCulture listing image."
+    }
+  ],
+  "evidence_urls": [
+    "https://ralph.world/shop",
+    "https://ralph.world/magazine",
+    "https://magculture.com/products/ralph-9"
+  ],
+  "uncertainties": "Publisher is a creative agency, but the magazine is its own editorial product rather than a client or brand magazine. Trim size and page count are from the magCulture listing. The exact October 2026 release date is not stated by the publisher (magCulture listed it on 2026-10-23)."
+}

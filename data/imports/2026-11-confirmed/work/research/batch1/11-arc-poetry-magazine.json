@@ -1,0 +1,60 @@
+{
+  "input_title": "Arc Poetry Magazine",
+  "official_name": "Arc Poetry Magazine",
+  "publisher_name": "Arc Poetry Society",
+  "publisher_website": "https://arcpoetry.ca/",
+  "country": "CA",
+  "city": "Ottawa",
+  "frequency": "triannual",
+  "cover_price": 17.95,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://arc-poetry-magazine.myshopify.com/products/subscriptions-to-arc",
+  "latest_issue_label": "Arc 110 (Summer 2026)",
+  "latest_issue_date": "2026-08-26",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://arcpoetry.ca/editorials/magazine/arc-110/",
+  "independent": "yes",
+  "independence_evidence": "Published by the Arc Poetry Society, a non-profit with a volunteer board, funded by the Canada Council for the Arts, Ontario Arts Council, City of Ottawa and donors (about page).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Non-profit Canadian poetry magazine publishing three print issues a year, most recently Arc 110 (Summer 2026).",
+  "what_it_is": "Arc Poetry Magazine is a Canadian literary magazine devoted to poetry: new poems, translations, reviews of poetry collections, interviews and 'How Poems Work' close-reading columns, with visual art by a featured artist inside and on the cover. Each issue also carries the results of one of its contests, such as the Poem of the Year or the Diana Brebner Prize. It is read by poets, students and academics and anyone following contemporary Canadian poetry.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": null,
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0574/1346/8348/files/Arc110FrontCoverFINAL_Page_1.jpg?v=1787677074",
+      "source_type": "publisher",
+      "page_url": "https://arc-poetry-magazine.myshopify.com/products/single-issue-purchase-arc-110",
+      "issue_label": "Arc 110",
+      "width": 2912,
+      "height": 3808,
+      "notes": "Publisher shop front-cover file (filename 'FrontCoverFINAL'); not viewed but dimensions and name indicate a flat print-ready cover."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0574/1346/8348/files/Arc109FrontCover_Page_1.jpg?v=1777039885",
+      "source_type": "publisher",
+      "page_url": "https://arc-poetry-magazine.myshopify.com/products/single-issue-purchase-arc-109",
+      "issue_label": "Arc 109 (previous issue)",
+      "width": 1950,
+      "height": 2550,
+      "notes": "Previous issue, for reference only."
+    }
+  ],
+  "evidence_urls": [
+    "https://arcpoetry.ca/editorials/magazine/arc-109/",
+    "https://arcpoetry.ca/editorials/magazine/arc-110/",
+    "https://arcpoetry.ca/about-arc/",
+    "https://arc-poetry-magazine.myshopify.com/products.json?limit=250"
+  ],
+  "uncertainties": [
+    "Latest issue date is the shop listing date for Arc 110 (26 August 2026); the issue is labelled Summer 2026.",
+    "Frequency derived from cadence: Arc 106 March 2025, 107 July 2025, 108 November 2025, 109 April 2026, 110 August 2026 (three a year).",
+    "Page count and trim size not stated on the publisher's pages read."
+  ]
+}

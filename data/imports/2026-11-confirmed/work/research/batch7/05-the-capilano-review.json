@@ -1,0 +1,58 @@
+{
+  "input_title": "The Capilano Review",
+  "official_name": "The Capilano Review",
+  "publisher_name": "The Capilano Review Contemporary Arts Society",
+  "publisher_website": "https://www.thecapilanoreview.com/",
+  "country": "CA",
+  "city": "Vancouver",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://thecapilanoreview.com/subscribe/",
+  "latest_issue_label": "Issue 4.7 (Fall 2026): Carcerality and Care",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://thecapilanoreview.com/issues/fall-2026-carcerality-and-care/",
+  "independent": "yes",
+  "independence_evidence": "Masthead names the publisher as The Capilano Review Contemporary Arts Society, a non-profit with its own board; the about page says it has been an independent publication since leaving Capilano College in 2015.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent non-profit Vancouver literary and art journal publishing two print issues a year, with Spring 2025 through Fall 2026 issues on sale in its own shop.",
+  "what_it_is": "A Vancouver journal of experimental writing and contemporary art, running since 1972, that pairs poetry, fiction and essays with full-colour artist projects, interviews and reviews. Issues are often themed or guest-edited (recent ones on speculative feminisms, dedications to the poet Roy Miki, and prison abolition) and draw on West Coast and Indigenous writers alongside international contributors. It is for readers of avant-garde Canadian literature and visual art who want a print journal with a strong art section.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://thecapilanoreview.com/app/uploads/2026/09/Issue-4.7-Cover-framed.jpg",
+      "source_type": "publisher",
+      "page_url": "https://thecapilanoreview.com/issues/fall-2026-carcerality-and-care/",
+      "issue_label": "Issue 4.7",
+      "width": 1562,
+      "height": 2208,
+      "notes": "Flat front cover (artwork by Angelee Porter) from the publisher's issue page, full-size original."
+    },
+    {
+      "url": "https://thecapilanoreview.com/app/uploads/2026/09/Cover-image-square-scaled.jpg",
+      "source_type": "publisher",
+      "page_url": "https://thecapilanoreview.com/product/issue-4-67-carcerality-and-care-print/",
+      "issue_label": "Issue 4.7",
+      "width": 2560,
+      "height": 2560,
+      "notes": "Shop image: cover placed on a pink square background, not flat."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.thecapilanoreview.com/",
+    "https://thecapilanoreview.com/about/",
+    "https://thecapilanoreview.com/issues/",
+    "https://thecapilanoreview.com/issues/fall-2026-carcerality-and-care/",
+    "https://thecapilanoreview.com/product/issue-4-67-carcerality-and-care-print/",
+    "https://www.thecapilanoreview.com/wp-json/wc/store/v1/products?per_page=20&orderby=date&order=desc"
+  ],
+  "uncertainties": "The Issue 4.7 page still says 'Pre-order a single copy', although the print product is marked in stock, the homepage calls it the current issue and the publisher states issues come out in April and September; the September 2026 date is based on that schedule rather than a stated ship date. If 4.7 has not yet shipped, Issue 4.6 (Spring 2026) is the latest out. Trim size and page count are not stated on the site."
+}

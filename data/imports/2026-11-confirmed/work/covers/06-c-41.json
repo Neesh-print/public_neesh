@@ -1,0 +1,8 @@
+{
+  "key": "06-c-41",
+  "status": "failed",
+  "errors": [
+    "https://www.c41magazine.com/wp-content/uploads/2026/06/C41_19_Ray-Ban_webproduct.jpg: Command failed: curl -sSL --fail --max-time 60 -A Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36 https://www.c41magazine.com/wp-content/uploads/2026/06/C41_19_Ray-Ban_webproduct.jpg\ncurl: (35) Recv failure: Connection reset by peer\n",
+    "https://www.c41magazine.com/wp-content/uploads/2026/06/cover_rb2_webproduct.jpg: Command failed: curl -sSL --fail --max-time 60 -A Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36 https://www.c41magazine.com/wp-content/uploads/2026/06/cover_rb2_webproduct.jpg\ncurl: (35) Recv failure: Connection reset by peer\n"
+  ]
+}

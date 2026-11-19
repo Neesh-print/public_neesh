@@ -1,0 +1,61 @@
+{
+  "input_title": "Art Review",
+  "official_name": "ArtReview",
+  "publisher_name": "ArtReview Ltd",
+  "publisher_website": "https://artreview.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "monthly",
+  "cover_price": 8.5,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.artreview.com/",
+  "latest_issue_label": "October 2026 (Vol 78 Issue 6)",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://shop.artreview.com/products/artreview-october-2026-the-philanthropy-report",
+  "independent": "no",
+  "independence_evidence": "ArtReview's own about page states 'ArtReview Ltd is part of Meta Media Group', the Hong Kong-listed media group (formerly Modern Media Holdings, HKEX stock code 72) whose titles include Modern Weekly, Nowness, LEAP and Numéro China; press reports confirm Modern Media acquired a majority stake in 2019.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "no",
+  "qualifies_reason": "Fails the independence test: ArtReview Ltd is majority-owned by Meta Media Holdings, a stock-exchange-listed media group with many titles.",
+  "what_it_is": "ArtReview is a long-running international contemporary art magazine from London, publishing criticism, reviews, opinion columns, artist interviews and commissioned artist projects, with special annual issues such as Future Greats and the Power 100 ranking. It appears about seven to nine times a year (some issues cover two months) alongside the quarterly ArtReview Asia and a Chinese edition, and often ships with a themed supplement. It is read by curators, collectors, artists and art students as well as general readers of contemporary art.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0432/1833/files/ArtReview-Magazine-October-2026-Philanthropy.jpg?v=1791295799",
+      "source_type": "publisher",
+      "page_url": "https://shop.artreview.com/products/artreview-october-2026-the-philanthropy-report",
+      "issue_label": "October 2026 (Vol 78 Issue 6)",
+      "width": 2849,
+      "height": 2940,
+      "notes": "Publisher shop image shows the October 2026 cover (Tarek Atoui) overlapping its Philanthropy supplement; a composite, not a single flat cover."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/IMG_5247.jpg?v=1791900881",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/art-review-vol-78-issue-6",
+      "issue_label": "Vol 78 Issue 6",
+      "width": 1094,
+      "height": 1419,
+      "notes": "KD Presse image, filename suggests a phone photo; not viewed."
+    }
+  ],
+  "evidence_urls": [
+    "https://artreview.com/about/",
+    "https://artreview.com/contact/",
+    "https://shop.artreview.com/products.json?limit=250",
+    "https://kdpresse.com/products.json?limit=250",
+    "https://www.artdependence.com/articles/chinese-media-company-modern-media-holdings-ltd-acquires-major-stake-in-artreview"
+  ],
+  "uncertainties": [
+    "The about page says seven issues a year while the shop shows nine print issues in 2026 (Jan/Feb, Mar, Apr/May, Summer, Sep, Oct, plus others); 'monthly' is the closest allowed value but the real cadence is roughly nine a year with combined issues.",
+    "A November 2026 issue may have appeared after the shop listing was read (the shop's newest print issue on 17 November 2026 was October 2026).",
+    "Exact ownership percentage held by Meta Media not confirmed on the publisher's site, which only says 'part of Meta Media Group'."
+  ]
+}

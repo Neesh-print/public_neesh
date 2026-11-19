@@ -1,0 +1,48 @@
+{
+  "input_title": "Viper",
+  "official_name": "Viper",
+  "publisher_name": "Viper Magazine",
+  "publisher_website": "https://www.vipermag.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "irregular",
+  "cover_price": 22.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": 100,
+  "subscribe_url": "https://www.vipermag.com/shop/",
+  "latest_issue_label": "Winter 2024 (W24)",
+  "latest_issue_date": "2024-12-23",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.vipermag.com/2024/12/23/latest-issue/",
+  "independent": "yes",
+  "independence_evidence": "Founder-run London hip hop title describing itself as 'independent journalism' with its own WooCommerce shop and no parent company named (https://www.vipermag.com/shop/, https://www.vipermag.com/product/lil-tjay-viper-magazine-print/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "no",
+  "qualifies": "no",
+  "qualifies_reason": "The most recent print issue is Winter 2024 (on sale 23 December 2024); no print issue dated 2025 or later was found, only online features.",
+  "what_it_is": "Viper is a London-based hip hop and R&B magazine covering UK, US and Caribbean artists through long interviews, cover shoots, new music and style pieces. Print issues appear occasionally as 100-page editions with several collectible covers (the Winter 2024 issue has Lil Tjay, Spice, Skillibeng, SadBoi and Lila Iké), alongside a continuously updated website. It is for rap and dancehall fans who want in-depth artist features.",
+  "suggested_primary_tag": "music",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.vipermag.com/wp-content/uploads/2026/01/LILTJAY_COVER.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.vipermag.com/product/lil-tjay-viper-magazine-print/",
+      "issue_label": "Winter 2024 (Lil Tjay cover)",
+      "width": 1080,
+      "height": 1350,
+      "notes": "Flat front cover artwork, Lil Tjay edition; 4:5 crop at 1080px wide, so slightly under the 1000px-long-edge target only on width."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.vipermag.com/",
+    "https://www.vipermag.com/shop/",
+    "https://www.vipermag.com/shop/?orderby=date",
+    "https://www.vipermag.com/2024/12/23/latest-issue/",
+    "https://www.vipermag.com/product/lil-tjay-viper-magazine-print/"
+  ],
+  "uncertainties": "Print cadence is irregular (AW22, SS23, AW23, W24). The homepage in November 2026 still presents Winter 2024 as the 'latest print issue'; a web search found no 2025 or 2026 print issue, so printed_since_2025 is recorded as no. The 1080x1350 cover file is the largest found on the publisher site."
+}

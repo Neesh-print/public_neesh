@@ -1,0 +1,46 @@
+{
+  "input_title": "Inque",
+  "official_name": "Inque",
+  "publisher_name": "Inque",
+  "publisher_website": null,
+  "country": "GB",
+  "city": "London",
+  "frequency": "annual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "245 x 340 mm",
+  "page_count": 226,
+  "subscribe_url": null,
+  "latest_issue_label": "Issue 3",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://magculture.com/products/inque-3",
+  "independent": "yes",
+  "independence_evidence": "Press coverage and the magCulture listing describe Inque as a self-funded, advertising-free annual by editor Dan Crowe and designer Matt Willey, planned as a ten-issue run with no website.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent ad-free annual literary magazine whose Issue 3 was stocked by magCulture in September 2026.",
+  "what_it_is": "A large-format annual literary and arts magazine printed without advertising, planned as a ten-issue run. Each issue is divided into non-fiction, fiction, interviews and art sections and runs to around 220 pages with new writing from established novelists and essayists plus commissioned artwork. It is for readers who collect literary print and want long reads in a heavyweight, designed object.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Inque3.png?v=1756386571",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/inque-3",
+      "issue_label": "Issue 3",
+      "width": 1000,
+      "height": 1366,
+      "notes": "magCulture product image; not verified visually as a flat cover. Only source found."
+    }
+  ],
+  "evidence_urls": [
+    "https://magculture.com/products/inque-3",
+    "https://eyeondesign.aiga.org/matt-willey-and-dan-crowe-launch-inque-an-independent-lit-mag-in-it-for-the-long-game/",
+    "https://creativeboom.com/news/inque"
+  ],
+  "uncertainties": "Inque has no website or shop of its own (the founders' manifesto says it will never have an online iteration), so publisher website, cover price in the publisher's own shop and subscribe URL cannot be established; magCulture sells Issue 3 at GBP 55. City (London) and the 'London & New York' base come from the magCulture listing and press, not a publisher page. Issue 3 date is the stockist listing date (29 Sep 2026); cadence is slower than the stated annual (Issue 1 2021/22, Issue 2 c. 2023/24, Issue 3 2026). Inque is distributed by Ra & Olly per the input hint."
+}

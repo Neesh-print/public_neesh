@@ -1,0 +1,74 @@
+{
+  "input_title": "10 Women",
+  "official_name": "10 Magazine",
+  "publisher_name": "10 Magazine",
+  "publisher_website": "https://10magazine.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": 15.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://10magazine.com/subscribe/",
+  "independent": "yes",
+  "independence_evidence": "Published by the magazine's own company at 10 Golden Square, London (contact page); the about page describes 10 and 10 Men as its own London-based titles; no large media group named anywhere on the site. Web search results suggest the legal entity is Zac Publishing Ltd, an indie media group owned by the editor-in-chief.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "latest_issue_label": "Issue 77",
+  "latest_issue_date": "2026-09-18",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://10magazine.com/chanel-high-jewellery-10-magazine-issue-77/",
+  "qualifies_reason": "Independent London fashion biannual (the women's title of the same publisher as 10 Men) with Issue 77 on newsstands since 18 September 2026.",
+  "what_it_is": "10 Magazine is a London womenswear fashion title that appears twice a year, timed to the collections, with a themed trio of words per issue and a dozen or so alternative covers. It runs long photographic fashion stories commissioned around individual luxury houses, interviews with designers, models and musicians, and (for Issue 77) a separate watches and jewellery supplement. It is for readers who follow high fashion imagery and the luxury houses closely.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://10magazine.com/wp-content/uploads/2026/09/issue-77-FENDI-COVER.jpg",
+      "source_type": "publisher",
+      "page_url": "https://10magazine.com/product/10-magazine-issue-77-fendi/",
+      "issue_label": "Issue 77",
+      "width": 584,
+      "height": 767,
+      "notes": "Publisher shop image of the Fendi cover; flat but below 1000px."
+    },
+    {
+      "url": "https://10magazine.com/wp-content/uploads/2026/09/issue-77-1-Chanel.jpg",
+      "source_type": "publisher",
+      "page_url": "https://10magazine.com/product/10-magazine-issue-77-chanel-cover/",
+      "issue_label": "Issue 77",
+      "width": 584,
+      "height": 767,
+      "notes": "Chanel high jewellery cover (the one featured in the publisher's Issue 77 news post); flat but small."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/issue-77-JEAN-PAUL-GAULTIER-COVER.webp?v=1792748056",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/10-magazine-n%C2%BA77",
+      "issue_label": "Issue 77",
+      "width": 584,
+      "height": 767,
+      "notes": "KD Presse copy of the publisher's Jean Paul Gaultier cover image, same small size."
+    }
+  ],
+  "evidence_urls": [
+    "https://10magazine.com/chanel-high-jewellery-10-magazine-issue-77/",
+    "https://10magazine.com/about-us/",
+    "https://10magazine.com/contact-us/",
+    "https://10magazine.com/subscribe/",
+    "https://10magazine.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://10magazine.com/product/10-magazine-issue-77-fendi/",
+    "https://kdpresse.com/products.json?limit=250",
+    "https://doyoureadme.de/en/products/ten-10-magazine-75-s-s-2026"
+  ],
+  "uncertainties": [
+    "The input title '10 Women' is not a name the publisher uses; the women's edition is simply '10 Magazine' (the publisher writes '10 and 10 Men').",
+    "No cover image of Issue 77 at or above 1000px was found; all candidates are 584 x 767.",
+    "Issue 77 has about twelve alternative covers; none is marked as the lead cover.",
+    "Legal entity (possibly Zac Publishing Ltd per web search) is not shown on the publisher site."
+  ]
+}

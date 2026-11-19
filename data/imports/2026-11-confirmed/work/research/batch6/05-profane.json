@@ -1,0 +1,47 @@
+{
+  "input_title": "Profane",
+  "official_name": "Profane",
+  "publisher_name": "Revue Profane (Anamorphée)",
+  "publisher_website": "https://revueprofane.com/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "biannual",
+  "cover_price": 18.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://revueprofane.com/collections/all",
+  "latest_issue_label": "Profane 22",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://revueprofane.com/products/profane-22",
+  "independent": "yes",
+  "independence_evidence": "About page says the magazine was conceived by creative directors Charlotte Halpern and Bertrand Houdin (duo Anamorphée), who 'ne sont pas éditeurs de presse', and is run with a small team led by editor Carine Soyer (https://www.revueprofane.com/pages/a-propos). Shop vendor is 'Revue Profane'.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Small independent French art review with issues 20, 21 and 22 published between June 2025 and May 2026.",
+  "what_it_is": "A French biannual art review devoted to amateurs, self-taught makers and collectors working outside the official art world. Each issue mixes portraits, interviews and photo stories of people who create or collect for love rather than career, with experimental graphic design. It appeals to readers of art, craft and outsider culture, in French.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0550/4971/5869/files/Profane22_b6228c2e-61f6-4796-8aab-313cc15ccb6e.jpg",
+      "source_type": "publisher",
+      "page_url": "https://revueprofane.com/products/profane-22",
+      "issue_label": "Profane 22",
+      "width": 2000,
+      "height": 1334,
+      "notes": "Landscape 3:2 image used as main product image; may show the cover photographed or front+back spread rather than a flat portrait cover. Needs visual check."
+    }
+  ],
+  "evidence_urls": [
+    "https://revueprofane.com/products.json?limit=250",
+    "https://revueprofane.com/products/profane-22",
+    "https://www.revueprofane.com/pages/a-propos",
+    "https://magculture.com/collections/a-z/products/profane-22"
+  ],
+  "uncertainties": "City: the publisher's site gives no postal address; Paris is taken from stockist listings (magCulture: published in Paris) and the studio page's Paris exhibition at Rue Béranger. The about page states a 'parution semestrielle' and the shop cadence (Jun 2025, Nov 2025, May 2026) matches. Issue 22 date is the shop publish date (2026-05-13); the secondary product photos (3648x5472) are photographs of the physical magazine, not flat covers."
+}

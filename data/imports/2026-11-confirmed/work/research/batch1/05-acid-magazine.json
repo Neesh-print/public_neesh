@@ -1,0 +1,64 @@
+{
+  "input_title": "Acid Magazine",
+  "official_name": "Acid Magazine",
+  "publisher_name": "Acid Magazine",
+  "publisher_website": "https://acid-magazine.com/",
+  "country": "FR",
+  "city": "Douarnenez",
+  "frequency": "annual",
+  "cover_price": 27.0,
+  "currency": "EUR",
+  "trim_size": "235 x 168 mm",
+  "page_count": 400,
+  "subscribe_url": "https://acid-magazine.com/shop/",
+  "latest_issue_label": "No8 (Liquid After All)",
+  "latest_issue_date": "2026-09-28",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://acid-magazine.com/product/acid-magazine-no8/",
+  "independent": "yes",
+  "independence_evidence": "About page: 'Acid Magazine is a fully independant annual print publication', edited by three named editors, printed in Brittany; no parent company.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent French annual whose No8 shipped from 28 September 2026 (No7 in 2025).",
+  "what_it_is": "Acid Magazine is a thick, bilingual French and English annual that uses surfing as a way into wider subjects: oceanography, coastal economies, environmental questions, art, fashion and history. No8, 'Liquid After All', runs 400 pages and 15 stories in a compact 235 x 168 mm format, issued with four different covers sent at random. It is for readers of surf and ocean culture who want essays and photography rather than contest coverage or gear.",
+  "suggested_primary_tag": "sport",
+  "suggested_secondary_tag": "nature",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Screenshot2026-10-14at11.09.24.png?v=1791972582",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/acid-8",
+      "issue_label": "No8",
+      "width": 844,
+      "height": 1178,
+      "notes": "Flat front cover of one of the four No8 covers (black with white splatter and a white arrow), as a screenshot uploaded by the stockist; below 1000px and the spine edge is faintly visible at left."
+    },
+    {
+      "url": "https://acid-magazine.com/wp-content/uploads/2026/09/Images-Site.jpg",
+      "source_type": "publisher",
+      "page_url": "https://acid-magazine.com/product/acid-magazine-no8/",
+      "issue_label": "No8",
+      "width": 800,
+      "height": 1000,
+      "notes": "Publisher shop image: photograph of the same cover on a plain beige background with a shadow (a mockup-style product shot, not a flat scan); small."
+    }
+  ],
+  "evidence_urls": [
+    "https://acid-magazine.com/",
+    "https://acid-magazine.com/about/",
+    "https://acid-magazine.com/shop/",
+    "https://acid-magazine.com/product/acid-magazine-no8/",
+    "https://acid-magazine.com/product/acid-magazine-no7/",
+    "https://acid-magazine.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://publicknowledgebooks.com/products/acid-magazine-issue-8-liquid-after-all-1",
+    "https://magculture.com/products/acid-8"
+  ],
+  "uncertainties": [
+    "City: the publisher's site only says 'Printed in Brittany, France'; Douarnenez comes from the magCulture listing. Older press coverage placed the magazine between Paris, Barcelona and the Alps under earlier editors.",
+    "No8 has four covers sent at random; only one cover design was found as an image, and no flat publisher image exists (the publisher uses product photographs).",
+    "Latest issue date is the date pre-orders began shipping (28 September 2026) per the product page; the exact year is inferred from the upload path (2026/09) and the stockist listings in October 2026."
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "input_title": "It's Freezing In LA",
+  "official_name": "It's Freezing in LA!",
+  "publisher_name": "It's Freezing in LA! (non-profit company no. 11765188)",
+  "publisher_website": "https://itsfreezinginla.com",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": 10.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": 60,
+  "subscribe_url": "https://itsfreezinginla.com/subscribe",
+  "latest_issue_label": "Issue 12: Power",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://itsfreezinginla.com/shop",
+  "independent": "yes",
+  "independence_evidence": "Site footer: 'a non-profit company registered in England and Wales with company number 11765188'; self-described independent magazine about climate crisis.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London non-profit climate magazine whose Issue 12 (dated May 2026 on the cover) is on sale in its own shop.",
+  "what_it_is": "A UK magazine about the climate crisis that pairs essays and reportage with commissioned illustration, each issue built around a theme such as Plants, Knowledge or, most recently, Power. Issues run to about 60 pages and bring together writing on energy, politics, ecology and culture by emerging writers alongside the publisher's online platform. It suits readers who want longer-form, idea-led climate writing with a strong visual identity.",
+  "suggested_primary_tag": "nature",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0726/9236/7668/files/IFLA__12_cover_a4ce4d33-4730-45c3-a5a5-2444659b3182.jpg?v=1775690339",
+      "source_type": "publisher",
+      "page_url": "https://itsfreezinginla.com/shop",
+      "issue_label": "Issue 12: Power",
+      "width": 1396,
+      "height": 1902,
+      "notes": "Flat front cover photographed/scanned with a faint drop shadow on white; cover reads 'IFLA! May 2026, Power'."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/ItsFreezinginLA_12.jpg?v=1779899439",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/it-s-freezing-in-la-12",
+      "issue_label": "Issue 12: Power",
+      "width": 1000,
+      "height": 1419,
+      "notes": "magCulture listing image, same cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://itsfreezinginla.com/shop",
+    "https://itsfreezinginla.com/about",
+    "https://itsfreezinginla.com/contact",
+    "https://itsfreezinginla.com/articles/are-fossil-fuels-authoritarian",
+    "https://find-and-update.company-information.service.gov.uk/company/11765188",
+    "https://magculture.com/products/it-s-freezing-in-la-12"
+  ],
+  "uncertainties": "City comes from the registered office address at Companies House (75 Clapham Road, London), not from the magazine's own site, which gives no address. Issue 12 was announced as 'out now' in April 2026 articles while the cover is dated May 2026; recorded as May 2026. Page count (60) is from the about page's general description, not the issue listing. Cadence has slipped (Issue 11 in late 2024, Issue 12 in 2026) though the publisher calls it bi-annual."
+}

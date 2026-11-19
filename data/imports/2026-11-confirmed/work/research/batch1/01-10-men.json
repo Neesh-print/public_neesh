@@ -1,0 +1,74 @@
+{
+  "input_title": "10 Men",
+  "official_name": "10 Men",
+  "publisher_name": "10 Magazine",
+  "publisher_website": "https://10magazine.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": 15.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://10magazine.com/subscribe/",
+  "independent": "yes",
+  "independence_evidence": "Published by the magazine's own company at 10 Golden Square, London (contact page); the about page describes 10 and 10 Men as its own London-based titles; no large media group named anywhere on the site. Web search results suggest the legal entity is Zac Publishing Ltd, an indie media group owned by the editor-in-chief.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "latest_issue_label": "Issue 64",
+  "latest_issue_date": "2026-09-25",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://10magazine.com/louis-vuitton-10-men-issue-64-cover/",
+  "qualifies_reason": "Independent London fashion biannual with Issue 64 (Autumn/Winter 2026) on newsstands since 25 September 2026.",
+  "what_it_is": "10 Men is a large-format menswear fashion magazine from London, published twice a year to match the men's collection seasons. Each issue is built around a themed set of words (Issue 64 is 'Future, Legacy, Heritage') and mixes long fashion shoots, cover stories with actors and musicians, and interviews with designers and craftspeople, with several collectible covers per issue. It suits readers of luxury menswear and fashion photography rather than general men's lifestyle.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/new10_64.webp?v=1792745540",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/10-magazine-men-n%C2%BA64",
+      "issue_label": "Issue 64",
+      "width": 1150,
+      "height": 1500,
+      "notes": "Flat front cover (Autumn/Winter 2026, Future/Legacy/Heritage, model in leather on chair). Served as JPEG despite .webp extension; viewed and confirmed flat."
+    },
+    {
+      "url": "https://10magazine.com/wp-content/uploads/2026/09/10-MEN-ISSUE-64-HERMES-COVER.jpg",
+      "source_type": "publisher",
+      "page_url": "https://10magazine.com/product/10-men-issue-64-hermes-cover/",
+      "issue_label": "Issue 64",
+      "width": 584,
+      "height": 767,
+      "notes": "Publisher shop image of the Hermes cover (same cover image as the KD Presse one); flat but small."
+    },
+    {
+      "url": "https://10magazine.com/wp-content/uploads/2026/09/10-MEN-ISSUE-64-LOEWE-COVER.jpg",
+      "source_type": "publisher",
+      "page_url": "https://10magazine.com/product/10-men-issue-64-loewe-cover/",
+      "issue_label": "Issue 64",
+      "width": 584,
+      "height": 767,
+      "notes": "Alternative Loewe cover of the same issue; flat but small."
+    }
+  ],
+  "evidence_urls": [
+    "https://10magazine.com/?p=447621",
+    "https://10magazine.com/louis-vuitton-10-men-issue-64-cover/",
+    "https://10magazine.com/about-us/",
+    "https://10magazine.com/contact-us/",
+    "https://10magazine.com/subscribe/",
+    "https://10magazine.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://10magazine.com/product/10-men-issue-64-hermes-cover/",
+    "https://kdpresse.com/products.json?limit=250"
+  ],
+  "uncertainties": [
+    "Legal publisher entity not shown on the site; web search points to Zac Publishing Ltd but I did not see that on 10magazine.com. Recorded publisher as '10 Magazine' as the site itself uses.",
+    "Issue 64 has at least six different covers; the KD Presse image matches the Hermes cover in the publisher shop.",
+    "Page count and trim size are not stated; the shop lists package dimensions 30 x 23 cm only.",
+    "The publisher's subscribe page links out to Boutique Mags and Unique Magazines; single copies are sold from the publisher's own WooCommerce shop."
+  ]
+}

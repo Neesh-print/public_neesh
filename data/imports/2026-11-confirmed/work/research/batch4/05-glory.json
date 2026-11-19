@@ -1,0 +1,58 @@
+{
+  "input_title": "Glory",
+  "official_name": "Glory",
+  "publisher_name": "Glory",
+  "publisher_website": "https://glory.studio",
+  "country": "GB",
+  "city": "Norwich",
+  "frequency": "irregular",
+  "cover_price": 12.0,
+  "currency": "GBP",
+  "trim_size": "210 x 270 mm",
+  "page_count": 240,
+  "subscribe_url": "https://glory.studio/collections/country-issues",
+  "latest_issue_label": "Issue No. 12 – Country Edition: Mexico",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://glory.studio/products/glory-country-edition-mexico",
+  "independent": "yes",
+  "independence_evidence": "Self-published by a small Norwich-based team (about page lists co-founders and staff; contact page gives 25 St John Maddermarket, Norwich); copyright © 2026 Glory; no media-group owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent UK football-travel title with print editions in 2025 (Hamburg City Stories, Hibernian Club Edition) and 2026 (Colorado Rapids, Mexico Country Edition No. 12) sold on its own site.",
+  "what_it_is": "A UK football magazine that treats each issue as a travel document about one country, city or club, away from the big leagues: recent editions cover San Marino, Hamburg, Hibernian and, for the 2026 World Cup, Mexico. Issues run to around 200-240 pages of film photography from stadiums and streets, long essays, interviews and practical notes for visiting. It suits readers who like football for its fan culture and places rather than results, and travel readers who use the game as a way in.",
+  "suggested_primary_tag": "sport",
+  "suggested_secondary_tag": "travel",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/2567/7220/files/Glory_Magazine_12_Mexico.jpg?v=1781709643",
+      "source_type": "stockist",
+      "page_url": "https://coloursmayvary.com/products/glory-magazine-12-mexico",
+      "issue_label": "Issue No. 12 – Mexico",
+      "width": 1400,
+      "height": 1399,
+      "notes": "Straight-on product photograph of the front cover on a plain grey background (cover occupies about 650x880 of the 1000px square); stockist Colours May Vary. Best available; no flat file found."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0711/4732/3701/files/Mexico_Cover_LARGE_773c6477-e63e-491f-85ff-b351942786ad.jpg?v=1777275380",
+      "source_type": "publisher",
+      "page_url": "https://glory.studio/products/glory-country-edition-mexico",
+      "issue_label": "Issue No. 12 – Mexico",
+      "width": 4724,
+      "height": 4724,
+      "notes": "Publisher image but a 3D mockup of the magazine standing on a shelf; not flat."
+    }
+  ],
+  "evidence_urls": [
+    "https://glory.studio/pages/about",
+    "https://glory.studio/pages/contact",
+    "https://glory.studio/products/glory-country-edition-mexico",
+    "https://glory.studio/products.json?limit=250",
+    "https://picsandink.com/products/glory-issue-11",
+    "https://coloursmayvary.com/products/glory-magazine-12-mexico"
+  ],
+  "uncertainties": "Issue numbering is not shown on the publisher's shop; 'No. 12' comes from the printed cover and the Colours May Vary listing. Shop lists Mexico at £12 while the printed cover price is £15. Publication date inferred from the shop listing (27 April 2026) and first stockist listing (17 June 2026), so recorded as May 2026 at month precision. Cadence mixes Country, City and Club editions at irregular intervals; a stockist calls it quarterly, but the main Country Editions appear roughly yearly, so 'irregular' is recorded. No legal company name found."
+}

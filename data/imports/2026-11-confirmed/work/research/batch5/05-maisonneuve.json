@@ -1,0 +1,48 @@
+{
+  "input_title": "Maisonneuve",
+  "official_name": "Maisonneuve",
+  "publisher_name": "Maisonneuve",
+  "publisher_website": "https://maisonneuve.org/",
+  "country": "CA",
+  "city": "Montreal",
+  "frequency": "quarterly",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://maisonneuve.org/subscriptions",
+  "latest_issue_label": "Issue 101, Fall 2026",
+  "latest_issue_date": "2026-10-13",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://maisonneuve.org/issue/fall-2026",
+  "independent": "yes",
+  "independence_evidence": "About page: established in 2002 as a non-profit association, published from the Petite Patrie neighbourhood of Montreal; masthead lists its own publisher and editors, no parent media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent non-profit Montreal quarterly with Issue 101 (Fall 2026) out; seasonal issues through 2025 and 2026.",
+  "what_it_is": "A Canadian general-interest quarterly mixing reported features on social and political issues, essays, fiction, poetry and comics, with regular review sections on books, music and film and some work translated from Quebec French. Issues are organised by season and carry a cover story on a current Canadian topic. It suits readers who want long-form Canadian journalism and literary writing in one magazine.",
+  "suggested_primary_tag": "ideas-science",
+  "suggested_secondary_tag": "literary",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://media.maisonneuve.org/uploads/covers/W_i101_00_OFC_nobarcode_1_XqjuVLj.jpg",
+      "source_type": "publisher",
+      "page_url": "https://maisonneuve.org/issue/fall-2026",
+      "issue_label": "Issue 101, Fall 2026",
+      "width": 600,
+      "height": 816,
+      "notes": "Front cover without barcode from the publisher's site; only 600px wide, below the 1000px target. No larger version found on media.maisonneuve.org."
+    }
+  ],
+  "evidence_urls": [
+    "https://maisonneuve.org/",
+    "https://maisonneuve.org/about/",
+    "https://maisonneuve.org/magazine/",
+    "https://maisonneuve.org/issue/fall-2026",
+    "https://maisonneuve.org/article/introducing-issue-101"
+  ],
+  "uncertainties": "Single-issue price could not be read: the subscriptions/plans page is rendered client-side and returned a 520 error on fetch. The issue date used is the date of the editor's 'Introducing Issue 101' letter (October 13, 2026); the print issue is labelled Fall 2026. Cover image is only 600x816."
+}

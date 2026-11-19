@@ -1,0 +1,56 @@
+{
+  "input_title": "Unemployed",
+  "official_name": "Unemployed",
+  "publisher_name": "Unemployed Magazine",
+  "publisher_website": "https://www.unemployedmag.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "irregular",
+  "cover_price": 40.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.unemployedmag.com/",
+  "latest_issue_label": "Issue 08",
+  "latest_issue_date": "2025-12-06",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://shop.unemployedmag.com/products/unemployed-magazine-issue-08",
+  "independent": "yes",
+  "independence_evidence": "Self-published New York title sold through its own Shopify store; site footer and contact page name only Unemployed Magazine at 210 Lafayette Street, New York, with no parent group (https://www.unemployedmag.com/contact).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent New York print magazine whose Issue 08 went on sale 6 December 2025.",
+  "what_it_is": "Unemployed is a large-format, image-led print magazine from New York built around commissioned fashion and art photography, with each issue redesigned around a theme (Issue 08 takes a deliberately classic magazine form, Issue 07 was 'Bad vs Good'). Issues appear roughly once a year in small runs and carry contributors from fashion photography and contemporary art. It is aimed at collectors of photography and fashion publications.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0868/9260/9838/files/U08_Photo_FrontCover_NoShadow.jpg?v=1764962564",
+      "source_type": "publisher",
+      "page_url": "https://shop.unemployedmag.com/products/unemployed-magazine-issue-08",
+      "issue_label": "Issue 08",
+      "width": 2000,
+      "height": 2500,
+      "notes": "Studio photograph of the front cover (black cover with diagonal logo) on a light grey ground, straight-on; slight spine visible, no shadow version."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0868/9260/9838/files/U08_Photo_FrontCover_Shadow.jpg?v=1764963375",
+      "source_type": "publisher",
+      "page_url": "https://shop.unemployedmag.com/products/unemployed-magazine-issue-08",
+      "issue_label": "Issue 08",
+      "width": 2000,
+      "height": 2500,
+      "notes": "Same cover photographed with drop shadow (main product image)."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.unemployedmag.com/",
+    "https://www.unemployedmag.com/contact",
+    "https://shop.unemployedmag.com/products.json?limit=250",
+    "https://shop.unemployedmag.com/products/unemployed-magazine-issue-08"
+  ],
+  "uncertainties": "Cover images are photographs of the physical issue rather than flat artwork. Cadence: Issue 07 listed March 2024, Issue 08 December 2025, so roughly annual but uneven; recorded as irregular. No formal publisher company name shown on the site. Page count and trim size not stated."
+}

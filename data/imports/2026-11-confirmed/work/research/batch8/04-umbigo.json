@@ -1,0 +1,57 @@
+{
+  "input_title": "umbigo",
+  "official_name": "Umbigo",
+  "publisher_name": "Umbigo Edições, Lda",
+  "publisher_website": "https://umbigo.space/",
+  "country": "PT",
+  "city": "Lisbon",
+  "frequency": "triannual",
+  "cover_price": 12.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.umbigo.space/",
+  "latest_issue_label": "#97",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://shop.umbigo.space/product/97-en-english-edition-copia",
+  "independent": "yes",
+  "independence_evidence": "Published by Umbigo Edições, Lda, Lisbon; editorial statute describes it as 'an independent international platform' with public-funding partners (Ministry of Culture, Lisbon Municipality, Gulbenkian) rather than a media group (https://umbigo.space/en/info, https://umbigo.space/editorialstatute).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Lisbon art magazine with a current print issue (#97) on sale in late 2026 and three issues a year.",
+  "what_it_is": "Umbigo is a Portuguese contemporary art magazine, published since 2002, that builds each issue around a theme (issue 97 is 'Love') with essays, artist profiles, commissioned art projects and a curated exhibition section. Since issue 68 it has come out in separate Portuguese and English editions with two alternative artist covers per issue. It is for readers following contemporary art in Portugal and the Lusophone world.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0913/1094/8726/files/Capa_971.jpg?v=1792492474",
+      "source_type": "publisher",
+      "page_url": "https://shop.umbigo.space/product/97-en-english-edition-copia",
+      "issue_label": "#97 (cover 1, Ana Vidigal)",
+      "width": 1000,
+      "height": 1419,
+      "notes": "Flat front cover of the English edition, cover 1 by Ana Vidigal. Shop listing labels it 'Cover by Miguel Palma' but the product description says covers are by Ana Vidigal and Soeun Park; the image shows Ana Vidigal's name."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0913/1094/8726/files/Capa_972_8a618995-6f71-4ba1-aa05-3f57848ab9c3.jpg?v=1792494054",
+      "source_type": "publisher",
+      "page_url": "https://shop.umbigo.space/",
+      "issue_label": "#97 (cover 2)",
+      "width": 1000,
+      "height": 1419,
+      "notes": "Second alternative cover of issue 97 (Soeun Park per the description)."
+    }
+  ],
+  "evidence_urls": [
+    "https://umbigo.space/",
+    "https://umbigo.space/en/info",
+    "https://umbigo.space/editorialstatute",
+    "https://shop.umbigo.space/",
+    "https://shop.umbigo.space/product/97-en-english-edition-copia"
+  ],
+  "uncertainties": "No explicit publication date for #97 on the publisher's pages; the homepage says 'New edition out!' and the #97 cover files were uploaded to the shop CDN on 2026-10-20 (from the ?v= timestamp), so the date is recorded as October 2026 with month precision. Frequency taken from the subscription of 3 issues per year. Shop cover labels ('Cover by Miguel Palma') conflict with the description's named cover artists. Trim size and page count not stated. The old domain umbigomagazine.com redirects to umbigo.space."
+}

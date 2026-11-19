@@ -1,0 +1,47 @@
+{
+  "input_title": "Permanent Style",
+  "official_name": "Permanent Style",
+  "publisher_name": "Permanent Style (Simon Crompton)",
+  "publisher_website": "https://www.permanentstyle.com/",
+  "country": "GB",
+  "city": null,
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.permanentstyle.com/products/permanent-style-magazine-issue-four",
+  "latest_issue_label": "Issue Four (Autumn Winter 2026)",
+  "latest_issue_date": "2026-10-21",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://shop.permanentstyle.com/products/permanent-style-magazine-issue-four",
+  "independent": "yes",
+  "independence_evidence": "Shop footer reads '© 2026 Simon Crompton' and describes Permanent Style as an international menswear magazine that also produces products; vendor on all magazine products is 'Permanent Style' (https://shop.permanentstyle.com/products.json).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent, self-published print magazine with four issues since March 2025, the latest in October 2026.",
+  "what_it_is": "A print menswear magazine grown out of the Permanent Style website, focused on tailoring, craft and the makers behind classic men's clothing. Each issue carries long interviews and reportage, often built around a city or region, with recent issues on Scotland and Los Angeles. It is aimed at readers interested in bespoke clothing, shoemaking and well-made menswear.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1795/1429/files/PS_MAG_26FW_Cover_Only.jpg",
+      "source_type": "publisher",
+      "page_url": "https://shop.permanentstyle.com/products/permanent-style-magazine-issue-four",
+      "issue_label": "Issue Four (AW26)",
+      "width": 1603,
+      "height": 2244,
+      "notes": "File named 'Cover_Only'; flat front cover from the publisher's shop."
+    }
+  ],
+  "evidence_urls": [
+    "https://shop.permanentstyle.com/products.json?limit=250",
+    "https://shop.permanentstyle.com/products/permanent-style-magazine-issue-four",
+    "https://shop.permanentstyle.com/pages/about",
+    "https://shop.permanentstyle.com/policies/legal-notice"
+  ],
+  "uncertainties": "permanentstyle.com itself returns 403 to automated fetches, so the city could not be confirmed from the publisher's pages (the magazine is generally understood to be London-based); no company name or address appears on the shop's policy pages. Cadence: Issue One Mar 2025, Two Oct 2025, Three Apr 2026, Four Oct 2026. Issue date taken from the shop product's publish timestamp."
+}

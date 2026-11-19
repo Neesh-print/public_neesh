@@ -1,0 +1,48 @@
+{
+  "input_title": "Mulieris",
+  "official_name": "Mulieris Magazine",
+  "publisher_name": "Studio Mulieris",
+  "publisher_website": "https://www.mulierismagazine.com/",
+  "country": "IT",
+  "city": null,
+  "frequency": "annual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.mulierismagazine.com/shop",
+  "latest_issue_label": "Issue 06, Homeward",
+  "latest_issue_date": "2026-05-19",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://frabsmagazines.com/products/mulieris-homeward",
+  "independent": "yes",
+  "independence_evidence": "About page: 'an independent platform dedicated to amplifying women's voices', produced by Studio Mulieris, a small creative studio run by its founders; no parent company.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Italian art magazine whose 2026 issue (06, Homeward) went on sale in May 2026.",
+  "what_it_is": "An English-language art and culture magazine from Italy that publishes photography, visual art, essays and interviews by and about women, with each issue built around one theme (the 2026 issue is about home and migration). It comes out roughly once a year and draws on a large pool of international contributors. It is for readers interested in contemporary women's art practice and themed visual anthologies.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0120/2539/7312/files/Mulieris_Homeward_cover_3643addd-eb17-458c-b116-d66ae1b9073e.png?v=1779189082",
+      "source_type": "stockist",
+      "page_url": "https://frabsmagazines.com/products/mulieris-homeward",
+      "issue_label": "Issue 06, Homeward",
+      "width": 1000,
+      "height": 1400,
+      "notes": "Flat front cover PNG from Frab's Magazines, the shop the publisher's own shop page links to for this issue. The publisher's site only serves small Wix thumbnails."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.mulierismagazine.com/",
+    "https://www.mulierismagazine.com/about",
+    "https://www.mulierismagazine.com/shop",
+    "https://www.mulierismagazine.com/studio",
+    "https://frabsmagazines.com/products/mulieris-homeward"
+  ],
+  "uncertainties": "The publisher's site says only 'based in Italy' with no city, address or legal notice, so city is null. The publisher has no own shop: its shop page sends buyers to Frab's Magazines, where Issue 06 is EUR 22.00 (listed 2026-05-19), so cover price is not recorded as a publisher price. Frequency is inferred from the site calling Homeward 'the 2026 issue' and the sequence of previous issues (04 in 2022, 05 later); it may be irregular. The team named on the about page is all women and the magazine is dedicated to women's voices, but the site does not use the words women-led, so no identity tag was applied."
+}

@@ -1,0 +1,48 @@
+{
+  "input_title": "Double Blind",
+  "official_name": "DoubleBlind",
+  "publisher_name": "DoubleBlind Mag",
+  "publisher_website": "https://doubleblindmag.com/",
+  "country": "US",
+  "city": null,
+  "frequency": "biannual",
+  "cover_price": 18.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.doubleblindmag.com/products/6",
+  "latest_issue_label": "Issue No. 12",
+  "latest_issue_date": "2024-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://shop.doubleblindmag.com/collections/issues/products.json?limit=50",
+  "independent": "yes",
+  "independence_evidence": "Independent psychedelics media company running its own site, shop and courses; no large media group ownership found (https://doubleblindmag.com/12).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "no",
+  "qualifies": "no",
+  "qualifies_reason": "The most recent print issue is No. 12, released November 2024 (and sold out); no print issue dated 2025 or later exists in the publisher's shop or on its site.",
+  "what_it_is": "DoubleBlind is a US print magazine about psychedelics, covering drug policy, clinical research, mycology, indigenous plant-medicine traditions and personal healing stories, published alongside a large online education business of courses and webinars. Each issue mixes reportage from places such as Hawai'i and Mexico with essays and photography. It is aimed at readers interested in psychedelic culture and science rather than recreational drug coverage.",
+  "suggested_primary_tag": "ideas-science",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0247/1945/8385/files/Issue12_Cover_BrandColor.jpg?v=1773295863",
+      "source_type": "publisher",
+      "page_url": "https://shop.doubleblindmag.com/products/doubleblind-issue-12",
+      "issue_label": "Issue No. 12",
+      "width": 3150,
+      "height": 3150,
+      "notes": "Square 3150x3150 product image from the shop; the cover is shown on a brand-colour background rather than as a flat cover crop."
+    }
+  ],
+  "evidence_urls": [
+    "https://doubleblindmag.com/11",
+    "https://doubleblindmag.com/12",
+    "https://shop.doubleblindmag.com/collections/issues/products.json?limit=50",
+    "https://shop.doubleblindmag.com/products/doubleblind-issue-12",
+    "https://shop.doubleblindmag.com/products.json?limit=250"
+  ],
+  "uncertainties": "The site says the magazine is published biannually in summer and winter, but the shop's issue list ends at Issue 12 (published to the shop 2024-11-02) and doubleblindmag.com/13 returns 404, so the title appears to have paused print after 2024; if a 2025 or 2026 issue was released only to subscribers it was not found. The publisher's city is not stated on the pages read."
+}

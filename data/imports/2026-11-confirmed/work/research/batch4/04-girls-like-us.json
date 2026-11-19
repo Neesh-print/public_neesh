@@ -1,0 +1,57 @@
+{
+  "input_title": "Girls Like Us",
+  "official_name": "Girls Like Us",
+  "publisher_name": "Girls Like Us (publisher: Jessica Gysel)",
+  "publisher_website": "https://girlslikeusmagazine.com",
+  "country": "BE",
+  "city": "Brussels",
+  "frequency": "irregular",
+  "cover_price": 10.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://girlslikeusmagazine.com/shop/",
+  "latest_issue_label": "Issue #15 – The Vortex",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://girlslikeusmagazine.com/shop/",
+  "independent": "yes",
+  "independence_evidence": "About page describes it as an independent magazine; publisher is the founder-editor personally, based at a Brussels address, distributed by Idea Books and Antenne Books.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Brussels queer-feminist magazine whose Issue 15 (cover dated 2026) is on sale on its own site and at Antenne Books since October 2026.",
+  "what_it_is": "A queer-feminist magazine from Brussels devoted to women and trans people working in art, culture and activism, with each issue built around a theme such as Economy, Biography, The Club Scene or Letters of Disappointment. Issues combine essays, personal writing, conversations and artists' visual contributions; the latest one is a collective publication made with a closing lesbian and trans bar. It is for readers of feminist and queer theory, art writing and small-press culture.",
+  "suggested_primary_tag": "identity-politics",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://girlslikeusmagazine.com/site/assets/files/1230/glu_cover-barcode.png",
+      "source_type": "publisher",
+      "page_url": "https://girlslikeusmagazine.com/shop/",
+      "issue_label": "Issue #15 – The Vortex",
+      "width": 2292,
+      "height": 3012,
+      "notes": "Flat front cover with barcode, as used on the publisher's shop page."
+    },
+    {
+      "url": "https://girlslikeusmagazine.com/site/assets/files/1230/glu_cover-barcode.900x1200.png",
+      "source_type": "publisher",
+      "page_url": "https://girlslikeusmagazine.com/shop/",
+      "issue_label": "Issue #15 – The Vortex",
+      "width": 900,
+      "height": 1183,
+      "notes": "Smaller rendition of the same cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://girlslikeusmagazine.com/about/",
+    "https://girlslikeusmagazine.com/issues/",
+    "https://girlslikeusmagazine.com/issues/open/issue-15-the-vortex/",
+    "https://girlslikeusmagazine.com/shop/",
+    "https://antennebooks.com/products/girls-like-us-15-the-vortex"
+  ],
+  "uncertainties": "Publisher's site gives no publication date for Issue 15; the cover reads 'Issue Fifteen 2026' and Antenne Books listed it on 2026-10-08, so the date is recorded as October 2026 at month precision. Cadence is slow and uneven (Issue 14 in 2023, Issue 15 in 2026), hence 'irregular'. No page count or trim size published."
+}

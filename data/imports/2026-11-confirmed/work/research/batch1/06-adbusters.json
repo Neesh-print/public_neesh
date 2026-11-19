@@ -1,0 +1,65 @@
+{
+  "input_title": "Adbusters",
+  "official_name": "Adbusters",
+  "publisher_name": "Adbusters Media Foundation",
+  "publisher_website": "https://www.adbusters.org/",
+  "country": "CA",
+  "city": "Vancouver",
+  "frequency": "bimonthly",
+  "cover_price": 12.5,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://subscribe.adbusters.org/products/subscriptions",
+  "latest_issue_label": "#187 (Post Liberal Imagination)",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://subscribe.adbusters.org/products/subscriptions",
+  "independent": "yes",
+  "independence_evidence": "Published by Adbusters Media Foundation, described on its own shop terms and privacy pages as a not-for-profit organisation based in Vancouver, BC; the about page says every dollar raised goes back into the magazine and campaigns; no corporate owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Long-running not-for-profit bimonthly from Vancouver with #187 out (late September 2026 per the publisher's schedule) and #188 due late November 2026.",
+  "what_it_is": "Adbusters is a bimonthly anti-consumerist 'journal of the mental environment' from Vancouver, mixing political and philosophical essays, spoof advertisements, collage and hand-lettered design into a largely ad-free, image-led magazine. Issue #187 is themed around a 'post-liberal imagination' and a rejection of AI-driven culture. It is read by activists, designers and students interested in culture jamming, media criticism and anti-capitalist politics.",
+  "suggested_primary_tag": "identity-politics",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1022/3793/files/adbustnew.jpg?v=1794921262",
+      "source_type": "stockist",
+      "page_url": "https://villagebooks.co/products/adbusters-187",
+      "issue_label": "#187",
+      "width": 2330,
+      "height": 2330,
+      "notes": "Photograph of the physical issue #187 lying flat on a grey background (not a scan); cover fully visible, would need cropping from the square frame."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0322/2477/files/magazine_mockup_187.png?v=1789065860",
+      "source_type": "publisher",
+      "page_url": "https://subscribe.adbusters.org/products/ab-187-post-liberal-imagination",
+      "issue_label": "#187",
+      "width": 2923,
+      "height": 2294,
+      "notes": "Publisher's own image is an angled 3D mockup of the issue on a transparent background; not a flat cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.adbusters.org/index.html",
+    "https://www.adbusters.org/about-us",
+    "https://subscribe.adbusters.org/",
+    "https://subscribe.adbusters.org/products/ab-187-post-liberal-imagination",
+    "https://subscribe.adbusters.org/products/subscriptions",
+    "https://subscribe.adbusters.org/privacy",
+    "https://subscribe.adbusters.org/terms",
+    "https://villagebooks.co/products/adbusters-187"
+  ],
+  "uncertainties": [
+    "No flat front-cover image of #187 was found on the publisher's sites or at stockists; both candidates are product photographs/mockups.",
+    "Issue date comes from the subscription page's mailing schedule ('#187 Late September', '#188 Late November', with #188 described as the next issue arriving late November 2026); the distributor hint of June 2026 for #187 does not match that schedule, so month precision is used.",
+    "Price is the publisher's print single-copy price (USD 12.50); the shop does not state the currency symbol's country explicitly but the foundation is Canadian and the shop prices appear in USD on checkout pages.",
+    "Page count and trim size are not stated by the publisher."
+  ]
+}

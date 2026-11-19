@@ -1,0 +1,52 @@
+{
+  "input_title": "Lost",
+  "official_name": "LOST",
+  "publisher_name": "LOST / volume press",
+  "publisher_website": "https://lostmagazine.org/",
+  "country": null,
+  "city": null,
+  "frequency": "annual",
+  "cover_price": 30.0,
+  "currency": "SGD",
+  "trim_size": "17.5 x 24 cm",
+  "page_count": 348,
+  "subscribe_url": "https://shop.lostmagazine.org/",
+  "latest_issue_label": "Issue Eleven",
+  "latest_issue_date": "2025-10-08",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://lostmagazine.org/lost-issue-eleven/",
+  "independent": "yes",
+  "independence_evidence": "The about page describes LOST as made by a small publishing studio (volume press, volume-press.com) that also produces other publications; the shop lists LOST and 'volume press' as vendors; no media group involvement.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent annual bilingual travel magazine whose Issue Eleven was published in October 2025 and is on sale in the publisher's shop.",
+  "what_it_is": "A bilingual English and Chinese travel magazine built around first-person stories of self-discovery rather than destination guides, with roughly ten long personal narratives per issue plus commissioned photography. It appears once a year as a thick, uncoated-paper volume. It suits readers who like slow, reflective travel writing and Chinese-language perspectives on travel.",
+  "suggested_primary_tag": "travel",
+  "suggested_secondary_tag": "literary",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Lost_11.jpg?v=1767957510",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/lost-11",
+      "issue_label": "Issue Eleven",
+      "width": 1000,
+      "height": 1363,
+      "notes": "Flat front cover from magCulture. The publisher's own images (lostmagazine.org/wp-content/uploads/2025/10/LOST-Eleven-photos-1.jpg and the shop's LOST-Eleven-photos-crop.jpg, 1800x1260) are landscape product photographs rather than flat covers."
+    }
+  ],
+  "evidence_urls": [
+    "https://lostmagazine.org/",
+    "https://lostmagazine.org/about/",
+    "https://lostmagazine.org/lost-issue-eleven/",
+    "https://lostmagazine.org/stockists/",
+    "https://shop.lostmagazine.org/products.json?limit=50",
+    "https://shop.lostmagazine.org/products/lost-issue-eleven",
+    "https://shop.lostmagazine.org/pages/about-us",
+    "https://volume-press.com/",
+    "https://magculture.com/products/lost-11"
+  ],
+  "uncertainties": "lostmagazine.org resets direct connections, so it was read through a fetch proxy; the shop (Shopify) was read directly. Neither the magazine site, the shop nor volume-press.com states a city or country: the shop trades in SGD with +08:00 timestamps and its stockist list begins with Singapore, while magCulture gives 'Shanghai, China and Singapore', so country and city are left null rather than guessed. Publisher legal name not stated; 'volume press' is the studio named on the about page. The distributor hint (Ra & Olly 2026-07) matches Issue Eleven, which the publisher dates 8 October 2025; cadence (Ten July 2024, Eleven Oct 2025) and the about page both indicate once a year."
+}

@@ -1,0 +1,67 @@
+{
+  "input_title": "Port",
+  "official_name": "Port",
+  "publisher_name": "Port Publishing Limited",
+  "publisher_website": "https://www.port-magazine.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": 12.0,
+  "currency": "GBP",
+  "trim_size": "230 x 300 mm",
+  "page_count": 304,
+  "subscribe_url": "https://port-magazine.newsstand.co.uk/",
+  "latest_issue_label": "Issue 38 (Spring/Summer 2026)",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://villagebooks.co/products/port-38",
+  "independent": "yes",
+  "independence_evidence": "Privacy policy names Port Publishing Limited, registered at Somerset House, Strand, London WC2R 1LA (https://www.port-magazine.com/privacy-policy/); about page calls it 'an award-winning independent title' (https://www.port-magazine.com/about/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently published London biannual with Issue 38 out in mid-2026 and Issue 39 on pre-order.",
+  "what_it_is": "A large-format biannual covering culture and style: long interviews and profiles with actors, writers, designers and architects, photo-led fashion stories and essays on art, design, food and literature. Issues come with multiple celebrity covers. It is for readers who want a glossy but text-heavy general culture magazine with a menswear slant.",
+  "suggested_primary_tag": "lifestyle",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Port_38_-_James_Norton.jpg",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/port-38",
+      "issue_label": "Issue 38",
+      "width": 2835,
+      "height": 3671,
+      "notes": "One of six covers for Issue 38 (James Norton)."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Port_38_-_Maude_Apatow.jpg",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/port-38",
+      "issue_label": "Issue 38",
+      "width": 2835,
+      "height": 3671,
+      "notes": "Maude Apatow cover."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Port_38_-_Naomi_Ackie.jpg",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/port-38",
+      "issue_label": "Issue 38",
+      "width": 2835,
+      "height": 3671,
+      "notes": "Naomi Ackie cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.port-magazine.com/about/",
+    "https://www.port-magazine.com/privacy-policy/",
+    "https://www.port-magazine.com/issue-38/port-issue-38-james-norton/",
+    "https://port-magazine.newsstand.co.uk/",
+    "https://villagebooks.co/products/port-38",
+    "https://magculture.com/products/port-38"
+  ],
+  "uncertainties": "Exact release date of Issue 38 not stated by the publisher: Village Books listed it on 2026-06-29 and Port's own Issue 38 articles are dated from 2026-07-27, so June 2026 is an estimate. Issue 39 (five covers incl. Lee Pace, Gillian Anderson) is shown on the publisher's Newsstand shop as 'PRE ORDER' with images uploaded October 2026 and is not treated as out. Trim size and page count come from the magCulture listing. Covers for Issue 38 were not found on the publisher's own shop, which only lists older back issues and Issue 39."
+}

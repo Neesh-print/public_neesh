@@ -1,0 +1,75 @@
+{
+  "input_title": "Antidote",
+  "official_name": "Antidote Magazine",
+  "publisher_name": "Antidote SAS",
+  "publisher_website": "https://www.magazineantidote.com/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "biannual",
+  "cover_price": 35.0,
+  "currency": "EUR",
+  "trim_size": "30 x 40 cm",
+  "page_count": 128,
+  "subscribe_url": "https://www.magazineantidote.com/collections/all",
+  "latest_issue_label": "N°29, Printemps-Été 2026 (SS26)",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.magazineantidote.com/products/ss26-tiakola1",
+  "independent": "yes",
+  "independence_evidence": "Legal notice names the publisher as ANTIDOTE SAS (capital EUR 29,238, RCS Paris 518 634 696), a small standalone company at 7 place Franz Liszt, Paris; no media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Paris fashion and culture magazine with N°29 (Spring-Summer 2026) on sale and N°30 (Autumn-Winter 2026) in pre-order.",
+  "what_it_is": "Antidote Magazine is a French fashion and culture title built around long interviews and photographic series with musicians, writers, actors and public figures, mostly from the French rap and pop scene, shot in a consistent black-and-white portrait style. Since 2026 each issue comes in two formats: a large 30 x 40 cm 'Revue' of 128 pages and a cheaper pocket 'Fanzine', each with several alternative covers but the same contents. It is for French-speaking readers who follow music, fashion and youth culture and like a collectible printed object.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "music",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1121/1790/7795/files/COVER_DEF15.jpg?v=1793805340",
+      "source_type": "publisher",
+      "page_url": "https://www.magazineantidote.com/products/ss26-tiakola1",
+      "issue_label": "N°29, Printemps-Été 2026 (Revue, Tiakola cover 1)",
+      "width": 3543,
+      "height": 4724,
+      "notes": "Flat front cover of the Revue edition, Tiakola photographed by Yann Weber; viewed, clean, high resolution."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1121/1790/7795/files/COVER_DEF3.jpg?v=1793805326",
+      "source_type": "publisher",
+      "page_url": "https://www.magazineantidote.com/products/ss26-constancedebre",
+      "issue_label": "N°29, Printemps-Été 2026 (Revue, Constance Debré cover)",
+      "width": 3543,
+      "height": 4724,
+      "notes": "Alternative Revue cover of the same issue, same size; not viewed."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/POSTCOVERREVEAL.jpg?v=1781770196",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/antidote-n-29",
+      "issue_label": "N°29",
+      "width": 4370,
+      "height": 5463,
+      "notes": "KD Presse image for N°29; filename suggests a cover reveal graphic, not viewed, so verify it is a flat cover before use."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.magazineantidote.com/",
+    "https://www.magazineantidote.com/products.json?limit=250",
+    "https://www.magazineantidote.com/products/ss26-tiakola1.json",
+    "https://www.magazineantidote.com/products/fw26-skepta.json",
+    "https://www.magazineantidote.com/policies/legal-notice",
+    "https://www.magazineantidote.com/policies/contact-information",
+    "https://kdpresse.com/products/antidote-n-29.json",
+    "https://kdpresse.com/products.json?limit=250"
+  ],
+  "uncertainties": [
+    "N°30 (Autumn-Winter 2026, Alicia Keys and Skepta covers) was listed on 16-17 November 2026 as 'available for pre-order, shipping within 15 days', so N°29 is recorded as the latest issue actually out.",
+    "Exact release date of N°29 not stated by the publisher; it is labelled Spring-Summer 2026 and KD Presse listed it on 18 June 2026, so June 2026 at month precision.",
+    "The publisher's own Shopify shop only came online in November 2026 (all products created 2-17 November 2026), so its listing dates do not reflect print dates.",
+    "Recent cadence is uneven: N°28 Spring-Summer 2025, N°29 Spring-Summer 2026, N°30 Autumn-Winter 2026, with no Autumn-Winter 2025 issue found; recorded as biannual per the seasonal labelling.",
+    "The cover price given is for the Revue format; the Fanzine format of the same issue is EUR 15."
+  ]
+}

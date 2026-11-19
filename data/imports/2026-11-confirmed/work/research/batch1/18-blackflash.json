@@ -1,0 +1,55 @@
+{
+  "input_title": "Blackflash",
+  "official_name": "BlackFlash",
+  "publisher_name": "Buffalo Berry Press",
+  "publisher_website": "https://blackflash.ca/",
+  "country": "CA",
+  "city": "Saskatoon",
+  "frequency": "triannual",
+  "cover_price": 12.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://simplecirc.com/subscribe/blackflash-magazine",
+  "latest_issue_label": "43.2 (Fall 2026)",
+  "latest_issue_date": "2026-08-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://blackflash.ca/shop/43.2/",
+  "independent": "yes",
+  "independence_evidence": "About page names the Buffalo Berry Press board and says BlackFlash is published, designed and disseminated in Saskatoon with funding from SK Arts and the Canada Council; the subscription page calls it a nonprofit organization and registered charity. Not owned by any media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Nonprofit, independently published Canadian art magazine with three print issues a year, the latest (43.2, Fall 2026) on sale in its own shop.",
+  "what_it_is": "BlackFlash is a Canadian contemporary art magazine from the prairies that grew out of photography and now covers photo, video, digital, performance and other image-based practices. Each issue carries feature essays, artist profiles, conversations and commissioned artist projects, mostly on Canadian artists with some international coverage. It is read by artists, curators, writers and students of contemporary art.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://blackflash.ca/wp-content/uploads/2026/08/Cover_432_Digital.jpg",
+      "source_type": "publisher",
+      "page_url": "https://blackflash.ca/shop/43.2/",
+      "issue_label": "43.2 (Fall 2026)",
+      "width": 1275,
+      "height": 1650,
+      "notes": "Flat front cover (Joy Walker grid artwork, green masthead) from the publisher's shop listing. Measured with identify."
+    }
+  ],
+  "evidence_urls": [
+    "https://blackflash.ca/",
+    "https://blackflash.ca/about",
+    "https://blackflash.ca/shop/43.2/",
+    "https://blackflash.ca/shop/43-1",
+    "https://blackflash.ca/shop/42-3",
+    "https://blackflash.ca/shop/?orderby=date",
+    "https://blackflash.ca/wp-json/wc/store/v1/products?per_page=20&orderby=date&order=desc",
+    "https://simplecirc.com/subscribe/blackflash-magazine"
+  ],
+  "uncertainties": [
+    "Exact publication date of 43.2 is not stated; the subscription page says issues are published in April, August and December and the 43.2 cover file was uploaded in August 2026, so August 2026 (month precision) is used. The distributor hint only named the Magazines Canada catalogue.",
+    "Cover price 12.00 CAD is the 'Print issue + Digital download' option in the publisher's shop (digital only is 8.00); the shop does not sell a print-only option.",
+    "Publisher legal name appears as Buffalo Berry Press on the about page (Magzter lists 'Buffalo Berry Press Inc.'); trim size and page count are not stated."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "input_title": "GAYLETTER",
+  "official_name": "GAYLETTER",
+  "publisher_name": "GAYLETTER, LLC",
+  "publisher_website": "https://gayletter.com",
+  "country": "US",
+  "city": "New York",
+  "frequency": "biannual",
+  "cover_price": 28.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.gayletter.com/",
+  "latest_issue_label": "Issue 23",
+  "latest_issue_date": "2026-08-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://shop.gayletter.com/product/gayletter-issue-23-sam-smith/",
+  "independent": "yes",
+  "independence_evidence": "Published by GAYLETTER, LLC (copyright line on its Substack), a two-founder New York operation that grew out of a weekly newsletter; no media-group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent New York queer culture magazine with issues 21 (Feb 2025), 22 (Oct 2025) and 23 (Aug 2026) on sale in its own shop.",
+  "what_it_is": "A New York queer culture magazine that grew out of a weekly events newsletter. Each issue pairs celebrity and artist cover stories (recently Sam Smith and Guitarricadelafuente, shot by photographers such as Collier Schorr) with interviews, nightlife, art and fashion photography, usually in two cover editions. It is for readers interested in contemporary gay and queer culture, photography and the New York scene.",
+  "suggested_primary_tag": "identity-politics",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://shop.gayletter.com/wp-content/uploads/2026/08/GUITARRICA_GAYLETTER_Cover_mockup.jpg",
+      "source_type": "publisher",
+      "page_url": "https://shop.gayletter.com/product/gayletter-issue-23-copy/",
+      "issue_label": "Issue 23 (Guitarricadelafuente cover)",
+      "width": 1800,
+      "height": 2400,
+      "notes": "Front cover shown nearly flat with a very light 3D spine shadow and white margin (filename says mockup); usable but not a pure flat scan."
+    },
+    {
+      "url": "https://shop.gayletter.com/wp-content/uploads/2026/08/SAMSMITH_GAYLETTER_Cover_instagram-mockup-2.png",
+      "source_type": "publisher",
+      "page_url": "https://shop.gayletter.com/product/gayletter-issue-23-sam-smith/",
+      "issue_label": "Issue 23 (Sam Smith cover)",
+      "width": 1500,
+      "height": 2000,
+      "notes": "Same light mockup treatment; filename says instagram-mockup."
+    }
+  ],
+  "evidence_urls": [
+    "https://gayletter.com/about/",
+    "https://gayletter.com/contact/",
+    "https://shop.gayletter.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://shop.gayletter.com/product/gayletter-issue-23-sam-smith/",
+    "https://shop.gayletter.com/product/gayletter-issue-23-copy/",
+    "https://gayletter.com/press/Gayletter_MediaKit.pdf",
+    "https://gayletter.substack.com/about"
+  ],
+  "uncertainties": "No street address is published; New York base taken from the media kit's description of the newsletter as a New York guide and the queer-culture-of-NYC framing. Issue 23 date taken from August 2026 upload date of the product images and 'Shipping now' note. Frequency is uneven (two issues in 2025, one in 2026 so far), recorded as biannual. No flat cover file: both candidates are light mockups."
+}

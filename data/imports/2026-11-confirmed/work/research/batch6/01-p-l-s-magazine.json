@@ -1,0 +1,49 @@
+{
+  "input_title": "P L S magazine",
+  "official_name": "PLS",
+  "publisher_name": "Palais de Tokyo",
+  "publisher_website": "https://palaisdetokyo.com/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "biannual",
+  "cover_price": 5.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": null,
+  "latest_issue_label": "N°41 (faire territoire)",
+  "latest_issue_date": "2026-10-21",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.kdpresse.com/products/p-l-s-n-41",
+  "independent": "unclear",
+  "independence_evidence": "Published by the Palais de Tokyo, a public contemporary-art centre in Paris ('Le magazine du Palais de Tokyo', KD Presse listing; contents and address 13 avenue du Président Wilson 75116 Paris on https://palaisdetokyo.com/pls-41/). Not a media group or brand customer magazine, but it is an institution's own magazine.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Print issues in April and October 2026 and the publisher is a public art institution rather than a media group, though the institutional status should be reviewed.",
+  "what_it_is": "A French-language contemporary art magazine issued by the Palais de Tokyo with each new exhibition season. Each number takes a single theme, such as territory or the body, and gathers essays and visual contributions from artists and researchers connected to the current shows. It suits readers following French contemporary art and the Palais de Tokyo programme.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/PLS41-COUV_cover-72dpi.jpg",
+      "source_type": "distributor",
+      "page_url": "https://www.kdpresse.com/products/p-l-s-n-41",
+      "issue_label": "N°41",
+      "width": 606,
+      "height": 794,
+      "notes": "Flat front cover but only 606px wide; no larger file found. Palais de Tokyo pages carry no cover image."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.kdpresse.com/products/p-l-s-n-41",
+    "https://www.kdpresse.com/products/p-l-s-n-40",
+    "https://www.kdpresse.com/products/p-l-s-ndeg38",
+    "https://www.kdpresse.com/products/p-l-s-ndeg37",
+    "https://palaisdetokyo.com/pls-41/",
+    "https://antennebooks.com/search?q=P+L+S"
+  ],
+  "uncertainties": "Publisher styles the title 'P L  S' with spaces on distributor listings and 'P L S #41' / 'PLS 41' on its own site; no publisher shop page was found, so the 5 EUR price is from distributor KD Presse. Frequency derived from release dates (Feb 2024, Oct 2024, Apr 2026, Oct 2026); 2025 issue dates not checked. Antenne Books product pages were JS-rendered and did not expose images."
+}

@@ -1,0 +1,61 @@
+{
+  "input_title": "Autre Magazine",
+  "official_name": "Autre",
+  "publisher_name": "True Love Industries",
+  "publisher_website": "https://autre.love/",
+  "country": "US",
+  "city": "Los Angeles",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "USD",
+  "trim_size": "9.65 x 11.85 in",
+  "page_count": 368,
+  "subscribe_url": "https://autre.love/new-products/autre-magazine-subscription-4-issues",
+  "latest_issue_label": "Issue 23, Fall/Winter 2026-27 (Wellness)",
+  "latest_issue_date": "2026-10-20",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://autre.love/new-products/autre-issue-23-wellness-fall-winter-2026",
+  "independent": "yes",
+  "independence_evidence": "Site copyright 'True Love Industries', a small Los Angeles company behind the magazine; the subscription page asks readers to 'support independent media'; no group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Los Angeles art and culture biannual with Issue 23 (Fall/Winter 2026-27) shipping since 20 October 2026.",
+  "what_it_is": "Autre is a large-format Los Angeles magazine covering art, fashion and culture through long interviews, essays and photography, with each issue organised around a single theme (Issue 23 is 'Wellness', Issue 22 'Surveillance'). Issues run several hundred pages, come with four alternative celebrity or artist covers, and every print order includes a digital edition. It is aimed at readers of contemporary art and culture criticism who want a theme-driven, collectible print object twice a year.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/544cb720e4b0f3ba72ee8a78/6c7da7ef-dab4-4502-85d7-1ffb058638d1/rashida_cover_shadow.jpg",
+      "source_type": "publisher",
+      "page_url": "https://autre.love/new-products/autre-issue-23-wellness-fall-winter-2026",
+      "issue_label": "Issue 23 (Rashida Jones cover)",
+      "width": 3199,
+      "height": 3928,
+      "notes": "Publisher product image: full front cover rendered flat on white with a soft drop shadow (a light mockup treatment); viewed, otherwise clean."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/544cb720e4b0f3ba72ee8a78/2f0094d0-16db-499b-8612-6f13863d4ce2/nairy_cover_shadow.jpg",
+      "source_type": "publisher",
+      "page_url": "https://autre.love/new-products/autre-issue-23-wellness-fall-winter-2026",
+      "issue_label": "Issue 23 (Nairy Baghramian cover)",
+      "width": 3199,
+      "height": 3928,
+      "notes": "Alternative cover of the same issue, same treatment; not viewed."
+    }
+  ],
+  "evidence_urls": [
+    "https://autre.love/",
+    "https://autre.love/masthead",
+    "https://autre.love/new-products/autre-issue-23-wellness-fall-winter-2026?format=json-pretty",
+    "https://autre.love/new-products/autre-issue-22-spring-summer-2026-the-surveillance-issue?format=json-pretty",
+    "https://autre.love/new-products/autre-magazine-subscription-4-issues?format=json-pretty"
+  ],
+  "uncertainties": [
+    "Issue 23 was announced as a pre-order on 20 October 2026 and the product page now says 'Ships NOW'; the listing's publish timestamp (20 October 2026) is used as the issue date.",
+    "Publisher entity taken from the site copyright line 'True Love Industries'; no legal page gives an address, and Los Angeles comes from the site's own description 'a print and digital magazine based in Los Angeles'.",
+    "The cover images carry a rendered drop shadow; a fully flat file was not found."
+  ]
+}
