@@ -210,5 +210,40 @@
    "crop": "geo:430x610+287+40",
    "trim": 5
   }
+ },
+ "16-wunderdog": {
+  "cover_candidates": [
+   {
+    "url": "https://wunderdogmagazine.com/",
+    "source_type": "publisher",
+    "page_url": "https://wunderdogmagazine.com/",
+    "issue_label": "Issue 10",
+    "width": 600,
+    "height": 900,
+    "notes": "Cover file supplied by Gem, trimmed from its light blue background.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/wunderdog10.jpg"
+   }
+  ],
+  "cover_ops": {
+   "trim": 8
+  }
+ },
+ "17-yolk": {
+  "cover_candidates": [
+   {
+    "url": "https://www.yolkliterary.ca/product/volume-5-2-spring-2026",
+    "source_type": "publisher",
+    "page_url": "https://www.yolkliterary.ca/product/volume-5-2-spring-2026",
+    "issue_label": "Volume 5.2, Spring 2026 (Want)",
+    "width": 1080,
+    "height": 1080,
+    "notes": "Publisher shop composite supplied by Gem, cropped to the cover.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/yolk52.jpg"
+   }
+  ],
+  "cover_ops": {
+   "crop": "geo:560x840+262+122",
+   "trim": 4
+  }
  }
 }
