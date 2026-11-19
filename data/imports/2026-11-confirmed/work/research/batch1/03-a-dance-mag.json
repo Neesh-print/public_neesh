@@ -1,0 +1,65 @@
+{
+  "input_title": "A Dance Mag",
+  "official_name": "a Dance Mag",
+  "publisher_name": "Dance Lit Limited",
+  "publisher_website": "https://www.adancemag.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "irregular",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "156 x 295 mm",
+  "page_count": 92,
+  "subscribe_url": null,
+  "latest_issue_label": "Issue 05: Flow",
+  "latest_issue_date": "2025-08-05",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.adancemag.com/structure-and-flow/",
+  "independent": "yes",
+  "independence_evidence": "Imprint names Dance Lit Limited (UK company 12920139) as 'an independent publisher responsible for a Dance Mag'; about page calls it an independent magazine; no group ownership anywhere.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent small-press dance magazine whose issues 04 and 05 were published together in 2025 (announced 5 August 2025) and are on sale through stockists.",
+  "what_it_is": "a Dance Mag is a small-format English-language print magazine about dance as it is practised and experienced around the world, from ritual and folk forms to club and contemporary scenes. Each issue takes one theme (Issue 05 is 'Flow', paired with Issue 04 'Structure') and fills 92 pages with essays, reportage and interviews plus a photography poster insert. It is aimed at dancers, dance scholars and general readers interested in movement, anthropology and culture rather than at ballet or performance-review audiences.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1486/2388/files/GUDBERG-NERGER_A-Dance-Mag_Issue-05_Flow.png?v=1768668231",
+      "source_type": "stockist",
+      "page_url": "https://gudbergnerger.com/products/a-dance-mag-issue-05-flow",
+      "issue_label": "Issue 05: Flow",
+      "width": 1000,
+      "height": 1000,
+      "notes": "Flat front cover (blue, dancer silhouette) placed on a square pink background by the stockist; the cover itself occupies roughly 300 x 650 px of the 1000 px square, so it would need cropping and is low resolution."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0822/0062/5490/files/AB8571-dance-mag-05-03.jpg?v=1792375911",
+      "source_type": "distributor",
+      "page_url": "https://antennebooks.com/products/a-dance-mag-issue-05-flow",
+      "issue_label": "Issue 05: Flow",
+      "width": 2337,
+      "height": 1756,
+      "notes": "Photograph of the physical copy on a white background (not a flat scan); shows the whole front cover clearly, landscape frame."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.adancemag.com/",
+    "https://www.adancemag.com/about/",
+    "https://www.adancemag.com/wp/imprint/",
+    "https://www.adancemag.com/magazine/",
+    "https://www.adancemag.com/structure-and-flow/",
+    "https://antennebooks.com/products/a-dance-mag-issue-05-flow",
+    "https://gudbergnerger.com/products/a-dance-mag-issue-05-flow"
+  ],
+  "uncertainties": [
+    "The publisher has no shop of its own, so no publisher cover price: Antenne lists GBP 19.00 and Gudberg Nerger EUR 22.00.",
+    "Latest issue date taken from the publisher's 'Structure & Flow, Out Now!' post (published 2025-08-05); Antenne listed it 2026-03 and Gudberg Nerger 2026-01, which may reflect when those shops received stock rather than the print date.",
+    "City: the imprint gives a London registered address (128 City Road, a common registered-office address); a stockist describes the magazine as 'from Beirut' and the editorial board is spread across Berlin and elsewhere, so London is the legal base rather than necessarily where it is made.",
+    "Issues appeared in 2018, 2019, 2020 and then 04 and 05 together in 2025, hence 'irregular'.",
+    "No flat publisher cover image of Issue 05 found; the publisher's own images are spreads and a bundle photo of issues 1-3."
+  ]
+}

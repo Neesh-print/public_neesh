@@ -1,0 +1,50 @@
+{
+  "input_title": "The Dorchester Review",
+  "official_name": "The Dorchester Review",
+  "publisher_name": "Foundation for Civic Literacy",
+  "publisher_website": "https://www.dorchesterreview.ca/",
+  "country": "CA",
+  "city": "Ottawa",
+  "frequency": "quarterly",
+  "cover_price": 24.95,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.dorchesterreview.ca/collections/magazine",
+  "latest_issue_label": "Summer 2026",
+  "latest_issue_date": "2026-01-01",
+  "latest_issue_date_precision": "year",
+  "latest_issue_source_url": "https://www.dorchesterreview.ca/products/single-copy",
+  "independent": "yes",
+  "independence_evidence": "Site footer states 'The Dorchester Review is published by the Foundation for Civic Literacy', a small Ottawa foundation with its own chairman and advisory board; run by part-time editors, no media-group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent foundation-published Canadian quarterly of historical commentary whose Summer 2026 print edition is the current single copy on sale.",
+  "what_it_is": "A Canadian journal of historical commentary and book reviews, with long essays on Canadian and British history, biography, politics and culture written from a conservative, polemical standpoint. Each quarterly print edition runs reviews and features on subjects such as Louis Riel, residential schools, the Senate and literary policy, with a mix of academics, former political staffers and journalists as contributors. It suits readers interested in Canadian history and conservative political argument who want a print review rather than a daily news outlet.",
+  "suggested_primary_tag": "ideas-science",
+  "suggested_secondary_tag": "news",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0765/7229/files/DR_36_Cover.png?v=1787768152",
+      "source_type": "publisher",
+      "page_url": "https://www.dorchesterreview.ca/products/single-copy",
+      "issue_label": "Summer 2026",
+      "width": 1652,
+      "height": 2452,
+      "notes": "Flat front cover of the Summer 2026 edition from the publisher's single-copy product listing (first image, uploaded 2026-08-26)."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.dorchesterreview.ca/",
+    "https://www.dorchesterreview.ca/pages/about",
+    "https://www.dorchesterreview.ca/pages/contact",
+    "https://www.dorchesterreview.ca/collections/magazine",
+    "https://www.dorchesterreview.ca/products/single-copy",
+    "https://www.dorchesterreview.ca/products.json?limit=250",
+    "https://www.dorchesterreview.ca/blogs/news/curious-case-of-coyne"
+  ],
+  "uncertainties": "The site does not give volume and number for the current edition; the label 'Summer 2026' is read from the cover image on the single-copy product (file named DR_36_Cover, uploaded 2026-08-26), and no exact release date is stated, so the date is recorded at year precision (August 2026 is likely). The magazine lists the single copy at CAD 24.95 while an older 'One Issue at a time' product is CAD 25.00. Frequency is quoted as quarterly on the homepage and in the 4-issue subscription; earlier volumes were biannual. Trim size and page count are not stated."
+}

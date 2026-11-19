@@ -1,0 +1,48 @@
+{
+  "input_title": "FreeFall",
+  "official_name": "FreeFall",
+  "publisher_name": "FreeFall Literary Society of Calgary",
+  "publisher_website": "https://freefallmagazine.ca/",
+  "country": "CA",
+  "city": "Calgary",
+  "frequency": "biannual",
+  "cover_price": 14.95,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://freefallmagazine.ca/subscribe/",
+  "latest_issue_label": "Volume XXXVI Number 2 (Fall 2026)",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://freefallmagazine.ca/magazine/freefall-volume-xxxvi-number-2/",
+  "independent": "yes",
+  "independence_evidence": "Published by the FreeFall Literary Society of Calgary, a non-profit group that took over the magazine in 2008, from an address in Calgary; no corporate owner (https://freefallmagazine.ca/about-freefall/, https://freefallmagazine.ca/contact/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent non-profit Calgary literary magazine with its Fall 2026 issue (Vol. XXXVI No. 2) out and two issues a year.",
+  "what_it_is": "FreeFall is a Calgary literary magazine publishing poetry, short fiction, memoir, essays, translations and author interviews twice a year, alongside the results of its annual prose and poetry contest. Each issue runs several dozen contributors, mostly Canadian, with a commissioned cover artwork. It is for readers and writers of Canadian literary fiction and poetry.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": null,
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://freefallmagazine.ca/wp-content/uploads/2026/11/Volume-36-No-2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://freefallmagazine.ca/magazine/freefall-volume-xxxvi-number-2/",
+      "issue_label": "Volume XXXVI Number 2",
+      "width": 455,
+      "height": 645,
+      "notes": "Flat front cover ('Industrial Elegance' by Dana Pitts) from the publisher's issue page, but only 455x645 px."
+    }
+  ],
+  "evidence_urls": [
+    "https://freefallmagazine.ca/magazine/freefall-volume-xxxvi-number-2/",
+    "https://freefallmagazine.ca/about-freefall/",
+    "https://freefallmagazine.ca/contact/",
+    "https://freefallmagazine.ca/single-copy-sale/",
+    "https://freefallmagazine.ca/subscribe/"
+  ],
+  "uncertainties": "The issue is labelled Fall 2026 and its cover file was uploaded in November 2026, so the date is recorded as November 2026 at month precision. The single-copy price is the CAD 14.95 'current copy' fee on the single-copy page (US and overseas copies cost more). Only a small cover image is available."
+}

@@ -1,0 +1,66 @@
+{
+  "input_title": "CircleZeroEight",
+  "official_name": "CircleZeroEight",
+  "publisher_name": "Circle08 Media Ltd",
+  "publisher_website": "https://www.circlezeroeight.com/",
+  "country": "GB",
+  "city": null,
+  "frequency": "biannual",
+  "cover_price": 9.95,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.circlezeroeight.com/store",
+  "latest_issue_label": "Issue 09",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.circlezeroeight.com/store/issue-09-cover-1",
+  "independent": "yes",
+  "independence_evidence": "Published by Circle08 Media Ltd ('© 2026 Circle08 Media Ltd'), a small company set up for this title by a former British GQ Style editor; the about page describes it as a founder-led multimedia platform and biannual publication, with no media-group owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent UK biannual with Issue 09 (2026) on sale in its own store and nine print issues since 2021.",
+  "what_it_is": "CircleZeroEight is a UK magazine about sport seen through style and culture: profiles of footballers, fighters and athletes shot like fashion editorials, features on grassroots clubs and sporting subcultures, and fashion stories tied to the rituals of the game. Each biannual issue comes with several covers (Issue 09, a football issue timed to the 2026 World Cup, has Morgan Rogers, Khadija Shaw and a 'We Are The World' cover). It suits readers who follow sport but buy fashion and culture glossies.",
+  "suggested_primary_tag": "sport",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0705/4770/2074/files/WeAreTheWorldIssue09.jpg?v=1780243990",
+      "source_type": "publisher",
+      "page_url": "https://www.circlezeroeight.com/store/issue-09-cover-1",
+      "issue_label": "Issue 09 (We Are The World cover)",
+      "width": 2717,
+      "height": 3544,
+      "notes": "Publisher store image on the brand's Shopify CDN; flat front cover, largest of the three."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0705/4770/2074/files/cover-rogers.jpg?v=1779451499",
+      "source_type": "publisher",
+      "page_url": "https://www.circlezeroeight.com/store/issue-09-cover-1",
+      "issue_label": "Issue 09 (Cover 1 of 3, Morgan Rogers)",
+      "width": 1359,
+      "height": 1772,
+      "notes": "Publisher store image, flat front cover."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0705/4770/2074/files/CZ8Issue09-KhadijaShaw.jpg?v=1779894727",
+      "source_type": "publisher",
+      "page_url": "https://www.circlezeroeight.com/store/issue-09-cover-1",
+      "issue_label": "Issue 09 (Khadija Shaw cover)",
+      "width": 1359,
+      "height": 1772,
+      "notes": "Publisher store image, flat front cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.circlezeroeight.com/",
+    "https://www.circlezeroeight.com/about",
+    "https://www.circlezeroeight.com/store",
+    "https://www.circlezeroeight.com/store/issue-09-cover-1",
+    "https://www.circlezeroeight.com/sport/khadija-shaw"
+  ],
+  "uncertainties": "No city or postal address appears anywhere on the site (contact page is a 404 and the privacy/terms pages carry no address); the company is UK-registered and the team is London-based by background, but city is left null rather than guessed. The Issue 09 on-sale date is inferred: cover files were uploaded to the store on 22-31 May 2026, the issue is described as timed 'to celebrate the World Cup' (June-July 2026) and its articles went online from 24 August 2026, so June 2026 is recorded with month precision. Trim size and page count are not stated. Single-copy price GBP 9.95 per the store."
+}

@@ -1,0 +1,49 @@
+{
+  "input_title": "Full Pour",
+  "official_name": "Full Pour",
+  "publisher_name": "Full Pour",
+  "publisher_website": "https://full-pour.com",
+  "country": "US",
+  "city": "Brookfield, Connecticut",
+  "frequency": "quarterly",
+  "cover_price": 20.0,
+  "currency": "USD",
+  "trim_size": "8 x 10 in",
+  "page_count": 100,
+  "subscribe_url": "https://full-pour.com/product/full-pour-magazine-annual-subscription/",
+  "latest_issue_label": "Issue No. 15 – Fall 2026",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://full-pour.com/product/full-pour-issue-no-15-fall-2026/",
+  "independent": "yes",
+  "independence_evidence": "Self-published drinks title run from a PO box in Brookfield, CT; about page describes its own ad model and no parent company; copyright © 2026 Full Pour.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent US quarterly with four 2025 issues and three 2026 issues (latest Fall 2026, No. 15) sold on its own site.",
+  "what_it_is": "A quarterly US magazine about drinks of every kind, organised into five recurring sections: wine, beer, spirits, infused (cannabis) and zero-proof, with coffee and tea also covered. Each 100-page issue mixes reported features on producers, farming and industry issues with short interviews, and it avoids scores or buying guides. It is aimed at curious drinkers and trade people who want cross-category reading rather than a single-beverage title.",
+  "suggested_primary_tag": "food",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://full-pour.com/wp-content/uploads/2026/09/PDP-Fall-26.jpg",
+      "source_type": "publisher",
+      "page_url": "https://full-pour.com/product/full-pour-issue-no-15-fall-2026/",
+      "issue_label": "Issue No. 15 – Fall 2026",
+      "width": 1000,
+      "height": 1000,
+      "notes": "Flat front cover (illustration by Tarik Mask) letterboxed on a black square; cover itself is about 800x1000 px within the square."
+    }
+  ],
+  "evidence_urls": [
+    "https://full-pour.com/",
+    "https://full-pour.com/about/",
+    "https://full-pour.com/contact/",
+    "https://full-pour.com/product/full-pour-issue-no-15-fall-2026/",
+    "https://full-pour.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://papercutshop.se/product/full-pour-no-13-spring-2026/"
+  ],
+  "uncertainties": "Only a mailing PO box is given, so 'city' is the PO box town (Brookfield, CT). Issue date taken from the Fall 2026 label and the September 2026 upload date of the cover image. Trim size is derived from the shop's listed product dimensions (8 x .25 x 10 in)."
+}

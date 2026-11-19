@@ -1,0 +1,68 @@
+{
+  "input_title": "Carnale",
+  "official_name": "Carnale",
+  "publisher_name": "Carnale S.r.l.",
+  "publisher_website": "https://carnaleroom.com/",
+  "country": "IT",
+  "city": "Milan",
+  "frequency": "biannual",
+  "cover_price": 30.0,
+  "currency": "EUR",
+  "trim_size": "22.5 x 30 cm",
+  "page_count": 304,
+  "subscribe_url": "https://carnaleroom.com/shop",
+  "latest_issue_label": "Issue 09 — Backwards",
+  "latest_issue_date": "2026-03-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://carnaleroom.com/issues/issue-09/",
+  "independent": "yes",
+  "independence_evidence": "Info page: 'Carnale is a creative studio and an independent editorial project with a bold positioning, a biannual rhythm and a Milanese libido'; legal area names the publisher as Carnale S.r.l., Corso Como 6, Milan, share capital EUR 15,000.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Self-described independent Milan publisher with Issue 09 (2026) on sale in its own shop and Issue 08 released in late 2025.",
+  "what_it_is": "Carnale is a Milan biannual where fashion photography meets erotica: each 300-page issue gathers around sixteen photographic stories, artist contributions, interviews and essays on a theme, with four alternative covers. Issue 09, 'Backwards', is about slowing down and reclaiming time, body and desire. It is for readers of adult-oriented fashion and image culture and collectors of large-format Italian independents.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://carnaleroom.com/wp-content/uploads/2026/03/C-ISSUE09-COVER-SIMONE-COSSETTINI.jpg",
+      "source_type": "publisher",
+      "page_url": "https://carnaleroom.com/product/issue-09-cover-1/",
+      "issue_label": "Issue 09 — Backwards (Cover 1, Simone Cossettini)",
+      "width": 1200,
+      "height": 1800,
+      "notes": "Publisher shop product image, flat front cover."
+    },
+    {
+      "url": "https://carnaleroom.com/wp-content/uploads/2026/03/C-ISSUE09-COVER-ALICE-ROSATI.jpg",
+      "source_type": "publisher",
+      "page_url": "https://carnaleroom.com/product/issue-09-cover-2/",
+      "issue_label": "Issue 09 — Backwards (Cover 2, Alice Rosati)",
+      "width": 1200,
+      "height": 1800,
+      "notes": "Publisher shop product image, alternative cover."
+    },
+    {
+      "url": "https://carnaleroom.com/wp-content/uploads/2026/03/C-ISSUE09-COVER-GIAMPAOLO-SGURA.jpg",
+      "source_type": "publisher",
+      "page_url": "https://carnaleroom.com/product/issue-09-cover-3/",
+      "issue_label": "Issue 09 — Backwards (Cover 3, Giampaolo Sgura)",
+      "width": 1200,
+      "height": 1800,
+      "notes": "Publisher shop product image, alternative cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://carnaleroom.com/",
+    "https://carnaleroom.com/info/",
+    "https://carnaleroom.com/legal-area/",
+    "https://carnaleroom.com/issues/issue-09/",
+    "https://carnaleroom.com/product/issue-09-cover-1/",
+    "https://carnaleroom.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://sodabooks.com/publications/erotica/carnale-09/"
+  ],
+  "uncertainties": "The issue date is inferred from the March 2026 upload of the Issue 09 cover files and product listings on the publisher's site (the hint labels it SS2026); Issue 08 files were uploaded November 2025. The publisher's domain is carnaleroom.com (the magazine's project name is 'Carnale Room'); carnalemagazine.com does not resolve."
+}

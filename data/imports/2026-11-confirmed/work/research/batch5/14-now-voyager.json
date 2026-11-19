@@ -1,0 +1,50 @@
+{
+  "input_title": "Now Voyager",
+  "official_name": "Now Voyager",
+  "publisher_name": "Erythraean Foundation",
+  "publisher_website": "https://nowvoyagermag.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "bimonthly",
+  "cover_price": 29.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://nowvoyagermag.com/subscription",
+  "latest_issue_label": "Issue 05",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://nowvoyagermag.com/issues",
+  "independent": "yes",
+  "independence_evidence": "Site footer states it is 'a publication of the Erythraean Foundation'; the about page describes a new print magazine edited primarily in New York, with no media-group owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Foundation-published bimonthly launched in March 2026 with Issue 05 out in November 2026.",
+  "what_it_is": "A bimonthly print magazine of international reporting and long-form writing, with sections for global briefings, reportage, art and photography portfolios, books, culture, travel, food, poetry and cartoons. Each issue is organised around the places its stories come from, listed on the cover, and runs pieces of twenty to fifty minutes' reading time. It is for readers who want foreign-correspondent journalism and literary essays in a printed format.",
+  "suggested_primary_tag": "news",
+  "suggested_secondary_tag": "literary",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://s.nowvoyagermag.com/a5aB0hRvP1kHABDu/i/x2048/a/91/f4d920f603e2efd050f3e533bc08291a.jpg",
+      "source_type": "publisher",
+      "page_url": "https://nowvoyagermag.com/issues/issue-05",
+      "issue_label": "Issue 05",
+      "width": 1536,
+      "height": 2048,
+      "notes": "Flat front cover (green, text-only cover listing territories, locations and contributors) served from the publisher's own image CDN for the Issue 05 page."
+    }
+  ],
+  "evidence_urls": [
+    "https://nowvoyagermag.com/",
+    "https://nowvoyagermag.com/issues",
+    "https://nowvoyagermag.com/issues/issue-05",
+    "https://nowvoyagermag.com/issues/issue-04",
+    "https://nowvoyagermag.com/about",
+    "https://nowvoyagermag.com/contact",
+    "https://nowvoyagermag.com/subscription"
+  ],
+  "uncertainties": "Issue 05 has no explicit month label on the issues page yet; its articles are dated 17 November 2026 and Issue 04 was labelled September 2026, so November 2026 is recorded at month precision. The $29 price is the single-copy price shown on the Issue 04 page (Issue 05 single-copy purchase not yet listed when checked); single copies ship within the US only. Trim size and page count not stated."
+}

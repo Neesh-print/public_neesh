@@ -1,0 +1,290 @@
+{
+ "02-doesnt-exist": {
+  "cover_candidates": [
+   {
+    "url": "https://doesnt-exist.com/wp-content/uploads/2025/02/ISSUE-SEVEN-SET-A-Vol-1.jpg",
+    "source_type": "publisher",
+    "page_url": "https://doesnt-exist.com/",
+    "issue_label": "Issue Seven",
+    "width": 482,
+    "height": 680,
+    "notes": "Flat cover of Set A volume 1; the site serves no larger version."
+   }
+  ]
+ },
+ "02-synth-history": {
+  "cover_candidates": []
+ },
+ "03-a-dance-mag": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/1486/2388/files/GUDBERG-NERGER_A-Dance-Mag_Issue-05_Flow.png?v=1768668231",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "Issue 05: Flow",
+    "width": 1000,
+    "height": 1000,
+    "notes": "Flat cover on a pink square, trimmed."
+   }
+  ],
+  "cover_ops": {
+   "trim": 8
+  }
+ },
+ "03-temple-magazine": {
+  "cover_candidates": []
+ },
+ "04-lovewant": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/0609/9091/4631/files/LoveWant_47_1000px.jpg?v=1793845883",
+    "source_type": "distributor",
+    "page_url": null,
+    "issue_label": "Issue 47",
+    "width": 1000,
+    "height": 750,
+    "notes": "Flat cover on white, trimmed; small."
+   }
+  ],
+  "cover_ops": {
+   "trim": 8
+  }
+ },
+ "04-the-aficionados": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/0613/5998/0743/files/NM1168.jpg?v=1784756268",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "Unwaxed Lemons",
+    "width": 914,
+    "height": 1198,
+    "notes": "Flat cover from stockist New Mags; publisher only shows a lifestyle photo."
+   }
+  ]
+ },
+ "05-acid-magazine": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Screenshot2026-10-14at11.09.24.png?v=1791972582",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "No8",
+    "width": 844,
+    "height": 1178,
+    "notes": "Flat cover from magCulture; publisher only shows product photos."
+   }
+  ]
+ },
+ "05-glory": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/2567/7220/files/Glory_Magazine_12_Mexico.jpg?v=1781709643",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "No. 12 Mexico",
+    "width": 1400,
+    "height": 1399,
+    "notes": "Straight-on photo of the cover on grey, trimmed."
+   }
+  ],
+  "cover_ops": {
+   "trim": 10
+  }
+ },
+ "05-profane": {
+  "cover_candidates": []
+ },
+ "06-adbusters": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/1022/3793/files/adbustnew.jpg?v=1794921262",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "#187",
+    "width": 2330,
+    "height": 2330,
+    "notes": "Photo of the issue lying flat on grey, trimmed; publisher only has a 3D mockup."
+   }
+  ],
+  "cover_ops": {
+   "trim": 20
+  }
+ },
+ "06-union-magazine": {
+  "cover_ops": {
+   "trim": 15
+  }
+ },
+ "07-ee72": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/0713/1404/7116/files/FALL2026PAIRINGS1.jpg?v=1786538002",
+    "source_type": "publisher",
+    "page_url": null,
+    "issue_label": "Fall 2026 (Issue 5)",
+    "width": 1920,
+    "height": 1244,
+    "notes": "Left cover of the publisher's side-by-side pair, cropped and trimmed."
+   }
+  ],
+  "cover_ops": {
+   "crop": "left",
+   "trim": 8
+  }
+ },
+ "07-herdes": {
+  "cover_candidates": []
+ },
+ "07-the-grand-tourist": {
+  "cover_candidates": []
+ },
+ "08-the-greatest": {
+  "cover_ops": {
+   "trim": 8
+  }
+ },
+ "09-hype-and-hyper": {
+  "cover_ops": {
+   "trim": 8
+  }
+ },
+ "09-the-light-observer": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/0273/5118/7538/files/the-light-observer-issue-8.jpg?v=1792937991",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "Issue 08",
+    "width": 1000,
+    "height": 1500,
+    "notes": "Flat cover on the stockist's grey background, trimmed; publisher image is a 3D render."
+   }
+  ],
+  "cover_ops": {
+   "crop": "center:61%x59%"
+  }
+ },
+ "10-the-lissome": {
+  "cover_ops": {
+   "trim": 8
+  }
+ },
+ "11-we-are-makers": {
+  "cover_candidates": [
+   {
+    "url": "https://magculture.com/cdn/shop/files/WeAreMakers20.png",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "Edition Twenty",
+    "width": 1000,
+    "height": 1301,
+    "notes": "Flat cover from magCulture; publisher image is a shadowed render on a square."
+   }
+  ]
+ },
+ "12-far-near": {
+  "cover_candidates": []
+ },
+ "12-sandweegies": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Sandweegies_3.png?v=1794223642",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "Issue 03",
+    "width": 794,
+    "height": 1044,
+    "notes": "Flat cover from magCulture; publisher image is a mockup on orange."
+   }
+  ]
+ },
+ "17-yolk": {
+  "cover_candidates": []
+ },
+ "18-tunica-magazine": {
+  "cover_candidates": [
+   {
+    "url": "https://tunicastudio.com/wp-content/uploads/2026/05/TUNICA-VOLX_Covers-1-3-pdf.jpg",
+    "source_type": "publisher",
+    "page_url": null,
+    "issue_label": "Volume X",
+    "width": 2374,
+    "height": 1411,
+    "notes": "Front cover cropped from the publisher's back-spine-front spread (right half)."
+   }
+  ],
+  "cover_ops": {
+   "crop": "right",
+   "trim": 4
+  }
+ },
+ "13-fatboy-zine": {
+  "cover_candidates": [
+   {
+    "url": "https://fatboyzine.com/wp-content/uploads/2025/08/FBZ-issue6-Multi-Heritage.jpg",
+    "source_type": "publisher",
+    "page_url": "https://fatboyzine.com/",
+    "issue_label": "Issue 6",
+    "width": 482,
+    "height": 678,
+    "notes": "Flat cover from the publisher's zines page; small."
+   }
+  ]
+ },
+ "10-richardson": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "12-we-jazz": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "11-the-new-order": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "12-italy-segreta": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "17-leafie": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "15-badlon-magazine": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "13-autre-magazine": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "14-the-site-magazine": {
+  "cover_ops": {
+   "trim": 15
+  }
+ },
+ "16-folding-rock": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "05-unemployed": {
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "02-turps-magazine": {
+  "cover_ops": {
+   "trim": 6
+  }
+ }
+}

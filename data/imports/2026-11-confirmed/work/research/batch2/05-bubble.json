@@ -1,0 +1,48 @@
+{
+  "input_title": "Bubble",
+  "official_name": "Bubble",
+  "publisher_name": "Stefan Schwinghammer (Bubble Skateboardmagazine)",
+  "publisher_website": "https://bubbleskatemag.com/",
+  "country": "DE",
+  "city": "Cologne",
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.bubbleskatemag.com/",
+  "latest_issue_label": "Issue 005 — Architecture Issue",
+  "latest_issue_date": "2026-09-28",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://bubbleskatemag.com/bubble-005-architecture-issue",
+  "independent": "yes",
+  "independence_evidence": "Legal notice names the responsible publisher as an individual, Stefan Schwinghammer, Glasstraße 58, 50823 Köln (editor-in-chief and advertising), with a small editorial team; it is a self-published skate magazine started by former staff of the closed SOLO magazine, not a media-group title.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Cologne skate magazine whose fifth print issue was announced as out on 28 September 2026, with issue 3 in 2025.",
+  "what_it_is": "Bubble is a German, English-language skateboarding magazine that looks beyond tricks to the people and culture around skating: issue 005 is devoted to skateboarding's relationship with architecture, urban planning, DIY spots and skatepark design. It mixes long interviews, photography and themed essays, and is sold through skate shops and magazine stores as well as its own webshop. It is for skaters and readers of design and urbanism titles who want a slower, more reflective skate magazine.",
+  "suggested_primary_tag": "sport",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://bubbleskatemag.com/upload/News/Bubble-Skatemag-05-Cover.jpg",
+      "source_type": "publisher",
+      "page_url": "https://bubbleskatemag.com/bubble-005-architecture-issue",
+      "issue_label": "Issue 005 — Architecture Issue",
+      "width": 553,
+      "height": 709,
+      "notes": "Publisher news-post image of the issue 005 cover; flat cover but small (553x709), below the 1000px target. No larger version found because the shop was offline."
+    }
+  ],
+  "evidence_urls": [
+    "https://bubbleskatemag.com/",
+    "https://bubbleskatemag.com/bubble-005-architecture-issue",
+    "https://bubbleskatemag.com/legal-notice",
+    "https://shop.bubbleskatemag.com/",
+    "https://skatevideosite.com/companies/bubble-skateboard-magazine"
+  ],
+  "uncertainties": "The publisher's Shopify webshop (shop.bubbleskatemag.com) returned 'This store is unavailable' (HTTP 500) on both attempts, so no cover price, page count or trim size could be recorded and no larger cover image was obtained. Frequency is estimated from cadence: five issues since the title launched after SOLO closed in 2024 (issue 3 in 2025, issue 5 in September 2026), roughly two a year, but individual issue dates for 002-004 were not found on the site, so 'biannual' is approximate (a 2026 Quartersnacks piece groups it with titles publishing quarterly or ad hoc). The publisher is an individual rather than a company, per the legal notice."
+}

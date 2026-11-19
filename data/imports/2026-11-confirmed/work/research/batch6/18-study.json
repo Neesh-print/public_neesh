@@ -1,0 +1,66 @@
+{
+  "input_title": "STUDY",
+  "official_name": "STUDY",
+  "publisher_name": "STUDY SAS",
+  "publisher_website": "https://studymagazine.fr/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "quarterly",
+  "cover_price": 35.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://studymagazine.fr/collections/all",
+  "latest_issue_label": "Volume 16 (09.26): The Old World, Living New",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://studymagazine.fr/products/volume-16-the-old-world-living-new",
+  "independent": "yes",
+  "independence_evidence": "Legal notice names the publisher as STUDY, a société par actions simplifiée with 10,000 EUR capital at 19 rue de Babylone, 75007 Paris (https://studymagazine.fr/policies/legal-notice); about page calls it 'independent in spirit' (https://studymagazine.fr/pages/about).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Paris publication with print Volume 16 released September 2026 after four volumes in 2025.",
+  "what_it_is": "An English-language volume-per-subject publication in which each issue examines one person, place or idea through portfolios, conversations, essays, fashion editorials and archival documents, in a format designed to be kept rather than read once. Volume 16 revisits 1920s European modernist interiors through the archive of photographer Thérèse Bonney. It is for readers of fashion, art and design publishing who collect photography books.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0575/7845/5063/files/16Study_cover1.jpg?v=1789569609",
+      "source_type": "publisher",
+      "page_url": "https://studymagazine.fr/products/volume-16-the-old-world-living-new",
+      "issue_label": "Volume 16",
+      "width": 1654,
+      "height": 2339,
+      "notes": "Flat front cover (staircase photograph, 'VOL.16/09.26'); checked visually."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0575/7845/5063/files/16Study_cover2.jpg?v=1789569790",
+      "source_type": "publisher",
+      "page_url": "https://studymagazine.fr/products/volume-16-the-old-world-living-new",
+      "issue_label": "Volume 16 (alternate cover)",
+      "width": 1654,
+      "height": 2339,
+      "notes": "Second cover file on the same product page; Volume 16 is sold with several cover variants."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Study16.jpg?v=1792752885",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/study-16",
+      "issue_label": "Volume 16",
+      "width": 1170,
+      "height": 1654,
+      "notes": "Cover as listed by magCulture."
+    }
+  ],
+  "evidence_urls": [
+    "https://studymagazine.fr/products/volume-16-the-old-world-living-new",
+    "https://studymagazine.fr/products.json",
+    "https://studymagazine.fr/pages/about",
+    "https://studymagazine.fr/policies/legal-notice",
+    "https://magculture.com/products/study-16"
+  ],
+  "uncertainties": "The shop's products.json gives 35.00 without a currency; the store is French and priced in euros, so EUR is assumed. The cover carries 'VOL.16/09.26' and the shop listing is dated 2026-09-22, so September 2026 is recorded. Stockists give 220 x 300 mm and 178 pages, not recorded because the publisher's site does not state them. Volume 16 appears to have at least four cover variants; the first file is recorded as primary."
+}

@@ -1,0 +1,49 @@
+{
+  "input_title": "Carcy",
+  "official_name": "Carcy",
+  "publisher_name": null,
+  "publisher_website": null,
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": null,
+  "latest_issue_label": "Issue 15 (SS 2026)",
+  "latest_issue_date": "2026-07-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://villagebooks.co/products/carcy-15",
+  "independent": "unclear",
+  "independence_evidence": "No publisher imprint could be read: the magazine's own site (carcymagazine.com) could not be reached through the research proxy (HTTP 502 on every attempt) and no other official domain was found. Stockists (Soda Books, Unique Magazines) describe it as a Paris-based independent biannual founded in 2017, and nothing links it to a media group, but this is not confirmed from the publisher's own pages.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Print issues 13 (2025), 14 (FW 2025) and 15 (SS 2026) are documented at stockists and no media-group ownership is indicated, though independence is confirmed only from third-party descriptions.",
+  "what_it_is": "Carcy is a large-format Paris magazine about eroticism, the body and representation, mixing fashion photography, illustration, essays and performance documentation around a theme per issue; Issue 15 imagines a 'neo-city' and a new Renaissance. It appears twice a year with several alternative covers and runs to roughly 180-200 pages. It suits readers of art-fashion and erotica titles such as Carnale or Butt.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1022/3793/files/carcyss26.jpg?v=1785248583",
+      "source_type": "stockist",
+      "page_url": "https://villagebooks.co/products/carcy-15",
+      "issue_label": "Issue 15 (SS 2026)",
+      "width": 2692,
+      "height": 2692,
+      "notes": "Village Books listing image; square canvas (no trimmable white border), so the cover probably sits on a coloured background and would need cropping. Covers are sent at random, so this shows one of several Issue 15 covers."
+    }
+  ],
+  "evidence_urls": [
+    "https://villagebooks.co/products/carcy-15",
+    "https://villagebooks.co/products/carcy-14",
+    "https://villagebooks.co/products/carcy-13",
+    "https://sodabooks.com/publications/fashion/carcy-13",
+    "https://doyoureadme.de/products/carcy-f-w-2025",
+    "https://www.uniquemagazines.co.uk/Carcy-Magazine-Subscription-p356822"
+  ],
+  "uncertainties": "The publisher's own website could not be fetched (carcymagazine.com returned a proxy 502 on two attempts; alternative domains do not resolve), so publisher name, website, own-shop price, trim size, page count and subscribe URL are unverified and left null. Paris and the biannual rhythm come from stockist descriptions (Soda Books: 'Paris-born', '2 issues per year'; Village Books cadence #13 Jun 2025, #14 Jan 2026, #15 Jul 2026). The Issue 15 date is the Village Books listing date (2026-07-28); the hint said #14 was Winter 2025, consistent with this. Village Books sells Issue 15 for GBP 28, which is a stockist price, not the publisher's."
+}

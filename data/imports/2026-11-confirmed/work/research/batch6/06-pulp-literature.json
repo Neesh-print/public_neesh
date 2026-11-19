@@ -1,0 +1,58 @@
+{
+  "input_title": "Pulp Literature",
+  "official_name": "Pulp Literature",
+  "publisher_name": "Pulp Literature Press",
+  "publisher_website": "https://pulpliterature.com/",
+  "country": "CA",
+  "city": "Langley",
+  "frequency": "quarterly",
+  "cover_price": 17.99,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://pulpliterature.com/subscribe/",
+  "latest_issue_label": "Issue 51, Summer 2026",
+  "latest_issue_date": "2026-08-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://pulpliterature.com/issue-51-summer-2026/",
+  "independent": "yes",
+  "independence_evidence": "About page: 'Pulp Literature Press was the brainchild of Jen, Mel and Sue, a trio of writer-editors' who publish what they want to read (https://pulpliterature.com/about/); the site runs reader fundraising drives to cover printing ('Keep the Presses Rolling 2026').",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent small-press quarterly with print issues through Summer 2026 (Issue 51).",
+  "what_it_is": "A Canadian quarterly digest of genre fiction, poetry and comics, with a strong leaning towards science fiction, fantasy and mystery alongside literary work. Issues run serialised novellas, contest winners and feature authors, and are sold in print and ebook form. It is for readers who like story-driven fiction in a pocketable, inexpensive format.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": null,
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://pulpliterature.com/wp-content/uploads/2026/08/PL51Cover-01.jpg",
+      "source_type": "publisher",
+      "page_url": "https://pulpliterature.com/issue-51-summer-2026/",
+      "issue_label": "Issue 51, Summer 2026",
+      "width": 1747,
+      "height": 2681,
+      "notes": "Flat front cover (Buttercups and Beach Rocks by Reilly Fitzgerald)."
+    },
+    {
+      "url": "https://pulpliterature.com/wp-content/uploads/2026/08/PL51Cover-01-scaled.jpg",
+      "source_type": "publisher",
+      "page_url": "https://pulpliterature.com/issue-51-summer-2026/",
+      "issue_label": "Issue 51, Summer 2026",
+      "width": 1668,
+      "height": 2560,
+      "notes": "WordPress scaled copy of the same cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://pulpliterature.com/",
+    "https://pulpliterature.com/issue-51-summer-2026/",
+    "https://pulpliterature.com/product/issue-51-summer-2026/",
+    "https://pulpliterature.com/about/",
+    "https://pulpliterature.com/wp-json/wp/v2/posts?search=issue%2051",
+    "https://magsbc.com/member_magazines/pulp-literature/"
+  ],
+  "uncertainties": "City comes from the Magazines BC member listing (21955 16 Ave, Langley, BC) rather than the publisher's own pages, which show no address. Issue 51 release date is inferred from the cover upload (Aug 2026) and the first Issue 51 posts (Oct 2026); the price is from the product page in the publisher's Canadian shop, currency assumed CAD."
+}

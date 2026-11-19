@@ -29,6 +29,27 @@ that failed it belong in `needs-verification.csv` or `excluded.csv`, not here.
 | | `last_issue_date` | `YYYY-MM-DD`, from the publisher's own shop |
 | | `verified_at` | `YYYY-MM-DD` when a human confirmed status and frequency |
 
+## Optional columns for reviewed additions
+
+A batch of titles that still needs a human review before it shows (the
+November 2026 distributor-confirmed batch under `data/imports/`) adds these
+columns. All are optional; `npm run load -- --insert-only` reads them.
+
+| Canonical CSV header | Notes |
+|---|---|
+| `title_slug` | override the slug derived from the name, for names whose ASCII fold is unreadable |
+| `publisher_slug` | pin the row to an existing publisher row, or share one slug across sibling titles of a new publisher |
+| `subscribe_url` | the publisher's own subscribe or shop page |
+| `primary_tag` | one of the row's `tags`; the title's primary niche |
+| `review_status` | `approved` (default) or `pending`; pending rows stay off public pages and out of the sitemap until approved |
+| `cover_url` | direct image URL of the latest issue's front cover; fetched into the `covers` bucket as `{slug}.jpg`, never hotlinked |
+| `cover_page_url` | the page the cover was taken from |
+| `cover_source_type` | `publisher`, `distributor` or `stockist` |
+| `issue_label` | latest print issue, e.g. `Issue 64` |
+| `issue_number` | numeric part of the label, if any |
+| `issue_date` | `YYYY-MM-DD` publication date of that issue |
+| `issue_source_url` | where the issue was verified |
+
 ## Frequency normalization
 
 The sheet's frequency column is not trusted (spec 4.2); the verification pass

@@ -1,0 +1,249 @@
+{
+ "06-c-41": {
+  "cover_candidates": [
+   {
+    "url": "https://www.c41magazine.com/wp-content/uploads/2026/06/C41_19_Ray-Ban_webproduct.jpg",
+    "source_type": "publisher",
+    "page_url": "https://www.c41magazine.com/product/c41-magazine-issue-19-tactile-realities/",
+    "issue_label": "Issue 19",
+    "width": 2000,
+    "height": 2000,
+    "notes": "Publisher product image, cover on a black square, trimmed.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/dl/C41_Issue_19_kit.img"
+   }
+  ],
+  "cover_ops": {
+   "trim": 10
+  }
+ },
+ "15-civilization": {
+  "cover_candidates": [
+   {
+    "url": "https://cdn.sanity.io/images/syotmk9q/production/3f108e6201ed8a44be25d0ad28e50235efa48c97-1455x2001.jpg?auto=format&h=5281&q=70&w=3840",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "Issue 7",
+    "width": 3840,
+    "height": 5281,
+    "notes": "Flat cover supplied via Gem's cover kit (Sanity CDN of a stockist site); publisher site has no images."
+   }
+  ]
+ },
+ "18-der-greif": {
+  "cover_candidates": [
+   {
+    "url": "https://doyoureadme.de/cdn/shop/files/44308-Der-Greif-19-2026-1.jpg?v=1795011047",
+    "source_type": "stockist",
+    "page_url": "https://doyoureadme.de/products/der-greif-19-2026",
+    "issue_label": "Issue 19",
+    "width": 1500,
+    "height": 1500,
+    "notes": "do you read me?! listing image, cover centred on white, trimmed; small."
+   }
+  ],
+  "cover_ops": {
+   "trim": 6
+  }
+ },
+ "12-far-near": {
+  "cover_candidates": [
+   {
+    "url": "https://far-near.media/wp-content/uploads/2025/09/Vol6-Standard.jpg",
+    "source_type": "publisher",
+    "page_url": "https://far-near.media/",
+    "issue_label": "Vol. 6 Heat",
+    "width": 4967,
+    "height": 4967,
+    "notes": "Publisher standard edition image, flat cover on white, trimmed."
+   }
+  ],
+  "cover_ops": {
+   "crop": "geo:2150x3550+1420+220",
+   "trim": 5
+  }
+ },
+ "05-profane": {
+  "cover_candidates": [
+   {
+    "url": "https://issuesmagshop.com/cdn/shop/files/Profane22_674x1001_5338961a-3d07-40d1-89de-c07b10996f5f.webp?v=1787079962",
+    "source_type": "stockist",
+    "page_url": "https://issuesmagshop.com/",
+    "issue_label": "Profane 22",
+    "width": 674,
+    "height": 1000,
+    "notes": "Flat cover from stockist Issues; publisher only has a 3D render."
+   }
+  ]
+ },
+ "03-temple-magazine": {
+  "cover_candidates": [
+   {
+    "url": "https://magculture.com/cdn/shop/files/TempleSpecial2026Issue.png?v=1794936395",
+    "source_type": "stockist",
+    "page_url": "https://magculture.com/",
+    "issue_label": "Special Issue 2026",
+    "width": 1210,
+    "height": 1612,
+    "notes": "Flat cover from magCulture; publisher image is a 3D mockup."
+   }
+  ]
+ },
+ "15-the-toe-rag": {
+  "cover_candidates": [
+   {
+    "url": "https://www.allsaints.com/dw/image/v2/BHHD_PRD/on/demandware.static/-/Library-Sites-library-shared/default/dwea7e2af8/images/editorial/the-toe-rag.jpeg?q=80&sh=1059&sw=794",
+    "source_type": "stockist",
+    "page_url": null,
+    "issue_label": "Issue 9: Fictions",
+    "width": 794,
+    "height": 1059,
+    "notes": "Straight-on photo of the printed front page, trimmed; from a retailer's editorial page supplied in Gem's cover kit, not a shop listing."
+   }
+  ],
+  "cover_ops": {
+   "trim": 10
+  }
+ },
+ "16-the-walrus": {
+  "cover_candidates": [
+   {
+    "url": "https://issuesmagshop.com/cdn/shop/files/08-DEC26.jpg?v=1794609236",
+    "source_type": "stockist",
+    "page_url": "https://issuesmagshop.com/products/the-walrus-december-2026",
+    "issue_label": "December 2026",
+    "width": 600,
+    "height": 829,
+    "notes": "Flat cover from stockist Issues; publisher site blocks fetches. Small."
+   }
+  ],
+  "latest_issue_label": "December 2026",
+  "latest_issue_date": "2026-11-13",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://issuesmagshop.com/products/the-walrus-december-2026"
+ },
+ "07-herdes": {
+  "latest_issue_label": "Issue 21 · Costa Brava",
+  "latest_issue_date": "2026-11-18",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://shop.herdes.eu/products.json",
+  "cover_candidates": [
+   {
+    "url": "https://shop.herdes.eu/",
+    "source_type": "publisher",
+    "page_url": "https://shop.herdes.eu/",
+    "issue_label": "Issue 21 · Costa Brava",
+    "width": 416,
+    "height": 416,
+    "notes": "File supplied by Gem: the publisher's 3D product render, 416px; not a flat cover.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/herdes21.webp"
+   }
+  ]
+ },
+ "04-prairie-fire": {
+  "cover_candidates": [
+   {
+    "url": "https://www.prairiefire.ca/",
+    "source_type": "publisher",
+    "page_url": "https://www.prairiefire.ca/",
+    "issue_label": "Fall 2026, Volume 47, No. 3",
+    "width": 1300,
+    "height": 2000,
+    "notes": "Flat cover file supplied by Gem.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/prairie-fire.jpg"
+   }
+  ]
+ },
+ "15-sonshine": {
+  "cover_candidates": [
+   {
+    "url": "https://sonshinemagazine.com/shop",
+    "source_type": "publisher",
+    "page_url": "https://sonshinemagazine.com/shop",
+    "issue_label": "Issue 32: Do Clothes Make the Man?",
+    "width": 790,
+    "height": 1032,
+    "notes": "Scan of the printed Issue 32 cover supplied by Gem.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/sonshine32.webp"
+   }
+  ],
+  "latest_issue_label": "Issue 32: Do Clothes Make the Man?",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://sonshinemagazine.com/shop"
+ },
+ "02-synth-history": {
+  "cover_candidates": [
+   {
+    "url": "https://www.synthhistory.com/shop",
+    "source_type": "publisher",
+    "page_url": "https://www.synthhistory.com/shop",
+    "issue_label": "Issue 6",
+    "width": 1500,
+    "height": 1500,
+    "notes": "Publisher promo image supplied by Gem, cropped to the cover.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/synth-history6.jpg"
+   }
+  ],
+  "cover_ops": {
+   "crop": "geo:700x1080+400+210",
+   "trim": 5
+  },
+  "latest_issue_label": "Issue 6",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.synthhistory.com/shop"
+ },
+ "07-the-grand-tourist": {
+  "cover_candidates": [
+   {
+    "url": "https://coffeetablemags.de/",
+    "source_type": "stockist",
+    "page_url": "https://coffeetablemags.de/",
+    "issue_label": "Issue 03 (Fall 2026): Built to Last",
+    "width": 1004,
+    "height": 690,
+    "notes": "Stockist product photo supplied by Gem, cropped to the book; the stockist's name was outside the crop.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/grand-tourist3.webp"
+   }
+  ],
+  "cover_ops": {
+   "crop": "geo:430x610+287+40",
+   "trim": 5
+  }
+ },
+ "16-wunderdog": {
+  "cover_candidates": [
+   {
+    "url": "https://wunderdogmagazine.com/",
+    "source_type": "publisher",
+    "page_url": "https://wunderdogmagazine.com/",
+    "issue_label": "Issue 10",
+    "width": 600,
+    "height": 900,
+    "notes": "Cover file supplied by Gem, trimmed from its light blue background.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/wunderdog10.jpg"
+   }
+  ],
+  "cover_ops": {
+   "trim": 8
+  }
+ },
+ "17-yolk": {
+  "cover_candidates": [
+   {
+    "url": "https://www.yolkliterary.ca/product/volume-5-2-spring-2026",
+    "source_type": "publisher",
+    "page_url": "https://www.yolkliterary.ca/product/volume-5-2-spring-2026",
+    "issue_label": "Volume 5.2, Spring 2026 (Want)",
+    "width": 1080,
+    "height": 1080,
+    "notes": "Publisher shop composite supplied by Gem, cropped to the cover.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/yolk52.jpg"
+   }
+  ],
+  "cover_ops": {
+   "crop": "geo:560x840+262+122",
+   "trim": 4
+  }
+ }
+}

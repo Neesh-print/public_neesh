@@ -1,0 +1,56 @@
+{
+  "input_title": "HERDES",
+  "official_name": "HERDES",
+  "publisher_name": "WELOVEPAPER, SL",
+  "publisher_website": "https://herdes.eu",
+  "country": "ES",
+  "city": "Barcelona",
+  "frequency": "biannual",
+  "cover_price": 30.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.herdes.eu",
+  "latest_issue_label": "Issue 20 · Cambodia (Spring/Summer 2026)",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://shop.herdes.eu/products/cambodia-issue-20",
+  "independent": "yes",
+  "independence_evidence": "About page: 'Herdes is a publication by WELOVEPAPER, SL', a Barcelona company (head office Carrer del Bruc 136); no media-group affiliation found.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Barcelona bookazine with Issue 19 (Nov 2025) and Issue 20 (May 2026) on sale in its own shop.",
+  "what_it_is": "A hardcover travel-and-fashion bookazine from Barcelona in which every issue is devoted to a single destination (recently Türkiye, Andalusia and Cambodia). Each volume of over 250 pages combines fashion editorials shot on location, essays on local culture and craft, a travel handbook section and features on hotels. It is aimed at design-minded travellers and fashion readers who want a collectable object rather than a guidebook.",
+  "suggested_primary_tag": "travel",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0925/9492/9992/files/Cambodia_1.png?v=1779190036",
+      "source_type": "publisher",
+      "page_url": "https://shop.herdes.eu/products/cambodia-issue-20",
+      "issue_label": "Issue 20 · Cambodia (cover A)",
+      "width": 1500,
+      "height": 1500,
+      "notes": "3D hardcover mockup showing spine; not a flat cover. No flat file found."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0925/9492/9992/files/Cambodia_2.png?v=1779190035",
+      "source_type": "publisher",
+      "page_url": "https://shop.herdes.eu/products/cambodia-issue-20",
+      "issue_label": "Issue 20 · Cambodia (cover B)",
+      "width": 1500,
+      "height": 1500,
+      "notes": "Alternate cover, same 3D mockup treatment."
+    }
+  ],
+  "evidence_urls": [
+    "https://herdes.eu/about/",
+    "https://herdes.eu/contact/",
+    "https://shop.herdes.eu/products.json?limit=250",
+    "https://shop.herdes.eu/products/cambodia-issue-20"
+  ],
+  "uncertainties": "Issue 20 is dated Spring/Summer 2026 on the cover and was listed in the shop on 19 May 2026; recorded as May 2026. Page count given only as 'over 250 pages' on the about page. Both cover images are mockups."
+}

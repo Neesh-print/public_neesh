@@ -1,0 +1,59 @@
+{
+  "input_title": "Zoo Magazine",
+  "official_name": "ZOO Magazine",
+  "publisher_name": "Melon Collie C.V.",
+  "publisher_website": "https://www.zoomagazine.com/",
+  "country": "NL",
+  "city": "Amsterdam",
+  "frequency": "quarterly",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.zoomagazine.com/the_magazine/subscribe/",
+  "latest_issue_label": "No. 92 (Adaption)",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.zoomagazine.com/the_magazine/current_issue/",
+  "independent": "yes",
+  "independence_evidence": "The imprint names the publisher as Melon Collie C.V., a Dutch limited partnership trading as ZOO Magazine from an Amsterdam office, with the ZOO trade mark licensed from Badlux s.a.r.l.; no large media group is involved (https://www.zoomagazine.com/legal_stuff/imprint/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "An independently published Amsterdam fashion and culture quarterly whose No. 92 (autumn 2026) is the current print issue and whose 2025 issues (No. 90 anniversary issue, No. 91) are listed as back issues.",
+  "what_it_is": "ZOO Magazine is a large-format fashion, art and film magazine published in English from Amsterdam, with each issue printed in several cover versions fronted by actors, musicians and models. Issues mix long fashion editorials with interviews, portfolios and features on cinema, music and contemporary art, organised around a theme such as 'Adaption'. It is for readers of international fashion and culture glossies who collect multi-cover issues.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/IMG_5679.jpg?v=1793977814",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/zoo-magazine-n-92",
+      "issue_label": "No. 92 (Sandra Hüller cover)",
+      "width": 1125,
+      "height": 1529,
+      "notes": "Flat front cover of the Sandra Hüller edition as listed by distributor KD Presse; the issue also has Ray Winstone and Virginie Efira covers (IMG_5680.jpg, IMG_5681.jpg on the same page)."
+    },
+    {
+      "url": "https://www.zoomagazine.com/files/images/%2392_COVER1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.zoomagazine.com/the_magazine/current_issue/",
+      "issue_label": "No. 92 (Virginie Efira cover)",
+      "width": 425,
+      "height": 550,
+      "notes": "Publisher's own cover image from the current-issue page viewer, but only 425px wide."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.zoomagazine.com/",
+    "https://www.zoomagazine.com/legal_stuff/imprint/",
+    "https://www.zoomagazine.com/the_magazine/current_issue/",
+    "https://www.zoomagazine.com/the_magazine/back_issues/",
+    "https://www.zoomagazine.com/the_magazine/subscribe/",
+    "https://www.zoomagazine.com/the_magazine/where_to_buy/",
+    "https://kdpresse.com/products/zoo-magazine-n-92"
+  ],
+  "uncertainties": "The publisher's site has no shop and tells subscribers to email for prices, so no cover price is recorded; distributor KD Presse lists No. 92 at EUR 12.80 (not the publisher's own price). The publisher's current-issue page shows No. 92 but no date; the November 2026 date comes from KD Presse's listing (published 9 November 2026, handle 'zoo-magazine-fall2026') and the '2026' on the cover. Quarterly frequency is inferred from the numbering (No. 90 and 91 in 2025, No. 92 in late 2026, roughly 3-4 issues a year) rather than a publisher statement; the news and media-data pages returned empty responses. The KD Presse images are named like phone photos (IMG_5679.jpg) but display as flat covers."
+}

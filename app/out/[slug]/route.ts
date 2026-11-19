@@ -4,6 +4,7 @@ import { clientIp, ipHash, isBot } from '@/lib/signals';
 import { limitRequest } from '@/lib/rate-limit';
 import { log } from '@/lib/log';
 import { isUnreviewedReaderRecord } from '@/lib/collect/shared';
+import { PUBLIC_REVIEW_FILTER } from '@/lib/queries';
 
 export const dynamic = 'force-dynamic';
 
@@ -23,6 +24,7 @@ export async function GET(
     .eq('slug', slug)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER)
     .maybeSingle();
 
   if (!title) return NextResponse.redirect(new URL('/index', req.url), 302);

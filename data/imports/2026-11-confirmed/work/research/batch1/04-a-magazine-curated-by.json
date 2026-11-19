@@ -1,0 +1,65 @@
+{
+  "input_title": "A Magazine Curated By",
+  "official_name": "A Magazine Curated By",
+  "publisher_name": "A Publisher SAS",
+  "publisher_website": "https://amagazinecuratedby.com/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "biannual",
+  "cover_price": 40.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://amagazinecuratedby.myshopify.com/products/a-magazine-curated-by-hiroshi-fujiwara",
+  "latest_issue_label": "N°30 (Hiroshi Fujiwara)",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://amagazinecuratedby.com/news/celebrating-the-launch-of-a-magazine-curated-by-hiroshi-fujiwara/",
+  "independent": "yes",
+  "independence_evidence": "Contact page lists 'A PUBLISHER SAS, Paris, France' as publisher with KD Presse handling online sales and subscriptions; a small independent Paris publishing company that also makes brand-commissioned 'Curated For' editions, but the magazine itself is its own title and no media group is involved.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Paris fashion title with N°30 launched in October 2026 and N°28 and N°29 printed in 2025.",
+  "what_it_is": "A Magazine Curated By hands each issue to a single guest fashion designer or house, who fills it with their own references: photography, art, music, places and friends, rather than conventional fashion coverage. N°30 is curated by Hiroshi Fujiwara and is built around Tokyo, record shops, his hometown of Ise and his collaborators, with a 300-copy limited edition that includes a vinyl record. It suits readers interested in designers' thinking and visual culture, and collectors of fashion publications.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0974/0143/8539/files/A-Mag-30_COVER_Insta_3-4.jpg?v=1792476597",
+      "source_type": "publisher",
+      "page_url": "https://amagazinecuratedby.myshopify.com/products/a-magazine-curated-by-hiroshi-fujiwara",
+      "issue_label": "N°30",
+      "width": 2160,
+      "height": 2880,
+      "notes": "Publisher shop image of the N°30 cover: silver ground with a grid of small coloured squares, title top right. Viewed; flat, no mockup. Filename suggests a 3:4 crop prepared for social media, but it shows the full cover."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/A-Mag-30_COVER_Insta_3-4.png?v=1792407107",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/a-magazine-curated-by-n-30",
+      "issue_label": "N°30",
+      "width": 2160,
+      "height": 2880,
+      "notes": "Same cover image as PNG on KD Presse (the publisher's online sales partner)."
+    }
+  ],
+  "evidence_urls": [
+    "https://amagazinecuratedby.com/",
+    "https://amagazinecuratedby.com/contact/",
+    "https://amagazinecuratedby.com/collection/hiroshi-fujiwara/",
+    "https://amagazinecuratedby.com/news/celebrating-the-launch-of-a-magazine-curated-by-hiroshi-fujiwara/",
+    "https://amagazinecuratedby.com/news/authors/a-magazine-team/",
+    "https://amagazinecuratedby.myshopify.com/products.json?limit=250",
+    "https://amagazinecuratedby.myshopify.com/products/a-magazine-curated-by-hiroshi-fujiwara.json",
+    "https://kdpresse.com/products.json?limit=250"
+  ],
+  "uncertainties": [
+    "The N°30 page still says 'pre-order now', while the publisher's 4 November 2026 news post describes the launch event held during Art Basel Paris (late October 2026) and KD Presse listed it on 2026-10-20; recorded as October 2026, month precision.",
+    "Frequency: historically two issues a year (N°28 June 2025, N°29 September 2025, N°30 October 2026); the publisher does not state a frequency on the pages read.",
+    "Page count and trim size are not given on the publisher's N°30 page.",
+    "Standard edition is EUR 40 in the publisher's shop; KD Presse lists it at EUR 35."
+  ]
+}

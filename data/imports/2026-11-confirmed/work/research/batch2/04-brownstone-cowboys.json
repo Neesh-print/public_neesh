@@ -1,0 +1,66 @@
+{
+  "input_title": "Brownstone Cowboys",
+  "official_name": "Brownstone Cowboys",
+  "publisher_name": "Brownstone Cowboys",
+  "publisher_website": "https://brownstonecowboys.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "biannual",
+  "cover_price": 34.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": 320,
+  "subscribe_url": "https://brownstonecowboys.com/#store",
+  "latest_issue_label": "Book Two — Horses Outlive the Fence",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://brownstonecowboys.com/issue-2/willy-chavarria",
+  "independent": "yes",
+  "independence_evidence": "The about page states 'Brownstone Cowboys is an independent media house and production studio based between London and New York'; it is self-published and not part of any media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Self-described independent publisher whose first print 'book' appeared in April 2026 and whose second (320 pages, 12 covers) is on sale as of October 2026.",
+  "what_it_is": "Brownstone Cowboys is a fashion-and-culture journal built on long interviews and image-led editorials with people in fashion, art, music and film; the second print volume runs to 320 sewn-bound pages and comes with twelve different covers, from Willy Chavarria to Carrie Coon and Meadow Walker. It began online and moved into print in 2026, publishing a 'book' roughly twice a year alongside the website. It suits readers of large-format fashion culture titles who want extended conversations rather than short features.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/02_WillyChavarria_8b0dd70d-b0b1-4473-b98d-d90cb47c3279.jpg?v=1793271678",
+      "source_type": "distributor",
+      "page_url": "https://www.kdpresse.com/products/brownstone-cowboys-2",
+      "issue_label": "Book Two (Willy Chavarria cover)",
+      "width": 1356,
+      "height": 1875,
+      "notes": "KD Presse (the title's European distributor) product image; portrait, appears to be the flat front cover. One of twelve covers."
+    },
+    {
+      "url": "https://brownstonecowboys.com/media/Issue-2/gif-hovers/BSC_B2_WillyChavarria_spin-2.jpg.jpg",
+      "source_type": "publisher",
+      "page_url": "https://brownstonecowboys.com/",
+      "issue_label": "Book Two (Willy Chavarria cover)",
+      "width": 2160,
+      "height": 2700,
+      "notes": "Publisher image used as a hover frame for a 'spin' animation on the homepage store; may show the printed book at an angle rather than a flat cover. Check before use."
+    },
+    {
+      "url": "https://brownstonecowboys.com/media/Covers/image-18.webp",
+      "source_type": "publisher",
+      "page_url": "https://brownstonecowboys.com/",
+      "issue_label": "Book Two (cover not identified)",
+      "width": 1092,
+      "height": 1512,
+      "notes": "Publisher 'Covers' folder image from the homepage; which of the twelve covers it shows was not verified."
+    }
+  ],
+  "evidence_urls": [
+    "https://brownstonecowboys.com/",
+    "https://brownstonecowboys.com/about-the-brownstone",
+    "https://brownstonecowboys.com/issue-2/willy-chavarria",
+    "https://www.kdpresse.com/products/brownstone-cowboys-2",
+    "https://www.kdpresse.com/products.json?limit=250"
+  ],
+  "uncertainties": "The publisher gives two addresses (75 Shelton Street, London WC2H 9JQ and 241 E 32nd Street, New York NY 10016) and says it is 'based between London and New York'; New York/US is recorded because the distributor describes it as 'a new independent title out of New York', but London is equally plausible. No legal company name is shown. The Book Two release date is inferred from KD Presse listing it on 2026-10-26 and the publisher's own site calling it 'here'; Book One was announced for April 2026, so the cadence is two volumes in 2026. The shop at shop.brownstonecowboysmagazine.com did not respond; the price (EUR 34) is from the publisher's own order pages. Trim size not stated. The distributor hint 'issue 2' matches Book Two."
+}

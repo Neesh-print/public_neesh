@@ -2,6 +2,11 @@
 // (trim, case, slugify, price coercion), reject everything else back to the
 // sheet. Never fixes data. Outputs data/clean.json for load.ts plus
 // data/rejects.csv and data/tags-missing.csv.
+//
+// Optional columns (see docs/mapping.md): publisher_slug, title_slug, subscribe_url,
+// primary_tag, review_status, cover_url, cover_page_url, cover_source_type,
+// issue_label, issue_number, issue_date, issue_source_url. They carry a
+// reviewed import's cover and latest-issue evidence through to load.ts.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import Papa from 'papaparse';
 import { csvEscape, loadEnv, scriptServiceClient, slugify, uniqueSlug } from './lib';
@@ -76,8 +81,18 @@ interface CleanRow {
     status: string;
     last_issue_date: string | null;
     verified_at: string | null;
+    subscribe_url: string | null;
+    review_status: 'approved' | 'pending';
   };
   tags: string[];
+  primary_tag: string | null;
+  cover: { url: string; page_url: string | null; source_type: string | null } | null;
+  issue: {
+    label: string;
+    number: number | null;
+    date: string | null;
+    source_url: string | null;
+  } | null;
 }
 
 async function main() {
@@ -217,6 +232,36 @@ async function main() {
     if (website && !/^https?:\/\//.test(website)) {
       reject('publisher_website', 'must start with http(s)://');
     }
+    const url = (field: string): string | null => {
+      const value = get(field) || null;
+      if (value && !/^https?:\/\//.test(value)) reject(field, 'must start with http(s)://');
+      return value;
+    };
+    const subscribeUrl = url('subscribe_url');
+    const coverUrl = url('cover_url');
+    const coverPageUrl = url('cover_page_url');
+    const issueSourceUrl = url('issue_source_url');
+    const coverSourceType = get('cover_source_type').toLowerCase() || null;
+    if (coverSourceType && !['publisher', 'distributor', 'stockist'].includes(coverSourceType)) {
+      reject('cover_source_type', 'must be publisher, distributor or stockist');
+    }
+
+    // Reviewed imports load as pending so nothing shows until a person
+    // approves it (see PUBLIC_REVIEW_FILTER in src/lib/queries.ts).
+    const reviewStatus = get('review_status').toLowerCase() || 'approved';
+    if (!['approved', 'pending'].includes(reviewStatus)) {
+      reject('review_status', 'must be approved or pending');
+    }
+
+    const issueLabel = get('issue_label') || null;
+    const issueDate = normDate(get('issue_date'), 'issue_date');
+    let issueNumber: number | null = null;
+    if (get('issue_number')) {
+      const value = Number.parseFloat(get('issue_number'));
+      if (!Number.isFinite(value)) reject('issue_number', 'not a number');
+      else issueNumber = value;
+    }
+    if (!issueLabel && (issueDate || issueSourceUrl)) reject('issue_label', 'required with issue data');
 
     const rowTags: string[] = [];
     for (const rawTag of get('tags').split(/[|,;]/)) {
@@ -225,15 +270,32 @@ async function main() {
       if (vocabulary.has(tagSlug)) rowTags.push(tagSlug);
       else tagsMissing.push({ row: rowNum, tag: tagSlug });
     }
+    // One primary niche per title; it must be among the row's tags.
+    const primaryTag = slugify(get('primary_tag')) || null;
+    if (primaryTag && !rowTags.includes(primaryTag)) {
+      reject('primary_tag', 'must be one of the row\'s tags');
+    }
 
     if (rejects.length > startRejectCount) return;
 
-    let publisherSlug = publisherSlugByName.get(publisherName);
+    // publisher_slug pins the row to a publisher: an existing row to reuse
+    // (never re-created or updated), or a slug shared by sibling titles of a
+    // new publisher so they land under one row.
+    let publisherSlug = get('publisher_slug') ? slugify(get('publisher_slug')) : undefined;
+    if (publisherSlug) {
+      if (!publisherSlugs.has(publisherSlug)) publisherSlugs.set(publisherSlug, publisherName);
+      publisherSlugByName.set(publisherName, publisherSlug);
+    }
+    if (!publisherSlug) publisherSlug = publisherSlugByName.get(publisherName);
     if (!publisherSlug) {
       publisherSlug = uniqueSlug(publisherName, publisherSlugs);
       publisherSlugByName.set(publisherName, publisherSlug);
     }
-    const titleSlug = uniqueSlug(titleName, titleSlugs);
+    // title_slug overrides the derived slug when the ASCII fold of a name is
+    // unreadable (HÅNDVÆRK would otherwise become handvrk).
+    const titleSlug = get('title_slug')
+      ? uniqueSlug(slugify(get('title_slug')), titleSlugs)
+      : uniqueSlug(titleName, titleSlugs);
 
     clean.push({
       publisher: {
@@ -258,8 +320,15 @@ async function main() {
         status,
         last_issue_date: lastIssueDate,
         verified_at: verifiedAt,
+        subscribe_url: subscribeUrl,
+        review_status: reviewStatus as 'approved' | 'pending',
       },
       tags: [...new Set(rowTags)],
+      primary_tag: primaryTag ?? rowTags[0] ?? null,
+      cover: coverUrl ? { url: coverUrl, page_url: coverPageUrl, source_type: coverSourceType } : null,
+      issue: issueLabel
+        ? { label: issueLabel, number: issueNumber, date: issueDate, source_url: issueSourceUrl }
+        : null,
     });
   });
 

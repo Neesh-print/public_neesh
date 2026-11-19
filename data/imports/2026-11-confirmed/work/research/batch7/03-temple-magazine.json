@@ -1,0 +1,63 @@
+{
+  "input_title": "Temple Magazine",
+  "official_name": "Temple Magazine",
+  "publisher_name": "Temple Magazine (Temple Office)",
+  "publisher_website": "https://www.templemagazine.co/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "annual",
+  "cover_price": 25.0,
+  "currency": "EUR",
+  "trim_size": "24.5 x 32.5 cm",
+  "page_count": 76,
+  "subscribe_url": "https://www.templemagazine.co/shop",
+  "latest_issue_label": "Special Issue: Where Are They Now? (2026)",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.templemagazine.co/product/specialissue/",
+  "independent": "yes",
+  "independence_evidence": "Published by its two founders through their own Paris studio Temple Office; about page lists only cultural partners (villa Noailles, HEAD Genève, École Duperré, Liste Art Fair Basel) and Public Knowledge Books as distributor, no media-group owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Paris annual on art, fashion and design with Issue 13 (2025) and a 2026 special issue both in print and on sale from the publisher's own shop.",
+  "what_it_is": "A large-format annual from Paris that gathers interviews, portfolios and essays on contemporary art, fashion, design and new media, organised around a theme such as Botanics or Made in Japon. Each edition mixes emerging designers and art-school graduates with more established artists, and often ships with several alternative covers and heavily art-directed typography. It suits readers who follow fashion-school and gallery culture in France and Switzerland and want a collectible, image-led annual rather than a news-driven magazine.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.templemagazine.co/wp-content/uploads/2026/09/specialissue.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.templemagazine.co/product/specialissue/",
+      "issue_label": "Special Issue: Where Are They Now? (2026)",
+      "width": 1001,
+      "height": 1039,
+      "notes": "Publisher's product image: front cover rendered as a 3D mockup with spine and drop shadow on white, so it needs cropping and is not a strictly flat scan. Long edge just over 1000px."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0774/3068/6031/files/PKB_PHOTO_1465.jpg?v=1791558610",
+      "source_type": "distributor",
+      "page_url": "https://publicknowledgebooks.com/products/temple-magazine-special-edition-where-are-they-now-2",
+      "issue_label": "Special Issue: Where Are They Now? (2026)",
+      "width": 2048,
+      "height": 1535,
+      "notes": "Photograph of the physical copy on a black background (landscape framing); not a flat cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.templemagazine.co/",
+    "https://www.templemagazine.co/about",
+    "https://www.templemagazine.co/shop",
+    "https://www.templemagazine.co/product/specialissue/",
+    "https://www.templemagazine.co/product/temple-magazine-13-sheila-janet/",
+    "https://www.templemagazine.co/distribution/",
+    "https://www.templemagazine.co/wp-json/wc/store/v1/products?per_page=50",
+    "https://templeoffice.co/contact",
+    "https://publicknowledgebooks.com/products/temple-magazine-special-edition-where-are-they-now-2",
+    "https://publicknowledgebooks.com/products/temple-magazine-issue-13-botanics-1",
+    "https://www.eventbrite.fr/e/launch-temple-magazine-13-tickets-1908602002969"
+  ],
+  "uncertainties": "The site gives no postal address; Paris is taken from the Temple Office contact page (studio based in Paris and the South of France) and the Paris launch events. The special issue's exact release date is not stated: the product was created on the site 2026-09-22 and listed by Public Knowledge 2026-10-09, so September 2026 at month precision is an inference. The 2026 edition is a 76-page special issue rather than a numbered annual; the regular Issue 13 (Botanics, 120 pages, launched 6 November 2025) is the latest numbered issue. Page count recorded is for the special issue. No flat cover image was found, only a mockup and photographs."
+}

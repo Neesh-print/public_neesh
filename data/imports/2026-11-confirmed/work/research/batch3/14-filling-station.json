@@ -1,0 +1,47 @@
+{
+  "input_title": "filling Station",
+  "official_name": "filling Station",
+  "publisher_name": "filling Station Publications Society",
+  "publisher_website": "https://www.fillingstation.ca/",
+  "country": "CA",
+  "city": "Calgary",
+  "frequency": "biannual",
+  "cover_price": 15.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://fillingstation.myshopify.com/products/filling-station-3-issue-subscription",
+  "latest_issue_label": "Issue 86 ('Still Talk With You')",
+  "latest_issue_date": "2026-10-27",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://fillingstation.myshopify.com/products/filling-station-issue-86",
+  "independent": "yes",
+  "independence_evidence": "Volunteer-run Canadian literary magazine that describes itself as an alternative to traditional literary magazines and sells through its own Shopify store based in Calgary; no corporate owner (https://www.fillingstation.ca/, https://fillingstation.myshopify.com/meta.json).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Calgary literary magazine with Issue 86 released in October 2026 and two issues in 2025.",
+  "what_it_is": "filling Station is a Calgary-based experimental literary magazine publishing new Canadian and international poetry, fiction, literary journalism and visual art, with an emphasis on emerging and formally adventurous writers. Issues are loosely themed (recent ones on language, companionship) and each presents around twenty-five to thirty contributors. It is aimed at readers and writers of innovative small-press literature.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0060/0152/files/Screenshot_2026-10-27_143125.png?v=1793133115",
+      "source_type": "publisher",
+      "page_url": "https://fillingstation.myshopify.com/products/filling-station-issue-86",
+      "issue_label": "Issue 86",
+      "width": 596,
+      "height": 763,
+      "notes": "Flat front cover from the publisher's shop, but a 596x763 px screenshot; the homepage uses a 589x756 px copy of the same image."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.fillingstation.ca/",
+    "https://fillingstation.myshopify.com/products.json?limit=250",
+    "https://fillingstation.myshopify.com/meta.json",
+    "https://fillingstation.myshopify.com/products/filling-station-issue-86"
+  ],
+  "uncertainties": "The publisher sells a '3 issue subscription', implying a triannual intention, but the shop shows Issue 83 Nov 2024, 84 Aug 2025, 85 Dec 2025 and 86 Oct 2026, so cadence gives biannual. The legal name 'filling Station Publications Society' is the magazine's long-standing society name but was not confirmed on the pages read; the shop metadata names it only as 'filling Station' in Calgary. The 2026-10-27 date is the shop listing date. Only a low-resolution cover image exists."
+}

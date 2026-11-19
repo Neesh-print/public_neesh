@@ -1,0 +1,67 @@
+{
+  "input_title": "Fucking Young",
+  "official_name": "Fucking Young!",
+  "publisher_name": "Fucking Young! (imprint listed as ABHFYA.com)",
+  "publisher_website": "https://fuckingyoung.es",
+  "country": "ES",
+  "city": "Barcelona",
+  "frequency": "biannual",
+  "cover_price": 18.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://fuckingyoung.es/store/",
+  "latest_issue_label": "Issue 28 – TRANSPARENCY",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://fuckingyoung.es/store/fucking-young-28-transparency-cover-1-3/",
+  "independent": "yes",
+  "independence_evidence": "Published from its own Barcelona address by a small team (about page lists publisher ABHFYA.com, Carrer del Mar 17, 08003 Barcelona); distributed via KD Presse. No link to any media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Barcelona print title with issues 26 (June 2025), 27 (Nov/Dec 2025) and 28 (June 2026) on sale in its own shop.",
+  "what_it_is": "A men's fashion and youth-culture magazine from Barcelona, each issue built around a single theme (recent ones: Dopamine, Dreamcore, Transparency). It runs long photographic fashion stories with young models and musicians, plus interviews with designers and creatives, across roughly 400 pages and several collectable covers per issue. It suits readers who follow menswear, emerging photographers and pop culture.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://fuckingyoung.es/wp-content/uploads/2026/06/TRANSPARENCY-COVER1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://fuckingyoung.es/store/fucking-young-28-transparency-cover-1-3/",
+      "issue_label": "Issue 28 – TRANSPARENCY (Cover 1/3, Ivan Ugrin)",
+      "width": 682,
+      "height": 948,
+      "notes": "Flat front cover; below 1000px long edge, largest the publisher serves."
+    },
+    {
+      "url": "https://fuckingyoung.es/wp-content/uploads/2026/06/TRANSPARENCY-COVER2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://fuckingyoung.es/store/fucking-young-28-transparency-cover-2-3/",
+      "issue_label": "Issue 28 – TRANSPARENCY (Cover 2/3, Hugo Arbués)",
+      "width": 682,
+      "height": 948,
+      "notes": "Alternate cover, same issue."
+    },
+    {
+      "url": "https://fuckingyoung.es/wp-content/uploads/2026/06/TRANSPARENCY-COVER3.jpg",
+      "source_type": "publisher",
+      "page_url": "https://fuckingyoung.es/store/fucking-young-28-transparency-cover-3-3/",
+      "issue_label": "Issue 28 – TRANSPARENCY (Cover 3/3)",
+      "width": 682,
+      "height": 948,
+      "notes": "Alternate cover, same issue."
+    }
+  ],
+  "evidence_urls": [
+    "https://fuckingyoung.es/about/",
+    "https://fuckingyoung.es/store/",
+    "https://fuckingyoung.es/store/fucking-young-28-transparency-cover-1-3/",
+    "https://fuckingyoung.es/store/fucking-young-28-transparency-cover-2-3/",
+    "https://fuckingyoung.es/wp-json/wc/store/v1/products?per_page=50",
+    "https://fuckingyoung.es/magazine/"
+  ],
+  "uncertainties": "Issue 28 store listing was created 2026-06-18 and the magazine page still says 'Pre-order your copy'; a stockist listing (papercutshop.se, now 404) gave a release date of 10 July 2026, so actual ship date may be July 2026. Page count stated only as 'more than 400 pages'. 'Publisher. ABHFYA.com' is the only imprint name shown. Cover images are 682x948, below the 1000px target."
+}

@@ -1,0 +1,66 @@
+{
+  "input_title": "Doesn't Exist",
+  "official_name": "Doesn't Exist",
+  "publisher_name": "Doesn't Exist Magazine",
+  "publisher_website": "https://doesnt-exist.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "irregular",
+  "cover_price": 39.0,
+  "currency": "GBP",
+  "trim_size": "17 x 24 cm",
+  "page_count": null,
+  "subscribe_url": "https://doesnt-exist.com/buy/",
+  "latest_issue_label": "Issue Seven",
+  "latest_issue_date": "2025-03-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://doesnt-exist.com/",
+  "independent": "yes",
+  "independence_evidence": "Self-described London-based magazine established in 2018, selling through its own WooCommerce shop and distributed by Boutique Mags; no media-group owner is named anywhere on the site (https://doesnt-exist.com/about/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London title whose most recent print issue, Issue Seven, went on sale in March 2025.",
+  "what_it_is": "Doesn't Exist is a hardcover London magazine that treats fashion through the lens of cinema. Each issue is built around a filmmaker or film movement (Issue Seven is an unofficial tribute to Federico Fellini, Issue Six to Powell and Pressburger) and fills it with fashion editorials, illustration, interviews and essays that reference those films. It is for readers who collect fashion photography and art-house film culture in equal measure.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "film",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://doesnt-exist.com/wp-content/uploads/2025/02/ISSUE-SEVEN-SET-A-Vol-1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://doesnt-exist.com/product/issue-seven-set-a-2/",
+      "issue_label": "Issue Seven (Set A, Vol. 1)",
+      "width": 482,
+      "height": 680,
+      "notes": "Flat front cover of Set A volume 1, but only 482x680 px; the site serves no larger version."
+    },
+    {
+      "url": "https://doesnt-exist.com/wp-content/uploads/2025/02/ISSUE-SEVEN-SET-B-Vol-1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://doesnt-exist.com/product/issue-seven-set-b-2/",
+      "issue_label": "Issue Seven (Set B, Vol. 1)",
+      "width": 482,
+      "height": 680,
+      "notes": "Alternate cover (Set B), same small size."
+    },
+    {
+      "url": "https://doesnt-exist.com/wp-content/uploads/2025/02/SET-A-_-SPINE-low-vol-1-7.png",
+      "source_type": "publisher",
+      "page_url": "https://doesnt-exist.com/product/issue-seven-set-a/",
+      "issue_label": "Issue Seven (Set A)",
+      "width": 545,
+      "height": 687,
+      "notes": "Shows the hardcover with spine (slight 3D render), 545x687 px; use only as a fallback."
+    }
+  ],
+  "evidence_urls": [
+    "https://doesnt-exist.com/",
+    "https://doesnt-exist.com/about/",
+    "https://doesnt-exist.com/contact/",
+    "https://doesnt-exist.com/product/issue-seven-set-a/",
+    "https://doesnt-exist.com/wp-json/wc/store/v1/products?per_page=50"
+  ],
+  "uncertainties": "The about page states a biannual April/October schedule, but Issue Six images were uploaded December 2023 and Issue Seven went on sale March 2025 with nothing newer by November 2026, so the real cadence is irregular. Issue Seven is sold as a GBP 39 two-volume hardcover set (Sets A and B have different covers); GBP 8 listings with the same name exist in the shop and may be single volumes or digital editions. Exact release date within March 2025 and page count are not stated. The Public Knowledge catalogue hint (listing 2026-03) could not be matched in that shop's product feed."
+}

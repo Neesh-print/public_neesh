@@ -1,0 +1,55 @@
+{
+  "input_title": "Blag",
+  "official_name": "BLAG",
+  "publisher_name": "SR Productions Ltd (trading as BLAG / Better Letters)",
+  "publisher_website": "https://bl.ag/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "172 x 250 mm",
+  "page_count": 80,
+  "subscribe_url": "https://bl.ag/join/",
+  "latest_issue_label": "Issue 09 (Summer 2026)",
+  "latest_issue_date": "2026-07-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://bl.ag/whats-inside-issue-09-of-blag-better-letters-magazine/",
+  "independent": "yes",
+  "independence_evidence": "Privacy page: 'SR Productions Ltd (trading as BLAG), 20-22 Wenlock Road, London N1 7GU'; about page says BLAG is 'at its heart ... a one-man show', advertising-free and funded by paid memberships, and asks readers to 'support independent publishing'.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London-published print magazine with two issues a year; Issue 09 shipped to members in July 2026.",
+  "what_it_is": "BLAG (Better Letters Magazine) is an advertising-free magazine entirely about sign painting: hand-lettered signs, gilding, fairground and showcard lettering, and the people who make them around the world. Each 80-page issue mixes step-by-step technique guides, historical features, project profiles, book reviews and a fold-out poster insert. It is for working sign painters, lettering artists and anyone interested in hand-made commercial lettering.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://storage.ghost.io/c/24/aa/24aaa208-ebb0-4f83-bc52-1f4f253367c8/content/images/2026/07/BLAG09-00-Graphic-Cover-1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://bl.ag/whats-inside-issue-09-of-blag-better-letters-magazine/",
+      "issue_label": "Issue 09 (Summer 2026)",
+      "width": 1016,
+      "height": 1476,
+      "notes": "Flat front cover graphic (chrome BLAG masthead over Pieter Snijders' chromatic lettering, 'Summer 2026 / Issue 09'). Measured with identify."
+    }
+  ],
+  "evidence_urls": [
+    "https://bl.ag/",
+    "https://bl.ag/about/",
+    "https://bl.ag/privacy/",
+    "https://bl.ag/whats-inside-issue-09-of-blag-better-letters-magazine/",
+    "https://bl.ag/whats-inside-issue-08-of-blag-better-letters-magazine/",
+    "https://shop.bl.ag/products.json?limit=250",
+    "https://shop.bl.ag/"
+  ],
+  "uncertainties": [
+    "No single-copy price for Issue 09: print copies go to paid members first and only the previous issue is sold singly once the next is out (Issue 08 is GBP 25 including shipping in the publisher's shop). Cover price therefore left null.",
+    "Issue 09 publication date: the 30 July 2026 post says the issue 'is now landing with members', so July 2026 (month precision) is used.",
+    "Cadence confirmed as two issues a year (Issue 08 announced 22 January 2026, Issue 09 in July 2026), matching the publisher's 'summer and winter' statement.",
+    "Page count: publisher states 80 interior pages plus cover; trim size 172 x 250 mm from the about page FAQ."
+  ]
+}

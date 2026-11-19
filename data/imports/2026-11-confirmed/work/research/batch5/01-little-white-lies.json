@@ -1,0 +1,67 @@
+{
+  "input_title": "Little White Lies",
+  "official_name": "Little White Lies",
+  "publisher_name": "TCO London",
+  "publisher_website": "https://lwlies.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "bimonthly",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://lwlies.imbmsubscriptions.com/",
+  "latest_issue_label": "Issue 115",
+  "latest_issue_date": "2026-10-07",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.lwlies.com/magazine/issue-115",
+  "independent": "yes",
+  "independence_evidence": "Contact page states 'Published by TCO London, Unit 2H Zetland House, 109-123 Clifton Street, London EC2A 4LD'; TCO London is a small independent publisher/creative agency that also publishes Huck, not part of a large media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London film magazine with Issue 115 published October 2026 and a print subscription shop.",
+  "what_it_is": "A film magazine in which each print issue is built around one new release, with a commissioned illustrated cover and a long section of interviews and essays on that film, followed by reviews and features on other cinema. The illustration-heavy design and the thematic structure are its signature. It suits readers who follow new arthouse and mainstream cinema and want criticism with a strong visual identity.",
+  "suggested_primary_tag": "film",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://tco-london.transforms.svdcdn.com/production/tco/images/Little-White-Lies/LWL_115_Cover_Reveal.jpg?w=1024&q=75&fm=webp&fit=min&dm=1791368651&s=5c3ca8166d04678885fcebfa08329eac",
+      "source_type": "publisher",
+      "page_url": "https://www.lwlies.com/magazine/issue-115",
+      "issue_label": "Issue 115",
+      "width": 1024,
+      "height": 1280,
+      "notes": "Front cover (John Malkovich cover of the double-cover issue), WebP served via signed CDN transform; unsigned/original URLs return nothing. A 2048px variant exists in the page srcset (s=1c880d9c2efd3115c0f315032f78e700) but was not measured."
+    },
+    {
+      "url": "https://tco-london.transforms.svdcdn.com/production/tco/images/Little-White-Lies/LWL_115_Cover_Reveal2.jpg?w=1024&q=75&fm=webp&fit=min&dm=1791368642&s=1283005a24173964affde4582623b516",
+      "source_type": "publisher",
+      "page_url": "https://www.lwlies.com/magazine/issue-115",
+      "issue_label": "Issue 115",
+      "width": 1024,
+      "height": 1280,
+      "notes": "Second cover of the double-cover issue (Sam Rockwell), WebP."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/LittleWhiteLies_115.jpg?v=1792412747",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/little-white-lies-115",
+      "issue_label": "Issue 115",
+      "width": 1000,
+      "height": 1248,
+      "notes": "magCulture product image, JPEG, from products.json."
+    }
+  ],
+  "evidence_urls": [
+    "https://lwlies.com/",
+    "https://www.lwlies.com/magazine/issue-115",
+    "https://www.lwlies.com/magazine",
+    "https://www.lwlies.com/contact",
+    "https://lwlies.imbmsubscriptions.com/",
+    "https://magculture.com/products/little-white-lies-115"
+  ],
+  "uncertainties": "The publisher's subscription/single-copy shop (Inter-Media) blocks non-browser requests, so the cover price could not be read there; magCulture lists Issue 115 at GBP 10.00. Frequency: magCulture says bimonthly and the publisher's own issue pages show 112 (Mar 2026), 113 (Jun 2026), 115 (Oct 2026), i.e. roughly five issues a year, so bimonthly is used. The issue date is the datePublished of the publisher's Issue 115 page (2026-10-07), which coincides with the 'order now' announcement."
+}

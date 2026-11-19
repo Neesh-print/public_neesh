@@ -1,0 +1,67 @@
+{
+  "input_title": "THE GREATEST",
+  "official_name": "The Greatest",
+  "publisher_name": "The Greatest Magazine",
+  "publisher_website": "https://www.thegreatestmagazine.com/",
+  "country": "IT",
+  "city": "Milan",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "EUR",
+  "trim_size": "24 x 32 cm",
+  "page_count": 584,
+  "subscribe_url": "https://www.thegreatestmagazine.com/shop/",
+  "latest_issue_label": "Issue 30 – The Evernew Issue (Fall/Winter 2026/27)",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.thegreatestmagazine.com/product/the-greatest-30-the-evernew-issue/",
+  "independent": "yes",
+  "independence_evidence": "The publisher's own site describes it as 'an independent biannual fashion magazine entirely made in Italy', launched 2012 and based in Milan; the team page lists a small in-house masthead and no parent media group is named anywhere on the site.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Milan-based print biannual with Issue 29 (Spring-Summer 2026) and Issue 30 (Fall/Winter 2026/27, published October 2026) on sale from the publisher's own shop.",
+  "what_it_is": "A large-format men's fashion magazine published twice a year from Milan, each issue built around a single theme (the latest is 'The Evernew') and issued with multiple collectable covers. Inside are long fashion editorials shot by an international roster of photographers alongside interviews with actors, designers, artists and athletes, running to well over 400 pages. It suits readers who collect menswear and fashion photography titles and want a seasonal book-like object rather than a newsstand monthly.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.thegreatestmagazine.com/wp-content/uploads/2026/10/1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thegreatestmagazine.com/product/the-greatest-30-the-evernew-issue/",
+      "issue_label": "Issue 30 – The Evernew Issue (cover 1 of 10, Vasko shot by Hein Gijsbers)",
+      "width": 1024,
+      "height": 819,
+      "notes": "Flat front cover centred on a plain light-grey background (landscape canvas, cover occupies roughly 520x690 px); needs cropping to the cover edges. This is the og:image and first gallery image; the issue has 10 covers."
+    },
+    {
+      "url": "https://www.thegreatestmagazine.com/wp-content/uploads/2026/10/3.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thegreatestmagazine.com/product/the-greatest-30-the-evernew-issue/",
+      "issue_label": "Issue 30 – The Evernew Issue (alternate cover)",
+      "width": 1024,
+      "height": 819,
+      "notes": "Same presentation: flat alternate cover on grey background, needs cropping."
+    },
+    {
+      "url": "https://www.thegreatestmagazine.com/wp-content/uploads/2026/10/4.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thegreatestmagazine.com/product/the-greatest-30-the-evernew-issue/",
+      "issue_label": "Issue 30 – The Evernew Issue (alternate cover)",
+      "width": 1024,
+      "height": 819,
+      "notes": "Same presentation: flat alternate cover on grey background, needs cropping."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.thegreatestmagazine.com/",
+    "https://www.thegreatestmagazine.com/the-team/",
+    "https://www.thegreatestmagazine.com/distribution/",
+    "https://www.thegreatestmagazine.com/product/the-greatest-30-the-evernew-issue/",
+    "https://www.thegreatestmagazine.com/product/the-greatest-29-the-journeying-issue/",
+    "https://www.thegreatestmagazine.com/product-category/magazine/"
+  ],
+  "uncertainties": "No legal company name (S.r.l. etc.) is shown on the site; the publisher is recorded under the imprint name 'The Greatest Magazine' as the site presents it. Issue 30's exact street date is not stated; the product page's structured data gives a publish date of 2026-10-12, so October 2026 is used. All available cover images are only 1024 px wide with the cover itself around 690 px tall, below the 1000 px target. The site only describes the magazine as 'made in Italy' and 'based in Milan'; no street address was found."
+}

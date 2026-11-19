@@ -1,0 +1,60 @@
+{
+  "input_title": "KINK",
+  "official_name": "Kink",
+  "publisher_name": "Kink Ediciones (Paco y Manolo)",
+  "publisher_website": "https://kinkediciones.com",
+  "country": "ES",
+  "city": "Barcelona",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": 180,
+  "subscribe_url": "https://kinkediciones.com/shop/",
+  "latest_issue_label": "Kink 44 (+ Cuaderno 25)",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://kinkediciones.com/product/kink44b/",
+  "independent": "yes",
+  "independence_evidence": "Shop terms: 'Kink Ediciones está gestionado por Manuel Rodríguez Alcaide' (sole trader with NIF); the magazine is 'a magazine by Paco y Manolo', self-published through their own shop since 2006.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Self-published Barcelona photography magazine whose issue 44 (May 2026) is on sale in the publisher's own shop, following issues 42 and 43 in 2025.",
+  "what_it_is": "A small-format, bilingual Spanish-English photography magazine devoted to the male nude, shot by its two founders in natural light in domestic interiors and landscapes. Each issue comes packaged with a short text supplement (the 'Cuaderno') and usually appears with more than one cover; issue 44 runs to 180 pages. It suits collectors of gay erotic and independent photography publishing.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://sodabooks.com/cms/wp-content/uploads/2026/05/kink-magazine-issue-44-ss-2026-cover.jpg",
+      "source_type": "stockist",
+      "page_url": "https://sodabooks.com/publications/erotica/kink-44",
+      "issue_label": "Kink 44 (Spring/Summer 2026)",
+      "width": 1252,
+      "height": 1766,
+      "notes": "Flat front cover from a Munich stockist; the issue exists in more than one cover and this is the one the stockist shows."
+    },
+    {
+      "url": "https://kinkediciones.com/wp-content/uploads/2026/05/K44_1_02.jpg",
+      "source_type": "publisher",
+      "page_url": "https://kinkediciones.com/product/kink44b/",
+      "issue_label": "Kink 44",
+      "width": 900,
+      "height": 900,
+      "notes": "Publisher's product image: 3D mockup of the issue with shadow on white, 900 px square. Not flat; fallback only."
+    }
+  ],
+  "evidence_urls": [
+    "https://kinkediciones.com",
+    "https://kinkediciones.com/shop/",
+    "https://kinkediciones.com/product/kink44b/",
+    "https://kinkediciones.com/?page_id=2014",
+    "https://kinkediciones.com/?page_id=6363",
+    "https://parisassbookfair.fr/2022/en/exposants/kink/",
+    "https://sodabooks.com/publications/erotica/kink-44",
+    "https://sodabooks.com/publications/erotica"
+  ],
+  "uncertainties": "The publisher's site gives no postal address; Barcelona comes from the Paris Ass Book Fair exhibitor listing ('Barcelona • Spain') and the stockist's 'Origin: Spain'. The 20 EUR price is for the indivisible pack of Kink 44 plus Cuaderno 25. Publication month (May 2026) is taken from the Cuaderno 25 masthead visible in the product photos ('Mayo 2026') and the May 2026 image uploads; the stockist labels it Spring/Summer 2026. Cadence from the stockist's list (42 SS2025, 43 AW2025/26, 44 SS2026) and the shop supports biannual. 'KINK' in the input matches this Spanish title rather than the Canadian C Magazine 'Kink' issue. No flat cover is available on the publisher's own site."
+}

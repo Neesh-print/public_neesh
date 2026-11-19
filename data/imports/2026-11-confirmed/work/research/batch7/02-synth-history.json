@@ -1,0 +1,60 @@
+{
+  "input_title": "Synth History",
+  "official_name": "Synth History",
+  "publisher_name": "Synth History",
+  "publisher_website": "https://www.synthhistory.com/",
+  "country": "US",
+  "city": null,
+  "frequency": "annual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "140 x 216 mm",
+  "page_count": 192,
+  "subscribe_url": "https://www.synthhistory.com/shop",
+  "latest_issue_label": "Issue 5 (2025)",
+  "latest_issue_date": "2025-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.synthhistory.com/shop/Synth-History-Issue-5-2025-p782748386",
+  "independent": "yes",
+  "independence_evidence": "About page describes Synth History as 'a curated independent magazine, website, limited narrative podcast series and collection of playlists', created, designed and published by its founder; EU/UK wholesale via Antenne Books.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Self-published independent US zine whose fifth print issue (192 pages, limited to 1,400 copies) shipped in late 2025, with a sixth issue on pre-order for 2026.",
+  "what_it_is": "A thick, small-format print zine about synthesizers and the people who use them, built from long interviews with electronic and pop musicians, producers and instrument designers about their gear, process and influences. Recurring sections ask artists for their favourite records or three quick questions, and the print edition collects material that also appears on the project's website and podcast. It is aimed at synth players, producers and electronic-music fans who like gear talk and musician interviews in a collectible annual edition.",
+  "suggested_primary_tag": "music",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0822/0062/5490/files/AB8312-synth-history-5-03_f6afce61-e587-48a4-8a1a-26402636b34a.jpg?v=1792373867",
+      "source_type": "distributor",
+      "page_url": "https://antennebooks.com/products/synth-history-issue-five",
+      "issue_label": "Issue 5",
+      "width": 2378,
+      "height": 1787,
+      "notes": "Photograph of the physical Issue 5 copy centred on a plain pale background, landscape framing with wide margins; not a flat cover scan, would need cropping. Best available; the publisher's Wix shop renders product images only client-side."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0658/8848/5479/files/synth-history-5_486697_1.jpg?v=1787097044",
+      "source_type": "stockist",
+      "page_url": "https://vintageking.com/products/synth-history-issue-5",
+      "issue_label": "Issue 5",
+      "width": 1500,
+      "height": 1500,
+      "notes": "Cover placed on a blue patterned background (retailer composite), not a flat image."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.synthhistory.com/",
+    "https://www.synthhistory.com/about",
+    "https://www.synthhistory.com/shop",
+    "https://www.synthhistory.com/shop/Synth-History-Issue-5-2025-p782748386",
+    "https://www.synthhistory.com/shop/Synth-History-Issue-6-2026-Pre-Order-p872948057",
+    "https://antennebooks.com/products/synth-history-issue-five",
+    "https://vintageking.com/products/synth-history-issue-5",
+    "https://www.legrandj.eu/products/synth-history-5"
+  ],
+  "uncertainties": "The publisher's Wix shop product pages (Issue 5 and the Issue 6 2026 pre-order linked from the homepage) load their content client-side, so the publisher's own price, stock status and product images could not be read with curl; a search snippet of the Issue 5 page said it was a pre-order shipping in the first week of November 2025, and US retailers list it at USD 25. Trim size and page count (192 pp, 140 x 216 mm) come from the Antenne Books and Le Grand Jeu listings, not the publisher. Issue 6 is on pre-order for 2026 but there is no evidence it has shipped, so Issue 5 is recorded as the latest issue out. The publisher's city is not stated on the site. No flat cover image was found."
+}

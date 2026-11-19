@@ -1,0 +1,49 @@
+{
+  "input_title": "Vanish",
+  "official_name": "Vanish",
+  "publisher_name": "Vanish Media LLC",
+  "publisher_website": "https://vanish.today/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "irregular",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "176 x 228 mm",
+  "page_count": 198,
+  "subscribe_url": null,
+  "latest_issue_label": "Issue 03 (The Outdoor Avant-Garde)",
+  "latest_issue_date": "2026-07-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.legrandj.eu/products/vanish-3-the-outdoor-avant-garde",
+  "independent": "yes",
+  "independence_evidence": "The about page describes Vanish Media as the publisher of Vanish Magazine within a small founder-run platform (masthead lists a founder, co-founders and a handful of staff), with no parent media group (https://vanish.today/about-us/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent US outdoor-culture title with print issues 0, 1 and 3 all published in 2026, the latest in stock at retailers.",
+  "what_it_is": "Vanish is a print magazine about the overlap of outdoor life and urban style: technical apparel and gear, design, architecture, travel and the brands and people shaping outdoor culture. Issues are themed paperbacks of around 200 pages with brand profiles, interviews and fashion-style photography; the third is titled 'The Outdoor Avant-Garde'. It is for readers interested in gorpcore fashion, outdoor design and adventure travel.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "nature",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/2424/8147/files/Vanish_3-TheOutdoorAvant-Garde.jpg?v=1783082364",
+      "source_type": "stockist",
+      "page_url": "https://www.legrandj.eu/products/vanish-3-the-outdoor-avant-garde",
+      "issue_label": "Issue 03",
+      "width": 1134,
+      "height": 1134,
+      "notes": "Front cover of issue 3 placed on the retailer's patterned 'Hello my name is' background; square file, cover roughly 700x900px. No cover image found on the publisher's own site."
+    }
+  ],
+  "evidence_urls": [
+    "https://vanish.today/",
+    "https://vanish.today/about-us/",
+    "https://vanish.today/david-gensler-interview-vanish-outdoor-magazine-part-1/",
+    "https://vanish.today/wp-json/wp/v2/posts?search=issue&per_page=10&_fields=title,link,date",
+    "https://www.legrandj.eu/products/vanish-3-the-outdoor-avant-garde",
+    "https://magculture.com/products/vanish-1"
+  ],
+  "uncertainties": "The publisher's site has no shop, so no publisher cover price; retailer Le Grand Jeu lists issue 3 at EUR 24 (the printed cover carries GBP 20 / EUR 24 / USD 28). Issue 3's date is taken from the retailer listing published 6 July 2026 (year 2026 per its description); the publisher site still says 'Issue Zero out now'. Trim size and page count come from the retailer listing (22.8 x 17.6 cm, 198 pages), not the publisher. City is based on the founder being 'currently living in New York' per the publisher's own interview and magCulture's 'New York' attribution; the LLC's registered location was not found. No issue 2 was found; numbering 0, 1, 3 noted."
+}

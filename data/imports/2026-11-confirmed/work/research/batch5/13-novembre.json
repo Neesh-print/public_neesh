@@ -1,0 +1,62 @@
+{
+  "input_title": "Novembre",
+  "official_name": "Novembre",
+  "publisher_name": "Novembre Global",
+  "publisher_website": "https://novembre.global/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "annual",
+  "cover_price": 35.0,
+  "currency": "EUR",
+  "trim_size": "21 x 28 cm",
+  "page_count": null,
+  "subscribe_url": "https://novembre.global/shop",
+  "latest_issue_label": "Issue 18",
+  "latest_issue_date": "2026-05-29",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://novembre.global/magazine/world-release-of-novembre-issue-18-at-lafayette-anticipations-paris",
+  "independent": "yes",
+  "independence_evidence": "The publisher's about page lists its own creative directors (Florence Tétier, Jeanne-Salomé Rochat) and small team, and the site describes Novembre Global as a platform comprising the magazine and its own creative agency, Novembre Bureau; no media-group owner is named anywhere.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Founder-run fashion-and-art title whose Issue 18 launched on 29 May 2026 in Paris and is stocked by its distributors.",
+  "what_it_is": "A thick fashion and contemporary-art magazine that gathers well over a hundred photographers, stylists, artists and writers per issue into fashion stories, artist projects and portfolios, and is released with up to ten different covers. Issues are large (21 x 28 cm, around 2 kg) and come out roughly once a year. It is made for fashion image-makers, art-school audiences and collectors of experimental fashion publishing.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/1SAVAGEMENbyMichaelAuder.jpg?v=1779792082",
+      "source_type": "distributor",
+      "page_url": "https://www.kdpresse.com/products/novembre-n-18",
+      "issue_label": "Issue 18",
+      "width": 1395,
+      "height": 1875,
+      "notes": "Flat front cover, 'SAVAGE MEN by Michel Auder' cover variant, from distributor KD Presse's listing; visually checked. The publisher's own site shows no issue-18 cover image and its shop still lists only issues 16 and 17."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/2KembraPfahler_alongsideShmooshbyLuisaOpaleskyandZoeyRadfordScott.jpg?v=1779792082",
+      "source_type": "distributor",
+      "page_url": "https://www.kdpresse.com/products/novembre-n-18",
+      "issue_label": "Issue 18",
+      "width": 1395,
+      "height": 1875,
+      "notes": "Second cover variant (Kembra Pfahler) from the same KD Presse listing; not visually checked."
+    }
+  ],
+  "evidence_urls": [
+    "https://novembre.global/",
+    "https://novembre.global/about",
+    "https://novembre.global/bureau",
+    "https://novembre.global/shop",
+    "https://novembre.global/contact",
+    "https://novembre.global/magazine/world-release-of-novembre-issue-18-at-lafayette-anticipations-paris",
+    "https://www.kdpresse.com/products/novembre-n-18",
+    "https://publicknowledgebooks.com/products/novembre-issue-19",
+    "https://publicknowledgebooks.com/products/novembre-issue-20",
+    "https://parisassbookfair.fr/en/exposants/novembre-magazine"
+  ],
+  "uncertainties": "The publisher's site (novembre.global; the old novembremagazine.com now redirects there) has no imprint, address or legal entity, only a contact email; Paris/France is taken from KD Presse's 'origine France', the Paris Ass Book Fair exhibitor listing ('Paris, France') and the issue launch in Paris, while the title was founded in Switzerland, so the city needs confirmation. Price EUR 35 is what the publisher's own shop charges for Issue 17 covers (Issue 18 is not yet in its shop; KD Presse also charges EUR 35, Public Knowledge Books GBP 32). Latest-issue date is the publisher's world-release event date (29 May 2026); KD Presse listed it on 26 May 2026. Cadence: Issue 16 late 2024, Issue 17 mid-2025, Issue 18 May 2026, so annual (the site's stockist text says biannual and a book-fair listing says every nine months). Page count not stated; the magazine weighs 2.1 kg per KD Presse. Public Knowledge Books' URL handles 'novembre-issue-19' and 'novembre-issue-20' are mislabelled listings for Issues 17 and 18."
+}

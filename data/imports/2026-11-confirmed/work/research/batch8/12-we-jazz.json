@@ -1,0 +1,48 @@
+{
+  "input_title": "We Jazz",
+  "official_name": "We Jazz Magazine",
+  "publisher_name": "We Jazz Oy",
+  "publisher_website": "https://wejazz.fi/",
+  "country": "FI",
+  "city": "Helsinki",
+  "frequency": "quarterly",
+  "cover_price": 20.0,
+  "currency": "EUR",
+  "trim_size": "170 x 240 mm",
+  "page_count": 128,
+  "subscribe_url": "https://wejazzrecords.bandcamp.com/merch/we-jazz-magazine-subscription-4-issues-starting-from-wjmag18",
+  "latest_issue_label": "Issue 20 (Fall 2026, 'Brilliant Corners')",
+  "latest_issue_date": "2026-09-18",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://wejazz.fi/out-now-we-jazz-magazine-issue-20/",
+  "independent": "yes",
+  "independence_evidence": "Published by We Jazz Oy, which describes itself as 'an independent music culture company based in Helsinki' running a record label, festival and the magazine (https://wejazz.fi/info/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Helsinki quarterly whose Issue 20 (Fall 2026) went on sale 18 September 2026.",
+  "what_it_is": "We Jazz Magazine is a quarterly English-language journal about jazz and creative music, with each issue built around a focus artist (Issue 20 is devoted to Thelonious Monk) plus long-form profiles, a record-collecting column, album and live reviews and photo essays. It is a 128-page, 170 x 240 mm print edition sold with a bonus digital album. It is for listeners of jazz, improvised and experimental music.",
+  "suggested_primary_tag": "music",
+  "suggested_secondary_tag": null,
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://f4.bcbits.com/img/0046970700_10.jpg",
+      "source_type": "publisher",
+      "page_url": "https://wejazzrecords.bandcamp.com/merch/we-jazz-magazine-fall-2026-brilliant-corners",
+      "issue_label": "Issue 20",
+      "width": 1200,
+      "height": 1200,
+      "notes": "Flat front cover centred on a white square canvas (cover approx 600x850px within the 1200px file); from the publisher's own Bandcamp merch page."
+    }
+  ],
+  "evidence_urls": [
+    "https://wejazz.fi/magazine/",
+    "https://wejazz.fi/info/",
+    "https://wejazz.fi/out-now-we-jazz-magazine-issue-20/",
+    "https://wejazz.fi/wp-json/wp/v2/posts?search=magazine&per_page=8&_fields=title,link,date",
+    "https://wejazzrecords.bandcamp.com/merch/we-jazz-magazine-fall-2026-brilliant-corners"
+  ],
+  "uncertainties": "The Bandcamp price is 'EUR 20 or more' (name-your-price minimum). The cover image is only available with white padding at 1200px; the publisher's shop runs through Bandcamp rather than wejazz.fi."
+}

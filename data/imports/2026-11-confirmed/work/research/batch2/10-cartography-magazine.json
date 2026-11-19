@@ -1,0 +1,59 @@
+{
+  "input_title": "Cartography Magazine",
+  "official_name": "Cartography",
+  "publisher_name": "Cartography Magazine (Paola Corini and Luca De Santis, founding publishers)",
+  "publisher_website": "https://bycartography.com/",
+  "country": "IT",
+  "city": "Milan",
+  "frequency": "annual",
+  "cover_price": 29.0,
+  "currency": "EUR",
+  "trim_size": "245 x 335 mm",
+  "page_count": 296,
+  "subscribe_url": "https://bycartography.com/shop/",
+  "latest_issue_label": "Cartography N°12",
+  "latest_issue_date": "2025-04-12",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://bycartography.com/storie/issue-12-out-now/",
+  "independent": "yes",
+  "independence_evidence": "About page: 'Cartography is an independent magazine devoted to travel culture ... established in 2016 by Paola Corini and Luca De Santis, Cartography Magazine is based in Milan'; the founders are named as 'Founding Publishers' and the address is Via Savona 97, Milan.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Self-described independent Milan travel magazine whose twelfth print issue was released internationally on 12 April 2025.",
+  "what_it_is": "Cartography is a large-format travel magazine in English and Italian; each issue takes three destinations (N°12: Brazil, La Gomera to Tangier, and West Texas) and covers each with a documentary photo album, a short text, a map and a day-by-day itinerary. Issues run to around 300 pages at 245 x 335 mm on uncoated paper and are collected as much as read. It suits travellers and photography readers who prefer slow itineraries over hotel listings.",
+  "suggested_primary_tag": "travel",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://bycartography.com/wp-content/uploads/2025/03/COVER1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://bycartography.com/en/magazines/cartography-n12/",
+      "issue_label": "Cartography N°12 (Cover 1)",
+      "width": 2160,
+      "height": 2953,
+      "notes": "Publisher's own magazine page image, flat front cover. The issue has two covers; this is cover 1."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1022/3793/files/cartography_da610cc3-a8eb-44ee-b3d7-cbf702d8febc.jpg?v=1707220234",
+      "source_type": "stockist",
+      "page_url": "https://villagebooks.co/products/cartography-11",
+      "issue_label": "Cartography N°11 (previous issue, fallback only)",
+      "width": 3386,
+      "height": 3386,
+      "notes": "Not the latest issue; listed only as a fallback example of the stockist image style."
+    }
+  ],
+  "evidence_urls": [
+    "https://bycartography.com/about/",
+    "https://bycartography.com/en/",
+    "https://bycartography.com/en/magazines/cartography-n12/",
+    "https://bycartography.com/storie/issue-12-out-now/",
+    "https://bycartography.com/en/magazines/cartography-n11/",
+    "https://lampoonmagazine.com/product/cartography-magazine-issue-12-2025-brazil-west-texas-research/",
+    "https://stackmagazines.com/travel/video-review-cartography/"
+  ],
+  "uncertainties": "The publisher says it is 'published twice a year', but the actual cadence is slower: N°11 appeared in early 2024 (cover files uploaded January 2024) and N°12 in April 2025, with no N°13 found by November 2026, so 'annual' is recorded per the cadence rule. The price EUR 29 is the publisher's stated IT/EU cover price on the release post (UK GBP 27, US USD 34); the shop page itself is script-rendered and showed no prices. No legal company name is given on the site. The distributor hint (Issue 12 listed Oct 2025) matches."
+}

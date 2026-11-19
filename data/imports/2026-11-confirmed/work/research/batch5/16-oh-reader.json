@@ -1,0 +1,51 @@
+{
+  "input_title": "Oh Reader",
+  "official_name": "Oh Reader",
+  "publisher_name": "Oh Reader",
+  "publisher_website": "https://www.ohreader.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "quarterly",
+  "cover_price": 19.99,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.ohreader.com/subscribe",
+  "latest_issue_label": "Issue 025",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://magculture.com/products/oh-reader-25",
+  "independent": "yes",
+  "independence_evidence": "Self-published title: magCulture's listing names Gemma Peckham as 'editor and publisher', the publisher's FAQ says it is located in New York City and the site carries no parent company; it also runs its own wholesale programme.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent New York quarterly about reading with Issue 025 out in October 2026 and a continuous run of issues through 2025.",
+  "what_it_is": "A quarterly magazine about the experience of reading rather than book reviews: personal essays, reader interviews, humour and illustrated features about why and how people read, with illustrated covers. Each issue runs about 70 pages and is sold by subscription, in bookshops and as a digital edition. It is for people who read a lot and want a magazine about that habit itself.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/OhReader25.jpg?v=1791989665",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/oh-reader-25",
+      "issue_label": "Issue 025",
+      "width": 1000,
+      "height": 1296,
+      "notes": "Flat front cover (illustration of two readers in a train carriage, 'ISSUE 025' at the foot) from magCulture's listing; visually checked. The publisher's own site only shows Issue 025 inside promotional graphics ('OR 25 hero', 'OR 25 buy online'), not as a flat cover, and has no Issue 025 product page yet."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.ohreader.com/",
+    "https://www.ohreader.com/about",
+    "https://www.ohreader.com/faq",
+    "https://www.ohreader.com/shop",
+    "https://www.ohreader.com/backissues/oh-reader-issue-024",
+    "https://www.ohreader.com/subscribe",
+    "https://magculture.com/products/oh-reader-25",
+    "https://magculture.com/products/oh-reader-24"
+  ],
+  "uncertainties": "The publisher's shop lists back issues only up to Issue 024 (USD 19.99, sold out); Issue 025 is evidenced by the publisher's home page ('Issue 025! Have you read it yet?' and an Issue 025 'buy online' promo) and by magCulture's listing dated 19 October 2026, so the date is recorded at month precision and the USD 19.99 price is the publisher's single-issue price for the previous issues. Squarespace JSON endpoints were blocked, so no product dates could be read. Trim size (210 x 275 mm) and page count (69) appear only on magCulture's listing, not the publisher's site, so they are not recorded in those fields."
+}

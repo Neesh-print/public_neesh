@@ -1,0 +1,36 @@
+{
+  "15-flagrant": {
+    "name": "Flagrant",
+    "publisher_name": "Flagrant Magazine",
+    "tags": [
+      "sport",
+      "art"
+    ],
+    "identity": [
+      "women-led"
+    ],
+    "description": "Flagrant is an American print magazine about basketball culture rather than match coverage, following artists, fans, community projects, fashion and the people around the game with heavily art directed photography and illustration. Issues are themed, from community to sustainability to a WNBA collaboration, and appear twice a year. It is for basketball fans who care as much about the aesthetics and communities around the sport as the scores.",
+    "note": "Women-led tag from the publisher's own site, which describes itself as the only women-founded basketball magazine. Current issues are sold only through a USD 40 two issue subscription, so no single copy price. Issue 10 is announced for fall 2026 but not out as of 19 November 2026. Cover from a stockist; the publisher shows mockups only."
+  },
+  "17-frame": {
+    "name": "FRAME",
+    "publisher_name": "Frame Publishers",
+    "tags": [
+      "design",
+      "art"
+    ],
+    "description": "FRAME is an English language interior design and architecture magazine from Amsterdam, in print since 1997, that concentrates on commercial and public interiors such as retail, hospitality, workplaces and exhibitions. Each issue is built around a theme, recently Speed versus Slowness, and mixes project features, interviews with practitioners and trend analysis about how spatial design is changing. It is for practising interior designers, architects, brand teams and students who want a professional view rather than home decoration.",
+    "note": "Webshop price EUR 22.89 is probably excluding VAT. FAQ says four issues a year but the cadence is about five, recorded as bimonthly. Publisher image has a slight spine and shadow treatment; the flat cover comes from magCulture at 1072px.",
+    "cover_candidates": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Frame169.png?v=1794327494",
+        "source_type": "stockist",
+        "page_url": "https://magculture.com/products/frame-169",
+        "issue_label": "FRAME 169",
+        "width": 1072,
+        "height": 1402,
+        "notes": "Flat cover; the publisher's own image carries a spine and shadow treatment."
+      }
+    ]
+  }
+}

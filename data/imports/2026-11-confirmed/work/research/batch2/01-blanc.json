@@ -1,0 +1,50 @@
+{
+  "input_title": "Blanc",
+  "official_name": "Blanc",
+  "publisher_name": "Blanc Media, Inc.",
+  "publisher_website": "https://blancmagazine.com/",
+  "country": "US",
+  "city": null,
+  "frequency": "quarterly",
+  "cover_price": 20.0,
+  "currency": "USD",
+  "trim_size": "315mm x 230mm",
+  "page_count": null,
+  "subscribe_url": "https://blancmagazine.com/shop/",
+  "latest_issue_label": "Issue 36 — Opulence",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://blancmagazine.com/product/tinashe/",
+  "independent": "yes",
+  "independence_evidence": "Site describes Blanc as 'an independently published magazine' (who-we-are page) and the product page states 'Published by Blanc Media, Inc.', a small company with this one title.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently published quarterly print magazine with Issue 36 released September 2026 and Issue 35 in June/Summer 2026.",
+  "what_it_is": "Blanc is a quarterly print magazine covering fashion, art and music, with an emphasis on perspectives it describes as underrepresented. Each issue is built around celebrity and artist cover stories (recent covers include Tinashe, Chloe Cherry and PinkPantheress), long interviews and fashion editorials, printed at 315 x 230 mm. It suits readers of culture and fashion magazines who want a more diverse cast than the mainstream glossies.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "music",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://blancmagazine.com/wp-content/uploads/2026/09/COVER-ISSUE-36_Tinashe-copy1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://blancmagazine.com/product/tinashe/",
+      "issue_label": "Issue 36 — Opulence (Tinashe cover)",
+      "width": 800,
+      "height": 1095,
+      "notes": "Flat front cover from the publisher's WooCommerce product listing; largest size served, below 1000px on the long edge."
+    }
+  ],
+  "evidence_urls": [
+    "https://blancmagazine.com/who-we-are/",
+    "https://blancmagazine.com/",
+    "https://blancmagazine.com/product/tinashe/",
+    "https://blancmagazine.com/product/beautiful-trouble-issue-35-chloe-cherry/",
+    "https://blancmagazine.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://blancmagazine.com/terms-and-conditions/",
+    "https://blancmagazine.com/contact/"
+  ],
+  "uncertainties": "The publisher's site gives no city; the imprint is 'Blanc Media, Inc.' and shipping is US-only from the shop. Third-party sources (Wikipedia, FashionNetwork) say it was founded in London in 2011 and is now headquartered in New York, but the publisher's own site does not state this, so city is left null. The Issue 36 release date is taken from the September 2026 upload date of the cover file and the site's 18 September 2026 'Blanc Issue 36: Tinashe' post; Issue 35 is labelled 'June/Summer 2026'. The distributor hint said Issue 34 Summer 2026, which is out of date."
+}

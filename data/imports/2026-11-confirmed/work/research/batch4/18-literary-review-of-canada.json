@@ -1,0 +1,60 @@
+{
+  "input_title": "Literary Review of Canada",
+  "official_name": "Literary Review of Canada",
+  "publisher_name": "Literary Review of Canada (Literary Review of Canada Charitable Organization)",
+  "publisher_website": "https://reviewcanada.ca",
+  "country": "CA",
+  "city": "Toronto",
+  "frequency": "monthly",
+  "cover_price": 8.95,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://reviewcanada.ca/subscribe/",
+  "latest_issue_label": "December 2026 (Volume 34, Number 10)",
+  "latest_issue_date": "2026-12-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://store.reviewcanada.ca/products/december-2026",
+  "independent": "yes",
+  "independence_evidence": "About page: founded 1991 as an independent journal, briefly owned by Carleton University Press (1996-98), then brought back to Toronto by its editors; supported since 2010 by the Literary Review of Canada Charitable Organization (no. 848431490RR0001). No media-group owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Toronto-based charitable publisher whose December 2026 print issue is on sale in its own store, with ten issues a year.",
+  "what_it_is": "A Canadian journal of ideas built around long book reviews and essays on politics, history, science, literature and culture, with commissioned cover art and poetry in each number. It appears ten times a year (combined January/February and July/August issues) in a newsprint-style review format and keeps a full online archive for print subscribers. It suits readers who want sustained, review-led coverage of Canadian writing and public debate.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0569/7545/8458/files/Cover_Dec26_Front.jpg?v=1794838954",
+      "source_type": "publisher",
+      "page_url": "https://store.reviewcanada.ca/products/december-2026",
+      "issue_label": "December 2026",
+      "width": 1425,
+      "height": 1969,
+      "notes": "Flat front cover from the publisher's own store listing."
+    },
+    {
+      "url": "https://reviewcanada.ca/wp-content/uploads/2026/11/Cover_Dec26_Front.jpg",
+      "source_type": "publisher",
+      "page_url": "https://reviewcanada.ca/issue/december-2026/",
+      "issue_label": "December 2026",
+      "width": 1425,
+      "height": 1969,
+      "notes": "Same cover file hosted on the magazine's main site."
+    }
+  ],
+  "evidence_urls": [
+    "https://reviewcanada.ca",
+    "https://reviewcanada.ca/issue/december-2026/",
+    "https://reviewcanada.ca/about/",
+    "https://reviewcanada.ca/about-us/",
+    "https://reviewcanada.ca/subscribe/",
+    "https://reviewcanada.ca/contact/",
+    "https://store.reviewcanada.ca/products/december-2026",
+    "https://store.reviewcanada.ca/products/december-2026.json"
+  ],
+  "uncertainties": "The December 2026 issue was added to the store on 2026-11-18 and is featured as the current issue on the homepage, so it is treated as out; its nominal date is December 2026. Ten issues a year is recorded as monthly (the nearest allowed value). Subscription prices were not visible without JavaScript, so only the single-issue price is given. Trim size and page count are not stated on the site."
+}

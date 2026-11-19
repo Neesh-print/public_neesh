@@ -1,0 +1,48 @@
+{
+  "input_title": "Richardson",
+  "official_name": "Richardson",
+  "publisher_name": "Richardson",
+  "publisher_website": "https://us.richardsonshop.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "irregular",
+  "cover_price": 42.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://us.richardsonshop.com/collections/all/products/a12",
+  "latest_issue_label": "A12 (The California Issue)",
+  "latest_issue_date": "2025-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://us.richardsonshop.com/collections/all/products/a12",
+  "independent": "yes",
+  "independence_evidence": "Published and sold by Richardson itself from its own New York shop (325 Broome Street; https://us.richardsonshop.com/pages/contact); no media-group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent New York title whose print issue A12 (2025) is on sale from the publisher.",
+  "what_it_is": "A large-format, occasional magazine that mixes sexually explicit photography with essays, fiction and interviews from artists and writers; each issue has a theme, and A12 is built around California with a cover shot by Harley Weir. It sits between an art book and a fashion magazine and is aimed at adult readers interested in subcultural photography and provocative writing.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0006/6063/5711/files/A12-SQUARE.jpg?v=1761785179",
+      "source_type": "publisher",
+      "page_url": "https://us.richardsonshop.com/collections/all/products/a12",
+      "issue_label": "A12",
+      "width": 920,
+      "height": 924,
+      "notes": "Flat front cover but letterboxed into a square with white bars left and right, and under 1000px; the only cover image on the publisher's shop. Stockist images at antennebooks.com are angled photos, not flat."
+    }
+  ],
+  "evidence_urls": [
+    "https://us.richardsonshop.com/collections/all/products/a12",
+    "https://us.richardsonshop.com/products.json",
+    "https://us.richardsonshop.com/pages/contact",
+    "https://antennebooks.com/products/richardson-a12",
+    "https://www.yvon-lambert.com/products/richardson-magazine-issue-a12"
+  ],
+  "uncertainties": "Issue date taken from the publisher shop listing (published 2025-10-30) and a stockist's '2025' statement; no day-level release date found. Stockists give 160 pages and 30.5 x 22.6 cm, not recorded because the publisher's site does not state them. Cadence is roughly one issue every two years (A10 2021, A11 Dec 2023, A12 Oct 2025)."
+}

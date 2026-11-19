@@ -1,0 +1,51 @@
+{
+  "input_title": "Milk",
+  "official_name": "MilK",
+  "publisher_name": "Milk Magazine",
+  "publisher_website": "https://www.milkmagazine.net/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "quarterly",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://milk.aboshop.fr/common/categories/2",
+  "latest_issue_label": "N°94",
+  "latest_issue_date": "2026-11-13",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.milkmagazine.net/article/milk-magazine-n94-est-en-kiosque/",
+  "independent": "yes",
+  "independence_evidence": "Legal notice names the publisher as Milk Magazine (SIRET 532 152 576, 59 bis Avenue Hoche, 75008 Paris), president V Collection represented by Isis-Colombe Balas and Karel Balas, who the team page lists as the co-founders; it is a small company that also publishes Milk Decoration and Milk Japon, not a large media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently owned Paris family-lifestyle quarterly with N°94 on newsstands from 13 November 2026.",
+  "what_it_is": "A French-language magazine about family life with children, covering children's fashion, interiors and home tours, design objects, travel and parenting topics, with photographic fashion stories and features on makers and artists. Issues come out seasonally and the cover usually shows a family or child in a styled home setting. It is aimed at style-conscious parents.",
+  "suggested_primary_tag": "lifestyle",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.milkmagazine.net/wp-content/uploads/2026/11/mm94-couv-fr-hd-1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.milkmagazine.net/article/milk-magazine-n94-est-en-kiosque/",
+      "issue_label": "N°94",
+      "width": 1299,
+      "height": 1772,
+      "notes": "High-resolution front cover of the French edition (file named 'mm94-couv-fr-hd') from the publisher's announcement article."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.milkmagazine.net/",
+    "https://www.milkmagazine.net/article/milk-magazine-n94-est-en-kiosque/",
+    "https://www.milkmagazine.net/article/milk-magazine-n93-est-en-kiosque/",
+    "https://www.milkmagazine.net/article/milk-magazine-n92-est-en-kiosque/",
+    "https://www.milkmagazine.net/article/milk-magazine-n91-est-en-kiosque/",
+    "https://www.milkmagazine.net/mentions-legales/",
+    "https://www.milkmagazine.net/lequipe/",
+    "https://milk.aboshop.fr/common/categories/2"
+  ],
+  "uncertainties": "The publisher's online shop (milk.aboshop.fr) is fully JavaScript-rendered and returned no product data, so the cover price is not recorded. The legal notice contains one sentence referring to 'la société Prisma Media' for link permissions, which looks like boilerplate inconsistent with the rest of the notice (publisher Milk Magazine / V Collection); treated as independent but worth a second look. Issue cadence Nov 2025, Feb, May, Aug, Nov 2026 supports quarterly."
+}

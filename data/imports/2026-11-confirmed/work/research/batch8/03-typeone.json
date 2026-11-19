@@ -1,0 +1,61 @@
+{
+  "input_title": "TYPEONE",
+  "official_name": "TYPEONE Magazine",
+  "publisher_name": "TYPE 01 Ltd (TYPE01)",
+  "publisher_website": "https://type-01.com/",
+  "country": "GB",
+  "city": "Walton-on-Thames",
+  "frequency": "annual",
+  "cover_price": 24.99,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": 182,
+  "subscribe_url": "https://type-01.com/product/typeone-magazine-annual-subscription/",
+  "latest_issue_label": "Issue 10",
+  "latest_issue_date": "2025-09-08",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://type-01.com/product/typeone-magazine-issue-10/",
+  "independent": "yes",
+  "independence_evidence": "Published by TYPE01, a small type-media company (TYPE 01 Ltd, company 12024445, sole officer Amber Jane Weaver per Companies House) that also runs two type foundries and a font marketplace; no large media group involvement found (https://type-01.com/about/, https://find-and-update.company-information.service.gov.uk/company/12024445/officers).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent UK typography magazine whose Issue 10 was published in print on 8 September 2025, with Issue 11 on pre-order for November 2026.",
+  "what_it_is": "TYPEONE is an English-language print magazine about typography and graphic design, with studio interviews, opinion pieces, industry insight and career advice for designers. Each issue is themed and guest-edited (Issue 10, at 182 pages, was designed by Studio Groundfloor; Issue 11 covers wayfinding), and alternate limited-edition covers are common. It is aimed at graphic designers, type designers and students.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://type-01.com/wp-content/uploads/2025/09/cover_02.png",
+      "source_type": "publisher",
+      "page_url": "https://type-01.com/product/digital-typeone-magazine-issue-10/",
+      "issue_label": "Issue 10",
+      "width": 2000,
+      "height": 2000,
+      "notes": "Flat front cover (the '0' with TYPEONE masthead) rendered on a grey square canvas; cover occupies roughly the central 1100x1500px. cover_01.png on the same page is the back cover."
+    },
+    {
+      "url": "https://type-01.com/wp-content/uploads/2020/11/TypeOne10_5.9.254014.jpg",
+      "source_type": "publisher",
+      "page_url": "https://type-01.com/product/typeone-magazine-issue-10/",
+      "issue_label": "Issue 10",
+      "width": 2000,
+      "height": 2000,
+      "notes": "Photograph of the magazine open showing the wraparound cover; not a flat cover, fallback only."
+    }
+  ],
+  "evidence_urls": [
+    "https://type-01.com/about/",
+    "https://type-01.com/product/typeone-magazine-issue-10/",
+    "https://type-01.com/product/digital-typeone-magazine-issue-10/",
+    "https://type-01.com/product/typeone-magazine-issue-11/",
+    "https://type-01.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://type-01.com/wp-json/wp/v2/posts?search=issue&per_page=20&_fields=title,link,date",
+    "https://type-01.com/privacy-policy/",
+    "https://find-and-update.company-information.service.gov.uk/company/12024445",
+    "https://find-and-update.company-information.service.gov.uk/company/12024445/officers"
+  ],
+  "uncertainties": "typeonemagazine.com now redirects to an unrelated 'coming soon' page (iconyc.cc); the live publisher site is type-01.com. Issue 11 (The Wayfinding Issue, GBP 24.99) is on pre-order with 'Shipping: November' 2026 and was not yet confirmed shipped on 2026-11-17, so Issue 10 is recorded as the latest issue out. City is the registered office of TYPE 01 Ltd (Walton-on-Thames, Surrey); the site itself gives no address and the magazine is often described as London-based. The about page calls the magazine annual, though earlier issues were roughly biannual."
+}

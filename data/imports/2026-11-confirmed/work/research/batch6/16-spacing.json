@@ -1,0 +1,57 @@
+{
+  "input_title": "Spacing",
+  "official_name": "Spacing",
+  "publisher_name": "Spacing Media",
+  "publisher_website": "https://spacing.ca/",
+  "country": "CA",
+  "city": "Toronto",
+  "frequency": "quarterly",
+  "cover_price": 9.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://spacingstore.ca/collections/magazine",
+  "latest_issue_label": "Issue 76 (Fall 2026): Election 2026: Issues & Influencers",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://spacing.ca/magazine/",
+  "independent": "yes",
+  "independence_evidence": "Launched in 2003 by a group of journalists and public-space advocates and published by Spacing Media, Toronto, which also runs the Spacing Store (https://spacing.ca/about/, https://spacing.ca/contact/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Toronto urbanism magazine with print Issue 76 (Fall 2026) on sale.",
+  "what_it_is": "A landscape-format magazine about Toronto's public realm: transit, streets, housing, parks, urban design, civic politics and city history, with a themed feature section each issue. Issue 76 profiles the people and groups shaping the 2026 municipal election. It is for readers interested in how Canadian cities work and who want to get involved in them.",
+  "suggested_primary_tag": "place",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0110/4062/files/SPACING-76fall2026-FINAL-small.jpg?v=1790371322",
+      "source_type": "publisher",
+      "page_url": "https://spacingstore.ca/collections/magazine/products/current-issue",
+      "issue_label": "Issue 76",
+      "width": 2048,
+      "height": 1588,
+      "notes": "Flat front cover; the magazine itself is landscape format, so the wide aspect is correct. Checked visually."
+    },
+    {
+      "url": "https://spacing.ca/magazine/wp-content/uploads/sites/2/SPACING-76-fall-2026-FINAL-small2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://spacing.ca/magazine/",
+      "issue_label": "Issue 76",
+      "width": 2048,
+      "height": 1588,
+      "notes": "Same cover image on the magazine page."
+    }
+  ],
+  "evidence_urls": [
+    "https://spacing.ca/magazine/",
+    "https://spacing.ca/about/",
+    "https://spacing.ca/contact/",
+    "https://spacingstore.ca/collections/magazine/products/current-issue",
+    "https://spacingstore.ca/products.json"
+  ],
+  "uncertainties": "Issue 76's exact release date is not stated; the cover file is named 'fall 2026' and was uploaded to the store on 2026-09-25, so September 2026 is recorded. The store's current-issue variant price is CAD 9.00 (back issues sell separately). Cadence: four issues in 2025 (70-73) and three so far in 2026 (74-76)."
+}

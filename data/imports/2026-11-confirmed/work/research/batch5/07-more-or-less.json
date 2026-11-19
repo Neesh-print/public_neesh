@@ -1,0 +1,68 @@
+{
+  "input_title": "More Or Less",
+  "official_name": "More Or Less",
+  "publisher_name": "More or Less Magazine",
+  "publisher_website": "https://moreorlessmag.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "irregular",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": 384,
+  "subscribe_url": null,
+  "latest_issue_label": "Issue 09",
+  "latest_issue_date": "2026-10-20",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://data.moreorlessmag.com/magazine/second-nature",
+  "independent": "yes",
+  "independence_evidence": "The about page is signed by founder-editor Jaime Perlman and lists an independent distributor (Boutique Mags/White Circ) and outside agencies for partnerships and PR; Antenne Books lists the publisher as 'More or Less Magazine' and press coverage (Business of Fashion) says it is published through Jaime Perlman Studio. No media-group owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Founder-owned sustainable-fashion title whose Issue 09 (AW 2026, 'second nature') was posted on the publisher's site on 20 October 2026 and reached shops in November 2026.",
+  "what_it_is": "A large-format fashion magazine built around the idea of consuming less, mixing vintage, surplus, sportswear, uniform and craft clothing with current-season pieces in long photographic fashion stories. Issues are themed, run to several hundred pages and appear with multiple covers featuring models and actors. It is aimed at fashion readers and image-makers interested in sustainability and styling rather than shopping.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://data.moreorlessmag.com/app/uploads/2026/10/OHP_POST_1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://data.moreorlessmag.com/magazine/second-nature",
+      "issue_label": "Issue 09",
+      "width": 1280,
+      "height": 1600,
+      "notes": "Flat front cover (Jacqui cover, 'Got Your Period?' cover line) listed first among the issue's covers in the publisher's data API; visually checked."
+    },
+    {
+      "url": "https://data.moreorlessmag.com/app/uploads/2026/10/SAM_BUTTERFLIES_COVER.jpg",
+      "source_type": "publisher",
+      "page_url": "https://data.moreorlessmag.com/magazine/second-nature",
+      "issue_label": "Issue 09",
+      "width": 1280,
+      "height": 1600,
+      "notes": "Second cover variant from the same issue record; not visually checked."
+    },
+    {
+      "url": "https://data.moreorlessmag.com/app/uploads/2026/10/SOPHIA_POST_1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://data.moreorlessmag.com/magazine/second-nature",
+      "issue_label": "Issue 09",
+      "width": 1280,
+      "height": 1600,
+      "notes": "Third cover variant from the same issue record; not visually checked."
+    }
+  ],
+  "evidence_urls": [
+    "https://moreorlessmag.com/",
+    "https://data.moreorlessmag.com/wp-json/wp/v2/issue",
+    "https://data.moreorlessmag.com/wp-json/wp/v2/pages",
+    "https://data.moreorlessmag.com/magazine/second-nature",
+    "https://data.moreorlessmag.com/pages/about",
+    "https://antennebooks.com/products/more-or-less-issue-9-got-your-period",
+    "https://www.businessoffashion.com/articles/sustainability/vogue-alumna-jaime-perlman-launches-magazine-more-or-less-kate-moss"
+  ],
+  "uncertainties": "The publisher's site (a JavaScript front end over a WordPress data API) shows no postal address or legal notice; London is inferred from the UK-only business contacts on the about page (London PR agency, UK distributor, London-based founder) and from Antenne Books in London being the publisher's own 'buy' link, not from an imprint, so it should be confirmed. The publisher has no shop of its own: its shop page links to Antenne Books, where Issue 9 is GBP 24 (published there 9 November 2026) and listed as 384 pages; price therefore left null. Cadence is irregular: AW 2022, AW 2023, AW 2024, then nothing until AW 2026, although the first issue described the title as biannual. Issue record date 20 October 2026 used as publication date."
+}

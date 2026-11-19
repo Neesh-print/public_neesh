@@ -1,0 +1,38 @@
+{
+  "15-badlon-magazine": {
+    "name": "Badlon",
+    "publisher_name": "Badlon Magazine",
+    "city": "Paris",
+    "tags": ["fashion", "photography"],
+    "description": "Badlon is a thick annual almanac of fashion photography, art and visual essays from France, each edition released with several covers by different young artists. The sixth issue runs to 510 pages of fashion stories, photography and texts around escapism, subcultures and imagined inner worlds. It is for collectors of fashion and photography books rather than readers after regular features.",
+    "note": "City not stated by the publisher; Paris is inferred from the launch venue and a French publication statement. Publisher page prices it at USD 50 while KD Presse sells it at EUR 45. Covers are front-on renders with a drop shadow."
+  },
+  "16-based-istanbul": {
+    "name": "Based Istanbul",
+    "publisher_name": "Based Istanbul",
+    "tags": ["fashion", "art"],
+    "description": "Based Istanbul is a bilingual Turkish and English magazine about the city's creative scene, mixing fashion, art, architecture, design, film and music through interviews, portraits and photo stories. Each themed issue appears with several covers featuring Turkish actors and musicians alongside international names. It is for readers following Turkish fashion and popular culture and the people shaping it.",
+    "note": "Legal name Based Istanbul Kültür Dergi Yayıncılık ve Pazarlama Ltd. Şti. Publisher says biannual; recent cadence is about three issues in two years. Price TRY 1600."
+  },
+  "17-basic": {
+    "name": "BASIC",
+    "publisher_name": "BASIC Media Company",
+    "tags": ["fashion", "art"],
+    "description": "BASIC is a Beverly Hills fashion and art magazine built around themed issues, each released with two or three covers featuring actors, musicians and designers. Inside are fashion editorials, beauty and art stories, designer profiles and interviews across 128 pages in a coffee table format. It is for readers of glossy fashion photography and celebrity led style coverage.",
+    "note": "Publisher calls it quarterly; the shop shows three issues a year in 2025 and 2026, so triannual is recorded."
+  },
+  "18-blackflash": {
+    "name": "BlackFlash",
+    "publisher_name": "Buffalo Berry Press",
+    "tags": ["art", "photography"],
+    "description": "BlackFlash is a contemporary art magazine from the Canadian prairies that grew out of photography and now covers photo, video, digital, performance and other image based practices. Each issue carries feature essays, artist profiles, conversations and commissioned artist projects, mostly on Canadian artists. It is for artists, curators, writers and students of contemporary art.",
+    "note": "Price CAD 12 is the print plus digital option. Issue 43.2 dated August 2026 from the publisher's stated schedule."
+  },
+  "19-blag": {
+    "name": "BLAG",
+    "publisher_name": "BLAG",
+    "tags": ["design", "art"],
+    "description": "BLAG, or Better Letters Magazine, is an advertising free magazine entirely about sign painting, from hand lettered shopfronts and gilding to fairground and showcard lettering and the people who make them around the world. Each eighty page issue mixes technique guides, historical features, project profiles and a fold out poster. It is for working sign painters, lettering artists and anyone drawn to hand made commercial lettering.",
+    "note": "Legal entity SR Productions Ltd trading as BLAG. Members first model: no single copy price for the current issue, so cover price is blank."
+  }
+}

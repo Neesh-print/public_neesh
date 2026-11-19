@@ -1,0 +1,112 @@
+{
+  "02-bricks-magazine": {
+    "name": "BRICKS",
+    "publisher_name": "Bricks Media",
+    "tags": [
+      "fashion",
+      "identity-politics"
+    ],
+    "description": "BRICKS is a British fashion and culture magazine with an activist streak, pairing cover interviews with musicians, models and public figures with fashion editorials and essays on social issues. Each themed issue appears roughly once a year with multiple covers alongside a running online edition. It suits readers of youth culture fashion titles who want politics and community woven in.",
+    "note": "Site rate limits requests and its about page is missing, so London rests on the issue's own text and the team's base rather than an imprint. Publisher Bricks Media Ltd."
+  },
+  "05-bubble": {
+    "name": "Bubble",
+    "publisher_name": "Bubble Skateboard Magazine",
+    "tags": [
+      "sport",
+      "design"
+    ],
+    "description": "Bubble is a German, English language skateboarding magazine that looks past tricks to the people and culture around skating. The fifth issue is devoted to skateboarding's relationship with architecture, urban planning, DIY spots and skatepark design, told through long interviews, photography and themed essays. It is for skaters and readers of design and urbanism titles who want a slower, more reflective skate magazine.",
+    "note": "Legal notice names an individual, Stefan Schwinghammer in Cologne, as the responsible publisher; recorded under the magazine's imprint name. The publisher's webshop was unavailable, so no price, page count or larger cover (553px) could be recorded. Launched after SOLO closed in 2024."
+  },
+  "10-cartography-magazine": {
+    "name": "Cartography",
+    "publisher_name": "Cartography Magazine",
+    "status": "dormant",
+    "tags": [
+      "travel",
+      "photography"
+    ],
+    "description": "Cartography is a large format travel magazine in English and Italian from Milan. Each issue takes three destinations and covers each with a documentary photo album, a short text, a map and a day by day itinerary, across around 300 pages on uncoated paper. It suits travellers and photography readers who prefer slow itineraries over hotel listings.",
+    "note": "Loaded as dormant: N°12 (April 2025) is the latest issue and sits just over the validator's 18 month liveness limit for an active title, though it meets the January 2025 cut off. Publisher says twice a year; cadence is slower, recorded as annual."
+  },
+  "11-catflap": {
+    "name": "catflap",
+    "publisher_name": "Outburst Arts",
+    "identity": [
+      "queer-led"
+    ],
+    "tags": [
+      "literary",
+      "identity-politics"
+    ],
+    "cover_candidates": [
+      {
+        "url": "https://rile.space/storage/4062/01KH6AJMPN1G7VMT7YMAAG60QF.jpg",
+        "source_type": "stockist",
+        "page_url": "https://rile.space/",
+        "issue_label": "catflap #5",
+        "width": 750,
+        "height": 994,
+        "notes": "Flat cover from stockist rile* books; the distributor image is a styled photo."
+      }
+    ],
+    "description": "catflap is an annual print only journal of new queer writing from Belfast, with essays from the polemical to the speculative, poetry written for page and stage, and interviews that mix pop culture with queer theory in a playful register. Each issue is made with a guest editor and drawn partly from an open call. It suits readers of literary magazines and queer culture titles rather than news driven LGBTQ press.",
+    "note": "Published by Outburst Arts, the Belfast queer arts organisation behind Outburst Queer Arts Festival, which is the basis for the queer-led tag. Publisher shop renders by script, so no publisher price (Public Knowledge GBP 12). Issue 5 date from the distributor listing (December 2025)."
+  },
+  "13-chicken-bread": {
+    "name": "chicken + bread",
+    "publisher_name": "chicken + bread",
+    "tags": [
+      "food",
+      "identity-politics"
+    ],
+    "description": "chicken + bread is a small format food magazine that treats cooking as culture, collecting essays, poems, interviews, recipes, photography and illustration from the African, Caribbean and Asian diasporas around a single theme per issue, most recently food, memory and migration. It appears about once a year at roughly 150 by 210 mm and 100 pages. It suits readers of food writing who want personal and cultural stories rather than restaurant coverage.",
+    "note": "Self published; no company name. London from stockist descriptions and the magazine's London cover stories. Shop pages could not be read, so no publisher price (stockists GBP 13). Cover from Pics & Ink.",
+    "cover_ops": {
+      "crop": "center:58%x66%"
+    }
+  },
+  "14-circlezeroeight": {
+    "name": "CircleZeroEight",
+    "publisher_name": "Circle08 Media",
+    "city": "London",
+    "tags": [
+      "sport",
+      "fashion"
+    ],
+    "description": "CircleZeroEight is a British magazine about sport seen through style and culture, with profiles of footballers, fighters and athletes shot like fashion editorials, features on grassroots clubs and sporting subcultures, and fashion stories tied to the rituals of the game. Each biannual issue comes with several covers, and the latest is a football issue timed to the 2026 World Cup. It suits readers who follow sport but buy fashion and culture glossies.",
+    "note": "No city or address anywhere on the site; London is taken from the team's base and should be confirmed. Publisher Circle08 Media Ltd."
+  },
+  "15-civilization": {
+    "name": "Civilization",
+    "publisher_name": "Civilization",
+    "tags": [
+      "place",
+      "art"
+    ],
+    "description": "Civilization is an occasional large format newspaper about New York City, printed on heavy newsprint as a dense sixteen page broadsheet of overheard conversations, lists, confessions, diary fragments and artist contributions set in tiny type under bold coverlines. It has appeared roughly once a year or two since 2018 and sells through art bookshops and magazine stores. It suits readers of art publishing and city writing who enjoy a disorderly, text heavy object.",
+    "note": "Self published; the publisher site is a bare contact page with no shop, so no price and no cover image could be found. Issue 7 date (September 2025) from press coverage. Cover supplied via the cover kit from a stockist's CDN."
+  },
+  "16-crotch": {
+    "name": "Crotch Magazine",
+    "publisher_name": "Crotch Magazine",
+    "tags": [
+      "fashion",
+      "photography"
+    ],
+    "description": "Crotch Magazine is a London men's underwear and swimwear magazine built from photographic editorials of male models shot by a rotating cast of photographers, with brand collaborations and short features on sexuality and body image. Issues appear about twice a year with many alternative covers plus occasional city specials. It is for an adult, largely gay male readership and collectors of body focused fashion print.",
+    "note": "No company name on the site; London address from the returns policy. Adult content. Best flat cover is 735px from the publisher's shop."
+  },
+  "18-der-greif": {
+    "name": "Der Greif",
+    "publisher_name": "Der Greif",
+    "tags": [
+      "photography",
+      "art"
+    ],
+    "description": "Der Greif is an annual print magazine of contemporary photography assembled from an open call. Each issue is guest edited by an established artist, who selects and sequences submitted photographs and texts from image makers around the world into a single themed A5 volume of around 100 pages. It suits photographers, curators and collectors who follow emerging photographic work and artist edited publications.",
+    "note": "Published by Der Greif e.V., a Munich non-profit association. CSV hint (Issue 18) is stale: Issue 19, guest edited by Zanele Muholi, launched at Paris Photo on 12 November 2026. No flat cover of Issue 19 exists online yet (the publisher page shows a thumbnail grid and stockists still show Issue 18).",
+    "cover_candidates": []
+  }
+}

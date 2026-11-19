@@ -1,0 +1,47 @@
+{
+  "input_title": "Sex Magazine",
+  "official_name": "Sex Magazine",
+  "publisher_name": "Sex Magazine",
+  "publisher_website": "https://sexmagazine.us/",
+  "country": "US",
+  "city": null,
+  "frequency": "irregular",
+  "cover_price": 0.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://sexmagazine.us/collections/all",
+  "latest_issue_label": "Issue #16",
+  "latest_issue_date": "2026-03-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://sexmagazine.us/products/sex-magazine-issue-16",
+  "independent": "yes",
+  "independence_evidence": "Self-described print-only independent publication launched in 2012, sold and distributed from its own shop alongside its own films, zines and merchandise (https://sexmagazine.us/pages/about).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent print magazine with Issue #16 released March 2026 (Issue #15 September 2025).",
+  "what_it_is": "A print-only interview magazine that profiles musicians, artists, writers, filmmakers and internet personalities on the edge of pop culture through long conversations and portrait photography; despite the name it is not about sex. Issue 16 leads with John Maus and includes Dennis Cooper, Shlohmo and James Frey. It is for readers who follow underground music, art and online subcultures.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "music",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0708/9563/2602/files/mausshopify4.jpg?v=1773089865",
+      "source_type": "publisher",
+      "page_url": "https://sexmagazine.us/products/sex-magazine-issue-16",
+      "issue_label": "Issue #16",
+      "width": 2250,
+      "height": 3000,
+      "notes": "Flat front cover (John Maus) from the publisher's shop; cover text reads 'Sex Magazine Issue #16 FREE'."
+    }
+  ],
+  "evidence_urls": [
+    "https://sexmagazine.us/products/sex-magazine-issue-16",
+    "https://sexmagazine.us/products.json",
+    "https://sexmagazine.us/pages/about",
+    "https://sexmagazine.us/policies/refund-policy"
+  ],
+  "uncertainties": "The publisher's shop lists Issues 14-16 at 'FREE' (price 0.00, Issue 16 now sold out), so cover_price is recorded as 0; the magazine appears to be given away rather than sold. City not established: the site states no editorial address (the returns address in Ferndale, WA on the refund policy looks like a fulfilment warehouse); press describes founder Asher Penn as New York-based. Cadence: Jul 2024, Sep 2025, Mar 2026."
+}

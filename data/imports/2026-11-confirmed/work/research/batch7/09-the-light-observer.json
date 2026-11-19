@@ -1,0 +1,58 @@
+{
+  "input_title": "The Light Observer",
+  "official_name": "The Light Observer",
+  "publisher_name": "Éditions de l'Observeur (S.A.S. Editions de l'Observeur)",
+  "publisher_website": "https://www.thelightobserver.com/",
+  "country": "FR",
+  "city": "Nice",
+  "frequency": "annual",
+  "cover_price": 17.06,
+  "currency": "EUR",
+  "trim_size": "16.5 x 24 cm",
+  "page_count": 88,
+  "subscribe_url": "https://www.thelightobserver.com/shop",
+  "latest_issue_label": "Issue 08 — Landscape(s)",
+  "latest_issue_date": "2025-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.thelightobserver.com/magazines",
+  "independent": "yes",
+  "independence_evidence": "Site footer names the publisher as S.A.S. Editions de l'Observeur, a small French company (VAT FR26879062537) that also publishes artists' books distributed by Les presses du réel and Idea Books; no media-group ownership is indicated.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent French publisher with Issue 08 (Landscape(s)) printed in 2025 and listed on its own site and at stockists; previous issues follow a roughly annual rhythm.",
+  "what_it_is": "A themed magazine about light: each issue takes one idea (Night, Play, Experiment!, Landscape(s)) and gathers photographic series, artists' projects and essays, plus conversations with artists, filmmakers, architects, scientists and philosophers about how they understand and use light. It is a compact softcover printed in Italy, in English, with around 90 to 120 pages. It suits readers of photography and contemporary art who like slow, essayistic magazines built around a single concept.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0273/5118/7538/files/the-light-observer-issue-8.jpg?v=1792937991",
+      "source_type": "stockist",
+      "page_url": "https://picsandink.com/products/the-light-observer-issue-8",
+      "issue_label": "Issue 08 — Landscape(s)",
+      "width": 1000,
+      "height": 1500,
+      "notes": "Flat front cover centred on the stockist's textured grey background; cover itself about 600 x 870 px, needs cropping. Best flat view found."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5cffb5723834e400019026c3/a4c881c6-a1f1-4aaa-a44d-4047a82d1c2b/cover-TLO8SHOP.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thelightobserver.com/shop/p/ewtm9arqzcsnsgl02k4ymfn38l3q72-x9pex-2d4kj-mn4e2-g5lxe-dydyz-mh3l4",
+      "issue_label": "Issue 08 — Landscape(s)",
+      "width": 1500,
+      "height": 1500,
+      "notes": "Publisher's shop image is a 3D render of the issue at an angle on white, not a flat cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.thelightobserver.com/",
+    "https://www.thelightobserver.com/magazines",
+    "https://www.thelightobserver.com/shop",
+    "https://www.thelightobserver.com/shop?format=json-pretty",
+    "https://www.thelightobserver.com/shop/p/ewtm9arqzcsnsgl02k4ymfn38l3q72-x9pex-2d4kj-mn4e2-g5lxe-dydyz-mh3l4",
+    "https://picsandink.com/products/the-light-observer-issue-8"
+  ],
+  "uncertainties": "The publisher lists two addresses: head office in Vinzelles (Saône-et-Loire) and a design studio in Nice; Nice is recorded as the city where the magazine is made. No publication date is printed for Issue 08: the publisher added it to its shop on 2025-06-21 and Pics & Ink listed it on 2025-08-21, so June 2025 is used with month precision. The publisher's shop price is EUR 17.06 (issue currently sold out there) while the cover itself prints RRP 18 EUR. Frequency is not stated by the publisher; issues 6, 7 and 8 appeared April 2023, October 2024 and mid-2025, so annual is recorded from cadence. No flat publisher cover image was found."
+}

@@ -1,0 +1,57 @@
+{
+  "input_title": "British Journal of Photography",
+  "official_name": "British Journal of Photography",
+  "publisher_name": "1854 Media Ltd",
+  "publisher_website": "https://www.1854.photography/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "quarterly",
+  "cover_price": 20.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.thebjpshop.com/",
+  "latest_issue_label": "Issue 7926 Apr/Jul 2026 – Ones to Watch 2026",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.thebjpshop.com/product/issue-7926-apr-jul-2026-ones-to-watch/",
+  "independent": "yes",
+  "independence_evidence": "The shop footer states 'Published by 1854 Media Ltd, Registered in the UK as company number 8361351'; 1854 Media is a small independent publisher whose only magazine is BJP, not part of a large media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently published print quarterly with Issue 7926 (Apr/Jul 2026) on sale in the publisher's own shop and four issues dated 2025.",
+  "what_it_is": "British Journal of Photography is a long-running photography magazine, now printed quarterly, with each issue built around a theme such as Maps, Body Talk or the annual Ones to Watch selection of emerging photographers. Issues combine portfolios, interviews and critical essays on documentary, fine-art and commissioned photography from around the world. It is read by working photographers, picture editors, students and collectors who follow contemporary photography.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.thebjpshop.com/wp-content/uploads/2026/06/BJP-Cover-layered-1-1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thebjpshop.com/product/issue-7926-apr-jul-2026-ones-to-watch/",
+      "issue_label": "Issue 7926 Apr/Jul 2026 – Ones to Watch 2026",
+      "width": 3600,
+      "height": 2600,
+      "notes": "Publisher shop product image; landscape 3600x2600 file named 'Cover layered', likely a flattened front cover presented on a wide canvas or a front/back spread. Needs visual check and possible crop. A 2560x1849 '-scaled' version exists."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1022/3793/files/bjp.jpg?v=1785441228",
+      "source_type": "stockist",
+      "page_url": "https://villagebooks.co/products/british-journal-of-photography-7926",
+      "issue_label": "Issue 7926",
+      "width": 2286,
+      "height": 2286,
+      "notes": "Village Books stockist image, square canvas so the cover is probably padded; fallback only."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.thebjpshop.com/",
+    "https://www.thebjpshop.com/product/issue-7926-apr-jul-2026-ones-to-watch/",
+    "https://www.thebjpshop.com/wp-json/wc/store/v1/products?per_page=50&orderby=date",
+    "https://villagebooks.co/products/british-journal-of-photography-7926",
+    "https://en.wikipedia.org/wiki/British_Journal_of_Photography"
+  ],
+  "uncertainties": "The publisher's editorial site 1854.photography returned HTTP 403 to every request, so the about/contact pages could not be read; the London base is taken from Wikipedia (the magazine moved to Shoreditch, London in 2013) and from the UK company registration shown on the shop, not from the publisher's own page. The issue date is taken from the cover-period 'Apr/Jul 2026' and the June 2026 upload of the cover file; Village Books listed it on 2026-07-30. No issue 7927 was found anywhere as of 2026-11-19, so 7926 is treated as the latest. Cadence over 2025-26 is four issues a year (7921 Jan/Mar 2025, 7923 Jul/Sep 2025, 7924 Oct/Dec 2025, 7925 Jan/Mar 2026, 7926 Apr/Jul 2026), though 7922 does not appear in the shop. Trim size and page count are not stated on the publisher's shop."
+}

@@ -1,0 +1,70 @@
+{
+  "input_title": "THIIIRD",
+  "official_name": "THIIIRD",
+  "publisher_name": "THIIIRD MEDIA CIC",
+  "publisher_website": "https://www.thiiirdmagazine.co.uk/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "irregular",
+  "cover_price": 12.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.thiiirdmagazine.co.uk/shop",
+  "latest_issue_label": "Issue #7: Dis/comfort",
+  "latest_issue_date": "2025-06-05",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.thiiirdmagazine.co.uk/shop/p/issue-7-discomfort-1",
+  "independent": "yes",
+  "independence_evidence": "The about page calls THIIIRD an independent magazine and inclusive platform; the site footer and privacy policy identify the publisher as THIIIRD MEDIA CIC, a community interest company at Cell Studios, Arcola Street, London E8.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London community-interest-company publisher whose Issue #7 (Dis/comfort) was released in print in June 2025 and remains on sale in its own shop.",
+  "what_it_is": "A London print magazine of fashion editorials, feature interviews, photo stories and essays centred on people of colour, queer, trans and non-binary creatives and others from underrepresented backgrounds. Each themed issue (the latest is Dis/comfort) appears with several covers and sits alongside a podcast and events programme. It is for readers interested in fashion, arts and culture framed through intersectional and decolonial perspectives.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [
+    "queer-led",
+    "decolonial"
+  ],
+  "identity_tag_evidence_url": "https://www.thiiirdmagazine.co.uk/about",
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/6256f0d8c7b49b60c5f7f969/dc5869ab-14b5-4a23-a012-079ded6bd95e/OFCWIP_05052+%283%29.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thiiirdmagazine.co.uk/shop/p/issue-7-discomfort-1",
+      "issue_label": "Issue #7: Dis/comfort (Priya Ragu cover)",
+      "width": 2160,
+      "height": 3049,
+      "notes": "Flat front cover, no border; served as WEBP."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/6256f0d8c7b49b60c5f7f969/77b2dbc7-8b3b-471e-a401-a482707824ee/OFCWIP_05053+%282%29.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thiiirdmagazine.co.uk/shop/p/issue-7-discomfort-1",
+      "issue_label": "Issue #7: Dis/comfort (alternate cover)",
+      "width": 2160,
+      "height": 3049,
+      "notes": "Second of four covers listed on the product page; size from the shop JSON, not downloaded."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/6256f0d8c7b49b60c5f7f969/ae1cf65e-e2d7-4ec9-b94a-f0e3778b89f5/OFCWIP_0505+%282%29.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thiiirdmagazine.co.uk/shop/p/issue-7-discomfort-1",
+      "issue_label": "Issue #7: Dis/comfort (alternate cover)",
+      "width": 2160,
+      "height": 3049,
+      "notes": "Third of four covers; size from the shop JSON, not downloaded."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.thiiirdmagazine.co.uk/",
+    "https://www.thiiirdmagazine.co.uk/about",
+    "https://www.thiiirdmagazine.co.uk/contact",
+    "https://www.thiiirdmagazine.co.uk/privacy-policy",
+    "https://www.thiiirdmagazine.co.uk/shop?format=json-pretty",
+    "https://www.thiiirdmagazine.co.uk/shop/p/issue-7-discomfort-1?format=json-pretty"
+  ],
+  "uncertainties": "No frequency is stated; the shop shows Issue #6 (Body Movements) listed May 2022 and Issue #7 (Dis/comfort) listed 5 June 2025, so irregular is recorded and the issue date is the shop listing date. Identity tags: the about page says the platform centres people of colour and queer, trans and non-binary people and that its ethos is informed by decolonial and intersectional feminist thought, but it does not state in so many words who leads the organisation, so 'queer-led' is an inference from the stated mission and 'decolonial' from the stated ethos; 'black-led' and 'women-led' are not claimed on the site even though the editor-in-chief is a Black woman. Trim size and page count are not stated."
+}

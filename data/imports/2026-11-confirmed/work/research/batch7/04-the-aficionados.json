@@ -1,0 +1,62 @@
+{
+  "input_title": "The Aficionados",
+  "official_name": "The Aficionados",
+  "publisher_name": "The Aficionados Group Limited",
+  "publisher_website": "https://www.theaficionados.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": 148,
+  "subscribe_url": "https://shop.theaficionados.com/store",
+  "latest_issue_label": "Unwaxed Lemons (Summer 2026)",
+  "latest_issue_date": "2026-07-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://theaficionados.com/journal/print/unwaxed-lemons",
+  "independent": "yes",
+  "independence_evidence": "Published by The Aficionados Group Limited (company no. 06825447, London), a small independent company founded in 2009 that runs the hotel directory and its own press; no media-group owner. Note that its membership page offers hotels and brands paid placement in each edition, so the editions are partly funded by the featured hotels.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently owned London publisher with print editions Alpinistas (winter 2025/26) and Unwaxed Lemons (July 2026) on sale in its own store, although the pay-to-feature funding model is worth weighing.",
+  "what_it_is": "A themed series of travel and design magazines, each edition devoted to a region or style of hotel: Unwaxed Lemons covers 36 family-run design hotels around the Mediterranean and Atlantic coast, while Alpinistas covers Alpine properties. Each 148-page edition profiles the architecture, interiors and owners of the hotels, grouped into design registers, with makers and products alongside. It is for travellers, hoteliers and interiors enthusiasts who use it as a sourcebook for characterful places to stay; copies are also placed in the featured hotels' rooms.",
+  "suggested_primary_tag": "travel",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0613/5998/0743/files/NM1168.jpg?v=1784756268",
+      "source_type": "stockist",
+      "page_url": "https://new-mags.com/products/the-aficionados-unwaxed-lemons",
+      "issue_label": "Unwaxed Lemons",
+      "width": 914,
+      "height": 1198,
+      "notes": "Flat front cover scan from Copenhagen stockist New Mags; slightly under 1000px on the long edge. The publisher's own store shows only lifestyle photos of the issue."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5950d81c725e258922bedf93/212f32d4-59e1-4472-9005-60269f0d30e7/image00025.jpeg",
+      "source_type": "publisher",
+      "page_url": "https://shop.theaficionados.com/store/p/unwaxed-lemons-2026",
+      "issue_label": "Unwaxed Lemons",
+      "width": 1800,
+      "height": 1800,
+      "notes": "Publisher's product image: lifestyle photo of the magazine on a marble table with a coffee, not a flat cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.theaficionados.com/",
+    "https://www.theaficionados.com/about",
+    "https://www.theaficionados.com/contact",
+    "https://www.theaficionados.com/magazine",
+    "https://www.theaficionados.com/journal/shop/hotel-design-magazines",
+    "https://theaficionados.com/journal/print/unwaxed-lemons",
+    "https://shop.theaficionados.com/store",
+    "https://shop.theaficionados.com/store/p/unwaxed-lemons-2026",
+    "https://membership.theaficionados.com/products",
+    "https://new-mags.com/products/the-aficionados-unwaxed-lemons"
+  ],
+  "uncertainties": "Frequency is inferred from the two most recent editions (Alpinistas, announced for December 2025 and listed in the store 2026-01-28; Unwaxed Lemons, on sale July 2026), a winter/summer rhythm; the dates of earlier editions in the series were not found. Trim size 24.0 x 29.5 cm is stated only for Alpinistas, not for Unwaxed Lemons, so trim is left null. Co-creator is based in Munich but the company is registered and has its studio in London. The editions are partly paid for by featured hotels and brands (membership page), which may matter for an independence judgement even though ownership is independent."
+}

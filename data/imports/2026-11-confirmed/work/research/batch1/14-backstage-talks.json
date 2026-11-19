@@ -1,0 +1,61 @@
+{
+  "input_title": "Backstage Talks",
+  "official_name": "Backstage Talks",
+  "publisher_name": "Büro Milk (Milk Studio, s. r. o.)",
+  "publisher_website": "https://backstagetalks.com/",
+  "country": "SK",
+  "city": "Bratislava",
+  "frequency": "irregular",
+  "cover_price": 25.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://brot.sk/products/backstage-talks-9",
+  "latest_issue_label": "Issue #9",
+  "latest_issue_date": "2026-08-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://brot.sk/products/backstage-talks-9",
+  "independent": "yes",
+  "independence_evidence": "Site footer: 'Published by Büro Milk'; privacy policy names the operator as Milk Studio, s. r. o., Bilíkova 30, Bratislava, a small design studio; no media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Bratislava design-interview magazine whose Issue #9 ('Ready or not') was released in 2026 (listed 28 August 2026).",
+  "what_it_is": "Backstage Talks is an English-language magazine of long conversations with designers, studio founders and creative directors about the business side of design: pricing, growth, sustainability of practice and how decisions get made. Issue #9, themed around complexity and change, interviews figures such as Bráulio Amado, Liza Enebeis of Studio Dumbar and Tosin Oshinowo and adds a short guide and a crash course in complexity science. It suits working designers, studio owners and design students.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://backstagetalks.com/img/backstagetalks_cover_issue_9.png",
+      "source_type": "publisher",
+      "page_url": "https://backstagetalks.com/",
+      "issue_label": "Issue #9",
+      "width": 840,
+      "height": 1064,
+      "notes": "Publisher's cover image ('Ready or not', orange and yellow); flat front cover with a slight drop shadow on white; below 1000 px."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0560/2692/3165/files/brot_template-exp_dddd89ed-429d-4a16-a6be-ae6b1e8b25fa.webp?v=1787916476",
+      "source_type": "stockist",
+      "page_url": "https://brot.sk/products/backstage-talks-9",
+      "issue_label": "Issue #9",
+      "width": 1000,
+      "height": 1370,
+      "notes": "Same cover placed on a black background by the shop the publisher links to for purchases; would need cropping."
+    }
+  ],
+  "evidence_urls": [
+    "https://backstagetalks.com/",
+    "https://backstagetalks.com/privacy-policy.php",
+    "https://brot.sk/products/backstage-talks-9.json",
+    "https://brot.sk/products/backstage-talks-8.json"
+  ],
+  "uncertainties": [
+    "Publication date of Issue #9 is inferred from the brot.sk listing date (28 August 2026); the publisher's site gives no date. The distributor hint (Issue 8, 2025-10) is out of date.",
+    "Cadence is irregular: Issue #8 was listed June 2024 and Issue #9 August 2026, roughly one issue every one to two years.",
+    "brot.sk is the shop the publisher's 'BUY HERE' links point to; it describes itself as a curated bookshop, so it may or may not be operated by the publisher. Price EUR 25 is from that listing.",
+    "Page count and trim size not found; the publisher's site blocked a second fetch (web application firewall)."
+  ]
+}

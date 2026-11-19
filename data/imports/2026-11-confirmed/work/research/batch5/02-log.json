@@ -1,0 +1,48 @@
+{
+  "input_title": "Log",
+  "official_name": "Log",
+  "publisher_name": "Anyone Corporation",
+  "publisher_website": "https://anycorp.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "triannual",
+  "cover_price": 18.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://anycorp.com/log/subscribe",
+  "latest_issue_label": "Log 67",
+  "latest_issue_date": "2026-08-15",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://anycorp.com/store/log67",
+  "independent": "yes",
+  "independence_evidence": "Log's about page calls it 'an independent journal on architecture and the contemporary city'; it is published by Anyone Corporation, a small New York non-profit (site has a Donate page) with address 1133 Broadway, Suite 330, New York, NY 10010.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent non-profit architecture journal with Log 67 (Summer 2026) on sale from the publisher's own store.",
+  "what_it_is": "A text-led journal of architectural criticism and commentary that covers buildings, cities, technology and design culture through essays, interviews and short observations rather than image spreads. Issues are mostly open-themed, with occasional thematic numbers. It is aimed at architects, students, scholars and others who follow architectural thinking closely.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/580643f9be659426654c568d/59c1556f-89c4-4961-8676-6482ae5a8b5b/Log67_cover.jpg",
+      "source_type": "publisher",
+      "page_url": "https://anycorp.com/store/log67",
+      "issue_label": "Log 67",
+      "width": 975,
+      "height": 1388,
+      "notes": "Front cover JPEG from the publisher's Squarespace store (originalSize 975x1388 per store JSON; measured 975x1388)."
+    }
+  ],
+  "evidence_urls": [
+    "https://anycorp.com/",
+    "https://anycorp.com/log/about",
+    "https://anycorp.com/store/log67",
+    "https://anycorp.com/store/log67?format=json-pretty",
+    "https://anycorp.com/store?category=Log&format=json-pretty"
+  ],
+  "uncertainties": "Issue date is the store's addedOn timestamp for Log 67 (2026-08-15); the issue itself is labelled Summer 2026. The about page says 'published three times a year'; store listings show Log 66 added April 2026 and Log 67 August 2026, consistent with triannual. Trim size and page count are not stated on the store page. The cover image's long edge is 1388px."
+}

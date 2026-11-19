@@ -1,0 +1,59 @@
+{
+  "input_title": "Watershed Sentinel",
+  "official_name": "Watershed Sentinel",
+  "publisher_name": "Watershed Sentinel Educational Society",
+  "publisher_website": "https://watershedsentinel.ca/",
+  "country": "CA",
+  "city": "Comox, British Columbia",
+  "frequency": "bimonthly",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://watershedsentinel.ca/store/",
+  "latest_issue_label": "December 2026 | January 2027 (Living Science)",
+  "latest_issue_date": "2026-11-12",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://watershedsentinel.ca/issue/living-science/",
+  "independent": "yes",
+  "independence_evidence": "The about page states that the Watershed Sentinel Educational Society, a non-profit, is the publisher, and the store page says the magazine is 'free from corporate sponsorship' and funded by subscribers, patrons and donors (https://watershedsentinel.ca/about/, https://watershedsentinel.ca/store/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "A non-profit, independently published print environmental magazine that has issued five print editions a year through 2025 and 2026, the latest being the December 2026 | January 2027 issue.",
+  "what_it_is": "Watershed Sentinel is an environmental news magazine from Vancouver Island covering water, forests, energy projects, climate, food systems, Indigenous rights and conservation in British Columbia and western Canada. Each themed issue gathers reporting, analysis and opinion from grassroots campaigners, scientists and community writers, and comes with a PDF edition. It is for readers who follow regional environmental politics and activism rather than general nature writing.",
+  "suggested_primary_tag": "nature",
+  "suggested_secondary_tag": "news",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://watershedsentinel.ca/wp-content/uploads/2026/11/WSDec26Jan27.jpg",
+      "source_type": "publisher",
+      "page_url": "https://watershedsentinel.ca/issues/",
+      "issue_label": "December 2026 | January 2027",
+      "width": 500,
+      "height": 657,
+      "notes": "Flat front cover from the publisher's back-issues archive, but only 500px wide; no larger version was found on the site."
+    },
+    {
+      "url": "https://watershedsentinel.ca/wp-content/uploads/2026/09/Cover-Fall2026.jpg",
+      "source_type": "publisher",
+      "page_url": "https://watershedsentinel.ca/issues/",
+      "issue_label": "October | November 2026 (The Common Good)",
+      "width": 800,
+      "height": 1050,
+      "notes": "Previous issue's cover, slightly larger; included only as a fallback."
+    }
+  ],
+  "evidence_urls": [
+    "https://watershedsentinel.ca/",
+    "https://watershedsentinel.ca/about/",
+    "https://watershedsentinel.ca/issues/",
+    "https://watershedsentinel.ca/issue/living-science/",
+    "https://watershedsentinel.ca/store/",
+    "https://watershedsentinel.ca/subscribe/",
+    "https://watershedsentinel.ca/contact/"
+  ],
+  "uncertainties": "Single issues are not sold in the publisher's store (print subscriptions are CAD 25-40 a year for five issues, digital CAD 15), so no cover price is recorded. The latest issue date is the date the issue page was published on the site (12 November 2026), which the page calls 'this current issue'; the print mailing date may differ by a few days. Five issues a year (Dec/Jan, Feb/Mar, Apr/May, Summer, Oct/Nov) is recorded as bimonthly, the closest option. The only cover image found for the latest issue is 500x657px."
+}

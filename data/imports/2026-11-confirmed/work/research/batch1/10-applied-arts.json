@@ -1,0 +1,52 @@
+{
+  "input_title": "Applied Arts",
+  "official_name": "Applied Arts",
+  "publisher_name": "Applied Arts Media",
+  "publisher_website": "https://www.appliedartsmag.com/",
+  "country": "CA",
+  "city": "Toronto",
+  "frequency": "biannual",
+  "cover_price": 30.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.appliedartsmag.com/subscription",
+  "latest_issue_label": "Summer 2026 (Brace for Impact: Photography, Illustration & Design Awards Annual)",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.appliedartsmag.com/current-issue",
+  "independent": "yes",
+  "independence_evidence": "Published by Applied Arts Media, a small Toronto company (site footer and about page), with Canada Magazine Fund support; no media-group ownership shown.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently published Canadian trade title issued twice a year, with the Summer 2026 awards annual on sale; note it is an awards-driven industry magazine rather than a consumer title.",
+  "what_it_is": "Applied Arts is a Canadian trade magazine for the visual communications industry: advertising, graphic design, photography and illustration. Issued twice a year (summer and winter), each edition is largely an awards annual showing the winners of the magazine's own competitions, with a few interviews and editorial features on creative practice; the Summer 2026 issue runs more than 150 pages of award-winning work. It is bought by designers, art directors, photographers and marketing professionals, mainly in Canada.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.appliedartsmag.com/images/Cover_Summer_2026.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.appliedartsmag.com/current-issue",
+      "issue_label": "Summer 2026",
+      "width": 238,
+      "height": 291,
+      "notes": "Only cover image on the publisher's site; a flat cover but far too small (238 x 291)."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.appliedartsmag.com/about-us/",
+    "https://www.appliedartsmag.com/current-issue",
+    "https://www.appliedartsmag.com/subscription",
+    "https://www.appliedartsmag.com/additional-issues-form?formId=Single"
+  ],
+  "uncertainties": [
+    "No usable high-resolution cover found; the publisher only shows a 238 px thumbnail and spread photos.",
+    "Issue date: labelled Summer 2026; the site's image cache tag suggests late June 2026, so month precision June 2026.",
+    "Cover price is the stated 'cover price of the Annual issue' (CAD 30.00) on the single-copy order form; the subscription is CAD 40 per year for two issues.",
+    "The magazine is a trade/awards publication supported by competition entries; it is not a brand customer magazine, but reviewers may want to decide whether an industry title fits the directory."
+  ]
+}

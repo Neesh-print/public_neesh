@@ -1,0 +1,50 @@
+{
+  "input_title": "Turps Magazine",
+  "official_name": "Turps",
+  "publisher_name": "Turps Banana Ltd",
+  "publisher_website": "https://www.turpsbanana.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "irregular",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.newsstand.co.uk/turpsbanana/",
+  "latest_issue_label": "Issue 30",
+  "latest_issue_date": "2025-07-03",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.turpsbanana.com/issue-30",
+  "independent": "yes",
+  "independence_evidence": "Published by Turps Banana Ltd, an artist-led painting magazine and art school; site states 'Independent, artist-led publishing since 2005. No advertising, No backers' (https://www.turpsbanana.com/magazine).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent artist-led publisher with a print issue (Issue 30) dated 3 July 2025 and Issue 31 launching 4 December 2026.",
+  "what_it_is": "Turps is a magazine about painting in which the writers are themselves painters rather than critics. Each issue carries interviews, studio conversations and essays on contemporary and historical painters, with no advertising. It suits practising painters, art students and readers who want painters' own views on painting.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": null,
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5bed63837e3c3a697bf5cf3f/4f463bc2-cc01-45b2-ba28-36b32f57b59a/TurpsMag30_web.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.turpsbanana.com/issue-30",
+      "issue_label": "Issue 30",
+      "width": 1238,
+      "height": 988,
+      "notes": "Flat front cover shown centred on a plain grey background (landscape file with margins); cover itself is roughly 650px wide. Served as WEBP by default, JPEG with ?format=2500w."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.turpsbanana.com/magazine",
+    "https://www.turpsbanana.com/issue-30",
+    "https://www.turpsbanana.com/turps-magazine-issues",
+    "https://www.turpsbanana.com/new-events/2026/12/4/turps-magazine-issue-31-launch-autumn-intensive-show-pv",
+    "https://www.turpsbanana.com/contact",
+    "https://www.turpsbanana.com/about",
+    "https://www.newsstand.co.uk/turpsbanana/"
+  ],
+  "uncertainties": "Single-issue price not shown on the publisher's site (the BUY NOW button goes to newsstand.co.uk, where the price was not extractable). Cadence: Issue 29 Nov 2024, Issue 30 Jul 2025, Issue 31 launch 4 Dec 2026, so recent output is roughly one issue a year rather than the historical two; recorded as irregular. Newsstand lists Issue 30 release as 19/06/2025 while the publisher states 3 July 2025; publisher date used. Masthead reads 'Turps Painting Magazine'; official_name given as Turps."
+}

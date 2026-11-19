@@ -1,0 +1,68 @@
+{
+  "input_title": "EE72",
+  "official_name": "72",
+  "publisher_name": "EE72",
+  "publisher_website": "https://ee72.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "quarterly",
+  "cover_price": 20.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://store.ee72.com/products/magazine-subscription",
+  "latest_issue_label": "Fall 2026 (Issue 5, first anniversary issue)",
+  "latest_issue_date": "2026-09-02",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://store.ee72.com/products/72-fall-2026",
+  "independent": "yes",
+  "independence_evidence": "EE72 describes itself as a media and entertainment company co-founded by Edward and Akua Enninful, publishing 72 as its own quarterly; the website is operated by EE72 US Inc. and the shop by EE72 in London, with no larger media group involved (https://ee72.com/about, https://ee72.com/legal).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently owned quarterly launched in 2025 with its fifth print issue (Fall 2026) on sale from September 2026.",
+  "what_it_is": "72 is a quarterly print magazine of fashion, beauty and culture published by the London company EE72. Each issue is themed (the Fall 2026 issue revisits the 1990s, the Summer 2026 issue sport and performance) and leads with celebrity cover stories shot by established fashion photographers, backed by long interviews, essays and portfolios on music, film, art and Black British culture. It is aimed at readers of glossy fashion titles who want a large, collectible quarterly with multiple covers rather than a monthly.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0713/1404/7116/files/FALL2026PAIRINGS1.jpg?v=1786538002",
+      "source_type": "publisher",
+      "page_url": "https://store.ee72.com/products/72-fall-2026",
+      "issue_label": "Fall 2026",
+      "width": 1920,
+      "height": 1244,
+      "notes": "Two of the issue's multiple covers shown side by side (Linda Evangelista by Steven Meisel, Gigi Hadid by Craig McDean); each half is a flat cover but the file needs cropping and is only ~960px wide per cover."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0713/1404/7116/files/FALL2026PAIRINGS2.jpg?v=1786538002",
+      "source_type": "publisher",
+      "page_url": "https://store.ee72.com/products/72-fall-2026",
+      "issue_label": "Fall 2026",
+      "width": 1920,
+      "height": 1244,
+      "notes": "Another pair of Fall 2026 covers side by side; needs cropping."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0713/1404/7116/files/72_SUMMER_2026_Rihanna-_FRONT_COVER.jpg?v=1780575069",
+      "source_type": "publisher",
+      "page_url": "https://store.ee72.com/products/72-summer-2026",
+      "issue_label": "Summer 2026 (previous issue)",
+      "width": 1080,
+      "height": 1437,
+      "notes": "Flat single front cover, but of the previous (Summer 2026) issue; fallback only."
+    }
+  ],
+  "evidence_urls": [
+    "https://ee72.com/",
+    "https://ee72.com/about",
+    "https://ee72.com/legal",
+    "https://ee72.com/contact",
+    "https://store.ee72.com/products.json?limit=250",
+    "https://store.ee72.com/products/72-fall-2026",
+    "https://store.ee72.com/meta.json"
+  ],
+  "uncertainties": "The magazine is called 72 and the company EE72, as the brief says. The website legal notice names EE72 US Inc. (Delaware) as the site operator, while the Shopify store metadata gives London, GB and GBP as the shop's base, so the title is recorded as London-made; the shop displays USD to US visitors but GBP 20 is the base price in the product feed. The Fall 2026 issue has multiple covers sold at random and the publisher only shows them as side-by-side pairs, so no single flat cover image of the current issue exists. Page count and trim size are not stated. The magCulture listing for 72 #4 cited in the brief now returns 404."
+}

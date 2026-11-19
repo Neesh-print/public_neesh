@@ -1,0 +1,56 @@
+{
+  "input_title": "Real Review",
+  "official_name": "Real Review",
+  "publisher_name": "REAL foundation",
+  "publisher_website": "https://real-review.org/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "annual",
+  "cover_price": 12.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://real-review.org/",
+  "latest_issue_label": "Issue 18 (Spring 2026, 'Pretending the World')",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://magculture.com/products/real-review-18",
+  "independent": "yes",
+  "independence_evidence": "Small London publication run by editor-in-chief Jack Self and managing director Bryan Wolff (podcast descriptions embedded in https://real-review.org/); stockists describe it as published by the REAL foundation, London (https://magculture.com/products/real-review-18). No media-group ownership found.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London magazine whose print Issue 18 (Spring 2026) is on sale, with a double issue 19-20 announced.",
+  "what_it_is": "A tall, narrow pocket-format magazine that treats architecture, politics, technology and everyday objects as subjects for short critical 'reviews' gathered around a theme or mood for each issue. Issue 18 is built around the idea of pretending and performance in public life. It suits readers of architecture criticism and contemporary cultural theory who like dense, designed print.",
+  "suggested_primary_tag": "ideas-science",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/RealReview18_7301b7b0-a964-4b45-865c-e01d757d4792.png?v=1782481534",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/real-review-18",
+      "issue_label": "Issue 18",
+      "width": 1000,
+      "height": 2412,
+      "notes": "Flat front cover (Nishant Choksi slipping-mask design) on magCulture; checked visually."
+    },
+    {
+      "url": "https://real-review.b-cdn.net/real-review/18front_eb4ecabdec.jpg",
+      "source_type": "publisher",
+      "page_url": "https://real-review.org/",
+      "issue_label": "Issue 18",
+      "width": 1180,
+      "height": 2376,
+      "notes": "Publisher's own image of the front, but it is a photo of the shrink-wrapped copy with a shadow, not a perfectly flat scan; cover shows 'Issue for Spring 2026, RRP £12'."
+    }
+  ],
+  "evidence_urls": [
+    "https://real-review.org/",
+    "https://magculture.com/products/real-review-18",
+    "https://magculture.com/products/real-review-18.json",
+    "https://magazine.032c.com/magazine/real-review-tells-us-means-live-today"
+  ],
+  "uncertainties": "real-review.org is a JavaScript app that returns 404 for every sub-path fetched, so publisher name, city and subscription details could not be read from a rendered publisher page; 'REAL foundation, London' comes from stockist and press descriptions and the embedded site data (UK ISBN prefix, £ RRP, Shopify products titled real-review-1..18, podcast notes). Price £12 is printed on the publisher's own cover image and matches the embedded product price. Issue date: the cover says Spring 2026, magCulture listed it on 2026-06-26, podcast notes say it had shipped to members; recorded as June 2026. Frequency: publisher historically calls it quarterly, but the last four issues came roughly one per year (2023, 2024, 2025, 2026), and a 10-year-anniversary double issue 19-20 is announced."
+}

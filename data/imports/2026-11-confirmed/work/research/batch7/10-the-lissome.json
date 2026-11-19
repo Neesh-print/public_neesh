@@ -1,0 +1,57 @@
+{
+  "input_title": "The Lissome",
+  "official_name": "The Lissome",
+  "publisher_name": "The Lissome Verein",
+  "publisher_website": "https://www.thelissome.com/",
+  "country": "DE",
+  "city": "Berlin",
+  "frequency": "annual",
+  "cover_price": 25.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": 144,
+  "subscribe_url": "https://www.thelissome.com/shop",
+  "latest_issue_label": "Edition N°6: Deep Beauty",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.thelissome.com/shop/the-lissome-deep-beauty",
+  "independent": "yes",
+  "independence_evidence": "The imprint states the site is operated by THE LISSOME Verein, a Berlin registered association (Brachvogelstrasse 5, 10961 Berlin), and the homepage describes it as an independent, collaborative publishing and cultural project founded in 2016.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Berlin association publishing a print edition roughly once a year, with N°5 (June 2025) and N°6 Deep Beauty (September 2026) on sale from its own shop.",
+  "what_it_is": "A print journal at the meeting point of slow fashion, ecology and craft, with each edition organised around one inquiry (the latest asks what beauty means now) and filled with long essays, interviews, photography and artists' contributions on topics such as wool and sheep breeds, wild tea, textile folklore and William Morris. Around 144 pages per edition, issued with two covers, alongside a monthly Substack letter and an online directory of responsible designers. It is for readers interested in sustainable fashion, regenerative design and nature-centred culture rather than seasonal trend coverage.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "nature",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/56b5c23fe32140cab851461d/ae09ed98-d418-4f4f-b07c-1f59175333d0/Spreads_The+Lissome_cover1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thelissome.com/shop/the-lissome-deep-beauty-9hptg",
+      "issue_label": "Edition N°6: Deep Beauty, Cover 1",
+      "width": 2518,
+      "height": 1600,
+      "notes": "Flat front cover centred on a plain beige background in a landscape canvas; cover itself roughly 850 x 1160 px, needs cropping."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/56b5c23fe32140cab851461d/f600fc5a-1858-403a-8da6-1be1f1e7c011/Spreads_The+Lissome_cover2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.thelissome.com/shop/the-lissome-deep-beauty",
+      "issue_label": "Edition N°6: Deep Beauty, Cover 2",
+      "width": 2518,
+      "height": 1600,
+      "notes": "Second cover edition, same presentation on beige background, needs cropping."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.thelissome.com/",
+    "https://www.thelissome.com/imprint-privacy",
+    "https://www.thelissome.com/shop?format=json-pretty",
+    "https://www.thelissome.com/shop/the-lissome-deep-beauty",
+    "https://www.thelissome.com/shop/the-lissome-deep-beauty-9hptg"
+  ],
+  "uncertainties": "Frequency is not stated by the publisher; the shop shows N°4 (February 2024), N°5 (June 2025) and N°6 (September 2026), so annual is recorded from cadence although the gap is closer to 16 months. The N°6 date is taken from the shop listing date of the Cover 2 product (2026-09-03); the Cover 1 listing followed on 2026-10-20. Trim size is not stated. The editorial team appears to be largely women but the site does not state this plainly, so no identity tag is given."
+}

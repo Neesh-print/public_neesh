@@ -1,0 +1,59 @@
+{
+  "input_title": "Catflap",
+  "official_name": "catflap",
+  "publisher_name": "Outburst Arts",
+  "publisher_website": "https://outburstarts.com/",
+  "country": "GB",
+  "city": "Belfast",
+  "frequency": "annual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://outburstarts.ticketsolve.com/ticketbooth/products/regular",
+  "latest_issue_label": "catflap #5",
+  "latest_issue_date": "2025-12-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://publicknowledgebooks.com/products/catflap-issue-05",
+  "independent": "yes",
+  "independence_evidence": "Published by Outburst Arts, the Belfast queer arts organisation that runs the Outburst Queer Arts Festival ('catflap is the annual publication of new queer writing from Outburst Arts'); an arts charity, not a media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Annual print-only queer writing journal from a Belfast arts organisation, with issue 5 released in late 2025 and issue 6 announced for the November 2026 festival.",
+  "what_it_is": "catflap is an annual print-only journal of new queer writing from Belfast: essays from the polemical to the speculative, poetry written for page and stage, and curated interviews, mixing pop culture with queer theory in a deliberately playful register. Each issue is edited with a guest editor and drawn partly from an open call. It suits readers of literary magazines and queer culture titles rather than news-driven LGBTQ press.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [
+    "queer-led"
+  ],
+  "identity_tag_evidence_url": "https://outburstarts.com/events-projects/catflap-6-open-call/",
+  "cover_candidates": [
+    {
+      "url": "https://rile.space/storage/4062/01KH6AJMPN1G7VMT7YMAAG60QF.jpg",
+      "source_type": "stockist",
+      "page_url": "https://www.rile.space/publishers/catflap-magazine",
+      "issue_label": "catflap #5",
+      "width": 750,
+      "height": 994,
+      "notes": "Stockist (rile* books, Brussels) listing image of Issue 05; flat cover but only 750px wide."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0774/3068/6031/files/PKB_2771_c545bcff-b28e-4a4d-b983-3087a21ea8ed.jpg?v=1765555160",
+      "source_type": "distributor",
+      "page_url": "https://publicknowledgebooks.com/products/catflap-issue-05",
+      "issue_label": "catflap #5",
+      "width": 3000,
+      "height": 2252,
+      "notes": "Public Knowledge Books (the title's distributor) product photo; landscape format, so probably a styled photograph of the magazine rather than a flat cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://outburstarts.com/events-projects/catflap-6-open-call/",
+    "https://outburstarts.com/events-projects/catflap-distribution-list/",
+    "https://outburstarts.com/about-contact/",
+    "https://publicknowledgebooks.com/products/catflap-issue-05",
+    "https://www.rile.space/publishers/catflap-magazine"
+  ],
+  "uncertainties": "The publisher's own shop runs on Ticketsolve and renders only by script, so no publisher price could be read (distributor Public Knowledge Books lists Issue 05 at GBP 12, rile* books at EUR 16). The Issue 5 date is taken from the distributor listing it on 2025-12-12 and the publisher's statement that issues launch at its November festival; no exact date was found. The open-call page says catflap #6 'will be launched with a special event as part of Outburst Queer Art Festival 2026, November 13-21' (edited by So Mayer); as of 2026-11-19 no listing of #6 was found, so #5 is recorded as the latest issue out. The queer-led tag rests on Outburst Arts describing itself as a queer arts organisation publishing 'smart new queer writing'. Page count and trim size not on the publisher's site (magCulture gives 190 x 250 mm, 90 pages for issue 4)."
+}

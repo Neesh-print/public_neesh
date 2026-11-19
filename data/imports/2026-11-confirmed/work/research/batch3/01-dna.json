@@ -1,0 +1,60 @@
+{
+  "input_title": "DNA",
+  "official_name": "DNA",
+  "publisher_name": "DNA Magazine",
+  "publisher_website": "https://www.dnamagazine.com.au/",
+  "country": "AU",
+  "city": "Sydney",
+  "frequency": "monthly",
+  "cover_price": 18.99,
+  "currency": "USD",
+  "trim_size": "276 x 220 mm",
+  "page_count": null,
+  "subscribe_url": "https://www.dnamagazine.com.au/subscribe/",
+  "latest_issue_label": "DNA #322",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.dnamagazine.com.au/product/dna322/",
+  "independent": "yes",
+  "independence_evidence": "About page states DNA is an independently owned LGBTQIA+ Australian media company (https://www.dnamagazine.com.au/about/); copyright DNA Magazine.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently owned monthly print magazine with a current issue (#322, November 2026) on sale in the publisher's shop.",
+  "what_it_is": "DNA is an Australian monthly for gay men that mixes news features, celebrity interviews, pop-culture reviews and long reads on LGBTQIA+ life with extensive male model and fashion photography. Each issue runs a cover interview, a themed long-form piece and several photographic portfolios. It suits readers wanting a glossy, pin-up-led gay lifestyle title with an Australian base and international distribution.",
+  "suggested_primary_tag": "lifestyle",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [
+    "queer-led"
+  ],
+  "identity_tag_evidence_url": "https://www.dnamagazine.com.au/about/",
+  "cover_candidates": [
+    {
+      "url": "https://www.dnamagazine.com.au/wp-content/uploads/2026/10/DNA-322-cover.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.dnamagazine.com.au/product/dna322/",
+      "issue_label": "DNA #322",
+      "width": 800,
+      "height": 1000,
+      "notes": "Flat front cover from the publisher's product gallery; largest version served is 800x1000, below the 1000px target."
+    },
+    {
+      "url": "https://www.dnamagazine.com.au/wp-content/uploads/2026/10/Current-Issue-Tile-322.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.dnamagazine.com.au/product/dna322/",
+      "issue_label": "DNA #322",
+      "width": 400,
+      "height": 500,
+      "notes": "Small product tile; likely carries a 'current issue' overlay."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.dnamagazine.com.au/product/dna322/",
+    "https://www.dnamagazine.com.au/about/",
+    "https://www.dnamagazine.com.au/contact/",
+    "https://www.dnamagazine.com.au/product-category/current/",
+    "https://www.dnamagazine.com.au/wp-json/wc/store/v1/products?per_page=20&search=DNA%20%23",
+    "https://pocketmags.com/dna-magazine"
+  ],
+  "uncertainties": "The distributor hint 'DNA' was assumed to be this Australian title; no other print magazine of that name was found. The shop prices in USD even though the publisher is Australian, so the cover price is the USD shop price (back issues are USD 24.99, the current issue USD 18.99). Sydney comes from the site's embedded locale setting and the publisher's reputation, not from a printed street address; the identity tag 'queer-led' rests on the publisher describing itself as an independently owned LGBTQIA+ media company. Issue date taken as November 2026 from the 'DNA-NOVEMBER2026' image filenames and the October 2026 upload date; images are described only in file names, so day precision is not available."
+}

@@ -1,0 +1,56 @@
+{
+  "input_title": "Handvaerk",
+  "official_name": "HÅNDVÆRK bookazine",
+  "publisher_name": "Rigetta Klint (HÅNDVÆRK bookazine)",
+  "publisher_website": "https://www.haandvaerkbookazine.com",
+  "country": "DK",
+  "city": "Frederiksberg",
+  "frequency": "biannual",
+  "cover_price": 250.0,
+  "currency": "DKK",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop-haandvaerk.com/products/arsabonnement-handvaerk-bookazine",
+  "latest_issue_label": "No. 15 – Transformation",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://shop-haandvaerk.com/products/handvaerk-bookazine-no-15-english",
+  "independent": "yes",
+  "independence_evidence": "About page: 'published twice a year by designer, photographer and writer Rigetta Klint', based in Denmark; sold through its own Shopify store, no ads, no parent company.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Danish biannual with print issues no. 12 (Mar 2025), 13 (Aug 2025), 14 (Mar 2026) and 15 (Sep 2026) on sale in its own shop.",
+  "what_it_is": "A Danish bookazine about craft and making, published in separate Danish and English editions and organised around one theme per issue (no. 15 is Transformation, no. 14 was about print and pattern). Each issue consists of long interviews and photographic portraits of makers, designers and small workshops, taking in ceramics, textiles, furniture, architecture and food. It is for readers interested in Scandinavian craft, materials and slow design rather than product news.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0282/4231/3268/files/HANDVAERK15_Forside_UK_b47862e1-052d-4967-83f9-4fb9a1136323.jpg?v=1789378851",
+      "source_type": "publisher",
+      "page_url": "https://shop-haandvaerk.com/products/handvaerk-bookazine-no-15-english",
+      "issue_label": "No. 15 – Transformation (English edition)",
+      "width": 846,
+      "height": 1102,
+      "notes": "Flat front cover; below 1000px long edge, largest file served."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0282/4231/3268/files/HANDVAERK15_Forside_DK.jpg?v=1789379008",
+      "source_type": "publisher",
+      "page_url": "https://shop-haandvaerk.com/products/handvaerk-bookazine-no-15-dansk-tekst",
+      "issue_label": "No. 15 – Transformation (Danish edition)",
+      "width": 846,
+      "height": 1102,
+      "notes": "Danish-language edition of the same cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.haandvaerkbookazine.com/about-handvaerk/",
+    "https://www.haandvaerkbookazine.com/about-editor-rigetta-klint/",
+    "https://shop-haandvaerk.com/products.json?limit=250",
+    "https://shop-haandvaerk.com/products/handvaerk-bookazine-no-15-english"
+  ],
+  "uncertainties": "Publisher site says only 'based in Denmark'; Frederiksberg is where the editor-publisher's CV says she lives, so the city is inferred. No legal company name or CVR found. Issue date is the shop listing date (5 Sep 2026). Page count and trim size not stated."
+}

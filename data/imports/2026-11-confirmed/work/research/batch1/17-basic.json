@@ -1,0 +1,64 @@
+{
+  "input_title": "Basic",
+  "official_name": "BASIC",
+  "publisher_name": "BASIC Media Company LLC",
+  "publisher_website": "https://basic-magazine.com/",
+  "country": "US",
+  "city": "Beverly Hills",
+  "frequency": "triannual",
+  "cover_price": 20.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": 128,
+  "subscribe_url": "https://buybasicmagazine.myshopify.com/products/basic-subscription",
+  "latest_issue_label": "Issue 31 ('Ritual')",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://buybasicmagazine.myshopify.com/products/basic-masego-ritual-issue-31",
+  "independent": "yes",
+  "independence_evidence": "Published by BASIC Media Company LLC (site footer and shop listings), a small Beverly Hills company whose only title is BASIC; the June 2026 'Making of BASIC' feature describes it as an independent magazine. No media group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent US fashion title with Issue 31 ('Ritual', two covers) released September/October 2026 and sold in the publisher's shop.",
+  "what_it_is": "BASIC is a Beverly Hills fashion and art magazine built around themed issues, each released with two or three covers featuring actors, musicians and designers. Inside are fashion editorials, beauty and art stories, designer profiles and celebrity interviews across 128 pages in a coffee-table format. It is for readers of glossy fashion photography and celebrity-led style coverage.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0590/2067/3093/files/COVER_31_RITUAL1.jpg?v=1789775538",
+      "source_type": "publisher",
+      "page_url": "https://buybasicmagazine.myshopify.com/products/basic-kat-von-d-ritual-issue-31",
+      "issue_label": "Issue 31 (Kat Von D cover)",
+      "width": 2550,
+      "height": 3263,
+      "notes": "Flat front cover with barcode; dimensions from products.json."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0590/2067/3093/files/COVER_31_RITUAL2.jpg?v=1789775434",
+      "source_type": "publisher",
+      "page_url": "https://buybasicmagazine.myshopify.com/products/basic-masego-ritual-issue-31",
+      "issue_label": "Issue 31 (Masego cover)",
+      "width": 2550,
+      "height": 3263,
+      "notes": "Flat front cover of the other Issue 31 edition; dimensions from products.json."
+    }
+  ],
+  "evidence_urls": [
+    "https://basic-magazine.com/",
+    "https://basic-magazine.com/about/",
+    "https://basic-magazine.com/the-making-of-basic/",
+    "https://buybasicmagazine.myshopify.com/products.json?limit=250",
+    "https://buybasicmagazine.myshopify.com/products/basic-kat-von-d-ritual-issue-31",
+    "https://buybasicmagazine.myshopify.com/products/basic-masego-ritual-issue-31",
+    "https://buybasicmagazine.myshopify.com/products/basic-subscription"
+  ],
+  "uncertainties": [
+    "Issue 31 release date: the Masego cover listing went live 29 September 2026 and the Kat Von D cover 6 October 2026; no explicit publication date is given, so month precision (September 2026) is used.",
+    "Frequency: the publisher calls BASIC quarterly, but the shop shows three issues a year in both 2025 (Issues 26, 27, 28) and 2026 (29, 30, 31), so triannual is recorded per the cadence rule.",
+    "The company website is basic-magazine.com but current issues are sold only through the separate Shopify store buybasicmagazine.myshopify.com; the WooCommerce shop on the main site lists a single old product.",
+    "Trim size not stated; page count 128 is from the Issue 31 listing."
+  ]
+}

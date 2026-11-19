@@ -1,0 +1,57 @@
+{
+  "input_title": "Dossier",
+  "official_name": "Dossier",
+  "publisher_name": "Dossier Projects, LLC",
+  "publisher_website": "https://www.dossiermagazine.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "biannual",
+  "cover_price": 30.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.dossiermagazine.com/shop/p/dossier-magazine-subscription",
+  "latest_issue_label": "Issue Four (Spring/Summer 2026)",
+  "latest_issue_date": "2026-03-17",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.dossiermagazine.com/shop/p/dossier-issue-four",
+  "independent": "yes",
+  "independence_evidence": "Masthead states the magazine is published by Dossier Projects, LLC, a small New York company run by its original creators; no media-group parent is named (https://www.dossiermagazine.com/about-dossier).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent New York title with a print issue (Issue Four, Spring/Summer 2026) on sale and a fifth issue on pre-order.",
+  "what_it_is": "Dossier is a New York print magazine about travel, culture and style, relaunched in 2024 after an earlier life as a fashion and art title. Each biannual issue is organised around places, from Bangkok and the Mekong countries to Madagascar and Palm Springs, and mixes long travel features, fashion stories shot on location, photography portfolios, short fiction and conversations with chefs, musicians, designers and writers. It is pitched at readers who want slow, luxury-leaning travel journalism with a strong cultural and literary bent.",
+  "suggested_primary_tag": "travel",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/658d6b96d0964e371c10de8e/6b3ec1b2-3d20-48ca-a337-9bb07a3c011b/Dossier-Issue04-COVER2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.dossiermagazine.com/shop/p/dossier-issue-four",
+      "issue_label": "Issue Four",
+      "width": 1358,
+      "height": 1772,
+      "notes": "Flat front cover from the publisher's Squarespace shop; the original upload is 1358x1772 so no larger version exists."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/658d6b96d0964e371c10de8e/5cc64ca4-9905-4200-a747-3a82fec46feb/Issue+5_Static+Social.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.dossiermagazine.com/shop/p/dossier-issue-five",
+      "issue_label": "Issue Five (pre-order)",
+      "width": 2717,
+      "height": 3543,
+      "notes": "Cover of the forthcoming Fall/Winter 2026 issue (pre-order, not yet shipped); filename suggests a social-media export but the proportions match a flat cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.dossiermagazine.com/about-dossier",
+    "https://www.dossiermagazine.com/shop",
+    "https://www.dossiermagazine.com/shop/p/dossier-issue-four?format=json-pretty",
+    "https://www.dossiermagazine.com/shop/p/dossier-issue-five?format=json-pretty",
+    "https://www.dossiermagazine.com/shop/p/dossier-magazine-subscription"
+  ],
+  "uncertainties": "The 2026-03-17 date is the Squarespace publish timestamp of the Issue Four shop listing, used as the on-sale date; the issue itself is labelled Spring/Summer 2026. Issue Five (Fall/Winter 2026) was still marked Pre-Order on 2026-11-17 and its listing publish timestamp is 2026-11-06, so it may ship imminently. Page count and trim size are not stated on the site."
+}

@@ -1,0 +1,48 @@
+{
+  "input_title": "C.A.P 74024",
+  "official_name": "CAP 74024",
+  "publisher_name": "CAP Creative S.r.l.",
+  "publisher_website": "https://www.cap74024.com/",
+  "country": "IT",
+  "city": "Milan",
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "28.4 x 22.5 cm",
+  "page_count": 450,
+  "subscribe_url": "https://cap74024.shop/",
+  "latest_issue_label": "#22 Summer/Fall 2026",
+  "latest_issue_date": "2026-07-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://villagebooks.co/products/cap-74024-22",
+  "independent": "yes",
+  "independence_evidence": "Site footer: '© CAP Creative S.r.l.' with Milan and Paris addresses; the publisher is a small Milan creative studio/agency that also makes the magazine Les Hommes Publics, not a media group. The magazine runs brand collaborations and advertising but is not a customer magazine.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Milan publisher with print issue #22 (Summer/Fall 2026) on sale at stockists and a biannual rhythm.",
+  "what_it_is": "CAP 74024 is a thick biannual Milan magazine about eros, art and fashion, built from long photographic stories, celebrity and designer interviews and luxury-brand editorials on mixed paper stocks. Issues run to around 450 pages at 28.4 x 22.5 cm with special finishes such as holographic foil and, in #22, sticker inserts. It is aimed at fashion and image professionals and collectors of large glossy independents.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1022/3793/files/cap74024.jpg?v=1785249638",
+      "source_type": "stockist",
+      "page_url": "https://villagebooks.co/products/cap-74024-22",
+      "issue_label": "#22 Summer/Fall 2026 (Balenciaga cover by Julien Boudet)",
+      "width": 2340,
+      "height": 2340,
+      "notes": "Village Books listing image on a square canvas that does not trim to white, so the cover likely sits on a coloured background and needs cropping. Issue has several covers."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.cap74024.com/",
+    "https://www.cap74024.com/about/",
+    "https://cap74024.shop/",
+    "https://villagebooks.co/products/cap-74024-22",
+    "https://sodabooks.com/publications/fashion/cap-74024-22/"
+  ],
+  "uncertainties": "The publisher's own shop (cap74024.shop) currently lists only its sister title Les Hommes Publics #17, so no publisher price for CAP 74024 #22 could be recorded (stockists: GBP 14.99 at Village Books, EUR 18 at Soda Books). Page count, trim size and the 'Summer/Fall 2026' label come from Soda Books, not the publisher. The issue date is the Village Books listing date (2026-07-28). The input spelling 'C.A.P 74024' is not used by the publisher, which writes 'CAP 74024'."
+}

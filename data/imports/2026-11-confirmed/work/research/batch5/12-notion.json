@@ -1,0 +1,62 @@
+{
+  "input_title": "Notion",
+  "official_name": "NOTION",
+  "publisher_name": "Notion London Limited",
+  "publisher_website": "https://notion.online/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": 10.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://notion.online/shop/",
+  "latest_issue_label": "NOTION 100",
+  "latest_issue_date": "2026-10-26",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://notion.online/product/notion-100-jack-innanen/",
+  "independent": "yes",
+  "independence_evidence": "Terms page: 'This website is operated by Notion London Limited'; the about page describes an independent media group based in London and Los Angeles with its own agency arm (Studio NOTION), not part of any large publishing group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently owned London music-and-culture title whose 100th print issue went on sale in late October / November 2026, following two print editions in 2025.",
+  "what_it_is": "A music and popular-culture magazine built around cover interviews and fashion-led photo shoots with musicians, actors, athletes and internet personalities, each print edition appearing with many different covers. Between numbered issues it publishes 'The Artists' print volumes profiling emerging acts. It is for readers who follow new music, youth culture and celebrity style.",
+  "suggested_primary_tag": "music",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://notion.online/wp-content/uploads/2026/10/1-2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://notion.online/product/notion-100-jack-innanen/",
+      "issue_label": "NOTION 100",
+      "width": 1150,
+      "height": 1533,
+      "notes": "Flat front cover, Jack Innanen cover variant, from the publisher's product page; visually checked."
+    },
+    {
+      "url": "https://notion.online/wp-content/uploads/2026/11/tiny-desk-social-cover.jpg",
+      "source_type": "publisher",
+      "page_url": "https://notion.online/product/notion-100-the-team-behind-tiny-desk/",
+      "issue_label": "NOTION 100",
+      "width": 1000,
+      "height": 1333,
+      "notes": "Flat front cover, 'The Team Behind Tiny Desk' variant (the shop's featured 'Latest Issue' cover); file name says 'social' but it is the full cover with masthead; visually checked."
+    }
+  ],
+  "evidence_urls": [
+    "https://notion.online/shop/",
+    "https://notion.online/product/notion-100-the-team-behind-tiny-desk/",
+    "https://notion.online/product/notion-100-jack-innanen/",
+    "https://notion.online/product/notion-the-artists-vol-4-ravyn-lenae/",
+    "https://notion.online/product/notion-the-artists-vol-3-venna/",
+    "https://notion.online/product/notion-the-artists-vol-2-jongho/",
+    "https://notion.online/product/notion-the-artists-vol-1-fcukers/",
+    "https://notion.online/about/",
+    "https://notion.online/contact/",
+    "https://notion.online/terms-conditions/"
+  ],
+  "uncertainties": "NOTION 100 has at least nine cover variants released on different dates (Jack Innanen product posted 26 Oct 2026, Tiny Desk 6 Nov 2026); the earliest product date is used. Cadence counted across both numbered issues and 'The Artists' volumes (Nov 2024, Apr 2025, Nov 2025, Apr 2026, Oct/Nov 2026), matching the publisher's 'bi-annual print editions' statement. Trim size and page count not stated. The brief's hint 'Notion: The Artists 4, 2026' is the April 2026 edition; NOTION 100 is newer."
+}

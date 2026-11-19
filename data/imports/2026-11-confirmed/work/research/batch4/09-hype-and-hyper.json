@@ -1,0 +1,46 @@
+{
+  "input_title": "Hype and Hyper",
+  "official_name": "Hype&Hyper",
+  "publisher_name": "Hype&Hyper",
+  "publisher_website": "https://hypeandhyper.com",
+  "country": "HU",
+  "city": "Budapest",
+  "frequency": "annual",
+  "cover_price": 3950.0,
+  "currency": "HUF",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://store.hypeandhyper.com/collections/magazine",
+  "latest_issue_label": "No. 13 / 2026 – New Order / No Order",
+  "latest_issue_date": "2026-04-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://store.hypeandhyper.com/products/hype-hyper-magazine-no-13-2026",
+  "independent": "yes",
+  "independence_evidence": "About page describes Hype&Hyper as a Budapest-based brand whose group consists of the magazine, a studio and a store; no media-group owner found.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Budapest title with print issues No. 12 (2025) and No. 13 (April 2026) on sale in its own store.",
+  "what_it_is": "A Budapest magazine about Central and Eastern Europe, printed once a year since 2020 alongside a daily website, covering strategy, business, design and lifestyle from the region's own point of view. The print issue is themed (No. 13 is 'New Order / No Order') and mixes essays on geopolitics and regional economies with design, architecture, food and art features. It is for readers interested in the CEE region's culture and business, in English and Hungarian.",
+  "suggested_primary_tag": "ideas-science",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0027/8629/5872/files/hype_cover_1-1.png?v=1775638262",
+      "source_type": "publisher",
+      "page_url": "https://store.hypeandhyper.com/products/hype-hyper-magazine-no-13-2026",
+      "issue_label": "No. 13 / 2026",
+      "width": 3409,
+      "height": 3409,
+      "notes": "Front cover rendered flat but as a mockup centred on a blue square background (cover about 45% of the width); no plain flat file found."
+    }
+  ],
+  "evidence_urls": [
+    "https://hypeandhyper.com/about",
+    "https://store.hypeandhyper.com/products.json?limit=250",
+    "https://store.hypeandhyper.com/products/hype-hyper-magazine-no-13-2026"
+  ],
+  "uncertainties": "No legal publisher name (Kft.) found on the site. Issue date taken from the store listing date (8 April 2026). Language of the print edition not confirmed (website is bilingual Hungarian/English). Page count and trim size not stated."
+}

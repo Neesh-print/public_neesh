@@ -1,0 +1,48 @@
+{
+  "input_title": "Record Culture",
+  "official_name": "Record Culture Magazine",
+  "publisher_name": "Record Creative Limited",
+  "publisher_website": "https://record-magazine.com/",
+  "country": "IE",
+  "city": "Cork",
+  "frequency": "irregular",
+  "cover_price": 28.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": 208,
+  "subscribe_url": "https://www.record-magazine.com/store/issue-11",
+  "latest_issue_label": "Issue 11 (2026)",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.record-magazine.com/store/issue-11",
+  "independent": "yes",
+  "independence_evidence": "About page lists 'Publisher Record Creative Limited, 1st Floor, 6 Lapp's Quay, Cork, Ireland' and a small editorial team under editor-in-chief Karl Henkell; founded 2016 in Chinatown, New York (https://record-magazine.com/about).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent music magazine that returned in 2026 with a 208-page print Issue 11 after a hiatus.",
+  "what_it_is": "A print magazine about the people behind niche music scenes worldwide, built on long candid interviews and photography shot in subjects' homes and studios. Issues also carry archival ephemera features, illustrations and supplement booklets. It is for record collectors, DJs and readers interested in where music meets art and fashion.",
+  "suggested_primary_tag": "music",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/562a9362e4b0b34525be9ae4/98e8b2b7-3e74-48dd-b599-4f86b2f15b88/Record_11_2026_Cover.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.record-magazine.com/store/issue-11",
+      "issue_label": "Issue 11",
+      "width": 1890,
+      "height": 2700,
+      "notes": "Flat front cover from the publisher's Squarespace store."
+    }
+  ],
+  "evidence_urls": [
+    "https://record-magazine.com/about",
+    "https://www.record-magazine.com/store/issue-11",
+    "https://www.record-magazine.com/store/issue-11?format=json-pretty",
+    "https://magculture.com/products/record-culture-11",
+    "https://record-magazine.com/store/collectors-pack-issue-6-issue-7-issue-8-797m3-rc8ky"
+  ],
+  "uncertainties": "Same-title check: 'Record Culture' and the Index's 'Record Magazine' (record-magazine.com, New York) are the SAME title - record-magazine.com is Record Culture Magazine's own site; it was founded in New York but the stated legal publisher is now Record Creative Limited in Cork, Ireland, with the masthead listing 'New York / Berlin / Melbourne'. Country/city follow the stated publisher address. Issue 11 was listed on the store on 2026-03-30 with copies shipping late May 2026 (retailers list June 2026). Previous issue (10) dated 2022, so frequency is irregular despite retailer descriptions of 'bi-annual'."
+}

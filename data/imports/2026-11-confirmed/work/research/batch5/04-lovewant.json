@@ -1,0 +1,51 @@
+{
+  "input_title": "LoveWant",
+  "official_name": "LoveWant",
+  "publisher_name": "LoveWant",
+  "publisher_website": "https://love-want.com/",
+  "country": "AU",
+  "city": "Sydney",
+  "frequency": "quarterly",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": 240,
+  "subscribe_url": null,
+  "latest_issue_label": "Issue 47",
+  "latest_issue_date": "2026-11-05",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://perimeterdistribution.com/products/lovewant-issue-47",
+  "independent": "yes",
+  "independence_evidence": "The publisher's contact page calls LoveWant 'an independent bi-monthly 240 page print visual reader' made by a small creative studio founded in 2007; the distributor Perimeter lists LoveWant as its own publisher.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Australian fashion and art title with Issue 47 released through its distributor in November 2026 and several earlier 2026 issues.",
+  "what_it_is": "A large-format fashion, photography and art magazine with multiple collectible covers per issue, built from model and celebrity portraits, fashion stories shot by its own editors and interviews with musicians and artists. Text is sparse; it reads as a printed moodboard. It is for fashion-image collectors and people who follow photographers and models rather than trend coverage.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0609/9091/4631/files/LoveWant_47_1000px.jpg?v=1793845883",
+      "source_type": "distributor",
+      "page_url": "https://perimeterdistribution.com/products/lovewant-issue-47",
+      "issue_label": "Issue 47",
+      "width": 1000,
+      "height": 750,
+      "notes": "Front cover (Kaire Kivineem wears Chanel) shown flat on a white background with a slight drop shadow, landscape canvas 1000x750 so the cover itself is roughly 500px wide; one of several covers for the issue. No flat cover for Issue 47 exists on the publisher's own site, whose print page stops at Issue 45."
+    }
+  ],
+  "evidence_urls": [
+    "https://love-want.com/",
+    "https://love-want.com/print/",
+    "https://love-want.com/contact/",
+    "https://perimeterdistribution.com/products/lovewant-issue-47",
+    "https://perimeterdistribution.com/products/lovewant-issue-46",
+    "https://perimeterdistribution.com/products/lovewant-issue-45",
+    "https://perimeterdistribution.com/products/lovewant-issue-43",
+    "https://perimeterdistribution.com/search?q=lovewant&type=product"
+  ],
+  "uncertainties": "The publisher's site (love-want.com, formerly lovewantmagazine.com) has no shop or address; its print page links each issue to the retailer Perimeter Books, so no publisher cover price is recorded (Perimeter's trade listing shows AUD 24.00). City 'Sydney' comes from Perimeter's product description ('published in Sydney by Bart Celestino and Bec Parsons'), not from the publisher's own pages. Frequency: the publisher says bi-monthly, Perimeter says quarterly, and the distributor's 2026 listings (Issues 43-47 added Aug-Nov 2026) cannot settle the real cadence; quarterly is recorded as the more conservative estimate. Issue 47's date is the distributor's listing date, not a publisher-stated release date."
+}

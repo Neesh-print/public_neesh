@@ -1,0 +1,46 @@
+{
+  "input_title": "Wunderdog",
+  "official_name": "Wunderdog",
+  "publisher_name": "Paw Print London Ltd",
+  "publisher_website": "https://wunderdogmagazine.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": 124,
+  "subscribe_url": "https://wunderdogmagazine.com/product-category/magazines/",
+  "latest_issue_label": "Issue 10",
+  "latest_issue_date": "2025-12-15",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://wunderdogmagazine.com/product/wunderdog-magazine-issue-10-animal-rising-tottenham-hotspur-and-all-dogs-matter-cornwall-dog-tattoos/",
+  "independent": "yes",
+  "independence_evidence": "The site describes Wunderdog as 'a new independent dog magazine' and the footer copyright names the publisher as Paw Print London Ltd, a small company with no group parent (https://wunderdogmagazine.com/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "An independently published print magazine whose Issue 10 (124 pages) went on sale in December 2025, although the publisher says it 'may be our last issue' in print.",
+  "what_it_is": "Wunderdog is a British magazine about rescue dogs and dog welfare, telling the stories of adopted dogs and the people around them. Issues combine long interviews with campaigners and charities, photo essays, travel pieces on dog-friendly places, and reports on street dogs abroad, alongside a shop of posters and dog accessories. It is for dog owners and adopters who want a campaigning, photography-led read rather than training or breed advice.",
+  "suggested_primary_tag": "nature",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://wunderdogmagazine.com/wp-content/uploads/2025/12/issue10-cover-1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://wunderdogmagazine.com/product/wunderdog-magazine-issue-10-animal-rising-tottenham-hotspur-and-all-dogs-matter-cornwall-dog-tattoos/",
+      "issue_label": "Issue 10",
+      "width": 1200,
+      "height": 1800,
+      "notes": "Publisher's product image: the Issue 10 cover (French bulldog in stadium seats) shown with a drop shadow on a pale blue background, so it is a mock-up rather than a flat scan and would need cropping."
+    }
+  ],
+  "evidence_urls": [
+    "https://wunderdogmagazine.com/",
+    "https://wunderdogmagazine.com/product/wunderdog-magazine-issue-10-animal-rising-tottenham-hotspur-and-all-dogs-matter-cornwall-dog-tattoos/",
+    "https://magculture.com/products/wunderdog-10"
+  ],
+  "uncertainties": "The publisher's shop showed the Issue 10 price as US$16.00 because it geo-converts prices for overseas visitors ('We've updated our prices to United States dollar'); the GBP price could not be read because the site began returning 403 to further requests, so no cover price is recorded (stockist magCulture listed the issue at GBP 12, per a search snippet; its page is now gone). The issue date is the product page's datePublished (15 December 2025); the homepage photos were uploaded in February 2026, so copies may have shipped in early 2026. The product text says Issue 10 'may be our last issue' and a magCulture description called it a 'farewell to the print iteration', so the title may be finished in print. City is taken from the publisher's company name (Paw Print London Ltd) rather than a stated address, as the about and contact pages could not be fetched. Frequency 'biannual' is the publisher's statement ('twice a year'); recent cadence was roughly one issue a year (Issue 9 in 2024-25, Issue 10 late 2025)."
+}

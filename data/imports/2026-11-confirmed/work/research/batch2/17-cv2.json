@@ -1,0 +1,50 @@
+{
+  "input_title": "CV2",
+  "official_name": "Contemporary Verse 2",
+  "publisher_name": "Contemporary Verse 2 Inc.",
+  "publisher_website": "https://contemporaryverse2.ca/",
+  "country": "CA",
+  "city": "Winnipeg",
+  "frequency": "quarterly",
+  "cover_price": 14.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://contemporaryverse2.ca/subscribe/",
+  "latest_issue_label": "Fall 2026, Vol. 49 No. 2",
+  "latest_issue_date": "2026-11-06",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://contemporaryverse2.ca/issues/fall-2026/",
+  "independent": "yes",
+  "independence_evidence": "About page: 'CV2 is published by Contemporary Verse 2 Inc., a registered charity'; a charity publisher with a single title.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Charity-published Canadian poetry quarterly whose Fall 2026 issue (Vol. 49 No. 2) was published in November 2026, with a steady four-issues-a-year cadence through 2025 and 2026.",
+  "what_it_is": "Contemporary Verse 2 (CV2) is a quarterly Canadian poetry journal founded in 1975 that prints new poems alongside interviews, essays and reviews of recent collections. Issues are themed or open and include the results of the magazine's own contests, such as the 2-Day Poem Contest. It is for readers and writers of contemporary poetry, particularly those following Canadian work.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": null,
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://contemporaryverse2.ca/wp-content/uploads/2026/11/cover-image.png",
+      "source_type": "publisher",
+      "page_url": "https://contemporaryverse2.ca/issues/fall-2026/",
+      "issue_label": "Fall 2026, Vol. 49 No. 2",
+      "width": 970,
+      "height": 1460,
+      "notes": "Flat front cover (cover art 'Slow Loris' by Bramwell Enan) from the publisher's issue page; just under 1000px wide."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.contemporaryverse2.ca/",
+    "https://contemporaryverse2.ca/issues/fall-2026/",
+    "https://contemporaryverse2.ca/issues/",
+    "https://contemporaryverse2.ca/about/",
+    "https://contemporaryverse2.ca/subscribe/",
+    "https://contemporaryverse2.ca/contact/",
+    "https://contemporaryverse2.ca/fall-issue-launch-3/"
+  ],
+  "uncertainties": "The issue page carries no explicit print date; 2026-11-06 is the date the Fall 2026 issue page/launch notice was published online, and the online launch event is 17 November 2026. The $14.00 price is the 'current issues' single-copy price quoted on the Issues page (online ordering is Canada-only). The issues list labels Winter 2026 as 'Vol. 48 No.2', apparently a typo for No. 3."
+}

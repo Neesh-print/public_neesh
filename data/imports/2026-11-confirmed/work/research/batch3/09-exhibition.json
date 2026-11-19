@@ -1,0 +1,66 @@
+{
+  "input_title": "Exhibition",
+  "official_name": "Exhibition",
+  "publisher_name": "Exhibition Magazine",
+  "publisher_website": "https://www.exhibition-magazine.com/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "33 x 44 cm",
+  "page_count": null,
+  "subscribe_url": "https://www.exhibition-magazine.com/shop",
+  "latest_issue_label": "N°27, The Stories Issue (Fall/Winter 2026/2027)",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://kdpresse.com/en/products/exhibition-n-27",
+  "independent": "yes",
+  "independence_evidence": "The magazine runs its own site and Paris-based Shopify shop under the Exhibition Magazine name (contact via exhibition-collectif.com) with no media-group owner mentioned; it is a small Paris fashion-and-art title distributed by KD Presse (https://www.exhibition-magazine.com/legal-mentions, https://exhibition-shop-9341.myshopify.com/meta.json).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Paris biannual with a new print issue (N°27, Fall/Winter 2026/27) released in October 2026.",
+  "what_it_is": "Exhibition is a very large-format Paris fashion and art magazine published twice a year, each issue built on a single theme (Excess, Ti Amo, Craft, Stories) and sold with four or more alternative covers by different photographers. Inside are fashion series by international photographers and stylists, conversations with designers, make-up artists and architects, and art portfolios. It is for readers and collectors of oversized, image-led fashion publications.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/IMG_5242.jpg?v=1791889587",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/en/products/exhibition-n-27",
+      "issue_label": "N°27",
+      "width": 1125,
+      "height": 1484,
+      "notes": "First of four cover variants listed by KD Presse for N°27 (covers include one by Takashi Homma); phone-style photo of the flat cover, moderate resolution."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/IMG_5241.jpg?v=1791889692",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/en/products/exhibition-n-27",
+      "issue_label": "N°27",
+      "width": 1125,
+      "height": 1480,
+      "notes": "Second cover variant of N°27 from KD Presse."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/IMG_5240.jpg?v=1791889745",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/en/products/exhibition-n-27",
+      "issue_label": "N°27",
+      "width": 1105,
+      "height": 1486,
+      "notes": "Third cover variant of N°27 from KD Presse."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.exhibition-magazine.com/",
+    "https://www.exhibition-magazine.com/shop",
+    "https://www.exhibition-magazine.com/legal-mentions",
+    "https://exhibition-shop-9341.myshopify.com/meta.json",
+    "https://kdpresse.com/en/products/exhibition-n-27"
+  ],
+  "uncertainties": "The publisher's own shop still listed The Craft Issue as its newest magazine on 2026-11-19 and does not yet show N°27 (The Stories Issue), so the latest-issue evidence is KD Presse's listing (2026-10-13, FW 2026/27) plus the publisher homepage, which is already running Stories Issue content (Takashi Homma, Duran Lantink, etc.). Prices in the publisher shop load client-side and could not be read, so no cover price is recorded (KD Presse sells N°27 for EUR 30). The legal entity behind the title is not named; the about page returned a server error. Trim size comes from the KD Presse issue listing. Cover candidates are distributor photos, not publisher files."
+}

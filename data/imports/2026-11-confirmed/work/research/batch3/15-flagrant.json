@@ -1,0 +1,55 @@
+{
+  "input_title": "Flagrant",
+  "official_name": "Flagrant",
+  "publisher_name": "Flagrant Magazine",
+  "publisher_website": "https://www.flagrantmag.com/",
+  "country": "US",
+  "city": null,
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.flagrantmag.com/products/annual-magazine-subscription",
+  "latest_issue_label": "Issue 09",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://flagrantmag.substack.com/p/issue-09-now-available",
+  "independent": "yes",
+  "independence_evidence": "Self-published by Flagrant Magazine through its own Shopify site (vendor 'Flagrant Magazine', copyright 'Flagrant Magazine'); the about page describes it as a magazine created by its four founders, and no parent company or media group is named anywhere on the site (https://www.flagrantmag.com/pages/about-us).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently published print basketball magazine with Issue 08 (fall 2025) and Issue 09 (spring 2026) out and Issue 10 announced for fall 2026.",
+  "what_it_is": "Flagrant is a US print magazine about basketball culture rather than match coverage: artists, fans, community projects, fashion and the people around the game, with heavily art-directed photography and illustration. Issues are themed (for example community, sustainability, or a WNBA collaboration) and the magazine is produced from a women's and BIPOC women's perspective. It is aimed at basketball fans who care as much about the aesthetics and communities around the sport as the scores, and it is now sold in print only, mainly through an annual two-issue subscription.",
+  "suggested_primary_tag": "sport",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [
+    "women-led"
+  ],
+  "identity_tag_evidence_url": "https://www.flagrantmag.com/",
+  "cover_candidates": [
+    {
+      "url": "https://bunny-wp-pullzone-pbiskmbtqv.b-cdn.net/wp-content/uploads/2026/01/525a00d4-f1b1-403b-aefd-8bdeb5db71d6_8334x8334-1-scaled.jpeg",
+      "source_type": "stockist",
+      "page_url": "https://papercutshop.se/product/flagrant-issue-9/",
+      "issue_label": "Issue 09",
+      "width": 1984,
+      "height": 2560,
+      "notes": "Flat front cover of Issue 09 ('Married to the Game') as served on Papercut's product page, measured with identify. The publisher's own site and Substack only show a 3D mockup of this cover (square 8334 px Substack image), so no publisher-sourced flat cover was found."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.flagrantmag.com/",
+    "https://www.flagrantmag.com/pages/about-us",
+    "https://www.flagrantmag.com/pages/contact-us",
+    "https://www.flagrantmag.com/products/annual-magazine-subscription",
+    "https://www.flagrantmag.com/products.json?limit=250",
+    "https://flagrantmag.substack.com/p/issue-09-now-available",
+    "https://flagrantmag.substack.com/p/final-hours-for-the-fall-issue-68f",
+    "https://flagrantmag.substack.com/p/now-available-via-subscription-only",
+    "https://flagrantmag.substack.com/api/v1/archive?sort=new&limit=25",
+    "https://papercutshop.se/product/flagrant-issue-9/"
+  ],
+  "uncertainties": "Current issues are sold only through the USD 40 annual subscription (two issues, spring and fall), so there is no single-issue cover price on the publisher's site; back issues 03-06 are listed at USD 20 each. The subscription page lists Issue 10 for fall 2026, but as of 19 Nov 2026 no release announcement for Issue 10 was found on the publisher's Substack (latest posts to 29 Oct 2026), so Issue 09 (announced 15 May 2026) is recorded as the latest issue actually out. Flagrant's founders live in different parts of the US and the site gives no office address, so city is left null. Frequency is biannual from both the publisher's statement (two issues a year) and the cadence Issue 07 spring 2025, Issue 08 Oct 2025, Issue 09 May 2026. Trim size and page count are not stated by the publisher."
+}

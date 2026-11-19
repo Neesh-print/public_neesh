@@ -1,0 +1,57 @@
+{
+  "input_title": "C 41",
+  "official_name": "C41",
+  "publisher_name": "C41",
+  "publisher_website": "https://www.c41magazine.com/",
+  "country": "IT",
+  "city": "Milan",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": 296,
+  "subscribe_url": "https://www.c41magazine.com/product/c41-magazine-issue-19-tactile-realities/",
+  "latest_issue_label": "Issue 19 — Tactile Realities",
+  "latest_issue_date": "2026-06-22",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.c41magazine.com/product/c41-magazine-issue-19-tactile-realities/",
+  "independent": "yes",
+  "independence_evidence": "Published by the Milan creative studio C41 itself ('Editorial project by C41.eu'; privacy policy names C41 with registered office in Arcore, MB); no media-group ownership. Issue 19 is made 'in collaboration with Ray-Ban', a sponsored partnership rather than a customer magazine.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Milan-based biannual with Issue 19 published 22 June 2026 and Issue 18 in autumn 2025.",
+  "what_it_is": "C41 is a biannual print magazine from a Milan production studio that mixes photography, design, fashion and visual culture around a single theme per issue; Issue 19 is about tactility and utility in objects and clothes. Issues run to around 300 perfect-bound pages with two alternative covers and long portfolio features. It is aimed at readers of image-led culture magazines and people working in photography and design.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "design",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.c41magazine.com/wp-content/uploads/2026/06/C41_19_Ray-Ban_webproduct.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.c41magazine.com/product/c41-magazine-issue-19-tactile-realities/",
+      "issue_label": "Issue 19 — Tactile Realities (Cover 1: Sokol)",
+      "width": 2000,
+      "height": 2000,
+      "notes": "Square product image on a black background; the cover sits inside it with black margins, so it would need cropping. The cover itself carries the issue details as printed text."
+    },
+    {
+      "url": "https://www.c41magazine.com/wp-content/uploads/2026/06/cover_rb2_webproduct.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.c41magazine.com/product/c41-magazine-issue-19-tactile-realities/",
+      "issue_label": "Issue 19 — Tactile Realities (Cover 2: Takashi Homma)",
+      "width": 2000,
+      "height": 2000,
+      "notes": "Second cover variant, same square product-image format."
+    }
+  ],
+  "evidence_urls": [
+    "https://c41magazine.com",
+    "https://www.c41magazine.com/about/",
+    "https://www.c41magazine.com/product/c41-magazine-issue-19-tactile-realities/",
+    "https://www.c41magazine.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://www.c41magazine.com/privacy-policy/"
+  ],
+  "uncertainties": "The legal entity behind the magazine is not spelled out: the privacy policy reads 'C41 . with registered offices in Via Tiziano 63 ... 20862 Arcore (MB)' and gives a PEC address for 'k48srl', so the company may be K48 Srl trading as C41. The about page says the studio is based in Milan, Amsterdam and Paris; Milan is recorded. Trim size is not stated on the site. The distributor hint (Issue 18, Oct 2025) is one issue behind."
+}

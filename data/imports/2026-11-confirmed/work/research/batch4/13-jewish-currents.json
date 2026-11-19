@@ -1,0 +1,60 @@
+{
+  "input_title": "Jewish Currents",
+  "official_name": "Jewish Currents",
+  "publisher_name": "Jewish Currents (501(c)(3) nonprofit)",
+  "publisher_website": "https://jewishcurrents.org",
+  "country": "US",
+  "city": "Brooklyn, New York",
+  "frequency": "quarterly",
+  "cover_price": 9.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://jewishcurrents.org/subscribe",
+  "latest_issue_label": "Fall 2026",
+  "latest_issue_date": "2026-08-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://jewishcurrents.org/issue/fall-2026",
+  "independent": "yes",
+  "independence_evidence": "Magazine page: 'Founded in 1946, Jewish Currents is a magazine committed to the ... Jewish left'; the financials page links a 501(c)(3) determination letter and an editorial-independence statement; the contact page says it accepts no paid advertising. Nonprofit, not owned by a media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent nonprofit New York quarterly whose Fall 2026 print issue is current, with Spring 2026 and 2025 issues on sale in its own shop.",
+  "what_it_is": "A US quarterly of left-wing Jewish politics, culture and ideas, carrying long reported pieces on Israel/Palestine, American politics and the far right alongside essays, fiction, poetry, comics and art criticism. Each print issue is organised as a table of contents of a dozen or so pieces, released to subscribers first and later online, and is complemented by a daily news desk, a podcast and events. It suits readers interested in diaspora politics, antisemitism debates and left movements who want magazine-length writing rather than daily commentary.",
+  "suggested_primary_tag": "identity-politics",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://imgproxy-mls.gridwork.co/ofVy_npo0ueYQoQcTmsBhBnWPe5n3efnrWLrPXZt04s/w:1200/h:1600/rt:fill/g:fp:0.5:0.5/q:82/f:jpg/el:1/aHR0cHM6Ly9zMy51cy1lYXN0LTEuYW1hem9uYXdzLmNvbS9qZXdpc2gtY3VycmVudHMvZzhzalJHWHAuanBlZw.jpg",
+      "source_type": "publisher",
+      "page_url": "https://jewishcurrents.org/magazine",
+      "issue_label": "Fall 2026",
+      "width": 1200,
+      "height": 1600,
+      "notes": "Flat front cover served by the publisher's image proxy at 1200x1600; the underlying original (next candidate) is only 640x854, so this is an upscale."
+    },
+    {
+      "url": "https://s3.us-east-1.amazonaws.com/jewish-currents/g8sjRGXp.jpeg",
+      "source_type": "publisher",
+      "page_url": "https://jewishcurrents.org/magazine",
+      "issue_label": "Fall 2026",
+      "width": 640,
+      "height": 854,
+      "notes": "Original cover file behind the proxy; native resolution, below the 1000px target."
+    }
+  ],
+  "evidence_urls": [
+    "https://jewishcurrents.org",
+    "https://jewishcurrents.org/magazine",
+    "https://jewishcurrents.org/issue/fall-2026",
+    "https://jewishcurrents.org/about",
+    "https://jewishcurrents.org/contact",
+    "https://jewishcurrents.org/financials",
+    "https://jewish-currents.myshopify.com/products.json?limit=250",
+    "https://jewishcurrents.org/back-to-the-bund"
+  ],
+  "uncertainties": "Fall 2026 is shown as the current issue but is not yet listed in the Shopify shop (latest there is Spring 2026 at $9.00, which is the price recorded). The issue's articles went online between 20 July and 17 August 2026, so the print issue is dated August 2026 at month precision; the nominal season label is Fall 2026. Address is a PO box in Brooklyn (POB 130049, Brooklyn NY 11213). The site's shop page is behind a bot check; prices come from the Shopify JSON. Cadence over 2025-26 is Summer 2025, Fall 2025, Winter Gift 2025/26, Spring 2026, Fall 2026, consistent with quarterly. Only a 640x854 native cover file is available for Fall 2026."
+}

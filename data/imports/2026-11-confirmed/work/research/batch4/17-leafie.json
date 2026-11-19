@@ -1,0 +1,49 @@
+{
+  "input_title": "Leafie",
+  "official_name": "leafie",
+  "publisher_name": "Leafie Limited",
+  "publisher_website": "https://www.leafie.co.uk",
+  "country": "GB",
+  "city": "London",
+  "frequency": "annual",
+  "cover_price": 13.0,
+  "currency": "GBP",
+  "trim_size": "22 x 29.7 cm",
+  "page_count": 124,
+  "subscribe_url": "https://www.leafie.co.uk/products/the-leafie-magazine-issue-02/",
+  "latest_issue_label": "Issue 02",
+  "latest_issue_date": "2025-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.leafie.co.uk/products/the-leafie-magazine-issue-02/",
+  "independent": "yes",
+  "independence_evidence": "Site footer: '© LEAFIE LIMITED 2026 ... LEAFIE is a registered trademark of LEAFIE LIMITED'; about page describes it as 'an independent media platform exploring cannabis, psychedelics and culture'.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London publisher whose print Issue 02 (published June 2025) is on sale in its own shop.",
+  "what_it_is": "A UK print magazine about cannabis, psychedelics and the culture around them, spun out of a daily news website on the same subjects. Each issue is an A4-ish, PUR-bound volume of around 120 pages mixing long reads on drug history and policy, interviews with growers, artists and researchers, and features on the UK and European scene rather than the North American one. It suits readers interested in drug reform, medical cannabis and psychedelic research who want it in a considered print format.",
+  "suggested_primary_tag": "lifestyle",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.leafie.co.uk/wp-content/uploads/2025/03/leafie-issue-2-front.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.leafie.co.uk/products/the-leafie-magazine-issue-02/",
+      "issue_label": "Issue 02",
+      "width": 1000,
+      "height": 1000,
+      "notes": "Publisher's main product image of the Issue 02 front cover; square 1000x1000 canvas (cover on a plain background), largest size served."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.leafie.co.uk",
+    "https://www.leafie.co.uk/products/the-leafie-magazine-issue-02/",
+    "https://www.leafie.co.uk/products/leafie-magazine-issue-01/",
+    "https://www.leafie.co.uk/about/",
+    "https://www.leafie.co.uk/contact-us/",
+    "https://www.leafie.co.uk/wp-json/wc/store/v1/products?per_page=50&search=issue"
+  ],
+  "uncertainties": "Page count recorded as 124 (listing says '120 pages + 4pp cover'). Cadence: Issue 01 July 2024, Issue 02 June 2025, no Issue 03 by November 2026, so recorded as annual although a distributor calls it biannual. London address (27 Old Gloucester Street WC1N 3AX) is the postal/registered address on the contact page, which may be a mail-forwarding address rather than an editorial office. No dedicated subscription product exists; the shop product page is given as subscribe_url. The only cover image available is a 1000px square product image."
+}

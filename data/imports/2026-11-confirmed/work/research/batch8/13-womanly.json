@@ -1,0 +1,60 @@
+{
+  "input_title": "Womanly",
+  "official_name": "Womanly",
+  "publisher_name": "Womanly Magazine",
+  "publisher_website": "https://www.womanlymag.com/",
+  "country": "US",
+  "city": "Brooklyn, New York",
+  "frequency": "irregular",
+  "cover_price": 20.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.womanlymag.com/shop",
+  "latest_issue_label": "Issue No. 8 (The Future Is Fat)",
+  "latest_issue_date": "2024-07-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.womanlymag.com/shop/womanly-magazine-issue-no-8-the-future-is-fat",
+  "independent": "yes",
+  "independence_evidence": "Self-published arts-and-health magazine; shop pages say 'By shopping at Womanly, you're supporting a small Black-owned business' and the about page describes a small founder-led organisation funded by grants and sales (https://www.womanlymag.com/about-1).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "no",
+  "qualifies": "no",
+  "qualifies_reason": "The latest print issue actually shipped is Issue No. 8 (mid-2024); Issue No. 9 is on pre-order with delivery expected early December 2026, so no print issue dated 2025 or later is out yet.",
+  "what_it_is": "Womanly is a Brooklyn-based print magazine that delivers health information to women and non-binary people through art, photography, poetry and essays. Each issue takes one health theme (fatness in No. 8, grief in No. 9) and mixes personal narratives with contributions from artists and health professionals. It is for readers interested in community health, body politics and art-led publishing.",
+  "suggested_primary_tag": "identity-politics",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [
+    "black-led",
+    "women-led"
+  ],
+  "identity_tag_evidence_url": "https://www.womanlymag.com/shop/womanly-magazine-issue-no-8-the-future-is-fat",
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5b1d5b5489c172a502087318/1720718572039-0FV0U82FU0RAJHQXB4PQ/Womanly-Issue-8-Cover.png",
+      "source_type": "publisher",
+      "page_url": "https://www.womanlymag.com/shop/womanly-magazine-issue-no-8-the-future-is-fat",
+      "issue_label": "Issue No. 8",
+      "width": 2000,
+      "height": 2000,
+      "notes": "Front cover of Issue 8 rendered on a red square background (cover approx 1100x1600px within the file)."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5b1d5b5489c172a502087318/3c043590-9df8-4388-9bf2-8f6007234552/wn9+-+cover+launch+post+-+fnl-+still+1+%281%29.png",
+      "source_type": "publisher",
+      "page_url": "https://www.womanlymag.com/shop/issue-no-9-grief-as-a-portal",
+      "issue_label": "Issue No. 9 (pre-order)",
+      "width": 1080,
+      "height": 1350,
+      "notes": "Cover launch image for the forthcoming Issue 9; social-post format, not yet a shipped issue."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.womanlymag.com/",
+    "https://www.womanlymag.com/shop",
+    "https://www.womanlymag.com/shop/issue-no-9-grief-as-a-portal",
+    "https://www.womanlymag.com/shop/womanly-magazine-issue-no-8-the-future-is-fat",
+    "https://www.womanlymag.com/about-1"
+  ],
+  "uncertainties": "Issue 8's exact release date is inferred from the Squarespace product record (published 1 July 2024) and could be a few weeks off. Issue 9 ($25) is listed as a pre-order with 'expected delivery in early December 2026'; if it ships, the title would qualify. The about page says content is 'created and led by women of color', which supports the women-led tag; black-led is based on the shop's 'small Black-owned business' statement."
+}

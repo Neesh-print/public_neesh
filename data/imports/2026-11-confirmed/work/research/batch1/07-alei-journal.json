@@ -1,0 +1,74 @@
+{
+  "input_title": "Alei Journal",
+  "official_name": "Aleï Journal",
+  "publisher_name": "Aleï Journal",
+  "publisher_website": "https://aleijournal.com/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "annual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.kdpresse.com/en/ALEI/",
+  "latest_issue_label": "N°15",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://kdpresse.com/products/alei-journal-n-15-1",
+  "independent": "yes",
+  "independence_evidence": "Self-published title run by its two founders (about page); sold through KD Presse; no parent company anywhere.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Paris photography and art journal whose N°14 (2025) and N°15 (June 2026) are both printed and on sale.",
+  "what_it_is": "Aleï Journal is a Paris-based print journal of photography, art and essays that gives space to image-makers with raw or unconventional practices, with long photographic portfolios and little text. Each issue is published with several alternative covers by different photographers (N°15 has at least three). It suits readers of contemporary fashion and art photography and collectors of photo publications.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/15_ALEIJOURNAL_COVER4.jpg?v=1782212000",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/alei-journal-n-15-1",
+      "issue_label": "N°15 (cover 1)",
+      "width": 2717,
+      "height": 3661,
+      "notes": "Flat front cover (portrait of a blonde model, small 'aleï' logotype top left); viewed, clean. KD Presse is the publisher's own sales channel per the Buy page."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/15_ALEIJOURNAL_COVER10.jpg?v=1782212448",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/alei-journal-n-15-2",
+      "issue_label": "N°15 (cover 2)",
+      "width": 2717,
+      "height": 3661,
+      "notes": "Alternative cover of N°15; not viewed."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/15_ALEIJOURNAL_COVER16.jpg?v=1782212574",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/products/alei-journal-n-15-3",
+      "issue_label": "N°15 (cover 3)",
+      "width": 2717,
+      "height": 3661,
+      "notes": "Alternative cover of N°15; not viewed."
+    }
+  ],
+  "evidence_urls": [
+    "https://aleijournal.com/",
+    "https://aleijournal.com/about/",
+    "https://aleijournal.com/buy/",
+    "https://kdpresse.com/products.json?limit=250",
+    "https://kdpresse.com/products/alei-journal-n-15-1.json",
+    "https://kdpresse.com/products/alei-journal-n-14-1.json",
+    "https://doyoureadme.de/products/alei-14-2025"
+  ],
+  "uncertainties": [
+    "The publisher's site is a minimal portfolio (Lay Theme) with no imprint, address or shop; its Buy page only lists issues up to #11 (November 2023) and links to KD Presse. Paris as city rests on stockist/distributor descriptions ('biannual magazine based in Paris') plus the Paris-centred stockist list, not on a publisher statement.",
+    "Cover price: no publisher shop; KD Presse (the publisher's designated sales channel) sells N°15 at EUR 30.",
+    "Frequency: described by stockists as biannual, but the actual cadence is N°13 October 2024, N°14 May 2025, N°15 June 2026, i.e. roughly one issue a year recently.",
+    "Latest issue date taken from the KD Presse listing date (23 June 2026); the publisher gives no date.",
+    "Legal publisher entity not established."
+  ]
+}

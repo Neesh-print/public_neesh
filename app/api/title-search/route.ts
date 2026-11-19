@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { anonClient, coverPublicUrl, hasSupabaseEnv } from '@/lib/supabase';
+import { PUBLIC_REVIEW_FILTER } from '@/lib/queries';
 import { limitRequest } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
@@ -41,6 +42,7 @@ export async function GET(req: NextRequest) {
       .select(SELECT)
       .eq('removed', false)
       .in('status', ['active', 'dormant'])
+    .or(PUBLIC_REVIEW_FILTER)
       .limit(8);
 
   const [byTitle, byPublisher] = await Promise.all([

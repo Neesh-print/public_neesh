@@ -1,0 +1,57 @@
+{
+  "input_title": "subTerrain Magazine",
+  "official_name": "subTerrain",
+  "publisher_name": "subTerrain Magazine",
+  "publisher_website": "https://www.subterrain.ca/",
+  "country": "CA",
+  "city": "Vancouver",
+  "frequency": "triannual",
+  "cover_price": 10.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.subterrain.ca/shop",
+  "latest_issue_label": "Issue 103 (Spring 2026)",
+  "latest_issue_date": "2026-01-01",
+  "latest_issue_date_precision": "year",
+  "latest_issue_source_url": "https://www.subterrain.ca/issue-103",
+  "independent": "yes",
+  "independence_evidence": "Self-published literary magazine run from East Vancouver, funded by BC Arts Council, Canada Council for the Arts, Canada Periodical Fund and City of Vancouver (site footer and about page); no media-group owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Vancouver literary magazine with print issues 100-103 dated 2025-2026 on sale in its own shop.",
+  "what_it_is": "A Canadian literary magazine mixing short fiction, poetry, non-fiction essays and commentary with book reviews and columns on chapbooks and small-press publishing. Each issue carries work by a featured visual artist on the cover and inside, and some issues are built around a theme (recent ones include Dreams and Trash) while others are general. It suits readers of contemporary Canadian and international writing who want a print journal with a West Coast base and a stake in the small-press scene.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/6148f92905eac42a11c993df/7b93990a-8181-4adb-8bca-9cadc4c15c09/103_Cover-front-200dpi+conv+0.jpeg",
+      "source_type": "publisher",
+      "page_url": "https://www.subterrain.ca/issue-103",
+      "issue_label": "Issue 103",
+      "width": 468,
+      "height": 648,
+      "notes": "Flat front cover (painting by Ian MacLeod); Squarespace CDN serves only 468x648 even with ?format=2500w, below the 1000px target."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/6148f92905eac42a11c993df/96455204-92ca-4970-bc1f-d9b218d2416f/103_Cover-front-200dpi+conv+0.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.subterrain.ca/shop/p/issue-103-spring-2026-print",
+      "issue_label": "Issue 103",
+      "width": 432,
+      "height": 432,
+      "notes": "Shop thumbnail of the same cover, served square-cropped at 432x432; worse than the first candidate."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.subterrain.ca/",
+    "https://www.subterrain.ca/issue-103",
+    "https://www.subterrain.ca/about-us-contact",
+    "https://www.subterrain.ca/shop",
+    "https://www.subterrain.ca/shop/p/issue-103-spring-2026-print"
+  ],
+  "uncertainties": "Issue 103 is labelled Spring 2026 and the shop product was created 2026-08-07, so the exact publication date is unknown (recorded at year precision). No Fall 2026 issue was listed on 2026-11-17 despite the stated three-a-year schedule; the cadence over 2025-2026 (100 Spring 2025, 101 Fall 2025, 102 Winter 2025, 103 Spring 2026) still averages three per year. Cover image available only at 468x648. Publisher legal entity name not shown beyond 'subTerrain magazine'."
+}

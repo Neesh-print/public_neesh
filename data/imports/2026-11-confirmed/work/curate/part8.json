@@ -1,0 +1,31 @@
+{
+  "03-british-journal-of-photography": {
+    "name": "British Journal of Photography",
+    "publisher_name": "1854 Media",
+    "tags": [
+      "photography",
+      "art"
+    ],
+    "cover_ops": {
+      "crop": "center:70%x93%"
+    },
+    "description": "British Journal of Photography is the long running London photography magazine, now printed quarterly, with each issue built around a theme such as maps, the body or the annual Ones to Watch selection of emerging photographers. Issues combine portfolios, interviews and critical essays on documentary, fine art and commissioned photography from around the world. It is read by working photographers, picture editors, students and collectors who follow contemporary photography.",
+    "note": "Publisher 1854 Media Ltd, a single title independent. The editorial site blocks automated requests, so London comes from the UK company registration and press rather than the publisher's own page. Cover is the publisher's product image trimmed.",
+    "cover_candidates": [
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1022/3793/files/bjp.jpg?v=1785441228",
+        "source_type": "stockist",
+        "page_url": "https://villagebooks.co/",
+        "issue_label": "Issue 7926",
+        "width": 2286,
+        "height": 2286,
+        "notes": "Village Books image on a square canvas, trimmed; the publisher's own file is a layered mockup with a shadow."
+      }
+    ]
+  },
+  "08-carcy": {
+    "action": "skip",
+    "name": "Carcy",
+    "reason": "Publisher could not be established from the publisher's own site: carcymagazine.com was unreachable from this environment (proxy 502 on every attempt), so publisher name, price and imprint are unverified. Stockists describe a Paris independent biannual with Issue 15 (SS 2026) out, so it probably qualifies; worth rechecking from a browser."
+  }
+}

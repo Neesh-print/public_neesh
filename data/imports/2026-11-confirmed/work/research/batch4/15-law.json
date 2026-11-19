@@ -1,0 +1,50 @@
+{
+  "input_title": "LAW",
+  "official_name": "LAW",
+  "publisher_name": "LAW (LAW studio, John Joseph Holt)",
+  "publisher_website": "https://www.law-mag.com",
+  "country": "GB",
+  "city": "Mepal, Isle of Ely (Cambridgeshire)",
+  "frequency": "irregular",
+  "cover_price": 30.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.law-mag.com/shop/",
+  "latest_issue_label": "Issue 10 ('Folklore, Faith and Unity')",
+  "latest_issue_date": "2021-12-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.law-mag.com/shop/",
+  "independent": "yes",
+  "independence_evidence": "Information page: 'LAW stands for Lives and Works. Founded by John Joseph Holt in 2011 ... collaborating with likeminded individuals and international partners'; self-published from LAW studio, 11A High Street, Mepal, Isle of Ely. No corporate owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "no",
+  "qualifies": "no",
+  "qualifies_reason": "Independent, but the most recent print issue (Issue 10) dates from late 2021 and nothing newer appears in the publisher's shop, so no print issue since January 2025.",
+  "what_it_is": "A British independent magazine documenting working-class and overlooked British culture through portrait and street photography, interviews and essays, under the name Lives and Works. Issue 10, the most recent, is themed around folklore, faith and unity and was issued as a set of three magazines in a card folder with inserts and cover subjects including Jeremy Deller and King Krule. It suits readers of photography and British subculture titles; nine issues appeared between 2011 and 2017 before a long gap.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "place",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.law-mag.com/wp-content/uploads/2021/12/LAW-10-Thumbnail-4.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.law-mag.com/product/issue-10/",
+      "issue_label": "Issue 10",
+      "width": 1584,
+      "height": 1920,
+      "notes": "Publisher's product image for Issue 10; the issue comprises three magazines in a folder, so this shows the folder/one cover rather than a single conventional front cover. Not usable for a qualifying entry anyway."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.law-mag.com",
+    "https://www.law-mag.com/shop/",
+    "https://www.law-mag.com/information/",
+    "https://www.law-mag.com/product/issue-10/",
+    "https://www.law-mag.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://www.dandad.org/awards/professional/2023/236690/law-issue-10/",
+    "https://stackmagazines.com/art-design/magazine-design-on-stage/"
+  ],
+  "uncertainties": "No publication date is printed on the publisher's site; December 2021 is inferred from the shop's image upload paths (2021/12) and the 'Site by ALL PURPOSE 2021' footer, and coverage of Issue 10 in 2022 and its 2023 D&AD award is consistent with that. The distributor hint (Ra & Olly, Aug 2026) only shows the title is still distributed, not that a new issue exists; magCulture lists no Issue 11. Trim size and page count are stated only by third parties (210 x 297 mm, 174 pages) so are not recorded."
+}

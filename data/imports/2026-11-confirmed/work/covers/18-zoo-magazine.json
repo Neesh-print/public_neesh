@@ -1,0 +1,14 @@
+{
+  "key": "18-zoo-magazine",
+  "status": "ok",
+  "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/IMG_5679.jpg?v=1793977814",
+  "page_url": "https://kdpresse.com/products/zoo-magazine-n-92",
+  "source_type": "distributor",
+  "issue_label": "No. 92 (Sandra Hüller cover)",
+  "width": 1125,
+  "height": 1529,
+  "bytes": 218179,
+  "errors": [
+    "https://www.zoomagazine.com/files/images/%2392_COVER1.jpg: Command failed: curl -sSL --fail --max-time 60 -A Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36 https://www.zoomagazine.com/files/images/%2392_COVER1.jpg\ncurl: (60) SSL: no alternative certificate subject name matches target host name 'www.zoomagazine.com'\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the web page mentioned above.\n"
+  ]
+}

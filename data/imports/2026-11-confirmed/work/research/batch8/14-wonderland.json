@@ -1,0 +1,61 @@
+{
+  "input_title": "Wonderland",
+  "official_name": "Wonderland",
+  "publisher_name": "Visual Talent Limited",
+  "publisher_website": "https://www.wonderlandmagazine.com/",
+  "country": "GB",
+  "city": null,
+  "frequency": "quarterly",
+  "cover_price": 15.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.wonderlandshop.com/products/wonderland-subscription",
+  "latest_issue_label": "Autumn/Winter 26 Issue (N°87)",
+  "latest_issue_date": "2026-10-15",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.wonderlandshop.com/products/binx-covers-wonderland-s-autumn-winter-26-issue",
+  "independent": "yes",
+  "independence_evidence": "The shop's subscription listing calls Wonderland 'an international, independently published magazine' and the site terms name the operator as Visual Talent Limited, a small English company (no. 05087944) with no media-group parent (https://www.wonderlandshop.com/products/wonderland-subscription, https://www.wonderlandmagazine.com/terms-of-use/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "An independently published quarterly fashion and culture magazine whose Autumn/Winter 26 issue shipped from 15 October 2026, following Winter 25, Spring 26 and Summer 26 issues.",
+  "what_it_is": "Wonderland is a British fashion and pop-culture magazine that puts actors, musicians and models on multiple collectable covers each issue, with fashion editorials, celebrity interviews and features on film, music, beauty and art. Issues are sold per cover edition, and the website runs daily coverage of the same subjects. It is for readers who follow celebrity fashion photography and new screen and music talent.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "music",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1513/9834/files/BINX.jpg?v=1791994351",
+      "source_type": "publisher",
+      "page_url": "https://www.wonderlandshop.com/products/binx-covers-wonderland-s-autumn-winter-26-issue",
+      "issue_label": "Autumn/Winter 26 Issue (Binx cover)",
+      "width": 2891,
+      "height": 3614,
+      "notes": "Flat front cover from the publisher's shop; one of seven covers for this issue."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1513/9834/files/KYLIECOVER.jpg?v=1791818137",
+      "source_type": "publisher",
+      "page_url": "https://www.wonderlandshop.com/products/kylie-jenner-covers-wonderland-s-autumn-winter-26-issue",
+      "issue_label": "Autumn/Winter 26 Issue (Kylie Jenner cover)",
+      "width": 2891,
+      "height": 3614,
+      "notes": "Flat front cover of the Kylie Jenner edition of the same issue."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.wonderlandmagazine.com/",
+    "https://www.wonderlandmagazine.com/info/about/",
+    "https://www.wonderlandmagazine.com/info/contact/",
+    "https://www.wonderlandmagazine.com/terms-of-use/",
+    "https://www.wonderlandshop.com/products.json?limit=250",
+    "https://www.wonderlandshop.com/products/binx-covers-wonderland-s-autumn-winter-26-issue",
+    "https://www.wonderlandshop.com/products/kylie-jenner-covers-wonderland-s-autumn-winter-26-issue",
+    "https://www.wonderlandshop.com/products/wonderland-subscription",
+    "https://kdpresse.com/products/wonderland-n-87"
+  ],
+  "uncertainties": "No city is stated on the publisher's pages that could be read: the contact page lists only roles and protected emails, and the terms give Visual Talent Limited's registered office in Marlow, Buckinghamshire (an administrative address), so city is left null although the title is generally known as a London magazine. The issue number N°87 comes from distributor KD Presse's listing, not the publisher. The issue date is the publisher's stated ship date ('pre-orders will be shipped from the 15th of October'); product listings went live 12-17 October 2026. Frequency is quarterly per the subscription listing ('4 x copies'), though 2026 so far shows three issues (Spring, Summer, Autumn/Winter). The cover price of the previous issues was GBP 12.95, rising to GBP 15 for Autumn/Winter 26. The main wonderlandmagazine.com site blocks automated requests (403) for most pages."
+}

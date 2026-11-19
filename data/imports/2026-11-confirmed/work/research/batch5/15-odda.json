@@ -1,0 +1,56 @@
+{
+  "input_title": "Odda",
+  "official_name": "ODDA",
+  "publisher_name": "ODDA Magazine",
+  "publisher_website": "https://oddamagazine.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "245 x 300 mm",
+  "page_count": 804,
+  "subscribe_url": null,
+  "latest_issue_label": "#31",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://magculture.com/products/odda-31",
+  "independent": "yes",
+  "independence_evidence": "The magazine's own description (quoted on Papercut's listing and in It's Nice That) says it was founded in April 2012 by its current editor-in-chief and creative director David Martin; no media-group ownership appears anywhere.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Founder-owned biannual fashion title with Issue 31 (Fall/Winter 2026-27, 'An Emotional Turmoil') on sale from late October 2026.",
+  "what_it_is": "A very large biannual fashion and culture magazine (recent issues run to around 800 pages) covering womenswear and menswear through long fashion editorials, celebrity cover stories and interviews with designers, artists and actors. Each issue is themed and appears with several different covers. It is bought by fashion-industry readers and collectors of oversized fashion books.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/ODDA_31_Susan_Sarandon.png?v=1793188373",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/odda-31",
+      "issue_label": "#31",
+      "width": 1226,
+      "height": 1566,
+      "notes": "Flat front cover, Susan Sarandon cover variant, from magCulture's listing."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/ODDA_31_Daniel_Oanta.png?v=1793188460",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/odda-31",
+      "issue_label": "#31",
+      "width": 1226,
+      "height": 1566,
+      "notes": "Second cover variant (Daniel Oanta), same listing; not visually checked."
+    }
+  ],
+  "evidence_urls": [
+    "https://magculture.com/products/odda-31",
+    "https://papercutshop.se/product/odda-issue-31-an-emotional-turmoil/",
+    "https://www.itsnicethat.com/articles/n-e-studio-odda-magazine-publication-110121",
+    "https://oddamagazine.com/"
+  ],
+  "uncertainties": "The publisher's site oddamagazine.com could not be reached from this environment (TLS certificate error and HTTP 503), so publisher name, price, subscription page and location come from secondary sources. Location conflicts: magCulture lists 'London, UK' while the magazine's own blurb (as quoted by Papercut) and It's Nice That say New York; New York recorded, needs confirmation. Trim size and page count are from magCulture's issue listing, not the publisher. Latest-issue date is magCulture's listing date (30 October 2026) at month precision; the issue is labelled Fall/Winter 2026-27 and Resort 2027. magCulture price is GBP 30, not recorded as the publisher's price."
+}

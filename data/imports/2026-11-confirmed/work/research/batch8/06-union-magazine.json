@@ -1,0 +1,56 @@
+{
+  "input_title": "Union Magazine",
+  "official_name": "Union",
+  "publisher_name": "Union Publishing Limited",
+  "publisher_website": "https://union-mag.com/",
+  "country": "JP",
+  "city": "Tokyo",
+  "frequency": "irregular",
+  "cover_price": 3520,
+  "currency": "JPY",
+  "trim_size": "231 x 297 mm",
+  "page_count": 184,
+  "subscribe_url": "https://unionmagazine.myshopify.com/",
+  "latest_issue_label": "Issue No. 19",
+  "latest_issue_date": "2025-11-28",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://unionmagazine.myshopify.com/products/union-19",
+  "independent": "yes",
+  "independence_evidence": "Published by Union Publishing Limited, Minami-Aoyama, Tokyo, a small company whose only title is Union, with international distribution by Antenne Books (https://union-mag.com/about).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Tokyo fashion-photography magazine whose Issue 19 was released 28 November 2025.",
+  "what_it_is": "Union is a Tokyo-made, English-language fashion and photography magazine produced as a cloth-bound hardcover of around 184 pages. Each issue gathers long photo stories by international photographers, with little text and an emphasis on images intended to look good decades later; Issue 19 includes Julia Hetta, Reiko Toyama and a Daido Moriyama archive section. It is for readers of fashion photography and collectors of photo books.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0520/6396/1240/files/19-coverA_a9a34818-1ec3-463b-aa26-763b4bbc1a19.jpg?v=1777450062",
+      "source_type": "publisher",
+      "page_url": "https://unionmagazine.myshopify.com/products/union-19",
+      "issue_label": "Issue No. 19 (cover A)",
+      "width": 4000,
+      "height": 4000,
+      "notes": "Flat front cover (dark blue cloth with inset portrait) rendered on a square pale textured background; the cover occupies roughly the central 2700x3600px."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0520/6396/1240/files/19-coverB_f90b7858-e080-4cf5-a68d-02d080f49944.jpg?v=1777450010",
+      "source_type": "publisher",
+      "page_url": "https://unionmagazine.myshopify.com/products/union-19-online-store-exclusive-cover",
+      "issue_label": "Issue No. 19 (online store exclusive cover B)",
+      "width": 4000,
+      "height": 4000,
+      "notes": "Alternative cover, same square format; not viewed."
+    }
+  ],
+  "evidence_urls": [
+    "https://union-mag.com/",
+    "https://union-mag.com/about",
+    "https://unionmagazine.myshopify.com/products.json?limit=250",
+    "https://unionmagazine.myshopify.com/products/union-19"
+  ],
+  "uncertainties": "The about page says Union is published twice yearly (end of March and September), but the actual cadence is slower: Issue 18 appeared in 2023 (per retailer listings) and Issue 19 in November 2025, so recorded as irregular. Price is the Japanese online store price in yen. Cover images are square renders with background rather than tightly cropped covers."
+}

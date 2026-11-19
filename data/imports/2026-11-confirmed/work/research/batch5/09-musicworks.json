@@ -1,0 +1,49 @@
+{
+  "input_title": "Musicworks",
+  "official_name": "Musicworks",
+  "publisher_name": "Musicworks Society of Ontario Inc.",
+  "publisher_website": "https://musicworks.ca/",
+  "country": "CA",
+  "city": "Toronto",
+  "frequency": "triannual",
+  "cover_price": 20.95,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://musicworksmag.myshopify.com/collections/subscribe",
+  "latest_issue_label": "Issue 154, Summer 2026",
+  "latest_issue_date": "2026-07-20",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://musicworksmag.myshopify.com/products/summer-2026",
+  "independent": "yes",
+  "independence_evidence": "About page: published by Musicworks Society of Ontario Inc., a non-profit organization supported by arts councils, subscriptions, advertising and donations.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Non-profit Toronto magazine with Issue 154 (Summer 2026) on sale and three print issues a year.",
+  "what_it_is": "A Canadian magazine about experimental music and sound art, with long profiles of composers, improvisers and electronic artists, festival and album reviews, and a companion CD of recordings tied to each issue. It appears three times a year. Readers are musicians, composers, students and listeners who follow new and exploratory music.",
+  "suggested_primary_tag": "music",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/1948/8275/files/MW154_Cover_HiRes_NoBarcode.jpg?v=1784467655",
+      "source_type": "publisher",
+      "page_url": "https://musicworksmag.myshopify.com/products/summer-2026",
+      "issue_label": "Issue 154, Summer 2026",
+      "width": 2429,
+      "height": 3254,
+      "notes": "High-resolution front cover without barcode from the publisher's Shopify store (dimensions from products.json)."
+    }
+  ],
+  "evidence_urls": [
+    "https://musicworks.ca/",
+    "https://musicworks.ca/about-us/",
+    "https://musicworks.ca/contact-us/",
+    "https://musicworksmag.myshopify.com/products.json?limit=250",
+    "https://musicworksmag.myshopify.com/products/summer-2026",
+    "https://musicworksmag.myshopify.com/products/fall-2026-preorder-sale"
+  ],
+  "uncertainties": "Cover price recorded is the 'Magazine with CD' variant (CAD 20.95); the magazine-only variant is CAD 10.95. Issue 155 (Fall 2026) is on pre-order since 29 October 2026 with a placeholder image and is not counted as out; the site still lists Summer 2026 as the latest issue. The issue date is the store listing date for Summer 2026."
+}

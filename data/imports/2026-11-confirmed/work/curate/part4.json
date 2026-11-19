@@ -1,0 +1,196 @@
+{
+  "08-hube": {
+    "name": "hube",
+    "publisher_name": "hube magazine",
+    "tags": [
+      "fashion",
+      "art"
+    ],
+    "description": "hube is a large biannual journal that crosses fashion and art with science, technology and philosophy, built around cover stories with musicians, artists and actors, long interviews and fashion and photo editorials. Each issue appears with several collectable covers. It suits readers of glossy independent fashion and culture titles who also want pieces on futures, AI and design.",
+    "note": "The publisher site names no company, address or city and third parties disagree (France or Cyprus; Paris or Berlin). Country and city need confirming before import."
+  },
+  "14-kink": {
+    "name": "Kink",
+    "publisher_name": "Kink Ediciones",
+    "tags": [
+      "photography",
+      "identity-politics"
+    ],
+    "description": "Kink is a small format, bilingual Spanish and English photography magazine devoted to the male nude, shot in natural light in domestic interiors and landscapes. Each issue comes packaged with a short text supplement, the Cuaderno, and usually appears with more than one cover. It suits collectors of gay erotic and independent photography publishing.",
+    "note": "Barcelona from a book fair exhibitor listing; the publisher site gives no address. Price EUR 20 is for the indivisible pack of Kink 44 and Cuaderno 25. Publisher's own image is a 3D mockup; the flat cover comes from a stockist."
+  },
+  "15-law": {
+    "action": "skip",
+    "name": "LAW",
+    "reason": "No print issue since January 2025. The most recent issue, Issue 10, dates from late 2021 and the publisher's shop lists nothing newer; the distributor listing shows it is still distributed, not that a new issue exists."
+  },
+  "13-novembre": {
+    "name": "Novembre",
+    "publisher_name": "Novembre Global",
+    "tags": [
+      "fashion",
+      "art"
+    ],
+    "description": "Novembre is a thick fashion and contemporary art magazine that gathers well over a hundred photographers, stylists, artists and writers per issue into fashion stories, artist projects and portfolios, released with up to ten different covers. Issues are large, around two kilograms, and come out roughly once a year. It is for fashion image makers, art school audiences and collectors of experimental fashion publishing.",
+    "note": "Publisher site has no imprint; Paris is taken from KD Presse's origin and a Paris book fair listing, while the title was founded in Switzerland. Issue 18 not yet in the publisher shop; price is its Issue 17 price."
+  },
+  "16-oh-reader": {
+    "name": "Oh Reader",
+    "publisher_name": "Oh Reader",
+    "tags": [
+      "literary",
+      "lifestyle"
+    ],
+    "description": "Oh Reader is a quarterly magazine about the experience of reading rather than book reviews, with personal essays, reader interviews, humour and illustrated features about why and how people read. Each issue runs about seventy pages behind an illustrated cover. It is for people who read a lot and want a magazine about the habit itself.",
+    "note": "Issue 025 is evidenced by the publisher homepage and magCulture; the shop lists back issues to 024 at USD 19.99."
+  },
+  "17-opera-canada": {
+    "name": "Opera Canada",
+    "publisher_name": "Opera Canada",
+    "tags": [
+      "music",
+      "art"
+    ],
+    "description": "Opera Canada is a quarterly about opera in Canada and Canadians working in opera abroad, with artist profiles, company features, performance reviews, a masterclass column and an annual ranking of Canadian companies. The fall number doubles as the programme for the magazine's own awards. It is for opera goers, singers and people working in the performing arts.",
+    "note": "Registered Canadian charity; the oldest continuously published arts periodical in Canada by its own account."
+  },
+  "08-real-review": {
+    "name": "Real Review",
+    "publisher_name": "REAL foundation",
+    "tags": [
+      "ideas-science",
+      "design"
+    ],
+    "description": "Real Review is a tall, narrow pocket format magazine from London that treats architecture, politics, technology and everyday objects as subjects for short critical reviews gathered around a theme or mood per issue. The latest number is built around pretending and performance in public life. It suits readers of architecture criticism and cultural theory who like dense, designed print.",
+    "note": "The publisher site is a JavaScript app that returns 404 on every sub path, so publisher name and city rest on stockist and press descriptions and embedded site data. Frequency annual from cadence although the publisher says more often."
+  },
+  "10-richardson": {
+    "name": "Richardson",
+    "publisher_name": "Richardson",
+    "tags": [
+      "photography",
+      "fashion"
+    ],
+    "description": "Richardson is a large format occasional magazine from New York that mixes sexually explicit photography with essays, fiction and interviews from artists and writers, each issue built around a theme. The latest, A12, is the California issue with a cover by Harley Weir. It sits between an art book and a fashion magazine and is for adult readers interested in subcultural photography and provocative writing.",
+    "note": "About one issue every two years. Explicit content. Publisher's only image is the cover letterboxed into a 920px square."
+  },
+  "11-riddle-fence": {
+    "name": "Riddle Fence",
+    "publisher_name": "Riddle Fence",
+    "tags": [
+      "literary",
+      "art"
+    ],
+    "description": "Riddle Fence is a journal of arts and culture from Newfoundland and Labrador that prints poetry, short fiction, creative non fiction, features and reviews alongside contemporary visual art, with a strong regional base and contributors from across Canada and beyond. Issues carry contest winners and themed features three times a year. It is for readers of Canadian literary magazines and the Atlantic arts scene.",
+    "note": "Price CAD 16.95 read from the cover image because the shop renders prices client side."
+  },
+  "12-sandweegies": {
+    "name": "Sandweegies",
+    "publisher_name": "Sandweegies Magazine",
+    "tags": [
+      "food",
+      "place"
+    ],
+    "description": "Sandweegies is a Glasgow food magazine that uses one kind of sandwich per issue as a way into the city's cafes, bakeries, chefs and eating habits, with photography led features and strong graphic design. Issues so far cover the chicken sandwich, the breakfast roll and the fish sandwich. It is for people interested in Scottish food culture and city life rather than recipes.",
+    "note": "Glasgow from the about page framing and magCulture; no address printed. Publisher's Issue 03 image is a mockup; the flat cover (794px) comes from magCulture."
+  },
+  "13-sex-magazine": {
+    "name": "Sex Magazine",
+    "publisher_name": "Sex Magazine",
+    "cover_price": null,
+    "currency": null,
+    "tags": [
+      "art",
+      "music"
+    ],
+    "description": "Sex Magazine is a print only interview magazine that profiles musicians, artists, writers, filmmakers and internet personalities on the edge of pop culture through long conversations and portrait photography, and despite the name is not about sex. The latest issue leads with John Maus and includes Dennis Cooper and Shlohmo. It is for readers who follow underground music, art and online subcultures.",
+    "note": "Recent issues are listed as free in the publisher shop, so no cover price is recorded. No editorial city stated (US title)."
+  },
+  "14-shadowplay": {
+    "name": "SHADOWPLAY",
+    "publisher_name": "Behind the Blinds",
+    "publisher_slug": "behind-the-blinds",
+    "tags": [
+      "photography",
+      "fashion"
+    ],
+    "description": "SHADOWPLAY is a thick art and beauty publication from the makers of Behind the Blinds, built from photographic portfolios, interviews and essays that treat beauty as a subject across fashion, art, music and film. Each issue is released with a dozen or more alternate covers featuring artists, musicians and models. It is for collectors of photography led fashion and art magazines.",
+    "note": "Reuses the existing Behind the Blinds publisher row. Brussels is inferred from the publisher's other site and a founder interview. Publisher says biannual; cadence is annual."
+  },
+  "15-sonshine": {
+    "name": "Sonshine",
+    "publisher_name": "Sonshine Magazine",
+    "tags": [
+      "lifestyle",
+      "identity-politics"
+    ],
+    "description": "Sonshine is a quarterly parenting magazine about raising boys without gender stereotypes, with each issue built around a theme such as masculinity, clothes, bodies or books. It mixes advice articles, interviews, recipes, crafts, book reviews and puzzle pages for children. It is for parents and carers of boys who want a feminist angle on boyhood.",
+    "note": "No flat cover found: the publisher only shows a lifestyle photo of Issue 31 on a table. Issue 32 is on pre-order. Issue 32 recorded as latest on the strength of Gem's scan of the printed copy; the publisher shop still listed it as a pre-order on 19 November 2026."
+  },
+  "16-spacing": {
+    "name": "Spacing",
+    "publisher_name": "Spacing Media",
+    "tags": [
+      "place",
+      "design"
+    ],
+    "description": "Spacing is a landscape format quarterly about Toronto's public realm, from transit, streets, housing and parks to urban design, civic politics and city history, with a themed feature section each issue. The latest number profiles the people and groups shaping the 2026 municipal election. It is for readers interested in how Canadian cities work and who want to get involved.",
+    "note": "Landscape format cover (2048 by 1588)."
+  },
+  "17-strangers-guide": {
+    "name": "Stranger's Guide",
+    "publisher_name": "Stranger's Guide",
+    "tags": [
+      "travel",
+      "photography"
+    ],
+    "description": "Stranger's Guide is a book like print series from Austin in which each issue is devoted to one place or theme and gathers long form reporting, essays, fiction and photography, mostly by writers from that place. The latest edition is a photography led issue on work and labour around the world. It is for readers who want literary, place based journalism rather than travel tips.",
+    "note": "Output has been irregular, about one to two issues a year with a gap in 2025."
+  },
+  "18-study": {
+    "name": "STUDY",
+    "publisher_name": "STUDY",
+    "tags": [
+      "art",
+      "fashion"
+    ],
+    "description": "STUDY is an English language publication from Paris in which each volume examines one person, place or idea through portfolios, conversations, essays, fashion editorials and archival documents, in a format designed to be kept rather than read once. Volume 16 revisits 1920s European modernist interiors through the archive of photographer Thérèse Bonney. It is for readers of fashion, art and design publishing who collect photography books.",
+    "note": "Legal entity STUDY SAS, Paris. Currency EUR assumed from the French shop. Several cover variants; the first is used."
+  },
+  "14-wonderland": {
+    "name": "Wonderland",
+    "publisher_name": "Visual Talent",
+    "city": "London",
+    "tags": [
+      "fashion",
+      "music"
+    ],
+    "description": "Wonderland is a British fashion and pop culture magazine that puts actors, musicians and models on multiple collectable covers each issue, with fashion editorials, celebrity interviews and features on film, music, beauty and art. Issues are sold per cover edition alongside daily online coverage of the same subjects. It is for readers who follow celebrity fashion photography and new screen and music talent.",
+    "note": "Publisher Visual Talent Limited; the readable pages give only a Marlow registered office, so London is taken from general knowledge of the title. N°87 numbering from KD Presse."
+  },
+  "15-wrap": {
+    "action": "skip",
+    "name": "Wrap",
+    "reason": "No print issue since January 2025. The last issue is Issue 13 (April 2023); the publisher's shop no longer lists the magazine, and the distributor listing likely refers to its stationery."
+  },
+  "16-wunderdog": {
+    "name": "Wunderdog",
+    "publisher_name": "Paw Print London",
+    "tags": [
+      "nature",
+      "lifestyle"
+    ],
+    "description": "Wunderdog is a British magazine about rescue dogs and dog welfare, telling the stories of adopted dogs and the people around them. Issues combine long interviews with campaigners and charities, photo essays, travel pieces on dog friendly places and reports on street dogs abroad. It is for dog owners and adopters who want a campaigning, photography led read rather than training or breed advice.",
+    "note": "The publisher says Issue 10 may be its last in print; please check before approving. Shop geo converts prices and then blocked requests, so no GBP price recorded. Cover file supplied by Gem."
+  },
+  "17-yolk": {
+    "name": "yolk",
+    "publisher_name": "Yolk Literary",
+    "tags": [
+      "literary",
+      "art"
+    ],
+    "description": "yolk is an English language literary journal from Montreal printing fiction, poetry, non fiction, translations and visual art by Canadian and international writers and artists, with an interview in each issue. Print issues appear twice a year in a small 7 by 9 inch format alongside a rolling online publication and an annual fiction prize. It is for readers and writers of contemporary Canadian literary magazines.",
+    "note": "Volume 5.2 is labelled Spring 2026 with no release date; recorded at March 2026. Cover is a square composite. Cover file supplied by Gem."
+  }
+}

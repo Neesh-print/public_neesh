@@ -1,0 +1,61 @@
+{
+  "input_title": "Frame",
+  "official_name": "FRAME",
+  "publisher_name": "Frame Publishers",
+  "publisher_website": "https://frameweb.com/",
+  "country": "NL",
+  "city": "Amsterdam",
+  "frequency": "bimonthly",
+  "cover_price": 22.89,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://frameweb.com/subscribe",
+  "latest_issue_label": "FRAME 169 (Winter 2026)",
+  "latest_issue_date": "2026-10-30",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://frameweb.com/magazine/frame-169",
+  "independent": "yes",
+  "independence_evidence": "Published by Frame Publishers from its own Amsterdam office (Keizersgracht 555, VAT NL809616981B01, per https://frameweb.com/contact); the FAQ names Frame Publishers as the seller and fulfilment party and no parent media group is mentioned on the site (https://frameweb.com/faq).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Amsterdam publisher with FRAME 169 (Winter 2026) released 30 October 2026 and a steady run of print issues through 2025 and 2026.",
+  "what_it_is": "FRAME is an English-language interior design and architecture magazine from Amsterdam, in print since 1997, that concentrates on commercial and public interiors: retail, hospitality, workplaces, institutions and exhibitions, with some residential work. Each issue is built around a theme (recent ones include Speed vs. Slowness, Luxury vs. Necessity and Designing for Longevity) and mixes project features, interviews with practitioners and trend analysis aimed at how spatial design is changing. Its readers are practising interior designers, architects, brand and retail teams and students who want a future-facing professional view rather than home decoration.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Frame169.png?v=1794327494",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/frame-169",
+      "issue_label": "FRAME 169",
+      "width": 1072,
+      "height": 1402,
+      "notes": "Flat front cover with no shadow or spine, from magCulture's product listing (dimensions from products JSON and confirmed with identify). Slightly under 1500 px on the long edge."
+    },
+    {
+      "url": "https://d1tm14lrsghf7q.cloudfront.net/public/media/226456/responsive-images/F169_Cover_01_frameweb___cover_1920_2412.jpg",
+      "source_type": "publisher",
+      "page_url": "https://frameweb.com/magazine/frame-169",
+      "issue_label": "FRAME 169",
+      "width": 1920,
+      "height": 2412,
+      "notes": "Publisher's own cover image at 1920 x 2412 (measured with identify), but it is rendered as a light product mockup: the cover sits on white with a thin spine and drop shadow, so it would need cropping. The original PNG at https://d1tm14lrsghf7q.cloudfront.net/public/media/226456/F169_Cover_01_frameweb.png is only 500 x 628."
+    }
+  ],
+  "evidence_urls": [
+    "https://frameweb.com/",
+    "https://frameweb.com/magazine/frame-169",
+    "https://frameweb.com/product/frame-169",
+    "https://frameweb.com/magazine",
+    "https://frameweb.com/store",
+    "https://frameweb.com/contact",
+    "https://frameweb.com/faq",
+    "https://magculture.com/products/frame-169.json",
+    "https://www.zinio.com/gb/publications/frame/6334"
+  ],
+  "uncertainties": "frameweb.com is a JavaScript app; the data above was read from the server-side JSON embedded in the issue page (https://frameweb.com/magazine/frame-169), which lists FRAME 169, period 'Winter 2026', subtitle 'Speed vs. Slowness', published 30 Oct 2026, webshop price 2289 (cents). The store displays prices in EUR by dividing by 100 and the FAQ says VAT is added at checkout, so EUR 22.89 is most likely the ex-VAT price (about EUR 24.95 with 9% Dutch VAT, the figure older search snippets of the magazine page showed); treat the cover price as approximate. Frequency: the FAQ says the print subscription brings four issues a year, but the issue list on the publisher's site runs 161 (Apr 2025), 162 (Jun 2025), 163 (Sep 2025), 164 (Oct 2025), 165 (Jan 2026, labelled February/March 2026), 167 (May 2026) and 169 (Oct 2026), i.e. about five issues a year, and Zinio shows four seasonal issues plus an annual 'Special'; since cadence wins, bimonthly is recorded rather than quarterly. Official name: the publisher writes FRAME in capitals on the site and on issue titles, while the cover logo reads 'Frame' with a reversed E; stockists use 'Frame'. Trim size and page count (230 x 298 mm, 144 pages) appear only on magCulture, not on the publisher's site, so they are not recorded."
+}
