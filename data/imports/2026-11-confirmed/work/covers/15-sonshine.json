@@ -1,5 +1,12 @@
 {
   "key": "15-sonshine",
-  "status": "none",
-  "reason": "no candidates"
+  "status": "ok",
+  "url": "https://sonshinemagazine.com/shop",
+  "page_url": "https://sonshinemagazine.com/shop",
+  "source_type": "publisher",
+  "issue_label": "Issue 32: Do Clothes Make the Man?",
+  "width": 790,
+  "height": 1032,
+  "bytes": 101401,
+  "errors": []
 }

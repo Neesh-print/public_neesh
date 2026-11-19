@@ -1,5 +1,12 @@
 {
   "key": "07-herdes",
-  "status": "none",
-  "reason": "no candidates"
+  "status": "low",
+  "url": "https://shop.herdes.eu/",
+  "page_url": "https://shop.herdes.eu/",
+  "source_type": "publisher",
+  "issue_label": "Issue 21 · Costa Brava",
+  "width": 416,
+  "height": 416,
+  "bytes": 37108,
+  "errors": []
 }

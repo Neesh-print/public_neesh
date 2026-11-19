@@ -126,6 +126,89 @@
   "latest_issue_date": "2026-11-18",
   "latest_issue_date_precision": "day",
   "latest_issue_source_url": "https://shop.herdes.eu/products.json",
-  "cover_candidates": []
+  "cover_candidates": [
+   {
+    "url": "https://shop.herdes.eu/",
+    "source_type": "publisher",
+    "page_url": "https://shop.herdes.eu/",
+    "issue_label": "Issue 21 · Costa Brava",
+    "width": 416,
+    "height": 416,
+    "notes": "File supplied by Gem: the publisher's 3D product render, 416px; not a flat cover.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/herdes21.webp"
+   }
+  ]
+ },
+ "04-prairie-fire": {
+  "cover_candidates": [
+   {
+    "url": "https://www.prairiefire.ca/",
+    "source_type": "publisher",
+    "page_url": "https://www.prairiefire.ca/",
+    "issue_label": "Fall 2026, Volume 47, No. 3",
+    "width": 1300,
+    "height": 2000,
+    "notes": "Flat cover file supplied by Gem.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/prairie-fire.jpg"
+   }
+  ]
+ },
+ "15-sonshine": {
+  "cover_candidates": [
+   {
+    "url": "https://sonshinemagazine.com/shop",
+    "source_type": "publisher",
+    "page_url": "https://sonshinemagazine.com/shop",
+    "issue_label": "Issue 32: Do Clothes Make the Man?",
+    "width": 790,
+    "height": 1032,
+    "notes": "Scan of the printed Issue 32 cover supplied by Gem.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/sonshine32.webp"
+   }
+  ],
+  "latest_issue_label": "Issue 32: Do Clothes Make the Man?",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://sonshinemagazine.com/shop"
+ },
+ "02-synth-history": {
+  "cover_candidates": [
+   {
+    "url": "https://www.synthhistory.com/shop",
+    "source_type": "publisher",
+    "page_url": "https://www.synthhistory.com/shop",
+    "issue_label": "Issue 6",
+    "width": 1500,
+    "height": 1500,
+    "notes": "Publisher promo image supplied by Gem, cropped to the cover.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/synth-history6.jpg"
+   }
+  ],
+  "cover_ops": {
+   "crop": "geo:700x1080+400+210",
+   "trim": 5
+  },
+  "latest_issue_label": "Issue 6",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.synthhistory.com/shop"
+ },
+ "07-the-grand-tourist": {
+  "cover_candidates": [
+   {
+    "url": "https://coffeetablemags.de/",
+    "source_type": "stockist",
+    "page_url": "https://coffeetablemags.de/",
+    "issue_label": "Issue 03 (Fall 2026): Built to Last",
+    "width": 1004,
+    "height": 690,
+    "notes": "Stockist product photo supplied by Gem, cropped to the book; the stockist's name was outside the crop.",
+    "local_file": "/tmp/claude-0/-home-user-public-neesh/5d656abd-f601-5db4-b898-6930cac2e772/scratchpad/kit/gem/grand-tourist3.webp"
+   }
+  ],
+  "cover_ops": {
+   "crop": "geo:430x610+287+40",
+   "trim": 5
+  }
  }
 }

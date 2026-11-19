@@ -1,5 +1,12 @@
 {
   "key": "02-synth-history",
-  "status": "none",
-  "reason": "no candidates"
+  "status": "ok",
+  "url": "https://www.synthhistory.com/shop",
+  "page_url": "https://www.synthhistory.com/shop",
+  "source_type": "publisher",
+  "issue_label": "Issue 6",
+  "width": 700,
+  "height": 1080,
+  "bytes": 179109,
+  "errors": []
 }
