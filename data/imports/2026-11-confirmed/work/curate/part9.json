@@ -1,0 +1,51 @@
+{
+  "04-brownstone-cowboys": {
+    "name": "Brownstone Cowboys",
+    "publisher_name": "Brownstone Cowboys",
+    "tags": [
+      "fashion",
+      "art"
+    ],
+    "description": "Brownstone Cowboys is a fashion and culture journal built on long interviews and image led editorials with people in fashion, art, music and film. It began online and moved into print in 2026, publishing a sewn bound volume of around 320 pages roughly twice a year, the second with twelve different covers. It suits readers of large format fashion culture titles who want extended conversations rather than short features.",
+    "note": "Publisher says it is based between London and New York and gives addresses in both; New York recorded because the distributor describes it as a New York title. Price EUR 34 is the KD Presse listing. Book Two date from the KD Presse listing (October 2026).",
+    "cover_ops": {
+      "trim": 10
+    }
+  },
+  "07-c-a-p-74024": {
+    "name": "CAP 74024",
+    "publisher_name": "CAP Creative",
+    "tags": [
+      "fashion",
+      "art"
+    ],
+    "cover_ops": {
+      "trim": 12
+    },
+    "description": "CAP 74024 is a thick biannual Milan magazine about eros, art and fashion, built from long photographic stories, designer interviews and luxury brand editorials on mixed paper stocks. Issues run to around 450 pages with special finishes such as holographic foil and sticker inserts. It is for fashion and image professionals and collectors of large glossy independents.",
+    "note": "CSV spelling C.A.P 74024 is not used by the publisher. Publisher legal name CAP Creative S.r.l. The publisher shop currently lists only its sister title, so no publisher price (stockists GBP 14.99 and EUR 18). Page count and trim from a stockist. Cover is a stockist image on a square canvas, trimmed."
+  },
+  "09-carnale": {
+    "name": "Carnale",
+    "publisher_name": "Carnale",
+    "tags": [
+      "fashion",
+      "photography"
+    ],
+    "description": "Carnale is a Milan biannual where fashion photography meets erotica, with each 300 page issue gathering around sixteen photographic stories, artist contributions, interviews and essays on a theme, in four alternative covers. Issue 09, Backwards, is about slowing down and reclaiming time, body and desire. It is for readers of adult oriented fashion and image culture and collectors of large format Italian independents.",
+    "note": "Legal entity Carnale S.r.l., Corso Como 6, Milan. Publisher domain is carnaleroom.com. Explicit content.",
+    "cover_ops": {
+      "trim": 10
+    }
+  },
+  "12-cero": {
+    "name": "Cero Magazine",
+    "publisher_name": "Cero Collective",
+    "tags": [
+      "lifestyle",
+      "fashion"
+    ],
+    "description": "Cero Magazine is a New York arts and culture magazine built around cover stories and interviews with actors, musicians, designers and emerging talents, alongside fashion and beauty editorials, original poetry and essays. Recent issues carry several covers each, and a nonprofit collective publishes it with an online edition alongside. It suits readers of celebrity led culture glossies who want a smaller, independent alternative.",
+    "note": "Publisher calls itself quarterly but the cadence is about two issues a year, recorded as biannual. Cover from KD Presse, the title's European distributor; the publisher's product page serves no image."
+  }
+}

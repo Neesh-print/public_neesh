@@ -1,0 +1,50 @@
+{
+  "input_title": "Chicken + Bread",
+  "official_name": "chicken + bread",
+  "publisher_name": "chicken + bread",
+  "publisher_website": "https://www.chickenandbread.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "annual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.chickenandbread.com/",
+  "latest_issue_label": "Issue 4 — Motion",
+  "latest_issue_date": "2025-12-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://picsandink.com/products/chicken-bread-4",
+  "independent": "yes",
+  "independence_evidence": "Self-published food zine/magazine run from a Gmail address (chickenandbreadzine@gmail.com) with a founder-editor and small team; the site describes itself as a platform 'centring people of colour' and no company or media group is involved.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London food publication whose fourth print issue went on sale at the end of 2025.",
+  "what_it_is": "chicken + bread is a small-format food magazine that treats cooking as culture, collecting essays, poems, interviews, recipes, photography and illustration from the African, Caribbean and Asian diasporas around a single theme per issue (Issue 4 is 'Motion', on food, memory and migration). It appears about once a year at roughly 150 x 210 mm and about 100 pages, alongside a website of recipes and features. It suits readers of food writing who want personal and cultural stories rather than restaurant coverage.",
+  "suggested_primary_tag": "food",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0273/5118/7538/files/chicken-bread-4.jpg?v=1792931351",
+      "source_type": "stockist",
+      "page_url": "https://picsandink.com/products/chicken-bread-4",
+      "issue_label": "Issue 4 — Motion (Eyram Dzotsi cover)",
+      "width": 1000,
+      "height": 1500,
+      "notes": "Pics & Ink stockist listing image; appears to be the flat front cover at 1000x1500."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.chickenandbread.com/",
+    "https://www.chickenandbread.com/about",
+    "https://www.chickenandbread.com/the-magazine",
+    "https://picsandink.com/products/chicken-bread-4",
+    "https://tenderbooks.co.uk/products/chicken-bread-issue-4-motion",
+    "https://papercutshop.se/product/chicken-bread-issue-4",
+    "https://magculture.com/blogs/journal/hope-cunningham-chicken-bread"
+  ],
+  "uncertainties": "The publisher's Wix site has a 'Get Issue 4!' banner but its shop pages could not be fetched (the /shop path returns 404 and product links are script-rendered), so no publisher price was recorded (stockists: GBP 13 at Pics & Ink and Tender Books). The site itself does not state a city; London comes from stockist descriptions ('from London, UK') and the magazine's London-restaurant cover stories. The site's own 'The Magazine' page still lists only three issues, so Issue 4's release date is inferred from stockist listings: Public Knowledge Books (hint) Dec 2025, Pics & Ink 5 Feb 2026, Papercut 13 Feb 2026; a 2025 copyright date appears on Tender Books. The 'centring people of colour' statement on the publisher's site is about editorial focus and was not read as a formal identity-tag claim (no black-led or diaspora wording about the publisher itself)."
+}

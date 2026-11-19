@@ -1,0 +1,69 @@
+{
+  "input_title": "Cero",
+  "official_name": "Cero Magazine",
+  "publisher_name": "Cero Collective",
+  "publisher_website": "https://www.ceromagazine.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.ceromagazine.com/shop",
+  "latest_issue_label": "Cero 11",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.ceromagazine.com/products/cero-magazine-issue-11-lauren-daccache",
+  "independent": "yes",
+  "independence_evidence": "About page: 'Published by Cero Collective, Cero Magazine is a nonprofit print and digital publication'; cerocollective.org describes it as 'a quarterly arts and culture magazine based in New York' funded by donations. No media-group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Nonprofit, independently published New York print magazine whose eleventh issue shipped in June 2026 and tenth in December 2025.",
+  "what_it_is": "Cero is a New York arts-and-culture magazine built around cover stories and interviews with actors, musicians, designers and emerging talents, alongside fashion and beauty editorials, original poetry and essays. Recent issues have carried several covers each (Ilia Malinin, Kim Petras, Arlo Parks and Danielle Deadwyler on Cero 11) and the title also runs an online edition with daily features. It suits readers of celebrity-led culture glossies who want a smaller, nonprofit alternative.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "film",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/ILIAFRONTCOVER.jpg?v=1780473344",
+      "source_type": "distributor",
+      "page_url": "https://www.kdpresse.com/products/cero-11",
+      "issue_label": "Cero 11 (Ilia Malinin cover)",
+      "width": 1500,
+      "height": 1875,
+      "notes": "KD Presse (Cero's EU/UK distributor per its masthead) product image; flat front cover."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/KIMFRONTCOVER.jpg?v=1780473343",
+      "source_type": "distributor",
+      "page_url": "https://www.kdpresse.com/products/cero-11",
+      "issue_label": "Cero 11 (Kim Petras cover)",
+      "width": 1500,
+      "height": 1875,
+      "notes": "Alternative cover, same source."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/ARLOFRONTCOVER.jpg?v=1780473343",
+      "source_type": "distributor",
+      "page_url": "https://www.kdpresse.com/products/cero-11",
+      "issue_label": "Cero 11 (Arlo Parks cover)",
+      "width": 1500,
+      "height": 1875,
+      "notes": "Alternative cover, same source."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.ceromagazine.com/",
+    "https://www.ceromagazine.com/about",
+    "https://www.ceromagazine.com/products/cero-magazine-issue-11-lauren-daccache",
+    "https://www.ceromagazine.com/categories/events",
+    "https://www.cerocollective.org/",
+    "https://www.kdpresse.com/products/cero-11",
+    "https://www.kdpresse.com/products/cero-10",
+    "https://villagebooks.co/products/cero-10"
+  ],
+  "uncertainties": "The publisher calls itself quarterly, but the actual cadence is about two issues a year (Cero 8 launched September 2024, Cero 10 in December 2025, Cero 11 shipping June 2026), so biannual is recorded. The publisher's shop page renders no product grid; the only product page found is the Lauren Daccache edition of Cero 11 at USD 20, which is taken as the single-issue price. No cover image is served on the publisher's own product page, so the distributor images are used. As of the October 2026 Paris event the site still refers to Cero 11 as its latest issue; no Cero 12 was found."
+}

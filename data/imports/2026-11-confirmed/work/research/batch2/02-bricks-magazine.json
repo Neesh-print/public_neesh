@@ -1,0 +1,66 @@
+{
+  "input_title": "Bricks Magazine",
+  "official_name": "BRICKS",
+  "publisher_name": "Bricks Media Ltd",
+  "publisher_website": "https://bricksmagazine.co.uk/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "annual",
+  "cover_price": 20.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://bricksmedia.bigcartel.com/",
+  "latest_issue_label": "#15 The 'I Support You' Issue",
+  "latest_issue_date": "2026-07-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://bricksmedia.bigcartel.com/",
+  "independent": "yes",
+  "independence_evidence": "Site footer reads '© BRICKS MEDIA LTD', a small UK company publishing only this title and selling it through its own Big Cartel shop; no media-group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently published UK print title with issue #15 (2026) sold through the publisher's own shop and #14 released in 2025.",
+  "what_it_is": "BRICKS is a UK fashion and culture magazine with an activist streak, pairing cover interviews with musicians, models and public figures (issue #15 has covers including Leigh-Anne Pinnock, Lucy Dacus, Jordan Stephens, Richie Shazam and Zack Polanski, plus one honouring Palestinian journalists) with fashion editorials and essays on social issues. Each themed issue appears roughly once a year with multiple covers and is accompanied by a running online edition. It suits readers of youth-culture fashion titles who want politics and community woven into the mix.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://assets.bigcartel.com/product_images/423398877/BRICKS+ISSUE+15+COVER+PRINT+COVER+resize+for+web.png",
+      "source_type": "publisher",
+      "page_url": "https://bricksmedia.bigcartel.com/product/pre-order-15-the-i-support-you-issue-richie-shazam",
+      "issue_label": "#15 The 'I Support You' Issue (Richie Shazam cover)",
+      "width": 1238,
+      "height": 1600,
+      "notes": "Publisher's Big Cartel product image, file named 'print cover'; served at 1238x1600 when fetched plain, products.json reports an original of 2000x2583 (try ?w=2000)."
+    },
+    {
+      "url": "https://assets.bigcartel.com/product_images/422097249/1.png",
+      "source_type": "publisher",
+      "page_url": "https://bricksmedia.bigcartel.com/product/15-the-i-support-you-issue-with-leigh-anne-pinnock",
+      "issue_label": "#15 The 'I Support You' Issue (Leigh-Anne Pinnock cover)",
+      "width": 1238,
+      "height": 1600,
+      "notes": "Publisher's Big Cartel product image; products.json reports 3000x3875 original. Not verified whether it is a flat cover or a social-post crop."
+    },
+    {
+      "url": "https://assets.bigcartel.com/product_images/422163282/LUCY+DACUS+SOCIAL+RES.png",
+      "source_type": "publisher",
+      "page_url": "https://bricksmedia.bigcartel.com/product/pre-order-15-the-i-support-you-issue-lucy-dacus",
+      "issue_label": "#15 The 'I Support You' Issue (Lucy Dacus cover)",
+      "width": 2250,
+      "height": 2906,
+      "notes": "Dimensions from products.json; filename says 'social res', so it may be a social-media version of the cover."
+    }
+  ],
+  "evidence_urls": [
+    "https://bricksmagazine.co.uk/",
+    "https://bricksmedia.bigcartel.com/",
+    "https://bricksmedia.bigcartel.com/products.json",
+    "https://magculture.com/products/bricks-15",
+    "https://villagebooks.co/products/bricks-14"
+  ],
+  "uncertainties": "bricksmagazine.co.uk rate-limited direct requests (HTTP 429) and its about page returns 404, so publisher details rest on the footer ('© BRICKS MEDIA LTD') and the shop; the city is not stated on the site and London is recorded from the issue's own text ('arrived in London') and the title's London-based team, so treat it as unconfirmed. Issue #15 pre-orders opened 1-24 April 2026; magCulture listed it 11 Aug 2026 and the distributor hint says July 2026, so the on-sale date is recorded as July 2026 (month precision) and could be a month or two earlier. Issue #14 was listed by Village Books in Sept 2025, giving one issue per year for 2025-26. Trim size and page count not stated."
+}

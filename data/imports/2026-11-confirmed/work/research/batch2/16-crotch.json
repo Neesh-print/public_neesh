@@ -1,0 +1,67 @@
+{
+  "input_title": "Crotch",
+  "official_name": "Crotch Magazine",
+  "publisher_name": "Crotch Magazine",
+  "publisher_website": "https://www.crotchmagazine.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": 15.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://crotch.newsstand.co.uk/shop/",
+  "latest_issue_label": "Issue 15",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://crotch.newsstand.co.uk/shop/",
+  "independent": "yes",
+  "independence_evidence": "Self-published title run from Studio 5, Make Space Studios, Newnham Terrace, London SE1 7DR (address on the publisher's about/returns page), with sales fulfilled through the Newsstand shop service; no media-group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London title with Issue 15 (2026) on sale in its official shop and Issue 14 released earlier in 2026.",
+  "what_it_is": "Crotch is a men's underwear and swimwear magazine built from photographic editorials of male models in briefs, jocks and swim shorts, shot by a rotating cast of photographers, with brand collaborations and short features on sexuality and body image. Issues appear about twice a year with many alternative covers (Issue 15 has eight) plus occasional city specials such as New York and California. It is for an adult, largely gay male readership and collectors of body-focused fashion print.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://crotch.newsstand.co.uk/wp-content/uploads/2026/08/CROTCH-15-JOSH-COVER-NEWSSTAND.jpg",
+      "source_type": "publisher",
+      "page_url": "https://crotch.newsstand.co.uk/shop/",
+      "issue_label": "Issue 15 (Josh cover)",
+      "width": 735,
+      "height": 1024,
+      "notes": "Image from the publisher's official shop (hosted by Newsstand); flat front cover but only 735x1024."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Crotch_15_gif.gif?v=1793194537",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/crotch-15",
+      "issue_label": "Issue 15 (rotating covers)",
+      "width": 1000,
+      "height": 1360,
+      "notes": "magCulture animated GIF cycling through the Issue 15 covers; a frame would need extracting."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0822/0062/5490/files/AB9041-crotch-15-johnny-03.jpg?v=1792383144",
+      "source_type": "distributor",
+      "page_url": "https://www.antennebooks.com/products/crotch-15-johnny",
+      "issue_label": "Issue 15 (Johnny wrap-around cover)",
+      "width": 2048,
+      "height": 1539,
+      "notes": "Antenne Books image; landscape, so likely the full wrap-around cover or a styled photo rather than a flat front."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.crotchmagazine.com/",
+    "https://www.crotchmagazine.com/about",
+    "https://crotch.newsstand.co.uk/shop/",
+    "https://crotch.newsstand.co.uk/product/crotch-15-christopher/",
+    "https://magculture.com/products/crotch-15",
+    "https://www.antennebooks.com/products.json?limit=250"
+  ],
+  "uncertainties": "The publisher's site gives no company name, so the title itself is recorded as publisher; the London address appears in the returns policy. Issue 15's release month is inferred from the August 2026 upload of its cover files to the official shop and the Antenne Books listing on 23 Sept 2026 (magCulture listed it 28 Oct 2026); no launch post for Issue 15 was found on the publisher's news pages. Cadence: Issue 14 cover files uploaded Feb 2026, Issue 15 Aug 2026, giving two issues a year. Page count and trim size are not stated on the shop."
+}

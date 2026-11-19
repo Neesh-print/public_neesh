@@ -90,6 +90,8 @@ async function main() {
       if (ops.crop === 'left') args.push('-gravity', 'West', '-crop', '50%x100%+0+0', '+repage');
       if (ops.crop === 'right') args.push('-gravity', 'East', '-crop', '50%x100%+0+0', '+repage');
       if (ops.crop && ops.crop.startsWith('center:')) args.push('-gravity', 'Center', '-crop', ops.crop.slice(7) + '+0+0', '+repage');
+      if (ops.crop && ops.crop.startsWith('east:')) args.push('-gravity', 'East', '-crop', ops.crop.slice(5) + '+0+0', '+repage');
+      if (ops.crop && ops.crop.startsWith('west:')) args.push('-gravity', 'West', '-crop', ops.crop.slice(5) + '+0+0', '+repage');
       if (ops.trim) args.push('-fuzz', `${ops.trim}%`, '-trim', '+repage');
       args.push('-quality', '90', tmp);
       execFileSync('convert', args);
