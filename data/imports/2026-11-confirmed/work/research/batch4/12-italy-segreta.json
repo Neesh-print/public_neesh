@@ -1,0 +1,68 @@
+{
+  "input_title": "Italy Segreta",
+  "official_name": "Italy Segreta",
+  "publisher_name": "Italy Segreta s.r.l.",
+  "publisher_website": "https://italysegreta.com",
+  "country": "IT",
+  "city": "Florence",
+  "frequency": "annual",
+  "cover_price": 25.0,
+  "currency": "EUR",
+  "trim_size": "26 x 38 cm",
+  "page_count": 124,
+  "subscribe_url": "https://shop.italysegreta.com/",
+  "latest_issue_label": "Vol. 4: Le Generazioni",
+  "latest_issue_date": "2026-06-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://shop.italysegreta.com/product/le-generazioni-magazine/",
+  "independent": "yes",
+  "independence_evidence": "Shop terms name the owner as Italy Segreta s.r.l. (VAT 07054340489, corporate seat in Firenze); a small company whose only titles are its own website, magazine and book. No parent media group found.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Florence-based publisher with a print volume (Vol. 4, Le Generazioni, 2026) on sale in its own shop, following Vol. 3 (A Tavola) in 2025.",
+  "what_it_is": "A large-format print annual spun out of an English-language website about Italian travel, food and everyday culture. Each volume takes a single theme (daily life, summer, the table, and most recently the generations) and fills about 124 pages with photo essays by established and younger Italian photographers alongside reported stories and interviews, with two collectible cover variants per volume. It suits readers who follow Italy through its regional food, design and street life rather than through conventional travel guides.",
+  "suggested_primary_tag": "place",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://shop.italysegreta.com/wp-content/uploads/2026/06/Le-Generazioni-Italy-Segreta-Green.jpg",
+      "source_type": "publisher",
+      "page_url": "https://shop.italysegreta.com/product/le-generazioni-magazine-green/",
+      "issue_label": "Vol. 4: Le Generazioni (Cover 1, Green)",
+      "width": 1500,
+      "height": 1500,
+      "notes": "Flat front cover (green edition, photo by Sam Gregg) centred on a cream square canvas; the cover itself occupies roughly 1030x1500 px of the image."
+    },
+    {
+      "url": "https://shop.italysegreta.com/wp-content/uploads/2026/06/Le-Generazioni-Italy-Segreta-Burgundy.jpg",
+      "source_type": "publisher",
+      "page_url": "https://shop.italysegreta.com/product/le-generazioni-magazine-burgundy/",
+      "issue_label": "Vol. 4: Le Generazioni (Cover 2, Red)",
+      "width": 1500,
+      "height": 1500,
+      "notes": "Flat front cover of the alternate red/burgundy edition on a square canvas."
+    },
+    {
+      "url": "https://shop.italysegreta.com/wp-content/uploads/2026/06/Italy-Segreta-Le-Generazioni-covers.jpg",
+      "source_type": "publisher",
+      "page_url": "https://shop.italysegreta.com/product/le-generazioni-magazine/",
+      "issue_label": "Vol. 4: Le Generazioni",
+      "width": 2048,
+      "height": 2048,
+      "notes": "Both cover variants side by side; not a single flat cover, use only as a fallback."
+    }
+  ],
+  "evidence_urls": [
+    "https://italysegreta.com",
+    "https://shop.italysegreta.com/",
+    "https://shop.italysegreta.com/product/le-generazioni-magazine/",
+    "https://shop.italysegreta.com/product/le-generazioni-magazine-green/",
+    "https://shop.italysegreta.com/wp-json/wc/store/v1/products?per_page=50&search=magazine",
+    "https://shop.italysegreta.com/wp-json/wc/store/v1/products/1646",
+    "https://shop.italysegreta.com/terms-conditions/"
+  ],
+  "uncertainties": "No explicit publication date is given for Vol. 4; June 2026 is inferred from the shop's image upload paths (2026/06) and the product's position in the listing, so precision is month at best. Cadence inferred from shop upload dates of the four volumes (2023, 2024, 2025, 2026), one per year. The distributor hint named 'A Tavola, 2025' as latest, but the publisher's shop now lists Vol. 4 as 'our latest print issue'. City is the corporate seat (Firenze) from the shop terms; the editorial team may work elsewhere in Italy. No subscription product exists, so the shop homepage is given as subscribe_url."
+}

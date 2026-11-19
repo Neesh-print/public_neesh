@@ -1,0 +1,50 @@
+{
+  "input_title": "Opera Canada",
+  "official_name": "Opera Canada",
+  "publisher_name": "Opera Canada",
+  "publisher_website": "https://operacanada.ca/",
+  "country": "CA",
+  "city": "Toronto",
+  "frequency": "quarterly",
+  "cover_price": 12.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://operacanada.ca/subscriptions/",
+  "latest_issue_label": "Fall 2026 (vol 67, no 2)",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://operacanada.ca/product/fall-2026-vol-67-no-2/",
+  "independent": "yes",
+  "independence_evidence": "About page: 'Opera Canada, a registered Canadian charity, is the oldest, continuously published arts periodical in Canada'; contact page gives its own Toronto office (82 Laird Drive, Unit 304). Charity publisher, not a media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Charity-published Toronto quarterly with its Fall 2026 issue (vol 67 no 2, the 2026 Rubies issue) on sale and a full run of 2025 issues.",
+  "what_it_is": "A quarterly magazine about opera in Canada and Canadians working in opera abroad, with artist profiles, company features, performance reviews, a masterclass column and an annual ranking of Canadian opera companies. Each issue is full colour and the Fall number doubles as the programme for the magazine's own awards. It is read by opera-goers, singers and people working in Canadian performing arts.",
+  "suggested_primary_tag": "music",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://operacanada.ca/wp-content/uploads/2026/09/03-cover-no-label-4.jpg",
+      "source_type": "publisher",
+      "page_url": "https://operacanada.ca/product/fall-2026-vol-67-no-2/",
+      "issue_label": "Fall 2026 (vol 67, no 2)",
+      "width": 1219,
+      "height": 1631,
+      "notes": "Original upload of the Fall 2026 front cover ('2026 Rubies Issue', couple on a Vespa) without the subscriber address label; the product page itself displays a 673 x 900 crop of the same file (…-e1790859320393.jpg)."
+    }
+  ],
+  "evidence_urls": [
+    "https://operacanada.ca/",
+    "https://operacanada.ca/product/fall-2026-vol-67-no-2/",
+    "https://operacanada.ca/back-issues/",
+    "https://operacanada.ca/about/",
+    "https://operacanada.ca/contact/",
+    "https://operacanada.ca/subscriptions/",
+    "https://operacanada.ca/product-sitemap.xml"
+  ],
+  "uncertainties": "No exact publication date is printed; the issue is labelled Fall 2026 and its product page was last modified 1 October 2026 in the site's sitemap, so October 2026 is recorded at month precision. Price shown is CAD 12.00 'includes applicable taxes'. Trim size and page count are not stated. Back-issue list shows four issues a year (Winter, Spring, Summer, Fall) for 2024-2026."
+}

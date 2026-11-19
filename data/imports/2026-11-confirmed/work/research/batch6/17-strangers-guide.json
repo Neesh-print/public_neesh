@@ -1,0 +1,50 @@
+{
+  "input_title": "Strangers Guide",
+  "official_name": "Stranger's Guide",
+  "publisher_name": "Stranger's Guide",
+  "publisher_website": "https://strangersguide.com/",
+  "country": "US",
+  "city": "Austin",
+  "frequency": "irregular",
+  "cover_price": 22.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://shop.strangersguide.com/product/annual-print-subscription/",
+  "latest_issue_label": "The World at Work (22nd print issue, special photography edition)",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://strangersguide.com/issue/work/",
+  "independent": "yes",
+  "independence_evidence": "Co-founded and run by its editor-in-chief/CEO and publisher from Austin, Texas (P.O. Box 15007, Austin, TX 78761), funded by subscriptions and donations (https://strangersguide.com/masthead/); no media-group ownership.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Austin travel-writing title whose 22nd print guide, The World at Work, was published in May 2026.",
+  "what_it_is": "A book-like print 'guide' series in which each issue is devoted to one place or theme and gathers long-form reporting, essays, fiction and photography, mostly by writers from that place. The latest edition is a photography-led issue on work and labour around the world. It is for readers who want literary, place-based journalism rather than conventional travel tips.",
+  "suggested_primary_tag": "travel",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://strangersguide.com/wp-content/uploads/2026/05/Work-Cover.jpeg",
+      "source_type": "publisher",
+      "page_url": "https://strangersguide.com/issue/work/",
+      "issue_label": "The World at Work",
+      "width": 1500,
+      "height": 1813,
+      "notes": "Flat front cover from the publisher's issue page; checked visually."
+    }
+  ],
+  "evidence_urls": [
+    "https://strangersguide.com/issue/work/",
+    "https://strangersguide.com/masthead/",
+    "https://strangersguide.com/about-us/",
+    "https://shop.strangersguide.com/product/work/",
+    "https://shop.strangersguide.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://strangersguide.com/issue/complicating-colonialism/",
+    "https://strangersguide.com/issue/chicago/"
+  ],
+  "uncertainties": "Issue date is inferred from the issue page's May 2026 upload paths and the distributor hint (print issue May 2026); no day given. Frequency: issue pages date Chicago to mid-2023, Around the World to early 2024, Complicating Colonialism to mid-2024 and The World at Work to May 2026, so output has been irregular (about one to two a year with a gap in 2025). The masthead does not name a legal entity beyond 'Stranger's Guide'."
+}

@@ -1,0 +1,59 @@
+{
+  "input_title": "TUNICA MAGAZINE",
+  "official_name": "TUNICA",
+  "publisher_name": "TUNICA Studio",
+  "publisher_website": "https://tunicastudio.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "irregular",
+  "cover_price": 30.0,
+  "currency": "EUR",
+  "trim_size": "23 x 28 cm (9 x 11 in)",
+  "page_count": 124,
+  "subscribe_url": "https://tunicastudio.com/shop/",
+  "latest_issue_label": "Volume X: Total Freedom (Summer 2026)",
+  "latest_issue_date": "2026-05-30",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://tunicastudio.com/product/tunica-magazine-vol-x-total-freedom/",
+  "independent": "yes",
+  "independence_evidence": "The about page describes TUNICA as a New York-based studio and magazine founded in 2012 and run by its own art directors and guest editors, also offering creative services; no media-group ownership is indicated.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent New York studio publication whose tenth print volume, Total Freedom (Summer 2026), is on sale in its own shop.",
+  "what_it_is": "An art and fashion publication from a New York creative studio, each volume built around a theme (the tenth is Total Freedom) and filled with photography, illustration, fashion editorials, essays, fiction and interviews from an international roster of artists and image-makers. Issues are softcover, around 124 pages at 23 x 28 cm, and appear with several front and back covers, roughly one volume every year or two. It is for readers of visually driven art and fashion publications who follow emerging and experimental image-making.",
+  "suggested_primary_tag": "art",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://tunicastudio.com/wp-content/uploads/2026/05/Cover4singleweb.png",
+      "source_type": "publisher",
+      "page_url": "https://tunicastudio.com/product/tunica-magazine-vol-x-total-freedom/",
+      "issue_label": "Volume X: Total Freedom (Ivar Wigan cover)",
+      "width": 1582,
+      "height": 1623,
+      "notes": "Front cover only, but cropped to a near-square format so the top and bottom edges of the 23 x 28 cm cover are trimmed; main product image."
+    },
+    {
+      "url": "https://tunicastudio.com/wp-content/uploads/2026/05/TUNICA-VOLX_Covers-1-3-pdf.jpg",
+      "source_type": "publisher",
+      "page_url": "https://tunicastudio.com/product/tunica-magazine-vol-x-total-freedom/",
+      "issue_label": "Volume X: Total Freedom (Ivar Wigan cover, full spread)",
+      "width": 2374,
+      "height": 1411,
+      "notes": "Full back-spine-front spread; the front cover is the right half (about 1190 x 1411 px) and must be cropped out. Three more spread files (Covers-2/3/4-3-pdf.jpg) show the other covers in the same format."
+    }
+  ],
+  "evidence_urls": [
+    "https://tunicastudio.com/",
+    "https://tunicastudio.com/about/",
+    "https://tunicastudio.com/magazine/",
+    "https://tunicastudio.com/product/tunica-magazine-vol-x-total-freedom/",
+    "https://tunicastudio.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://tunicastudio.com/wp-json/wp/v2/product/7383?_fields=date,modified,link",
+    "https://tunicastudio.com/wp-json/wp/v2/product?per_page=20&_fields=id,date,title"
+  ],
+  "uncertainties": "The publisher gives no frequency; its shop records show Issue No.8 (October 2022), Issue 9 (May 2024) and Volume X (listed 30 May 2026, cover dated Summer 2026), so irregular is recorded. The issue date is the shop listing date. The shop prices in EUR although the studio is based in New York (the cover also lists US$30/UK£30). Publisher name is taken from the site's self-description as TUNICA Studio; no legal entity name or postal address is given, and the site also names Barcelona and Paris satellites. The spread cover files are not flat front covers and need cropping."
+}

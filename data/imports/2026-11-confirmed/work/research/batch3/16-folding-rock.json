@@ -1,0 +1,56 @@
+{
+  "input_title": "Folding Rock",
+  "official_name": "Folding Rock",
+  "publisher_name": "Folding Rock Ltd",
+  "publisher_website": "https://foldingrock.com/",
+  "country": "GB",
+  "city": null,
+  "frequency": "triannual",
+  "cover_price": 13.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://foldingrock.com/shop/subscriptions/print-subscription/",
+  "latest_issue_label": "Issue 006: Treigl",
+  "latest_issue_date": "2026-11-12",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://foldingrock.com/shop/standalone-issues/folding-rock-006-treigl/",
+  "independent": "yes",
+  "independence_evidence": "Published by Folding Rock Ltd, described on the site as a not-for-profit company limited by guarantee founded by two editors in 2024, with public funding and a partnership with Literature Wales; no media group involved (https://foldingrock.com/about/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Welsh literary magazine publishing three print issues a year, with Issue 006 delivered in November 2026.",
+  "what_it_is": "Folding Rock is a Welsh print magazine of new creative prose: short fiction, creative non-fiction and literary criticism from Wales and beyond, with art and photography. Each issue is themed (Roots, Speak to Me, Undersong, Telling Tales, Sustenance, Treigl) and mixes established names with first-time writers; Issue 006 is bilingual English and Welsh. It is for readers of literary magazines who want contemporary writing with a Welsh centre of gravity.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "place",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://foldingrock.com/wp-content/uploads/2026/07/Issue-6-final-product-image_2_3.jpg",
+      "source_type": "publisher",
+      "page_url": "https://foldingrock.com/shop/standalone-issues/folding-rock-006-treigl/",
+      "issue_label": "Issue 006: Treigl",
+      "width": 1500,
+      "height": 2250,
+      "notes": "Publisher's 2:3 product image of the Issue 006 cover from its own shop."
+    },
+    {
+      "url": "https://foldingrock.com/wp-content/uploads/2026/07/006_1-1-scaled.jpg",
+      "source_type": "publisher",
+      "page_url": "https://foldingrock.com/shop/standalone-issues/folding-rock-006-treigl/",
+      "issue_label": "Issue 006: Treigl",
+      "width": null,
+      "height": null,
+      "notes": "Second gallery image from the product page; not measured, may be a spread or detail."
+    }
+  ],
+  "evidence_urls": [
+    "https://foldingrock.com/about/",
+    "https://foldingrock.com/shop/standalone-issues/folding-rock-006-treigl/",
+    "https://foldingrock.com/wp-json/wc/store/v1/products?per_page=50",
+    "https://foldingrock.com/shop/subscriptions/print-subscription/"
+  ],
+  "uncertainties": "The site states issues come out in March, July and November (triannual) and Issue 007 is announced for 11 March 2027. Issue 006 was listed for pre-order 'for delivery on 12 November 2026' on 2026-11-17 and shows as in stock without the pre-order note on 2026-11-19, so 2026-11-12 is used as the publication date. The company is Welsh (editors from Swansea, Literature Wales partnership) but no registered office or city is given on the pages read, so city is left empty. Trim size and page count are not stated."
+}

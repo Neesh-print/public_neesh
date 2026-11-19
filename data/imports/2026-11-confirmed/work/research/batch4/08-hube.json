@@ -1,0 +1,67 @@
+{
+  "input_title": "Hube",
+  "official_name": "hube",
+  "publisher_name": "hube magazine",
+  "publisher_website": "https://hubemag.com",
+  "country": null,
+  "city": null,
+  "frequency": "biannual",
+  "cover_price": 35.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://hubemag.com/issues",
+  "latest_issue_label": "hube no. 9",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://hubemag.com/issues",
+  "independent": "yes",
+  "independence_evidence": "About page: 'hube is an independent print journal that is published biannually'; distributed by KD Presse (Europe) and Ra&Olly (rest of world) per the contact page; no media-group owner found.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Self-described independent biannual whose ninth print issue (October 2026, 35 EUR) is on sale on its own site, though the publisher's base could not be established from the site.",
+  "what_it_is": "A large biannual journal that crosses fashion and art with science, technology and philosophy, built around celebrity and artist cover stories, long interviews and fashion and photo editorials. Each issue appears with several collectible covers (issue 9 has five, including Jack Antonoff, Maggi Hambling, Camille Cottin, Noga Erez and Don Letts) and is sold in euros at 35 EUR. It suits readers of glossy independent fashion-and-culture titles who also want pieces on futures, AI and design.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://hubemag.com/wp-content/uploads/2026/10/Cover_Jack_v2.png",
+      "source_type": "publisher",
+      "page_url": "https://hubemag.com/issues/hube-no-9",
+      "issue_label": "hube no. 9 (Jack Antonoff cover)",
+      "width": 965,
+      "height": 1123,
+      "notes": "Front cover render from the issue page; shown head-on with a thin spine strip visible at the left edge, otherwise flat. Long edge 1123 px, slightly above the 1000 px target."
+    },
+    {
+      "url": "https://hubemag.com/wp-content/uploads/2026/10/Cover_Jack2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://hubemag.com/issues/hube-no-9",
+      "issue_label": "hube no. 9 (Jack Antonoff cover)",
+      "width": 965,
+      "height": 1123,
+      "notes": "JPEG version of the same image used as the page's og:image."
+    },
+    {
+      "url": "https://hubemag.com/wp-content/uploads/2026/10/Cover_9_Camille_v2.png",
+      "source_type": "publisher",
+      "page_url": "https://hubemag.com/issues/hube-no-9",
+      "issue_label": "hube no. 9 (Camille Cottin cover)",
+      "width": 965,
+      "height": 1123,
+      "notes": "Alternate cover of the same issue, same format."
+    }
+  ],
+  "evidence_urls": [
+    "https://hubemag.com",
+    "https://hubemag.com/issues",
+    "https://hubemag.com/issues/hube-no-9",
+    "https://hubemag.com/about",
+    "https://hubemag.com/contact",
+    "https://hubemag.com/privacy"
+  ],
+  "uncertainties": "The site (about, contact, privacy/terms, stocklist) names no company, address or city, so country and city are left null; third-party listings disagree (a retailer lists it as France/Cyprus and the editor is described as working between Paris and Berlin), and the KD Presse hint only shows European distribution. Prices are in euros. Issue 9's date is inferred from the issue page's October 2026 image uploads and the distributor hint (listed 2026-10); the issue page itself carries no printed date. No page count or trim size is given. The issues page doubles as the shop; a separate digital subscription page exists. Cover images are renders with a visible spine edge rather than pure flat scans."
+}

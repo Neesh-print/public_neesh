@@ -1,0 +1,68 @@
+{
+  "input_title": "THE NEW ORDER",
+  "official_name": "THE NEW ORDER",
+  "publisher_name": "Manners Media Ltd",
+  "publisher_website": "https://thenewordermag.com/",
+  "country": "JP",
+  "city": "Tokyo",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://thenewordermag.com/store",
+  "latest_issue_label": "Issue 39: Satisfaction (Autumn 2026)",
+  "latest_issue_date": "2026-11-10",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://thenewordermag.com/store/the-new-order-issue-39-nothing-93fp9",
+  "independent": "yes",
+  "independence_evidence": "The contact page states the magazine is published by Manners Media Ltd; the about page describes a title founded in 2009 by its publisher and editorial director, run with a creative team in Tokyo, with no link to any media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Tokyo-based print title whose Issue 39 (autumn 2026) went on sale in its own store on 10 November 2026, following Issue 38 in April 2026.",
+  "what_it_is": "A large-format print magazine on global street culture, covering fashion, music, art, skateboarding and design through long interviews and photographic editorials shot in Tokyo, Los Angeles, Paris and elsewhere. Each issue is themed (Issue 39 is titled Satisfaction) and appears with several split covers, including brand-collaboration covers sold through partner stores. It suits readers of fashion and subculture titles who want slower, in-depth reportage rather than news-paced coverage.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "music",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/57da3a42725e250ae90159a3/8ff43c84-b979-42d0-838c-25128b3ce265/TNO_39_LWC_ONLINE_1%2B+copy+2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://thenewordermag.com/store/the-new-order-issue-39-nothing-93fp9",
+      "issue_label": "Issue 39, Lady White Company cover",
+      "width": 2000,
+      "height": 2000,
+      "notes": "Flat front cover centred on a white square canvas; the cover itself is roughly 1340 x 1810 px and needs cropping. Exclusive collaboration cover."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/57da3a42725e250ae90159a3/99962562-049a-410f-99d2-e16fc69bc392/TNO_39_NOTHING_ONLINE_1%2B.jpg",
+      "source_type": "publisher",
+      "page_url": "https://thenewordermag.com/store/the-new-order-issue-39-nothing",
+      "issue_label": "Issue 39, Nothing cover",
+      "width": 2000,
+      "height": 2000,
+      "notes": "One of the five standard Issue 39 covers; same white square canvas presentation, needs cropping. Served as WEBP."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/57da3a42725e250ae90159a3/ad1e5e71-c31e-4ddf-8b46-ed1e1f200562/TNO_39_EDGARDAVIDS_ONLINE_1%2B.jpg",
+      "source_type": "publisher",
+      "page_url": "https://thenewordermag.com/store/the-new-order-issue-39-nothing-ehxjm",
+      "issue_label": "Issue 39, Edgar Davids cover",
+      "width": 2000,
+      "height": 2000,
+      "notes": "Size taken from the store JSON originalSize, not downloaded; same presentation as the other Issue 39 covers."
+    }
+  ],
+  "evidence_urls": [
+    "https://thenewordermag.com/",
+    "https://thenewordermag.com/about",
+    "https://thenewordermag.com/contact",
+    "https://thenewordermag.com/store?format=json-pretty",
+    "https://thenewordermag.com/store/the-new-order-issue-39-nothing-93fp9?format=json-pretty",
+    "https://thenewordermag.com/tno/the-new-order-issue-39-featuring-lady-white-company",
+    "https://thenewordermag.com/store/the-new-order-issue-38-lichen?format=json-pretty"
+  ],
+  "uncertainties": "The publisher does not state a frequency; the store shows Issue 38 published 2026-04-09 and Issue 39 on 2026-11-10 (described as autumn 2026), so biannual is taken from cadence, while Issues 36 and 37 carry store dates of November and December 2025 that may reflect a store rebuild rather than release dates. The store prices in USD although the magazine is made in Tokyo. The Issue 39 description calls it 'the last edition representing the progressive vision of the publication', which may be a wording for latest rather than final; not confirmed either way. No postal address, trim size or page count found on the site. Manners Media Ltd's registered country is not stated; JP/Tokyo is recorded from the about page."
+}

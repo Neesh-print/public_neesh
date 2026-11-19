@@ -1,0 +1,48 @@
+{
+  "input_title": "Yolk",
+  "official_name": "yolk",
+  "publisher_name": "Yolk Literary",
+  "publisher_website": "https://www.yolkliterary.ca/",
+  "country": "CA",
+  "city": "Montreal",
+  "frequency": "biannual",
+  "cover_price": 15.0,
+  "currency": "CAD",
+  "trim_size": "7 x 9 in",
+  "page_count": null,
+  "subscribe_url": "https://www.yolkliterary.ca/shop",
+  "latest_issue_label": "Volume 5.2, Spring 2026 (Want)",
+  "latest_issue_date": "2026-01-01",
+  "latest_issue_date_precision": "year",
+  "latest_issue_source_url": "https://www.yolkliterary.ca/product/volume-5-2-spring-2026",
+  "independent": "yes",
+  "independence_evidence": "A Montreal-based literary journal run by its own volunteer masthead and funded by arts-council grants and sales (Canada Council for the Arts, Conseil des arts de Montréal, ELAN Trellis micro-grant), with no corporate owner (https://www.yolkliterary.ca/masthead, https://www.yolkliterary.ca/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "An independent Montreal literary journal that printed Volume 4.2 (Spring 2025), 5.1 (Fall 2025) and 5.2 (Spring 2026), its tenth print issue, on a twice-yearly schedule.",
+  "what_it_is": "yolk is an English-language literary journal from Montreal printing fiction, poetry, non-fiction, translations and visual art by Canadian and international writers and artists, with an interview in each issue. Print issues appear twice a year in a small 7 by 9 inch format, alongside a rolling online publication and an annual Montreal Fiction Prize. It is for readers and writers of contemporary Canadian literary magazines.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.prod.website-files.com/5ddafb5dd31f0f479368acfa/6a501a1233ee73cfddc3b36c_Untitled%20design.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.yolkliterary.ca/shop",
+      "issue_label": "Volume 5.2, Spring 2026",
+      "width": 1080,
+      "height": 1080,
+      "notes": "Publisher's shop image: a square composition in which the front cover (with masthead 'yolk.' and 'Vol 5.2 | Spring 2026') sits framed in the centre and the cover painting extends to the edges; the cover proper is roughly 640x880px within it and would need cropping."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.yolkliterary.ca/",
+    "https://www.yolkliterary.ca/shop",
+    "https://www.yolkliterary.ca/product/volume-5-2-spring-2026",
+    "https://www.yolkliterary.ca/masthead",
+    "https://www.yolkliterary.ca/contact"
+  ],
+  "uncertainties": "The publisher gives no release date for Volume 5.2 beyond 'Spring 2026' (the shop image for it was uploaded around July 2026), so only year precision is recorded; Volume 5.2 is currently out of stock at CAD 15. The organisation name is not stated beyond 'yolk' / 'Yolk Literary' (the masthead names an individual as publisher). Trim size is derived from the product's stated material dimensions (9 x 7 x 0.375 in). The only cover image available is a square social-style composite rather than a flat cover file."
+}

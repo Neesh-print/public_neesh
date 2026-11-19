@@ -1,0 +1,65 @@
+{
+  "input_title": "Encens",
+  "official_name": "Encens",
+  "publisher_name": "Encens Magazine",
+  "publisher_website": "https://www.encensmagazine.com/",
+  "country": "FR",
+  "city": "Paris",
+  "frequency": "biannual",
+  "cover_price": 24.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.encensmagazine.com/shop",
+  "latest_issue_label": "Number 56 (Fall/Winter 2026)",
+  "latest_issue_date": "2026-09-09",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://encens-magazine.myshopify.com/products.json?limit=250",
+  "independent": "yes",
+  "independence_evidence": "Published and sold directly by Encens Magazine, a small Paris-based company running its own Shopify store since 2002-era issues; no media-group owner is mentioned anywhere (https://encens-magazine.myshopify.com/meta.json, https://encens-magazine.myshopify.com/products.json?limit=250).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Paris biannual whose Number 56 (Fall/Winter 2026) went on sale in September 2026, following issues in March 2026 and 2025.",
+  "what_it_is": "Encens is a Paris fashion biannual that treats clothes as a subject of history and craft rather than seasonal trends. Issues combine new photography with archive-led features on designers such as Armani, Montana, Comme des Garçons and Dior, interviews with stylists, collectors and former insiders, and portfolios that often reach back to the 1970s to 1990s. It is for readers who collect fashion magazines as objects and care about design lineage and image-making.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0060/0958/5735/files/encens56coverA.jpg?v=1788941171",
+      "source_type": "publisher",
+      "page_url": "https://www.encensmagazine.com/shop",
+      "issue_label": "Number 56",
+      "width": 2646,
+      "height": 3543,
+      "notes": "Cover A of Number 56 from the publisher's Shopify product feed; flat front cover, high resolution."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0060/0958/5735/files/encens56coverB.jpg?v=1788941199",
+      "source_type": "publisher",
+      "page_url": "https://www.encensmagazine.com/shop",
+      "issue_label": "Number 56",
+      "width": 2659,
+      "height": 3543,
+      "notes": "Cover B of Number 56 (alternate cover)."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/encens56coverA.jpg?v=1790599556",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/en/products/encens-n-56",
+      "issue_label": "N°56",
+      "width": 2173,
+      "height": 2910,
+      "notes": "Same Cover A as listed by KD Presse."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.encensmagazine.com/",
+    "https://encens-magazine.myshopify.com/products.json?limit=250",
+    "https://encens-magazine.myshopify.com/meta.json",
+    "https://kdpresse.com/en/products/encens-n-56"
+  ],
+  "uncertainties": "The public site encensmagazine.com is a JavaScript app backed by the Shopify store encens-magazine.myshopify.com, so publisher name and city come from that store's metadata (name 'Encens Magazine', city Paris) rather than a readable imprint page; the legal entity name is not shown. The issue date is the store's listing date (2026-09-09) for an issue labelled Fall/Winter 2026. Cadence from the store: N°53 Mar 2025, N°54 Sep 2025, N°55 Mar 2026, N°56 Sep 2026, so biannual is solid. Page count is not given for N°56."
+}

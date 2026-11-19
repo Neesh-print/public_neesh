@@ -1,0 +1,49 @@
+{
+  "input_title": "Neutral Colors",
+  "official_name": "NEUTRAL COLORS",
+  "publisher_name": "NEUTRAL COLORS",
+  "publisher_website": "https://neutral-colors.com/",
+  "country": "JP",
+  "city": "Yokohama",
+  "frequency": "annual",
+  "cover_price": 3500,
+  "currency": "JPY",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://neutral-colors.com/books_post/neutral-colors-7/",
+  "latest_issue_label": "Issue 7",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://neutral-colors.com/books_post/neutral-colors-7/",
+  "independent": "yes",
+  "independence_evidence": "The publisher's own about page describes NEUTRAL COLORS as an independent publisher that is also the name of the magazine and of its own printing and binding workshop in Yokohama, printing around 5,000 copies of the magazine itself; no parent group is named.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Yokohama publisher-printer with Issue 7 (health theme) on sale from September 2026 and Issue 6 from August 2025.",
+  "what_it_is": "A Japanese-language magazine in which each issue takes a single theme (Issue 7 is health, Issue 6 was staying somewhere for a while) and explores it through long reportage, interviews, travel pieces and photo stories from Japan and abroad. It is printed and bound in the publisher's own workshop using a mix of offset and risograph printing, with special fold-outs and inserts, so the physical object is part of the point. It suits readers of slow, essayistic magazines and people interested in independent print production.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/NeutralColours7.jpg?v=1793726604",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/neutral-colors-7",
+      "issue_label": "Issue 7",
+      "width": 1000,
+      "height": 1467,
+      "notes": "Flat front cover (basketball player, '2026 ISSUE 7 HEALTH' on masthead) from magCulture's product listing; the publisher's own page only shows photographed copies on a white background."
+    }
+  ],
+  "evidence_urls": [
+    "https://neutral-colors.com/",
+    "https://neutral-colors.com/about/",
+    "https://neutral-colors.com/books_post/neutral-colors-7/",
+    "https://neutral-colors.com/books_post/neutral-colors-6/",
+    "https://neutral-colors.com/wp-json/wp/v2/books_post",
+    "https://magculture.com/products/neutral-colors-7"
+  ],
+  "uncertainties": "Publication date taken from the publisher's shop listing date (15 September 2026) and recorded at month precision. Trim size and page count are not stated on the publisher's page. The publisher's product images (pc_038_cover.jpg etc.) are photographs of the printed copy rather than flat cover art, so the only flat cover found is the stockist's. Cadence: Issue 6 August 2025, Issue 7 September 2026, so recorded as annual."
+}

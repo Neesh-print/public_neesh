@@ -1,0 +1,57 @@
+{
+  "input_title": "Shadowplay",
+  "official_name": "SHADOWPLAY",
+  "publisher_name": "Behind the Blinds (BTB Studio)",
+  "publisher_website": "https://www.shadowplaymagazine.com/",
+  "country": "BE",
+  "city": "Brussels",
+  "frequency": "annual",
+  "cover_price": 20.0,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.shadowplaymagazine.com/store",
+  "latest_issue_label": "Issue 10",
+  "latest_issue_date": "2026-09-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.behindtheblinds.be/-shadowplay-issue-10-",
+  "independent": "yes",
+  "independence_evidence": "Contact page: 'As a Behind the Blinds Arts project, SHADOWPLAY is a bi annual publication... Curated by the same team of BTB' (https://www.shadowplaymagazine.com/contact); Behind the Blinds is a small independent Brussels fashion/art magazine studio, not a media group.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Belgian art and beauty publication whose print Issue 10 shipped from mid-September 2026.",
+  "what_it_is": "A thick art and beauty publication from the makers of Behind the Blinds, built from photographic portfolios, interviews and essays that treat beauty as a subject across fashion, art, music and film. Each issue is released with a dozen or more alternate covers featuring artists, musicians and models (Issue 10 includes Anton Corbijn, Mylène Farmer and Nairy Baghramian). It is for collectors of photography-led fashion and art magazines.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "fashion",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/611cd9cce6d57709084765fc/01d00702-575a-465a-b8f8-3a3b83a5e9e9/SHADOWPLAY_10_COVERS_SINGLE_FINAL_7.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.shadowplaymagazine.com/store",
+      "issue_label": "Issue 10 (Anton Corbijn cover)",
+      "width": 2500,
+      "height": 3260,
+      "notes": "Flat front cover, one of Issue 10's many alternate covers; barcode block shows issue 10. Checked visually."
+    },
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/611cd9cce6d57709084765fc/185b3b4c-58c8-445a-9b20-bec39778ea35/SHADOWPLAY_10_COVERS_SINGLE_FINAL_1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.shadowplaymagazine.com/store",
+      "issue_label": "Issue 10 (alternate cover)",
+      "width": 2500,
+      "height": 3260,
+      "notes": "Another Issue 10 cover file from the same store page; not viewed, same format as the first."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.shadowplaymagazine.com/store",
+    "https://www.shadowplaymagazine.com/contact",
+    "https://www.behindtheblinds.be/-shadowplay-issue-10-",
+    "https://www.behindtheblinds.be/contact",
+    "https://wbdm.be/en/news/michael-marson-the-pleasures-of-editing"
+  ],
+  "uncertainties": "Neither shadowplaymagazine.com nor behindtheblinds.be prints a postal address; Brussels rests on the Behind the Blinds site's Brussels time zone and an interview with founder Michael Marson describing his Brussels base (wbdm.be). Price: the Shadowplay store lists each Issue 10 cover at 20 EUR while the BTB shop lists them at 25 EUR; the title's own store price is recorded. Issue 10 went on pre-order 11 August 2026 with delivery from mid-September 2026; the KD Presse hint also says 2026-09. Publisher says bi-annual, but Issue 9 was a 2025 edition and Issue 10 came in 2026, so the recent cadence is annual."
+}

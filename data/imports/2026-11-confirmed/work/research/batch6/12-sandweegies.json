@@ -1,0 +1,56 @@
+{
+  "input_title": "Sandweegies",
+  "official_name": "Sandweegies",
+  "publisher_name": "Sandweegies Magazine",
+  "publisher_website": "https://sandweegiesmagazine.com/",
+  "country": "GB",
+  "city": "Glasgow",
+  "frequency": "biannual",
+  "cover_price": 18.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": 132,
+  "subscribe_url": "https://sandweegiesmagazine.com/collections/all",
+  "latest_issue_label": "Issue 03 (The Fish Sandwich Issue)",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://sandweegiesmagazine.com/products/sandweegies-issue-03-pre-order",
+  "independent": "yes",
+  "independence_evidence": "Self-published from its own Shopify store by a one-designer studio (editor/art director Nancy Heley per stockist credits); about page describes it as an independent Glasgow food magazine with a Substack newsletter (https://sandweegiesmagazine.com/pages/about).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Glasgow food magazine launched in 2025 with its third print issue shipping since October 2026.",
+  "what_it_is": "A Glasgow food magazine that uses one kind of sandwich per issue as a way into the city's cafes, bakeries, chefs and eating habits, with photography-led features and a strong graphic design. Issues so far cover the chicken sandwich, the breakfast roll and the fish sandwich. It is for people interested in Scottish food culture and city life rather than recipes.",
+  "suggested_primary_tag": "food",
+  "suggested_secondary_tag": "place",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0957/9937/8263/files/sandweegies_shopify_under_25MP.jpg?v=1791304617",
+      "source_type": "publisher",
+      "page_url": "https://sandweegiesmagazine.com/products/sandweegies-issue-03-pre-order",
+      "issue_label": "Issue 03",
+      "width": 4471,
+      "height": 5591,
+      "notes": "Publisher's product image: the Issue 03 front cover photographed on an orange background with a drop shadow (mockup-style, not a flat scan). No flat Issue 03 cover found on the publisher site; flat covers exist only for Issues 01 and 02."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/Sandweegies_3.png?v=1794223642",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/sandweegies-3",
+      "issue_label": "Issue 03",
+      "width": 794,
+      "height": 1044,
+      "notes": "Flat front cover on magCulture but under 1000px."
+    }
+  ],
+  "evidence_urls": [
+    "https://sandweegiesmagazine.com/products/sandweegies-issue-03-pre-order",
+    "https://sandweegiesmagazine.com/products.json",
+    "https://sandweegiesmagazine.com/pages/about",
+    "https://magculture.com/products/sandweegies-3"
+  ],
+  "uncertainties": "City: the publisher's about page frames the magazine as documenting Glasgow but does not print an address; stockist listing (magCulture) states Glasgow, Scotland. Issue 03's product URL still contains 'pre-order' but the page now promises shipment within five working days and magCulture stocked it on 2026-11-09, so it is treated as out; the listing date 2026-10-07 is used for the month. Cadence: Oct 2025, Apr 2026, Oct 2026."
+}

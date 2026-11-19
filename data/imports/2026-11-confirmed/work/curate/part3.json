@@ -1,0 +1,199 @@
+{
+  "05-dry-clean-only": {
+    "action": "skip",
+    "name": "Dry Clean Only",
+    "reason": "Publisher could not be established. The magazine's own domain serves a parking page, so publisher name, city and price are unconfirmed; only distributor listings describe it."
+  },
+  "07-ee72": {
+    "name": "72",
+    "publisher_name": "EE72",
+    "tags": ["fashion", "lifestyle"],
+    "description": "72 is a quarterly London magazine of fashion, beauty and culture that launched in 2025. Each issue is themed and leads with cover stories shot by established fashion photographers, backed by long interviews, essays and portfolios on music, film, art and Black British culture, across several covers sold at random. It is for readers of glossy fashion titles who want a large, collectable quarterly rather than a monthly.",
+    "note": "CSV said EE72; the magazine is 72 and EE72 is the company. The site is operated by EE72 US Inc. while the shop is based in London and priced in GBP. Covers are only shown as side by side pairs."
+  },
+  "08-encens": {
+    "name": "Encens",
+    "publisher_name": "Encens Magazine",
+    "tags": ["fashion", "photography"],
+    "description": "Encens is a Paris fashion biannual that treats clothes as a matter of history and craft rather than seasonal trends. Issues combine new photography with archive led features on designers such as Armani, Montana and Comme des Garçons, interviews with stylists and collectors, and portfolios reaching back to the 1970s and 1980s. It is for readers who collect fashion magazines as objects and care about design lineage.",
+    "note": "Publisher name and city from the Shopify store metadata; the legal entity is not shown."
+  },
+  "09-exhibition": {
+    "name": "Exhibition",
+    "publisher_name": "Exhibition Magazine",
+    "tags": ["fashion", "art"],
+    "description": "Exhibition is an oversized Paris fashion and art magazine published twice a year, each issue built on a single theme and sold with four or more alternative covers by different photographers. Inside are fashion series by international photographers and stylists, conversations with designers and architects, and art portfolios at 33 by 44 cm. It is for readers and collectors of large, image led fashion publications.",
+    "note": "Publisher shop had not yet listed N°27 on 19 November 2026; the issue is evidenced by KD Presse and the publisher homepage. Shop prices load client side, so no publisher price (KD Presse EUR 30)."
+  },
+  "12-italy-segreta": {
+    "name": "Italy Segreta",
+    "publisher_name": "Italy Segreta",
+    "tags": ["place", "photography"],
+    "description": "Italy Segreta is a large format annual grown out of an English language website about Italian travel, food and everyday culture. Each volume takes a single theme, most recently the generations, and fills about 124 pages with photo essays by Italian photographers alongside reported stories and interviews, in two cover variants. It suits readers who follow Italy through regional food, design and street life rather than guidebooks.",
+    "note": "Legal entity Italy Segreta s.r.l., Florence. Vol. 4 date (June 2026) inferred from shop image paths. The CSV hint named A Tavola (2025) as latest; the publisher now lists Vol. 4."
+  },
+  "13-jewish-currents": {
+    "name": "Jewish Currents",
+    "publisher_name": "Jewish Currents",
+    "tags": ["identity-politics", "news"],
+    "description": "Jewish Currents is an American quarterly of left wing Jewish politics, culture and ideas, founded in 1946, carrying long reported pieces on Israel and Palestine, American politics and the far right alongside essays, fiction, poetry, comics and art criticism. Print issues reach subscribers first and go online later. It suits readers interested in diaspora politics and left movements who want magazine length writing.",
+    "note": "Non-profit; accepts no paid advertising. Fall 2026 issue dated August 2026 from when its articles went online; the shop still lists Spring 2026 at USD 9."
+  },
+  "16-le-matricule-des-anges": {
+    "name": "Le Matricule des Anges",
+    "publisher_name": "Le Matricule des Anges",
+    "tags": ["literary"],
+    "description": "Le Matricule des Anges is a French language monthly devoted to contemporary literature, built around a themed dossier on a writer or movement plus review sections for fiction, poetry, essays, theatre and illustrated books. It runs ten issues a year and gives subscribers an online archive back to 1992. It suits French readers who follow small press and translated literature closely.",
+    "note": "Ten issues a year recorded as monthly. Price EUR 7.30 in France."
+  },
+  "17-leafie": {
+    "name": "leafie",
+    "publisher_name": "Leafie",
+    "tags": ["lifestyle", "ideas-science"],
+    "description": "leafie is a British print magazine about cannabis, psychedelics and the culture around them, spun out of a daily news site on the same subjects. Each issue is a PUR bound volume of around 120 pages mixing long reads on drug history and policy with interviews with growers, artists and researchers, with a European rather than North American focus. It suits readers interested in drug reform and psychedelic research who want it in print.",
+    "note": "Cadence is one issue a year so far (July 2024, June 2025), recorded as annual although a distributor calls it biannual. London address may be a registered office."
+  },
+  "18-literary-review-of-canada": {
+    "name": "Literary Review of Canada",
+    "publisher_name": "Literary Review of Canada",
+    "tags": ["literary", "ideas-science"],
+    "description": "Literary Review of Canada is a journal of ideas built around long book reviews and essays on politics, history, science, literature and culture, with commissioned cover art and poetry in each number. It appears ten times a year in a review format and keeps a full online archive for print subscribers. It suits readers who want sustained, review led coverage of Canadian writing and public debate.",
+    "note": "Published by a charitable organisation. Ten issues a year recorded as monthly. December 2026 issue added to the store on 18 November 2026."
+  },
+  "07-more-or-less": {
+    "name": "More or Less",
+    "publisher_name": "More or Less Magazine",
+    "tags": ["fashion", "photography"],
+    "description": "More or Less is a large format fashion magazine built around the idea of consuming less, mixing vintage, surplus, sportswear, uniform and craft clothing with current season pieces in long photographic stories. Issues are themed, run to several hundred pages and appear with multiple covers. It is for fashion readers and image makers interested in sustainability and styling rather than shopping.",
+    "note": "London is inferred from UK business contacts, not an imprint. No publisher shop; Antenne sells Issue 9 at GBP 24, so no publisher price."
+  },
+  "10-neutral-colors": {
+    "name": "NEUTRAL COLORS",
+    "publisher_name": "NEUTRAL COLORS",
+    "tags": ["design", "ideas-science"],
+    "description": "NEUTRAL COLORS is a Japanese language magazine in which each issue takes a single theme, most recently health, and follows it through long reportage, interviews, travel pieces and photo stories from Japan and abroad. It is printed and bound in the publisher's own Yokohama workshop with a mix of offset and risograph, fold outs and inserts, so the object itself is part of the point. It suits readers of slow, essayistic magazines and people interested in independent print production.",
+    "note": "Publisher's own images are photographs of the printed copy; the flat cover comes from a stockist."
+  },
+  "11-new-escapologist": {
+    "name": "New Escapologist",
+    "publisher_name": "New Escapologist",
+    "tags": ["ideas-science", "lifestyle"],
+    "description": "New Escapologist is a small A5 essay magazine about getting out of things, from the office and consumer culture to debt and other obligations, in favour of a freer and more leisurely life. Each 88 page issue combines essays, columns, interviews and a readers' page of workplace complaints, with a colour cover and black and white interior. It is for readers of idler style anti work writing and practical minimalism.",
+    "note": "Glasgow from the editor's own pages and magCulture, not an imprint. Aim is two issues a year but releases have been annual."
+  },
+  "12-notion": {
+    "name": "NOTION",
+    "publisher_name": "Notion London",
+    "tags": ["music", "fashion"],
+    "description": "NOTION is a London music and popular culture magazine built around cover interviews and fashion led shoots with musicians, actors, athletes and internet personalities, each print edition appearing with many different covers. Between numbered issues it publishes The Artists, print volumes profiling emerging acts. It is for readers who follow new music, youth culture and celebrity style.",
+    "note": "Legal entity Notion London Limited. NOTION 100 (October 2026) is newer than the CSV hint (The Artists 4)."
+  },
+  "14-now-voyager": {
+    "name": "Now Voyager",
+    "publisher_name": "Erythraean Foundation",
+    "tags": ["news", "literary"],
+    "description": "Now Voyager is a bimonthly print magazine of international reporting and long form writing, with sections for global briefings, reportage, art and photography portfolios, books, travel, food, poetry and cartoons. Each issue is organised around the places its stories come from and runs pieces of twenty to fifty minutes' reading. It is for readers who want foreign correspondent journalism and literary essays in print.",
+    "note": "Price USD 29 is the single copy price of Issue 04; single copies ship within the US only. Issue 05 dated November 2026 from article dates."
+  },
+  "15-odda": {
+    "name": "ODDA",
+    "publisher_name": "ODDA Magazine",
+    "tags": ["fashion", "art"],
+    "description": "ODDA is a very large biannual fashion and culture magazine, with recent issues running to around 800 pages, covering womenswear and menswear through long editorials, cover stories and interviews with designers, artists and actors. Each issue is themed and appears with several covers. It is bought by fashion industry readers and collectors of oversized fashion books.",
+    "note": "The publisher site was unreachable (TLS error and 503), so publisher, price and location come from secondary sources. magCulture says London while the magazine's own blurb says New York; New York recorded, needs confirmation."
+  },
+  "18-osmos": {
+    "name": "OSMOS Magazine",
+    "publisher_name": "OSMOS",
+    "tags": ["photography", "art"],
+    "description": "OSMOS Magazine is a New York art magazine about photography and how images are used, mixing critical essays, artist conversations, portfolios and reportage in recurring thematic sections. Issues run to around 100 pages and connect to the publisher's exhibition programme. It is for readers of contemporary art criticism and photography.",
+    "note": "About page says quarterly but the shop shows two issues a year, so biannual is recorded."
+  },
+  "12-the-new-quarterly": {
+    "name": "The New Quarterly",
+    "publisher_name": "The New Quarterly",
+    "tags": ["literary"],
+    "latest_issue_label": "Issue 179 (Summer 2026)",
+    "latest_issue_date": "2026-07-16",
+    "latest_issue_date_precision": "day",
+    "latest_issue_source_url": "https://tnq.ca/",
+    "cover_candidates": [
+      {"url": "https://tnq.ca/wp-content/uploads/2026/07/00745D_TNQ179-COVER_00.png", "source_type": "publisher", "page_url": "https://tnq.ca/", "issue_label": "Issue 179", "width": 1000, "height": 1071, "notes": "Issue 179 cover; Issue 180's contents are online but the print issue is not yet in the shop and has no cover image."}
+    ],
+    "description": "The New Quarterly is a Canadian literary quarterly from Waterloo, Ontario, publishing new fiction, poetry, personal essays and author interviews, with each issue loosely themed and carrying the results of its annual fiction, essay and occasional verse contests. Issues are perfect bound and sold singly or by subscription alongside a digital edition. It is for readers and writers of contemporary Canadian literature.",
+    "note": "Issue 180's contents went online on 17 November 2026 but the print issue was not yet in the shop and had no cover, so Issue 179 (Summer 2026) is recorded as the latest print issue with its cover. Non-profit."
+  },
+  "13-the-rake": {
+    "name": "The Rake",
+    "publisher_name": "The Rake",
+    "tags": ["fashion", "lifestyle"],
+    "description": "The Rake is a bimonthly men's magazine about classic tailoring, watches, motoring, travel and what it calls gentlemanly living, built around cover interviews, fashion shoots, brand histories and essays on craftsmanship. It sits alongside a large online shop selling tailoring and accessories from the makers it writes about. It is for readers with an interest in traditional menswear and high end lifestyle coverage.",
+    "note": "Operating companies are The Rake Pte Ltd and The Rake Atelier Pte Ltd (Singapore entities) while the magazine is made in London; GB and London recorded. Privately held; please confirm it fits the Index's independence rule given the attached e-commerce business."
+  },
+  "14-the-site-magazine": {
+    "name": "The Site Magazine",
+    "publisher_name": "The Site Collective",
+    "tags": ["design", "ideas-science"],
+    "description": "The Site Magazine is a Toronto journal of architecture, landscape, urbanism and design in which each volume takes a single theme and gathers essays, design projects, visual work and criticism from practitioners and academics. After a decade of numbered volumes it now appears as an occasional series of editorial publications and special issues, sold singly. It is for architects, designers and readers interested in the politics and culture of the built environment.",
+    "note": "Has moved away from subscriptions to occasional volumes, so frequency is irregular. Cover is a screenshot with a drop shadow."
+  },
+  "15-the-toe-rag": {
+    "name": "The Toe Rag",
+    "publisher_name": "The Toe Rag",
+    "tags": ["art", "literary"],
+    "description": "The Toe Rag is a London magazine of contemporary culture published three times a year, carrying essays, reviews, interviews, fiction, poetry and artists' projects, with back pages of listings, puzzles and an agony aunt. Each issue has a theme, recently the pastoral, decadence and fictions, and it is given out through bookshops, galleries and arts venues as well as by mail order. It is for readers of art criticism and literary writing who want a newsprint alternative to gallery magazines.",
+    "note": "Volunteer run and ad funded. Issue 9 (Fictions) was announced for October 2026 but the publisher page still says Issue 8 is what stockists carry, so Issue 9 may be at pre-order stage. Shop prices render client side; a stockist lists GBP 6.50. No cover image for Issue 9 found."
+  },
+  "16-the-walrus": {
+    "name": "The Walrus",
+    "publisher_name": "The Walrus Foundation",
+    "frequency": "bimonthly",
+    "tags": ["news", "ideas-science"],
+    "description": "The Walrus is a Canadian general interest magazine of long form journalism, essays, fiction and poetry, covering national politics, culture, science and social questions from a Canadian vantage point, with illustrated covers commissioned from artists. It appears eight times a year in print alongside a large online operation, podcasts and a national talks series. It is for readers who want in depth Canadian current affairs and cultural writing.",
+    "note": "The publisher site is behind a bot challenge, so facts come from its Shopify store, a search result for its own November 2026 issue page and Wikipedia. Eight issues a year recorded as bimonthly, the closest option. No single issue price and no cover image for the latest issue found."
+  },
+  "17-thiiird": {
+    "name": "THIIIRD",
+    "publisher_name": "THIIIRD Media",
+    "tags": ["fashion", "identity-politics"],
+    "description": "THIIIRD is a London print magazine of fashion editorials, feature interviews, photo stories and essays centred on people of colour and on queer, trans and non binary creatives. Each themed issue, most recently Dis/comfort, appears with several covers and sits alongside a podcast and events programme. It is for readers interested in fashion, arts and culture framed through intersectional perspectives.",
+    "note": "Published by THIIIRD MEDIA CIC. The about page says the platform centres people of colour and queer people and is informed by decolonial thought but does not state who leads it, so no identity tag is applied; please review. Issue #7 is June 2025 and the previous issue was 2022, so frequency is irregular."
+  },
+  "18-tunica-magazine": {
+    "name": "TUNICA",
+    "publisher_name": "TUNICA Studio",
+    "tags": ["art", "fashion"],
+    "description": "TUNICA is an art and fashion publication from a New York creative studio, each volume built around a theme, the tenth being Total Freedom, and filled with photography, illustration, fashion editorials, essays, fiction and interviews from an international roster of image makers. Volumes are softcover, around 124 pages at 23 by 28 cm, and appear with several front and back covers. It is for readers of visually driven art and fashion publications who follow emerging image making.",
+    "note": "Roughly one volume every year or two, so irregular. Shop prices in EUR although the studio is in New York."
+  },
+  "08-vingt-sept": {
+    "name": "Vingt Sept",
+    "publisher_name": "Vingt Sept",
+    "latest_issue_date": "2026-04-01",
+    "latest_issue_date_precision": "month",
+    "tags": ["fashion", "lifestyle"],
+    "description": "Vingt Sept is a fashion and culture magazine printed in several cover editions per issue, each fronted by an actor, musician or model and backed by fashion editorials, beauty stories and interviews. Its site adds daily coverage of fashion shows, beauty, restaurants, hotels and arts events in London and New York. It suits readers of glossy independent fashion titles who follow emerging screen and music talent.",
+    "note": "Publisher Vingt Sept, Inc gives a New York address and says London and New York; US recorded. The Identity Issue carries no release date; April 2026 is taken from its editorials' dates. Price GBP 25."
+  },
+  "10-watershed-sentinel": {
+    "name": "Watershed Sentinel",
+    "publisher_name": "Watershed Sentinel Educational Society",
+    "tags": ["nature", "news"],
+    "description": "Watershed Sentinel is an environmental news magazine from Vancouver Island covering water, forests, energy projects, climate, food systems, Indigenous rights and conservation in British Columbia and western Canada. Each themed issue gathers reporting, analysis and opinion from grassroots campaigners, scientists and community writers. It is for readers who follow regional environmental politics and activism rather than general nature writing.",
+    "note": "Non-profit, no corporate sponsorship. Single issues are not sold, so no cover price. Five issues a year recorded as bimonthly."
+  },
+  "11-we-are-makers": {
+    "name": "We Are Makers",
+    "publisher_name": "We Are Makers Global",
+    "tags": ["design", "art"],
+    "description": "We Are Makers is a print magazine about craftspeople and artists around the world, built from studio and workshop visits, long interviews and documentary photography. Each edition profiles a dozen or so makers across ceramics, furniture, textiles and metalwork, concentrating on how they live and work rather than on instructions. It is for readers interested in craft, making and small creative businesses.",
+    "note": "Glasgow, trim size and page count come from magCulture's listing; the publisher site gives no address. Self funded per the about page."
+  },
+  "18-zoo-magazine": {
+    "name": "ZOO Magazine",
+    "publisher_name": "ZOO Magazine",
+    "tags": ["fashion", "art"],
+    "description": "ZOO Magazine is a large format fashion, art and film magazine published in English from Amsterdam, with each issue printed in several cover versions fronted by actors, musicians and models. Issues mix long fashion editorials with interviews, portfolios and features on cinema, music and contemporary art around a theme. It is for readers of international fashion and culture glossies who collect multi cover issues.",
+    "note": "Imprint names Melon Collie C.V. trading as ZOO Magazine. The publisher sells by email only, so no publisher price (KD Presse EUR 12.80). Quarterly inferred from numbering."
+  }
+}

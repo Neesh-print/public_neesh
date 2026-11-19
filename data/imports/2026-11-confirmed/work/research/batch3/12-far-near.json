@@ -1,0 +1,48 @@
+{
+  "input_title": "FAR-NEAR",
+  "official_name": "FAR–NEAR",
+  "publisher_name": "FAR–NEAR",
+  "publisher_website": "https://far-near.media/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "annual",
+  "cover_price": 55.0,
+  "currency": "USD",
+  "trim_size": "167 x 240 mm",
+  "page_count": 320,
+  "subscribe_url": "https://far-near.media/shop/",
+  "latest_issue_label": "Vol. 6 – Heat",
+  "latest_issue_date": "2025-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://far-near.media/shop/vol6/",
+  "independent": "yes",
+  "independence_evidence": "Self-published cross-cultural book series run from an artist-run studio space in Chinatown, New York, funded by sales, sponsors and donations; no media-group owner is mentioned (https://far-near.media/about/, https://far-near.media/visit/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent New York annual whose sixth volume, Heat, shipped in November 2025.",
+  "what_it_is": "FAR–NEAR is an annual, book-format publication from New York that looks at Asia and its diasporas through photography, essays, poetry and interviews, with contributors from Japan, Iran, Palestine, Vietnam and many countries in between. Each 320-page volume is themed (Vol. 6 is Heat, with pieces on droughts, fire rituals and saunas) and is produced as a designed object with inserts and a fold-out poster. It suits readers of art and photography books interested in Asian and diasporic perspectives.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://far-near.media/wp-content/uploads/2025/09/Vol6_Open_Standard-scaled-e1757176795994.jpg",
+      "source_type": "publisher",
+      "page_url": "https://far-near.media/shop/vol6/",
+      "issue_label": "Vol. 6 – Heat",
+      "width": 2480,
+      "height": 1617,
+      "notes": "Only product image offered by the publisher for the standard edition: the book shown open/flat (front and back together), so it needs cropping to the front cover; not a clean single-cover file."
+    }
+  ],
+  "evidence_urls": [
+    "https://far-near.media/shop/vol6/",
+    "https://far-near.media/shop/",
+    "https://far-near.media/about/",
+    "https://far-near.media/visit/",
+    "https://far-near.media/shop/vol4/"
+  ],
+  "uncertainties": "The Vol. 6 page still says 'Advance copies sold out. Full run due early November 2025', so the release date is recorded as November 2025 at month precision; no later volume is listed. Price shown is the USD 55 standard edition (the special edition with heat-reactive cover and towel is USD 72). The publisher calls it an annual printed book, but volumes do not appear every calendar year (Vol. 4 Guidance predates Vol. 6 by several years), so the real cadence is slower than annual. No flat front-cover image exists on the site; the standard-edition image is an open-book shot and a 1024 px square image of the special edition was also seen. Identity tags were not applied because the site describes a focus on Asian perspectives but does not state an Asian-led or diaspora-led structure in those words."
+}

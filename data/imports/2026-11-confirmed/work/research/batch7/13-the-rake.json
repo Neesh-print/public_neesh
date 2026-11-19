@@ -1,0 +1,50 @@
+{
+  "input_title": "The Rake",
+  "official_name": "The Rake",
+  "publisher_name": "The Rake Pte Ltd",
+  "publisher_website": "https://therake.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "bimonthly",
+  "cover_price": 7.5,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://therake.com/default/magazine-subscription",
+  "latest_issue_label": "Issue 108",
+  "latest_issue_date": "2026-10-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://therake.com/default/issue-108",
+  "independent": "yes",
+  "independence_evidence": "The site's terms and privacy statement name the operating companies as The Rake Pte Ltd and The Rake Atelier Pte Ltd, a privately held publisher and e-commerce business founded in 2008; no ownership by a large media group is indicated, though the magazine is paired with its own luxury menswear e-commerce operation.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Privately owned bimonthly print magazine with Issue 108 (October 2026) on sale from its own shop and six issues a year on a stated schedule.",
+  "what_it_is": "A bimonthly men's magazine about classic tailoring, watches, motoring, travel and what it calls gentlemanly living, built around celebrity cover interviews, fashion shoots, brand histories and essays on craftsmanship and luxury trade. The print edition sits alongside a large online shop selling tailoring and accessories from the brands it writes about, with print and digital editions sold singly or by subscription. It is for readers with an interest in traditional menswear and high-end lifestyle coverage.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://therake.com/media/catalog/product/i/s/issue_107_cover_with_border_1.jpg",
+      "source_type": "publisher",
+      "page_url": "https://therake.com/default/issue-108",
+      "issue_label": "Issue 108",
+      "width": 1190,
+      "height": 1620,
+      "notes": "Despite the file name this is the Issue 108 cover (Adam Brody) as shown on the Issue 108 product page; flat cover with a thin light-grey border around it that may need trimming."
+    }
+  ],
+  "evidence_urls": [
+    "https://therake.com/",
+    "https://therake.com/default/about-us",
+    "https://therake.com/default/issue-108",
+    "https://therake.com/default/magazine",
+    "https://therake.com/default/faqs",
+    "https://therake.com/default/terms-and-conditions",
+    "https://en.wikipedia.org/wiki/The_Rake"
+  ],
+  "uncertainties": "The publisher's own site gives no postal address or city; its legal text names The Rake Pte Ltd and The Rake Atelier Pte Ltd, which are Singapore-registered entities, while Wikipedia and the GBP-priced UK shop indicate the magazine is now made in London, so GB/London is recorded with the Singapore company as publisher. The issue date is taken from the product page's 'Issue date: October 2026'. Frequency is from the FAQ (six issues a year, released February to December in even months), consistent with six issues listed for 2025. Trim size and page count are not stated. The magazine is closely tied to the company's own luxury e-commerce business, which could be read as a commercial platform rather than a purely editorial title."
+}

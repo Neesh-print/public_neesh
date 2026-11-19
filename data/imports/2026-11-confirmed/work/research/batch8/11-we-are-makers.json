@@ -1,0 +1,59 @@
+{
+  "input_title": "We Are Makers",
+  "official_name": "We Are Makers",
+  "publisher_name": "We Are Makers Global Ltd",
+  "publisher_website": "https://www.wearemakers.shop/",
+  "country": "GB",
+  "city": "Glasgow",
+  "frequency": "quarterly",
+  "cover_price": 16.0,
+  "currency": "GBP",
+  "trim_size": "200 x 270 mm",
+  "page_count": 160,
+  "subscribe_url": "https://www.wearemakers.shop/products/we-are-makers-subscription",
+  "latest_issue_label": "Edition Twenty",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.wearemakers.shop/products/edition-twenty",
+  "independent": "yes",
+  "independence_evidence": "The publisher's about page says the magazine is 'an independent print publication' created by two founders, 'not backed by big investors' and entirely self-funded (https://www.wearemakers.shop/pages/about-us-1); the EU compliance page names the company as We Are Makers Global LTD.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "A self-funded independent print quarterly that has published Editions Thirteen to Twenty between January 2025 and November 2026, the latest on sale now in the publisher's own shop.",
+  "what_it_is": "We Are Makers is a print magazine about craftspeople and artists around the world, built from studio and workshop visits, long interviews and documentary photography. Each edition profiles a dozen or so makers across disciplines such as ceramics, furniture, textiles and metalwork, concentrating on how they live and work rather than on instructions or projects. It is for readers interested in craft, making and small creative businesses.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://magculture.com/cdn/shop/files/WeAreMakers20.png",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/we-are-makers-20",
+      "issue_label": "Edition Twenty",
+      "width": 1000,
+      "height": 1301,
+      "notes": "Flat front cover as listed by stockist magCulture; the only flat, correctly proportioned cover image found."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0794/9946/0923/files/20.png?v=1792876155",
+      "source_type": "publisher",
+      "page_url": "https://www.wearemakers.shop/products/edition-twenty",
+      "issue_label": "Edition Twenty",
+      "width": 1080,
+      "height": 1080,
+      "notes": "Publisher's product image: the front cover rendered with a slight shadow and centred on a square white background, so it needs cropping."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.wearemakers.shop/",
+    "https://www.wearemakers.shop/products/edition-twenty",
+    "https://www.wearemakers.shop/products.json?limit=250",
+    "https://www.wearemakers.shop/pages/about-us-1",
+    "https://www.wearemakers.shop/pages/eu-responsible-person",
+    "https://www.wearemakers.shop/policies/contact-information",
+    "https://magculture.com/products/we-are-makers-20"
+  ],
+  "uncertainties": "The publisher's own site gives no office address (the contact page is an email only; the about page says the founders met in Edinburgh), so Glasgow is taken from stockist magCulture's listing ('Glasgow, UK'). Trim size (200 x 270 mm) and page count (160) also come from the magCulture listing for #20, not the publisher. Edition Twenty's date is the Shopify published_at (1 November 2026, 'Available Now'); the original wearemakers.co.uk domain is now for sale, so the Shopify shop is treated as the publisher's site."
+}

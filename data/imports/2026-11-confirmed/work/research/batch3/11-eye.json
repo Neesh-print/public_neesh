@@ -1,0 +1,50 @@
+{
+  "input_title": "Eye",
+  "official_name": "Eye",
+  "publisher_name": "Eye Magazine Ltd",
+  "publisher_website": "https://www.eyemagazine.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://eyemagazine.escosubs.co.uk/eye-subscriptions.htm",
+  "latest_issue_label": "Eye 110 (Summer 2026)",
+  "latest_issue_date": "2026-06-09",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://eyemagazine.com/blog/post/eye-110-is-here",
+  "independent": "yes",
+  "independence_evidence": "Published by Eye Magazine Ltd from its own office at Reliance Wharf, London N1, with subscriptions handled by a fulfilment bureau; it has been independently owned since leaving Haymarket in 2008 and no media group is named on the site (https://www.eyemagazine.com/contact).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independently published London design review with Eye 110 (Summer 2026) released in June 2026 and earlier issues in 2025.",
+  "what_it_is": "Eye is a London-based printed review of graphic design and visual culture, published since 1990. Each issue carries long-form profiles of designers and typographers, design-history essays, critical columns and extensive reviews of books, type and exhibitions, with recent issues covering figures such as Samar Maakaroun, Tadanori Yokoo and Margaret Calvert. It is read by working graphic designers, design educators and students who want criticism and history rather than portfolio showcases.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.eyemagazine.com/assets/uploads/magazine/EYE-101-110/Eye-110/110-COVER/Eye110_1000px.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.eyemagazine.com/magazine/issue-110",
+      "issue_label": "Eye 110",
+      "width": 1000,
+      "height": 1253,
+      "notes": "Flat front cover from the publisher's issue page; exactly 1000 px wide, no larger file found on the site."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.eyemagazine.com/",
+    "https://www.eyemagazine.com/magazine/issue-110",
+    "https://www.eyemagazine.com/issues",
+    "https://www.eyemagazine.com/contact",
+    "https://eyemagazine.escosubs.co.uk/current-issue.htm",
+    "https://eyemagazine.escosubs.co.uk/store/products,eye-110_139.htm",
+    "https://eyemagazine.com/blog/post/eye-110-is-here"
+  ],
+  "uncertainties": "Eye describes itself as a quarterly in older material, but the issues page shows 106 Summer 2024, 107 Winter 2025, 108 Spring 2025, 109 Winter 2026 and 110 Summer 2026, i.e. two issues a year lately, so biannual is recorded from cadence. The ESco shop shows 'From £20' for the current issue; the product page displayed £30 when served to a non-UK region, so £20 is taken as the UK single-copy price. The 9 June 2026 date is the blog announcement 'Eye 110 is here' found via search; stockists give 100 pages and 237 x 297 mm but these are not stated by the publisher so they are not recorded."
+}

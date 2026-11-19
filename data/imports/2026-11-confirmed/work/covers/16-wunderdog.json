@@ -1,0 +1,7 @@
+{
+  "key": "16-wunderdog",
+  "status": "failed",
+  "errors": [
+    "https://wunderdogmagazine.com/wp-content/uploads/2025/12/issue10-cover-1.jpg: Command failed: curl -sSL --fail --max-time 60 -A Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/124 Safari/537.36 https://wunderdogmagazine.com/wp-content/uploads/2025/12/issue10-cover-1.jpg\ncurl: (22) The requested URL returned error: 403\n"
+  ]
+}

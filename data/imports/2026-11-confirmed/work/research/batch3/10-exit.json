@@ -1,0 +1,55 @@
+{
+  "input_title": "Exit",
+  "official_name": "EXIT",
+  "publisher_name": "Exit Magazine",
+  "publisher_website": "https://www.exitmagazine.co.uk/",
+  "country": "GB",
+  "city": null,
+  "frequency": "biannual",
+  "cover_price": 20.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": 196,
+  "subscribe_url": "https://exitmagazineshop.bigcartel.com/",
+  "latest_issue_label": "Issue 53 (Autumn/Winter 2026)",
+  "latest_issue_date": "2026-08-20",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://exitmagazineshop.bigcartel.com/products.json",
+  "independent": "yes",
+  "independence_evidence": "Small London-style independent fashion and art title selling only through its own Big Cartel shop, with no parent company named on the site or shop (https://www.exitmagazine.co.uk/, https://exitmagazineshop.bigcartel.com/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent UK biannual whose Issue 53 (Autumn/Winter 2026) has been on sale since August 2026 in up to ten cover editions.",
+  "what_it_is": "EXIT is a British biannual art, fashion and photography magazine of around 196 glossy pages, now sold as a hardback edition with a different cover star for each copy (musicians, actors and drag performers such as Jinkx Monsoon or Working Men's Club in the current issue). Each issue mixes long fashion editorials and interviews with reproductions of work by artists and photographers such as Arthur Jafa, Roy Lichtenstein and Irving Penn. It is for readers who collect image-led fashion magazines and want multiple collectible covers.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://assets.bigcartel.com/product_images/433867065/EXIT+53+Syd+SPZL+cover.jpg",
+      "source_type": "publisher",
+      "page_url": "https://exitmagazineshop.bigcartel.com/product/working-mens-club-exit-autumn-winter-2026-issue-53",
+      "issue_label": "Issue 53 (Working Men's Club cover)",
+      "width": 1279,
+      "height": 1600,
+      "notes": "Flat front cover of one of the Issue 53 editions, from the publisher's own Big Cartel shop (original file without resize parameters)."
+    },
+    {
+      "url": "https://assets.bigcartel.com/product_images/432676311/83ff25eb-e4fa-4b6e-b78a-75ffaca24456.jpeg",
+      "source_type": "publisher",
+      "page_url": "https://exitmagazineshop.bigcartel.com/product/deathbyromy-exit-autumn-winter-2026-issue-53",
+      "issue_label": "Issue 53 (Deathbyromy cover)",
+      "width": 1280,
+      "height": 1600,
+      "notes": "Another Issue 53 cover edition from the publisher shop."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.exitmagazine.co.uk/",
+    "https://exitmagazineshop.bigcartel.com/products.json",
+    "https://exitmagazineshop.bigcartel.com/product/working-mens-club-exit-autumn-winter-2026-issue-53"
+  ],
+  "uncertainties": "Most of exitmagazine.co.uk (info, shop, section pages) redirects to a /splash page that returns no content, so the publisher's address and company name could not be read; the Big Cartel shop states only that orders ship from the United Kingdom, so city is left empty (the title is generally understood to be London-based). The issue date is the shop creation date of the first Issue 53 listing (Tish Weinstock cover, 2026-08-20); other cover editions were added through November 2026. Cadence: Issue 51 AW 2025 (Sept 2025), Issue 52 SS 2026 (Feb-May 2026), Issue 53 AW 2026, i.e. two issues a year. Page count (196) comes from the shop listing text."
+}

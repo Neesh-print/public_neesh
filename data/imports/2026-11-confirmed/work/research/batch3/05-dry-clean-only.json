@@ -1,0 +1,66 @@
+{
+  "input_title": "Dry Clean Only",
+  "official_name": "Dry Clean Only",
+  "publisher_name": null,
+  "publisher_website": null,
+  "country": "TR",
+  "city": null,
+  "frequency": "biannual",
+  "cover_price": null,
+  "currency": null,
+  "trim_size": "24 x 31 cm",
+  "page_count": null,
+  "subscribe_url": null,
+  "latest_issue_label": "N°10",
+  "latest_issue_date": "2026-05-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://kdpresse.com/en/products/dry-clean-only-n-10",
+  "independent": "unclear",
+  "independence_evidence": "No publisher site or imprint could be reached; distributor listings describe a small Turkish biannual fashion and culture title with no corporate parent mentioned (https://kdpresse.com/en/products/dry-clean-only-n-10, https://www.mmslondon.co.uk/shop/p/drycleanonlmagazine).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "A print issue (N°10) was released in May 2026 and nothing suggests ownership by a media group, although the publisher itself could not be verified because its website is down.",
+  "what_it_is": "Dry Clean Only is a large-format, English-language fashion and culture magazine made in Turkey, with each issue built around a loose theme such as belonging, sanctuary or adaptation. It runs fashion editorials with multiple collectible covers alongside photography, art, architecture and interviews, and gives space to queer visibility, women's rights and climate topics. It suits readers of international independent fashion titles who want a view from Istanbul's younger creative scene.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "photography",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/image00001_d6bacea6-8a2a-4f4f-b15a-88110c9a8160.jpg?v=1777457801",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/en/products/dry-clean-only-n-10",
+      "issue_label": "N°10",
+      "width": 2717,
+      "height": 3543,
+      "notes": "First of ten cover variants listed by KD Presse for N°10; flat cover, high resolution."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/image00002_552478a2-da83-46e3-b2af-f76cdcff6f0a.jpg?v=1777457801",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/en/products/dry-clean-only-n-10",
+      "issue_label": "N°10",
+      "width": 2717,
+      "height": 3543,
+      "notes": "Second cover variant of N°10 from KD Presse."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0883/4727/9700/files/image00003_ac7d43e6-4e77-464c-9fb6-a429aa7ea59f.jpg?v=1777457800",
+      "source_type": "distributor",
+      "page_url": "https://kdpresse.com/en/products/dry-clean-only-n-10",
+      "issue_label": "N°10",
+      "width": 2717,
+      "height": 3543,
+      "notes": "Third cover variant of N°10 from KD Presse."
+    }
+  ],
+  "evidence_urls": [
+    "https://kdpresse.com/en/products/dry-clean-only-n-10",
+    "https://kdpresse.com/en/collections/dry-clean-only/products.json?limit=50",
+    "https://www.mmslondon.co.uk/shop/p/drycleanonlmagazine",
+    "https://fashionmodeldirectory.com/magazines/dry-clean-only",
+    "https://drycleanonlymagazine.com/"
+  ],
+  "uncertainties": "The domain drycleanonlymagazine.com (cited by models.com as the magazine's site) served a GoDaddy placeholder titled 'Kuru Temizleme Dergisi' on 2026-11-17 and refused connections on 2026-11-19, so publisher name, city, cover price, subscribe page and official spelling could not be confirmed from the publisher; the name is spelled as the distributors spell it. Country is taken from KD Presse's 'origine: Turquie' and the credits of its Istanbul-based editor; the city is probably Istanbul but is not stated by the publisher. Latest-issue date is KD Presse's listing date (2026-05-04). Cadence from KD Presse: N°6 Dec 2023, N°7 May 2024, N°8 Mar 2025, N°9 May 2025, N°10 May 2026, so 'biannual' is the stated frequency and the real pace is slightly slower. Cover candidates come from a distributor and N°10 has ten alternative covers."
+}

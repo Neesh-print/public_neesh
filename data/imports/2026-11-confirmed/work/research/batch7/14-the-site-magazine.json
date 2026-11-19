@@ -1,0 +1,51 @@
+{
+  "input_title": "The Site Magazine",
+  "official_name": "The Site Magazine",
+  "publisher_name": "The Site Magazine",
+  "publisher_website": "https://www.thesitemagazine.com/",
+  "country": "CA",
+  "city": "Toronto",
+  "frequency": "irregular",
+  "cover_price": 25.0,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.thesitemagazine.com/buy",
+  "latest_issue_label": "Series 1 / Volume 4: Design : Mother",
+  "latest_issue_date": "2026-10-29",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://www.thesitemagazine.com/new-products/series-1-volume-4-design-mother",
+  "independent": "yes",
+  "independence_evidence": "The about page describes The Site Magazine as an independent journal on the built environment, founded in 2015 as the latest iteration of On Site Review, and run by a collective (The Site Collective) based in Toronto; the cover itself carries the line 'an independent journal for architecture & urbanism'.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Toronto architecture journal whose Series 1 / Volume 4 (Design : Mother) and a Living Landscapes special issue went on sale in its own shop on 29 October 2026.",
+  "what_it_is": "A Canadian journal of architecture, landscape, urbanism and design in which each volume takes a single theme (recent ones include common currencies and the idea of designing as a mother) and gathers essays, design projects, visual work and criticism from practitioners and academics. After a decade of numbered volumes it now appears as an occasional series of editorial publications and special issues, sold singly rather than by subscription. It is for architects, designers, students and readers interested in the politics and culture of the built environment.",
+  "suggested_primary_tag": "design",
+  "suggested_secondary_tag": "ideas-science",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5671ee0a0ab3774b3457b1ad/12e6beb4-076b-4182-8c30-5163d64eef91/Screenshot+2026-10-26+at+11.59.37%E2%80%AFAM.png",
+      "source_type": "publisher",
+      "page_url": "https://www.thesitemagazine.com/new-products/series-1-volume-4-design-mother",
+      "issue_label": "Series 1 / Volume 4: Design : Mother",
+      "width": 1450,
+      "height": 1738,
+      "notes": "Front cover shown face-on on a white background with a soft drop shadow (a screenshot of a render rather than a flat scan); the cover area is roughly 1050 x 1330 px and would need cropping. Served as WEBP."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.thesitemagazine.com/",
+    "https://www.thesitemagazine.com/thesitemagazine",
+    "https://www.thesitemagazine.com/thesitecollective",
+    "https://www.thesitemagazine.com/buy",
+    "https://www.thesitemagazine.com/new-products/series-1-volume-4-design-mother?format=json-pretty",
+    "https://www.thesitemagazine.com/new-products/living-landscapes?format=json-pretty",
+    "https://www.thesitemagazine.com/new-products/series-1-volume-3-common-currencies?format=json-pretty",
+    "https://www.thesitemagazine.com/archive"
+  ],
+  "uncertainties": "The publisher says it has moved away from a subscription model toward 'a more focused series of editorial publications and projects'; the shop shows Series 1 / Volume 3 (Common Currencies) listed August 2024 and Volume 4 (Design : Mother) plus a Living Landscapes special issue ($15 CAD) both listed 29 October 2026, so frequency is recorded as irregular. The issue date is the shop listing date, not a stated publication date. City is taken from the collective page, which lists the publisher and co-founder as based in Toronto; no postal address is given. Trim size and page count are not stated. The only cover image is a screenshot with a drop shadow rather than a flat file."
+}

@@ -1,0 +1,94 @@
+{
+  "10-exit": {
+    "name": "EXIT",
+    "publisher_name": "Exit Magazine",
+    "city": "London",
+    "tags": [
+      "fashion",
+      "photography"
+    ],
+    "description": "EXIT is a British biannual of art, fashion and photography, around 196 glossy pages now sold as a hardback with a different cover star on each copy. Each issue mixes long fashion editorials and interviews with reproductions of work by artists and photographers such as Arthur Jafa and Irving Penn. It is for readers who collect image led fashion magazines with multiple covers.",
+    "note": "Most of the publisher site redirects to an empty splash page, so no address could be read; London is taken from general knowledge of the title. Shop states only that orders ship from the UK."
+  },
+  "11-eye": {
+    "name": "Eye",
+    "publisher_name": "Eye Magazine",
+    "tags": [
+      "design",
+      "art"
+    ],
+    "description": "Eye is the London review of graphic design and visual culture, published since 1990, with long profiles of designers and typographers, design history essays, critical columns and extensive reviews of books, type and exhibitions. It has been independently owned since 2008. It is read by working designers, educators and students who want criticism and history rather than portfolios.",
+    "note": "Older material calls it quarterly; the issues page shows two issues a year since 2024, so biannual is recorded. UK single copy price GBP 20."
+  },
+  "12-far-near": {
+    "name": "FAR–NEAR",
+    "title_slug": "far-near",
+    "publisher_name": "FAR–NEAR",
+    "publisher_slug": "far-near",
+    "tags": [
+      "photography",
+      "identity-politics"
+    ],
+    "description": "FAR–NEAR is an annual book format publication from New York that looks at Asia and its diasporas through photography, essays, poetry and interviews, with contributors from Japan, Iran, Palestine, Vietnam and many countries between. Each 320 page volume is themed, most recently Heat, and is produced as a designed object with inserts and a fold out poster. It suits readers of art and photography books interested in Asian and diasporic perspectives.",
+    "note": "Publisher calls it annual but volumes do not appear every year. Price USD 55 standard edition."
+  },
+  "13-fatboy-zine": {
+    "name": "FatBoy Zine",
+    "publisher_name": "FatBoy Zine",
+    "tags": [
+      "food",
+      "identity-politics"
+    ],
+    "description": "FatBoy Zine is a London print zine about Asian food and identity, with each issue taking a theme or place, from Filipino food and Hong Kong to the diaspora and multi heritage cooking. Issues combine interviews with chefs and artists, commissioned writing and illustration, and a set of recipes. It is for readers interested in food culture, migration and design led small publishing.",
+    "note": "Price and on sale date come from Public Knowledge, the publisher's stated distributor. Six issues since 2018, so the pace is a little slower than the stated yearly."
+  },
+  "14-filling-station": {
+    "name": "filling Station",
+    "publisher_name": "filling Station Publications Society",
+    "tags": [
+      "literary",
+      "art"
+    ],
+    "description": "filling Station is a Calgary experimental literary magazine publishing new Canadian and international poetry, fiction, literary journalism and visual art, with an emphasis on emerging and formally adventurous writers. Issues are loosely themed and present around twenty five to thirty contributors each. It is for readers and writers of innovative small press literature.",
+    "note": "Volunteer run. Sells three issue subscriptions but the cadence is two a year. Only a low resolution cover was available."
+  },
+  "16-folding-rock": {
+    "name": "Folding Rock",
+    "publisher_name": "Folding Rock",
+    "city": "Swansea",
+    "tags": [
+      "literary",
+      "place"
+    ],
+    "description": "Folding Rock is a Welsh print magazine of new creative prose, with short fiction, creative non fiction and literary criticism from Wales and beyond alongside art and photography. Each issue is themed and mixes established names with first time writers, and the latest, Treigl, is bilingual in English and Welsh. It is for readers of literary magazines who want contemporary writing with a Welsh centre of gravity.",
+    "note": "Not-for-profit company limited by guarantee. No registered office or city on the pages read; Swansea is inferred from the editors' base and should be confirmed."
+  },
+  "18-freefall": {
+    "name": "FreeFall",
+    "publisher_name": "FreeFall Literary Society of Calgary",
+    "tags": [
+      "literary"
+    ],
+    "description": "FreeFall is a Calgary literary magazine publishing poetry, short fiction, memoir, essays, translations and author interviews twice a year, alongside the results of its annual prose and poetry contest. Each issue runs several dozen contributors, mostly Canadian, behind a commissioned cover artwork. It is for readers and writers of Canadian literary fiction and poetry.",
+    "note": "Non-profit society. Fall 2026 issue dated November 2026 from the cover upload. Only a small cover image was available."
+  },
+  "02-doesnt-exist": {
+    "title_slug": "doesnt-exist"
+  },
+  "11-its-freezing-in-la": {
+    "title_slug": "its-freezing-in-la"
+  },
+  "17-strangers-guide": {
+    "title_slug": "strangers-guide"
+  },
+  "08-hube": {
+    "action": "check",
+    "name": "hube",
+    "reason": "Country and city could not be established. The publisher site names no company, address or city, and third party listings disagree (France or Cyprus, Paris or Berlin). Otherwise qualifies: independent biannual, no. 9 October 2026, EUR 35."
+  },
+  "08-mulieris": {
+    "action": "check",
+    "name": "Mulieris Magazine",
+    "reason": "City could not be established and the import requires one for a non-US title. The publisher site says only based in Italy. Otherwise qualifies: independent annual, Issue 06 May 2026."
+  }
+}

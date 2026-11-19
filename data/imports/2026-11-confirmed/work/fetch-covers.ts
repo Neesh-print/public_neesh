@@ -35,6 +35,10 @@ for (const b of readdirSync(join(WORK, 'research/out'))) {
 files.sort();
 
 const order = { publisher: 0, distributor: 1, stockist: 2 } as Record<string, number>;
+const curation: Record<string, unknown> = {};
+for (const f of readdirSync(join(WORK, 'curate'))) {
+  if (f.endsWith('.json')) Object.assign(curation, JSON.parse(readFileSync(join(WORK, 'curate', f), 'utf8')));
+}
 
 async function main() {
   let done = 0;
@@ -50,7 +54,8 @@ async function main() {
       console.error('bad json', file);
       continue;
     }
-    const cands = [...(rec.cover_candidates ?? [])];
+    const cur = curation[key] as { cover_candidates?: Candidate[] } | undefined;
+    const cands = [...(cur?.cover_candidates ?? rec.cover_candidates ?? [])];
     if (cands.length === 0 || rec.qualifies === 'no') {
       writeFileSync(outJson, JSON.stringify({ key, status: 'none', reason: cands.length === 0 ? 'no candidates' : 'does not qualify' }, null, 2));
       continue;

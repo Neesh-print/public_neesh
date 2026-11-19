@@ -1,0 +1,47 @@
+{
+  "input_title": "Riddle Fence",
+  "official_name": "Riddle Fence",
+  "publisher_name": "Riddle Fence Inc.",
+  "publisher_website": "https://riddlefence.com/",
+  "country": "CA",
+  "city": "St. John's",
+  "frequency": "triannual",
+  "cover_price": 16.95,
+  "currency": "CAD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://riddlefence.com/subscribe/",
+  "latest_issue_label": "Issue #58 (Summer 2026)",
+  "latest_issue_date": "2026-07-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://riddlefence.square.site/product/issue-58/SFVP7KJSPMUOEOPE2TY3AEGJ",
+  "independent": "yes",
+  "independence_evidence": "Self-published arts journal run by a small St. John's team (Riddle Fence Inc.), distributed nationally by Magazines Canada (https://riddlefence.com/about-riddle-fence/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Newfoundland literary journal with print Issue #58 (Summer 2026) on sale and Issue 59 launching 28 November 2026.",
+  "what_it_is": "A journal of arts and culture from Newfoundland and Labrador that prints poetry, short fiction, creative non-fiction, features and reviews alongside contemporary visual art, with a strong regional base and contributors from across Canada and beyond. Issues carry contest winners and themed features. It is for readers of Canadian literary magazines and the Atlantic arts scene.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://147135967.cdn6.editmysite.com/uploads/1/4/7/1/147135967/RHFMETFH2ST5L35UBIWU4D3T.jpeg",
+      "source_type": "publisher",
+      "page_url": "https://riddlefence.com/",
+      "issue_label": "Issue #58",
+      "width": 2075,
+      "height": 2560,
+      "notes": "Flat front cover from the publisher's Square store (also shown on the homepage 'Recent Issue' block); cover carries '#58 | $16.95'."
+    }
+  ],
+  "evidence_urls": [
+    "https://riddlefence.com/",
+    "https://riddlefence.com/about-riddle-fence/",
+    "https://riddlefence.square.site/product/issue-58/SFVP7KJSPMUOEOPE2TY3AEGJ",
+    "https://riddlefence.com/?s=issue+58"
+  ],
+  "uncertainties": "The Square store renders prices with JavaScript, so the $16.95 single-copy price is read from the price printed on the cover image itself (assumed CAD). Issue 58 is labelled Summer 2026; its web features were uploaded July 2026, so recorded as July 2026. The homepage says three issues a year while the about page says four; the actual cadence (Issue 58 summer 2026, Issue 59 launching November 2026) fits triannual."
+}

@@ -1,0 +1,57 @@
+{
+  "input_title": "FatBoy Zine",
+  "official_name": "FatBoy Zine",
+  "publisher_name": "FatBoy Zine",
+  "publisher_website": "https://fatboyzine.com/",
+  "country": "GB",
+  "city": "London",
+  "frequency": "annual",
+  "cover_price": 10.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://fatboyzine.com/zines/",
+  "latest_issue_label": "Issue 6: Multi-Heritage. Together, Not Apart",
+  "latest_issue_date": "2025-09-29",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://publicknowledgebooks.com/products/fatboy-zine-issue-6-multi-heritage-together-not-apart-1",
+  "independent": "yes",
+  "independence_evidence": "Self-published zine from a one-person London creative studio, distributed by Public Knowledge Books; no corporate owner (https://fatboyzine.com/about/).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent London food zine whose sixth issue went on sale in September 2025.",
+  "what_it_is": "FatBoy Zine is a London-made, yearly print zine about Asian food and identity. Each issue takes a theme or place (Filipino food, Hong Kong, Taiwan, the diaspora, multi-heritage cooking) and combines interviews with chefs and artists, commissioned writing and illustration, and a set of recipes. It is for readers interested in food culture, migration and graphic design-led small publishing.",
+  "suggested_primary_tag": "food",
+  "suggested_secondary_tag": "identity-politics",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://fatboyzine.com/wp-content/uploads/2025/08/FBZ-issue6-Multi-Heritage.jpg",
+      "source_type": "publisher",
+      "page_url": "https://fatboyzine.com/zines/",
+      "issue_label": "Issue 6",
+      "width": 482,
+      "height": 678,
+      "notes": "Flat front cover from the publisher's zines page, but only 482x678 px."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0774/3068/6031/files/PKB_1504.jpg?v=1759151558",
+      "source_type": "distributor",
+      "page_url": "https://publicknowledgebooks.com/products/fatboy-zine-issue-6-multi-heritage-together-not-apart-1",
+      "issue_label": "Issue 6",
+      "width": 3000,
+      "height": 2251,
+      "notes": "High-resolution product photograph from the distributor's shop; landscape photo of the zine rather than a flat cover scan, would need cropping."
+    }
+  ],
+  "evidence_urls": [
+    "https://fatboyzine.com/",
+    "https://fatboyzine.com/zines/",
+    "https://fatboyzine.com/about/",
+    "https://fatboyzine.com/contact/",
+    "https://publicknowledgebooks.com/products/fatboy-zine-issue-6-multi-heritage-together-not-apart-1.json"
+  ],
+  "uncertainties": "The publisher sells through Public Knowledge Books (its stated distributor), so the GBP 10 price and 2025-09-29 on-sale date come from that shop's listing rather than a publisher-run shop. 'Released yearly' is the publisher's statement; the site shows six issues since 2018, so the real pace is a little slower than annual. Trim size and page count are not stated."
+}

@@ -1,0 +1,61 @@
+{
+  "input_title": "New Escapologist",
+  "official_name": "New Escapologist",
+  "publisher_name": "New Escapologist",
+  "publisher_website": "https://newescapologist.co.uk/",
+  "country": "GB",
+  "city": "Glasgow",
+  "frequency": "annual",
+  "cover_price": 10.0,
+  "currency": "GBP",
+  "trim_size": "A5 (148 x 210 mm)",
+  "page_count": 88,
+  "subscribe_url": "https://newescapologist.co.uk/shop/",
+  "latest_issue_label": "Issue 19",
+  "latest_issue_date": "2026-05-20",
+  "latest_issue_date_precision": "day",
+  "latest_issue_source_url": "https://newescapologist.co.uk/product/issue-19/",
+  "independent": "yes",
+  "independence_evidence": "Self-published by its editor Robert Wringham (the shop and blog are on his magazine's own WordPress site and the FAQ describes the title's relaunch after a Kickstarter); no company group involved.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Self-published Glasgow essay magazine with Issue 19 ('Do What Thou Wilt') released 20 May 2026 and Issue 18 in June 2025.",
+  "what_it_is": "A small A5 essay magazine about getting out of things: escaping the office, consumer culture, debt and other obligations in favour of a freer, more leisurely life. Each 88-page issue combines essays, a readers' workplace-complaints page, columns and interviews, with a colour cover and black-and-white interior. It is for readers of idler-style anti-work writing and practical minimalism.",
+  "suggested_primary_tag": "ideas-science",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0514/7889/files/newescapologist_19_f650a372-75b4-45a6-85ca-2b49a31c42ff.png?v=1785257019",
+      "source_type": "stockist",
+      "page_url": "https://magculture.com/products/new-escapologist-18-copy",
+      "issue_label": "Issue 19",
+      "width": 1000,
+      "height": 1471,
+      "notes": "Flat front cover with masthead and '19. Do What Thou Wilt' from magCulture's listing; visually checked."
+    },
+    {
+      "url": "https://newescapologist.co.uk/wp-content/uploads/2026/03/IMG_0686.jpeg",
+      "source_type": "publisher",
+      "page_url": "https://newescapologist.co.uk/product/issue-19/",
+      "issue_label": "Issue 19",
+      "width": 1536,
+      "height": 2048,
+      "notes": "Publisher's product image: the cover photograph (mosaic floor) without the masthead or title text, so not the finished front cover; use only if a cropped artwork is acceptable."
+    }
+  ],
+  "evidence_urls": [
+    "https://newescapologist.co.uk/",
+    "https://newescapologist.co.uk/product/issue-19/",
+    "https://newescapologist.co.uk/product/issue-18/",
+    "https://newescapologist.co.uk/product/issue-17/",
+    "https://newescapologist.co.uk/shop/",
+    "https://newescapologist.co.uk/faq/",
+    "https://newescapologist.co.uk/about/",
+    "https://wringham.co.uk/about",
+    "https://magculture.com/products/new-escapologist-18-copy"
+  ],
+  "uncertainties": "The magazine's own site carries no postal address; Glasgow comes from the editor's personal about page ('I now live mainly in Glasgow'), the magazine's Glasgow launch events, and magCulture's listing ('Glasgow, UK'). The FAQ says the aim is two issues a year (June and December), but actual releases were 10 Oct 2024, 20 Jun 2025 and 20 May 2026, so annual is recorded per the cadence rule. Issue dates are the product-post dates on the publisher's site. Format (A5, 88 pages) from the publisher's FAQ."
+}

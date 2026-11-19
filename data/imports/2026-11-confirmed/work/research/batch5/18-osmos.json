@@ -1,0 +1,48 @@
+{
+  "input_title": "Osmos",
+  "official_name": "OSMOS Magazine",
+  "publisher_name": "OSMOS",
+  "publisher_website": "https://www.osmos.online/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "biannual",
+  "cover_price": 25.0,
+  "currency": "USD",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.osmos.online/magazines/osmos-magazine-subscription",
+  "latest_issue_label": "Issue 30",
+  "latest_issue_date": "2026-04-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.osmos.online/magazines/osmos-magazine-issue-29-zx7zz",
+  "independent": "yes",
+  "independence_evidence": "The about page describes OSMOS as a New York project space and publishing imprint (OSMOS Address, OSMOS Publishing) directed by its founder-editor Cay Sophie Rabinowitz; no corporate owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent New York art-and-photography magazine with Issue 30 (Spring 2026) on sale and two issues published in 2025.",
+  "what_it_is": "An art magazine about photography and how images are used, mixing critical essays, artist conversations, portfolios and reportage in recurring thematic sections. Issues run to around 100 pages and are tied to the publisher's exhibition programme in New York. It is aimed at readers of contemporary art criticism and photography.",
+  "suggested_primary_tag": "photography",
+  "suggested_secondary_tag": "art",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://images.squarespace-cdn.com/content/v1/5cf93d1f90f20000014c858b/105f7bde-1130-443a-838c-a0024e9c5ca1/Screenshot+2026-04-07+at+4.29.08%E2%80%AFPM.png",
+      "source_type": "publisher",
+      "page_url": "https://www.osmos.online/magazines/osmos-magazine-issue-29-zx7zz",
+      "issue_label": "Issue 30",
+      "width": 1014,
+      "height": 1330,
+      "notes": "Flat front cover (abstract rainbow-coloured image under OSMOS MAGAZINE masthead) from the publisher's product page; the file is a screenshot export, so slightly soft."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.osmos.online/",
+    "https://www.osmos.online/about",
+    "https://www.osmos.online/magazines",
+    "https://www.osmos.online/magazines/osmos-magazine-issue-29-zx7zz",
+    "https://www.osmos.online/magazines/osmos-magazine-subscription"
+  ],
+  "uncertainties": "About page calls it a 'Quarterly Print Magazine' but the shop shows two issues a year (26 Apr 2024, 27 Nov 2024, 28 Jun 2025, 29 Oct 2025, 30 Apr 2026), so biannual recorded. Issue 30 is labelled Spring 2026; its listing went live 8 April 2026, recorded at month precision. The product URL slug still says issue-29 (cloned listing). Page count not stated on the publisher page."
+}

@@ -1,0 +1,59 @@
+{
+  "input_title": "Vingt Sept",
+  "official_name": "Vingt Sept",
+  "publisher_name": "Vingt Sept, Inc",
+  "publisher_website": "https://www.vingtseptmagazine.com/",
+  "country": "US",
+  "city": "New York",
+  "frequency": "biannual",
+  "cover_price": 25.0,
+  "currency": "GBP",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.vingtseptmagazine.com/buy",
+  "latest_issue_label": "Identity Issue",
+  "latest_issue_date": "2026-01-01",
+  "latest_issue_date_precision": "year",
+  "latest_issue_source_url": "https://www.vingtseptmagazine.com/product-page/gavin-leatherwood-identity-issue",
+  "independent": "yes",
+  "independence_evidence": "The site footer names the publisher as 'Vingt Sept, INC London & New York' with a Manhattan address and no parent group; the title appears to be self-published by the small company behind the magazine (https://www.vingtseptmagazine.com/contact).",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "An independently published print fashion magazine whose current Identity Issue (multiple covers, GBP 25) is on sale through stockists in 2026.",
+  "what_it_is": "Vingt Sept is a fashion and culture magazine printed in several cover editions per issue, each fronted by an actor, musician or model and backed by fashion editorials, beauty stories and interviews. The site also runs daily online coverage of fashion shows, beauty products, restaurants, hotels and arts events in London and New York. It suits readers of glossy independent fashion titles who follow emerging screen and music talent.",
+  "suggested_primary_tag": "fashion",
+  "suggested_secondary_tag": "lifestyle",
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://static.wixstatic.com/media/b72666_b0847d1b6f5f4de98ad04b3830bed419~mv2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.vingtseptmagazine.com/product-page/gavin-leatherwood-identity-issue",
+      "issue_label": "Identity Issue (Gavin Leatherwood cover)",
+      "width": 5625,
+      "height": 7500,
+      "notes": "Original Wix upload of the Gavin Leatherwood cover; flat front cover with masthead. One of several covers for the same issue."
+    },
+    {
+      "url": "https://static.wixstatic.com/media/b72666_1365860084e5498f8425920ca685d277~mv2.jpg/v1/fill/w_3750,h_5000,al_c,q_85,usm_0.66_1.00_0.01/b72666_1365860084e5498f8425920ca685d277~mv2.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.vingtseptmagazine.com/product-page/confessions-of-a-cougar",
+      "issue_label": "Identity Issue (Confessions of a Cougar / Frankie Park cover)",
+      "width": 3750,
+      "height": 5000,
+      "notes": "Dimensions taken from the Wix image URL parameters, not measured; alternative cover of the same issue."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.vingtseptmagazine.com/",
+    "https://www.vingtseptmagazine.com/buy",
+    "https://www.vingtseptmagazine.com/product-page/gavin-leatherwood-identity-issue",
+    "https://www.vingtseptmagazine.com/product-page/confessions-of-a-cougar",
+    "https://www.vingtseptmagazine.com/contact",
+    "https://www.vingtseptmagazine.com/stockists",
+    "https://www.vingtseptmagazine.com/post/editorial-myth-and-migration"
+  ],
+  "uncertainties": "The publisher gives no release date for the Identity Issue; the homepage banner and copyright are 2026 and the issue's editorials (e.g. 'Myth and Migration', dated 14 April 2026 on the site) suggest spring 2026, so only year precision is recorded. The footer says 'London & New York' and gives only a New York address, so the base is recorded as New York although the title began in London and most stockists are in the UK. Frequency 'biannual' comes from the distributor hint and the issue cadence (Genesis, Masters, Identity issues), not from an explicit publisher statement. All print copies are 'available in stores only' on the site, so GBP 25 is the listed price rather than a currently purchasable one. The Gavin Leatherwood and Confessions of a Cougar covers appear to be alternative covers of the same Identity Issue; the site also lists Archetypes Unbound, Cigarettes & Coffee and The Great Escape as 'new issue' products, which may be further covers of it."
+}

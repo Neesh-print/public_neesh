@@ -1,0 +1,49 @@
+{
+  "input_title": "Le matricule des anges",
+  "official_name": "Le Matricule des Anges",
+  "publisher_name": "Le Matricule des Anges (SIRET 389 730 847 00057; directeur de la publication Thierry Guichard)",
+  "publisher_website": "https://www.lmda.net",
+  "country": "FR",
+  "city": "Montpellier",
+  "frequency": "monthly",
+  "cover_price": 7.3,
+  "currency": "EUR",
+  "trim_size": null,
+  "page_count": null,
+  "subscribe_url": "https://www.lmda.net/-S-abonner-",
+  "latest_issue_label": "N° 278 (novembre 2026)",
+  "latest_issue_date": "2026-11-01",
+  "latest_issue_date_precision": "month",
+  "latest_issue_source_url": "https://www.lmda.net/numero_278",
+  "independent": "yes",
+  "independence_evidence": "Legal notice gives the publisher as Le Matricule des Anges itself, head office BP 20225, 34004 Montpellier cedex 1, SIRET 389 730 847 00057, publication director Thierry Guichard; a stand-alone literary monthly since 1992 with no media-group owner.",
+  "has_issue_out": "yes",
+  "printed_since_2025": "yes",
+  "qualifies": "yes",
+  "qualifies_reason": "Independent Montpellier literary monthly whose issue 278 (November 2026) is the current issue on its own site.",
+  "what_it_is": "A French-language monthly devoted to contemporary literature, built around a themed dossier on a writer or movement plus review sections for fiction, poetry, essays, theatre, literary history and illustrated books. It runs ten issues a year, sells single copies and subscriptions directly and gives subscribers access to its online archive back to 1992. It suits French readers who follow small-press and translated literature closely.",
+  "suggested_primary_tag": "literary",
+  "suggested_secondary_tag": null,
+  "identity_tags": [],
+  "identity_tag_evidence_url": null,
+  "cover_candidates": [
+    {
+      "url": "https://www.lmda.net/images/imgunes/couv278.jpg",
+      "source_type": "publisher",
+      "page_url": "https://www.lmda.net/numero_278",
+      "issue_label": "N° 278 (novembre 2026)",
+      "width": 354,
+      "height": 500,
+      "notes": "Flat front cover from the publisher's issue page, but only 354x500 px; no larger version found on the site (IMG/ and cache-vignettes guesses returned 404). Below the 1000px target."
+    }
+  ],
+  "evidence_urls": [
+    "https://www.lmda.net",
+    "https://www.lmda.net/numero_278",
+    "https://www.lmda.net/-S-abonner-",
+    "https://www.lmda.net/-Mentions-legales-",
+    "https://www.lmda.net/-Nous-contacter-",
+    "https://www.lmda.net/-Presentation-"
+  ],
+  "uncertainties": "Single-issue price 7,30 EUR (8,30 EUR outside France, 4,50 EUR PDF) was read from the issue 278 page's price markup; the shop requires a login to order. The legal notice names the publisher only as 'Le Matricule des Anges' with a SIRET and a PO box; the exact legal form (association or company) is not stated on the pages read. Frequency recorded as monthly for a stated 10 issues per year (the subscription is '10 numéros' and the site calls it 'le mensuel de la littérature contemporaine'). Only a small cover image is available."
+}
