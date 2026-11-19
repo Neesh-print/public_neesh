@@ -11,6 +11,8 @@
 //                                                  are inserted with the row's review_status
 //   npm run load -- --skip-covers                  leave covers, cover sources and issues alone
 //   npm run load -- --dry-run                      print what would change without writing
+//   npm run load -- --note "2026-11 batch"        stamp review_note on new rows so one batch can
+//                                                  be approved (or rejected) together
 //
 // Rows that carry cover and issue columns (see validate.ts) also get their
 // cover fetched into the covers bucket, a directory_cover_sources row and a
@@ -45,7 +47,9 @@ const args = process.argv.slice(2);
 const insertOnly = args.includes('--insert-only');
 const skipCovers = args.includes('--skip-covers');
 const dryRun = args.includes('--dry-run');
-const inputPath = args.find((a) => !a.startsWith('--')) ?? 'data/clean.json';
+const noteIndex = args.indexOf('--note');
+const reviewNote = noteIndex >= 0 ? args[noteIndex + 1] ?? null : null;
+const inputPath = args.find((a, i) => !a.startsWith('--') && i !== noteIndex + 1) ?? 'data/clean.json';
 
 async function main() {
   if (!existsSync(inputPath)) {
@@ -95,7 +99,7 @@ async function main() {
     }
     const { data, error } = await supabase
       .from('directory_publishers')
-      .upsert({ ...publisher, created_from: 'imported' }, { onConflict: 'slug' })
+      .upsert({ ...publisher, created_from: 'imported', ...(reviewNote ? { review_note: reviewNote } : {}) }, { onConflict: 'slug' })
       .select('id')
       .single();
     if (error || !data) {
@@ -150,7 +154,7 @@ async function main() {
     const { data: title, error } = await supabase
       .from('directory_titles')
       .upsert(
-        { ...row.title, publisher_id: publisherId, created_from: 'imported' },
+        { ...row.title, publisher_id: publisherId, created_from: 'imported', ...(reviewNote ? { review_note: reviewNote } : {}) },
         { onConflict: 'slug' }
       )
       .select('id')
@@ -229,6 +233,7 @@ async function main() {
           followers_notified_at: now,
           created_from: 'imported',
           review_status: row.title.review_status ?? 'approved',
+          review_note: reviewNote,
         });
         if (issueError) console.error(`issue failed for ${row.title.slug}. ${issueError.message}`);
         else issuesInserted += 1;
