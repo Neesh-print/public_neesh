@@ -33,6 +33,7 @@ export function NewsletterForm({
           Prefer: 'return=minimal',
         },
         body: JSON.stringify({ email }),
+        signal: AbortSignal.timeout(10000),
       });
       setState(res.ok || res.status === 409 ? 'done' : 'error');
     } catch {
@@ -52,12 +53,16 @@ export function NewsletterForm({
           required
         />
         <button type="submit" disabled={state === 'busy'}>
-          Subscribe
+          {state === 'busy' ? 'Subscribing…' : 'Subscribe'}
         </button>
       </div>
-      {state === 'done' && <span className="form-note">{confirmation}</span>}
+      {state === 'done' && (
+        <span className="form-note" role="status">
+          {confirmation}
+        </span>
+      )}
       {state === 'error' && (
-        <span className="form-error">That didn&rsquo;t go through. Check the address and try again.</span>
+        <span className="form-error" role="alert">That didn&rsquo;t go through. Check the address and try again.</span>
       )}
     </form>
   );

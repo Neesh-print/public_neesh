@@ -29,6 +29,7 @@ export async function GET() {
     entry('/'),
     entry('/index'),
     entry('/publishers'),
+    entry('/calculator'),
     entry('/spaces'),
     entry('/packs'),
     entry('/journal'),

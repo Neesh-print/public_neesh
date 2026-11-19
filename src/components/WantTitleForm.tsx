@@ -1,15 +1,38 @@
+import { Honeypot } from './Honeypot';
+import { TrackedForm } from './TrackedCta';
+
 // The single demand CTA on a title profile: one form for spaces and readers
 // alike (email, postcode, which one you are). Progressively enhanced, plain
 // form post, no JS required; the API maps the role onto the stored signal
 // types so the demand data stays split by audience.
-export function WantTitleForm({ titleId }: { titleId: string }) {
+// On a title that isn't orderable on Neesh the copy promises only what we can
+// do, which is ask the publisher. It never implies Neesh can sell the title.
+export function WantTitleForm({
+  titleId,
+  titleSlug,
+  listed = false,
+}: {
+  titleId: string;
+  titleSlug: string;
+  listed?: boolean;
+}) {
   return (
     <details className="want-details">
       <summary>
-        <span className="q">Buy it wholesale.</span>
-        <span className="hint">Tell us where you are and we will let you know when it is near you.</span>
+        {listed ? (
+          <>
+            <span className="q">Buy it wholesale.</span>
+            <span className="hint">Tell us where you are and we will let you know when it is near you.</span>
+          </>
+        ) : (
+          <>
+            <span className="q">Want this in your shop?</span>
+            <span className="hint">Tell us where you are and we&rsquo;ll ask the publisher.</span>
+          </>
+        )}
       </summary>
-      <form className="want-form" action="/api/signal" method="post">
+      <TrackedForm className="want-form" action="/api/signal" method="post" cta="request_it" titleSlug={titleSlug}>
+        <Honeypot />
         <input type="hidden" name="title_id" value={titleId} />
         <input type="hidden" name="signal_type" value="title_interest" />
         <label className="field">
@@ -35,7 +58,7 @@ export function WantTitleForm({ titleId }: { titleId: string }) {
             Let me know
           </button>
         </div>
-      </form>
+      </TrackedForm>
     </details>
   );
 }

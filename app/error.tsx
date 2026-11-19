@@ -1,7 +1,20 @@
 'use client';
 
+import { useEffect } from 'react';
+import { reportClientError } from '@/lib/report-error';
+
 // 500 copy from the transactional doc (4.2).
-export default function ErrorPage({ reset }: { error: Error; reset: () => void }) {
+export default function ErrorPage({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  useEffect(() => {
+    reportClientError(error, 'page');
+  }, [error]);
+
   return (
     <main className="container system-page">
       <h1>Something broke on our end</h1>

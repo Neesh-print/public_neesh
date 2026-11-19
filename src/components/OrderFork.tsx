@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { appUrl } from '@/lib/seo';
+import { trackTitleCta } from './TrackedCta';
 import { ArrowIcon } from './Logo';
 
 // The Order on Neesh fork, v2. Neesh sells wholesale, so a space heads into
@@ -43,7 +44,11 @@ export function OrderFork({
           direct sales.
         </p>
         <div className="cta-row" style={{ marginTop: 8 }}>
-          <Link className="btn solid" href={`/titles/${titleSlug}#stockists`}>
+          <Link
+            className="btn solid"
+            href={`/titles/${titleSlug}#stockists`}
+            onClick={() => trackTitleCta('see_stocked', titleSlug)}
+          >
             See where it&rsquo;s stocked
             <ArrowIcon />
           </Link>

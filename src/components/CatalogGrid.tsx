@@ -11,6 +11,8 @@ export interface CatalogItem {
   slug: string;
   cover: string | null;
   publisher: string;
+  // Origin and frequency line, prebuilt on the server (titleCardMeta).
+  meta: string | null;
   niches: string[];
   onNeesh: boolean;
   // The three most recently Neesh-listed titles carry the Featured badge.
@@ -115,6 +117,7 @@ export function CatalogGrid({ items }: { items: CatalogItem[] }) {
                 slug: item.slug,
                 cover: item.cover,
                 publisher: item.publisher,
+                meta: item.meta,
                 niche: item.niches[0] ?? null,
                 onNeesh: item.onNeesh,
                 featured: item.featured,
