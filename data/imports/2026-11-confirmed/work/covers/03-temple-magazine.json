@@ -1,5 +1,12 @@
 {
   "key": "03-temple-magazine",
-  "status": "none",
-  "reason": "no candidates"
+  "status": "ok",
+  "url": "https://magculture.com/cdn/shop/files/TempleSpecial2026Issue.png?v=1794936395",
+  "page_url": "https://magculture.com/",
+  "source_type": "stockist",
+  "issue_label": "Special Issue 2026",
+  "width": 1210,
+  "height": 1612,
+  "bytes": 338721,
+  "errors": []
 }

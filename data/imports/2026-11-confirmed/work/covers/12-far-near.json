@@ -1,5 +1,12 @@
 {
   "key": "12-far-near",
-  "status": "none",
-  "reason": "no candidates"
+  "status": "ok",
+  "url": "https://far-near.media/wp-content/uploads/2025/09/Vol6-Standard.jpg",
+  "page_url": "https://far-near.media/",
+  "source_type": "publisher",
+  "issue_label": "Vol. 6 Heat",
+  "width": 2150,
+  "height": 2972,
+  "bytes": 927950,
+  "errors": []
 }

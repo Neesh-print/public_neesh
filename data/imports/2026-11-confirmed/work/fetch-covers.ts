@@ -67,7 +67,9 @@ async function main() {
     const errors: string[] = [];
     for (const cand of cands) {
       try {
-        const c = await convertCover(download(cand.url), cand.url);
+        const local = (cand as Candidate & { local_file?: string }).local_file;
+        const bytes = local && existsSync(local) ? readFileSync(local) : download(cand.url);
+        const c = await convertCover(bytes, cand.url);
         const long = Math.max(c.width, c.height);
         if (!best || long > Math.max(best.width, best.height)) {
           best = { cand, width: c.width, height: c.height, jpeg: c.jpeg, low: c.lowResolution };
@@ -90,6 +92,7 @@ async function main() {
       if (ops.crop === 'left') args.push('-gravity', 'West', '-crop', '50%x100%+0+0', '+repage');
       if (ops.crop === 'right') args.push('-gravity', 'East', '-crop', '50%x100%+0+0', '+repage');
       if (ops.crop && ops.crop.startsWith('center:')) args.push('-gravity', 'Center', '-crop', ops.crop.slice(7) + '+0+0', '+repage');
+      if (ops.crop && ops.crop.startsWith('geo:')) args.push('-crop', ops.crop.slice(4), '+repage');
       if (ops.crop && ops.crop.startsWith('east:')) args.push('-gravity', 'East', '-crop', ops.crop.slice(5) + '+0+0', '+repage');
       if (ops.crop && ops.crop.startsWith('west:')) args.push('-gravity', 'West', '-crop', ops.crop.slice(5) + '+0+0', '+repage');
       if (ops.trim) args.push('-fuzz', `${ops.trim}%`, '-trim', '+repage');
