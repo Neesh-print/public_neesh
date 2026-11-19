@@ -20,6 +20,9 @@ Next.js (App Router) on Vercel plus Supabase. Carries two things.
 /out/[slug]                    outbound click logger, 302 to publisher site
 /api/signal                    POST demand signal ingest (JSON or form post)
 /api/claim                     POST claim submission (manual review in v1)
+/api/calculator/email          POST emails a calculator plan, stores it in calculator_plans
+/api/calculator/share          POST stores a plan for Copy link, answers with the short URL
+/api/calculator/plan?s=        GET the plan behind a short link (plan and name only)
 /api/revalidate                POST token-protected on-demand revalidation
 /api/client-error              POST browser render-error reports (error boundaries)
 /api/og                        branded OG image fallback
