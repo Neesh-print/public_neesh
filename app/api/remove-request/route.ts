@@ -3,6 +3,9 @@ import { z } from 'zod';
 import { serviceClient } from '@/lib/supabase';
 import { emailHtml, notify, sendEmail } from '@/lib/notify';
 import { appUrl } from '@/lib/seo';
+import { readSubmission, redirectWithNotice, tooManyRequests } from '@/lib/forms';
+import { limitFormRequest } from '@/lib/rate-limit';
+import { log } from '@/lib/log';
 
 export const dynamic = 'force-dynamic';
 
@@ -16,36 +19,17 @@ const removeSchema = z.object({
 // (or claiming) the page, and removal only happens once they reply to
 // confirm. The admin is notified so the reply has somewhere to land.
 export async function POST(req: NextRequest) {
-  const contentType = req.headers.get('content-type') ?? '';
-  const isForm =
-    contentType.includes('application/x-www-form-urlencoded') ||
-    contentType.includes('multipart/form-data');
+  const submission = await readSubmission(req);
+  if (!submission.ok) return NextResponse.json({ ok: false }, { status: 400 });
+  const { isForm, raw, trapped } = submission;
 
-  let raw: unknown;
-  try {
-    if (isForm) {
-      const fd = await req.formData();
-      const entries: Record<string, string> = {};
-      for (const [k, v] of fd.entries()) {
-        if (typeof v === 'string' && v.trim() !== '') entries[k] = v.trim();
-      }
-      raw = entries;
-    } else {
-      raw = await req.json();
-    }
-  } catch {
-    return NextResponse.json({ ok: false }, { status: 400 });
+  const finish = () =>
+    isForm ? redirectWithNotice(req, 'remove_request') : NextResponse.json({ ok: true });
+
+  if (!(await limitFormRequest(req, 'remove-request'))) {
+    return isForm ? finish() : tooManyRequests();
   }
-
-  const finish = () => {
-    if (isForm) {
-      const referer = req.headers.get('referer');
-      const url = referer ? new URL(referer) : new URL('/index', req.url);
-      url.searchParams.set('submitted', 'remove_request');
-      return NextResponse.redirect(url, 303);
-    }
-    return NextResponse.json({ ok: true });
-  };
+  if (trapped) return finish();
 
   const parsed = removeSchema.safeParse(raw);
   if (!parsed.success) {
@@ -60,9 +44,12 @@ export async function POST(req: NextRequest) {
       .select('name, slug')
       .eq('id', title_id)
       .maybeSingle();
-    const titleName = title?.name ?? 'your title';
+    // Only real titles trigger an email; an unknown id is answered the same
+    // way but sends nothing.
+    if (!title) return finish();
+    const titleName = title.name;
     const claimLink = appUrl(
-      `/apply/publisher?title=${encodeURIComponent(titleName)}&claim=${title?.slug ?? ''}`
+      `/apply/publisher?title=${encodeURIComponent(titleName)}&claim=${title.slug}`
     );
 
     const body =
@@ -83,12 +70,12 @@ export async function POST(req: NextRequest) {
 
     await notify(
       `Removal request: ${titleName}`,
-      `${email} asked to remove ${titleName} (/titles/${title?.slug ?? title_id}).\n` +
+      `${email} asked to remove ${titleName} (/titles/${title.slug}).\n` +
         `They got the "are you sure" email; removal only on their reply.\n` +
-        `To remove: npm run remove -- ${title?.slug ?? title_id}`
+        `To remove: npm run remove -- ${title.slug}`
     );
   } catch (err) {
-    console.error('remove request failed', err);
+    log('error', 'remove_request.failed', { error: err });
   }
   return finish();
 }

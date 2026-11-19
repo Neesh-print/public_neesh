@@ -54,7 +54,7 @@ export default async function PacksPage() {
               <ArrowIcon />
             </a>
           </div>
-          <img className="feature-img" src="/assets/pack-hero.jpg" alt="A curated pack, stacked" />
+          <img loading="lazy" decoding="async" className="feature-img" src="/assets/pack-hero.jpg" alt="A curated pack, stacked" />
         </div>
       </section>
 
@@ -126,7 +126,7 @@ export default async function PacksPage() {
       </section>
 
       <section className="closing scrimmed">
-        <img src="/assets/couch-pair.jpg" alt="Two people reading magazines" style={{ opacity: 0.44 }} />
+        <img loading="lazy" decoding="async" src="/assets/couch-pair.jpg" alt="Two people reading magazines" style={{ opacity: 0.44 }} />
         <div
           className="scrim"
           style={{

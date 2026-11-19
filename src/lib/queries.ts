@@ -1,3 +1,4 @@
+import { cache } from 'react';
 import { anonClient, hasSupabaseEnv } from './supabase';
 import type {
   City,
@@ -33,7 +34,7 @@ export const PAGE_SIZE = 50;
 // and eligibility_note are not readable by anon (column grants), so never
 // select directory_publishers with *.
 const PUBLISHER_COLUMNS =
-  'id, name, slug, website, country, city, claimed, claimed_at, removed, eligible, stockist_page_url, stockist_status, stockist_checked_at, created_at, updated_at';
+  'id, name, slug, website, country, city, claimed, claimed_at, removed, eligible, created_from, stockist_page_url, stockist_status, stockist_checked_at, created_at, updated_at';
 const TITLE_SELECT = `*, publisher:directory_publishers!inner(${PUBLISHER_COLUMNS})`;
 
 function visibleTitles(client = anonClient()) {
@@ -66,6 +67,8 @@ export async function getAllVisibleTitleSlugs(): Promise<
     .select('slug, updated_at, publisher:directory_publishers!inner(id)')
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
+    // Unreviewed reader additions stay out of the sitemap (they are noindex).
+    .or('created_from.neq.reader_created,review_status.eq.approved')
     .limit(10000);
   return (data ?? []).map((r) => ({ slug: r.slug, updated_at: r.updated_at }));
 }
@@ -75,35 +78,35 @@ export async function getCatalogTitles(limit = 400): Promise<TitleFull[]> {
   if (!hasSupabaseEnv) return [];
   const { data } = await anonClient()
     .from('directory_titles')
-    .select(`${TITLE_SELECT}, directory_title_tags(tag:directory_tags(*))`)
+    .select(`${TITLE_SELECT}, directory_title_tags(*, tag:directory_tags(*))`)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
     .order('name')
     .limit(limit);
   return ((data as unknown as (TitleWithPublisher & {
-    directory_title_tags: { tag: Tag }[];
+    directory_title_tags: TagLink[];
   })[]) ?? []).map((row) => ({
     ...row,
-    tags: sortSubjectFirst((row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean)),
+    tags: orderTags(row.directory_title_tags ?? []),
   }));
 }
 
-export async function getTitleBySlug(slug: string): Promise<TitleFull | null> {
+async function loadTitleBySlug(slug: string): Promise<TitleFull | null> {
   if (!hasSupabaseEnv) return null;
   const { data } = await anonClient()
     .from('directory_titles')
-    .select(`${TITLE_SELECT}, directory_title_tags(tag:directory_tags(*))`)
+    .select(`${TITLE_SELECT}, directory_title_tags(*, tag:directory_tags(*))`)
     .eq('slug', slug)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
     .maybeSingle();
   if (!data) return null;
   const row = data as unknown as TitleWithPublisher & {
-    directory_title_tags: { tag: Tag }[];
+    directory_title_tags: TagLink[];
   };
   return {
     ...row,
-    tags: sortSubjectFirst((row.directory_title_tags ?? []).map((t) => t.tag).filter(Boolean)),
+    tags: orderTags(row.directory_title_tags ?? []),
   };
 }
 
@@ -153,7 +156,7 @@ export async function countPublisherTitles(publisherId: string): Promise<number>
 const STORE_COLUMNS =
   'id, slug, name, city, borough, country, website, claimed, claimed_at, address, instagram, hours, description, on_neesh';
 
-export async function getStoreBySlug(slug: string): Promise<Store | null> {
+async function loadStoreBySlug(slug: string): Promise<Store | null> {
   if (!hasSupabaseEnv) return null;
   const { data } = await anonClient()
     .from('directory_stores')
@@ -165,7 +168,7 @@ export async function getStoreBySlug(slug: string): Promise<Store | null> {
 
 // Every Index title on a shop's shelf, one row per title (a title can come
 // from both a publisher-wide and a title-specific link; keep the specific).
-export async function getStoreTitles(slug: string): Promise<StoreTitle[]> {
+async function loadStoreTitles(slug: string): Promise<StoreTitle[]> {
   if (!hasSupabaseEnv) return [];
   const { data } = await anonClient()
     .from('v_store_titles')
@@ -233,7 +236,7 @@ export function isCityPublished(city: Pick<City, 'slug' | 'store_count'>): boole
 
 const CITY_COLUMNS = 'slug, name, country, store_count, title_count, updated_at';
 
-export async function getCityBySlug(slug: string): Promise<City | null> {
+async function loadCityBySlug(slug: string): Promise<City | null> {
   if (!hasSupabaseEnv) return null;
   const { data } = await anonClient()
     .from('directory_cities')
@@ -325,14 +328,27 @@ export async function countListedStores(): Promise<number> {
   return count ?? 0;
 }
 
-// Subject tags ahead of identity tags, so tags[0] is always the primary niche.
-function sortSubjectFirst(tags: Tag[]): Tag[] {
-  return [...tags].sort((a, b) =>
-    (a.category === 'subject' ? 0 : 1) - (b.category === 'subject' ? 0 : 1)
-  );
+// One directory_title_tags row with its tag. is_primary arrives through the
+// row's *, so these reads keep working on a database that predates the
+// column (every link then reads as not primary).
+export interface TagLink {
+  is_primary?: boolean | null;
+  tag: Tag | null;
 }
 
-export async function getPublisherBySlug(
+// The primary niche first, then other subject tags, then identity tags, so
+// tags[0] is always the primary niche. Titles whose publisher has not chosen
+// a primary keep the database order among subject tags.
+export function orderTags(links: TagLink[]): Tag[] {
+  const rank = (link: TagLink) =>
+    link.tag?.category === 'subject' ? (link.is_primary ? 0 : 1) : 2;
+  return [...links]
+    .filter((link): link is TagLink & { tag: Tag } => Boolean(link.tag))
+    .sort((a, b) => rank(a) - rank(b))
+    .map((link) => link.tag);
+}
+
+async function loadPublisherBySlug(
   slug: string
 ): Promise<{ publisher: Publisher; titles: Title[] } | null> {
   if (!hasSupabaseEnv) return null;
@@ -362,6 +378,9 @@ export async function getAllVisiblePublisherSlugs(): Promise<
     .select('slug, updated_at')
     .eq('removed', false)
     .eq('eligible', true)
+    // Reader-added publishers are left out: anon cannot read their review
+    // state (column grant), and their titles carry them into the index.
+    .neq('created_from', 'reader_created')
     .limit(10000);
   return data ?? [];
 }
@@ -396,19 +415,86 @@ export async function getTagBySlug(slug: string): Promise<TagWithCount | null> {
   return { ...tag, live_count: directory_title_tags?.[0]?.count ?? 0 };
 }
 
+// The Featured trio: the three Neesh titles whose publishers joined the
+// platform most recently. Gate: the publisher must actually have a magazine
+// listed (neesh_magazine_id), not just an approved account.
+export const FEATURED_COUNT = 3;
+
+export function pickFeaturedSlugs(
+  titles: Pick<Title, 'slug' | 'available_on_neesh' | 'neesh_magazine_id' | 'neesh_listed_at'>[]
+): string[] {
+  return titles
+    .filter((t) => t.available_on_neesh && t.neesh_magazine_id && t.neesh_listed_at)
+    .sort((a, b) => (b.neesh_listed_at ?? '').localeCompare(a.neesh_listed_at ?? ''))
+    .slice(0, FEATURED_COUNT)
+    .map((t) => t.slug);
+}
+
+// The same trio straight from the database, for pages that do not load the
+// whole catalog.
+export async function getFeaturedSlugs(): Promise<string[]> {
+  if (!hasSupabaseEnv) return [];
+  const { data } = await anonClient()
+    .from('directory_titles')
+    .select('slug, available_on_neesh, neesh_magazine_id, neesh_listed_at, publisher:directory_publishers!inner(id)')
+    .eq('removed', false)
+    .in('status', ['active', 'dormant'])
+    .eq('available_on_neesh', true)
+    .not('neesh_magazine_id', 'is', null)
+    .not('neesh_listed_at', 'is', null)
+    .order('neesh_listed_at', { ascending: false })
+    .limit(FEATURED_COUNT);
+  return pickFeaturedSlugs(
+    (data as Pick<Title, 'slug' | 'available_on_neesh' | 'neesh_magazine_id' | 'neesh_listed_at'>[]) ?? []
+  );
+}
+
+// Index ordering, shared by /index and the niche pages: Featured first (in
+// Featured order), then everything orderable on Neesh, then the rest, each
+// group alphabetical. Expects rows already sorted by name; Array.sort is
+// stable, so ties keep that order.
+export function sortForIndex<T extends { slug: string; available_on_neesh: boolean }>(
+  rows: T[],
+  featuredSlugs: string[]
+): T[] {
+  const rank = (row: T) => {
+    const f = featuredSlugs.indexOf(row.slug);
+    if (f >= 0) return f;
+    return row.available_on_neesh ? featuredSlugs.length : featuredSlugs.length + 1;
+  };
+  return [...rows].sort((a, b) => rank(a) - rank(b));
+}
+
+// A niche's titles in Index order, one page at a time. The ordering has to
+// hold across pages (an orderable title must never land on page 2 behind
+// unorderable ones on page 1), so the whole tag is read in one query and
+// sorted before it is sliced. Tags run to a few hundred titles at most,
+// well under the row cap.
 export async function getTitlesForTag(
   tagId: string,
-  page: number
+  page: number,
+  featuredSlugs: string[] = []
 ): Promise<{ titles: TitleWithPublisher[]; total: number }> {
   if (!hasSupabaseEnv) return { titles: [], total: 0 };
   const from = (page - 1) * PAGE_SIZE;
-  const { data, count } = await anonClient()
+  const { data } = await anonClient()
     .from('directory_titles')
-    .select(`${TITLE_SELECT}, directory_title_tags!inner(tag_id)`, { count: 'exact' })
+    .select(`${TITLE_SELECT}, directory_title_tags!inner(tag_id)`)
     .eq('directory_title_tags.tag_id', tagId)
     .eq('removed', false)
     .in('status', ['active', 'dormant'])
     .order('name')
-    .range(from, from + PAGE_SIZE - 1);
-  return { titles: (data as unknown as TitleWithPublisher[]) ?? [], total: count ?? 0 };
+    .limit(1000);
+  const all = sortForIndex((data as unknown as TitleWithPublisher[]) ?? [], featuredSlugs);
+  return { titles: all.slice(from, from + PAGE_SIZE), total: all.length };
 }
+
+// Pages call these from both generateMetadata and the page itself. cache()
+// makes the second call in the same render reuse the first result, so a page
+// build reads each row once instead of twice. It is per request only: nothing
+// is shared between visitors or kept after the render.
+export const getStoreBySlug = cache(loadStoreBySlug);
+export const getStoreTitles = cache(loadStoreTitles);
+export const getCityBySlug = cache(loadCityBySlug);
+export const getPublisherBySlug = cache(loadPublisherBySlug);
+export const getTitleBySlug = cache(loadTitleBySlug);

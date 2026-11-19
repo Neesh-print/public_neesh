@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Logo } from './Logo';
+import { CookieSettingsButton } from './ConsentBanner';
 
 // v2 footer: black band, 82px white wordmark, mono uppercase links.
 // Rendered by the marketing and directory layouts; the minimal chrome
@@ -15,6 +16,7 @@ export function Footer() {
           <Link href="/cities">Cities</Link>
           <Link href="/terms">Terms</Link>
           <Link href="/privacy">Privacy</Link>
+          <CookieSettingsButton />
           <a href="https://www.instagram.com/neeshprint/" target="_blank" rel="noopener noreferrer">
             Instagram
           </a>

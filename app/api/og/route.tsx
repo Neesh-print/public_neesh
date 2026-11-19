@@ -1,11 +1,15 @@
 import { ImageResponse } from 'next/og';
 import { NextRequest } from 'next/server';
+import { limitRequest } from '@/lib/rate-limit';
 
 export const dynamic = 'force-dynamic';
 
 // Branded OG fallback for titles without a cover (spec 6.3): title name,
 // publisher and niche on a brand background, so OG images always resolve.
 export async function GET(req: NextRequest) {
+  if (!(await limitRequest(req, 'og', 120, 60))) {
+    return new Response('Too many requests', { status: 429 });
+  }
   const title = req.nextUrl.searchParams.get('title')?.slice(0, 120) ?? 'Neesh Directory';
   const sub = req.nextUrl.searchParams.get('sub')?.slice(0, 160) ?? '';
   return new ImageResponse(
@@ -52,6 +56,11 @@ export async function GET(req: NextRequest) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    {
+      width: 1200,
+      height: 630,
+      // Same query, same image: let the CDN serve repeats.
+      headers: { 'Cache-Control': 'public, s-maxage=86400, stale-while-revalidate=604800' },
+    }
   );
 }

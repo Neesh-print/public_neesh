@@ -24,6 +24,7 @@ Next.js (App Router) on Vercel plus Supabase. Carries two things.
 /api/calculator/share          POST stores a plan for Copy link, answers with the short URL
 /api/calculator/plan?s=        GET the plan behind a short link (plan and name only)
 /api/revalidate                POST token-protected on-demand revalidation
+/api/client-error              POST browser render-error reports (error boundaries)
 /api/og                        branded OG image fallback
 /sitemap.xml                   generated from the DB on request
 /robots.txt                    all crawlers allowed, answer-engine bots named
@@ -31,7 +32,9 @@ Next.js (App Router) on Vercel plus Supabase. Carries two things.
 ```
 
 Rendering is ISR everywhere. `generateStaticParams` prebuilds title,
-publisher, and tag pages; `revalidate = 86400` is the safety net; POST
+publisher, and tag pages. Directory pages (titles, publishers, niches,
+cities, stores) use `revalidate = 300`, so a publisher's edit from the Neesh
+portal shows within about five minutes; marketing pages keep `86400`. POST
 `/api/revalidate` (empty body refreshes the whole tree) after imports or
 edits. The only client-side JS on a profile page is the view beacon and two
 tiny form enhancements; every CTA is a plain form that works with JS off.
@@ -78,3 +81,74 @@ error.
 Copy `.env.example` to `.env` and fill it in. Vercel needs the same
 variables. Nothing renders private data; `contact_email` and claim emails
 never reach a page.
+
+## Your collection (/collect)
+
+Readers save the issues they own and want, follow titles, and find shops
+that carry them (spec: "Your collection on Neesh", Oct 2026).
+
+```
+/collect                       landing page (poster/sticker QR target), public
+/titles/[slug]#issues          issue list with Own / Want, Follow, coverage footer, Report
+/collect/shelf                 owned covers grouped by magazine (hairline grid)
+/collect/shelf/[slug]          one magazine: owned covers, then Not in your collection / Missing
+/collect/wants                 want list with shops by availability level, home city first
+/collect/following             followed titles and their latest issues
+/collect/add                   add a missing title or issue (reader-added, pending review)
+/collect/settings              home city, notifications, newsletter, delete account
+/collect/auth                  magic-link landing; claims marks made before sign-in
+/collect/delete                confirm step of account deletion (emailed, signed link)
+/api/collect/auth              POST: sends the sign-in link (Supabase admin generateLink + Resend)
+/api/collect/event             POST: collection_events writes (views, clicks, anonymous marks)
+/api/collect/availability      GET: shops per issue, labelled carries / reported / confirmed
+/api/collect/add               POST: reader additions with duplicate, word, image and rate checks
+/api/collect/account           POST: emails a delete link; DELETE with its token deletes the account
+/api/collect/unfollow          GET: one-tap unfollow from the new-issue email (signed link)
+/api/collect/notify            GET (Vercel Cron, CRON_SECRET): new-issue emails and availability alerts
+```
+
+Marks work before sign-in: they live in local storage, with a device id
+and the first campaign's UTM tags in first-party cookies, and each change
+logs an anonymous event. On first sign-in `claim_anonymous_activity` moves
+them into the reader's rows and stamps the device's events. Readers sign
+up with role = 'reader' in their auth metadata, which keeps them out of
+`public.users` and `public.profiles`.
+
+Schema: `supabase/migrations/20261020110000_collections_enum.sql` and
+`20261020110100_collections.sql`. Seed issues with
+`npm run seed-issues -- --platform` (available-on-Neesh titles, from the
+platform listings) and `npm run seed-issues -- issues.csv` (the NYC campaign
+titles; columns in the script header). Set `collect_pilot` on 10 to 15 titles
+for the notification pilot. Reviews happen at app.neesh.art/admin/index-review.
+
+Design: `design_handoff_your_collection` (Oct 2026). The `c-*` classes at
+the end of `app/globals.css` implement its component sheet; components live
+in `src/components/collect/` (`parts.tsx` holds the pills, issue row, shelf
+grid, shop row and loading/error states).
+
+Env: `CRON_SECRET` for the notify cron, optionally `COLLECT_LINK_SECRET` for
+signed email links (falls back to the service role key), plus the existing
+Supabase and Resend keys.
+
+## Checks
+
+```bash
+npm run typecheck           # tsc
+npm test                    # unit and regression tests (node:test, no database)
+npm run smoke               # status, redirect and header checks against a running site
+                            # SMOKE_URL=https://... to point it elsewhere
+```
+
+CI (`.github/workflows/ci.yml`) runs all of these plus `npm audit` and a
+production build on every push, with the database env blanked so nothing
+touches production.
+
+The public form routes share `src/lib/forms.ts` (parsing, honeypot,
+same-origin redirects) and are rate limited per IP (`src/lib/rate-limit.ts`).
+Anything a visitor types is HTML-escaped in emails and only echoed back
+through `echoSafe` (`src/lib/notify.ts`).
+
+## Operations
+
+Deploys, rollback, backups and restore, monitoring, staging, spend caps and
+email DNS: `docs/operations.md`.

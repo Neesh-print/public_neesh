@@ -57,7 +57,7 @@ export default async function PackDetailPage({ params }: { params: Promise<{ slu
       </nav>
       <section>
         <div className="wrap pack-detail-hero">
-          <img src={pack.image} alt={`${pack.name} pack, stacked`} />
+          <img fetchPriority="high" src={pack.image} alt={`${pack.name} pack, stacked`} />
           <div className="pack-detail-copy">
             <span className="eyebrow">Curated pack</span>
             <h1>{pack.name}</h1>

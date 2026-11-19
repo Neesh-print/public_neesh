@@ -19,6 +19,7 @@ export interface Publisher {
   country: string | null;
   city: string | null;
   claimed: boolean;
+  created_from: string;
   // Where the publisher's own stockist list lives, and what we found there.
   stockist_page_url: string | null;
   stockist_status: StockistStatus | null;
@@ -148,6 +149,15 @@ export interface Title {
   available_on_neesh: boolean;
   neesh_magazine_id: string | null;
   neesh_listed_at: string | null;
+  // Your collection: how complete the issue list is, and review state for
+  // reader-added titles.
+  catalogue_coverage: 'complete' | 'partial' | 'unknown';
+  created_from: string;
+  review_status: 'approved' | 'pending' | 'flagged' | 'rejected';
+  collect_pilot: boolean;
+  // The publisher's own subscription page. Shown only once the title is
+  // claimed or listed, so it always comes from the publisher.
+  subscribe_url: string | null;
   created_at: string;
   updated_at: string;
 }

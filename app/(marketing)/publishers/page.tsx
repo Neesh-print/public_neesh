@@ -70,6 +70,7 @@ export default function PublishersPage() {
     <>
       <section className="page-hero">
         <img
+          fetchPriority="high"
           src="/assets/publisher-portrait.jpg"
           alt="A publisher with her magazines"
           style={{ objectPosition: '50% 24%' }}
@@ -90,6 +91,36 @@ export default function PublishersPage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="manifesto">
+        <div className="wrap">
+          <span className="eyebrow on-black">The Status Quo</span>
+          <h2>Bad and worse</h2>
+          <p className="kicker">Independent publishers get two options.</p>
+          <div className="manifesto-cols">
+            <div className="manifesto-col">
+              <span className="manifesto-num">01</span>
+              <p>
+                Door one is a distributor. They take 60 points, pay in 90 days, send sales reports
+                that are out of date when they arrive, and destroy what doesn&rsquo;t sell. You
+                find out where your magazine went months after it went there.
+              </p>
+            </div>
+            <div className="manifesto-col">
+              <span className="manifesto-num">02</span>
+              <p>
+                Door two is doing it yourself. Dozens of store relationships in a spreadsheet.
+                Invoices you chase for six months. Reorders that only happen when you remember to
+                ask.
+              </p>
+            </div>
+          </div>
+          <p className="manifesto-close">
+            Most publishers pick door two and call it independence. It&rsquo;s really unpaid
+            logistics work, eating the time you have to make the next issue.
+          </p>
         </div>
       </section>
 
@@ -151,6 +182,8 @@ export default function PublishersPage() {
 
       <section className="closing scrimmed closing-big-cta">
         <img
+          loading="lazy"
+          decoding="async"
           src="/assets/market-print.jpg"
           alt="A publisher handling a print"
           style={{ objectPosition: '50% 36%', opacity: 0.5 }}
