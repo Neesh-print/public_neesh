@@ -1,8 +1,8 @@
 input_title,final_name,slug,publisher,action,reason,cover_found,cover_source_url,notes
-"Brick, A Literary Journal",Brick,brick,Brick,already,Already on the Index as Brick.,,,
-Offie Mag,Off Licence,off-licence,Off Licence,already,Already on the Index as Off Licence (Off Licence Magazine).,,,
-Purple Fashion,Purple,purple,Purple,already,Already on the Index as Purple.,,,
-The Whitney Review of New Writing,The Whitney Review,the-whitney-review,The Whitney Review,already,Already on the Index as The Whitney Review.,,,
+"Brick, A Literary Journal",Brick,brick,Brick,already on Index,Already on the Index as Brick.,,,
+Offie Mag,Off Licence,off-licence,Off Licence,already on Index,Already on the Index as Off Licence (Off Licence Magazine).,,,
+Purple Fashion,Purple,purple,Purple,already on Index,Already on the Index as Purple.,,,
+The Whitney Review of New Writing,The Whitney Review,the-whitney-review,The Whitney Review,already on Index,Already on the Index as The Whitney Review.,,,
 JRNY,JRNY Travel Magazine,jrny-travel-magazine,JRNY Travel Magazine,skipped,Previously removed from the Index (removed = true on jrny-travel-magazine); not re-added.,,,
 10 Men,10 Men,10-men,10 Magazine,added,,yes,https://cdn.shopify.com/s/files/1/0883/4727/9700/files/new10_64.webp?v=1792745540,Legal entity not shown on the publisher site; recorded under the imprint name 10 Magazine. Issue 64 has several covers; the Hermes cover is used.
 10 Women,10 Magazine,10-magazine,10 Magazine,added,,low resolution,https://10magazine.com/wp-content/uploads/2026/09/issue-77-FENDI-COVER.jpg,"Cover is 584x767, below 1000px. CSV said 10 Women; the publisher calls the women's edition 10 Magazine. No cover of Issue 77 above 584px was found anywhere."
@@ -28,7 +28,7 @@ CV2,Contemporary Verse 2,contemporary-verse-2,Contemporary Verse 2,added,,yes,ht
 DNA,DNA,dna,DNA Magazine,added,,yes,https://www.dnamagazine.com.au/wp-content/uploads/2026/10/DNA-322-cover.jpg,"Publisher describes itself as an independently owned LGBTQIA+ Australian media company, which is the basis for the queer-led tag. Shop prices in USD. Distributor hint only said DNA; no other print magazine of that name was found."
 Doesn't Exist,Doesn't Exist,doesnt-exist,Doesn't Exist Magazine,added,,low resolution,https://doesnt-exist.com/wp-content/uploads/2025/02/SET-A-_-SPINE-low-vol-1-7.png,"Cover is 545x687, below 1000px. Loaded as dormant: the latest issue (March 2025) is over the validator's 18 month liveness limit for an active title, although it meets the January 2025 cut off. Publisher states an April and October schedule but Issue Seven (March 2025) is still the latest in November 2026, so frequency is irregular. Issue Seven is sold as a GBP 39 two volume set."
 Dossier,Dossier,dossier,Dossier Projects,added,,yes,https://images.squarespace-cdn.com/content/v1/658d6b96d0964e371c10de8e/6b3ec1b2-3d20-48ca-a337-9bb07a3c011b/Dossier-Issue04-COVER2.jpg,"Issue Five (Fall Winter 2026) was on pre-order on 17 November 2026, so Issue Four is recorded."
-Double Blind,DoubleBlind,,DoubleBlind Mag,skipped,Shop issue list ends at Issue 12 (November 2024); confirm whether any 2025 or 2026 print issue exists before adding.,,,
+Double Blind,DoubleBlind,,DoubleBlind Mag,skipped,"No print issue since January 2025. The most recent print issue is No. 12 (November 2024), sold out, and the publisher's shop and site list nothing newer.",,,
 Dry Clean Only,Dry Clean Only,,,skipped,"Publisher could not be established. The magazine's own domain serves a parking page, so publisher name, city and price are unconfirmed; only distributor listings describe it.",,,
 Dune,Dune,,,skipped,"Historic Tokyo title published 1993 to 2008. The KD Presse listings behind the hint are 1990s back issues, so there is no print issue since January 2025 and no current publisher.",,,
 EE72,72,72,EE72,added,,yes,https://cdn.shopify.com/s/files/1/0713/1404/7116/files/FALL2026PAIRINGS1.jpg?v=1786538002,CSV said EE72; the magazine is 72 and EE72 is the company. The site is operated by EE72 US Inc. while the shop is based in London and priced in GBP. Covers are only shown as side by side pairs.

@@ -99,7 +99,7 @@ def report_row(**k):
     base.update(k); report.append(base)
 
 for t, (action, name, slug, pub, reason) in PRE.items():
-    report_row(input_title=t, final_name=name, slug=slug, publisher=pub, action=action, reason=reason)
+    report_row(input_title=t, final_name=name, slug=slug, publisher=pub, action='already on Index' if action == 'already' else action, reason=reason)
 
 pub_slug_for = {}
 for key, r in research.items():
