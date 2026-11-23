@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { anonClient, serviceClient } from '@/lib/supabase';
 import { clientIp, ipHash, isBot, payloadSchemas, signalSchema } from '@/lib/signals';
-import { echoSafe, emailHtml, notify, sendEmail } from '@/lib/notify';
+import { echoSafe, emailHtml, sendEmail } from '@/lib/notify';
 import { canonical } from '@/lib/seo';
 import { TAG_THRESHOLD } from '@/lib/queries';
 import { readSubmission, redirectWithNotice } from '@/lib/forms';
@@ -65,12 +65,26 @@ export async function POST(req: NextRequest) {
   const payload = payloadSchemas[parsed.data.signal_type].safeParse(parsed.data.payload);
   if (!payload.success) return done();
 
+  // The portal's demand automations read the role (spaces are routed to a
+  // Neesh space or Nustand lead, readers go in the rollup), so a request
+  // never lands without one: stock requests come from spaces, want-near
+  // requests from readers, unless the form said otherwise.
+  const stored =
+    parsed.data.signal_type === 'stock_request' || parsed.data.signal_type === 'want_near'
+      ? {
+          ...(payload.data as Record<string, unknown>),
+          role:
+            (payload.data as { role?: string }).role ??
+            (parsed.data.signal_type === 'stock_request' ? 'space' : 'reader'),
+        }
+      : payload.data;
+
   try {
     const supabase = serviceClient();
     const { error } = await supabase.from('directory_demand_signals').insert({
       title_id: parsed.data.title_id,
       signal_type: parsed.data.signal_type,
-      payload: payload.data,
+      payload: stored,
       ip_hash: ipHash(clientIp(req.headers)),
       user_agent: ua ? ua.slice(0, 500) : null,
     });
@@ -95,13 +109,10 @@ export async function POST(req: NextRequest) {
         .select('name, slug')
         .eq('id', parsed.data.title_id)
         .maybeSingle();
-      const label =
-        parsed.data.signal_type === 'stock_request' ? 'Stock request' : 'Want-near';
-      await notify(
-        `${label} for ${title?.name ?? parsed.data.title_id}`,
-        `${label} for ${title?.name ?? 'unknown title'} (/titles/${title?.slug ?? '?'})\n\n` +
-          JSON.stringify(payload.data, null, 2)
-      );
+      // No email to Gem from here: the portal alerts on space requests the
+      // moment they land, with the Neesh space or Nustand match
+      // (process-demand-loop), and reader requests go in the Monday demand
+      // rollup (send-demand-rollup).
 
       // Email 3.3 to the requester (handoff 5.4): stock requests are never
       // forwarded to the publisher, and the email must not claim otherwise.
