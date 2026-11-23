@@ -244,7 +244,7 @@ export const LEGAL_DOCS: Record<
   "privacy": {
     "h1": "Privacy Policy",
     "sub": "What we collect, how we use it, who we share it with, and the rights you have.",
-    "effective": "Effective October 25, 2026",
+    "effective": "Effective November 23, 2026",
     "intro": [
       "Neesh (“Neesh,” “we,” “us”) is operated by WAU LLC, an Oregon limited liability company. Neesh is a wholesale marketplace that connects independent magazine publishers with retailers. This policy explains what personal information we collect, how we use it, who we share it with, and the choices you have. It applies to neesh.art and all Neesh services, including publisher and retailer accounts, applications, and our email communications.",
       "If you have any questions, or want to exercise any of the rights described below, email us at <strong><a href=\"mailto:hi@neesh.art\">hi@neesh.art</a></strong>."
@@ -305,6 +305,25 @@ export const LEGAL_DOCS: Record<
         ]
       },
       {
+        "id": "privacy-text-messages-sms",
+        "num": null,
+        "heading": "Text messages (SMS)",
+        "body": [
+          {
+            "kind": "p",
+            "html": "If you give us your mobile number and opt in to text messages, for example in your account settings or during an application, we will send you SMS messages about your Neesh account and activity. These can include order and shipping updates, application decisions, account alerts, and sign-in or verification codes. We will not send you marketing texts unless you separately agree to receive them."
+          },
+          {
+            "kind": "p",
+            "html": "Message frequency varies with your account activity. Message and data rates may apply. Reply <strong>STOP</strong> to any message to opt out of text messages at any time. After you opt out, we will send one message confirming it and no further texts unless you opt in again. Reply <strong>HELP</strong> for help, or email <a href=\"mailto:hi@neesh.art\">hi@neesh.art</a>. Opting out of texts does not affect transactional emails about your account or orders. Carriers are not liable for delayed or undelivered messages."
+          },
+          {
+            "kind": "p",
+            "html": "We use your mobile number and SMS consent only to send you the messages you asked for. <strong>We do not sell, rent, or share mobile numbers or SMS opt-in data and consent with third parties or affiliates for their marketing or promotional purposes.</strong> We share your mobile number only with the service providers that deliver our text messages for us, such as our SMS provider and the mobile carriers, and only so they can deliver those messages."
+          }
+        ]
+      },
+      {
         "id": "privacy-who-we-share-information-with",
         "num": null,
         "heading": "Who we share information with",
@@ -320,6 +339,7 @@ export const LEGAL_DOCS: Record<
               "<strong>Stripe</strong> — payment processing, identity verification for payouts, and payouts to publishers",
               "<strong>Resend</strong> — transactional and marketing email delivery, including open and click tracking",
               "<strong>HubSpot</strong> — customer relationship management and email signups",
+              "<strong>Twilio</strong> — text message (SMS) delivery",
               "<strong>Google Cloud Storage</strong> — hosting of some site images and uploaded files",
               "<strong>Google</strong> — website analytics and ad measurement (Google Analytics, Google Tag Manager, Google Ads), subject to your cookie choice",
               "<strong>Vercel</strong> — website hosting and cookieless analytics"
@@ -360,7 +380,7 @@ export const LEGAL_DOCS: Record<
         "body": [
           {
             "kind": "p",
-            "html": "Depending on where you live, you may have rights under laws such as the UK and EU GDPR, Canada’s PIPEDA, or the Oregon Consumer Privacy Act. These include the right to access the personal information we hold about you, correct it, delete it, receive a copy in a portable format, object to or restrict certain processing, and withdraw consent where processing is based on consent. Where we rely on legal bases under the GDPR, we process your information to perform our contract with you (operating your account and transactions), for our legitimate interests (running and securing the marketplace), with your consent (marketing email), and to comply with legal obligations."
+            "html": "Depending on where you live, you may have rights under laws such as the UK and EU GDPR, Canada’s PIPEDA, or the Oregon Consumer Privacy Act. These include the right to access the personal information we hold about you, correct it, delete it, receive a copy in a portable format, object to or restrict certain processing, and withdraw consent where processing is based on consent. Where we rely on legal bases under the GDPR, we process your information to perform our contract with you (operating your account and transactions), for our legitimate interests (running and securing the marketplace), with your consent (marketing email and text messages), and to comply with legal obligations."
           },
           {
             "kind": "p",
