@@ -311,11 +311,11 @@ export const LEGAL_DOCS: Record<
         "body": [
           {
             "kind": "p",
-            "html": "If you give us your mobile number and opt in to text messages, for example in your account settings or during an application, we will send you SMS messages about your Neesh account and activity. These can include order and shipping updates, application decisions, account alerts, and sign-in or verification codes. We will not send you marketing texts unless you separately agree to receive them."
+            "html": "If you give us your mobile number and opt in to text messages, for example in your account settings or during an application, we will send you SMS messages about your Neesh account and activity. These can include order and shipping updates, application decisions, account alerts, and sign-in or verification codes. If you also opt in to marketing texts, we will send you promotional messages, such as new titles, product updates, events, and offers. Marketing texts are a separate choice: agreeing to them is not a condition of any purchase or of using Neesh, and you can receive account texts without them."
           },
           {
             "kind": "p",
-            "html": "Message frequency varies with your account activity. Message and data rates may apply. Reply <strong>STOP</strong> to any message to opt out of text messages at any time. After you opt out, we will send one message confirming it and no further texts unless you opt in again. Reply <strong>HELP</strong> for help, or email <a href=\"mailto:hi@neesh.art\">hi@neesh.art</a>. Opting out of texts does not affect transactional emails about your account or orders. Carriers are not liable for delayed or undelivered messages."
+            "html": "Message frequency varies. Message and data rates may apply. Reply <strong>STOP</strong> to any message to opt out of all text messages from us at any time, or ask us at <a href=\"mailto:hi@neesh.art\">hi@neesh.art</a> to stop only marketing texts. After you opt out, we will send one message confirming it and no further texts unless you opt in again. Reply <strong>HELP</strong> for help, or email <a href=\"mailto:hi@neesh.art\">hi@neesh.art</a>. Opting out of texts does not affect transactional emails about your account or orders. Carriers are not liable for delayed or undelivered messages."
           },
           {
             "kind": "p",
@@ -339,7 +339,7 @@ export const LEGAL_DOCS: Record<
               "<strong>Stripe</strong> — payment processing, identity verification for payouts, and payouts to publishers",
               "<strong>Resend</strong> — transactional and marketing email delivery, including open and click tracking",
               "<strong>HubSpot</strong> — customer relationship management and email signups",
-              "<strong>Twilio</strong> — text message (SMS) delivery",
+              "<strong>JustCall</strong> — text message (SMS) delivery",
               "<strong>Google Cloud Storage</strong> — hosting of some site images and uploaded files",
               "<strong>Google</strong> — website analytics and ad measurement (Google Analytics, Google Tag Manager, Google Ads), subject to your cookie choice",
               "<strong>Vercel</strong> — website hosting and cookieless analytics"
