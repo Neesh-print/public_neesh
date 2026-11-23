@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { z } from 'zod';
 import { serviceClient } from '@/lib/supabase';
 import { notify } from '@/lib/notify';
+import { clientIp, ipHash } from '@/lib/signals';
 import { readSubmission, redirectWithNotice, tooManyRequests } from '@/lib/forms';
 import { limitFormRequest } from '@/lib/rate-limit';
 import { log } from '@/lib/log';
@@ -16,7 +17,12 @@ const schema = z.object({
 });
 
 // "Know a shop that carries it?" on a title page. Stored for review; nothing
-// reaches the public list until an admin adds it as a stockist link.
+// reaches the public list until an admin approves it in the portal's Demand
+// queue (/admin/demand), which checks every new suggestion within 15
+// minutes. The daily-salted ip_hash feeds that check's spam rule (more than
+// 10 suggestions from one address in 24 hours). Suggestions reach Gem in the
+// Monday demand rollup; only titles that sell on Neesh still email straight
+// away, since those are a sales lead.
 export async function POST(req: NextRequest) {
   const submission = await readSubmission(req);
   if (!submission.ok) return NextResponse.json({ ok: false }, { status: 400 });
@@ -42,7 +48,7 @@ export async function POST(req: NextRequest) {
     const supabase = serviceClient();
     const { data: title } = await supabase
       .from('directory_titles')
-      .select('name, slug')
+      .select('name, slug, available_on_neesh')
       .eq('id', title_id)
       .maybeSingle();
     if (!title) return finish();
@@ -52,18 +58,21 @@ export async function POST(req: NextRequest) {
       shop_name,
       city,
       email: email ?? null,
+      ip_hash: ipHash(clientIp(req.headers)),
     });
     if (error) {
       log('error', 'stockist_suggestion.insert_failed', { error: error.message });
       return finish();
     }
 
-    await notify(
-      `Shop suggestion: ${title.name}`,
-      `${email ?? 'Someone'} says ${shop_name} in ${city} stocks ${title.name} (/titles/${title.slug}).\n\n` +
-        `If it checks out, add the store and a directory_stockists link, then mark the ` +
-        `suggestion status 'added' in directory_stockist_suggestions.`
-    );
+    if (title.available_on_neesh) {
+      await notify(
+        `Shop suggestion: ${title.name} (sells on Neesh)`,
+        `${email ?? 'Someone'} says ${shop_name} in ${city} stocks ${title.name} (/titles/${title.slug}).\n\n` +
+          `${title.name} sells on Neesh, so the shop may be a sales lead. The suggestion is ` +
+          `being checked and will be in the Demand queue: https://app.neesh.art/admin/demand`
+      );
+    }
   } catch (err) {
     log('error', 'stockist_suggestion.failed', { error: err });
   }
